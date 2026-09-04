@@ -104,7 +104,7 @@ class Simulation(Animation):
 
 
             S = A**2-B*(C-D)
-            filter1 = S>0
+            filter1 = S>=0
             if np.any(filter1):
                 i = i[filter1]
                 j = j[filter1]
@@ -124,20 +124,29 @@ class Simulation(Animation):
                     i = i[causal_indices]
                     j = j[causal_indices]
                     TC = TC[causal_indices]
+
                     
                     x[i] += (TC-t[i])[:,None]*v[i]
                     x[j] += (TC-t[j])[:,None]*v[j]
                     t[i] = TC
                     t[j] = TC
-                    E = (m[i]+m[j])*(r[i]+r[j])**2
+                    d = r[i]+r[j]
+                    dist2 = np.sum((x[i]-x[j])**2,axis=1)
+                    diffs = dist2-d**2  
+                    if np.any(diffs<0):
+                        print(r**2,dist2)
+                        time.sleep(2)
+                    # print("all:",diffs)
+                    # print("to close:",diffs[diffs<0])
+                    E = (m[i]+m[j])*d**2
                     F = (1+self.e)*(x[i]-x[j])*np.sum((x[i]-x[j])*(v[i]-v[j]),keepdims = True, axis=1)/E[:,None]
                     v[j] += F*m[i,None]
                     v[i] -= F*m[j,None]
-                    print(TC)
-                    if len(i)>1:
+                    if len(i)>0:
                         self.collisions_left = True
 
         # v[:,1] -= self.g*dt
+
         x[:] += v * (dt-t)[:,None]
         t[:] = 0
 
@@ -158,7 +167,8 @@ class Simulation(Animation):
         return self.graph_objects.values()
 
 if __name__ == "__main__":
-    N = 50
+    N = 3
+    width = 0.01
     sim = Simulation(dt = 0.05, e = 1, g=5, bg_color="black")
     while sim.end_index<N:
         circle = dict(
@@ -166,13 +176,13 @@ if __name__ == "__main__":
             type="circle",
             position=np.random.random(2),  # Initial position
             velocity=(0.5-np.random.random(2)),  # Velocity vector
-            radius=2/N+np.random.random()/N,  # Circle radius
+            radius=0.1,  # Circle radius
             density=1,
             color=np.random.random(3),
         )
         if not np.any(sim.overlaps(circle,margin=0.005)) and all(sim.inside(circle)):
             sim.add_object(circle)
-    width = 0.01
+
     for x,y in [(0.5,1-width+1e5),(0.5,width-1e5),(1-width+1e5,0.5),(width-1e5,0.5)]:
         circle = dict(
             name=f"circle_{sim.end_index}",
@@ -185,3 +195,4 @@ if __name__ == "__main__":
         )
         sim.add_object(circle)
     sim.run()
+
