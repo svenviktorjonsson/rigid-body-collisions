@@ -1,0 +1,18 @@
+{
+  "purpose": "Predeclared synthetic moving-container verification; not measured materials or a compiler performance benchmark",
+  "packed_counts": [4,16,64,100],
+  "packed_velocity_budget_m_s": 0.01,
+  "packed_modes": [["block",1,1],["block",8,32],["block",32,128],["temporal",8,32]],
+  "grid_side": 10,
+  "grid_duration_s": 2,
+  "grid_motions": ["translate","shake","rotate"],
+  "reference_modes": [[16,128],[32,128],[64,128],[64,32],[64,64]],
+  "grid_modes": [["block",1,1],["block",1,8],["block",4,16],["block",8,32],["temporal",4,16]],
+  "budget": {"rms_position_m":0.02,"rms_velocity_m_s":0.05,"rms_spin_rad_s":0.05},
+  "reference_budget": {"rms_position_m":0.005,"rms_velocity_m_s":0.0125,"rms_spin_rad_s":0.0125},
+  "reference_gate": "All four adjacent primary-update and velocity-iteration refinement edges must satisfy quarter budgets. Unqualified comparisons are diagnostic only.",
+  "geometry": "Exact disks of radius 0.1 m and mass 1 kg, explicit 0.01 m polygon contact skin, four walls on one kinematic body; independent frame-sampled wall and pair checks",
+  "material": "mu=0.4 and e=0 for frictional grids, mu=e=0 for analytical rows and invariance controls; synthetic, not empirically calibrated",
+  "limitations": "Native Box2D comparators, not current Vektor compiler, WASM or physical GPU; no claimed asymptotic order at impact; first-frame row checks include narrowphase/contact discovery and floating geometry as well as solver propagation",
+  "work_accounting": "W=U dot delta P only for constant pure translation, zero gravity. Accelerating/rotating box work needs a future time-resolved contact impulse ledger."
+}
