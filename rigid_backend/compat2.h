@@ -11,6 +11,8 @@ using b2WorldId = b2World*;
 using b2BodyId = b2Body*;
 using b2ShapeId = b2Fixture*;
 using b2Polygon = b2PolygonShape;
+using b2Circle = b2CircleShape;
+constexpr int b2_circleShape = b2Shape::e_circle;
 struct RigidWorldDef {
     b2Vec2 gravity{0, -9.81f};
     float contactHertz=10, contactDampingRatio=1, maxContactPushSpeed=1;
@@ -69,6 +71,15 @@ inline b2ShapeId b2CreatePolygonShape(b2BodyId body, const RigidShapeDef* d, con
     b2FixtureDef def; def.shape=p; def.density=d->density; def.friction=d->material.friction;
     def.restitution=d->material.restitution; def.restitutionThreshold=0; return body->CreateFixture(&def);
 }
+inline b2ShapeId b2CreateCircleShape(b2BodyId body, const RigidShapeDef* d, const b2Circle* p) {
+    if(d->material.rollingResistance!=0) throw std::runtime_error("Block comparator has no rolling resistance model");
+    b2FixtureDef def; def.shape=p; def.density=d->density; def.friction=d->material.friction;
+    def.restitution=d->material.restitution; def.restitutionThreshold=0; return body->CreateFixture(&def);
+}
+inline int b2Shape_GetType(b2ShapeId s) { return s->GetType(); }
+inline b2Circle b2Shape_GetCircle(b2ShapeId s) { return *static_cast<const b2CircleShape*>(s->GetShape()); }
+inline void b2Body_SetLinearVelocity(b2BodyId b,b2Vec2 v) { b->SetLinearVelocity(v); }
+inline void b2Body_SetAngularVelocity(b2BodyId b,float w) { b->SetAngularVelocity(w); }
 inline b2Vec2 b2Body_GetLinearVelocity(b2BodyId b) { return b->GetLinearVelocity(); }
 inline float b2Body_GetAngularVelocity(b2BodyId b) { return b->GetAngularVelocity(); }
 inline b2Vec2 b2Body_GetWorldCenterOfMass(b2BodyId b) { return b->GetWorldCenter(); }
@@ -94,6 +105,20 @@ inline int b2Body_GetContactData(b2BodyId b,b2ContactData* data,int capacity) {
 inline RigidManifold b2CollidePolygons(const b2Polygon* a,b2Transform xa,const b2Polygon* b,b2Transform xb) {
     b2Manifold m; b2CollidePolygons(&m,a,xa,b,xb); b2WorldManifold w;
     w.Initialize(&m,xa,a->m_radius,xb,b->m_radius); RigidManifold out; out.pointCount=m.pointCount;
+    for(int i=0;i<m.pointCount;++i) out.points[i].separation=w.separations[i];
+    return out;
+}
+inline RigidManifold rigidCollideShapes(b2ShapeId a,b2Transform xa,b2ShapeId b,b2Transform xb) {
+    const auto* sa=a->GetShape(); const auto* sb=b->GetShape(); b2Manifold m;
+    if(sa->GetType()==b2Shape::e_circle && sb->GetType()==b2Shape::e_circle)
+        b2CollideCircles(&m,static_cast<const b2Circle*>(sa),xa,static_cast<const b2Circle*>(sb),xb);
+    else if(sa->GetType()==b2Shape::e_polygon && sb->GetType()==b2Shape::e_circle)
+        b2CollidePolygonAndCircle(&m,static_cast<const b2Polygon*>(sa),xa,static_cast<const b2Circle*>(sb),xb);
+    else if(sa->GetType()==b2Shape::e_circle && sb->GetType()==b2Shape::e_polygon)
+        return rigidCollideShapes(b,xb,a,xa);
+    else b2CollidePolygons(&m,static_cast<const b2Polygon*>(sa),xa,static_cast<const b2Polygon*>(sb),xb);
+    b2WorldManifold w; w.Initialize(&m,xa,sa->m_radius,xb,sb->m_radius);
+    RigidManifold out; out.pointCount=m.pointCount;
     for(int i=0;i<m.pointCount;++i) out.points[i].separation=w.separations[i];
     return out;
 }

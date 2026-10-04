@@ -11,10 +11,12 @@ def assemble_planar(centers, masses, inertias, contacts, ell=1.0):
 
     Every point is a separate edge, even when two edges share a body pair.
     Return scaled inverse body mass H^-1, contact map G, mobility K.
+    Positive infinity denotes a prescribed degree of freedom (zero inverse
+    mass/inertia); its supplied velocity still enters the relative contact map.
     """
     centers=np.asarray(centers,dtype=float)
     masses=np.asarray(masses,dtype=float);inertias=np.asarray(inertias,dtype=float)
-    if ell<=0 or np.any(masses<=0) or np.any(inertias<=0):
+    if not np.isfinite(ell) or ell<=0 or not np.all(np.isfinite(centers)) or np.any(np.isnan(masses)) or np.any(np.isnan(inertias)) or np.any(masses<=0) or np.any(inertias<=0):
         raise ValueError('Positive reference length, masses, and central inertias required')
     inverse=np.diag(np.column_stack((1/masses,1/masses,ell**2/inertias)).ravel())
     G=np.zeros((3*len(contacts),3*len(centers)))
@@ -39,8 +41,22 @@ def inelastic_normal_solve(inverse,G,velocity):
     normal=G[::3];K=normal@inverse@normal.T;u=normal@velocity
     result=minimize(lambda p:.5*p@K@p+u@p,np.zeros(len(u)),
                     jac=lambda p:K@p+u,method='L-BFGS-B',
-                    bounds=[(0,None)]*len(u),options={'ftol':1e-14,'gtol':1e-11,'maxiter':5000})
-    p=result.x;post=velocity+inverse@normal.T@p
+                    bounds=[(0,None)]*len(u),options={'ftol':0,'gtol':1e-12,'maxiter':5000,'maxcor':20,'maxls':100})
+    p=np.maximum(result.x,0.)
+    # Objective stagnation is not a KKT certificate, especially in long chains.
+    # Polish the candidate's positive active set by solving its stationarity
+    # residual. Least-squares corrections retain null-space impulse components
+    # for redundant constraints rather than inverting singular mobilities.
+    for _ in range(8):
+        gradient=K@p+u
+        active=(p>1e-10)|(gradient < -1e-10)
+        if not np.any(active):break
+        correction=np.linalg.lstsq(K[np.ix_(active,active)],-gradient[active],rcond=1e-12)[0]
+        trial=p.copy();trial[active]+=correction
+        if np.min(trial)<-1e-9:break  # reject below if a verified active set cannot be obtained
+        p=np.maximum(trial,0.)
+        if np.min(K@p+u)>=-1e-10 and np.max(np.abs(p*(K@p+u)))<=1e-9:break
+    post=velocity+inverse@normal.T@p
     w=normal@post
     if np.min(w)<-1e-7 or np.max(np.abs(p*w))>1e-7:
         raise RuntimeError('Normal complementarity residual exceeds tolerance')

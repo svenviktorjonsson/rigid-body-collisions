@@ -5,3 +5,4 @@ research/*.png linguist-generated=true
 research/*.pdf linguist-generated=true
 research/rigid-benchmarks/public-sources/** linguist-vendored=true whitespace=-trailing-space
 research/rigid-benchmarks/results/** linguist-generated=true
+research/moving-container/results/** linguist-generated=true

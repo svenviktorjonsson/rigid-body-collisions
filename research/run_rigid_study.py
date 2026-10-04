@@ -61,7 +61,7 @@ def diagnostics(scene, result):
     mechanical = kinetic+potential
     return {"linear_momentum_change_max_kg_m_s": float(np.max(np.linalg.norm(momentum-momentum[0], axis=1))),
             "angular_momentum_change_max_kg_m2_s": float(np.max(np.abs(angular-angular[0]))),
-            "momentum_is_internal_invariant": not any(b.get("type")=="static" for b in scene["bodies"]) and not any(scene["gravity"]),
+            "momentum_is_internal_invariant": not any(b.get("type", "dynamic")!="dynamic" for b in scene["bodies"]) and not any(scene["gravity"]),
             "mechanical_energy_increase_above_initial_J": float(max(0, np.max(mechanical)-mechanical[0])),
             "kinetic_energy_final_J": float(kinetic[-1]),
             "late_com_height_mean_m": float(np.mean(np.sum(mass[None, :]*states[-min(240,len(states)):, :, 1], axis=1)/np.sum(mass))),

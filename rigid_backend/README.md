@@ -28,13 +28,13 @@ The CLI supports `--preset fast|standard|accurate|high`, numerical overrides, an
 `--adaptive --policy path/to/frozen-policy.json` for reproducible controller
 experiments. The controller did not beat the cheapest passing fixed settings in
 the first held-out test, and is therefore not the default. Bodies are
-static or dynamic and have one or more strictly convex polygon fixtures with
-three to eight ordered vertices. Concave bodies require a supplied convex
+static, dynamic or kinematic and have circle fixtures or strictly convex polygon
+fixtures with three to eight ordered vertices. Concave bodies require a supplied convex
 decomposition, whose non-overlap the caller must ensure. Geometry is meter-scale;
 density is areal kg/m². Output positions are centers of mass. State columns are
 COM x,y, angle, vx,vy,omega, using m,rad,m/s,rad/s.
 
-Mass, COM and inertia are calculated from the unrounded polygon cores and
+Mass, COM and inertia are calculated from unrounded polygon cores and exact disks and
 explicitly assigned in both engines. A common 0.01 m collision skin supports
 the older backend's continuous collision algorithm; it is a contact geometry
 tolerance, not extra mass. The block backend requires skin at least 0.005 m.
@@ -71,3 +71,16 @@ The restitution failure and comparator evidence are recorded in
 `research/rigid-benchmarks/rebound-counterexample.json`. Different numerical
 stabilization/contact models must be acknowledged when comparing the backends;
 only refinement within one backend holds that formulation fixed.
+
+Moving containers use one kinematic body with four wall fixtures. Prescribed
+`velocity_schedule` entries contain `time_s`, `velocity` and optional `omega`,
+with changes aligned to output frames. The world and contact caches persist.
+Dynamic histories remain in `states`; prescribed-body histories are in
+`kinematic_states`, with the same six columns. Contents exchange momentum and
+energy with the actuator: their momentum is not an invariant.
+
+The runner uses the `rigid-v2` wire protocol; rebuild both backends after updating.
+`research/container_scenes.py` supplies moving boxes, ball grids and an exact
+closed packed-row constraint case. The global normal-impulse projection is an
+independent frozen-contact verification oracle, not the implemented frictional
+engine or a demonstrated performance improvement.

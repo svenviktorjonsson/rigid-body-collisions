@@ -10,6 +10,7 @@ using RigidManifold = b2Manifold;
 using RigidMassData = b2MassData;
 #endif
 #include <algorithm>
+#include <array>
 #include <chrono>
 #include <cmath>
 #include <cstdint>
@@ -32,8 +33,19 @@ template<class T> static T read() {
 struct Body {
     b2BodyId id;
     bool dynamic;
+    bool kinematic;
     float extent = 1e20f, radius = 0, mass = 0, inertia = 0;
 };
+struct Command { int frame, body; b2Vec2 velocity; float omega; };
+#ifndef RIGID_BLOCK_BACKEND
+static RigidManifold rigidCollideShapes(b2ShapeId a,b2Transform xa,b2ShapeId b,b2Transform xb) {
+    bool ca=b2Shape_GetType(a)==b2_circleShape, cb=b2Shape_GetType(b)==b2_circleShape;
+    if(ca && cb) { auto sa=b2Shape_GetCircle(a), sb=b2Shape_GetCircle(b); return b2CollideCircles(&sa,xa,&sb,xb); }
+    if(!ca && cb) { auto sa=b2Shape_GetPolygon(a); auto sb=b2Shape_GetCircle(b); return b2CollidePolygonAndCircle(&sa,xa,&sb,xb); }
+    if(ca && !cb) return rigidCollideShapes(b,xb,a,xa);
+    auto sa=b2Shape_GetPolygon(a), sb=b2Shape_GetPolygon(b); return b2CollidePolygons(&sa,xa,&sb,xb);
+}
+#endif
 struct Features { float travel = 0, penetration = 0, massRatio = 1; int contacts = 0, island = 0; };
 
 static Features features(const std::vector<Body>& bodies, float dt) {
@@ -43,7 +55,7 @@ static Features features(const std::vector<Body>& bodies, float dt) {
     auto root = [&parent](int i) { while (parent[i] != i) i = parent[i]; return i; };
     std::set<std::pair<uint64_t, uint64_t>> seen;
     for (const Body& body : bodies) {
-        if (!body.dynamic) continue;
+        if (!body.dynamic && !body.kinematic) continue;
         b2Vec2 v = b2Body_GetLinearVelocity(body.id);
         float w = b2Body_GetAngularVelocity(body.id);
         f.travel = std::max(f.travel, dt * (b2Length(v) + std::abs(w) * body.radius) / body.extent);
@@ -57,8 +69,7 @@ static Features features(const std::vector<Body>& bodies, float dt) {
             b2BodyId a = b2Shape_GetBody(contact.shapeIdA), b = b2Shape_GetBody(contact.shapeIdB);
             int ia = int(reinterpret_cast<intptr_t>(b2Body_GetUserData(a))) - 1;
             int ib = int(reinterpret_cast<intptr_t>(b2Body_GetUserData(b))) - 1;
-            b2Polygon pa = b2Shape_GetPolygon(contact.shapeIdA), pb = b2Shape_GetPolygon(contact.shapeIdB);
-            RigidManifold m = b2CollidePolygons(&pa, b2Body_GetTransform(a), &pb, b2Body_GetTransform(b));
+            RigidManifold m = rigidCollideShapes(contact.shapeIdA, b2Body_GetTransform(a), contact.shapeIdB, b2Body_GetTransform(b));
             if (!m.pointCount) continue;
             ++f.contacts;
             float extent = std::min(bodies[ia].extent, bodies[ib].extent);
@@ -95,6 +106,7 @@ static void snapshot(std::ostream& out, const std::vector<Body>& bodies) {
 
 int main() {
   try {
+    if (read<std::string>() != "rigid-v2") throw std::runtime_error("Rebuild backend: expected rigid-v2 scene protocol");
     float dt = read<float>(); int frames = read<int>();
     RigidWorldDef wd = b2DefaultWorldDef();
     wd.gravity = {read<float>(), read<float>()}; wd.contactHertz = read<float>();
@@ -113,18 +125,37 @@ int main() {
     int bodyCount = read<int>(); std::vector<Body> bodies;
     for (int i = 0; i < bodyCount; ++i) {
         RigidBodyDef bd = b2DefaultBodyDef(); int type = read<int>();
-        bd.type = type == 2 ? b2_dynamicBody : b2_staticBody;
+        bd.type = type == 2 ? b2_dynamicBody : (type == 1 ? b2_kinematicBody : b2_staticBody);
         bd.fixedRotation = read<int>() != 0; bd.isBullet = read<int>() != 0;
         bd.position = {read<float>(), read<float>()}; bd.rotation = b2MakeRot(read<float>());
         bd.linearVelocity = {read<float>(), read<float>()}; bd.angularVelocity = read<float>();
         bd.userData = reinterpret_cast<void*>(intptr_t(i + 1)); bd.enableSleep = false;
-        Body body{b2CreateBody(world, &bd), type == 2};
+        Body body{b2CreateBody(world, &bd), type == 2, type == 1};
         float mass = 0, inertiaOrigin = 0; b2Vec2 moment{0, 0};
         int shapeCount = read<int>();
         for (int j = 0; j < shapeCount; ++j) {
-            int count = read<int>(); RigidShapeDef sd = b2DefaultShapeDef();
+            int kind = read<int>(); RigidShapeDef sd = b2DefaultShapeDef();
             sd.density = read<float>(); sd.material.friction = read<float>();
             sd.material.restitution = read<float>(); sd.material.rollingResistance = read<float>();
+            if (kind == 0) {
+                float radius=read<float>(); b2Vec2 center{read<float>(),read<float>()};
+                if (!(radius > 0)) throw std::runtime_error("Invalid circle radius");
+                b2Circle circle;
+#ifdef RIGID_BLOCK_BACKEND
+                circle.m_p=center; circle.m_radius=radius;
+#else
+                circle.center=center; circle.radius=radius;
+#endif
+                float cm=sd.density*float(3.141592653589793)*radius*radius;
+                mass+=cm; moment=b2Add(moment,b2MulSV(cm,center));
+                inertiaOrigin+=cm*(.5f*radius*radius+b2Dot(center,center));
+                body.extent=std::min(body.extent,2*radius);
+                body.radius=std::max(body.radius,b2Length(center)+radius);
+                b2CreateCircleShape(body.id,&sd,&circle);
+                continue;
+            }
+            if (kind != 1) throw std::runtime_error("Unknown fixture kind");
+            int count = read<int>();
             if (count < 3 || count > B2_MAX_POLYGON_VERTICES) throw std::runtime_error("Invalid polygon vertex count");
             b2Vec2 vertices[B2_MAX_POLYGON_VERTICES]; b2Vec2 lo{1e20f, 1e20f}, hi{-1e20f, -1e20f};
             for (int k = 0; k < count; ++k) {
@@ -151,6 +182,25 @@ int main() {
         if (shapeCount < 1 || body.extent <= 0 || (body.dynamic && body.mass <= 0)) throw std::runtime_error("Invalid body");
         bodies.push_back(body);
     }
+    int commandCount=read<int>(); std::vector<Command> commands;
+    for(int i=0;i<commandCount;++i) {
+        int frame=read<int>(), body=read<int>(); b2Vec2 velocity{read<float>(),read<float>()}; float omega=read<float>();
+        if(frame<0 || frame>=frames || body<0 || body>=bodyCount || !bodies[body].kinematic)
+            throw std::runtime_error("Invalid kinematic command");
+        commands.push_back({frame,body,velocity,omega});
+    }
+    std::stable_sort(commands.begin(),commands.end(),[](const Command& a,const Command& b){return a.frame<b.frame;});
+    size_t commandIndex=0;
+    std::vector<std::vector<std::array<float,6>>> kinematicHistory;
+    auto captureKinematics=[&]() {
+        std::vector<std::array<float,6>> state;
+        for(const auto& body:bodies) if(body.kinematic) {
+            auto p=b2Body_GetWorldCenterOfMass(body.id), v=b2Body_GetLinearVelocity(body.id); auto q=b2Body_GetRotation(body.id);
+            state.push_back({p.x,p.y,std::atan2(q.s,q.c),v.x,v.y,b2Body_GetAngularVelocity(body.id)});
+        }
+        kinematicHistory.push_back(state);
+    };
+    captureKinematics();
     std::cout << std::setprecision(10) << "{\"states\":["; snapshot(std::cout, bodies);
     double stepSeconds = 0, controllerSeconds = 0;
     std::vector<int> histogram(4, 0), selected; selected.reserve(frames);
@@ -158,6 +208,11 @@ int main() {
     long long work = 0;
     float maximumPenetration = 0;
     for (int frame = 0; frame < frames; ++frame) {
+        while(commandIndex<commands.size() && commands[commandIndex].frame==frame) {
+            const auto& command=commands[commandIndex++];
+            b2Body_SetLinearVelocity(bodies[command.body].id,command.velocity);
+            b2Body_SetAngularVelocity(bodies[command.body].id,command.omega);
+        }
         int primary = fixedPrimary, substeps = fixedSubsteps;
         if (adaptive) {
             auto clock = Clock::now(); Features f = features(bodies, dt);
@@ -183,6 +238,7 @@ int main() {
         Features measured = features(bodies, dt);
         maximumPenetration = std::max(maximumPenetration, measured.penetration);
         std::cout << ','; snapshot(std::cout, bodies);
+        captureKinematics();
     }
     std::cout << "],\"mass\":["; bool comma = false;
     for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.mass; }
@@ -194,6 +250,18 @@ int main() {
     for (int i = 0; i < 4; ++i) std::cout << (i ? "," : "") << histogram[i];
     std::cout << "],\"selected_levels\":[";
     for (int i = 0; i < frames; ++i) std::cout << (i ? "," : "") << selected[i];
+    std::cout << "],\"kinematic_states\":[";
+    for(size_t frame=0;frame<kinematicHistory.size();++frame) {
+        if(frame) std::cout << ',';
+        std::cout << '[';
+        for(size_t body=0;body<kinematicHistory[frame].size();++body) {
+            if(body) std::cout << ',';
+            std::cout << '[';
+            for(int k=0;k<6;++k) std::cout << (k?",":"") << kinematicHistory[frame][body][k];
+            std::cout << ']';
+        }
+        std::cout << ']';
+    }
     std::cout << "]}\n";
     b2DestroyWorld(world); return 0;
   } catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 2; }

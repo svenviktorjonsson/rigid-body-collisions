@@ -1,4 +1,4 @@
-"""Planar polygon/compound rigid dynamics through pinned Box2D comparators.
+"""Planar polygon/circle/compound rigid dynamics through pinned Box2D comparators.
 
 Build: see rigid_backend/README.md for both pinned backends.
 Run a scene: python rigid_engine.py scene.json --output result.json --preset high
@@ -52,8 +52,8 @@ def validate_scene(scene):
     if gravity.shape != (2,):
         raise ValueError("Gravity must have two components")
     for body in scene["bodies"]:
-        if body.get("type", "dynamic") not in ("dynamic", "static"):
-            raise ValueError("Supported body types are dynamic and static")
+        if body.get("type", "dynamic") not in ("dynamic", "static", "kinematic"):
+            raise ValueError("Supported body types are dynamic, static and kinematic")
         for key in ("position", "velocity"):
             if _finite(body.get(key, [0, 0]), key).shape != (2,):
                 raise ValueError(f"{key} must have two components")
@@ -66,9 +66,26 @@ def validate_scene(scene):
             np.any(body.get("velocity", [0, 0])) or body.get("omega", 0)
         ):
             raise ValueError("Static bodies cannot carry prescribed velocity")
-        if not body.get("polygons"):
-            raise ValueError("Every body needs one or more convex polygon fixtures")
-        for shape in body["polygons"]:
+        if body.get("velocity_schedule") is not None:
+            if body.get("type") != "kinematic":
+                raise ValueError("Prescribed velocity schedules require a kinematic body")
+            schedule = body["velocity_schedule"]
+            if not isinstance(schedule, list) or not schedule:
+                raise ValueError("Nonempty velocity schedule required")
+            previous = -1
+            for command in schedule:
+                time_s = float(_finite(command.get("time_s"), "command time"))
+                if not previous < time_s < duration or time_s < 0:
+                    raise ValueError("Schedule times must increase within the simulated horizon")
+                if _finite(command.get("velocity", [0, 0]), "command velocity").shape != (2,):
+                    raise ValueError("Command velocity must have two components")
+                omega = float(_finite(command.get("omega", 0), "command omega"))
+                if np.linalg.norm(command.get("velocity", [0, 0])) > 500:
+                    raise ValueError("Command exceeds the adapter speed limit")
+                previous = time_s
+        if not body.get("polygons") and not body.get("circles"):
+            raise ValueError("Every body needs polygon or circle fixtures")
+        for shape in body.get("polygons", []):
             vertices = _finite(shape.get("vertices"), "vertices")
             if vertices.ndim != 2 or vertices.shape[1] != 2 or not 3 <= len(vertices) <= 8:
                 raise ValueError("Each convex polygon needs 3 to 8 ordered vertices")
@@ -83,12 +100,20 @@ def validate_scene(scene):
                 raise ValueError("Polygon vertices must follow the convex boundary")
             if np.min(np.linalg.norm(edges, axis=1)) < 0.01:
                 raise ValueError("Edges must be at least 0.01 m for this meter-scale adapter")
+        for circle in body.get("circles", []):
+            radius = float(_finite(circle.get("radius"), "circle radius"))
+            if radius < .005:
+                raise ValueError("Circle radius must be at least 0.005 m for this adapter")
+            if _finite(circle.get("center", [0, 0]), "circle center").shape != (2,):
+                raise ValueError("Circle center must have two components")
+        for shape in body.get("polygons", []) + body.get("circles", []):
             for key, default in (("density", 1), ("friction", 0.3), ("restitution", 0), ("rolling", 0)):
                 value = float(_finite(shape.get(key, default), key))
                 if value < 0 or (key == "density" and body.get("type", "dynamic") == "dynamic" and value <= 0):
                     raise ValueError(f"Invalid {key}")
                 if key == "restitution" and value > 1:
                     raise ValueError("Restitution must lie in [0,1]")
+
 
 
 def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend="block", binary=None):
@@ -134,26 +159,42 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
         if scene.get("collision_skin_m", .01) < .005:
             raise ValueError("Block comparator's CCD requires at least 0.005 m collision skin")
         for body in scene["bodies"]:
-            if any(s.get("rolling", 0) for s in body["polygons"]):
+            if any(s.get("rolling", 0) for s in body.get("polygons", []) + body.get("circles", [])):
                 raise ValueError("Block comparator has no rolling resistance model")
             if np.linalg.norm(body.get("velocity", [0, 0])) * dt > 2:
                 raise ValueError("Initial speed would be clipped by the block backend's translation cap")
             if abs(body.get("omega", 0)) * dt > np.pi/2:
                 raise ValueError("Initial spin would be clipped by the block backend's rotation cap")
-    values = [dt, frames, *scene.get("gravity", [0, -9.81]), hertz, scene.get("collision_skin_m", .01),
+    commands = []
+    for index, body in enumerate(scene["bodies"]):
+        for command in body.get("velocity_schedule", []):
+            frame = int(round(command["time_s"] / dt))
+            if not np.isclose(frame*dt, command["time_s"], rtol=1e-9, atol=1e-12):
+                raise ValueError("Velocity schedule changes must align with output frames")
+            velocity, omega = command.get("velocity", [0, 0]), command.get("omega", 0)
+            if backend == "block" and (np.linalg.norm(velocity)*dt > 2 or abs(omega)*dt > np.pi/2):
+                raise ValueError("Prescribed motion would exceed block backend movement caps")
+            commands.append((frame, index, *velocity, omega))
+    values = ["rigid-v2", dt, frames, *scene.get("gravity", [0, -9.81]), hertz, scene.get("collision_skin_m", .01),
               int(policy is not None), primary_steps, substeps,
               p["travel_threshold"], p["penetration_threshold"], p["island_threshold"],
               p["mass_ratio_threshold"], p["dwell_frames"], p["minimum_level"],
               p["high_primary_steps"], p["high_substeps"], len(scene["bodies"])]
     for body in scene["bodies"]:
-        values.extend([2 if body.get("type", "dynamic") == "dynamic" else 0,
+        values.extend([{"dynamic": 2, "kinematic": 1, "static": 0}[body.get("type", "dynamic")],
                        int(body.get("fixed_rotation", False)), int(body.get("bullet", False)),
                        *body.get("position", [0, 0]), body.get("angle", 0),
-                       *body.get("velocity", [0, 0]), body.get("omega", 0), len(body["polygons"])])
-        for shape in body["polygons"]:
-            values.extend([len(shape["vertices"]), shape.get("density", 1), shape.get("friction", 0.3),
-                           shape.get("restitution", 0), shape.get("rolling", 0)])
+                       *body.get("velocity", [0, 0]), body.get("omega", 0), len(body.get("polygons", [])) + len(body.get("circles", []))])
+        for shape in body.get("polygons", []):
+            values.extend([1, shape.get("density", 1), shape.get("friction", 0.3),
+                           shape.get("restitution", 0), shape.get("rolling", 0), len(shape["vertices"])])
             values.extend(np.asarray(shape["vertices"]).ravel().tolist())
+        for shape in body.get("circles", []):
+            values.extend([0, shape.get("density", 1), shape.get("friction", 0.3),
+                           shape.get("restitution", 0), shape.get("rolling", 0),
+                           shape["radius"], *shape.get("center", [0, 0])])
+    values.append(len(commands))
+    for command in commands: values.extend(command)
     executable = Path(binary) if binary is not None else BINARIES[backend]
     if not executable.is_file():
         raise FileNotFoundError(f"Build the pinned backend first: {executable}")
@@ -167,7 +208,7 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
         raise RuntimeError("Nonfinite engine state")
     physical = {"bodies": scene["bodies"], "gravity": scene.get("gravity", [0, -9.81]),
                 "duration": scene["duration"], "units": "m,kg,s; areal density",
-                "collision_skin_m": scene.get("collision_skin_m", .01), "mass_geometry": "unrounded polygon cores",
+                "collision_skin_m": scene.get("collision_skin_m", .01), "mass_geometry": "unrounded polygon cores and exact disks",
                 "friction_law": "single-coefficient dry friction", "restitution_threshold": 0}
     numerical_model = {"backend": backend, "commit": BOX2D_COMMITS[backend],
                        "contact_hertz": hertz if backend == "temporal" else None,
@@ -175,7 +216,10 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
                        "max_contact_push_speed": 1 if backend == "temporal" else None,
                        "position_iterations": 3 if backend == "block" else None,
                        "sleep": False, "continuous_collision": True}
-    states = np.asarray(result["states"]); final = states[-1]
+    states = np.asarray(result["states"])
+    if states.ndim != 3 or states.shape[1] == 0:
+        raise ValueError("At least one dynamic body is required for this state adapter")
+    final = states[-1]
     mass = np.asarray(result["mass"]); inertia = np.asarray(result["inertia"])
     kinetic = .5 * np.sum(mass * np.sum(final[:, 3:5]**2, axis=1) + inertia * final[:, 5]**2)
     observables = {"kinetic_energy_final": {"value": float(kinetic), "unit": "J"},
