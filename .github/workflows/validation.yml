@@ -1,0 +1,30 @@
+name: Physics and benchmark validation
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install numerical dependencies
+        run: python -m pip install 'numpy>=2.1,<3' 'scipy>=1.14,<2' 'matplotlib>=3.9,<4'
+      - name: Engine and benchmark-tool regressions
+        run: python -m unittest discover -s tests -v
+      - name: Contact-model regressions
+        run: python -m unittest discover -s research -p 'test_*.py' -v
+      - name: Verify public source integrity and provenance
+        run: python -m research.benchmark_tools audit
+      - name: Exercise the explicitly synthetic comparison fixtures
+        run: |
+          python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json
+          python -m research.benchmark_tools convergence --axis dt_s --runs research/adaptive-benchmarks/examples/coarse.json research/adaptive-benchmarks/examples/medium.json research/adaptive-benchmarks/examples/fine.json --budget research/adaptive-benchmarks/examples/budget.json

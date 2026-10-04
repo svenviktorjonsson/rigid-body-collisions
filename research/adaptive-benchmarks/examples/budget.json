@@ -1,0 +1,15 @@
+{
+  "observables": {
+    "outgoing_speed": {
+      "unit": "m/s",
+      "abs_tol": 0.01,
+      "rel_tol": 0.01
+    },
+    "outgoing_spin": {
+      "unit": "rad/s",
+      "abs_tol": 0.005,
+      "rel_tol": 0.01
+    }
+  },
+  "note": "Illustrative test tolerances, not an engine accuracy specification."
+}

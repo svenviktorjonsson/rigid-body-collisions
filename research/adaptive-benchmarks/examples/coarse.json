@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-tool-fixture",
+  "physical_setup_id": "hand-written-fixture-not-a-simulation",
+  "evidence_kind": "synthetic_fixture",
+  "wall_time_s": 0.08,
+  "fidelity": {
+    "dt_s": 0.001,
+    "mesh_h_m": 0.001,
+    "solver_tolerance": 1e-10
+  },
+  "observables": {
+    "outgoing_speed": {
+      "value": 0.603,
+      "unit": "m/s"
+    },
+    "outgoing_spin": {
+      "value": 0.105,
+      "unit": "rad/s"
+    }
+  },
+  "note": "Hand-written numbers for CLI verification; not physics or performance evidence."
+}
