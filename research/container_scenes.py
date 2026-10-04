@@ -50,15 +50,18 @@ def grid(side=10, motion='shake', duration=2, boost=(0,0), gravity=(0,-9.81), fr
         'material_authenticity':'Idealized coefficients, not material measurements'}
 
 
-def packed_row_contact_system(count=64, speed=1):
+def packed_row_contact_system(count=64, speed=1, sparse=False):
     """Frozen exact contacts for a closed, driven row; no friction or restitution."""
     import numpy as np
-    from research.contact_solver import assemble_planar
     radius=.1;half=count*radius
     centers=[[-half+radius+2*radius*i,0] for i in range(count)]+[[0,0]]
     contacts=[(0,count,[-half,0],[1,0])]
     contacts += [(i+1,i,[-half+2*radius*(i+1),0],[1,0]) for i in range(count-1)]
     contacts += [(count-1,count,[half,0],[-1,0])]
-    inverse,G,_=assemble_planar(centers,[1]*count+[float('inf')],[.005]*count+[float('inf')],contacts)
     velocity=np.zeros(3*(count+1));velocity[-3]=speed
+    if sparse:
+        from research.sparse_contact import assemble_sparse
+        return assemble_sparse(centers,[1]*count+[float('inf')],[.005]*count+[float('inf')],contacts),velocity
+    from research.contact_solver import assemble_planar
+    inverse,G,_=assemble_planar(centers,[1]*count+[float('inf')],[.005]*count+[float('inf')],contacts)
     return inverse,G,velocity
