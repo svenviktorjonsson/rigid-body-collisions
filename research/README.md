@@ -63,3 +63,13 @@ preset fails larger exact packed rows; none of the three dense trajectory
 references qualifies under the predeclared refinement budgets. See the
 [typeset mechanics](moving-container/contact-model.pdf) and
 [report PDF](moving-container/report.pdf). All coefficients are synthetic.
+
+## Sparse coupled-island performance
+
+The [measured sparse-kernel report](sparse-islands/report.md) establishes an
+81.4x cold-pipeline gain over the dense verification optimizer at 256 balls and
+a 27.6x solve gain over the same algorithm with dense factorization at 1,024.
+All 139 snapshots independently audit; 96/100 irregular Coulomb stress cases
+pass and four are retained as rejected. This is frozen-contact performance,
+not full-engine throughput. See the [PDF](sparse-islands/report.pdf) and
+[typeset algorithm](sparse-islands/algorithm.pdf).

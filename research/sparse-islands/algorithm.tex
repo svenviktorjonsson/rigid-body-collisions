@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\title{Sparse inelastic contact kernels: model and numerical contract}
+\author{Physics-engine implementation note}
+\date{4 October 2026}
+\begin{document}\maketitle
+\noindent The implementation is planar and acts on an already discovered, frozen
+contact graph. The accompanying measured report establishes kernel performance,
+not complete-engine throughput or a new theory of collision. Geometry, masses,
+inertias and material coefficients remain unchanged when selecting an algorithm.
+
+\section{Body and contact operators}
+For each body use $\widetilde U_i=(v_{ix},v_{iy},\ell\omega_i)$, where the
+arbitrary reference length $\ell>0$ is a representation choice. Inverse mass is
+stored as a vector rather than a dense diagonal matrix:
+\begin{equation}
+ H_i^{-1}=\operatorname{diag}(m_i^{-1},m_i^{-1},\ell^2/\mathbb I_i).
+ \qquad r^{\wedge}=\begin{bmatrix}-r_y&r_x\end{bmatrix}.
+\end{equation}
+At an edge going from B to A, a direction $d$ contributes the row
+\begin{equation}
+ G_d=\begin{bmatrix}
+ d_x&d_y&(r_A^{\wedge}d)/\ell&
+ -d_x&-d_y&-(r_B^{\wedge}d)/\ell
+ \end{bmatrix}.
+\end{equation}
+Use one normal and tangent row per point, not one summed impulse per body pair.
+Prescribed degrees of freedom have zero inverse mass and retain their supplied
+velocity in the relative-motion map. Sparse operators give
+\begin{equation}
+ V^-=G\widetilde U^-,\quad K=G H^{-1}G^{\mathsf T},\quad
+ V^+=V^-+K\Delta P,\quad
+ \widetilde U^+=\widetilde U^-+H^{-1}G^{\mathsf T}\Delta P.
+\end{equation}
+No inverse of the full, potentially singular contact mobility is required.
+World geometry/mass changes invalidate this fixed-geometry cache. Sparse
+factorisation may have substantial fill on highly connected graphs; linear row
+scaling is not a theorem about all contact graphs.
+
+\section{Normal active-set solve}
+For zero restitution and frictionless normals, solve the standard convex QP
+\begin{equation}
+ \min_{p_n\geq0}\;\tfrac12p_n^{\mathsf T}K_{nn}p_n
+       +(V_n^-)^{\mathsf T}p_n.
+ \qquad V_n^+\geq0,\quad p_n\odot V_n^+=0.
+\end{equation}
+Free active rows are solved together; a candidate crossing a bound moves only
+to its first bound. Wrong bound gradients release the corresponding variables.
+Singular free blocks use least squares without introducing compliance. Cycling,
+inconsistent stationarity or excessive work rejects the candidate. This block
+scheme has no claimed universal convergence guarantee.
+
+The acceptance gate checks nonnegative impulses, normal feasibility and the
+velocity at contacts carrying positive impulse. Raw complementarity products
+are also reported; their scale grows with impulse magnitude. The benchmark
+requires every ball velocity within $10^{-8}$ m/s and wall reaction within
+$10^{-5}$ kg m/s. Small islands may choose dense factorisation of the same QP;
+the contact-count threshold is a numerical policy, not a physical parameter.
+
+\section{Implicit Coulomb residual and exact structural dispatch}
+One nonnegative coefficient $\mu$ defines the implemented inelastic law:
+\begin{align}
+ &p_n\geq0,\quad V_n^+\geq0,\quad p_n V_n^+=0,\\
+ &|p_t|\leq\mu p_n,\qquad
+ V_t^+\ne0\ \Longrightarrow\ p_t=-\mu p_n\operatorname{sign}(V_t^+).
+\end{align}
+At $V_t^+=0$, friction may lie inside its capacity. Final sticking does not
+constitute elastic tangential rebound. No separate static/dynamic coefficients,
+elastic-history state, positive restitution or free rolling couple is provided.
+
+Positive diagonal numerical scales $\rho_n,\rho_t$ give an equivalent root system:
+\begin{align}
+ F_n(p)&=p_n-\max(0,p_n-\rho_n V_n^+),\\
+ F_t(p)&=p_t-\operatorname{clip}(p_t-\rho_t V_t^+,
+                  -\mu\max(p_n,0),\mu\max(p_n,0)).
+\end{align}
+The implementation uses a sparse generalised Jacobian and a merit line search.
+A disclosed sparse least-squares fallback is allowed; optimiser success is
+never a replacement for mechanical residual checks. Four held-out stress cases
+remain rejected. No existence or uniqueness conclusion follows from rejection.
+
+If and only if the assembled cross-block has exact structural zero,
+$K_{nt}=0$, the normal pressure can be solved first and tangential response is
+the bounded QP
+\begin{equation}
+ \min_{-\mu p_n\leq p_t\leq\mu p_n}
+ \tfrac12p_t^{\mathsf T}K_{tt}p_t+(V_t^-)^{\mathsf T}p_t.
+\end{equation}
+Its KKT conditions give sticking or saturated friction opposite final slip.
+This is the same implicit law in this decoupled case, not a conic-QP replacement
+for general hard Coulomb contact. Small nonzero cross terms are not dropped.
+Nonunique normal pressures can produce different friction outcomes; the selected
+active-set pressure distribution is not an authenticated material force history.
+
+\section{Mechanical passivity with driven walls}
+Separate prescribed relative motion as $V_{\rm prescribed}$. The instantaneous
+external work and change in dynamic-body kinetic energy obey
+\begin{align}
+ W_{\rm boundary}&=-V_{\rm prescribed}^{\mathsf T}\Delta P,\\
+ \Delta T-W_{\rm boundary}
+ &= (V^-)^{\mathsf T}\Delta P+	frac12\Delta P^{\mathsf T}K\Delta P\\
+ &= (V^+)^{\mathsf T}\Delta P-	frac12\Delta P^{\mathsf T}K\Delta P\leq0.
+\end{align}
+The last inequality follows from normal complementarity, dissipative Coulomb
+slip and $K\succeq0$. The implementation also checks it numerically. Content
+kinetic energy may increase when the actuator supplies work.
+
+For the closed unit-mass row driven at $1\,\mathrm{m/s}$,
+$1\leq v_{1x}^+\leq\cdots\leq v_{Nx}^+\leq1$ forces every ball to $1\,\mathrm{m/s}$.
+Thus momentum is $N$, kinetic energy $N/2$, wall work $N$ and dissipation $N/2$
+in the corresponding SI units. The independent audit uses explicit row force,
+torque and point-velocity formulas rather than the new sparse assembler.
+
+\section{Scope of the result}
+The performance report retains every timing sample, 139 snapshots, source archives
+and rejected inputs. Long-row gains justify investigating a sparse island kernel
+in the actual engine. They do not establish full moving-container convergence,
+accurate stress/elastic waves, continuous collision discovery or a universal
+solver. The coefficients are synthetic. The compiler handover retains language
+unit/shape semantics and independent native/WASM/hardware acceptance boundaries.
+
+Established prior art includes Alart--Curnier (1991),
+\url{https://doi.org/10.1016/0045-7825(91)90022-x}, and Anitescu--Potra (1997),
+\url{https://doi.org/10.1023/a:1008292328909}. Bibliographic metadata was checked;
+the particular implementation is independently verified through its declared
+mechanical residuals and tests, not assumed identical to either paper.
+\end{document}

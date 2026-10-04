@@ -1,5 +1,8 @@
 # Sparse coupled contact performance
 
+[Measured report](report.pdf) and [typeset numerical contract](algorithm.pdf)
+explain the result and its limits.
+
 The implemented frozen-contact normal and Coulomb kernels keep one declared
 physical law while choosing numerical algorithms from contact structure. They
 do not perform collision discovery or integrate a full body trajectory.
@@ -22,8 +25,17 @@ and energy gates. Redundant rigid contact pressures may remain nonunique.
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m research.run_sparse_study
+python -m research.audit_sparse_study
+python -m research.make_sparse_report
 ```
 
 Use a separate checkout/output tree to preserve published evidence. Completed
 cases and the partial timing journal are saved during execution. Compiler
 porting remains a separate task in the private bootstrap handover.
+
+The normal cold pipeline is 81.4 times faster than the older dense optimizer at 256
+balls. Sparse factorization is 27.6 times faster than the dense version of the same
+active-set algorithm at 1,024 balls (8.4 times for the cold pipeline). The irregular
+Coulomb stress set accepts 96/100 cases; four rejected inputs remain in the archive.
+The friction fast path is not uniformly faster, and full engine integration remains
+separate. 69 local tests and independent 139 snapshot auditing pass.
