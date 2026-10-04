@@ -1,9 +1,10 @@
 # Method selection for the planar rigid-body engine
 
-The implementation study will use Box2D 3.1.1 as a practical baseline and adapt
-numerical work within its existing contact model. This is a recommendation to
-test, not evidence that Box2D is the most physically accurate engine or a universal
-winner. A result about this backend's fidelity settings will not establish
+The initial candidate was Box2D 3.1.1. Independent analytic checks found a
+restitution/symmetry failure, so the study now compares it with Box2D 2.4.1's
+coupled two-point normal solver. Adaptive work is tested within each backend,
+retaining its world and contacts. Neither backend is established as the most
+physically accurate engine or a universal winner. These comparisons will not establish
 superiority over MuJoCo, Drake, another hard-contact solver or deformable FEM.
 
 ## Evidence behind the choice
@@ -37,6 +38,24 @@ recovery. Bodies themselves are rigid. Neither its contact frequency nor rolling
 resistance is a measured material property just because it appears in a public
 example. Box2D uses a single dry-friction coefficient, rather than the distinct
 static/dynamic elastic-history contact law in our local compliant model.
+
+## First falsifying experiment
+
+Two equal, square bodies collide centrally at velocities +2 and -2 m/s with
+restitution 0.6 and zero friction. Symmetry and the isolated normal impulse law
+give outgoing velocities -1.2 and +1.2 m/s, with zero spin. The temporal backend
+at four primary steps and sixteen substeps produces approximately -1.056 and
++1.056 m/s and opposite spins of magnitude 0.288 rad/s. The block comparator
+produces -1.2000003 and +1.2000003 m/s with zero spin. Both preserve linear
+momentum in this case. The [full sweep](rigid-benchmarks/rebound-counterexample.json)
+varies both primary resolution and solver work, including adverse refinements.
+
+This is numerical evidence against using the temporal setting as an accurate
+default for this symmetric rebound case. It is not experimental validation and
+does not prove that the older comparator wins on stacks, friction or throughput.
+The block source explicitly solves a two-point normal complementarity problem
+inside its global sequential-impulse iterations. The comparator keeps that
+coupling instead of treating its two points as unrelated impacts.
 
 ## Executable study
 

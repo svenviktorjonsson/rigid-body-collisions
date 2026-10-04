@@ -27,5 +27,23 @@
       "upstream_path": "samples/sample_robustness.cpp",
       "sha256": "118515a0a82bbe5d4f0d863018e23c83d43b660280f9484d69a051d2a902a3b3"
     }
-  ]
+  ],
+  "block_comparator": {
+    "version": "2.4.1",
+    "commit": "9ebbbcd960ad424e03e5de6e66a40764c16f51bc",
+    "archive_url": "https://codeload.github.com/erincatto/box2d/tar.gz/v2.4.1",
+    "archive_sha256": "d6b4650ff897ee1ead27cf77a5933ea197cbeef6705638dd181adc2e816b23c2",
+    "source_files": [
+      {
+        "path": "public-sources/block/LICENSE",
+        "upstream_path": "LICENSE",
+        "sha256": "9b77e0763d3e1f5bb34aa54be173dd34377a29baf3cc4111fb48cf758b21efd8"
+      },
+      {
+        "path": "public-sources/block/src/dynamics/b2_contact_solver.cpp",
+        "upstream_path": "src/dynamics/b2_contact_solver.cpp",
+        "sha256": "6f44c5cce24c88fab2a21829528368b73e2e186c1a0eb3683ffb0a5e1529b450"
+      }
+    ]
+  }
 }

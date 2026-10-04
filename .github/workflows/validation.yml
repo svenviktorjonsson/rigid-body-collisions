@@ -17,7 +17,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install numerical dependencies
-        run: python -m pip install 'numpy>=2.1,<3' 'scipy>=1.14,<2' 'matplotlib>=3.9,<4'
+        run: python -m pip install 'numpy>=2.1,<3' 'scipy>=1.14,<2' 'matplotlib>=3.9,<4' 'cmake>=3.22' ninja
+      - name: Build pinned rigid contact comparators
+        run: |
+          cmake -S rigid_backend -B build/rigid_block -G Ninja -DCMAKE_BUILD_TYPE=Release -DRIGID_BLOCK_BACKEND=ON
+          cmake --build build/rigid_block -j 2
+          cmake -S rigid_backend -B build/rigid_backend -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build/rigid_backend -j 2
       - name: Engine and benchmark-tool regressions
         run: python -m unittest discover -s tests -v
       - name: Contact-model regressions

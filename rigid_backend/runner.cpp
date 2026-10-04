@@ -1,0 +1,200 @@
+// Headless benchmark adapter. Box2D retains its contact caches across fidelity changes.
+#ifdef RIGID_BLOCK_BACKEND
+#include "compat2.h"
+#else
+#include <box2d/box2d.h>
+using RigidWorldDef = b2WorldDef;
+using RigidBodyDef = b2BodyDef;
+using RigidShapeDef = b2ShapeDef;
+using RigidManifold = b2Manifold;
+using RigidMassData = b2MassData;
+#endif
+#include <algorithm>
+#include <chrono>
+#include <cmath>
+#include <cstdint>
+#include <iomanip>
+#include <iostream>
+#include <numeric>
+#include <set>
+#include <stdexcept>
+#include <vector>
+
+using Clock = std::chrono::steady_clock;
+static double seconds(Clock::time_point start) {
+    return std::chrono::duration<double>(Clock::now() - start).count();
+}
+template<class T> static T read() {
+    T value;
+    if (!(std::cin >> value)) throw std::runtime_error("Truncated scene input");
+    return value;
+}
+struct Body {
+    b2BodyId id;
+    bool dynamic;
+    float extent = 1e20f, radius = 0, mass = 0, inertia = 0;
+};
+struct Features { float travel = 0, penetration = 0, massRatio = 1; int contacts = 0, island = 0; };
+
+static Features features(const std::vector<Body>& bodies, float dt) {
+    Features f;
+    std::vector<int> parent(bodies.size());
+    std::iota(parent.begin(), parent.end(), 0);
+    auto root = [&parent](int i) { while (parent[i] != i) i = parent[i]; return i; };
+    std::set<std::pair<uint64_t, uint64_t>> seen;
+    for (const Body& body : bodies) {
+        if (!body.dynamic) continue;
+        b2Vec2 v = b2Body_GetLinearVelocity(body.id);
+        float w = b2Body_GetAngularVelocity(body.id);
+        f.travel = std::max(f.travel, dt * (b2Length(v) + std::abs(w) * body.radius) / body.extent);
+        std::vector<b2ContactData> contacts(b2Body_GetContactCapacity(body.id));
+        int count = b2Body_GetContactData(body.id, contacts.data(), int(contacts.size()));
+        for (int j = 0; j < count; ++j) {
+            const auto& contact = contacts[j];
+            uint64_t sa = b2StoreShapeId(contact.shapeIdA), sb = b2StoreShapeId(contact.shapeIdB);
+            auto key = std::make_pair(std::min(sa, sb), std::max(sa, sb));
+            if (!seen.insert(key).second) continue;
+            b2BodyId a = b2Shape_GetBody(contact.shapeIdA), b = b2Shape_GetBody(contact.shapeIdB);
+            int ia = int(reinterpret_cast<intptr_t>(b2Body_GetUserData(a))) - 1;
+            int ib = int(reinterpret_cast<intptr_t>(b2Body_GetUserData(b))) - 1;
+            b2Polygon pa = b2Shape_GetPolygon(contact.shapeIdA), pb = b2Shape_GetPolygon(contact.shapeIdB);
+            RigidManifold m = b2CollidePolygons(&pa, b2Body_GetTransform(a), &pb, b2Body_GetTransform(b));
+            if (!m.pointCount) continue;
+            ++f.contacts;
+            float extent = std::min(bodies[ia].extent, bodies[ib].extent);
+            for (int k = 0; k < m.pointCount; ++k)
+                f.penetration = std::max(f.penetration, std::max(0.f, -m.points[k].separation) / extent);
+            if (bodies[ia].dynamic && bodies[ib].dynamic) parent[root(ia)] = root(ib);
+        }
+    }
+    std::vector<int> sizes(bodies.size(), 0);
+    std::vector<float> minMass(bodies.size(), 1e20f), maxMass(bodies.size(), 0);
+    for (int i = 0; i < int(bodies.size()); ++i) {
+        if (!bodies[i].dynamic) continue;
+        int r = root(i);
+        ++sizes[r]; minMass[r] = std::min(minMass[r], bodies[i].mass); maxMass[r] = std::max(maxMass[r], bodies[i].mass);
+        f.island = std::max(f.island, sizes[r]);
+        f.massRatio = std::max(f.massRatio, maxMass[r] / minMass[r]);
+    }
+    return f;
+}
+
+static void snapshot(std::ostream& out, const std::vector<Body>& bodies) {
+    out << '['; bool comma = false;
+    for (const Body& body : bodies) {
+        if (!body.dynamic) continue;
+        if (comma) out << ',';
+        comma = true;
+        b2Vec2 p = b2Body_GetWorldCenterOfMass(body.id), v = b2Body_GetLinearVelocity(body.id);
+        b2Rot q = b2Body_GetRotation(body.id);
+        out << '[' << p.x << ',' << p.y << ',' << std::atan2(q.s, q.c) << ',' << v.x << ',' << v.y << ','
+            << b2Body_GetAngularVelocity(body.id) << ']';
+    }
+    out << ']';
+}
+
+int main() {
+  try {
+    float dt = read<float>(); int frames = read<int>();
+    RigidWorldDef wd = b2DefaultWorldDef();
+    wd.gravity = {read<float>(), read<float>()}; wd.contactHertz = read<float>();
+    float skin = read<float>();
+    wd.contactDampingRatio = 1.f; wd.maxContactPushSpeed = 1.f;
+    wd.restitutionThreshold = 0.f; wd.maximumLinearSpeed = 500.f;
+    wd.enableSleep = false; wd.enableContinuous = true;
+    int adaptive = read<int>(), fixedPrimary = read<int>(), fixedSubsteps = read<int>();
+    float travelThreshold = read<float>(), penetrationThreshold = read<float>();
+    int islandThreshold = read<int>(); float massThreshold = read<float>();
+    int dwell = read<int>(), minimum = read<int>();
+    int highPrimary = read<int>(), highSubsteps = read<int>();
+    if (!(dt > 0) || frames < 1 || fixedPrimary < 1 || fixedSubsteps < 1 || minimum < 0 || minimum > 3)
+        throw std::runtime_error("Invalid integration settings");
+    b2WorldId world = b2CreateWorld(&wd);
+    int bodyCount = read<int>(); std::vector<Body> bodies;
+    for (int i = 0; i < bodyCount; ++i) {
+        RigidBodyDef bd = b2DefaultBodyDef(); int type = read<int>();
+        bd.type = type == 2 ? b2_dynamicBody : b2_staticBody;
+        bd.fixedRotation = read<int>() != 0; bd.isBullet = read<int>() != 0;
+        bd.position = {read<float>(), read<float>()}; bd.rotation = b2MakeRot(read<float>());
+        bd.linearVelocity = {read<float>(), read<float>()}; bd.angularVelocity = read<float>();
+        bd.userData = reinterpret_cast<void*>(intptr_t(i + 1)); bd.enableSleep = false;
+        Body body{b2CreateBody(world, &bd), type == 2};
+        float mass = 0, inertiaOrigin = 0; b2Vec2 moment{0, 0};
+        int shapeCount = read<int>();
+        for (int j = 0; j < shapeCount; ++j) {
+            int count = read<int>(); RigidShapeDef sd = b2DefaultShapeDef();
+            sd.density = read<float>(); sd.material.friction = read<float>();
+            sd.material.restitution = read<float>(); sd.material.rollingResistance = read<float>();
+            if (count < 3 || count > B2_MAX_POLYGON_VERTICES) throw std::runtime_error("Invalid polygon vertex count");
+            b2Vec2 vertices[B2_MAX_POLYGON_VERTICES]; b2Vec2 lo{1e20f, 1e20f}, hi{-1e20f, -1e20f};
+            for (int k = 0; k < count; ++k) {
+                vertices[k] = {read<float>(), read<float>()};
+                lo = b2Min(lo, vertices[k]); hi = b2Max(hi, vertices[k]);
+                body.radius = std::max(body.radius, b2Length(vertices[k]));
+            }
+            b2Hull hull = b2ComputeHull(vertices, count);
+            if (hull.count != count || !b2ValidateHull(&hull)) throw std::runtime_error("Convex ordered polygon required");
+            b2Polygon core = b2MakePolygon(&hull, 0.f);
+            RigidMassData md = b2ComputePolygonMass(&core, sd.density);
+            mass += md.mass; moment = b2Add(moment, b2MulSV(md.mass, md.center));
+            inertiaOrigin += md.rotationalInertia;
+            b2Polygon polygon = b2MakePolygon(&hull, skin);
+            b2CreatePolygonShape(body.id, &sd, &polygon);
+            body.extent = std::min(body.extent, std::min(hi.x - lo.x, hi.y - lo.y));
+        }
+        if (body.dynamic && mass > 0) {
+            RigidMassData md; md.mass = mass; md.center = b2MulSV(1.f / mass, moment);
+            md.rotationalInertia = bd.fixedRotation ? 0.f : inertiaOrigin - mass * b2Dot(md.center, md.center);
+            b2Body_SetMassData(body.id, md);
+        }
+        body.mass = b2Body_GetMass(body.id); body.inertia = b2Body_GetRotationalInertia(body.id);
+        if (shapeCount < 1 || body.extent <= 0 || (body.dynamic && body.mass <= 0)) throw std::runtime_error("Invalid body");
+        bodies.push_back(body);
+    }
+    std::cout << std::setprecision(10) << "{\"states\":["; snapshot(std::cout, bodies);
+    double stepSeconds = 0, controllerSeconds = 0;
+    std::vector<int> histogram(4, 0), selected; selected.reserve(frames);
+    int current = minimum, downFrames = 0, switches = 0;
+    long long work = 0;
+    float maximumPenetration = 0;
+    for (int frame = 0; frame < frames; ++frame) {
+        int primary = fixedPrimary, substeps = fixedSubsteps;
+        if (adaptive) {
+            auto clock = Clock::now(); Features f = features(bodies, dt);
+            int desired = f.contacts ? 1 : 0;
+            if (f.travel > travelThreshold) desired = std::max(desired, 2);
+            if (f.travel > 2 * travelThreshold || f.penetration > penetrationThreshold ||
+                (f.contacts && (f.island >= islandThreshold || f.massRatio >= massThreshold))) desired = 3;
+            desired = std::max(desired, minimum);
+            int old = current;
+            if (desired > current) { current = desired; downFrames = 0; }
+            else if (desired < current && ++downFrames >= dwell) { current = desired; downFrames = 0; }
+            else if (desired == current) downFrames = 0;
+            switches += current != old;
+            primary = current < 2 ? 1 : (current == 2 ? 2 : highPrimary);
+            substeps = current == 0 ? 1 : (current == 1 ? 4 : (current == 2 ? 8 : highSubsteps));
+            ++histogram[current]; controllerSeconds += seconds(clock);
+        }
+        selected.push_back(adaptive ? current : -1);
+        auto clock = Clock::now();
+        for (int k = 0; k < primary; ++k) b2World_Step(world, dt / primary, substeps);
+        stepSeconds += seconds(clock); work += primary * substeps;
+        // This observable covers reported contact pairs, not a certificate against all missed collisions.
+        Features measured = features(bodies, dt);
+        maximumPenetration = std::max(maximumPenetration, measured.penetration);
+        std::cout << ','; snapshot(std::cout, bodies);
+    }
+    std::cout << "],\"mass\":["; bool comma = false;
+    for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.mass; }
+    std::cout << "],\"inertia\":["; comma = false;
+    for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.inertia; }
+    std::cout << "],\"step_s\":" << stepSeconds << ",\"controller_s\":" << controllerSeconds
+              << ",\"reported_max_penetration_fraction\":" << maximumPenetration
+              << ",\"solver_work_total\":" << work << ",\"switches\":" << switches << ",\"level_frames\":[";
+    for (int i = 0; i < 4; ++i) std::cout << (i ? "," : "") << histogram[i];
+    std::cout << "],\"selected_levels\":[";
+    for (int i = 0; i < frames; ++i) std::cout << (i ? "," : "") << selected[i];
+    std::cout << "]}\n";
+    b2DestroyWorld(world); return 0;
+  } catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 2; }
+}

@@ -3,3 +3,5 @@ research/adaptive-benchmarks/getfem-sources/** linguist-vendored=true
 research/*.csv linguist-generated=true
 research/*.png linguist-generated=true
 research/*.pdf linguist-generated=true
+research/rigid-benchmarks/public-sources/** linguist-vendored=true whitespace=-trailing-space
+research/rigid-benchmarks/results/** linguist-generated=true
