@@ -4,7 +4,7 @@ from scipy.optimize import LinearConstraint, minimize
 
 from research.contact_solver import assemble_planar
 from research.container_scenes import packed_row_contact_system
-from research.sparse_contact import assemble_sparse, normal_solve
+from research.sparse_contact import assemble_sparse, normal_solve, friction_solve
 
 
 class SparseContactTests(unittest.TestCase):
@@ -89,6 +89,68 @@ class SparseContactTests(unittest.TestCase):
         post, impulse, stats = normal_solve(system, [1, 2, 3])
         np.testing.assert_allclose(post, [1, 2, 3])
         self.assertEqual(len(impulse), 0); self.assertEqual(stats['iterations'], 0)
+
+    def test_friction_matches_isolated_sliding_and_sticking_impulses(self):
+        system = assemble_sparse([[0, 0], [0, 0]], [1, np.inf], [.005, np.inf], [(0, 1, [-.1, 0], [1, 0])])
+        for mu, expected_t in ((0, 0), (.1, -.1), (1, -2/3)):
+            post, p, stats = friction_solve(system, [-1, 2, 0, 0, 0, 0], mu)
+            self.assertAlmostEqual(p[0], 1, places=9)
+            self.assertAlmostEqual(p[1], expected_t, places=9)
+            self.assertLessEqual(stats['normal_residual_m_s'], 1e-8)
+            self.assertLessEqual(stats['slip_law_residual_kg_m_s'], 1e-8)
+            self.assertLessEqual(stats['contact_energy_change_minus_boundary_work_J'], 0)
+
+    def test_frictional_moving_wall_work_and_post_contact_velocity(self):
+        system = assemble_sparse([[0, 0], [0, 0]], [1, np.inf], [.005, np.inf], [(0, 1, [-.1, 0], [1, 0])])
+        initial = np.array([0., 0, 0, 1, .2, 0])
+        post, p, stats = friction_solve(system, initial, .4)
+        np.testing.assert_allclose(system.contact_map @ post, [0, 0, post[2]], atol=1e-9)
+        self.assertAlmostEqual(p[0], 1, places=9); self.assertAlmostEqual(p[1], .2/3, places=9)
+        work = p[0]+.2*p[1]
+        kinetic = .5*np.sum(post[:2]**2)+.5*.005*post[2]**2
+        self.assertAlmostEqual(kinetic-work, stats['contact_energy_change_minus_boundary_work_J'], places=10)
+
+    def test_friction_handles_general_normal_tangent_coupling_and_internal_momentum(self):
+        centers = np.array([[0, .2], [1, -.1], [2, .3]])
+        mass, inertia = np.array([1, 2, 3]), np.array([.2, .5, .7])
+        system = assemble_sparse(centers, mass, inertia, [(0, 1, [.5, 0], [-1, 0]), (1, 2, [1.5, 0], [-1, 0])])
+        _, K = system.mobility((0, 1))
+        self.assertGreater(np.max(np.abs(K[::2, 1::2].toarray())), .01)
+        initial = np.array([1., .3, .2, 0, 0, 0, -1, -.2, .1])
+        post, p, stats = friction_solve(system, initial, .3)
+        delta = (post-initial).reshape(3, 3); linear = mass[:, None]*delta[:, :2]
+        np.testing.assert_allclose(linear.sum(axis=0), 0, atol=1e-10)
+        angular = np.sum(centers[:, 0]*linear[:, 1]-centers[:, 1]*linear[:, 0]+inertia*delta[:, 2])
+        self.assertAlmostEqual(angular, 0, places=10)
+        self.assertLessEqual(stats['contact_energy_change_minus_boundary_work_J'], 1e-10)
+
+    def test_large_frictional_row_satisfies_normal_cone_slip_and_energy_gates(self):
+        system, v = packed_row_contact_system(1000, sparse=True)
+        v[1:-3:3] = 2*np.sin(np.arange(1000)*.37); v[-2] = .2
+        post, p, stats = friction_solve(system, v, .4)
+        np.testing.assert_allclose(post[:-3:3], 1, atol=1e-8)
+        self.assertLessEqual(stats['normal_residual_m_s'], 1e-8)
+        self.assertLessEqual(stats['friction_capacity_residual_kg_m_s'], 1e-8)
+        self.assertLessEqual(stats['slip_law_residual_kg_m_s'], 1e-8)
+        self.assertLessEqual(stats['contact_energy_change_minus_boundary_work_J'], 0)
+
+    def test_friction_free_flight_and_invalid_coefficients(self):
+        system = assemble_sparse([[0, 0]], [1], [1], [])
+        post, p, _ = friction_solve(system, [1, 2, 3], .4)
+        np.testing.assert_allclose(post, [1, 2, 3]); self.assertEqual(len(p), 0)
+        system, v = packed_row_contact_system(4, sparse=True)
+        with self.assertRaises(ValueError): friction_solve(system, v, -.1)
+
+    def test_dispatch_preserves_physics_and_general_coupling(self):
+        system, v = packed_row_contact_system(100, sparse=True)
+        outputs = [normal_solve(system, v, strategy=s)[0] for s in ('sparse', 'dense', 'auto')]
+        for out in outputs: np.testing.assert_allclose(out, outputs[0], atol=1e-8)
+        v[1:-3:3] = 2*np.sin(np.arange(100)*.37); v[-2] = .2
+        a, pa, sa = friction_solve(system, v, .02, strategy='auto')
+        b, pb, sb = friction_solve(system, v, .02, strategy='general')
+        np.testing.assert_allclose(a, b, atol=1e-8); np.testing.assert_allclose(pa, pb, atol=1e-8)
+        self.assertEqual(sa['method'], 'decoupled_box'); self.assertEqual(sb['method'], 'semismooth')
+        self.assertGreater(sa['sliding_contacts'], 0)
 
 
 if __name__ == '__main__': unittest.main()
