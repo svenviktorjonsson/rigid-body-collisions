@@ -1,0 +1,5 @@
+research/adaptive-benchmarks/sources/** linguist-vendored=true
+research/adaptive-benchmarks/getfem-sources/** linguist-vendored=true
+research/*.csv linguist-generated=true
+research/*.png linguist-generated=true
+research/*.pdf linguist-generated=true

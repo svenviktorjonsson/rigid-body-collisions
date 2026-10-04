@@ -1,5 +1,12 @@
 # Rigid-body research package
 
+This package is maintained in `svenviktorjonsson/rigid-body-collisions` under
+`research/`. Read [VALIDATION.md](VALIDATION.md) for runnable source audits,
+fast/reference comparisons, refinement checks and the engine-adapter contract.
+The [catalog](adaptive-benchmarks/benchmark-catalog.json) and
+[protocol](adaptive-benchmarks/benchmark-plan.txt) record the public benchmark
+assets and the planned calibration/held-out validation workflow.
+
 The shared verdict is **do not submit the current equations as novel collision theory; continue a narrower adaptive heterogeneous reduction study only if it gains distinctness and held-out accuracy/cost evidence**.
 
 Read `research-assessment.pdf` for the typeset mathematical formulation and evidence. `joint-verdict.md`, `critical-review.md`, and `publication-case.md` record the two opposing reviewers' agreed conclusions and checked references.
