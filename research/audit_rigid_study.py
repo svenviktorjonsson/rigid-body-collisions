@@ -65,7 +65,46 @@ def audit(directory):
     summary=json.loads((directory/'summary.json').read_text())
     qualified={r['case_id'] for r in rows if r['block_reference_qualified']=='True'}
     if len(qualified)!=summary['qualified_block_references']:raise ValueError('Qualification count changed')
-    print(json.dumps({'source_files_verified':len(sources),'traces_verified':len(traces),'comparisons_recomputed':len(rows),
+    follow_up_count=0
+    if (directory/'follow-up-trace-manifest.json').exists():
+        follow=json.loads((directory/'follow-up-trace-manifest.json').read_text())
+        path=directory/follow['archive']
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=follow['archive_sha256']:
+            raise ValueError('Follow-up archive digest changed')
+        refinements=json.loads((directory/'follow-up-refinement.json').read_text())
+        follow_traces={}
+        with zipfile.ZipFile(path) as stream:
+            if set(stream.namelist())!={m['path'] for m in follow['traces']}:
+                raise ValueError('Follow-up entries changed')
+            for record in follow['traces']:
+                data=stream.read(record['path'])
+                if hashlib.sha256(data).hexdigest()!=record['sha256']:
+                    raise ValueError('Follow-up trace changed')
+                with np.load(io.BytesIO(data),allow_pickle=False) as arrays:
+                    trace={k:arrays[k].copy() for k in arrays.files}
+                if not all(np.all(np.isfinite(v)) for v in trace.values()):
+                    raise ValueError('Nonfinite follow-up trace')
+                follow_traces[record['case_id'],record['primary_steps'],record['velocity_iterations']]=trace
+        for record in refinements:
+            id=record['case_id'];computed_changes=[]
+            for axis,settings in [('primary_changes',[(16,128,32,128),(32,128,64,128)]),
+                                  ('solver_changes',[(64,32,64,64),(64,64,64,128)])]:
+                for published,(p1,s1,p2,s2) in zip(record[axis],settings):
+                    a,b=follow_traces[id,p1,s1],follow_traces[id,p2,s2]
+                    for k in ('times','mass','inertia'):
+                        if not np.allclose(a[k],b[k]):raise ValueError('Follow-up physical setup changed')
+                    d=a['states']-b['states']
+                    error={'rms_position_m':np.sqrt(np.mean(np.sum(d[:,:,:2]**2,axis=2))),
+                           'rms_velocity_m_s':np.sqrt(np.mean(np.sum(d[:,:,3:5]**2,axis=2))),
+                           'rms_spin_rad_s':np.sqrt(np.mean(d[:,:,5]**2))}
+                    for k,v in error.items():
+                        if not np.isclose(v,published[k],rtol=1e-9,atol=1e-12):
+                            raise ValueError('Follow-up refinement computation changed')
+                    computed_changes.append(error)
+            qualified=all(normalized_error(e,record['reference_budget'])<=1 for e in computed_changes)
+            if qualified!=record['follow_up_qualified']:raise ValueError('Follow-up verdict changed')
+        follow_up_count=len(follow_traces)
+    print(json.dumps({'source_files_verified':len(sources),'traces_verified':len(traces),'comparisons_recomputed':len(rows),'follow_up_traces_verified':follow_up_count,
         'physically_validated_cases':0,'scope':'Numerical reproduction and file integrity, not material or reference truth'},indent=2))
 
 

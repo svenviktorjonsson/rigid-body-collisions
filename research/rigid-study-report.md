@@ -132,6 +132,14 @@ meets that same budget.** These are measured per-scene median times, in ms:
 | Thin-wall CCD | Fast | 0.049 | 0.578 | 11.80 |
 | 12-body impact chain | Accurate | 8.242 | 22.066 | 2.68 |
 
+A 20-repeat follow-up randomizes mode order within each round, preserving the
+original policy and settings. Adaptive/fixed median ratios are 1.53, 2.76,
+12.39 and 2.51 respectively; this repeats the lack of speed benefit.
+[All timing samples and round orders](rigid-benchmarks/results/interleaved-timings.json)
+are retained, including end-to-end time. The shared machine is not CPU-isolated;
+some refinement work was concurrent. These are local repeated measurements,
+rather than formal confidence intervals.
+
 ![Accuracy and runtime on qualified held-out scenes](rigid-benchmarks/results/accuracy-cost.png)
 
 Adaptive code working is different from adaptive code being beneficial. Neither
@@ -147,8 +155,19 @@ slopes and the long tilted stack fail the initial block reference qualification.
 Their curves and timings remain in the data, but they cannot support favorable
 matched-error claims. Pointwise late trajectories of unstable stacks can diverge
 while aggregate quantities remain close; both must be reported explicitly.
-A higher-resolution follow-up is being stored separately, without retuning the
-policy or revising the first held-out score.
+The exploratory follow-up refines primary steps 16 → 32 → 64 at 128 velocity
+iterations, and iterations 32 → 64 → 128 at 64 primary steps, still holding
+position iterations at three. It resolves the triangle drop, twelve-body stack
+and 30:1 contrast under the same reference budgets. Oblique hexagon, 100:1
+contrast, public friction slopes and the long tilted stack remain unresolved.
+These checks do not retune the policy or revise the original held-out score.
+The [follow-up records](rigid-benchmarks/results/follow-up-refinement.json) include
+late COM height, kinetic energy and momentum/energy diagnostics at each level.
+For example, the oblique hexagon has late mean height near 0.53961 m and near-zero
+kinetic energy across refinements while its spin trajectory still misses the
+reference budget. Settled height alone cannot validate the impact history.
+The floor is finite; objects leaving it in long runs can legitimately fall
+below it, so negative late heights are not automatically penetration failures.
 
 The benchmark does not include joints, 3D contact cones, materials with true
 elastic contact history, separate static/dynamic coefficients, rolling in the
@@ -181,6 +200,14 @@ and dispersion/objectivity concerns. The earlier rod experiment does not yet
 justify replacing continuum dynamics for arbitrary impact. No new friction law
 or publication-worthy adaptive superiority has been established by this study.
 
+## Sources supporting the method choice
+
+- Erin Catto, [Solver2D (2024)](https://box2d.org/posts/2024/02/solver2d/): author discussion of iterative contacts, temporal substeps, softness and relaxation. Read for algorithm rationale, not as a performance result for our engine.
+- [Box2D simulation documentation](https://box2d.org/documentation/md_simulation.html): author recommendation of substeps and explanation of CCD, manifolds and contact settings. We tested the pinned implementations rather than assuming the recommended setting passed our cases.
+- [Pinned two-point block solver source](rigid-benchmarks/public-sources/block/src/dynamics/b2_contact_solver.cpp): directly inspect the coupled normal complementarity solve. Coupling is existing prior art, not our invention.
+- [MuJoCo computation documentation](https://mujoco.readthedocs.io/en/stable/computation/index.html): hard complementarity and convex soft friction are different model choices. Read for the limits of treating numerical convergence as physical truth; no MuJoCo throughput comparison was executed here.
+- Anitescu and Potra (1997), [Formulating Dynamic Multi-Rigid-Body Contact Problems with Friction as Solvable Linear Complementarity Problems](https://doi.org/10.1023/A:1008292328909): prior-art lead for global frictional contact formulations, checked in the earlier review. Its existence supports the lack of novelty in simply assembling coupled impulses; it does not establish our solver's performance.
+
 ## Reproduction
 
 Build both pinned backends following [the backend guide](../rigid_backend/README.md),
@@ -191,6 +218,14 @@ python -m research.run_rigid_study --repeats 5 --output /tmp/new-rigid-study
 python -m research.audit_rigid_study --pack --directory /tmp/new-rigid-study
 python -m research.audit_rigid_study
 python -m research.refine_rigid_references
+python -m research.time_rigid_modes
+```
+
+A typeset [PDF version](rigid-study-report.pdf) accompanies this report. Rebuild
+it with Pandoc and a LaTeX installation:
+
+```sh
+pandoc research/rigid-study-report.md --resource-path=research --include-in-header=research/rigid-study-header.tex --pdf-engine=pdflatex -V geometry:margin=25mm -V fontsize=10pt -o research/rigid-study-report.pdf
 ```
 
 The original frozen policy and histories stay in the repository. Repetition

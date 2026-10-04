@@ -11,7 +11,15 @@ The shared verdict is **do not submit the current equations as novel collision t
 
 Read `research-assessment.pdf` for the typeset mathematical formulation and evidence. `joint-verdict.md`, `critical-review.md`, and `publication-case.md` record the two opposing reviewers' agreed conclusions and checked references.
 
-## Implemented scope
+## Executed moving-polygon research
+
+Read [the new 17-scene study](rigid-study-report.md) for measured solver choices,
+reference qualification, failed adaptive speedups and preserved raw histories.
+The [headless engine](../rigid_backend/README.md) supports polygon/compound rigid
+bodies through pinned block and temporal backends. This extends the implemented
+scope beyond the earlier local contact and rod experiments below.
+
+## Implemented local contact scope
 
 - `contact_solver.py`: planar contact multigraph assembly, full force/couple mobility and global energy, a zero-restitution frictionless normal projection, and a proposed single-pair energy-constrained closest-target comparator. The comparator is not exact Coulomb friction; static/dynamic capacity selection is a labeled heuristic.
 - `compliant_contact.py`: a local, fixed-geometry finite-contact reference with unilateral normal compliance and tangential/rolling elastic elements in series with dissipative static/dynamic sliders, retaining sliding modes until explicit plastic-slip arrest events. Stored energy at opening is reported, not silently erased. It is not a polygon collision detector or a full moving-frame simulator.
@@ -39,4 +47,9 @@ pdflatex -interaction=nonstopmode -halt-on-error research-assessment.tex
 
 ## Not completed
 
-An arbitrary-body production simulator, adaptive coarse-cell/interface selection, calibrated material tables, a full global frictional solver, 3D implementation, convergence/objectivity verification under changing contact geometry, and comparative held-out validation remain research work. No general new model or publication-worthy superiority has been established.
+A production-quality arbitrary-body engine, adaptive coarse-cell/interface
+selection, calibrated material tables, an exact global frictional solver, 3D
+implementation and experimental validation remain research work. Executable
+planar polygon comparisons and held-out numerical adaptation tests now exist;
+those tests do not establish an adaptive speed advantage. No general new model
+or publication-worthy superiority has been established.

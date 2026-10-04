@@ -1,8 +1,7 @@
 """Planar polygon/compound rigid dynamics through pinned Box2D comparators.
 
-Build: cmake -S rigid_backend -B build/rigid_backend -DCMAKE_BUILD_TYPE=Release
-       cmake --build build/rigid_backend -j 4
-Run a scene: python rigid_engine.py scene.json --primary-steps 1 --substeps 4
+Build: see rigid_backend/README.md for both pinned backends.
+Run a scene: python rigid_engine.py scene.json --output result.json --preset accurate
 """
 import argparse
 import hashlib
@@ -19,6 +18,7 @@ BOX2D_COMMITS = {"temporal": "8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
 BINARIES = {"temporal": Path(__file__).parent / "build/rigid_backend/rigid_runner",
             "block": Path(__file__).parent / "build/rigid_block/rigid_runner"}
 DEFAULT_BINARY = BINARIES["block"]
+PRESETS = {"fast": (1, 1), "standard": (1, 8), "accurate": (4, 16), "high": (8, 32)}
 DEFAULT_POLICY = {"travel_threshold": 0.1, "penetration_threshold": 0.02,
                   "island_threshold": 6, "mass_ratio_threshold": 50,
                   "dwell_frames": 12, "minimum_level": 0,
@@ -91,7 +91,7 @@ def validate_scene(scene):
                     raise ValueError("Restitution must lie in [0,1]")
 
 
-def run(scene, *, dt=1 / 120, primary_steps=1, substeps=4, policy=None, backend="block", binary=None):
+def run(scene, *, dt=1 / 120, primary_steps=4, substeps=16, policy=None, backend="block", binary=None):
     """Run an entire scene, retaining the same world through adaptive changes.
 
     State columns: COM x,y [m], angle [rad], vx,vy [m/s], omega [rad/s].
@@ -190,8 +190,10 @@ def run(scene, *, dt=1 / 120, primary_steps=1, substeps=4, policy=None, backend=
                    "wall_time_s": time.perf_counter() - start,
                    "engine_and_controller_s": result["step_s"] + result["controller_s"],
                    "times": (np.arange(frames + 1) * dt).tolist(),
-                   "fidelity": {"output_dt_s": dt, "primary_steps": primary_steps,
-                                "solver_steps": substeps,
+                   "fidelity": {"output_dt_s": dt,
+                                "selection": "fixed" if policy is None else "adaptive",
+                                "primary_steps": primary_steps if policy is None else None,
+                                "solver_steps": substeps if policy is None else None,
                                 "solver_steps_meaning": "velocity_iterations" if backend == "block" else "temporal_substeps",
                                 "policy": p if policy is not None else None}})
     return result
@@ -201,13 +203,24 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("scene", type=Path)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--primary-steps", type=int, default=1)
-    parser.add_argument("--substeps", type=int, default=4)
-    parser.add_argument("--adaptive", action="store_true")
+    parser.add_argument("--preset", choices=PRESETS, default="accurate",
+                        help="Fixed numerical effort; accurate is the measured conservative block baseline")
+    parser.add_argument("--primary-steps", type=int, help="Override preset collision updates")
+    parser.add_argument("--substeps", type=int, help="Override preset solver steps; see backend semantics")
+    parser.add_argument("--adaptive", action="store_true", help="Use the experimental dynamic effort controller")
+    parser.add_argument("--policy", type=Path, help="Load an adaptive policy dict or frozen-policy.json")
     parser.add_argument("--backend", choices=BINARIES, default="block")
     args = parser.parse_args()
-    result = run(json.loads(args.scene.read_text()), primary_steps=args.primary_steps,
-                 substeps=args.substeps, policy={} if args.adaptive else None, backend=args.backend)
+    if args.policy and not args.adaptive:
+        parser.error("--policy requires --adaptive")
+    primary, solver = PRESETS[args.preset]
+    policy = {} if args.adaptive else None
+    if args.policy:
+        document = json.loads(args.policy.read_text())
+        policy = document.get("policy", document)
+    result = run(json.loads(args.scene.read_text()),
+                 primary_steps=primary if args.primary_steps is None else args.primary_steps,
+                 substeps=solver if args.substeps is None else args.substeps, policy=policy, backend=args.backend)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, allow_nan=False) + "\n")
 

@@ -1,71 +1,83 @@
 # Rigid body collisions
 
-A physics-engine prototype and an experimental adaptive collision research package.
-The executable engine currently simulates smooth circular disks in a unit square.
-Its implementation is `test_v3.py`; `test_v1.py`, `test_v2.py`, and `test.py` are
-historical experiments, not automated tests.
+A planar physics-engine prototype with executable collision research and
+reproducible speed/accuracy benchmarks.
 
-The [research package](research/README.md) contains the coupled planar contact
-model, a compliant contact reference, the typeset assessment and opposing reviews,
-coarse/fine rod experiments, and pinned public benchmark assets. The
-[benchmark catalog](research/adaptive-benchmarks/benchmark-catalog.json) records
-geometry, dimensionality, parameters, source revisions and authenticity status.
-The [calibration protocol](research/adaptive-benchmarks/benchmark-plan.txt) defines
-reference convergence, fitting, held-out tests and adaptive fidelity selection.
+The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
+compound concave bodies, persistent multiple contacts, dry friction, many-body
+contact chains and continuous collision detection through two pinned Box2D
+backends. Fast, standard, accurate and high numerical presets are available.
+An experimental dynamic controller changes solver effort while preserving the
+world and its contact caches.
 
-The intended approach is to calibrate reduced elastic/contact models against
-converged detailed simulations and measurements, then choose fidelity by error
-in physical outputs. Arbitrary-shape production simulation and adaptive switching
-are not implemented yet. Downloaded numerical example parameters are not presented
-as measured material properties, and the benchmark cases are not yet physically
-validated.
+The [executed study](research/rigid-study-report.md) tests 17 scenes and retains
+all 153 state histories. Its conservative measured default is the coupled
+normal block solver with four collision updates and 16 velocity iterations per
+1/120 s output frame. It met the declared RMS budgets on all ten scenes with
+qualified references. The adaptive prototype was slower than the cheapest
+passing fixed setting on all four qualified held-out scenes and missed the
+rebound trajectory budget. It remains an experiment rather than the default.
 
-## Run
+These are numerical and analytic checks of idealized rigid mechanics. Public
+sample provenance is preserved; friction/restitution values are not presented
+as experimentally measured material properties. Seven initial reference cases
+were unresolved; higher-work follow-up checks and uncertainty are reported
+separately. No universal engine ranking or novel friction law is established.
 
-Use Python 3.11 or newer:
+## Run polygon scenes
+
+Use Python 3.11+, CMake 3.22+ and a C/C++ compiler:
 
 ```sh
-python -m pip install numpy scipy matplotlib
-python test_v3.py
+python -m pip install numpy scipy matplotlib cmake ninja
+cmake -S rigid_backend -B build/rigid_block -DCMAKE_BUILD_TYPE=Release -DRIGID_BLOCK_BACKEND=ON
+cmake --build build/rigid_block -j 4
+cmake -S rigid_backend -B build/rigid_backend -DCMAKE_BUILD_TYPE=Release
+cmake --build build/rigid_backend -j 4
 ```
 
-With Poetry, use `poetry install --no-root` and `poetry run python test_v3.py`.
-The demo uses elastic collisions and zero gravity. Set `e` between 0 and 1 for
-inelastic collisions, and set `g` to a positive value for downward gravity.
-Run the regression suite with `python -m unittest discover -s tests -v`.
-
-Run the contact research tests and verify benchmark provenance:
+Create a scene from the declared benchmark inputs and run it:
 
 ```sh
+python -c 'import json; from research.rigid_scenes import scenes; print(json.dumps(next(s for s in scenes() if s["id"] == "concave_L_drop")))' > /tmp/rigid-scene.json
+python rigid_engine.py /tmp/rigid-scene.json --output /tmp/rigid-result.json --preset accurate
+python rigid_engine.py /tmp/rigid-scene.json --output /tmp/rigid-fast.json --preset fast
+python rigid_engine.py /tmp/rigid-scene.json --output /tmp/rigid-adaptive.json --adaptive --policy research/rigid-benchmarks/results/frozen-policy.json
+```
+
+`accurate` is the default; presets describe numerical effort, not certified
+physical accuracy. `--primary-steps` and `--substeps` override the preset.
+For the block backend, the latter means velocity iterations; for the temporal
+backend it means temporal substeps. See the backend guide for geometry, units,
+collision skin, friction mixing and rolling restrictions.
+
+## Reproduce and inspect evidence
+
+```sh
+python -m unittest discover -s tests -v
 python -m unittest discover -s research -p 'test_*.py' -v
 python -m research.benchmark_tools audit
+python -m research.audit_rigid_study
+python -m research.run_rigid_study --repeats 5 --output /tmp/new-rigid-study
+python -m research.audit_rigid_study --pack --directory /tmp/new-rigid-study
 ```
 
-See [the validation tools guide](research/VALIDATION.md) to export engine results,
-compare fast/reference outputs and check separate reference-refinement axes.
+The [research package](research/README.md) also contains the coupled contact
+mathematics, typeset assessment, opposing reviews, compliant contact-history
+model, rod reduction experiments and public continuum benchmark catalog.
+The [validation guide](research/VALIDATION.md) distinguishes numerical
+verification, fitting and experimental material validation.
 
-## Physics model
+## Earlier disk demonstration
 
-Disk mass is density times area: `m = density * pi * radius**2`. Between impacts,
-disks move freely. `physics.advance_disks` finds the earliest disk or wall impact,
-advances all disks to that time, applies an impulse, and recomputes collisions
-for the remaining time. Multiple impacts can happen within a frame, including
-impacts exactly at its endpoints. Walls are fixed straight boundaries.
+`python test_v3.py` runs smooth disks in a unit square, using `physics.py` for
+event-driven frictionless collisions. Disk mass is density times area. Equal
+and opposite isolated impulses preserve momentum and, with restitution one,
+kinetic energy. Fixed walls exchange momentum with the disks. Gravity uses
+symmetric half-step kicks; impact timing under gravity is approximate.
 
-For a contact normal `n` from disk 2 to disk 1, the impulse magnitude is
-`J = -(1 + e) * dot(v1 - v2, n) / (1/m1 + 1/m2)`.
-The velocities change by `J*n/m1` and `-J*n/m2`. This conserves momentum in each
-disk collision and kinetic energy when `e = 1`. Fixed walls exchange momentum
-with the disks; total disk momentum is therefore not conserved across wall hits.
-
-Gravity uses symmetric half-step velocity kicks around the collision step.
-Free flight under gravity is exact, but impact times under gravity and energy
-across those impacts are approximate; decrease `dt` to improve accuracy.
-
-This is a frictionless disk model: it has no angular velocity, friction, arbitrary
-shapes, or solver for resting stacks. Simultaneous contacts are processed
-sequentially, so their outcome can depend on contact order. Initial overlaps and
-objects outside the box are rejected by `Simulation.add_object`. Extremely dense
-or inelastic scenes can exceed the event limit; that raises an error instead of
-silently advancing through unresolved collisions. Collision detection checks all
-pairs, so it is intended for small scenes rather than thousands of disks.
+This older demo has no rotation, resting-contact friction or arbitrary shapes.
+Simultaneous contacts are processed sequentially and can depend on contact order.
+Initial overlaps are rejected, and exceeding the event limit raises an error.
+`test_v1.py`, `test_v2.py` and `test.py` are historical experiments, rather than
+automated tests. The polygon engine is a separate implementation.

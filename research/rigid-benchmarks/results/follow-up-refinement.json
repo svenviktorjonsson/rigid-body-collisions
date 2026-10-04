@@ -1,0 +1,979 @@
+[
+  {
+    "case_id": "normal_rebound_boxes",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0006270566657802742,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0008333326000000696,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.00013334490551704633,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00020706660000002763,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "follow_up_qualified": true,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 0.0,
+        "angular_momentum_change_max_kg_m2_s": 0.0,
+        "momentum_is_internal_invariant": true,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.440000686400082,
+        "late_com_height_mean_m": 0.0,
+        "late_kinetic_mean_J": 2.4993107472000484,
+        "reported_max_penetration_fraction": 0
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 0.0,
+        "angular_momentum_change_max_kg_m2_s": 0.0,
+        "momentum_is_internal_invariant": true,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.440000686400082,
+        "late_com_height_mean_m": 0.0,
+        "late_kinetic_mean_J": 2.4993107472000484,
+        "reported_max_penetration_fraction": 0
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 0.0,
+        "angular_momentum_change_max_kg_m2_s": 0.0,
+        "momentum_is_internal_invariant": true,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.440000686400082,
+        "late_com_height_mean_m": 0.0,
+        "late_kinetic_mean_J": 2.4993107472000484,
+        "reported_max_penetration_fraction": 0
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 0.0,
+        "angular_momentum_change_max_kg_m2_s": 0.0,
+        "momentum_is_internal_invariant": true,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.440000686400082,
+        "late_com_height_mean_m": 0.0,
+        "late_kinetic_mean_J": 2.4993107472000484,
+        "reported_max_penetration_fraction": 0
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 0.0,
+        "angular_momentum_change_max_kg_m2_s": 0.0,
+        "momentum_is_internal_invariant": true,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.440000686400082,
+        "late_com_height_mean_m": 0.0,
+        "late_kinetic_mean_J": 2.4993107472000484,
+        "reported_max_penetration_fraction": 0
+      }
+    ],
+    "analytic_finest": {
+      "observable": "symmetric_restitution",
+      "velocity_error_m_s": 2.86000000127018e-07,
+      "spin_error_rad_s": 0.0,
+      "tolerances": {
+        "velocity_m_s": 0.02,
+        "spin_rad_s": 0.02
+      },
+      "passed": true
+    },
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "triangle_drop",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0013893300982346542,
+        "rms_velocity_m_s": 0.0005059983771386425,
+        "rms_spin_rad_s": 0.0011936729514897778,
+        "max_position_m": 0.002396234262058108,
+        "final_velocity_max_m_s": 4.980368611059422e-10,
+        "final_spin_max_rad_s": 8.242474689e-10
+      },
+      {
+        "rms_position_m": 0.00036771708025797755,
+        "rms_velocity_m_s": 7.24410854557128e-05,
+        "rms_spin_rad_s": 0.0003970742209906231,
+        "max_position_m": 0.0004069516358067136,
+        "final_velocity_max_m_s": 1.2363916464091756e-10,
+        "final_spin_max_rad_s": 1.070751057e-10
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 1.4743546726493409e-06,
+        "rms_velocity_m_s": 4.293132385235602e-05,
+        "rms_spin_rad_s": 0.00019549658672948563,
+        "max_position_m": 1.7362305434303511e-06,
+        "final_velocity_max_m_s": 2.346425825519201e-10,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.752088517312188e-07,
+        "rms_velocity_m_s": 5.704727155821114e-05,
+        "rms_spin_rad_s": 0.0003045421923669851,
+        "max_position_m": 8.018359931978036e-07,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "follow_up_qualified": true,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 2.446749718027384,
+        "angular_momentum_change_max_kg_m2_s": 0.7028456026597988,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 8.163202723869935e-20,
+        "late_com_height_mean_m": 0.3187065423000001,
+        "late_kinetic_mean_J": 8.543341449828838e-06,
+        "reported_max_penetration_fraction": 0.005994932726
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 2.446795208575499,
+        "angular_momentum_change_max_kg_m2_s": 0.7041919288543331,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 9.796630289982867e-22,
+        "late_com_height_mean_m": 0.31958988309999997,
+        "late_kinetic_mean_J": 8.975592434564134e-06,
+        "reported_max_penetration_fraction": 0.001520263031
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 2.446878385934076,
+        "angular_momentum_change_max_kg_m2_s": 0.7043262647878467,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.2184596431177094e-21,
+        "late_com_height_mean_m": 0.3199935555,
+        "late_kinetic_mean_J": 8.965272271265175e-06,
+        "reported_max_penetration_fraction": 7.872469723e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 2.446878385934076,
+        "angular_momentum_change_max_kg_m2_s": 0.7043240230416076,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.2184596431177094e-21,
+        "late_com_height_mean_m": 0.3199943602,
+        "late_kinetic_mean_J": 8.965587824162257e-06,
+        "reported_max_penetration_fraction": 7.872469723e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 2.446878385934076,
+        "angular_momentum_change_max_kg_m2_s": 0.7043474297762178,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.2184596431177094e-21,
+        "late_com_height_mean_m": 0.3199930191,
+        "late_kinetic_mean_J": 8.966341861698926e-06,
+        "reported_max_penetration_fraction": 7.872469723e-05
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "hexagon_oblique",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 0.00033082484205480594,
+        "rms_velocity_m_s": 0.01449450873529341,
+        "rms_spin_rad_s": 0.02012917091138671,
+        "max_position_m": 0.0015864726540291735,
+        "final_velocity_max_m_s": 8.929259968376879e-10,
+        "final_spin_max_rad_s": 1.5526468717e-09
+      },
+      {
+        "rms_position_m": 0.0005215423762345924,
+        "rms_velocity_m_s": 0.021976339917786494,
+        "rms_spin_rad_s": 0.0261862543940899,
+        "max_position_m": 0.002248172430020932,
+        "final_velocity_max_m_s": 2.60885401977215e-10,
+        "final_spin_max_rad_s": 3.9508815661e-10
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 1.0786792914052368e-06,
+        "rms_velocity_m_s": 5.927065195951116e-05,
+        "rms_spin_rad_s": 3.8744287960014056e-05,
+        "max_position_m": 1.3394368704764208e-06,
+        "final_velocity_max_m_s": 1.901229594259615e-10,
+        "final_spin_max_rad_s": 1.2373330143e-10
+      },
+      {
+        "rms_position_m": 1.0786792914052368e-06,
+        "rms_velocity_m_s": 5.9270772184320446e-05,
+        "rms_spin_rad_s": 3.8743124198348314e-05,
+        "max_position_m": 1.3394368704764208e-06,
+        "final_velocity_max_m_s": 1.901229594259615e-10,
+        "final_spin_max_rad_s": 1.5283713189e-10
+      }
+    ],
+    "follow_up_qualified": false,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 4.052423742187715,
+        "angular_momentum_change_max_kg_m2_s": 3.7830767280157875,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.187338870112393e-19,
+        "late_com_height_mean_m": 0.5396133064999998,
+        "late_kinetic_mean_J": 1.1616949606637692e-19,
+        "reported_max_penetration_fraction": 0.004342095926
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 4.052518292417138,
+        "angular_momentum_change_max_kg_m2_s": 3.784581259011343,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.0633816161885654e-20,
+        "late_com_height_mean_m": 0.5396135158524998,
+        "late_kinetic_mean_J": 1.2485926607858584e-06,
+        "reported_max_penetration_fraction": 0.002922015265
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 4.052692673942752,
+        "angular_momentum_change_max_kg_m2_s": 3.794058287860561,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 6.971678708982849e-21,
+        "late_com_height_mean_m": 0.5396148902791668,
+        "late_kinetic_mean_J": 4.968440265456537e-06,
+        "reported_max_penetration_fraction": 0.0007169414312
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 4.052692673942752,
+        "angular_momentum_change_max_kg_m2_s": 3.794058287860561,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 7.268767260075043e-21,
+        "late_com_height_mean_m": 0.5396148902791668,
+        "late_kinetic_mean_J": 4.9684435048248305e-06,
+        "reported_max_penetration_fraction": 0.0007169414312
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 4.052692673942752,
+        "angular_momentum_change_max_kg_m2_s": 3.794058287860561,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.0471785740620307e-20,
+        "late_com_height_mean_m": 0.5396144273862499,
+        "late_kinetic_mean_J": 4.971070812329087e-06,
+        "reported_max_penetration_fraction": 0.0007169414312
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "stack_12",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0008725755539430656,
+        "rms_velocity_m_s": 0.009673679724729854,
+        "rms_spin_rad_s": 3.045216445273439e-08,
+        "max_position_m": 0.0015764240005051642,
+        "final_velocity_max_m_s": 2.4580681044737196e-07,
+        "final_spin_max_rad_s": 4.6272101700999995e-08
+      },
+      {
+        "rms_position_m": 0.0003020158306223838,
+        "rms_velocity_m_s": 2.353038707895254e-06,
+        "rms_spin_rad_s": 1.42398659200902e-08,
+        "max_position_m": 0.0004777910011437874,
+        "final_velocity_max_m_s": 1.432080092374247e-08,
+        "final_spin_max_rad_s": 7.6414188307e-09
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 7.55381420571689e-05,
+        "rms_velocity_m_s": 0.0007645514946190695,
+        "rms_spin_rad_s": 7.619868375306982e-09,
+        "max_position_m": 0.0001449580000001693,
+        "final_velocity_max_m_s": 7.906593756408471e-08,
+        "final_spin_max_rad_s": 1.2646304004000001e-08
+      },
+      {
+        "rms_position_m": 7.09148376224658e-05,
+        "rms_velocity_m_s": 0.00017666224022236987,
+        "rms_spin_rad_s": 7.021111591136855e-09,
+        "max_position_m": 0.0001811980000291004,
+        "final_velocity_max_m_s": 1.123204553429478e-08,
+        "final_spin_max_rad_s": 4.988499834999999e-09
+      }
+    ],
+    "follow_up_qualified": true,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 3.348477714152363,
+        "angular_momentum_change_max_kg_m2_s": 1.5163631549390599e-05,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 7.744950387211319e-14,
+        "late_com_height_mean_m": 4.9288497270499985,
+        "late_kinetic_mean_J": 6.12620087002863e-14,
+        "reported_max_penetration_fraction": 0.0005578994751
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 3.3484865646501834,
+        "angular_momentum_change_max_kg_m2_s": 6.642363652891476e-06,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 2.3132069796837927e-15,
+        "late_com_height_mean_m": 4.9295631151,
+        "late_kinetic_mean_J": 1.5637219527743928e-14,
+        "reported_max_penetration_fraction": 0.000239610672
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 3.348482903324408,
+        "angular_momentum_change_max_kg_m2_s": 2.7774846189782807e-06,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.0156800938730867e-15,
+        "late_com_height_mean_m": 4.929827630491667,
+        "late_kinetic_mean_J": 1.5056729757296156e-15,
+        "reported_max_penetration_fraction": 0.0001704692841
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 3.3484829029099696,
+        "angular_momentum_change_max_kg_m2_s": 3.6908603032779473e-06,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 2.4212919407769187e-15,
+        "late_com_height_mean_m": 4.929945409408334,
+        "late_kinetic_mean_J": 2.108167874389412e-15,
+        "reported_max_penetration_fraction": 9.894371033e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 3.3484829029798187,
+        "angular_momentum_change_max_kg_m2_s": 3.736063144744412e-06,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.836455924625442e-15,
+        "late_com_height_mean_m": 4.929881344158333,
+        "late_kinetic_mean_J": 2.1707593764985493e-15,
+        "reported_max_penetration_fraction": 9.715557098e-05
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "mass_contrast_30",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 8.705772688857937e-05,
+        "rms_velocity_m_s": 0.001004031168793,
+        "rms_spin_rad_s": 1.3438367140167816e-07,
+        "max_position_m": 0.0008142000000002153,
+        "final_velocity_max_m_s": 7.099045725853347e-07,
+        "final_spin_max_rad_s": 2.5354228941e-07
+      },
+      {
+        "rms_position_m": 6.372894671802105e-05,
+        "rms_velocity_m_s": 0.000388735913125371,
+        "rms_spin_rad_s": 6.574316231897953e-08,
+        "max_position_m": 0.0003547669999993266,
+        "final_velocity_max_m_s": 2.1249942025247245e-07,
+        "final_spin_max_rad_s": 6.344636461e-08
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00016373544641585852,
+        "rms_velocity_m_s": 0.011119692473528248,
+        "rms_spin_rad_s": 2.21243826137738e-08,
+        "max_position_m": 0.004941464000004058,
+        "final_velocity_max_m_s": 2.064659305795973e-07,
+        "final_spin_max_rad_s": 6.052556856e-08
+      },
+      {
+        "rms_position_m": 8.70135511196106e-05,
+        "rms_velocity_m_s": 0.006636237621809549,
+        "rms_spin_rad_s": 5.3297015558178644e-08,
+        "max_position_m": 0.002804280000000437,
+        "final_velocity_max_m_s": 1.7076217225311625e-07,
+        "final_spin_max_rad_s": 5.4907967949999997e-08
+      }
+    ],
+    "follow_up_qualified": true,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 14.126389492157704,
+        "angular_momentum_change_max_kg_m2_s": 0.0001108547705561677,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 2.8877049603492795e-12,
+        "late_com_height_mean_m": 4.168396889448317,
+        "late_kinetic_mean_J": 3.2583039594421405e-12,
+        "reported_max_penetration_fraction": 0.0003364682198
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 14.126440984960817,
+        "angular_momentum_change_max_kg_m2_s": 4.7711621903141646e-05,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 2.9929545154602353e-13,
+        "late_com_height_mean_m": 4.168491864779583,
+        "late_kinetic_mean_J": 2.8543626856496914e-13,
+        "reported_max_penetration_fraction": 0.000183628872
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 14.126390632501,
+        "angular_momentum_change_max_kg_m2_s": 4.758302645637095e-05,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.6346578999083238e-14,
+        "late_com_height_mean_m": 4.168556803428144,
+        "late_kinetic_mean_J": 7.12603452297507e-14,
+        "reported_max_penetration_fraction": 4.172325134e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 14.126390634894499,
+        "angular_momentum_change_max_kg_m2_s": 3.946956255207373e-05,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 5.781052654349868e-14,
+        "late_com_height_mean_m": 4.168555580256721,
+        "late_kinetic_mean_J": 2.6860644734554007e-14,
+        "reported_max_penetration_fraction": 4.172325134e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 14.126390634466091,
+        "angular_momentum_change_max_kg_m2_s": 4.740584421185741e-05,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1.7126801918515125e-13,
+        "late_com_height_mean_m": 4.1685568204852865,
+        "late_kinetic_mean_J": 1.80543486969701e-14,
+        "reported_max_penetration_fraction": 4.172325134e-05
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "mass_contrast_100",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 6.0650480977613264e-05,
+        "rms_velocity_m_s": 0.0036292047064031383,
+        "rms_spin_rad_s": 5.252754463447253e-07,
+        "max_position_m": 0.0012311940000001886,
+        "final_velocity_max_m_s": 2.770966414311851e-07,
+        "final_spin_max_rad_s": 2.3028714219999998e-07
+      },
+      {
+        "rms_position_m": 7.035556927990715e-05,
+        "rms_velocity_m_s": 0.0039750990371639145,
+        "rms_spin_rad_s": 2.939299139408925e-07,
+        "max_position_m": 0.0005946160000002237,
+        "final_velocity_max_m_s": 6.068553338826429e-07,
+        "final_spin_max_rad_s": 2.056443833e-07
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0016486520988056774,
+        "rms_velocity_m_s": 0.023115896416582897,
+        "rms_spin_rad_s": 0.008340723236857717,
+        "max_position_m": 0.007263184000054117,
+        "final_velocity_max_m_s": 0.00014398283437927974,
+        "final_spin_max_rad_s": 4.348955329e-08
+      },
+      {
+        "rms_position_m": 0.0003936812594815064,
+        "rms_velocity_m_s": 0.014797541100309017,
+        "rms_spin_rad_s": 0.00834071668294612,
+        "max_position_m": 0.005862713000000454,
+        "final_velocity_max_m_s": 1.0820330559116752e-06,
+        "final_spin_max_rad_s": 3.8360631297e-07
+      }
+    ],
+    "follow_up_qualified": false,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 47.087968719556244,
+        "angular_momentum_change_max_kg_m2_s": 0.0013951879266060573,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 8.778555587212071e-12,
+        "late_com_height_mean_m": 4.402789517181006,
+        "late_kinetic_mean_J": 6.701653065636508e-11,
+        "reported_max_penetration_fraction": 0.0003364682198
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 47.08814037493779,
+        "angular_momentum_change_max_kg_m2_s": 0.0007949321585304481,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 3.84777367060489e-12,
+        "late_com_height_mean_m": 4.402769791339131,
+        "late_kinetic_mean_J": 2.0967031182522257e-11,
+        "reported_max_penetration_fraction": 0.0001837033778
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 47.08797252997995,
+        "angular_momentum_change_max_kg_m2_s": 0.0004422280641491106,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 2.8884380465070276e-11,
+        "late_com_height_mean_m": 4.4028419774505725,
+        "late_kinetic_mean_J": 1.1051673237070021e-11,
+        "reported_max_penetration_fraction": 6.318092346e-05
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 47.08797253237345,
+        "angular_momentum_change_max_kg_m2_s": 0.00029321677776747174,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 6.713484154060194e-07,
+        "late_com_height_mean_m": 4.399316895406664,
+        "late_kinetic_mean_J": 0.00024015785012514862,
+        "reported_max_penetration_fraction": 0.002143383026
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 47.08797253194504,
+        "angular_momentum_change_max_kg_m2_s": 5.848015231337316,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 6.62527726297953e-13,
+        "late_com_height_mean_m": 4.402783758353345,
+        "late_kinetic_mean_J": 5.383827656008558e-13,
+        "reported_max_penetration_fraction": 6.757676601e-05
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "public_friction_slopes",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 0.8252514215353763,
+        "rms_velocity_m_s": 0.3566377406586532,
+        "rms_spin_rad_s": 0.3901852511555912,
+        "max_position_m": 5.068283596773024,
+        "final_velocity_max_m_s": 0.9641811993554221,
+        "final_spin_max_rad_s": 8.37714681e-09
+      },
+      {
+        "rms_position_m": 0.008191690529430749,
+        "rms_velocity_m_s": 0.13872190541059382,
+        "rms_spin_rad_s": 0.18789289232863612,
+        "max_position_m": 0.0897127080479398,
+        "final_velocity_max_m_s": 0.003122849299118144,
+        "final_spin_max_rad_s": 2.2017781372999996e-08
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00015802909796911848,
+        "rms_velocity_m_s": 0.00037242115761244876,
+        "rms_spin_rad_s": 0.0004563923374872965,
+        "max_position_m": 0.0014292635161666165,
+        "final_velocity_max_m_s": 0.0006513589999990422,
+        "final_spin_max_rad_s": 1.6051373561e-08
+      },
+      {
+        "rms_position_m": 0.0002310289654015704,
+        "rms_velocity_m_s": 0.00031838310738311845,
+        "rms_spin_rad_s": 0.00026723427760644086,
+        "max_position_m": 0.0017561901557259785,
+        "final_velocity_max_m_s": 0.0007600780000007768,
+        "final_spin_max_rad_s": 2.7781901220999997e-08
+      }
+    ],
+    "follow_up_qualified": false,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 827.7126551250001,
+        "angular_momentum_change_max_kg_m2_s": 8988.614431327649,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1291.1065624640353,
+        "late_com_height_mean_m": 14.567615369869168,
+        "late_kinetic_mean_J": 1351.1377359580156,
+        "reported_max_penetration_fraction": 0.007577022538
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 827.7410268749999,
+        "angular_momentum_change_max_kg_m2_s": 8984.951341131595,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1278.6178894293596,
+        "late_com_height_mean_m": 14.772785014703251,
+        "late_kinetic_mean_J": 1337.718927075416,
+        "reported_max_penetration_fraction": 0.004023746122
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 827.763259375,
+        "angular_momentum_change_max_kg_m2_s": 8986.39290198841,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1278.8835823656045,
+        "late_com_height_mean_m": 14.772530668116667,
+        "late_kinetic_mean_J": 1338.4637273509527,
+        "reported_max_penetration_fraction": 0.00241734623
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 827.763259375,
+        "angular_momentum_change_max_kg_m2_s": 8986.407581328824,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1278.8569163734746,
+        "late_com_height_mean_m": 14.772546583125832,
+        "late_kinetic_mean_J": 1338.4573562894332,
+        "reported_max_penetration_fraction": 0.002421042416
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 827.763259375,
+        "angular_momentum_change_max_kg_m2_s": 8986.396243406813,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 1278.699892317605,
+        "late_com_height_mean_m": 14.772469611681334,
+        "late_kinetic_mean_J": 1338.4129321608043,
+        "reported_max_penetration_fraction": 0.00241734623
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  },
+  {
+    "case_id": "long_tilted_stack",
+    "primary_levels": [
+      16,
+      32,
+      64
+    ],
+    "primary_axis_fixed_velocity_iterations": 128,
+    "velocity_iteration_levels": [
+      32,
+      64,
+      128
+    ],
+    "solver_axis_fixed_primary_steps": 64,
+    "reference_budget": {
+      "rms_position_m": 0.005,
+      "rms_velocity_m_s": 0.0125,
+      "rms_spin_rad_s": 0.0125
+    },
+    "primary_changes": [
+      {
+        "rms_position_m": 61.26418882055507,
+        "rms_velocity_m_s": 12.594534352778922,
+        "rms_spin_rad_s": 0.3795370022700981,
+        "max_position_m": 772.4748398058681,
+        "final_velocity_max_m_s": 123.09390913388629,
+        "final_spin_max_rad_s": 1.5577383038317085
+      },
+      {
+        "rms_position_m": 61.25607647560432,
+        "rms_velocity_m_s": 12.594020873041497,
+        "rms_spin_rad_s": 0.36188999486516854,
+        "max_position_m": 772.416711911519,
+        "final_velocity_max_m_s": 123.0939091340051,
+        "final_spin_max_rad_s": 1.557738304
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 59.67524254693297,
+        "rms_velocity_m_s": 12.391637873783383,
+        "rms_spin_rad_s": 0.4146429083095125,
+        "max_position_m": 756.2171413332726,
+        "final_velocity_max_m_s": 121.67143492583853,
+        "final_spin_max_rad_s": 1.8781348470025063
+      },
+      {
+        "rms_position_m": 1.3114076701873203,
+        "rms_velocity_m_s": 0.2431776482447955,
+        "rms_spin_rad_s": 0.27066814767265396,
+        "max_position_m": 11.427035857890061,
+        "final_velocity_max_m_s": 0.7662581739840151,
+        "final_spin_max_rad_s": 0.010867297599999992
+      }
+    ],
+    "follow_up_qualified": false,
+    "aggregate_observables": [
+      {
+        "primary_steps": 16,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 161.31607546909407,
+        "angular_momentum_change_max_kg_m2_s": 15392.318193849927,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 7923.829364547757,
+        "late_com_height_mean_m": -42.30195377346418,
+        "late_kinetic_mean_J": 6873.401706007104,
+        "reported_max_penetration_fraction": 0.01495425589
+      },
+      {
+        "primary_steps": 32,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 212.74372539602038,
+        "angular_momentum_change_max_kg_m2_s": 20919.63351884005,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 14044.089240128924,
+        "late_com_height_mean_m": -75.01197538611669,
+        "late_kinetic_mean_J": 12074.549066845277,
+        "reported_max_penetration_fraction": 0.007852884009
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 128,
+        "linear_momentum_change_max_kg_m_s": 160.60159850868263,
+        "angular_momentum_change_max_kg_m2_s": 14726.232506801962,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 7843.081996668805,
+        "late_com_height_mean_m": -41.93829972153251,
+        "late_kinetic_mean_J": 6796.074794037142,
+        "reported_max_penetration_fraction": 0.003881724551
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 32,
+        "linear_momentum_change_max_kg_m_s": 211.0005126766096,
+        "angular_momentum_change_max_kg_m2_s": 19877.123360746315,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 13819.902204637783,
+        "late_com_height_mean_m": -73.88770625153083,
+        "late_kinetic_mean_J": 11865.325860313245,
+        "reported_max_penetration_fraction": 0.005771713331
+      },
+      {
+        "primary_steps": 64,
+        "velocity_iterations": 64,
+        "linear_momentum_change_max_kg_m_s": 160.6745627664592,
+        "angular_momentum_change_max_kg_m2_s": 14177.332134266351,
+        "momentum_is_internal_invariant": false,
+        "mechanical_energy_increase_above_initial_J": 0.0,
+        "kinetic_energy_final_J": 7777.617666201441,
+        "late_com_height_mean_m": -41.58951420282334,
+        "late_kinetic_mean_J": 6734.999266632724,
+        "reported_max_penetration_fraction": 0.00457120128
+      }
+    ],
+    "analytic_finest": null,
+    "interpretation": "Exploratory follow-up after observing first-study failures; not used to retune or reclassify its held-out evaluation. Position iterations remain fixed at three."
+  }
+]

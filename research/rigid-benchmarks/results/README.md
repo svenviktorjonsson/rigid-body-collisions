@@ -26,5 +26,10 @@ analytic checks and per-mode diagnostics. The existing first-study summaries are
 preserved; those missing repetition samples cannot be reconstructed. Calibration
 uses measured runtime, so noise can change which tied candidate a rerun selects.
 
-A later `follow-up-refinement.json` is explicitly exploratory and does not change
+`follow-up-refinement.json` is explicitly exploratory and does not change
 the first study's frozen policy or qualify its previously excluded comparisons.
+`follow-up-traces.zip` and its manifest preserve the forty corresponding
+histories. `adaptive-rebound-check.json` distinguishes outgoing impulse accuracy
+from sampled collision-time error. `interleaved-timings.json` preserves all twenty
+follow-up repetitions, mode order and end-to-end times for qualified held-out
+cases. Neither follow-up tunes a new controller on those cases.

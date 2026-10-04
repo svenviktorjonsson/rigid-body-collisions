@@ -21,7 +21,13 @@ licenses and relevant sample/solver sources are stored in
 `research/rigid-benchmarks/public-sources/`. The compatibility layer does not copy
 the old solver implementation; it adapts public APIs to the common runner.
 
-`rigid_engine.run(scene, backend="block")` runs a headless scene. Bodies are
+`rigid_engine.run(scene, backend="block")` runs a headless scene. Its default
+is four primary updates and sixteen velocity iterations per output frame, the
+measured conservative setting in [the executed study](../research/rigid-study-report.md).
+The CLI supports `--preset fast|standard|accurate|high`, numerical overrides, and
+`--adaptive --policy path/to/frozen-policy.json` for reproducible controller
+experiments. The controller did not beat the cheapest passing fixed settings in
+the first held-out test, and is therefore not the default. Bodies are
 static or dynamic and have one or more strictly convex polygon fixtures with
 three to eight ordered vertices. Concave bodies require a supplied convex
 decomposition, whose non-overlap the caller must ensure. Geometry is meter-scale;

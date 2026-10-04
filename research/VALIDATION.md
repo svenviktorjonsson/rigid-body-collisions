@@ -1,11 +1,20 @@
 # Benchmark validation and authenticity
 
 Use this repository as the home for the engine, its physical models, calibration
-evidence and comparisons. The current engine is a disk prototype. The research
-contact integrator freezes geometry for one local contact; it is not a moving
-polygon simulator. The public arbitrary-shape cases have not been simulated here.
+evidence and comparisons. The repository now contains a headless rotating-polygon engine, an earlier
+disk demo and a local compliant contact integrator. The new
+[rigid study](rigid-study-report.md) executes 17 planar scenes with source-locked
+Box2D backends. The older IPC/GetFEM continuum catalog remains a catalog; those
+cases have not been executed as independent continuum references here.
 
 ## What the evidence currently supports
+
+The executed rigid study checks full position/velocity/spin histories at matched
+physical sample times, independent refinement axes, analytic rebound/friction
+and measured controller overhead. Its rigid outputs are numerically verified,
+not experimentally authenticated. The two audit commands verify
+35 public source files (6 new plus 29 old),
+153 archived histories and recomputes all 119 rigid comparisons.
 
 The local regression tests check impulse coupling, momentum/energy accounting,
 passive sliders, calibrated isolated normal rebound and some numerical refinement.
@@ -53,8 +62,10 @@ python benchmarks.py
 Export one JSON result for each case and fidelity setting. The tools compare
 scalar quantities extracted by an adapter: velocity/spin components, integrated
 impulses, contact duration, peak force, maximal deformation or energy residuals.
-They do not yet compare full histories, optimize parameters or run a continuum
-solver automatically. For long chaotic scenes export declared ensemble statistics
+This scalar-output tool does not compare full histories or run a continuum
+solver automatically. Separately, `research.run_rigid_study` now compares full
+rigid histories and calibrates numerical effort thresholds, preserving fixed
+physical coefficients. For long chaotic scenes export declared ensemble statistics
 with appropriate uncertainty, rather than matching individual late trajectories.
 
 Each result declares `schema_version: 1`, `case_id`, `physical_setup_id`,
@@ -108,8 +119,9 @@ matches experiments. Running for longer does not improve numerical resolution.
 
 ## Calibration and adaptive engine milestones
 
-1. Implement an arbitrary-shape engine adapter and a suitable continuum reference
-   adapter with shared geometry, material and initial-condition records.
+1. The planar arbitrary-shape rigid adapter is implemented. Add an independent
+   continuum reference adapter with shared geometry, material and initial-state
+   records for tests where deformation is physically relevant.
 2. Characterize material/surface pairs and collect experimental observables with
    uncertainty. Preserve fixed physical properties across representations.
 3. Fit shared reduced-model corrections on several calibration cases. Keep the
@@ -119,7 +131,9 @@ matches experiments. Running for longer does not improve numerical resolution.
 4. Freeze fitted parameters and evaluate unseen shapes, angles, speeds, spin,
    material contrast and simultaneous contact islands. Use separate validation
    data to choose switching thresholds, then keep a final untouched test set.
-5. Compare fast-only, detailed-only and adaptive runs at matched physical-output
+5. The first rigid-only comparison is complete and found no held-out adaptive
+   speed advantage. Continue comparing fast-only, detailed-only and adaptive runs
+   at matched physical-output
    accuracy, including adaptation/detection/state-transfer costs. Report repeated
    timings and false-safe switching decisions.
 

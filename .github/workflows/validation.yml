@@ -29,7 +29,9 @@ jobs:
       - name: Contact-model regressions
         run: python -m unittest discover -s research -p 'test_*.py' -v
       - name: Verify public source integrity and provenance
-        run: python -m research.benchmark_tools audit
+        run: |
+          python -m research.benchmark_tools audit
+          python -m research.audit_rigid_study
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json

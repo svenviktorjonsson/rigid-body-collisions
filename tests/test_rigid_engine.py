@@ -36,6 +36,10 @@ class RigidIntegrationTests(unittest.TestCase):
         result = run(scene, primary_steps=4, substeps=16)
         state = np.asarray(result["states"])
         np.testing.assert_allclose(state[-1, :, 3], [-1.2, 1.2], atol=.02)
+        np.testing.assert_allclose(state[-1, :, 5], 0, atol=.02)
+        mass, inertia = np.asarray(result["mass"]), np.asarray(result["inertia"])
+        kinetic = .5 * np.sum(mass * np.sum(state[:, :, 3:5]**2, axis=2) + inertia * state[:, :, 5]**2, axis=1)
+        self.assertAlmostEqual(kinetic[-1] / kinetic[0], .6**2, delta=1e-5)
         momentum = np.sum(state[:, :, 3:5] * np.asarray(result["mass"])[None, :, None], axis=1)
         np.testing.assert_allclose(momentum, 0, atol=2e-5)
 
@@ -46,8 +50,8 @@ class RigidIntegrationTests(unittest.TestCase):
         self.assertLess(abs(final[3]), .005)
         self.assertAlmostEqual(final[0], 3**2/(2*.3*9.81), delta=.025)
         scene = next(c for c in scenes() if c["id"] == "thin_wall_ccd")
-        result = run(scene, substeps=1)
-        self.assertLess(np.asarray(result["states"])[-1, 0, 0], 0)
+        result = run(scene, primary_steps=1, substeps=1)
+        self.assertLess(np.max(np.asarray(result["states"])[:, 0, 0]), 0)
 
     def test_adaptation_preserves_world_and_physical_identity(self):
         scene = next(c for c in scenes() if c["id"] == "triangle_drop")
