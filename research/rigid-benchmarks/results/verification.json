@@ -11,7 +11,7 @@
     "research/run_rigid_study.py": "1672aad88e9f1b2c4f97577012ed3de318370656b79f9f27e4ad3a70caba80d2",
     "research/refine_rigid_references.py": "de9e2dbb9a74135bae74977d7f2437a58b24fe1f0ba492efcf5b5a831012ac7b",
     "research/time_rigid_modes.py": "b87bd12dfdef0fc46f58fd5c67bafba3c30a45e89cfdb6bdedd906533cdca255",
-    "research/audit_rigid_study.py": "cac6b3be89c9a7ed0cf58e869f6a0dcc4ccb8943eb1f4664f53e44a538afb73d",
+    "research/audit_rigid_study.py": "eab9e1aea8a97350d16738eb9b80de4f99251989a6b4a8c4b957085397692cd6",
     "research/rigid_scenes.py": "16e1da63b7c7c4b4981b72af376f69ce28b2abea6e5146b78544eafd13612938"
   },
   "environment": {

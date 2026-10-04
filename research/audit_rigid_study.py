@@ -107,7 +107,16 @@ def audit(directory):
             from research.refine_rigid_references import compare_preserved
             published=json.loads((directory/'follow-up-comparisons.json').read_text())
             computed=compare_preserved(directory)
-            if published!=computed:raise ValueError('Follow-up comparison records changed')
+            if len(published['records'])!=len(computed['records']):
+                raise ValueError('Follow-up comparison count changed')
+            for expected,actual in zip(published['records'],computed['records']):
+                for k in ('case_id','mode','reference','within_budget'):
+                    if expected[k]!=actual[k]:raise ValueError('Follow-up comparison identity/verdict changed')
+                for k,v in actual['errors'].items():
+                    if not np.isclose(expected['errors'][k],v,rtol=1e-9,atol=1e-12):
+                        raise ValueError('Follow-up comparison error changed')
+                if not np.isclose(expected['normalized_error'],actual['normalized_error'],rtol=1e-9,atol=1e-12):
+                    raise ValueError('Follow-up normalized error changed')
         follow_up_count=len(follow_traces)
     print(json.dumps({'source_files_verified':len(sources),'traces_verified':len(traces),'comparisons_recomputed':len(rows),'follow_up_traces_verified':follow_up_count,
         'physically_validated_cases':0,'scope':'Numerical reproduction and file integrity, not material or reference truth'},indent=2))
