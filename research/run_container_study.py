@@ -61,6 +61,10 @@ def study(repeats):
     plan = json.loads((ROOT / 'plan.json').read_text())
     out = ROOT / 'results'; out.mkdir(exist_ok=True)
     traces = {}; records = []
+    source_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+    # Persist each completed case, rather than only the final in-memory archive.
+    # These directories are local recovery artifacts; the final ZIP is published.
+    checkpoint = out / 'checkpoints'; checkpoint.mkdir(exist_ok=True)
 
     def execute(scene, label, backend='block', primary=8, solver=32, policy=None):
         key = scene['id'] + '__' + label
@@ -74,6 +78,12 @@ def study(repeats):
                   'median_engine_controller_s': statistics.median(r['engine_and_controller_s'] for r in samples),
                   'diagnostics': diagnostics(scene, result)}
         records.append(record)
+        recovery = checkpoint / (key + '.json')
+        temporary = recovery.with_suffix('.tmp')
+        temporary.write_text(json.dumps({'source_commit': source_commit,
+            'plan_sha256': hashlib.sha256((ROOT / 'plan.json').read_bytes()).hexdigest(),
+            'record': record, 'result': result}, separators=(',', ':')))
+        temporary.replace(recovery)
         print(key, record['median_engine_controller_s'], flush=True)
         return result, record
 
@@ -147,7 +157,7 @@ def study(repeats):
             z.writestr(name + '.json', json.dumps(trace, separators=(',', ':')))
     report = {'schema_version': 1, 'evidence': 'Synthetic numerical verification, not material validation',
               'plan_sha256': hashlib.sha256((ROOT / 'plan.json').read_bytes()).hexdigest(),
-              'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'source_commit': source_commit,
               'machine': platform.platform(), 'backend_commits': BOX2D_COMMITS, 'repeats': repeats,
               'records': records, 'global_frozen_projection': analytic, 'reference_qualification': qualified,
               'comparisons': comparisons, 'controls': controls,
