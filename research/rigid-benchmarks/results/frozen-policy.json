@@ -1,0 +1,158 @@
+{
+  "training_cases": [
+    "sliding_box",
+    "stack_6"
+  ],
+  "excluded_unqualified_training_cases": [
+    "triangle_drop",
+    "mass_contrast_30"
+  ],
+  "budget": {
+    "rms_position_m": 0.02,
+    "rms_velocity_m_s": 0.05,
+    "rms_spin_rad_s": 0.05
+  },
+  "candidates": [
+    {
+      "index": 0,
+      "policy": {
+        "travel_threshold": 0.05,
+        "penetration_threshold": 0.02,
+        "island_threshold": 4,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 4,
+        "high_substeps": 16
+      },
+      "worst_normalized_training_error": 0.6078621193611444,
+      "summed_training_median_s": 0.031877332,
+      "within_training_budget": true
+    },
+    {
+      "index": 1,
+      "policy": {
+        "travel_threshold": 0.05,
+        "penetration_threshold": 0.02,
+        "island_threshold": 4,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 8,
+        "high_substeps": 32
+      },
+      "worst_normalized_training_error": 0.5529546282978695,
+      "summed_training_median_s": 0.102631545,
+      "within_training_budget": true
+    },
+    {
+      "index": 2,
+      "policy": {
+        "travel_threshold": 0.05,
+        "penetration_threshold": 0.02,
+        "island_threshold": 8,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 4,
+        "high_substeps": 16
+      },
+      "worst_normalized_training_error": 0.7447146842766472,
+      "summed_training_median_s": 0.005349442999999999,
+      "within_training_budget": true
+    },
+    {
+      "index": 3,
+      "policy": {
+        "travel_threshold": 0.05,
+        "penetration_threshold": 0.02,
+        "island_threshold": 8,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 8,
+        "high_substeps": 32
+      },
+      "worst_normalized_training_error": 0.7447146842766472,
+      "summed_training_median_s": 0.006180011,
+      "within_training_budget": true
+    },
+    {
+      "index": 4,
+      "policy": {
+        "travel_threshold": 0.15,
+        "penetration_threshold": 0.02,
+        "island_threshold": 4,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 4,
+        "high_substeps": 16
+      },
+      "worst_normalized_training_error": 0.6078621193611444,
+      "summed_training_median_s": 0.045115903,
+      "within_training_budget": true
+    },
+    {
+      "index": 5,
+      "policy": {
+        "travel_threshold": 0.15,
+        "penetration_threshold": 0.02,
+        "island_threshold": 4,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 8,
+        "high_substeps": 32
+      },
+      "worst_normalized_training_error": 0.5529546282978695,
+      "summed_training_median_s": 0.12675569799999997,
+      "within_training_budget": true
+    },
+    {
+      "index": 6,
+      "policy": {
+        "travel_threshold": 0.15,
+        "penetration_threshold": 0.02,
+        "island_threshold": 8,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 4,
+        "high_substeps": 16
+      },
+      "worst_normalized_training_error": 0.7447146842766472,
+      "summed_training_median_s": 0.005221256,
+      "within_training_budget": true
+    },
+    {
+      "index": 7,
+      "policy": {
+        "travel_threshold": 0.15,
+        "penetration_threshold": 0.02,
+        "island_threshold": 8,
+        "mass_ratio_threshold": 50,
+        "dwell_frames": 12,
+        "minimum_level": 0,
+        "high_primary_steps": 8,
+        "high_substeps": 32
+      },
+      "worst_normalized_training_error": 0.7447146842766472,
+      "summed_training_median_s": 0.004679985,
+      "within_training_budget": true
+    }
+  ],
+  "selected_index": 7,
+  "calibration_feasible": true,
+  "policy": {
+    "travel_threshold": 0.15,
+    "penetration_threshold": 0.02,
+    "island_threshold": 8,
+    "mass_ratio_threshold": 50,
+    "dwell_frames": 12,
+    "minimum_level": 0,
+    "high_primary_steps": 8,
+    "high_substeps": 32
+  },
+  "selection_uses_held_out_results": false
+}

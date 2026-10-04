@@ -1,0 +1,1904 @@
+[
+  {
+    "case_id": "free_flight_hexagon",
+    "backend": "block",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 4.0623671410464e-06,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 1.0788300000008633e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 9.430303196857431e-05,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00022894485751872665,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "free_position_max_m",
+      "error": 0.00019860913089525723,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.0,
+      "angular_momentum_change_max_kg_m2_s": 0.00014165568592128253,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.6576266885300002,
+      "late_com_height_mean_m": 4.00004243455372,
+      "late_kinetic_mean_J": 1.6576266885300006,
+      "reported_max_penetration_fraction": 0
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "free_flight_hexagon",
+    "backend": "temporal",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 4.062372079312462e-06,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 1.0788300000008633e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 9.430303199538762e-05,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00022894485751872665,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 2.5430384614724027e-10,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 1.869999998599381e-09,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "free_position_max_m",
+      "error": 0.00019860913089525723,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.0,
+      "angular_momentum_change_max_kg_m2_s": 0.00014165568592128253,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.6576266885300002,
+      "late_com_height_mean_m": 4.00004243455372,
+      "late_kinetic_mean_J": 1.6576266885300006,
+      "reported_max_penetration_fraction": 0
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "normal_rebound_boxes",
+    "backend": "block",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 1.374757622156825e-05,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 1.8955000000042688e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.001286843207089979,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0016807320000000736,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "symmetric_restitution",
+      "velocity_error_m_s": 2.86000000127018e-07,
+      "spin_error_rad_s": 0.0,
+      "tolerances": {
+        "velocity_m_s": 0.02,
+        "spin_rad_s": 0.02
+      },
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.0,
+      "angular_momentum_change_max_kg_m2_s": 0.0,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.440000686400082,
+      "late_com_height_mean_m": 0.0,
+      "late_kinetic_mean_J": 2.4993107472000484,
+      "reported_max_penetration_fraction": 0
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "normal_rebound_boxes",
+    "backend": "temporal",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 7.021673235630448e-06,
+        "rms_velocity_m_s": 5.4402100142551316e-15,
+        "rms_spin_rad_s": 9.126446600982589e-08,
+        "max_position_m": 1.4245099999921074e-05,
+        "final_velocity_max_m_s": 7.105427358e-15,
+        "final_spin_max_rad_s": 1.191999999816673e-07
+      },
+      {
+        "rms_position_m": 0.0004111835512275526,
+        "rms_velocity_m_s": 5.4402100142551316e-15,
+        "rms_spin_rad_s": 6.453372279691705e-08,
+        "max_position_m": 0.0005509860000001421,
+        "final_velocity_max_m_s": 7.105427358e-15,
+        "final_spin_max_rad_s": 1.191999999816673e-07
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 1.4603530747600425e-06,
+        "rms_velocity_m_s": 4.015789633423736e-06,
+        "rms_spin_rad_s": 8.397515898721359e-06,
+        "max_position_m": 1.907999999994921e-06,
+        "final_velocity_max_m_s": 5.245000000098093e-06,
+        "final_spin_max_rad_s": 1.1086499999979349e-05
+      },
+      {
+        "rms_position_m": 3.704096707050709e-08,
+        "rms_velocity_m_s": 5.4402100142551316e-15,
+        "rms_spin_rad_s": 6.453372279691705e-08,
+        "max_position_m": 5.969999994359656e-08,
+        "final_velocity_max_m_s": 7.105427358e-15,
+        "final_spin_max_rad_s": 1.191999999816673e-07
+      }
+    ],
+    "analytic": {
+      "observable": "symmetric_restitution",
+      "velocity_error_m_s": 0.14400000599999996,
+      "spin_error_rad_s": 0.2879999876,
+      "tolerances": {
+        "velocity_m_s": 0.02,
+        "spin_rad_s": 0.02
+      },
+      "passed": false
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.0,
+      "angular_momentum_change_max_kg_m2_s": 1.986666902514811e-08,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.1289599820610565,
+      "late_com_height_mean_m": 0.0,
+      "late_kinetic_mean_J": 2.3169765412082057,
+      "reported_max_penetration_fraction": 0
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "sliding_box",
+    "backend": "block",
+    "split": "train",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0013331288681272917,
+        "rms_velocity_m_s": 8.136078754226129e-06,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0016310077364670211,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0006185214164519699,
+        "rms_velocity_m_s": 2.88603371424578e-06,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0007498789676923887,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "Coulomb_stopping_distance_m",
+      "error": 0.0007454472324159855,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.0,
+      "angular_momentum_change_max_kg_m2_s": 1.5749999286,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.0,
+      "late_com_height_mean_m": 0.5200102353958332,
+      "late_kinetic_mean_J": 0.757202035079674,
+      "reported_max_penetration_fraction": 8.066184819e-05
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "sliding_box",
+    "backend": "temporal",
+    "split": "train",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 6.1025152413820726e-05,
+        "rms_velocity_m_s": 2.999294993627899e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.796721835132078e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.685144944235387e-05,
+        "rms_velocity_m_s": 1.5679718795178465e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 8.245748622909694e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 5.7365195841776014e-05,
+        "rms_velocity_m_s": 2.2631965307306633e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.696279087041389e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.679759353557687e-05,
+        "rms_velocity_m_s": 1.9797136627192745e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.851213872786609e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "Coulomb_stopping_distance_m",
+      "error": 0.0015088632324158358,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.0,
+      "angular_momentum_change_max_kg_m2_s": 1.5749999286,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.0,
+      "late_com_height_mean_m": 0.5199329776108333,
+      "late_kinetic_mean_J": 0.7571896474014763,
+      "reported_max_penetration_fraction": 0.0004960317165
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "incline_stick",
+    "backend": "block",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.00016906456664265776,
+        "rms_velocity_m_s": 6.366564740196735e-09,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00017017129999996605,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 8.720623009732897e-05,
+        "rms_velocity_m_s": 1.459225907460547e-08,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 8.779770000000298e-05,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "incline_final_speed_m_s",
+      "error": 0.0,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.3269998431,
+      "angular_momentum_change_max_kg_m2_s": 0.10602311540843398,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.0,
+      "late_com_height_mean_m": 0.6428032447733334,
+      "late_kinetic_mean_J": 0.0004176911069360683,
+      "reported_max_penetration_fraction": 0.0002637278521
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "incline_stick",
+    "backend": "temporal",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 5.486730500049881e-05,
+        "rms_velocity_m_s": 1.9638071740214736e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.280363625160671e-05,
+        "final_velocity_max_m_s": 6.558459563595291e-12,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.38075448099727e-05,
+        "rms_velocity_m_s": 4.0434692399753196e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.811894739194464e-05,
+        "final_velocity_max_m_s": 5.293588520283189e-12,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 5.594498113121775e-05,
+        "rms_velocity_m_s": 1.9638071740509962e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.881035676326991e-05,
+        "final_velocity_max_m_s": 4.501769097389276e-12,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.115521968603024e-05,
+        "rms_velocity_m_s": 4.043469239945754e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.170455501692745e-05,
+        "final_velocity_max_m_s": 1.4443423943042896e-12,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "incline_final_speed_m_s",
+      "error": 3.840701436815245e-13,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 0.3270041347,
+      "angular_momentum_change_max_kg_m2_s": 0.10602450687332819,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.4020658757200494e-24,
+      "late_com_height_mean_m": 0.6428099768908332,
+      "late_kinetic_mean_J": 0.00041769434540948175,
+      "reported_max_penetration_fraction": 0.0004265177995
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "incline_slide",
+    "backend": "block",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.001112365070616682,
+        "rms_velocity_m_s": 2.0753024293922467e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0018810679910450517,
+        "final_velocity_max_m_s": 5.7577408781562996e-05,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0004941435500349858,
+        "rms_velocity_m_s": 4.252432777065505e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0008344626291672168,
+        "final_velocity_max_m_s": 6.31747341425705e-05,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 2.93350074345658e-07,
+        "rms_velocity_m_s": 2.7769381197257615e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.755385227446859e-07,
+        "final_velocity_max_m_s": 2.660920894927326e-07,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 3.8687512317677e-07,
+        "rms_velocity_m_s": 2.81744612014318e-07,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 7.755385227446859e-07,
+        "final_velocity_max_m_s": 2.660920894927326e-07,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "incline_final_speed_m_s",
+      "error": 9.673006463772893e-05,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.509829027548309,
+      "angular_momentum_change_max_kg_m2_s": 2.5267070909414127,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 6.159449901310353,
+      "late_com_height_mean_m": 0.11657128417469581,
+      "late_kinetic_mean_J": 2.0663717882777486,
+      "reported_max_penetration_fraction": 0.0002644275664
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "incline_slide",
+    "backend": "temporal",
+    "split": "verification",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 8.818478310583671e-05,
+        "rms_velocity_m_s": 0.00010195603547194593,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00017449166273456892,
+        "final_velocity_max_m_s": 0.000193309894811473,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 6.0786176694113304e-05,
+        "rms_velocity_m_s": 0.0001244321676048521,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 8.530518427925304e-05,
+        "final_velocity_max_m_s": 0.0004245234400654855,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 9.010274771556915e-05,
+        "rms_velocity_m_s": 8.937635932295443e-05,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.00017067445729310833,
+        "final_velocity_max_m_s": 0.0001813142862161057,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 5.994270628645937e-05,
+        "rms_velocity_m_s": 0.00012818204256948097,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 8.316798108046051e-05,
+        "final_velocity_max_m_s": 0.00046450790312549297,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "incline_final_speed_m_s",
+      "error": 0.01598664278532702,
+      "tolerance": 0.025,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.525720108210404,
+      "angular_momentum_change_max_kg_m2_s": 2.537897645483544,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 6.215351140719591,
+      "late_com_height_mean_m": 0.11344002163837914,
+      "late_kinetic_mean_J": 2.0856294142450222,
+      "reported_max_penetration_fraction": 0.0004408229142
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "triangle_drop",
+    "backend": "block",
+    "split": "train",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0037143877789170884,
+        "rms_velocity_m_s": 0.044841019093351954,
+        "rms_spin_rad_s": 0.08151098690228539,
+        "max_position_m": 0.004219510361551527,
+        "final_velocity_max_m_s": 2.309125127430094e-09,
+        "final_spin_max_rad_s": 3.4135626543e-09
+      },
+      {
+        "rms_position_m": 0.000996708266459312,
+        "rms_velocity_m_s": 0.00023574643257489637,
+        "rms_spin_rad_s": 0.0009785078198256561,
+        "max_position_m": 0.0019001055013918,
+        "final_velocity_max_m_s": 2.241774614897559e-10,
+        "final_spin_max_rad_s": 1.1021831225e-09
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 6.96218913138143e-07,
+        "rms_velocity_m_s": 7.101740377609041e-07,
+        "rms_spin_rad_s": 1.0243598855771167e-06,
+        "max_position_m": 8.24227274490693e-07,
+        "final_velocity_max_m_s": 6.322379145797582e-10,
+        "final_spin_max_rad_s": 1.8257470535e-09
+      },
+      {
+        "rms_position_m": 4.929580064629721e-07,
+        "rms_velocity_m_s": 6.116494034667438e-07,
+        "rms_spin_rad_s": 2.416826759347375e-07,
+        "max_position_m": 5.967445349738432e-07,
+        "final_velocity_max_m_s": 1.3511398015931003e-10,
+        "final_spin_max_rad_s": 1.0396900010000003e-10
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.446749718027384,
+      "angular_momentum_change_max_kg_m2_s": 0.7028462817622964,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 2.18453321048046e-20,
+      "late_com_height_mean_m": 0.3187063038,
+      "late_kinetic_mean_J": 8.543665355210563e-06,
+      "reported_max_penetration_fraction": 0.005994932726
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "triangle_drop",
+    "backend": "temporal",
+    "split": "train",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0007389044715931711,
+        "rms_velocity_m_s": 0.0010279421214654913,
+        "rms_spin_rad_s": 0.001145037411094253,
+        "max_position_m": 0.0009007744739730429,
+        "final_velocity_max_m_s": 1.5471829021996394e-05,
+        "final_spin_max_rad_s": 4.239381996e-05
+      },
+      {
+        "rms_position_m": 0.00028472312062922353,
+        "rms_velocity_m_s": 0.0008969776982331308,
+        "rms_spin_rad_s": 0.0011028330277210244,
+        "max_position_m": 0.0005838178953351222,
+        "final_velocity_max_m_s": 2.432789937445951e-05,
+        "final_spin_max_rad_s": 9.551069529999993e-06
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0004965347607128474,
+        "rms_velocity_m_s": 0.0023857926561392773,
+        "rms_spin_rad_s": 0.004135340152214305,
+        "max_position_m": 0.0006307076626346305,
+        "final_velocity_max_m_s": 1.492574701160629e-05,
+        "final_spin_max_rad_s": 4.1091017919999994e-05
+      },
+      {
+        "rms_position_m": 0.0004142841536384443,
+        "rms_velocity_m_s": 0.0007744389197766285,
+        "rms_spin_rad_s": 0.0003059267809967944,
+        "max_position_m": 0.0005429237372200422,
+        "final_velocity_max_m_s": 2.436817519659519e-05,
+        "final_spin_max_rad_s": 6.252535969999997e-06
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.447340660656348,
+      "angular_momentum_change_max_kg_m2_s": 0.7041248095729966,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0020629589721448127,
+      "kinetic_energy_final_J": 1.0431822967882823e-09,
+      "late_com_height_mean_m": 0.3197529916958333,
+      "late_kinetic_mean_J": 9.703702804876895e-06,
+      "reported_max_penetration_fraction": 0.001280577853
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "hexagon_oblique",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0010534210888082161,
+        "rms_velocity_m_s": 0.025578487219272836,
+        "rms_spin_rad_s": 0.0363758146385485,
+        "max_position_m": 0.003984365444711981,
+        "final_velocity_max_m_s": 3.3511623635644884e-09,
+        "final_spin_max_rad_s": 5.0814872310000004e-09
+      },
+      {
+        "rms_position_m": 0.0006039783627154714,
+        "rms_velocity_m_s": 0.02274608159164999,
+        "rms_spin_rad_s": 0.03064510490837885,
+        "max_position_m": 0.002944651560037412,
+        "final_velocity_max_m_s": 1.5883091647562276e-09,
+        "final_spin_max_rad_s": 3.708608421e-09
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 4.660284436515987e-06,
+        "rms_velocity_m_s": 6.769611033859121e-06,
+        "rms_spin_rad_s": 1.3810982056599544e-05,
+        "max_position_m": 5.944095801685801e-06,
+        "final_velocity_max_m_s": 7.510234347988474e-10,
+        "final_spin_max_rad_s": 1.1708022329e-09
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 1.0748412302212366e-08,
+        "rms_spin_rad_s": 1.7305997343155118e-08,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 7.947878163995189e-10,
+        "final_spin_max_rad_s": 1.1709402339e-09
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 4.052423742187715,
+      "angular_momentum_change_max_kg_m2_s": 3.7830767280157875,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 3.523726142518035e-19,
+      "late_com_height_mean_m": 0.5396133064999998,
+      "late_kinetic_mean_J": 3.523726142518035e-19,
+      "reported_max_penetration_fraction": 0.004342095926
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "hexagon_oblique",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.002579384855903272,
+        "rms_velocity_m_s": 0.029453822289383643,
+        "rms_spin_rad_s": 0.03392384190686696,
+        "max_position_m": 0.005803380124483474,
+        "final_velocity_max_m_s": 1.411795048123247e-05,
+        "final_spin_max_rad_s": 2.5354830540000003e-05
+      },
+      {
+        "rms_position_m": 0.001207856331337356,
+        "rms_velocity_m_s": 0.015136827935872774,
+        "rms_spin_rad_s": 0.02005926851976656,
+        "max_position_m": 0.003268245457514687,
+        "final_velocity_max_m_s": 5.36097449714674e-06,
+        "final_spin_max_rad_s": 1.005286776e-05
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00012891084313835355,
+        "rms_velocity_m_s": 0.016613773559722263,
+        "rms_spin_rad_s": 0.013271895079076007,
+        "max_position_m": 0.00041053431711526823,
+        "final_velocity_max_m_s": 2.011857279368889e-05,
+        "final_spin_max_rad_s": 3.614223715e-05
+      },
+      {
+        "rms_position_m": 0.00011360340575604541,
+        "rms_velocity_m_s": 0.0032142742284702952,
+        "rms_spin_rad_s": 0.004173225576333989,
+        "max_position_m": 0.00030673492947727425,
+        "final_velocity_max_m_s": 2.4605444037111894e-06,
+        "final_spin_max_rad_s": 3.514880509999999e-06
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 4.053594464643628,
+      "angular_momentum_change_max_kg_m2_s": 3.7757296524894697,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.004444051987690045,
+      "kinetic_energy_final_J": 1.357107380291108e-10,
+      "late_com_height_mean_m": 0.5395101050533334,
+      "late_kinetic_mean_J": 8.853140445664948e-06,
+      "reported_max_penetration_fraction": 0.0005846936256
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "concave_L_drop",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0015315503551277354,
+        "rms_velocity_m_s": 0.0006804279112930159,
+        "rms_spin_rad_s": 0.0007259041080433864,
+        "max_position_m": 0.0025938154248242693,
+        "final_velocity_max_m_s": 3.492459655e-10,
+        "final_spin_max_rad_s": 9.313225746e-10
+      },
+      {
+        "rms_position_m": 0.001243432891174025,
+        "rms_velocity_m_s": 0.0003458752867756239,
+        "rms_spin_rad_s": 0.0003692559952111198,
+        "max_position_m": 0.0013243914534689417,
+        "final_velocity_max_m_s": 4.017729318900645e-10,
+        "final_spin_max_rad_s": 1.2565871676e-09
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 5.2583055563480035e-08,
+        "rms_velocity_m_s": 5.4454642519973156e-08,
+        "rms_spin_rad_s": 4.348872403061322e-08,
+        "max_position_m": 5.96000000463448e-08,
+        "final_velocity_max_m_s": 1.7354172596930204e-10,
+        "final_spin_max_rad_s": 3.6936387269999996e-10
+      },
+      {
+        "rms_position_m": 5.2583055563480035e-08,
+        "rms_velocity_m_s": 5.4454503386696227e-08,
+        "rms_spin_rad_s": 4.3486710986762173e-08,
+        "max_position_m": 5.96000000463448e-08,
+        "final_velocity_max_m_s": 2.916106386645813e-10,
+        "final_spin_max_rad_s": 7.33498151e-10
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.5432272794631574,
+      "angular_momentum_change_max_kg_m2_s": 0.9888999600818317,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 5.120701017416604e-21,
+      "late_com_height_mean_m": 0.3747231066000001,
+      "late_kinetic_mean_J": 2.3326996548300316e-20,
+      "reported_max_penetration_fraction": 0.004413785879
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "concave_L_drop",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0009961753323815853,
+        "rms_velocity_m_s": 0.020011770420058375,
+        "rms_spin_rad_s": 0.028821911778501325,
+        "max_position_m": 0.004396456918305816,
+        "final_velocity_max_m_s": 5.277626822128126e-06,
+        "final_spin_max_rad_s": 1.1254131099e-05
+      },
+      {
+        "rms_position_m": 0.00046341148016235313,
+        "rms_velocity_m_s": 0.01437362450517424,
+        "rms_spin_rad_s": 0.020740042877074157,
+        "max_position_m": 0.002937695101158796,
+        "final_velocity_max_m_s": 2.1010183318244464e-06,
+        "final_spin_max_rad_s": 2.7184323699999987e-06
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00032014281082780495,
+        "rms_velocity_m_s": 0.010660336182006513,
+        "rms_spin_rad_s": 0.015375415706674868,
+        "max_position_m": 0.0015326019524902475,
+        "final_velocity_max_m_s": 5.359685657911425e-06,
+        "final_spin_max_rad_s": 1.1897919651000001e-05
+      },
+      {
+        "rms_position_m": 0.0001755668634954599,
+        "rms_velocity_m_s": 0.009254374995616753,
+        "rms_spin_rad_s": 0.013350803018651885,
+        "max_position_m": 0.0011244279455039333,
+        "final_velocity_max_m_s": 2.1072134661251824e-06,
+        "final_spin_max_rad_s": 2.3469328899999983e-06
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.5438482648865905,
+      "angular_momentum_change_max_kg_m2_s": 0.9878832499568541,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0021635962294865863,
+      "kinetic_energy_final_J": 4.6402776075784784e-11,
+      "late_com_height_mean_m": 0.3756931702295833,
+      "late_kinetic_mean_J": 8.351803961136928e-11,
+      "reported_max_penetration_fraction": 0.001187684597
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "thin_bar_spin",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.001979046223293788,
+        "rms_velocity_m_s": 0.0007712643802681871,
+        "rms_spin_rad_s": 9.232495632832979e-05,
+        "max_position_m": 0.0033239369417054705,
+        "final_velocity_max_m_s": 2.949188227e-09,
+        "final_spin_max_rad_s": 2.4767724536e-09
+      },
+      {
+        "rms_position_m": 0.001361300439175504,
+        "rms_velocity_m_s": 0.00038848951787515834,
+        "rms_spin_rad_s": 4.6677750032280865e-05,
+        "max_position_m": 0.001664814056304608,
+        "final_velocity_max_m_s": 8.149073086e-10,
+        "final_spin_max_rad_s": 1.0004350682e-09
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0002205874043666467,
+        "rms_velocity_m_s": 0.00022117309554882964,
+        "rms_spin_rad_s": 0.00010353849222070377,
+        "max_position_m": 0.0002517253769979083,
+        "final_velocity_max_m_s": 7.051967349596288e-10,
+        "final_spin_max_rad_s": 4.5176345998999996e-10
+      },
+      {
+        "rms_position_m": 2.1541788679369262e-07,
+        "rms_velocity_m_s": 6.173660082261938e-07,
+        "rms_spin_rad_s": 4.152874252797644e-07,
+        "max_position_m": 2.5338823966904246e-07,
+        "final_velocity_max_m_s": 1.9499323263579198e-10,
+        "final_spin_max_rad_s": 9.329736979999993e-11
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.467765839291807,
+      "angular_momentum_change_max_kg_m2_s": 3.5646374996109067,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 5.586261341460635e-20,
+      "late_com_height_mean_m": 0.11806829270000004,
+      "late_kinetic_mean_J": 5.586261341460635e-20,
+      "reported_max_penetration_fraction": 0.01721883193
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "thin_bar_spin",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.11912898036643012,
+        "rms_velocity_m_s": 0.39087534149408565,
+        "rms_spin_rad_s": 0.2587038505438894,
+        "max_position_m": 0.14158942772495317,
+        "final_velocity_max_m_s": 9.633305409650702e-06,
+        "final_spin_max_rad_s": 6.643589590000002e-06
+      },
+      {
+        "rms_position_m": 0.04565713033193137,
+        "rms_velocity_m_s": 0.21964723217137563,
+        "rms_spin_rad_s": 0.13913843650081806,
+        "max_position_m": 0.05478041983062897,
+        "final_velocity_max_m_s": 2.216238746237242e-05,
+        "final_spin_max_rad_s": 1.4282552010000003e-05
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.11545034902826243,
+        "rms_velocity_m_s": 0.3899642154108635,
+        "rms_spin_rad_s": 0.25865960955788464,
+        "max_position_m": 0.1377309359342861,
+        "final_velocity_max_m_s": 9.547233626404914e-06,
+        "final_spin_max_rad_s": 6.5880267300000005e-06
+      },
+      {
+        "rms_position_m": 0.04341664988452205,
+        "rms_velocity_m_s": 0.21931467598317111,
+        "rms_spin_rad_s": 0.13913566462110996,
+        "max_position_m": 0.05211926552093658,
+        "final_velocity_max_m_s": 2.1858833127068723e-05,
+        "final_spin_max_rad_s": 1.4090685000000003e-05
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 2.4455420933629295,
+      "angular_momentum_change_max_kg_m2_s": 3.2474820133022906,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.001168033375643418,
+      "kinetic_energy_final_J": 1.2897242553948753e-09,
+      "late_com_height_mean_m": 0.11974561012625001,
+      "late_kinetic_mean_J": 1.7503662214510133e-09,
+      "reported_max_penetration_fraction": 0.002594236284
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "thin_wall_ccd",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.00015106197832407285,
+        "rms_velocity_m_s": 6.2187742259394464e-06,
+        "rms_spin_rad_s": 2.4395305917946817e-05,
+        "max_position_m": 0.0007474423000000119,
+        "final_velocity_max_m_s": 6.7852370191e-06,
+        "final_spin_max_rad_s": 2.6617480218e-05
+      },
+      {
+        "rms_position_m": 0.00011947459465596562,
+        "rms_velocity_m_s": 7.736813630740976e-07,
+        "rms_spin_rad_s": 6.447377157972779e-06,
+        "max_position_m": 0.0005743504000000066,
+        "final_velocity_max_m_s": 8.441575119e-07,
+        "final_spin_max_rad_s": 7.034645932e-06
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0,
+        "final_velocity_max_m_s": 0.0,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": {
+      "observable": "body_does_not_cross_wall",
+      "final_x_m": -0.189999938,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 7.200000435,
+      "angular_momentum_change_max_kg_m2_s": 5.3644183539402554e-08,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 6.717326105630635e-55,
+      "late_com_height_mean_m": 7.450580597e-09,
+      "late_kinetic_mean_J": 57.60000348,
+      "reported_max_penetration_fraction": 0.1065089926
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "thin_wall_ccd",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.002515769255581651,
+        "rms_velocity_m_s": 0.0002656659903433154,
+        "rms_spin_rad_s": 0.002206075352847482,
+        "max_position_m": 0.0032868385,
+        "final_velocity_max_m_s": 0.0002898469101,
+        "final_spin_max_rad_s": 0.002407025546
+      },
+      {
+        "rms_position_m": 0.0009004864125672972,
+        "rms_velocity_m_s": 6.72663856896577e-05,
+        "rms_spin_rad_s": 0.0005592632209639858,
+        "max_position_m": 0.0011188984000000124,
+        "final_velocity_max_m_s": 7.343164182e-05,
+        "final_spin_max_rad_s": 0.0006104102360999999
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0024232008406175464,
+        "rms_velocity_m_s": 0.00031102157547003185,
+        "rms_spin_rad_s": 0.002582370364028811,
+        "max_position_m": 0.0032690167999999964,
+        "final_velocity_max_m_s": 0.0003393925726,
+        "final_spin_max_rad_s": 0.0028176419439999998
+      },
+      {
+        "rms_position_m": 0.0013035595787396757,
+        "rms_velocity_m_s": 0.00011322393852204701,
+        "rms_spin_rad_s": 0.0009418748164264558,
+        "max_position_m": 0.001659825400000009,
+        "final_velocity_max_m_s": 0.00012354075442,
+        "final_spin_max_rad_s": 0.0010278737171
+      }
+    ],
+    "analytic": {
+      "observable": "body_does_not_cross_wall",
+      "final_x_m": -0.1861906648,
+      "passed": true
+    },
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 7.200007049906182,
+      "angular_momentum_change_max_kg_m2_s": 7.311913256109742e-07,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 5.623446080785022e-10,
+      "late_com_height_mean_m": 7.450580597e-09,
+      "late_kinetic_mean_J": 57.60000348047266,
+      "reported_max_penetration_fraction": 0.1849225909
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "stack_6",
+    "backend": "block",
+    "split": "train",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0003158844157763735,
+        "rms_velocity_m_s": 0.0012552828346100102,
+        "rms_spin_rad_s": 4.260204799268277e-08,
+        "max_position_m": 0.00046968399999958166,
+        "final_velocity_max_m_s": 3.1840956220218687e-07,
+        "final_spin_max_rad_s": 9.902564102000001e-08
+      },
+      {
+        "rms_position_m": 0.0010188269962400232,
+        "rms_velocity_m_s": 0.0006009883656401689,
+        "rms_spin_rad_s": 2.2760571461682577e-08,
+        "max_position_m": 0.0018754010000003902,
+        "final_velocity_max_m_s": 1.610541063295572e-07,
+        "final_spin_max_rad_s": 5.3489283669e-08
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00018256845126894065,
+        "rms_velocity_m_s": 0.00140711250458754,
+        "rms_spin_rad_s": 1.388387296726963e-08,
+        "max_position_m": 0.00028085700003064923,
+        "final_velocity_max_m_s": 3.2515768716324e-08,
+        "final_spin_max_rad_s": 1.040952835e-08
+      },
+      {
+        "rms_position_m": 5.868921997479334e-05,
+        "rms_velocity_m_s": 0.0005730168043866659,
+        "rms_spin_rad_s": 1.3225906569184057e-08,
+        "max_position_m": 9.369800007120846e-05,
+        "final_velocity_max_m_s": 2.1892898854933687e-08,
+        "final_spin_max_rad_s": 8.236253233999998e-09
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 1.3079993219892243,
+      "angular_momentum_change_max_kg_m2_s": 5.63907110064484e-07,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 5.137356689750436e-17,
+      "late_com_height_mean_m": 2.4694969457666667,
+      "late_kinetic_mean_J": 1.057838782960129e-15,
+      "reported_max_penetration_fraction": 0.0003349781036
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "stack_6",
+    "backend": "temporal",
+    "split": "train",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.013714717577011534,
+        "rms_velocity_m_s": 0.0036349212591880687,
+        "rms_spin_rad_s": 0.0010155081388683969,
+        "max_position_m": 0.027863679367377464,
+        "final_velocity_max_m_s": 0.0020899365162475427,
+        "final_spin_max_rad_s": 0.0005676985023
+      },
+      {
+        "rms_position_m": 0.009357753356113201,
+        "rms_velocity_m_s": 0.002459765410066696,
+        "rms_spin_rad_s": 0.0007417536643349784,
+        "max_position_m": 0.02217306621896742,
+        "final_velocity_max_m_s": 0.002069475110904201,
+        "final_spin_max_rad_s": 0.00035644974599999984
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.013701535091152383,
+        "rms_velocity_m_s": 0.003633140174504788,
+        "rms_spin_rad_s": 0.0010118687340005315,
+        "max_position_m": 0.027665496825364923,
+        "final_velocity_max_m_s": 0.0020914928917084054,
+        "final_spin_max_rad_s": 0.0005668249211999999
+      },
+      {
+        "rms_position_m": 0.009382773629875052,
+        "rms_velocity_m_s": 0.002467225385051446,
+        "rms_spin_rad_s": 0.0007437597169655903,
+        "max_position_m": 0.0223484355700983,
+        "final_velocity_max_m_s": 0.0020703680023990124,
+        "final_spin_max_rad_s": 0.00035635358699999983
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 1.3080471249916297,
+      "angular_momentum_change_max_kg_m2_s": 0.05915734570601911,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.4603426273348134e-05,
+      "late_com_height_mean_m": 2.458401202204028,
+      "late_kinetic_mean_J": 1.611810950723618e-05,
+      "reported_max_penetration_fraction": 0.01258757617
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "stack_12",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.001564948262866497,
+        "rms_velocity_m_s": 0.011900922835281165,
+        "rms_spin_rad_s": 5.469684391177609e-07,
+        "max_position_m": 0.0043029790000003055,
+        "final_velocity_max_m_s": 3.857147491428925e-06,
+        "final_spin_max_rad_s": 5.928794735e-07
+      },
+      {
+        "rms_position_m": 0.0022325540344822793,
+        "rms_velocity_m_s": 0.018144053535920183,
+        "rms_spin_rad_s": 1.0721226628557124e-07,
+        "max_position_m": 0.0038919449999995147,
+        "final_velocity_max_m_s": 2.9872888315998086e-06,
+        "final_spin_max_rad_s": 4.3510469097e-07
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00011295826137536597,
+        "rms_velocity_m_s": 0.0017274520794360291,
+        "rms_spin_rad_s": 3.6728119003705284e-08,
+        "max_position_m": 0.00029921600000041887,
+        "final_velocity_max_m_s": 9.145594827060582e-07,
+        "final_spin_max_rad_s": 1.3506355498000001e-07
+      },
+      {
+        "rms_position_m": 0.00038621573740894215,
+        "rms_velocity_m_s": 0.0016363575291711726,
+        "rms_spin_rad_s": 3.213937301445437e-08,
+        "max_position_m": 0.0007085800004821442,
+        "final_velocity_max_m_s": 3.4576563704388066e-07,
+        "final_spin_max_rad_s": 5.2284447e-08
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.348493463964034,
+      "angular_momentum_change_max_kg_m2_s": 1.1573898768113511e-05,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.935241718547174e-14,
+      "late_com_height_mean_m": 4.928998142466667,
+      "late_kinetic_mean_J": 9.206055904093053e-14,
+      "reported_max_penetration_fraction": 0.0005877017975
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "stack_12",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.8463127580494766,
+        "rms_velocity_m_s": 1.1041342970860715,
+        "rms_spin_rad_s": 0.2621207132029746,
+        "max_position_m": 6.075708191020491,
+        "final_velocity_max_m_s": 7.881826023543006,
+        "final_spin_max_rad_s": 1.3379536937899998
+      },
+      {
+        "rms_position_m": 0.18091161643143183,
+        "rms_velocity_m_s": 0.094971984705076,
+        "rms_spin_rad_s": 0.021622478136366582,
+        "max_position_m": 0.8630146003948698,
+        "final_velocity_max_m_s": 0.4987257315310297,
+        "final_spin_max_rad_s": 0.07528142445
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.8343850597085216,
+        "rms_velocity_m_s": 1.0883996588321982,
+        "rms_spin_rad_s": 0.2588681994062136,
+        "max_position_m": 5.997178385483379,
+        "final_velocity_max_m_s": 7.800682009674036,
+        "final_spin_max_rad_s": 1.32065428771
+      },
+      {
+        "rms_position_m": 0.18097932967489588,
+        "rms_velocity_m_s": 0.09500317549160639,
+        "rms_spin_rad_s": 0.021630455105420072,
+        "max_position_m": 0.863052844623323,
+        "final_velocity_max_m_s": 0.4989915501925206,
+        "final_spin_max_rad_s": 0.07531415485
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 3.351108949847676,
+      "angular_momentum_change_max_kg_m2_s": 2.4381055902154465,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.012966206557190732,
+      "late_com_height_mean_m": 4.882851832936458,
+      "late_kinetic_mean_J": 0.009241894911723813,
+      "reported_max_penetration_fraction": 0.03181764111
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "mass_contrast_30",
+    "backend": "block",
+    "split": "train",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0006022125265688793,
+        "rms_velocity_m_s": 0.01263207623850626,
+        "rms_spin_rad_s": 4.3693083165138526e-07,
+        "max_position_m": 0.003268717999999537,
+        "final_velocity_max_m_s": 1.8852494566543774e-06,
+        "final_spin_max_rad_s": 6.738014484300001e-07
+      },
+      {
+        "rms_position_m": 0.0003461351837899609,
+        "rms_velocity_m_s": 0.01977393834431569,
+        "rms_spin_rad_s": 3.447115393186865e-07,
+        "max_position_m": 0.00362968499999997,
+        "final_velocity_max_m_s": 1.3327685594869605e-06,
+        "final_spin_max_rad_s": 3.8919293033e-07
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0003205442625711715,
+        "rms_velocity_m_s": 0.02392976955482205,
+        "rms_spin_rad_s": 2.3496818377881132e-07,
+        "max_position_m": 0.006820679000001022,
+        "final_velocity_max_m_s": 5.645453904642234e-07,
+        "final_spin_max_rad_s": 1.852215234e-07
+      },
+      {
+        "rms_position_m": 0.00022811036362982686,
+        "rms_velocity_m_s": 0.015810738550719402,
+        "rms_spin_rad_s": 2.2252290073825586e-07,
+        "max_position_m": 0.005844593000000732,
+        "final_velocity_max_m_s": 2.8209742999928313e-06,
+        "final_spin_max_rad_s": 9.216417993e-07
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 14.12663487247654,
+      "angular_momentum_change_max_kg_m2_s": 0.00015820787949674656,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1.0389575171499487e-11,
+      "late_com_height_mean_m": 4.168516690791064,
+      "late_kinetic_mean_J": 7.532539038204686e-12,
+      "reported_max_penetration_fraction": 0.0003349781036
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "mass_contrast_30",
+    "backend": "temporal",
+    "split": "train",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 1.0271237101966895,
+        "rms_velocity_m_s": 1.6988515755651936,
+        "rms_spin_rad_s": 0.7351381892864599,
+        "max_position_m": 4.41490035684678,
+        "final_velocity_max_m_s": 0.0027719083955460183,
+        "final_spin_max_rad_s": 0.0043269514285
+      },
+      {
+        "rms_position_m": 1.1622589858692398,
+        "rms_velocity_m_s": 1.2446408090558394,
+        "rms_spin_rad_s": 0.5498681524128056,
+        "max_position_m": 5.1514571840289545,
+        "final_velocity_max_m_s": 0.4830207239751758,
+        "final_spin_max_rad_s": 0.153114067141
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 1.0288555761581142,
+        "rms_velocity_m_s": 1.698333811212597,
+        "rms_spin_rad_s": 0.7449842212004547,
+        "max_position_m": 4.414946125516454,
+        "final_velocity_max_m_s": 0.03586374732331767,
+        "final_spin_max_rad_s": 0.06695169122783
+      },
+      {
+        "rms_position_m": 1.162078046284059,
+        "rms_velocity_m_s": 1.2420749130094877,
+        "rms_spin_rad_s": 0.5517219883934973,
+        "max_position_m": 5.150357997416536,
+        "final_velocity_max_m_s": 0.48301974268140385,
+        "final_spin_max_rad_s": 0.1531115612539
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 14.131913282917004,
+      "angular_momentum_change_max_kg_m2_s": 42.0796275141364,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 2.3346978438408215,
+      "late_com_height_mean_m": 4.004779917996607,
+      "late_kinetic_mean_J": 0.5435305121976514,
+      "reported_max_penetration_fraction": 0.1204710975
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "mass_contrast_100",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.0006133945150689705,
+        "rms_velocity_m_s": 0.032966549496354906,
+        "rms_spin_rad_s": 1.7702529947831982e-06,
+        "max_position_m": 0.007640839000001257,
+        "final_velocity_max_m_s": 8.352398000174981e-06,
+        "final_spin_max_rad_s": 2.4052328623e-06
+      },
+      {
+        "rms_position_m": 0.00044283005471736444,
+        "rms_velocity_m_s": 0.030767616444338328,
+        "rms_spin_rad_s": 1.1263879479279537e-06,
+        "max_position_m": 0.006311894000000415,
+        "final_velocity_max_m_s": 9.478032242829678e-07,
+        "final_spin_max_rad_s": 5.042844436e-07
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0006158323256313314,
+        "rms_velocity_m_s": 0.044814822945711416,
+        "rms_spin_rad_s": 1.234126129563147e-06,
+        "max_position_m": 0.01104927100000385,
+        "final_velocity_max_m_s": 2.105901062265061e-06,
+        "final_spin_max_rad_s": 7.815616810999999e-07
+      },
+      {
+        "rms_position_m": 0.0004468068824497947,
+        "rms_velocity_m_s": 0.031958578073418495,
+        "rms_spin_rad_s": 5.655265434584015e-07,
+        "max_position_m": 0.008052826000162033,
+        "final_velocity_max_m_s": 2.926767424546179e-06,
+        "final_spin_max_rad_s": 9.441239682999999e-07
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 47.08821409987508,
+      "angular_momentum_change_max_kg_m2_s": 0.000760410023527639,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 6.021302895520763e-11,
+      "late_com_height_mean_m": 4.4027692013047846,
+      "late_kinetic_mean_J": 3.6603453145880414e-11,
+      "reported_max_penetration_fraction": 0.000624358654
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "mass_contrast_100",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.4535711867529881,
+        "rms_velocity_m_s": 1.136426162454553,
+        "rms_spin_rad_s": 0.7524834127499253,
+        "max_position_m": 2.575837391147539,
+        "final_velocity_max_m_s": 0.01982022545764653,
+        "final_spin_max_rad_s": 0.02959980061968
+      },
+      {
+        "rms_position_m": 0.7928840313364965,
+        "rms_velocity_m_s": 1.5082522668736544,
+        "rms_spin_rad_s": 0.782409755634544,
+        "max_position_m": 3.501578057212025,
+        "final_velocity_max_m_s": 0.020243313680541306,
+        "final_spin_max_rad_s": 0.016656469321
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.4536421034788129,
+        "rms_velocity_m_s": 1.1163744668248832,
+        "rms_spin_rad_s": 0.7480341646582159,
+        "max_position_m": 2.473845367231517,
+        "final_velocity_max_m_s": 0.019581851369727534,
+        "final_spin_max_rad_s": 0.02772878413356
+      },
+      {
+        "rms_position_m": 0.8064457670391472,
+        "rms_velocity_m_s": 1.5234695192117815,
+        "rms_spin_rad_s": 0.7852528351886735,
+        "max_position_m": 3.5636818791544074,
+        "final_velocity_max_m_s": 0.021074509865591805,
+        "final_spin_max_rad_s": 0.017573761521
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 548.998530565458,
+      "angular_momentum_change_max_kg_m2_s": 1910.015942211256,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 3.382607745611661e-06,
+      "late_com_height_mean_m": 0.6302651759080036,
+      "late_kinetic_mean_J": 268.5755042299647,
+      "reported_max_penetration_fraction": 0.2211038172
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "impact_chain_12",
+    "backend": "block",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.000809459434556486,
+        "rms_velocity_m_s": 0.011423283096272444,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.001339495199999985,
+        "final_velocity_max_m_s": 2.3840000001884576e-07,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0007798612729830362,
+        "rms_velocity_m_s": 0.0074749081766653375,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0014405549000000017,
+        "final_velocity_max_m_s": 2.0859999999567336e-07,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.0005899788577472228,
+        "rms_velocity_m_s": 0.0008657964924759816,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0016055110000001704,
+        "final_velocity_max_m_s": 0.0009068549000000314,
+        "final_spin_max_rad_s": 0.0
+      },
+      {
+        "rms_position_m": 0.0011728618984036317,
+        "rms_velocity_m_s": 0.0010714921175961239,
+        "rms_spin_rad_s": 0.0,
+        "max_position_m": 0.0034260750000001394,
+        "final_velocity_max_m_s": 0.001606434599999984,
+        "final_spin_max_rad_s": 0.0
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 1.982049964155408e-07,
+      "angular_momentum_change_max_kg_m2_s": 0.0,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.13126017874508913,
+      "late_com_height_mean_m": 0.0,
+      "late_kinetic_mean_J": 0.13692686483943223,
+      "reported_max_penetration_fraction": 0.002539038658
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "impact_chain_12",
+    "backend": "temporal",
+    "split": "test",
+    "successive_refinement_checks_passed": true,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.00016839074078661454,
+        "rms_velocity_m_s": 8.009337345880913e-05,
+        "rms_spin_rad_s": 0.00010728713546039711,
+        "max_position_m": 0.0003667802648184854,
+        "final_velocity_max_m_s": 0.00015905205536354537,
+        "final_spin_max_rad_s": 5.753213189999999e-05
+      },
+      {
+        "rms_position_m": 0.00011045109233841762,
+        "rms_velocity_m_s": 2.6429664598547135e-05,
+        "rms_spin_rad_s": 5.646069719848809e-05,
+        "max_position_m": 0.0002043231129488209,
+        "final_velocity_max_m_s": 5.9794787728178995e-05,
+        "final_spin_max_rad_s": 7.69027975e-05
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.00019742996511239232,
+        "rms_velocity_m_s": 6.056963035171084e-05,
+        "rms_spin_rad_s": 0.00012526443952571144,
+        "max_position_m": 0.00038976720757604317,
+        "final_velocity_max_m_s": 8.934403791407641e-05,
+        "final_spin_max_rad_s": 9.515816050000001e-05
+      },
+      {
+        "rms_position_m": 8.337173376854062e-05,
+        "rms_velocity_m_s": 1.2170062908628917e-05,
+        "rms_spin_rad_s": 7.932537088344154e-05,
+        "max_position_m": 0.00017885875659995456,
+        "final_velocity_max_m_s": 1.925606146860665e-05,
+        "final_spin_max_rad_s": 8.65123802e-05
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 5.2988253718697044e-06,
+      "angular_momentum_change_max_kg_m2_s": 2.9495850875993295e-08,
+      "momentum_is_internal_invariant": true,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 0.13125053950773527,
+      "late_com_height_mean_m": -5.892696313027533e-10,
+      "late_kinetic_mean_J": 0.13691795827826053,
+      "reported_max_penetration_fraction": 0.0002018585801
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "public_friction_slopes",
+    "backend": "block",
+    "split": "stress",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.021848422721541312,
+        "rms_velocity_m_s": 0.16807689285238453,
+        "rms_spin_rad_s": 0.2660778125188632,
+        "max_position_m": 0.09997392201675204,
+        "final_velocity_max_m_s": 0.01865246919991185,
+        "final_spin_max_rad_s": 1.1875534332999999e-08
+      },
+      {
+        "rms_position_m": 0.03327846027581928,
+        "rms_velocity_m_s": 0.17758653569722835,
+        "rms_spin_rad_s": 0.32426195904426736,
+        "max_position_m": 0.12722979311153282,
+        "final_velocity_max_m_s": 0.029099048004610294,
+        "final_spin_max_rad_s": 1.658475934e-08
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.002046981664857286,
+        "rms_velocity_m_s": 0.001356811218258613,
+        "rms_spin_rad_s": 0.0015184347244965378,
+        "max_position_m": 0.006194117733364041,
+        "final_velocity_max_m_s": 0.0014457699999985162,
+        "final_spin_max_rad_s": 2.9380320177e-08
+      },
+      {
+        "rms_position_m": 5.993619812429567e-05,
+        "rms_velocity_m_s": 0.0001993523341549426,
+        "rms_spin_rad_s": 0.0002066870026281884,
+        "max_position_m": 0.0007587103925371667,
+        "final_velocity_max_m_s": 0.0002498630000006249,
+        "final_spin_max_rad_s": 2.240637631e-08
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 827.7126551250001,
+      "angular_momentum_change_max_kg_m2_s": 8988.615629401398,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 1291.1592863031487,
+      "late_com_height_mean_m": 14.567699985369165,
+      "late_kinetic_mean_J": 1351.1300294963933,
+      "reported_max_penetration_fraction": 0.007565914653
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "public_friction_slopes",
+    "backend": "temporal",
+    "split": "stress",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 0.33498908635539903,
+        "rms_velocity_m_s": 0.41335927207758805,
+        "rms_spin_rad_s": 0.5048452919057641,
+        "max_position_m": 1.7902849184566838,
+        "final_velocity_max_m_s": 0.36168278068729526,
+        "final_spin_max_rad_s": 3.79707617e-05
+      },
+      {
+        "rms_position_m": 0.8682370452011376,
+        "rms_velocity_m_s": 0.8553365367672525,
+        "rms_spin_rad_s": 0.6926459192801745,
+        "max_position_m": 2.409671262816655,
+        "final_velocity_max_m_s": 0.22328659183215685,
+        "final_spin_max_rad_s": 3.4093879098e-05
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 0.1990137851999929,
+        "rms_velocity_m_s": 0.49158419654481333,
+        "rms_spin_rad_s": 0.46126283900610066,
+        "max_position_m": 0.603249489868201,
+        "final_velocity_max_m_s": 0.06780447750935668,
+        "final_spin_max_rad_s": 3.692258179e-05
+      },
+      {
+        "rms_position_m": 1.0037412150371563,
+        "rms_velocity_m_s": 0.848222284925127,
+        "rms_spin_rad_s": 0.6697616195795874,
+        "max_position_m": 2.580372972883083,
+        "final_velocity_max_m_s": 0.32188200641973064,
+        "final_spin_max_rad_s": 3.0438825892e-05
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 827.9516697500001,
+      "angular_momentum_change_max_kg_m2_s": 9020.008635650796,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 1.0189262172498275,
+      "kinetic_energy_final_J": 1318.629753335076,
+      "late_com_height_mean_m": 14.501538270668084,
+      "late_kinetic_mean_J": 1327.536696104874,
+      "reported_max_penetration_fraction": 0.00145188719
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "long_tilted_stack",
+    "backend": "block",
+    "split": "stress",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 56.21363289580837,
+        "rms_velocity_m_s": 11.9609722292212,
+        "rms_spin_rad_s": 0.5534319136303287,
+        "max_position_m": 721.165984845749,
+        "final_velocity_max_m_s": 118.9299059600669,
+        "final_spin_max_rad_s": 2.796716214862645
+      },
+      {
+        "rms_position_m": 0.3259029883772758,
+        "rms_velocity_m_s": 0.19019239396847115,
+        "rms_spin_rad_s": 0.25024782405538876,
+        "max_position_m": 1.0440248702553168,
+        "final_velocity_max_m_s": 0.08370395595256587,
+        "final_spin_max_rad_s": 0.01794821019999998
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 55.552901383859584,
+        "rms_velocity_m_s": 11.879135392513016,
+        "rms_spin_rad_s": 0.6151374661368747,
+        "max_position_m": 714.3754617188639,
+        "final_velocity_max_m_s": 118.38813827741052,
+        "final_spin_max_rad_s": 2.9746079444610074
+      },
+      {
+        "rms_position_m": 55.542068905910476,
+        "rms_velocity_m_s": 11.876975774650266,
+        "rms_spin_rad_s": 0.567728201445728,
+        "max_position_m": 714.3818136161262,
+        "final_velocity_max_m_s": 118.388138277357,
+        "final_spin_max_rad_s": 2.97460794468779
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 160.74147222590085,
+      "angular_momentum_change_max_kg_m2_s": 14939.105821437044,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 7885.180746858187,
+      "late_com_height_mean_m": -42.10762797311251,
+      "late_kinetic_mean_J": 6837.086455363101,
+      "reported_max_penetration_fraction": 0.01299877651
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  },
+  {
+    "case_id": "long_tilted_stack",
+    "backend": "temporal",
+    "split": "stress",
+    "successive_refinement_checks_passed": false,
+    "primary_changes": [
+      {
+        "rms_position_m": 2.326603802440397,
+        "rms_velocity_m_s": 1.088481252434776,
+        "rms_spin_rad_s": 0.5264664754201749,
+        "max_position_m": 18.571826359573908,
+        "final_velocity_max_m_s": 1.3106541342895395,
+        "final_spin_max_rad_s": 0.0495950282
+      },
+      {
+        "rms_position_m": 1.0944526244855124,
+        "rms_velocity_m_s": 0.6644659207519418,
+        "rms_spin_rad_s": 0.4616718346422387,
+        "max_position_m": 9.50999342093431,
+        "final_velocity_max_m_s": 0.8940445631308505,
+        "final_spin_max_rad_s": 0.01852387189999999
+      }
+    ],
+    "solver_changes": [
+      {
+        "rms_position_m": 1.2041458301244425,
+        "rms_velocity_m_s": 0.8710124539171324,
+        "rms_spin_rad_s": 0.4509889812845279,
+        "max_position_m": 9.948539643440634,
+        "final_velocity_max_m_s": 0.6505975756773426,
+        "final_spin_max_rad_s": 0.0014320016000000102
+      },
+      {
+        "rms_position_m": 1.4147834778673225,
+        "rms_velocity_m_s": 0.692237014622913,
+        "rms_spin_rad_s": 0.4668808273057311,
+        "max_position_m": 12.180524350441733,
+        "final_velocity_max_m_s": 0.9558356676982672,
+        "final_spin_max_rad_s": 0.02304801350000002
+      }
+    ],
+    "analytic": null,
+    "diagnostics": {
+      "linear_momentum_change_max_kg_m_s": 165.26775156685147,
+      "angular_momentum_change_max_kg_m2_s": 14329.407353293685,
+      "momentum_is_internal_invariant": false,
+      "mechanical_energy_increase_above_initial_J": 0.0,
+      "kinetic_energy_final_J": 7908.698288211963,
+      "late_com_height_mean_m": -42.50566473394084,
+      "late_kinetic_mean_J": 6895.7277705336355,
+      "reported_max_penetration_fraction": 0.03473638371
+    },
+    "scope": "three levels per axis; numerical consistency check, not convergence proof or experimental validation"
+  }
+]

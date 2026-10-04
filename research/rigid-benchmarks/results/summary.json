@@ -1,0 +1,185 @@
+{
+  "evidence_kind": "numerical_simulation",
+  "material_authenticity": "no new experimental characterization",
+  "backend_commits": {
+    "temporal": "8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
+    "block": "9ebbbcd960ad424e03e5de6e66a40764c16f51bc"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "repeats": 5,
+  "budget": {
+    "rms_position_m": 0.02,
+    "rms_velocity_m_s": 0.05,
+    "rms_spin_rad_s": 0.05
+  },
+  "reference_budget": {
+    "rms_position_m": 0.005,
+    "rms_velocity_m_s": 0.0125,
+    "rms_spin_rad_s": 0.0125
+  },
+  "cases": 17,
+  "qualified_block_references": 10,
+  "held_out_qualified_cases": 4,
+  "held_out_adaptive_failures": 0,
+  "held_out_matched_error_adaptive_wins": 0,
+  "calibration_feasible": true,
+  "case_decisions": [
+    {
+      "case_id": "free_flight_hexagon",
+      "split": "verification",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_fast",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.7172274073444014,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "split": "verification",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": 4.965764650789403,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "sliding_box",
+      "split": "train",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_fast",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.8085669034710689,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "incline_stick",
+      "split": "verification",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_fast",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.8423442962351612,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "incline_slide",
+      "split": "verification",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_standard",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.7233486413695455,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "triangle_drop",
+      "split": "train",
+      "reference_qualified": false,
+      "best_passing_fixed": "block_high",
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": 8.855106148393883,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "hexagon_oblique",
+      "split": "test",
+      "reference_qualified": false,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": 2.8142657484285927,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "concave_L_drop",
+      "split": "test",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_standard",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.6601707041204287,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "thin_bar_spin",
+      "split": "test",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.3100762129214694,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "thin_wall_ccd",
+      "split": "test",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_fast",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.08476235105332598,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "stack_6",
+      "split": "train",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_standard",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.9831532292664924,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "stack_12",
+      "split": "test",
+      "reference_qualified": false,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.3005979268117591,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "split": "train",
+      "reference_qualified": false,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": 2.029417855998966,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "mass_contrast_100",
+      "split": "test",
+      "reference_qualified": false,
+      "best_passing_fixed": "block_high",
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": 0.9467270282931004,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "impact_chain_12",
+      "split": "test",
+      "reference_qualified": true,
+      "best_passing_fixed": "block_accurate",
+      "adaptive_within_budget": true,
+      "speedup_over_best_passing_fixed": 0.37351692065505115,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "public_friction_slopes",
+      "split": "stress",
+      "reference_qualified": false,
+      "best_passing_fixed": null,
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": null,
+      "adaptive_favorable_at_matched_error": false
+    },
+    {
+      "case_id": "long_tilted_stack",
+      "split": "stress",
+      "reference_qualified": false,
+      "best_passing_fixed": null,
+      "adaptive_within_budget": false,
+      "speedup_over_best_passing_fixed": null,
+      "adaptive_favorable_at_matched_error": false
+    }
+  ],
+  "interpretation": "RMS budgets only; an own-backend refined trajectory is not measured truth. Cross-backend errors include formulation differences. False-safe choices and unqualified references prevent universal guarantees."
+}

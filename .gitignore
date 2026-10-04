@@ -2,3 +2,6 @@ __pycache__/
 *.py[cod]
 .venv/
 build/
+
+# Raw research histories are committed in the checksum-verified traces.zip.
+research/rigid-benchmarks/results/traces/
