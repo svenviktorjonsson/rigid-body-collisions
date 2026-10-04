@@ -1,0 +1,4730 @@
+{
+  "schema_version": 1,
+  "scope": "Frozen synthetic planar contact kernels, not collision discovery, a trajectory benchmark, Vektor compiler, WASM or GPU",
+  "source_commit": "6dd596654ccdc9d1e4967dcfc9c6b73bbd3f3e01",
+  "source_sha256": {
+    "/workspace/rigid-body-collisions/research/sparse-islands/plan.json": "cfb6af52f71475c322e76200676c00c8316d467aa426c4e40dee9e7aea37e5e6",
+    "/workspace/rigid-body-collisions/research/run_sparse_study.py": "98ea14c3a0784841cf9b0624950defe968438d0a69ae642888d438d560b638fa",
+    "/workspace/rigid-body-collisions/research/sparse_contact.py": "252165133fcee8165110303bbede8319b355ec224b711f218395e9bfd49a3008",
+    "/workspace/rigid-body-collisions/research/container_scenes.py": "7a73f7c896351c81d022e92ebe1b576fcdbefd94b4e05ad721bd4457bff35ee1"
+  },
+  "machine": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "records": [
+    {
+      "kind": "normal",
+      "count": 16,
+      "method": "dense_optimizer",
+      "samples": [
+        {
+          "assembly_s": 0.000503579001815524,
+          "solve_s": 0.0015691300068283454,
+          "total_s": 0.0020727090086438693
+        },
+        {
+          "assembly_s": 0.0005544399973587133,
+          "solve_s": 0.0015472529994440265,
+          "total_s": 0.00210169299680274
+        },
+        {
+          "assembly_s": 0.00040138700569514185,
+          "solve_s": 0.0023002459929557517,
+          "total_s": 0.0027016329986508936
+        },
+        {
+          "assembly_s": 0.0005171159937162884,
+          "solve_s": 0.0013819140003761277,
+          "total_s": 0.001899029994092416
+        },
+        {
+          "assembly_s": 0.00039105599717004225,
+          "solve_s": 0.002632447998621501,
+          "total_s": 0.0030235039957915433
+        },
+        {
+          "assembly_s": 0.000556091996259056,
+          "solve_s": 0.001542606005386915,
+          "total_s": 0.002098698001645971
+        },
+        {
+          "assembly_s": 0.0009112019979511388,
+          "solve_s": 0.0019087960026809014,
+          "total_s": 0.00281999800063204
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 3.552713678800501e-15,
+      "wall_impulse_kg_m_s": 15.999999999999973,
+      "actuator_work_J": 15.999999999999973,
+      "kinetic_J": 7.999999999999973,
+      "dissipation_J": 8.0,
+      "explicit_operator_bytes": 43928,
+      "stats": {
+        "complementarity_residual": 4.263276127042506e-14
+      },
+      "median_assembly_s": 0.0005171159937162884,
+      "median_solve_s": 0.0015691300068283454,
+      "median_total_s": 0.00210169299680274
+    },
+    {
+      "kind": "normal",
+      "count": 16,
+      "method": "dense_active",
+      "samples": [
+        {
+          "assembly_s": 0.0005896030052099377,
+          "solve_s": 0.00027203700301470235,
+          "total_s": 0.00086164000822464
+        },
+        {
+          "assembly_s": 0.0005735520026064478,
+          "solve_s": 0.00025846600328804925,
+          "total_s": 0.000832018005894497
+        },
+        {
+          "assembly_s": 0.0007149270022637211,
+          "solve_s": 0.0007019159966148436,
+          "total_s": 0.0014168429988785647
+        },
+        {
+          "assembly_s": 0.0005147830015630461,
+          "solve_s": 0.0003101309994235635,
+          "total_s": 0.0008249140009866096
+        },
+        {
+          "assembly_s": 0.0006049310031812638,
+          "solve_s": 0.00027784999838331714,
+          "total_s": 0.000882781001564581
+        },
+        {
+          "assembly_s": 0.0006755520007573068,
+          "solve_s": 0.00028193899925099686,
+          "total_s": 0.0009574910000083037
+        },
+        {
+          "assembly_s": 0.0007126159980543889,
+          "solve_s": 0.00028776999533874914,
+          "total_s": 0.001000385993393138
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 16.0,
+      "actuator_work_J": 16.0,
+      "kinetic_J": 8.0,
+      "dissipation_J": 8.0,
+      "explicit_operator_bytes": 5700,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 49,
+        "contact_map_nnz": 136,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0006049310031812638,
+      "median_solve_s": 0.00028193899925099686,
+      "median_total_s": 0.000882781001564581
+    },
+    {
+      "kind": "normal",
+      "count": 16,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.001280702999792993,
+          "solve_s": 0.0009833259973675013,
+          "total_s": 0.0022640289971604943
+        },
+        {
+          "assembly_s": 0.000548236996110063,
+          "solve_s": 0.0005230039969319478,
+          "total_s": 0.0010712409930420108
+        },
+        {
+          "assembly_s": 0.0007177519946708344,
+          "solve_s": 0.0005869109954801388,
+          "total_s": 0.0013046629901509732
+        },
+        {
+          "assembly_s": 0.0005591919980361126,
+          "solve_s": 0.0007213670032797381,
+          "total_s": 0.0012805590013158508
+        },
+        {
+          "assembly_s": 0.0006206440011737868,
+          "solve_s": 0.0007370690000243485,
+          "total_s": 0.0013577130011981353
+        },
+        {
+          "assembly_s": 0.0009713300023577176,
+          "solve_s": 0.000617165002040565,
+          "total_s": 0.0015884950043982826
+        },
+        {
+          "assembly_s": 0.0006007199990563095,
+          "solve_s": 0.0011636170020210557,
+          "total_s": 0.0017643370010773651
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 16.0,
+      "actuator_work_J": 16.0,
+      "kinetic_J": 8.0,
+      "dissipation_J": 8.0,
+      "explicit_operator_bytes": 3388,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 49,
+        "contact_map_nnz": 136,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0006206440011737868,
+      "median_solve_s": 0.0007213670032797381,
+      "median_total_s": 0.0013577130011981353
+    },
+    {
+      "kind": "normal",
+      "count": 16,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.0006713670009048656,
+          "solve_s": 0.00028380900039337575,
+          "total_s": 0.0009551760012982413
+        },
+        {
+          "assembly_s": 0.0013492869984474964,
+          "solve_s": 0.00033310000435449183,
+          "total_s": 0.0016823870028019883
+        },
+        {
+          "assembly_s": 0.0006734290000167675,
+          "solve_s": 0.0006817199973738752,
+          "total_s": 0.0013551489973906428
+        },
+        {
+          "assembly_s": 0.0010732169976108707,
+          "solve_s": 0.0002947980028693564,
+          "total_s": 0.0013680150004802272
+        },
+        {
+          "assembly_s": 0.00080373899982078,
+          "solve_s": 0.00031799600401427597,
+          "total_s": 0.001121735003835056
+        },
+        {
+          "assembly_s": 0.0005912020060350187,
+          "solve_s": 0.0005155670005478896,
+          "total_s": 0.0011067690065829083
+        },
+        {
+          "assembly_s": 0.0008024079943425022,
+          "solve_s": 0.000352392002241686,
+          "total_s": 0.0011547999965841882
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 16.0,
+      "actuator_work_J": 16.0,
+      "kinetic_J": 8.0,
+      "dissipation_J": 8.0,
+      "explicit_operator_bytes": 5700,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 49,
+        "contact_map_nnz": 136,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0008024079943425022,
+      "median_solve_s": 0.00033310000435449183,
+      "median_total_s": 0.0011547999965841882
+    },
+    {
+      "kind": "normal",
+      "count": 64,
+      "method": "dense_optimizer",
+      "samples": [
+        {
+          "assembly_s": 0.002712030996917747,
+          "solve_s": 0.01416575099574402,
+          "total_s": 0.016877781992661767
+        },
+        {
+          "assembly_s": 0.002119681994372513,
+          "solve_s": 0.01286936300311936,
+          "total_s": 0.014989044997491874
+        },
+        {
+          "assembly_s": 0.0024329739972017705,
+          "solve_s": 0.012203680998936761,
+          "total_s": 0.014636654996138532
+        },
+        {
+          "assembly_s": 0.0027048139963881113,
+          "solve_s": 0.013152453997463454,
+          "total_s": 0.015857267993851565
+        },
+        {
+          "assembly_s": 0.00270019999879878,
+          "solve_s": 0.012950149000971578,
+          "total_s": 0.015650348999770358
+        },
+        {
+          "assembly_s": 0.0026569490000838414,
+          "solve_s": 0.014273260996560566,
+          "total_s": 0.016930209996644408
+        },
+        {
+          "assembly_s": 0.002539667002565693,
+          "solve_s": 0.015407405997393653,
+          "total_s": 0.017947072999959346
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 2.842170943040401e-14,
+      "wall_impulse_kg_m_s": 64.00000000000033,
+      "actuator_work_J": 64.00000000000033,
+      "kinetic_J": 32.00000000000033,
+      "dissipation_J": 32.0,
+      "explicit_operator_bytes": 642200,
+      "stats": {
+        "complementarity_residual": 8.952977684114237e-13
+      },
+      "median_assembly_s": 0.0026569490000838414,
+      "median_solve_s": 0.013152453997463454,
+      "median_total_s": 0.015857267993851565
+    },
+    {
+      "kind": "normal",
+      "count": 64,
+      "method": "dense_active",
+      "samples": [
+        {
+          "assembly_s": 0.0006974189964239486,
+          "solve_s": 0.0003059070004383102,
+          "total_s": 0.0010033259968622588
+        },
+        {
+          "assembly_s": 0.0009355779984616674,
+          "solve_s": 0.0004160470052738674,
+          "total_s": 0.0013516250037355348
+        },
+        {
+          "assembly_s": 0.0006368719987221994,
+          "solve_s": 0.0005003620026400313,
+          "total_s": 0.0011372340013622306
+        },
+        {
+          "assembly_s": 0.0008493849963997491,
+          "solve_s": 0.000373859002138488,
+          "total_s": 0.001223243998538237
+        },
+        {
+          "assembly_s": 0.0006295200000749901,
+          "solve_s": 0.0005626390047837049,
+          "total_s": 0.001192159004858695
+        },
+        {
+          "assembly_s": 0.001030600004014559,
+          "solve_s": 0.00047568300215061754,
+          "total_s": 0.0015062830061651766
+        },
+        {
+          "assembly_s": 0.0008383080057683401,
+          "solve_s": 0.00037376699765445665,
+          "total_s": 0.0012120750034227967
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 64.0,
+      "actuator_work_J": 64.0,
+      "kinetic_J": 32.0,
+      "dissipation_J": 32.0,
+      "explicit_operator_bytes": 46788,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 193,
+        "contact_map_nnz": 520,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0008383080057683401,
+      "median_solve_s": 0.0004160470052738674,
+      "median_total_s": 0.0012120750034227967
+    },
+    {
+      "kind": "normal",
+      "count": 64,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.0006342630003928207,
+          "solve_s": 0.0005957570028840564,
+          "total_s": 0.001230020003276877
+        },
+        {
+          "assembly_s": 0.0009685760014690459,
+          "solve_s": 0.0008995690004667267,
+          "total_s": 0.0018681450019357726
+        },
+        {
+          "assembly_s": 0.0007636320005985908,
+          "solve_s": 0.000571633005165495,
+          "total_s": 0.0013352650057640858
+        },
+        {
+          "assembly_s": 0.001124718000937719,
+          "solve_s": 0.000693729001795873,
+          "total_s": 0.001818447002733592
+        },
+        {
+          "assembly_s": 0.0006810470003983937,
+          "solve_s": 0.0006873550009913743,
+          "total_s": 0.001368402001389768
+        },
+        {
+          "assembly_s": 0.0007915329988463782,
+          "solve_s": 0.0006991659975028597,
+          "total_s": 0.0014906989963492379
+        },
+        {
+          "assembly_s": 0.0007509689967264421,
+          "solve_s": 0.0008697259982000105,
+          "total_s": 0.0016206949949264526
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 64.0,
+      "actuator_work_J": 64.0,
+      "kinetic_J": 32.0,
+      "dissipation_J": 32.0,
+      "explicit_operator_bytes": 12988,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 193,
+        "contact_map_nnz": 520,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0007636320005985908,
+      "median_solve_s": 0.000693729001795873,
+      "median_total_s": 0.0014906989963492379
+    },
+    {
+      "kind": "normal",
+      "count": 64,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.0010706859975471161,
+          "solve_s": 0.00034833099925890565,
+          "total_s": 0.0014190169968060218
+        },
+        {
+          "assembly_s": 0.000627697998424992,
+          "solve_s": 0.00036572100361809134,
+          "total_s": 0.0009934190020430833
+        },
+        {
+          "assembly_s": 0.0006366450033965521,
+          "solve_s": 0.00032042500242823735,
+          "total_s": 0.0009570700058247894
+        },
+        {
+          "assembly_s": 0.001046902994858101,
+          "solve_s": 0.00038934800249990076,
+          "total_s": 0.0014362509973580018
+        },
+        {
+          "assembly_s": 0.0010231920023215935,
+          "solve_s": 0.0003903539982275106,
+          "total_s": 0.001413546000549104
+        },
+        {
+          "assembly_s": 0.0008562180009903386,
+          "solve_s": 0.0004114310067961924,
+          "total_s": 0.001267649007786531
+        },
+        {
+          "assembly_s": 0.0008406560009461828,
+          "solve_s": 0.00040819499554345384,
+          "total_s": 0.0012488509964896366
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 64.0,
+      "actuator_work_J": 64.0,
+      "kinetic_J": 32.0,
+      "dissipation_J": 32.0,
+      "explicit_operator_bytes": 46788,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 193,
+        "contact_map_nnz": 520,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0008562180009903386,
+      "median_solve_s": 0.00038934800249990076,
+      "median_total_s": 0.001267649007786531
+    },
+    {
+      "kind": "normal",
+      "count": 100,
+      "method": "dense_optimizer",
+      "samples": [
+        {
+          "assembly_s": 0.007530800001404714,
+          "solve_s": 0.026005708998127375,
+          "total_s": 0.03353650899953209
+        },
+        {
+          "assembly_s": 0.00570893499389058,
+          "solve_s": 0.027397895995818544,
+          "total_s": 0.033106830989709124
+        },
+        {
+          "assembly_s": 0.006460295000579208,
+          "solve_s": 0.02337819199601654,
+          "total_s": 0.029838486996595748
+        },
+        {
+          "assembly_s": 0.005625352998322342,
+          "solve_s": 0.02782258699880913,
+          "total_s": 0.03344793999713147
+        },
+        {
+          "assembly_s": 0.006389681999280583,
+          "solve_s": 0.02783682399604004,
+          "total_s": 0.03422650599532062
+        },
+        {
+          "assembly_s": 0.005975738000415731,
+          "solve_s": 0.02813851100654574,
+          "total_s": 0.03411424900696147
+        },
+        {
+          "assembly_s": 0.005489449999004137,
+          "solve_s": 0.027215006994083524,
+          "total_s": 0.03270445699308766
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 5.684341886080802e-14,
+      "wall_impulse_kg_m_s": 99.99999999999858,
+      "actuator_work_J": 99.99999999999858,
+      "kinetic_J": 49.99999999999859,
+      "dissipation_J": 49.999999999999986,
+      "explicit_operator_bytes": 1550552,
+      "stats": {
+        "complementarity_residual": 2.5702782405313803e-12
+      },
+      "median_assembly_s": 0.005975738000415731,
+      "median_solve_s": 0.027397895995818544,
+      "median_total_s": 0.03344793999713147
+    },
+    {
+      "kind": "normal",
+      "count": 100,
+      "method": "dense_active",
+      "samples": [
+        {
+          "assembly_s": 0.0008922279957914725,
+          "solve_s": 0.00044094499753555283,
+          "total_s": 0.0013331729933270253
+        },
+        {
+          "assembly_s": 0.0010215520014753565,
+          "solve_s": 0.0004188680031802505,
+          "total_s": 0.001440420004655607
+        },
+        {
+          "assembly_s": 0.0009811420022742823,
+          "solve_s": 0.0005075269946246408,
+          "total_s": 0.001488668996898923
+        },
+        {
+          "assembly_s": 0.00086623799870722,
+          "solve_s": 0.00046434300020337105,
+          "total_s": 0.001330580998910591
+        },
+        {
+          "assembly_s": 0.0008778420015005395,
+          "solve_s": 0.00039260199991986156,
+          "total_s": 0.001270444001420401
+        },
+        {
+          "assembly_s": 0.0007538969948654994,
+          "solve_s": 0.000390756998967845,
+          "total_s": 0.0011446539938333444
+        },
+        {
+          "assembly_s": 0.00074871200195048,
+          "solve_s": 0.00041726599738467485,
+          "total_s": 0.0011659779993351549
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 100.0,
+      "actuator_work_J": 100.0,
+      "kinetic_J": 50.0,
+      "dissipation_J": 50.0,
+      "explicit_operator_bytes": 101796,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 301,
+        "contact_map_nnz": 808,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0008778420015005395,
+      "median_solve_s": 0.0004188680031802505,
+      "median_total_s": 0.001330580998910591
+    },
+    {
+      "kind": "normal",
+      "count": 100,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.001173564000055194,
+          "solve_s": 0.0005922139971517026,
+          "total_s": 0.0017657779972068965
+        },
+        {
+          "assembly_s": 0.000912607996724546,
+          "solve_s": 0.001147556999057997,
+          "total_s": 0.002060164995782543
+        },
+        {
+          "assembly_s": 0.0008692460032762028,
+          "solve_s": 0.0006900949956616387,
+          "total_s": 0.0015593409989378415
+        },
+        {
+          "assembly_s": 0.0009760290049598552,
+          "solve_s": 0.0010703040024964139,
+          "total_s": 0.002046333007456269
+        },
+        {
+          "assembly_s": 0.0007623720011906698,
+          "solve_s": 0.0008412859970121644,
+          "total_s": 0.0016036579982028343
+        },
+        {
+          "assembly_s": 0.0009235890029231086,
+          "solve_s": 0.0007173569974838756,
+          "total_s": 0.0016409460004069842
+        },
+        {
+          "assembly_s": 0.001479276004829444,
+          "solve_s": 0.0007432020065607503,
+          "total_s": 0.0022224780113901943
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 100.0,
+      "actuator_work_J": 100.0,
+      "kinetic_J": 50.0,
+      "dissipation_J": 50.0,
+      "explicit_operator_bytes": 20188,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 301,
+        "contact_map_nnz": 808,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0009235890029231086,
+      "median_solve_s": 0.0007432020065607503,
+      "median_total_s": 0.0017657779972068965
+    },
+    {
+      "kind": "normal",
+      "count": 100,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.0007647059974260628,
+          "solve_s": 0.0005170080039533786,
+          "total_s": 0.0012817140013794415
+        },
+        {
+          "assembly_s": 0.0009217940023518167,
+          "solve_s": 0.0005362500014598481,
+          "total_s": 0.0014580440038116649
+        },
+        {
+          "assembly_s": 0.0006890549993840978,
+          "solve_s": 0.0005041089971200563,
+          "total_s": 0.001193163996504154
+        },
+        {
+          "assembly_s": 0.0008464470010949299,
+          "solve_s": 0.00041707100172061473,
+          "total_s": 0.0012635180028155446
+        },
+        {
+          "assembly_s": 0.0009149010002147406,
+          "solve_s": 0.0005355829998734407,
+          "total_s": 0.0014504840000881813
+        },
+        {
+          "assembly_s": 0.0008484919962938875,
+          "solve_s": 0.0004587500006891787,
+          "total_s": 0.0013072419969830662
+        },
+        {
+          "assembly_s": 0.0007826569999451749,
+          "solve_s": 0.00046348600153578445,
+          "total_s": 0.0012461430014809594
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 100.0,
+      "actuator_work_J": 100.0,
+      "kinetic_J": 50.0,
+      "dissipation_J": 50.0,
+      "explicit_operator_bytes": 101796,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 301,
+        "contact_map_nnz": 808,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.0008464470010949299,
+      "median_solve_s": 0.0005041089971200563,
+      "median_total_s": 0.0012817140013794415
+    },
+    {
+      "kind": "normal",
+      "count": 256,
+      "method": "dense_optimizer",
+      "samples": [
+        {
+          "assembly_s": 0.05056551699817646,
+          "solve_s": 0.1603776409974671,
+          "total_s": 0.21094315799564356
+        },
+        {
+          "assembly_s": 0.05642118899413617,
+          "solve_s": 0.22626396800478688,
+          "total_s": 0.28268515699892305
+        },
+        {
+          "assembly_s": 0.057167038998159114,
+          "solve_s": 0.22781843300617766,
+          "total_s": 0.28498547200433677
+        },
+        {
+          "assembly_s": 0.05678694599919254,
+          "solve_s": 0.22171479299868224,
+          "total_s": 0.2785017389978748
+        },
+        {
+          "assembly_s": 0.05517133900139015,
+          "solve_s": 0.22278056500363164,
+          "total_s": 0.2779519040050218
+        },
+        {
+          "assembly_s": 0.05452817599871196,
+          "solve_s": 0.20604112099681515,
+          "total_s": 0.2605692969955271
+        },
+        {
+          "assembly_s": 0.06556732999888482,
+          "solve_s": 0.25631661799707217,
+          "total_s": 0.321883947995957
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 3.694822225952521e-13,
+      "wall_impulse_kg_m_s": 256.00000000000983,
+      "actuator_work_J": 256.00000000000983,
+      "kinetic_J": 128.00000000000983,
+      "dissipation_J": 128.0,
+      "explicit_operator_bytes": 10039448,
+      "stats": {
+        "complementarity_residual": 2.1863219551060887e-11
+      },
+      "median_assembly_s": 0.05642118899413617,
+      "median_solve_s": 0.22278056500363164,
+      "median_total_s": 0.2785017389978748
+    },
+    {
+      "kind": "normal",
+      "count": 256,
+      "method": "dense_active",
+      "samples": [
+        {
+          "assembly_s": 0.0025288969991379417,
+          "solve_s": 0.003315627996926196,
+          "total_s": 0.005844524996064138
+        },
+        {
+          "assembly_s": 0.0021691579968319274,
+          "solve_s": 0.005841221995069645,
+          "total_s": 0.008010379991901573
+        },
+        {
+          "assembly_s": 0.0020080579997738823,
+          "solve_s": 0.0024385409997194074,
+          "total_s": 0.00444659899949329
+        },
+        {
+          "assembly_s": 0.0017206479969900101,
+          "solve_s": 0.0025964829983422533,
+          "total_s": 0.004317130995332263
+        },
+        {
+          "assembly_s": 0.002037660000496544,
+          "solve_s": 0.0025628700022934936,
+          "total_s": 0.0046005300027900375
+        },
+        {
+          "assembly_s": 0.0019294000012450852,
+          "solve_s": 0.0027849819962284528,
+          "total_s": 0.004714381997473538
+        },
+        {
+          "assembly_s": 0.003869334999762941,
+          "solve_s": 0.004328502000134904,
+          "total_s": 0.008197836999897845
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 256.0,
+      "actuator_work_J": 256.0,
+      "kinetic_J": 128.0,
+      "dissipation_J": 128.0,
+      "explicit_operator_bytes": 579780,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 769,
+        "contact_map_nnz": 2056,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.002037660000496544,
+      "median_solve_s": 0.0027849819962284528,
+      "median_total_s": 0.004714381997473538
+    },
+    {
+      "kind": "normal",
+      "count": 256,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.0011561409992282279,
+          "solve_s": 0.0007003749997238629,
+          "total_s": 0.0018565159989520907
+        },
+        {
+          "assembly_s": 0.0019329380011186004,
+          "solve_s": 0.0013873059942852706,
+          "total_s": 0.003320243995403871
+        },
+        {
+          "assembly_s": 0.002231144993857015,
+          "solve_s": 0.001199562000692822,
+          "total_s": 0.003430706994549837
+        },
+        {
+          "assembly_s": 0.0019138450006721541,
+          "solve_s": 0.00116071299999021,
+          "total_s": 0.003074558000662364
+        },
+        {
+          "assembly_s": 0.001820172998122871,
+          "solve_s": 0.0016029980033636093,
+          "total_s": 0.0034231710014864802
+        },
+        {
+          "assembly_s": 0.00239737999800127,
+          "solve_s": 0.0019058289981330745,
+          "total_s": 0.0043032089961343445
+        },
+        {
+          "assembly_s": 0.0018883289958466776,
+          "solve_s": 0.0015433090011356398,
+          "total_s": 0.0034316379969823174
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 256.0,
+      "actuator_work_J": 256.0,
+      "kinetic_J": 128.0,
+      "dissipation_J": 128.0,
+      "explicit_operator_bytes": 51388,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 769,
+        "contact_map_nnz": 2056,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0019138450006721541,
+      "median_solve_s": 0.0013873059942852706,
+      "median_total_s": 0.0034231710014864802
+    },
+    {
+      "kind": "normal",
+      "count": 256,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.001041676994645968,
+          "solve_s": 0.0006272269965847954,
+          "total_s": 0.0016689039912307635
+        },
+        {
+          "assembly_s": 0.0023350199990090914,
+          "solve_s": 0.0013403639968601055,
+          "total_s": 0.003675383995869197
+        },
+        {
+          "assembly_s": 0.0029417830010061152,
+          "solve_s": 0.0012783620040863752,
+          "total_s": 0.0042201450050924905
+        },
+        {
+          "assembly_s": 0.019591693999245763,
+          "solve_s": 0.0019028940005227923,
+          "total_s": 0.021494587999768555
+        },
+        {
+          "assembly_s": 0.0026947019941871986,
+          "solve_s": 0.0012609839977812953,
+          "total_s": 0.003955685991968494
+        },
+        {
+          "assembly_s": 0.002089970999804791,
+          "solve_s": 0.001267056999495253,
+          "total_s": 0.003357027999300044
+        },
+        {
+          "assembly_s": 0.0020326040030340664,
+          "solve_s": 0.0017868030045065098,
+          "total_s": 0.003819407007540576
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 256.0,
+      "actuator_work_J": 256.0,
+      "kinetic_J": 128.0,
+      "dissipation_J": 128.0,
+      "explicit_operator_bytes": 51388,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 769,
+        "contact_map_nnz": 2056,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0023350199990090914,
+      "median_solve_s": 0.0012783620040863752,
+      "median_total_s": 0.003819407007540576
+    },
+    {
+      "kind": "normal",
+      "count": 1024,
+      "method": "dense_active",
+      "samples": [
+        {
+          "assembly_s": 0.004307105999032501,
+          "solve_s": 0.051767239994660486,
+          "total_s": 0.05607434599369299
+        },
+        {
+          "assembly_s": 0.004270058998372406,
+          "solve_s": 0.04453801600175211,
+          "total_s": 0.04880807500012452
+        },
+        {
+          "assembly_s": 0.0027230260020587593,
+          "solve_s": 0.05316548100381624,
+          "total_s": 0.055888507005875
+        },
+        {
+          "assembly_s": 0.004337673002737574,
+          "solve_s": 0.04913254199345829,
+          "total_s": 0.053470214996195864
+        },
+        {
+          "assembly_s": 0.004189703002339229,
+          "solve_s": 0.04791322500386741,
+          "total_s": 0.05210292800620664
+        },
+        {
+          "assembly_s": 0.004824254006962292,
+          "solve_s": 0.048704213004384656,
+          "total_s": 0.05352846701134695
+        },
+        {
+          "assembly_s": 0.0065216600050916895,
+          "solve_s": 0.04723327499959851,
+          "total_s": 0.053754935004690196
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 1024.0,
+      "actuator_work_J": 1024.0,
+      "kinetic_J": 512.0,
+      "dissipation_J": 512.0,
+      "explicit_operator_bytes": 8609988,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 3073,
+        "contact_map_nnz": 8200,
+        "method": "dense_active_set"
+      },
+      "median_assembly_s": 0.004307105999032501,
+      "median_solve_s": 0.048704213004384656,
+      "median_total_s": 0.05352846701134695
+    },
+    {
+      "kind": "normal",
+      "count": 1024,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.004581603003316559,
+          "solve_s": 0.0017616080003790557,
+          "total_s": 0.006343211003695615
+        },
+        {
+          "assembly_s": 0.002906443005485926,
+          "solve_s": 0.0016789520013844594,
+          "total_s": 0.004585395006870385
+        },
+        {
+          "assembly_s": 0.003790737006056588,
+          "solve_s": 0.0010000069960369729,
+          "total_s": 0.004790744002093561
+        },
+        {
+          "assembly_s": 0.004379168996820226,
+          "solve_s": 0.001738426995871123,
+          "total_s": 0.006117595992691349
+        },
+        {
+          "assembly_s": 0.005113052000524476,
+          "solve_s": 0.0018680170032894239,
+          "total_s": 0.0069810690038139
+        },
+        {
+          "assembly_s": 0.006153778005682398,
+          "solve_s": 0.0018860639975173399,
+          "total_s": 0.008039842003199738
+        },
+        {
+          "assembly_s": 0.005091684994113166,
+          "solve_s": 0.0018821079938788898,
+          "total_s": 0.006973792987992056
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 1024.0,
+      "actuator_work_J": 1024.0,
+      "kinetic_J": 512.0,
+      "dissipation_J": 512.0,
+      "explicit_operator_bytes": 204988,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 3073,
+        "contact_map_nnz": 8200,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.004581603003316559,
+      "median_solve_s": 0.0017616080003790557,
+      "median_total_s": 0.006343211003695615
+    },
+    {
+      "kind": "normal",
+      "count": 1024,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.0045853890042053536,
+          "solve_s": 0.0025141149963019416,
+          "total_s": 0.007099504000507295
+        },
+        {
+          "assembly_s": 0.003996952000306919,
+          "solve_s": 0.001611376996152103,
+          "total_s": 0.005608328996459022
+        },
+        {
+          "assembly_s": 0.0032226039984379895,
+          "solve_s": 0.001260416000150144,
+          "total_s": 0.004483019998588134
+        },
+        {
+          "assembly_s": 0.004818973000510596,
+          "solve_s": 0.0018615529988892376,
+          "total_s": 0.006680525999399833
+        },
+        {
+          "assembly_s": 0.004568784999719355,
+          "solve_s": 0.001618075999431312,
+          "total_s": 0.006186860999150667
+        },
+        {
+          "assembly_s": 0.009047194995218888,
+          "solve_s": 0.0020253680049791,
+          "total_s": 0.011072563000197988
+        },
+        {
+          "assembly_s": 0.004852956997638103,
+          "solve_s": 0.0021818020031787455,
+          "total_s": 0.007034759000816848
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 1024.0,
+      "actuator_work_J": 1024.0,
+      "kinetic_J": 512.0,
+      "dissipation_J": 512.0,
+      "explicit_operator_bytes": 204988,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 3073,
+        "contact_map_nnz": 8200,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.0045853890042053536,
+      "median_solve_s": 0.0018615529988892376,
+      "median_total_s": 0.006680525999399833
+    },
+    {
+      "kind": "normal",
+      "count": 10000,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.03419962000043597,
+          "solve_s": 0.006872316000226419,
+          "total_s": 0.04107193600066239
+        },
+        {
+          "assembly_s": 0.023555200998089276,
+          "solve_s": 0.005743647001509089,
+          "total_s": 0.029298847999598365
+        },
+        {
+          "assembly_s": 0.02448542899946915,
+          "solve_s": 0.006206434998603072,
+          "total_s": 0.030691863998072222
+        },
+        {
+          "assembly_s": 0.03362538600049447,
+          "solve_s": 0.005461530003231019,
+          "total_s": 0.03908691600372549
+        },
+        {
+          "assembly_s": 0.02209469000081299,
+          "solve_s": 0.005685816002369393,
+          "total_s": 0.02778050600318238
+        },
+        {
+          "assembly_s": 0.03138883499923395,
+          "solve_s": 0.005420045003120322,
+          "total_s": 0.03680888000235427
+        },
+        {
+          "assembly_s": 0.03626987100142287,
+          "solve_s": 0.005990124998788815,
+          "total_s": 0.042259996000211686
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 10000.0,
+      "actuator_work_J": 10000.0,
+      "kinetic_J": 5000.0,
+      "dissipation_J": 5000.0,
+      "explicit_operator_bytes": 2000188,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 30001,
+        "contact_map_nnz": 80008,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.03138883499923395,
+      "median_solve_s": 0.005743647001509089,
+      "median_total_s": 0.03680888000235427
+    },
+    {
+      "kind": "normal",
+      "count": 10000,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.06121862099826103,
+          "solve_s": 0.00950712200574344,
+          "total_s": 0.07072574300400447
+        },
+        {
+          "assembly_s": 0.036418292998860124,
+          "solve_s": 0.005836211006680969,
+          "total_s": 0.042254504005541094
+        },
+        {
+          "assembly_s": 0.03170265800144989,
+          "solve_s": 0.005990623001707718,
+          "total_s": 0.03769328100315761
+        },
+        {
+          "assembly_s": 0.02308480499777943,
+          "solve_s": 0.0056210000038845465,
+          "total_s": 0.028705805001663975
+        },
+        {
+          "assembly_s": 0.031980368999938946,
+          "solve_s": 0.00573982600326417,
+          "total_s": 0.037720195003203116
+        },
+        {
+          "assembly_s": 0.0222668389978935,
+          "solve_s": 0.005126887001097202,
+          "total_s": 0.027393725998990703
+        },
+        {
+          "assembly_s": 0.022047174999897834,
+          "solve_s": 0.005486174006364308,
+          "total_s": 0.027533349006262142
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 10000.0,
+      "actuator_work_J": 10000.0,
+      "kinetic_J": 5000.0,
+      "dissipation_J": 5000.0,
+      "explicit_operator_bytes": 2000188,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 30001,
+        "contact_map_nnz": 80008,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.03170265800144989,
+      "median_solve_s": 0.00573982600326417,
+      "median_total_s": 0.03769328100315761
+    },
+    {
+      "kind": "normal",
+      "count": 100000,
+      "method": "sparse_active",
+      "samples": [
+        {
+          "assembly_s": 0.3564734559986391,
+          "solve_s": 0.060531622999405954,
+          "total_s": 0.41700507899804506
+        },
+        {
+          "assembly_s": 0.35620176000520587,
+          "solve_s": 0.05865650600026129,
+          "total_s": 0.41485826600546716
+        },
+        {
+          "assembly_s": 0.3684641529980581,
+          "solve_s": 0.058464098001422826,
+          "total_s": 0.42692825099948095
+        },
+        {
+          "assembly_s": 0.3538558189975447,
+          "solve_s": 0.06527818099857541,
+          "total_s": 0.4191339999961201
+        },
+        {
+          "assembly_s": 0.3763707539983443,
+          "solve_s": 0.06061470299755456,
+          "total_s": 0.43698545699589886
+        },
+        {
+          "assembly_s": 0.33477639599732356,
+          "solve_s": 0.04926264400273794,
+          "total_s": 0.3840390400000615
+        },
+        {
+          "assembly_s": 0.35189660899777664,
+          "solve_s": 0.06288833200233057,
+          "total_s": 0.4147849410001072
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 100000.0,
+      "actuator_work_J": 100000.0,
+      "kinetic_J": 50000.0,
+      "dissipation_J": 50000.0,
+      "explicit_operator_bytes": 20000188,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 300001,
+        "contact_map_nnz": 800008,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.35620176000520587,
+      "median_solve_s": 0.060531622999405954,
+      "median_total_s": 0.41700507899804506
+    },
+    {
+      "kind": "normal",
+      "count": 100000,
+      "method": "auto_active",
+      "samples": [
+        {
+          "assembly_s": 0.35675518099742476,
+          "solve_s": 0.05580147699947702,
+          "total_s": 0.4125566579969018
+        },
+        {
+          "assembly_s": 0.3452442609996069,
+          "solve_s": 0.06174100199859822,
+          "total_s": 0.40698526299820514
+        },
+        {
+          "assembly_s": 0.36013029600144364,
+          "solve_s": 0.06269143499957863,
+          "total_s": 0.42282173100102227
+        },
+        {
+          "assembly_s": 0.3486380289978115,
+          "solve_s": 0.052215278999938164,
+          "total_s": 0.40085330799774965
+        },
+        {
+          "assembly_s": 0.35301752200030023,
+          "solve_s": 0.058627667000109795,
+          "total_s": 0.41164518900041003
+        },
+        {
+          "assembly_s": 0.35707370699674357,
+          "solve_s": 0.05668809400231112,
+          "total_s": 0.4137618009990547
+        },
+        {
+          "assembly_s": 0.36855225000181235,
+          "solve_s": 0.04983828100375831,
+          "total_s": 0.41839053100557067
+        }
+      ],
+      "passed": true,
+      "max_velocity_error_m_s": 0.0,
+      "wall_impulse_kg_m_s": 100000.0,
+      "actuator_work_J": 100000.0,
+      "kinetic_J": 50000.0,
+      "dissipation_J": 50000.0,
+      "explicit_operator_bytes": 20000188,
+      "stats": {
+        "iterations": 1,
+        "singular_solves": 0,
+        "stationarity_residual": 0.0,
+        "normal_feasibility_m_s": 0.0,
+        "active_normal_velocity_m_s": 0.0,
+        "complementarity_residual": 0.0,
+        "normal_mobility_nnz": 300001,
+        "contact_map_nnz": 800008,
+        "method": "sparse_active_set"
+      },
+      "median_assembly_s": 0.35675518099742476,
+      "median_solve_s": 0.05668809400231112,
+      "median_total_s": 0.4125566579969018
+    },
+    {
+      "kind": "friction",
+      "count": 16,
+      "friction": 0.02,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0008260499962489121,
+          "solve_s": 0.0009995880027418025,
+          "total_s": 0.0018256379989907146
+        },
+        {
+          "assembly_s": 0.0007937710033729672,
+          "solve_s": 0.0009328710002591833,
+          "total_s": 0.0017266420036321506
+        },
+        {
+          "assembly_s": 0.0007758760038996115,
+          "solve_s": 0.0008986530010588467,
+          "total_s": 0.0016745290049584582
+        },
+        {
+          "assembly_s": 0.001168868002423551,
+          "solve_s": 0.0009589420005795546,
+          "total_s": 0.0021278100030031055
+        },
+        {
+          "assembly_s": 0.0007669359983992763,
+          "solve_s": 0.0015658850024919957,
+          "total_s": 0.002332821000891272
+        },
+        {
+          "assembly_s": 0.0009299820012529381,
+          "solve_s": 0.0008665040004416369,
+          "total_s": 0.001796486001694575
+        },
+        {
+          "assembly_s": 0.0008696850054548122,
+          "solve_s": 0.0010749199936981313,
+          "total_s": 0.0019446049991529435
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.3877787807814457e-17,
+        "contact_energy_change_minus_boundary_work_J": -8.251548584397309,
+        "active_contacts": 16,
+        "sticking_contacts": 15,
+        "sliding_contacts": 1,
+        "mobility_nnz": 98
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 6068,
+      "median_assembly_s": 0.0008260499962489121,
+      "median_solve_s": 0.0009589420005795546,
+      "median_total_s": 0.0018256379989907146
+    },
+    {
+      "kind": "friction",
+      "count": 16,
+      "friction": 0.02,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0010130900045624003,
+          "solve_s": 0.0015868730042711832,
+          "total_s": 0.0025999630088335834
+        },
+        {
+          "assembly_s": 0.0017992279972531833,
+          "solve_s": 0.001595309004187584,
+          "total_s": 0.003394537001440767
+        },
+        {
+          "assembly_s": 0.0007677369940211065,
+          "solve_s": 0.0017425440018996596,
+          "total_s": 0.002510280995920766
+        },
+        {
+          "assembly_s": 0.0007804939959896728,
+          "solve_s": 0.0014084189970162697,
+          "total_s": 0.0021889129930059426
+        },
+        {
+          "assembly_s": 0.0007948840066092089,
+          "solve_s": 0.0014485450010397471,
+          "total_s": 0.002243429007648956
+        },
+        {
+          "assembly_s": 0.0020274709968362004,
+          "solve_s": 0.001789276000636164,
+          "total_s": 0.0038167469974723645
+        },
+        {
+          "assembly_s": 0.0007451530036632903,
+          "solve_s": 0.001520148005511146,
+          "total_s": 0.0022653010091744363
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.3877787807814457e-17,
+        "contact_energy_change_minus_boundary_work_J": -8.251548584397309,
+        "active_contacts": 16,
+        "sticking_contacts": 15,
+        "sliding_contacts": 1,
+        "mobility_nnz": 98
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 6068,
+      "median_assembly_s": 0.0007948840066092089,
+      "median_solve_s": 0.0015868730042711832,
+      "median_total_s": 0.002510280995920766
+    },
+    {
+      "kind": "friction",
+      "count": 16,
+      "friction": 0.4,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0008161930018104613,
+          "solve_s": 0.0007660199989913963,
+          "total_s": 0.0015822130008018576
+        },
+        {
+          "assembly_s": 0.0008461809993605129,
+          "solve_s": 0.0007728470009169541,
+          "total_s": 0.001619028000277467
+        },
+        {
+          "assembly_s": 0.0007750930017209612,
+          "solve_s": 0.0007568590008304454,
+          "total_s": 0.0015319520025514066
+        },
+        {
+          "assembly_s": 0.0007741640001768246,
+          "solve_s": 0.0009240400031558238,
+          "total_s": 0.0016982040033326484
+        },
+        {
+          "assembly_s": 0.0007533450043410994,
+          "solve_s": 0.0008148159977281466,
+          "total_s": 0.001568161002069246
+        },
+        {
+          "assembly_s": 0.0008259969981736504,
+          "solve_s": 0.0007296770054381341,
+          "total_s": 0.0015556740036117844
+        },
+        {
+          "assembly_s": 0.0007295769974007271,
+          "solve_s": 0.0008052710036281496,
+          "total_s": 0.0015348480010288768
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -8.2589843211887,
+        "active_contacts": 16,
+        "sticking_contacts": 16,
+        "sliding_contacts": 0,
+        "mobility_nnz": 98
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 6068,
+      "median_assembly_s": 0.0007750930017209612,
+      "median_solve_s": 0.0007728470009169541,
+      "median_total_s": 0.001568161002069246
+    },
+    {
+      "kind": "friction",
+      "count": 16,
+      "friction": 0.4,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.000754631997551769,
+          "solve_s": 0.0013528259951272048,
+          "total_s": 0.002107457992678974
+        },
+        {
+          "assembly_s": 0.0007301110017579049,
+          "solve_s": 0.0014333569997688755,
+          "total_s": 0.0021634680015267804
+        },
+        {
+          "assembly_s": 0.0008053059937083162,
+          "solve_s": 0.001362388997222297,
+          "total_s": 0.002167694990930613
+        },
+        {
+          "assembly_s": 0.0007281110010808334,
+          "solve_s": 0.0014525009974022396,
+          "total_s": 0.002180611998483073
+        },
+        {
+          "assembly_s": 0.0011068969979532994,
+          "solve_s": 0.0015445360040757805,
+          "total_s": 0.00265143300202908
+        },
+        {
+          "assembly_s": 0.0007750180011498742,
+          "solve_s": 0.0013922199941589497,
+          "total_s": 0.002167237995308824
+        },
+        {
+          "assembly_s": 0.0007845029977033846,
+          "solve_s": 0.0016718679980840534,
+          "total_s": 0.002456370995787438
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -8.2589843211887,
+        "active_contacts": 16,
+        "sticking_contacts": 16,
+        "sliding_contacts": 0,
+        "mobility_nnz": 98
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 6068,
+      "median_assembly_s": 0.0007750180011498742,
+      "median_solve_s": 0.0014333569997688755,
+      "median_total_s": 0.002167694990930613
+    },
+    {
+      "kind": "friction",
+      "count": 100,
+      "friction": 0.02,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0011703490017680451,
+          "solve_s": 0.001992733006773051,
+          "total_s": 0.003163082008541096
+        },
+        {
+          "assembly_s": 0.00121051099995384,
+          "solve_s": 0.0016783489991212264,
+          "total_s": 0.0028888599990750663
+        },
+        {
+          "assembly_s": 0.0009683610041975044,
+          "solve_s": 0.001629480997507926,
+          "total_s": 0.0025978420017054304
+        },
+        {
+          "assembly_s": 0.001046998004312627,
+          "solve_s": 0.0021237809996819124,
+          "total_s": 0.0031707790039945394
+        },
+        {
+          "assembly_s": 0.001181370003905613,
+          "solve_s": 0.001421941997250542,
+          "total_s": 0.002603312001156155
+        },
+        {
+          "assembly_s": 0.0014903209957992658,
+          "solve_s": 0.0014879189984640107,
+          "total_s": 0.0029782399942632765
+        },
+        {
+          "assembly_s": 0.0010008149984059855,
+          "solve_s": 0.0019445399957476184,
+          "total_s": 0.002945354994153604
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -51.70542994156606,
+        "active_contacts": 100,
+        "sticking_contacts": 99,
+        "sliding_contacts": 1,
+        "mobility_nnz": 602
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 36308,
+      "median_assembly_s": 0.0011703490017680451,
+      "median_solve_s": 0.0016783489991212264,
+      "median_total_s": 0.002945354994153604
+    },
+    {
+      "kind": "friction",
+      "count": 100,
+      "friction": 0.02,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.000964501996350009,
+          "solve_s": 0.0031663600020692684,
+          "total_s": 0.004130861998419277
+        },
+        {
+          "assembly_s": 0.0012359649990685284,
+          "solve_s": 0.0026003199964179657,
+          "total_s": 0.003836284995486494
+        },
+        {
+          "assembly_s": 0.0010010379992309026,
+          "solve_s": 0.002845433999027591,
+          "total_s": 0.003846471998258494
+        },
+        {
+          "assembly_s": 0.000993207999272272,
+          "solve_s": 0.0026275209966115654,
+          "total_s": 0.0036207289958838373
+        },
+        {
+          "assembly_s": 0.0009765329959918745,
+          "solve_s": 0.0028709010002785362,
+          "total_s": 0.0038474339962704107
+        },
+        {
+          "assembly_s": 0.0023926799985929392,
+          "solve_s": 0.0035327670047990978,
+          "total_s": 0.005925447003392037
+        },
+        {
+          "assembly_s": 0.0010184700004174374,
+          "solve_s": 0.0027923839952563867,
+          "total_s": 0.003810853995673824
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -51.70542994156606,
+        "active_contacts": 100,
+        "sticking_contacts": 99,
+        "sliding_contacts": 1,
+        "mobility_nnz": 602
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 36308,
+      "median_assembly_s": 0.0010010379992309026,
+      "median_solve_s": 0.002845433999027591,
+      "median_total_s": 0.003846471998258494
+    },
+    {
+      "kind": "friction",
+      "count": 100,
+      "friction": 0.4,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.001001782002276741,
+          "solve_s": 0.0010628079980961047,
+          "total_s": 0.0020645900003728457
+        },
+        {
+          "assembly_s": 0.0010075579994008876,
+          "solve_s": 0.0010691080024116673,
+          "total_s": 0.002076666001812555
+        },
+        {
+          "assembly_s": 0.000973565001913812,
+          "solve_s": 0.0012757220029016025,
+          "total_s": 0.0022492870048154145
+        },
+        {
+          "assembly_s": 0.0010822510012076236,
+          "solve_s": 0.0011543919972609729,
+          "total_s": 0.0022366429984685965
+        },
+        {
+          "assembly_s": 0.000980172997515183,
+          "solve_s": 0.0011078070019721054,
+          "total_s": 0.0020879799994872883
+        },
+        {
+          "assembly_s": 0.0013618599987239577,
+          "solve_s": 0.0012698739956249483,
+          "total_s": 0.002631733994348906
+        },
+        {
+          "assembly_s": 0.001433760997315403,
+          "solve_s": 0.0023915739948279224,
+          "total_s": 0.0038253349921433255
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -51.70651673963716,
+        "active_contacts": 100,
+        "sticking_contacts": 100,
+        "sliding_contacts": 0,
+        "mobility_nnz": 602
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 36308,
+      "median_assembly_s": 0.0010075579994008876,
+      "median_solve_s": 0.0011543919972609729,
+      "median_total_s": 0.0022366429984685965
+    },
+    {
+      "kind": "friction",
+      "count": 100,
+      "friction": 0.4,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0009503990004304796,
+          "solve_s": 0.0019472999993013218,
+          "total_s": 0.0028976989997318015
+        },
+        {
+          "assembly_s": 0.000974110997049138,
+          "solve_s": 0.0020010410007671453,
+          "total_s": 0.0029751519978162833
+        },
+        {
+          "assembly_s": 0.0009693169995443895,
+          "solve_s": 0.0019851030010613613,
+          "total_s": 0.002954420000605751
+        },
+        {
+          "assembly_s": 0.0010250739942421205,
+          "solve_s": 0.001824097998905927,
+          "total_s": 0.0028491719931480475
+        },
+        {
+          "assembly_s": 0.00190836499677971,
+          "solve_s": 0.0025604420006857254,
+          "total_s": 0.004468806997465435
+        },
+        {
+          "assembly_s": 0.0012096540012862533,
+          "solve_s": 0.002051458002824802,
+          "total_s": 0.0032611120041110553
+        },
+        {
+          "assembly_s": 0.001140047999797389,
+          "solve_s": 0.0017435370027669705,
+          "total_s": 0.0028835850025643595
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -51.70651673963716,
+        "active_contacts": 100,
+        "sticking_contacts": 100,
+        "sliding_contacts": 0,
+        "mobility_nnz": 602
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 36308,
+      "median_assembly_s": 0.0010250739942421205,
+      "median_solve_s": 0.0019851030010613613,
+      "median_total_s": 0.002954420000605751
+    },
+    {
+      "kind": "friction",
+      "count": 1024,
+      "friction": 0.02,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.003765779998502694,
+          "solve_s": 0.005940385999565478,
+          "total_s": 0.009706165998068172
+        },
+        {
+          "assembly_s": 0.002878765997593291,
+          "solve_s": 0.005448612995678559,
+          "total_s": 0.00832737899327185
+        },
+        {
+          "assembly_s": 0.0029011950027779676,
+          "solve_s": 0.005055549001554027,
+          "total_s": 0.007956744004331995
+        },
+        {
+          "assembly_s": 0.002924448999692686,
+          "solve_s": 0.00552839499869151,
+          "total_s": 0.008452843998384196
+        },
+        {
+          "assembly_s": 0.003261136000219267,
+          "solve_s": 0.005874037997273263,
+          "total_s": 0.00913517399749253
+        },
+        {
+          "assembly_s": 0.0033611319959163666,
+          "solve_s": 0.005191142001422122,
+          "total_s": 0.008552273997338489
+        },
+        {
+          "assembly_s": 0.0029865029937354848,
+          "solve_s": 0.006328259994916152,
+          "total_s": 0.009314762988651637
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 6,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -529.6268832877869,
+        "active_contacts": 1024,
+        "sticking_contacts": 1020,
+        "sliding_contacts": 4,
+        "mobility_nnz": 6146
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 368948,
+      "median_assembly_s": 0.0029865029937354848,
+      "median_solve_s": 0.00552839499869151,
+      "median_total_s": 0.008552273997338489
+    },
+    {
+      "kind": "friction",
+      "count": 1024,
+      "friction": 0.02,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0035022899974137545,
+          "solve_s": 0.006344411995087285,
+          "total_s": 0.009846701992501039
+        },
+        {
+          "assembly_s": 0.003219676000298932,
+          "solve_s": 0.005090908001875505,
+          "total_s": 0.008310584002174437
+        },
+        {
+          "assembly_s": 0.002941579994512722,
+          "solve_s": 0.00473097299982328,
+          "total_s": 0.007672552994336002
+        },
+        {
+          "assembly_s": 0.0029109219976817258,
+          "solve_s": 0.004611197000485845,
+          "total_s": 0.007522118998167571
+        },
+        {
+          "assembly_s": 0.0029902700043749064,
+          "solve_s": 0.004586841998388991,
+          "total_s": 0.007577112002763897
+        },
+        {
+          "assembly_s": 0.0029992969939485192,
+          "solve_s": 0.005222690000664443,
+          "total_s": 0.008221986994612962
+        },
+        {
+          "assembly_s": 0.0038761499963584356,
+          "solve_s": 0.006012246994941961,
+          "total_s": 0.009888396991300397
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -529.6268832877869,
+        "active_contacts": 1024,
+        "sticking_contacts": 1020,
+        "sliding_contacts": 4,
+        "mobility_nnz": 6146
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 368948,
+      "median_assembly_s": 0.0029992969939485192,
+      "median_solve_s": 0.005090908001875505,
+      "median_total_s": 0.008221986994612962
+    },
+    {
+      "kind": "friction",
+      "count": 1024,
+      "friction": 0.4,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0029084510024404153,
+          "solve_s": 0.0023943020059959963,
+          "total_s": 0.005302753008436412
+        },
+        {
+          "assembly_s": 0.0038874590027262457,
+          "solve_s": 0.002513403000193648,
+          "total_s": 0.006400862002919894
+        },
+        {
+          "assembly_s": 0.003472099000646267,
+          "solve_s": 0.0031192290043691173,
+          "total_s": 0.006591328005015384
+        },
+        {
+          "assembly_s": 0.003592812005081214,
+          "solve_s": 0.0036390639943419956,
+          "total_s": 0.00723187599942321
+        },
+        {
+          "assembly_s": 0.0033680679989629425,
+          "solve_s": 0.0029439390054903924,
+          "total_s": 0.006312007004453335
+        },
+        {
+          "assembly_s": 0.005029587999160867,
+          "solve_s": 0.002675451003597118,
+          "total_s": 0.007705039002757985
+        },
+        {
+          "assembly_s": 0.0031476680014748126,
+          "solve_s": 0.0025052009950741194,
+          "total_s": 0.005652868996548932
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -529.6291658216911,
+        "active_contacts": 1024,
+        "sticking_contacts": 1024,
+        "sliding_contacts": 0,
+        "mobility_nnz": 6146
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 368948,
+      "median_assembly_s": 0.003472099000646267,
+      "median_solve_s": 0.002675451003597118,
+      "median_total_s": 0.006400862002919894
+    },
+    {
+      "kind": "friction",
+      "count": 1024,
+      "friction": 0.4,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.0033299650021945126,
+          "solve_s": 0.00333537799451733,
+          "total_s": 0.006665342996711843
+        },
+        {
+          "assembly_s": 0.0030203130008885637,
+          "solve_s": 0.003824462000920903,
+          "total_s": 0.006844775001809467
+        },
+        {
+          "assembly_s": 0.003529446003085468,
+          "solve_s": 0.003274481998232659,
+          "total_s": 0.006803928001318127
+        },
+        {
+          "assembly_s": 0.0031575920002069324,
+          "solve_s": 0.0034630020018084906,
+          "total_s": 0.006620594002015423
+        },
+        {
+          "assembly_s": 0.0030390109968720935,
+          "solve_s": 0.003872925997711718,
+          "total_s": 0.006911936994583812
+        },
+        {
+          "assembly_s": 0.005177778999495786,
+          "solve_s": 0.005830410998896696,
+          "total_s": 0.011008189998392481
+        },
+        {
+          "assembly_s": 0.0033457530007581227,
+          "solve_s": 0.0036877579987049103,
+          "total_s": 0.007033510999463033
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -529.6291658216911,
+        "active_contacts": 1024,
+        "sticking_contacts": 1024,
+        "sliding_contacts": 0,
+        "mobility_nnz": 6146
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 368948,
+      "median_assembly_s": 0.0033299650021945126,
+      "median_solve_s": 0.0036877579987049103,
+      "median_total_s": 0.006844775001809467
+    },
+    {
+      "kind": "friction",
+      "count": 10000,
+      "friction": 0.02,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.03765337600634666,
+          "solve_s": 0.01698158299404895,
+          "total_s": 0.05463495900039561
+        },
+        {
+          "assembly_s": 0.037507189001189545,
+          "solve_s": 0.015922570004477166,
+          "total_s": 0.05342975900566671
+        },
+        {
+          "assembly_s": 0.024980848997074645,
+          "solve_s": 0.016818899995996617,
+          "total_s": 0.04179974899307126
+        },
+        {
+          "assembly_s": 0.024870429006114136,
+          "solve_s": 0.01579133099585306,
+          "total_s": 0.040661760001967195
+        },
+        {
+          "assembly_s": 0.022600600997975562,
+          "solve_s": 0.015009775997896213,
+          "total_s": 0.037610376995871775
+        },
+        {
+          "assembly_s": 0.03973812500044005,
+          "solve_s": 0.014846455997030716,
+          "total_s": 0.054584580997470766
+        },
+        {
+          "assembly_s": 0.02272231600363739,
+          "solve_s": 0.01923286400415236,
+          "total_s": 0.04195518000778975
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -5172.0809082334,
+        "active_contacts": 10000,
+        "sticking_contacts": 9999,
+        "sliding_contacts": 1,
+        "mobility_nnz": 60002
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 3600308,
+      "median_assembly_s": 0.024980848997074645,
+      "median_solve_s": 0.015922570004477166,
+      "median_total_s": 0.04195518000778975
+    },
+    {
+      "kind": "friction",
+      "count": 10000,
+      "friction": 0.02,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.02632052599801682,
+          "solve_s": 0.04009305599902291,
+          "total_s": 0.06641358199703973
+        },
+        {
+          "assembly_s": 0.02411799599940423,
+          "solve_s": 0.03415131899964763,
+          "total_s": 0.05826931499905186
+        },
+        {
+          "assembly_s": 0.03937967200181447,
+          "solve_s": 0.03432968999550212,
+          "total_s": 0.07370936199731659
+        },
+        {
+          "assembly_s": 0.037411947996588424,
+          "solve_s": 0.03383714400115423,
+          "total_s": 0.07124909199774265
+        },
+        {
+          "assembly_s": 0.0367009629990207,
+          "solve_s": 0.036353507995954715,
+          "total_s": 0.07305447099497542
+        },
+        {
+          "assembly_s": 0.02521196800080361,
+          "solve_s": 0.03958443499868736,
+          "total_s": 0.06479640299949097
+        },
+        {
+          "assembly_s": 0.04248285100038629,
+          "solve_s": 0.03436278899607714,
+          "total_s": 0.07684563999646343
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -5172.0809082334,
+        "active_contacts": 10000,
+        "sticking_contacts": 9999,
+        "sliding_contacts": 1,
+        "mobility_nnz": 60002
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 3600308,
+      "median_assembly_s": 0.0367009629990207,
+      "median_solve_s": 0.03436278899607714,
+      "median_total_s": 0.07124909199774265
+    },
+    {
+      "kind": "friction",
+      "count": 10000,
+      "friction": 0.4,
+      "strategy": "auto",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.04022894599620486,
+          "solve_s": 0.014422377003938891,
+          "total_s": 0.05465132300014375
+        },
+        {
+          "assembly_s": 0.022954817999561783,
+          "solve_s": 0.012126717003411613,
+          "total_s": 0.035081535002973396
+        },
+        {
+          "assembly_s": 0.023171928005467635,
+          "solve_s": 0.013065860999631695,
+          "total_s": 0.03623778900509933
+        },
+        {
+          "assembly_s": 0.037395965002360754,
+          "solve_s": 0.0149516509991372,
+          "total_s": 0.052347616001497954
+        },
+        {
+          "assembly_s": 0.03793221900559729,
+          "solve_s": 0.013653909001732245,
+          "total_s": 0.051586128007329535
+        },
+        {
+          "assembly_s": 0.02280182999675162,
+          "solve_s": 0.0098920119999093,
+          "total_s": 0.03269384199666092
+        },
+        {
+          "assembly_s": 0.0407560219973675,
+          "solve_s": 0.013148778998584021,
+          "total_s": 0.05390480099595152
+        }
+      ],
+      "stats": {
+        "method": "decoupled_box",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -5172.081160861409,
+        "active_contacts": 10000,
+        "sticking_contacts": 10000,
+        "sliding_contacts": 0,
+        "mobility_nnz": 60002
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 3600308,
+      "median_assembly_s": 0.037395965002360754,
+      "median_solve_s": 0.013148778998584021,
+      "median_total_s": 0.051586128007329535
+    },
+    {
+      "kind": "friction",
+      "count": 10000,
+      "friction": 0.4,
+      "strategy": "general",
+      "passed": true,
+      "samples": [
+        {
+          "assembly_s": 0.02510457600146765,
+          "solve_s": 0.024658197995449882,
+          "total_s": 0.04976277399691753
+        },
+        {
+          "assembly_s": 0.03990441100177122,
+          "solve_s": 0.022700591005559545,
+          "total_s": 0.06260500200733077
+        },
+        {
+          "assembly_s": 0.03833045600185869,
+          "solve_s": 0.022938529997190926,
+          "total_s": 0.06126898599904962
+        },
+        {
+          "assembly_s": 0.02530726200347999,
+          "solve_s": 0.02318422600365011,
+          "total_s": 0.0484914880071301
+        },
+        {
+          "assembly_s": 0.023211781001009513,
+          "solve_s": 0.02090755500103114,
+          "total_s": 0.044119336002040654
+        },
+        {
+          "assembly_s": 0.0358091389934998,
+          "solve_s": 0.024273538998386357,
+          "total_s": 0.06008267799188616
+        },
+        {
+          "assembly_s": 0.023999678996915463,
+          "solve_s": 0.02355175800039433,
+          "total_s": 0.04755143699730979
+        }
+      ],
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.163336342344337e-17,
+        "contact_energy_change_minus_boundary_work_J": -5172.081160861409,
+        "active_contacts": 10000,
+        "sticking_contacts": 10000,
+        "sliding_contacts": 0,
+        "mobility_nnz": 60002
+      },
+      "max_normal_velocity_error_m_s": 0.0,
+      "explicit_operator_bytes": 3600308,
+      "median_assembly_s": 0.02530726200347999,
+      "median_solve_s": 0.02318422600365011,
+      "median_total_s": 0.04976277399691753
+    },
+    {
+      "kind": "stress",
+      "index": 0,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.8500867485165731,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 148
+      },
+      "solve_s": 0.0018252250010846183
+    },
+    {
+      "kind": "stress",
+      "index": 1,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 6,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 12,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.7755575615628914e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.3019679199875915,
+        "active_contacts": 3,
+        "sticking_contacts": 1,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.004125460996874608
+    },
+    {
+      "kind": "stress",
+      "index": 2,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 9,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 6.938893903907228e-18,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.3919759653951447,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.003977134998422116
+    },
+    {
+      "kind": "stress",
+      "index": 3,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3877787807814457e-17,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 1.734723475976807e-18,
+        "equation_residual": 6.938893903907228e-18,
+        "contact_energy_change_minus_boundary_work_J": -0.14321462495927634,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002115060000505764
+    },
+    {
+      "kind": "stress",
+      "index": 4,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.149910298382148,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.003338204995088745
+    },
+    {
+      "kind": "stress",
+      "index": 5,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 3.019806626980426e-14,
+        "friction_capacity_residual_kg_m_s": 2.1590540686754997e-15,
+        "slip_law_residual_kg_m_s": 1.1556741912881171e-18,
+        "equation_residual": 5.684341886080802e-14,
+        "contact_energy_change_minus_boundary_work_J": -4.5924014900252885,
+        "active_contacts": 3,
+        "sticking_contacts": 2,
+        "sliding_contacts": 1,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.002886818998376839
+    },
+    {
+      "kind": "stress",
+      "index": 6,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.581268532253489e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 8.881784197001252e-16,
+        "contact_energy_change_minus_boundary_work_J": -9.127854930549294,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.0021971780006424524
+    },
+    {
+      "kind": "stress",
+      "index": 7,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.8251457526943139,
+        "active_contacts": 2,
+        "sticking_contacts": 1,
+        "sliding_contacts": 1,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003512817005685065
+    },
+    {
+      "kind": "stress",
+      "index": 8,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 8,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 20,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 8.881784197001252e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.1743110459117956,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.006237446999875829
+    },
+    {
+      "kind": "stress",
+      "index": 9,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.9539925233402755e-14,
+        "friction_capacity_residual_kg_m_s": 8.241826788626832e-16,
+        "slip_law_residual_kg_m_s": 7.128232433388273e-16,
+        "equation_residual": 1.2816192967547136e-14,
+        "contact_energy_change_minus_boundary_work_J": -1.9326135474795016,
+        "active_contacts": 5,
+        "sticking_contacts": 3,
+        "sliding_contacts": 2,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003921076000551693
+    },
+    {
+      "kind": "stress",
+      "index": 10,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 6,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 5,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.7763568394002505e-15,
+        "friction_capacity_residual_kg_m_s": 6.298063995893954e-19,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.071212647551128,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.004187824000837281
+    },
+    {
+      "kind": "stress",
+      "index": 11,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.588590076287372,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.002293558995006606
+    },
+    {
+      "kind": "stress",
+      "index": 12,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.3833390035348312,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0036216270018485375
+    },
+    {
+      "kind": "stress",
+      "index": 13,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 6,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 1.6058476255232074e-18,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.6504896487270755,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0036373519978951663
+    },
+    {
+      "kind": "stress",
+      "index": 14,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 3.2612801348363973e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.9458009400964955,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.002834070000972133
+    },
+    {
+      "kind": "stress",
+      "index": 15,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 6,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 9,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -6.673828557170567,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0054151879958226345
+    },
+    {
+      "kind": "stress",
+      "index": 16,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 1.992244110574683e-18,
+        "slip_law_residual_kg_m_s": 1.992244110574683e-18,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.8088792132854642,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002908155001932755
+    },
+    {
+      "kind": "stress",
+      "index": 17,
+      "passed": false,
+      "error": "Coulomb acceptance failed: normal=0.00294686, cone=0.00501103, slip=0.643372, equation=0.00501103, passive=-9.71018",
+      "solve_s": 0.10355324699776247
+    },
+    {
+      "kind": "stress",
+      "index": 18,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 11,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 23,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 1.0234237960915921e-14,
+        "contact_energy_change_minus_boundary_work_J": -0.5891672191456552,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.007390429003862664
+    },
+    {
+      "kind": "stress",
+      "index": 19,
+      "passed": false,
+      "error": "Coulomb acceptance failed: normal=0.00792425, cone=0.00147771, slip=0.825817, equation=0.00691741, passive=-6.26839",
+      "solve_s": 0.06186563299706904
+    },
+    {
+      "kind": "stress",
+      "index": 20,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.7755575615628914e-17,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -1.2518487666570972,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0026491690005059354
+    },
+    {
+      "kind": "stress",
+      "index": 21,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 19,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 0.0,
+        "contact_energy_change_minus_boundary_work_J": -1.2716641989302497,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0044696789991576225
+    },
+    {
+      "kind": "stress",
+      "index": 22,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.2036516036443866e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.8509241549932585,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.0017654729963396676
+    },
+    {
+      "kind": "stress",
+      "index": 23,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 3.469446951953614e-18,
+        "slip_law_residual_kg_m_s": 3.469446951953614e-18,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.6176160456229163,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0034544859954621643
+    },
+    {
+      "kind": "stress",
+      "index": 24,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.774530022659902,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.0023983799983398058
+    },
+    {
+      "kind": "stress",
+      "index": 25,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 2,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 7.216449660063518e-16,
+        "friction_capacity_residual_kg_m_s": 2.8264980681959134e-17,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.0272794681072086,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.004505629003688227
+    },
+    {
+      "kind": "stress",
+      "index": 26,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 10,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 22,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -16.77678260946881,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.009761927998624742
+    },
+    {
+      "kind": "stress",
+      "index": 27,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 6.938893903907228e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.1889468991662684,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.003049946993996855
+    },
+    {
+      "kind": "stress",
+      "index": 28,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.4432899320127035e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.29258344332605e-15,
+        "contact_energy_change_minus_boundary_work_J": -0.49988950665369386,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.001636308996239677
+    },
+    {
+      "kind": "stress",
+      "index": 29,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 8,
+        "singular_solves": 0,
+        "line_search_halvings": 1,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3322676295501878e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.3877787807814457e-15,
+        "contact_energy_change_minus_boundary_work_J": -3.208099451673797,
+        "active_contacts": 3,
+        "sticking_contacts": 2,
+        "sliding_contacts": 1,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.003751188996830024
+    },
+    {
+      "kind": "stress",
+      "index": 30,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 0.0,
+        "contact_energy_change_minus_boundary_work_J": -0.13141478838312892,
+        "active_contacts": 1,
+        "sticking_contacts": 0,
+        "sliding_contacts": 1,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002470131999871228
+    },
+    {
+      "kind": "stress",
+      "index": 31,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 7.706146307505991e-18,
+        "slip_law_residual_kg_m_s": 7.706146307505991e-18,
+        "equation_residual": 7.706146307505991e-18,
+        "contact_energy_change_minus_boundary_work_J": -8.533521145132402,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.0019936640019295737
+    },
+    {
+      "kind": "stress",
+      "index": 32,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 8,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 6.938893903907228e-18,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.20509662023319172,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0046638980056741275
+    },
+    {
+      "kind": "stress",
+      "index": 33,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 1.3340090864172204e-35,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -3.2667287073990217,
+        "active_contacts": 5,
+        "sticking_contacts": 3,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0043154859959031455
+    },
+    {
+      "kind": "stress",
+      "index": 34,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -4.051373331792874,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0032085650018416345
+    },
+    {
+      "kind": "stress",
+      "index": 35,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 0.0,
+        "contact_energy_change_minus_boundary_work_J": -0.7130766819494891,
+        "active_contacts": 1,
+        "sticking_contacts": 0,
+        "sliding_contacts": 1,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.001974867998796981
+    },
+    {
+      "kind": "stress",
+      "index": 36,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 11,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 2.7755575615628915e-18,
+        "equation_residual": 1.3877787807814457e-17,
+        "contact_energy_change_minus_boundary_work_J": -3.1555436247418753,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.004414061004354153
+    },
+    {
+      "kind": "stress",
+      "index": 37,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 5.551115123125783e-16,
+        "friction_capacity_residual_kg_m_s": 3.469446951953614e-17,
+        "slip_law_residual_kg_m_s": 1.249000902703301e-16,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.433854543610451,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002804903000651393
+    },
+    {
+      "kind": "stress",
+      "index": 38,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 7,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.5543122344752192e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.718447854656915e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.1562735715032722,
+        "active_contacts": 2,
+        "sticking_contacts": 2,
+        "sliding_contacts": 0,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0049807560062617995
+    },
+    {
+      "kind": "stress",
+      "index": 39,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.5491075250425692e-15,
+        "contact_energy_change_minus_boundary_work_J": -3.5433620215563515,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.0014881469978718087
+    },
+    {
+      "kind": "stress",
+      "index": 40,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.1037795773037855,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.002262750997033436
+    },
+    {
+      "kind": "stress",
+      "index": 41,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 5.551115123125783e-17,
+        "friction_capacity_residual_kg_m_s": 7.625821296439185e-18,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.20397166611873568,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.002124261998687871
+    },
+    {
+      "kind": "stress",
+      "index": 42,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 9.064056316875808e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.1830997089952835,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.0015199960034806281
+    },
+    {
+      "kind": "stress",
+      "index": 43,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 9,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 8.881784197001252e-16,
+        "contact_energy_change_minus_boundary_work_J": -7.863635976524139,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.003933244006475434
+    },
+    {
+      "kind": "stress",
+      "index": 44,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 3.469446951953614e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.9130324041977295,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0036793110048165545
+    },
+    {
+      "kind": "stress",
+      "index": 45,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 5.551115123125783e-17,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.2710560440846197,
+        "active_contacts": 3,
+        "sticking_contacts": 1,
+        "sliding_contacts": 2,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.002155219997803215
+    },
+    {
+      "kind": "stress",
+      "index": 46,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.38176361223669e-15,
+        "contact_energy_change_minus_boundary_work_J": -10.529282802673618,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0015371370027423836
+    },
+    {
+      "kind": "stress",
+      "index": 47,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 6,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.509903313490213e-14,
+        "friction_capacity_residual_kg_m_s": 4.788959282404656e-15,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 1.4210854715202004e-14,
+        "contact_energy_change_minus_boundary_work_J": -5.787779754642788,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.003126795003481675
+    },
+    {
+      "kind": "stress",
+      "index": 48,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.7755575615628914e-17,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.7755575615628914e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.9409095493388533,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0035137490049237385
+    },
+    {
+      "kind": "stress",
+      "index": 49,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3766765505351941e-14,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 9.706510006970727e-14,
+        "contact_energy_change_minus_boundary_work_J": -4.467379776103004,
+        "active_contacts": 6,
+        "sticking_contacts": 6,
+        "sliding_contacts": 0,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0015641599966329522
+    },
+    {
+      "kind": "stress",
+      "index": 50,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 0.0,
+        "contact_energy_change_minus_boundary_work_J": -7.684036623588078,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0027914560050703585
+    },
+    {
+      "kind": "stress",
+      "index": 51,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -4.185539680067437,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003436721999605652
+    },
+    {
+      "kind": "stress",
+      "index": 52,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3322676295501878e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.034132472813823,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003492620999168139
+    },
+    {
+      "kind": "stress",
+      "index": 53,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 14,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 1,
+        "line_search_halvings": 58,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 2.0122792321330962e-16,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.3435374875086668,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.010698400001274422
+    },
+    {
+      "kind": "stress",
+      "index": 54,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 13,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 3.3571476030915166e-18,
+        "slip_law_residual_kg_m_s": 3.3571476030915166e-18,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.7916649669974833,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003762108004593756
+    },
+    {
+      "kind": "stress",
+      "index": 55,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 3.6637359812630166e-15,
+        "friction_capacity_residual_kg_m_s": 2.892655940771109e-16,
+        "slip_law_residual_kg_m_s": 4.5102810375396984e-17,
+        "equation_residual": 1.7763568394002505e-15,
+        "contact_energy_change_minus_boundary_work_J": -4.7785048723066295,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.0026161020068684593
+    },
+    {
+      "kind": "stress",
+      "index": 56,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-15,
+        "friction_capacity_residual_kg_m_s": 8.175389356859255e-16,
+        "slip_law_residual_kg_m_s": 3.3306690738754696e-16,
+        "equation_residual": 2.133982142919169e-15,
+        "contact_energy_change_minus_boundary_work_J": -7.4603002798240405,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.003345238001202233
+    },
+    {
+      "kind": "stress",
+      "index": 57,
+      "passed": false,
+      "error": "Coulomb acceptance failed: normal=0.0218788, cone=0.0183488, slip=0.690056, equation=0.0183488, passive=-4.24989",
+      "solve_s": 0.08334287500474602
+    },
+    {
+      "kind": "stress",
+      "index": 58,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 1,
+        "line_search_halvings": 15,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 3.552713678800501e-15,
+        "friction_capacity_residual_kg_m_s": 7.25582758946416e-18,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.8922660041430386e-15,
+        "contact_energy_change_minus_boundary_work_J": -3.407026654946474,
+        "active_contacts": 5,
+        "sticking_contacts": 3,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.004495246001170017
+    },
+    {
+      "kind": "stress",
+      "index": 59,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -4.273422580289239,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0023517279987572692
+    },
+    {
+      "kind": "stress",
+      "index": 60,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.45418187753952016,
+        "active_contacts": 1,
+        "sticking_contacts": 0,
+        "sliding_contacts": 1,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.002164436999009922
+    },
+    {
+      "kind": "stress",
+      "index": 61,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 6.661338147750939e-16,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.9517338348376531,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002754351997282356
+    },
+    {
+      "kind": "stress",
+      "index": 62,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 6.130651541980114e-13,
+        "friction_capacity_residual_kg_m_s": 9.037785486933109e-15,
+        "slip_law_residual_kg_m_s": 1.2337353361147052e-13,
+        "equation_residual": 3.169686735304822e-13,
+        "contact_energy_change_minus_boundary_work_J": -4.31369031765332,
+        "active_contacts": 3,
+        "sticking_contacts": 2,
+        "sliding_contacts": 1,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.002593780001916457
+    },
+    {
+      "kind": "stress",
+      "index": 63,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.1530631744364381,
+        "active_contacts": 2,
+        "sticking_contacts": 1,
+        "sliding_contacts": 1,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.002148968997062184
+    },
+    {
+      "kind": "stress",
+      "index": 64,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.0547118733938987e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 8.881784197001252e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.5851417235613487,
+        "active_contacts": 4,
+        "sticking_contacts": 2,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0022985219984548166
+    },
+    {
+      "kind": "stress",
+      "index": 65,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 2,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.7763568394002505e-15,
+        "friction_capacity_residual_kg_m_s": 5.551115123125783e-17,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.22272036719187,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.003193980002833996
+    },
+    {
+      "kind": "stress",
+      "index": 66,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.7755575615628914e-17,
+        "friction_capacity_residual_kg_m_s": 1.1102230246251565e-16,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.0554383754753234,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0022284509977907874
+    },
+    {
+      "kind": "stress",
+      "index": 67,
+      "passed": true,
+      "stats": {
+        "method": "least_squares_fallback",
+        "iterations": 8,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 105,
+        "fallback_evaluations": 10,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 2.1625122502260884e-19,
+        "slip_law_residual_kg_m_s": 3.3306690738754696e-16,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -5.5199447174494995,
+        "active_contacts": 6,
+        "sticking_contacts": 5,
+        "sliding_contacts": 1,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.0202278020005906
+    },
+    {
+      "kind": "stress",
+      "index": 68,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 6.938893903907228e-18,
+        "slip_law_residual_kg_m_s": 6.938893903907228e-18,
+        "equation_residual": 6.938893903907228e-18,
+        "contact_energy_change_minus_boundary_work_J": -0.1902142902125425,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 108
+      },
+      "solve_s": 0.0022515589953400195
+    },
+    {
+      "kind": "stress",
+      "index": 69,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 7.771561172376096e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.6761988750294603,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0021405969964689575
+    },
+    {
+      "kind": "stress",
+      "index": 70,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -3.131778760138672,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.00234261600417085
+    },
+    {
+      "kind": "stress",
+      "index": 71,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 2,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 5.551115123125783e-16,
+        "friction_capacity_residual_kg_m_s": 1.734723475976807e-18,
+        "slip_law_residual_kg_m_s": 9.426083394939804e-18,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.9992166718583446,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.00275730400608154
+    },
+    {
+      "kind": "stress",
+      "index": 72,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 7,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.6653345369377348e-16,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.4566372946282307,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.004042072003358044
+    },
+    {
+      "kind": "stress",
+      "index": 73,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 1,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 0.0,
+        "contact_energy_change_minus_boundary_work_J": -1.6920736313320512,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0029322080008569174
+    },
+    {
+      "kind": "stress",
+      "index": 74,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 1,
+        "line_search_halvings": 2,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3322676295501878e-15,
+        "friction_capacity_residual_kg_m_s": 2.4343754497054662e-32,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 6.661338147750939e-16,
+        "contact_energy_change_minus_boundary_work_J": -5.945271477122999,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.004783857002621517
+    },
+    {
+      "kind": "stress",
+      "index": 75,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.3877787807814457e-15,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.0879028862487436e-15,
+        "contact_energy_change_minus_boundary_work_J": -0.06672623719948004,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0017302109990851022
+    },
+    {
+      "kind": "stress",
+      "index": 76,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 1,
+        "line_search_halvings": 4,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.9404924595819466e-14,
+        "friction_capacity_residual_kg_m_s": 4.696243394164412e-14,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 5.029310301551959e-14,
+        "contact_energy_change_minus_boundary_work_J": -1.2820535952216081,
+        "active_contacts": 5,
+        "sticking_contacts": 5,
+        "sliding_contacts": 0,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.003412660000321921
+    },
+    {
+      "kind": "stress",
+      "index": 77,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 1,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 1.1102230246251565e-16,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -3.305872914257396,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0029829959967173636
+    },
+    {
+      "kind": "stress",
+      "index": 78,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 5,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-15,
+        "friction_capacity_residual_kg_m_s": 1.6653345369377348e-16,
+        "slip_law_residual_kg_m_s": 1.6653345369377348e-16,
+        "equation_residual": 1.9984014443252818e-15,
+        "contact_energy_change_minus_boundary_work_J": -2.6405651936691688,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.002856995000911411
+    },
+    {
+      "kind": "stress",
+      "index": 79,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 2,
+        "line_search_halvings": 16,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.996003610813204e-16,
+        "friction_capacity_residual_kg_m_s": 2.2551405187698492e-17,
+        "slip_law_residual_kg_m_s": 2.2551405187698492e-17,
+        "equation_residual": 2.6319685363443424e-16,
+        "contact_energy_change_minus_boundary_work_J": -0.5036646282021429,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.004744072997709736
+    },
+    {
+      "kind": "stress",
+      "index": 80,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 5,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 4.9068306600368545e-20,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.3510774591208512,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0035382189962547272
+    },
+    {
+      "kind": "stress",
+      "index": 81,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 1.3877787807814457e-17,
+        "contact_energy_change_minus_boundary_work_J": -3.9243461855154815,
+        "active_contacts": 3,
+        "sticking_contacts": 1,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.0036421429977053776
+    },
+    {
+      "kind": "stress",
+      "index": 82,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 3,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -2.5811496801924605,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0027273730011074804
+    },
+    {
+      "kind": "stress",
+      "index": 83,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.1102230246251565e-16,
+        "contact_energy_change_minus_boundary_work_J": -8.62122401850516,
+        "active_contacts": 3,
+        "sticking_contacts": 1,
+        "sliding_contacts": 2,
+        "mobility_nnz": 116
+      },
+      "solve_s": 0.005474835998029448
+    },
+    {
+      "kind": "stress",
+      "index": 84,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 3,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 6.661338147750939e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 2.7755575615628914e-17,
+        "equation_residual": 8.881784197001252e-16,
+        "contact_energy_change_minus_boundary_work_J": -3.4427124812822743,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.003572889996576123
+    },
+    {
+      "kind": "stress",
+      "index": 85,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 3.289224657373553e-19,
+        "slip_law_residual_kg_m_s": 8.673617379884035e-19,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -3.297324844860315,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0023242220049723983
+    },
+    {
+      "kind": "stress",
+      "index": 86,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 6,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 14,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 4.448466429993205e-19,
+        "equation_residual": 2.2242332149966027e-18,
+        "contact_energy_change_minus_boundary_work_J": -1.260813684507009,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 76
+      },
+      "solve_s": 0.004732332003186457
+    },
+    {
+      "kind": "stress",
+      "index": 87,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 7,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 7,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.220446049250313e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -4.702396270410389,
+        "active_contacts": 5,
+        "sticking_contacts": 0,
+        "sliding_contacts": 5,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0048234089990728535
+    },
+    {
+      "kind": "stress",
+      "index": 88,
+      "passed": false,
+      "error": "Coulomb acceptance failed: normal=0.0282715, cone=0.00969137, slip=0.721893, equation=0.00969137, passive=-2.59454",
+      "solve_s": 0.062455327999487054
+    },
+    {
+      "kind": "stress",
+      "index": 89,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 7.983726795419313e-19,
+        "slip_law_residual_kg_m_s": 7.983726795419313e-19,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.6590016043945641,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0022924930017325096
+    },
+    {
+      "kind": "stress",
+      "index": 90,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 15,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 93,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 9.769962616701378e-15,
+        "friction_capacity_residual_kg_m_s": 2.7755575615628914e-17,
+        "slip_law_residual_kg_m_s": 5.551115123125783e-17,
+        "equation_residual": 1.582067810090848e-15,
+        "contact_energy_change_minus_boundary_work_J": -3.3170581018525924,
+        "active_contacts": 5,
+        "sticking_contacts": 2,
+        "sliding_contacts": 3,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.011576463002711535
+    },
+    {
+      "kind": "stress",
+      "index": 91,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 1,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-15,
+        "friction_capacity_residual_kg_m_s": 1.6263032587282567e-19,
+        "slip_law_residual_kg_m_s": 1.6263032587282567e-19,
+        "equation_residual": 4.535154790909634e-15,
+        "contact_energy_change_minus_boundary_work_J": -1.7631148771061513,
+        "active_contacts": 4,
+        "sticking_contacts": 3,
+        "sliding_contacts": 1,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.003091191996645648
+    },
+    {
+      "kind": "stress",
+      "index": 92,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 15,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 118,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 1.1102230246251565e-15,
+        "contact_energy_change_minus_boundary_work_J": -3.343451829377607,
+        "active_contacts": 5,
+        "sticking_contacts": 3,
+        "sliding_contacts": 2,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.012530977997812442
+    },
+    {
+      "kind": "stress",
+      "index": 93,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 4,
+        "normal_initialization_iterations": 4,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 6.938893903907228e-18,
+        "equation_residual": 6.938893903907228e-18,
+        "contact_energy_change_minus_boundary_work_J": -0.03617698886527894,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0032460519942105748
+    },
+    {
+      "kind": "stress",
+      "index": 94,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 9.992007221626409e-16,
+        "friction_capacity_residual_kg_m_s": 5.551115123125783e-17,
+        "slip_law_residual_kg_m_s": 1.1102230246251565e-16,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -4.745267414467212,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 100
+      },
+      "solve_s": 0.0021788469966850244
+    },
+    {
+      "kind": "stress",
+      "index": 95,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 5,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 4,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 2.220446049250313e-16,
+        "contact_energy_change_minus_boundary_work_J": -5.274921762521323,
+        "active_contacts": 4,
+        "sticking_contacts": 0,
+        "sliding_contacts": 4,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0038011720025679097
+    },
+    {
+      "kind": "stress",
+      "index": 96,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": -0.0,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 6.938893903907228e-18,
+        "equation_residual": 6.938893903907228e-18,
+        "contact_energy_change_minus_boundary_work_J": -0.08711558539908888,
+        "active_contacts": 2,
+        "sticking_contacts": 0,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.003293693000159692
+    },
+    {
+      "kind": "stress",
+      "index": 97,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 1,
+        "normal_initialization_iterations": 3,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 2.3592239273284576e-16,
+        "friction_capacity_residual_kg_m_s": 0.0,
+        "slip_law_residual_kg_m_s": 0.0,
+        "equation_residual": 5.667308466315792e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.1354160832612596,
+        "active_contacts": 3,
+        "sticking_contacts": 3,
+        "sliding_contacts": 0,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.0022971969956415705
+    },
+    {
+      "kind": "stress",
+      "index": 98,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 22,
+        "normal_initialization_iterations": 2,
+        "singular_solves": 0,
+        "line_search_halvings": 143,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "friction_capacity_residual_kg_m_s": 1.3877787807814457e-17,
+        "slip_law_residual_kg_m_s": 1.3877787807814457e-17,
+        "equation_residual": 4.440892098500626e-16,
+        "contact_energy_change_minus_boundary_work_J": -1.4492373020079348,
+        "active_contacts": 5,
+        "sticking_contacts": 3,
+        "sliding_contacts": 2,
+        "mobility_nnz": 84
+      },
+      "solve_s": 0.01786007899499964
+    },
+    {
+      "kind": "stress",
+      "index": 99,
+      "passed": true,
+      "stats": {
+        "method": "semismooth",
+        "iterations": 2,
+        "normal_initialization_iterations": 1,
+        "singular_solves": 0,
+        "line_search_halvings": 0,
+        "fallback_evaluations": 0,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "friction_capacity_residual_kg_m_s": 3.168371795734368e-20,
+        "slip_law_residual_kg_m_s": 3.168371795734368e-20,
+        "equation_residual": 5.551115123125783e-17,
+        "contact_energy_change_minus_boundary_work_J": -0.176265765508215,
+        "active_contacts": 3,
+        "sticking_contacts": 0,
+        "sliding_contacts": 3,
+        "mobility_nnz": 68
+      },
+      "solve_s": 0.0023087860026862472
+    }
+  ],
+  "states_zip_sha256": "332f3eecb8ae3f3cd71b2be22d5a2c9d07552f3828778063c2b9e2143a581f99"
+}
