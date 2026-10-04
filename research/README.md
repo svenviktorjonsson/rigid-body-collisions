@@ -53,3 +53,13 @@ implementation and experimental validation remain research work. Executable
 planar polygon comparisons and held-out numerical adaptation tests now exist;
 those tests do not establish an adaptive speed advantage. No general new model
 or publication-worthy superiority has been established.
+
+## Moving containers with many balls
+
+The [executed moving-container study](moving-container/report.md) retains53
+histories, exact packed-row checks, 100-ball frictional translation/shaking/rotation,
+frame and ordering controls, and independent archive auditing. The current high
+preset fails larger exact packed rows; none of the three dense trajectory
+references qualifies under the predeclared refinement budgets. See the
+[typeset mechanics](moving-container/contact-model.pdf) and
+[report PDF](moving-container/report.pdf). All coefficients are synthetic.

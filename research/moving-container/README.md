@@ -5,6 +5,7 @@ frictional scenes: constant translation, scheduled reversals and rotation.
 One kinematic compound body carries the four walls; the contents are dynamic.
 Their momentum changes through the actuator. It is not an internal invariant.
 
+[Executed report](report.pdf) retains the results and failed reference gates.
 [Typeset mechanics](contact-model.pdf) gives the wedge convention, point
 mobility, global contact map, impulse/energy equations and friction limits.
 The [plan](plan.json) was committed before executing the study. Parameters are
@@ -19,6 +20,7 @@ python -m unittest discover -s tests -q
 python -m unittest discover -s research -p 'test_*.py' -q
 python -m research.run_container_study --repeats 3
 python -m research.audit_container_study
+python -m research.make_container_report
 ```
 
 Every trace is published in `results/traces.zip`; `summary.json` records its
