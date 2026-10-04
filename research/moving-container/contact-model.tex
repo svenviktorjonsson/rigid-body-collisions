@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{Coupled rigid contact and prescribed moving containers}
+\author{Physics-engine research note}
+\date{4 October 2026}
+\begin{document}\maketitle
+\noindent This note defines the mechanics and verification contract used by the
+moving-container experiments. The algebra is established mechanics, not a
+novel collision theory. Numerical tests do not establish measured material
+accuracy. The independent normal solve below is implemented; a complete global
+frictional, adaptive error-controlled engine is future work.
+
+\section{A consistent wedge in two and three dimensions}
+Positive contact action goes from body B to body A. Each lever arm is measured
+from its body's centre of mass to the same world contact location. Define
+\begin{align}
+ r^{\wedge} &= \begin{bmatrix}-r_y&r_x\end{bmatrix}
+       &&\text{in 2D},\\
+ r^{\wedge} &= \begin{bmatrix}0&-r_z&r_y\\r_z&0&-r_x\\-r_y&r_x&0\end{bmatrix}
+       &&\text{in 3D}.
+\end{align}
+Then angular impulse from the force impulse is $r^{\wedge}\Delta p$,
+and point velocity is $v+(r^{\wedge})^{\mathsf T}\omega$ in both dimensions.
+In 2D spin and angular impulse are scalars. In 3D they have three components;
+the inertia tensor $\mathbb I$ is expressed in world coordinates.
+With a free couple impulse $\Delta L$ at the contact,
+\begin{equation}
+ \Delta p_A=\Delta p,\quad \Delta p_B=-\Delta p,\qquad
+ \Delta L_A=\Delta L+r_A^{\wedge}\Delta p,\quad
+ \Delta L_B=-\Delta L-r_B^{\wedge}\Delta p.
+\end{equation}
+An ideal frictional point carries force but no free couple. A nonzero free
+couple represents a finite contact patch or an explicitly declared resistance law.
+
+\section{Point mobility and kinetic energy}
+For body $i$, the point velocity/spin response is
+\begin{equation}
+ \begin{pmatrix}\Delta v_{c,i}\\\Delta\omega_i\end{pmatrix}
+ = M_i\begin{pmatrix}\Delta p_i\\\Delta L_{c,i}\end{pmatrix},\qquad
+ M_i=\begin{pmatrix}
+ m_i^{-1}+(r_i^{\wedge})^{\mathsf T}\mathbb I_i^{-1}r_i^{\wedge}
+     &(r_i^{\wedge})^{\mathsf T}\mathbb I_i^{-1}\\
+ \mathbb I_i^{-1}r_i^{\wedge}&\mathbb I_i^{-1}
+ \end{pmatrix}.
+\end{equation}
+Scalar additions to square matrix blocks imply the appropriate identity.
+For two freely responding bodies, $M=M_A+M_B$. Set
+\begin{equation}
+ V=\begin{pmatrix}v_{c,A}-v_{c,B}\\\omega_A-\omega_B\end{pmatrix},\qquad
+ \Delta P=\begin{pmatrix}\Delta p\\\Delta L\end{pmatrix}.
+ \quad \Delta V=M\Delta P,\qquad
+ \Delta T=(V^-)^{\mathsf T}\Delta P+	frac12\Delta P^{\mathsf T}M\Delta P.
+\end{equation}
+For a reference length $\ell>0$, use
+$\widetilde V=(v_c,\ell\omega)$ and
+$\Delta\widetilde P=(\Delta p,\Delta L/\ell)$.
+This preserves their work pairing. Consistent inertia and mobility scaling makes
+the solution independent of $\ell$; this length is not a material rolling radius.
+
+\section{Many contacts and external work}
+Let $U$ collect scaled dynamic centre velocities/spins and $H$ the block body
+mass matrix. A contact incidence/Jacobian $G$ maps body motion to relative point
+motion. Each contact point has its own row block, even when several points join
+the same bodies. Separate prescribed boundary motion:
+\begin{align}
+ V^- &= G U^-+V_{\rm prescribed}, & K&=G H^{-1}G^{\mathsf T},\\
+ U^+ &= U^-+H^{-1}G^{\mathsf T}\Delta P,& V^+&=V^-+K\Delta P.
+\end{align}
+These are sparse body/contact operators. Shared bodies produce off-diagonal
+coupling; zero entries encode disconnected contacts. $K$ may be singular:
+redundant contacts can have nonunique pressure impulses and a unique body response.
+Never require an inverse of the full contact matrix.
+With frozen geometry and no other impulsive action,
+\begin{align}
+ W_{\rm boundary}&=-V_{\rm prescribed}^{\mathsf T}\Delta P,\\
+ \Delta T_{\rm dynamic}&=W_{\rm boundary}
+       +(V^-)^{\mathsf T}\Delta P+	frac12\Delta P^{\mathsf T}K\Delta P.
+\end{align}
+Therefore passive contact bounds the last two terms by zero, not necessarily
+the contents' kinetic-energy change. For a box translating at constant $b$ with
+zero gravity, the finite-history identity is $W=b\cdot\Delta p_{\rm contents}$.
+Changing or rotating boundary motion requires a time-resolved reaction/work
+ledger. State histories alone do not supply that exact ledger.
+
+\section{Implemented normal oracle and friction limits}
+For fixed frictionless contacts, zero restitution and no other forces, the
+implemented normal oracle solves
+\begin{equation}
+ \min_{j_n\geq0}\;\tfrac12j_n^{\mathsf T}K_{nn}j_n+(v_n^-)^{\mathsf T}j_n,
+ \qquad v_n^+=v_n^-+K_{nn}j_n\geq0,\quad j_n\odot v_n^+=0.
+\end{equation}
+Residual tests gate acceptance after optimisation and active-set correction.
+This is a frozen, dense verification solve, not a measured scalable engine.
+For one isolated uncoupled normal contact,
+\begin{equation}
+ j_n=-\frac{(1+e_n)v_n^-}{K_{nn}},\qquad 0\leq e_n\leq1,quad v_n^-<0.
+\end{equation}
+With tangent or spin coupling, this scalar formula alone is insufficient.
+With many contacts, independently prescribed restitution targets can be
+incompatible or energetic; bounded coefficients do not prevent that.
+
+A Coulomb law permits sticking with $v_t=0$ and
+$\lVert f_t\rVert\leq\mu_s f_n$. During sliding,
+$f_t=-\mu_d f_n v_t/\lVert v_t\rVert$, with $0\leq\mu_d\leq\mu_s$.
+Static capacity permits sticking; it does not supply elastic reversal.
+A positive tangential restitution target is rebound, not a final sticking state.
+Elastic rebound needs stored tangential contact energy/history or an explicitly
+calibrated impact approximation. Analogous patch rotation needs its own stored
+state and dissipative torque, with a dimensional capacity such as
+$\lVert\tau_r\rVert\leq\rho_r f_n$, where $\rho_r$ has units of length.
+In 3D rolling and normal-axis twisting are distinct channels; a point has no
+normal angular-friction channel. In 2D there is one out-of-plane couple.
+
+The native comparators use their established single friction coefficient,
+geometric-mean mixing and maximum restitution mixing. This is not the proposed
+separate static/dynamic/history law. Their numerical softness is not a measured
+Young modulus. Coefficient fitting must not hide missed collisions or insufficient
+constraint convergence. Freeze physical parameters across fidelity comparisons.
+
+\section{Exact packed-row test and adaptation contract}
+Put $N$ touching unit-mass disks in a closed box moving at $b=(1,0)$ while
+the disks initially rest. With all contacts present, no deformation and zero
+restitution, the left wall, chain and right wall give
+\begin{equation}
+ 1\leq v_{1x}^+\leq v_{2x}^+\leq\cdots\leq v_{Nx}^+\leq1.
+ \qquad \Delta p_x=N,\quad \Delta T=N/2,\quad W=N,\quad D=N/2.
+\end{equation}
+Thus every disk, not only total momentum, is independently checkable. Native
+first-frame errors include contact discovery and floating geometry. Real elastic
+materials instead transmit finite-speed waves; this test verifies a declared
+rigid simultaneous-constraint model, not acoustic material dynamics.
+
+Adapt numerical work within one physical model first: retain state, contact
+caches and elastic history, and vary collision updates/solver iterations.
+Do not treat changes in friction, stiffness or restitution as accuracy switches.
+Use per-island unilateral/friction residuals, geometry checks, energy/work
+checks and refinement/shadow comparisons. Residuals alone do not bound future
+trajectory error. Discontinuous impacts need observable tolerances and event
+timing tests; smooth-region integration order is a separate claim.
+The current adaptive controller remains a heuristic. The measured study does
+not establish automatic error-controlled fidelity selection.
+
+\section{Evidence and next method choice}
+The companion report retains every trace and separate refinement gates.
+Box2D provides a reproducible fast baseline; coupled sparse contact solves are
+the next investigation for large rigid islands, with compliant contact as a
+separately calibrated physical model when wave propagation and rebound history
+matter. There is no universal most accurate/performance-optimal contact method.
+Partitioning a single rigid body only labels material patches. Deformation
+requires independent cell/internal degrees of freedom and objective compliant
+interfaces, validated against static compliance, modes and held-out impacts.
+
+\begin{thebibliography}{9}
+\bibitem{catto} E. Catto, \emph{Solver2D} (2024).
+\url{https://box2d.org/posts/2024/02/solver2d/}.
+\bibitem{box} Box2D simulation documentation.
+\url{https://box2d.org/documentation/md_simulation.html}.
+\bibitem{mujoco} MuJoCo computation documentation, constraints and contact model.
+\url{https://mujoco.readthedocs.io/en/stable/computation/index.html}.
+\bibitem{review} Critical and supportive prior-art assessments and joint verdict,
+including Stronge frictional-impact energetics and Maw--Barber--Fawcett
+tangential compliance. References and checked metadata are retained in
+\texttt{research/critical-review.md} and \texttt{publication-case.md}.
+\end{thebibliography}
+\end{document}
