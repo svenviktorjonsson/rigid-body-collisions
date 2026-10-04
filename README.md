@@ -12,9 +12,10 @@ world and its contact caches.
 
 The [executed study](research/rigid-study-report.md) tests 17 scenes and retains
 all 153 state histories. Its conservative measured default is the coupled
-normal block solver with four collision updates and 16 velocity iterations per
-1/120 s output frame. It met the declared RMS budgets on all ten scenes with
-qualified references. The adaptive prototype was slower than the cheapest
+normal block solver with eight collision updates and 32 velocity iterations per
+1/120 s output frame. It met the declared RMS budgets on all ten initially
+qualified scenes and the three additional scenes qualified in exploratory
+refinement. The cheaper 4×16 preset misses the triangle-drop budget. The adaptive prototype was slower than the cheapest
 passing fixed setting on all four qualified held-out scenes and missed the
 rebound trajectory budget. It remains an experiment rather than the default.
 
@@ -45,7 +46,7 @@ python rigid_engine.py /tmp/rigid-scene.json --output /tmp/rigid-fast.json --pre
 python rigid_engine.py /tmp/rigid-scene.json --output /tmp/rigid-adaptive.json --adaptive --policy research/rigid-benchmarks/results/frozen-policy.json
 ```
 
-`accurate` is the default; presets describe numerical effort, not certified
+`high` is the default; presets describe numerical effort, not certified
 physical accuracy. `--primary-steps` and `--substeps` override the preset.
 For the block backend, the latter means velocity iterations; for the temporal
 backend it means temporal substeps. See the backend guide for geometry, units,

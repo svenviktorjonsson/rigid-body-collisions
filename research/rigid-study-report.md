@@ -4,7 +4,7 @@ The defensible present recommendation for this repository is **coupled two-point
 normal contacts, warm-started global sequential impulse iteration, continuous
 collision detection, and adjustable collision-update time**. For the tested
 meter-scale polygon regime, the measured conservative setting is Box2D 2.4.1's
-block solver with **four primary steps and sixteen velocity iterations** per
+block solver with **eight primary steps and thirty-two velocity iterations** per
 1/120 s output frame. This is a tested baseline, not a claim that an older release
 is the world's best engine. Numerical adaptation is implemented, but the first
 controller does not earn a performance recommendation.
@@ -143,7 +143,7 @@ rather than formal confidence intervals.
 ![Accuracy and runtime on qualified held-out scenes](rigid-benchmarks/results/accuracy-cost.png)
 
 Adaptive code working is different from adaptive code being beneficial. Neither
-cheap tuning nor more work guarantees improvement. Keep fixed accurate as the
+cheap tuning nor more work guarantees improvement. Keep fixed high as the
 current conservative choice, and expose cheap fixed settings explicitly for
 regimes whose outputs have been checked. The prototype is available for further
 research and should not be enabled as an automatic accuracy guarantee.
@@ -168,6 +168,25 @@ kinetic energy across refinements while its spin trajectory still misses the
 reference budget. Settled height alone cannot validate the impact history.
 The floor is finite; objects leaving it in long runs can legitimately fall
 below it, so negative late heights are not automatically penetration failures.
+
+Comparing preserved first-study histories with the newly qualified 64×128
+references shows why the default needs the higher preset. These are exploratory
+comparisons, not a replacement held-out evaluation:
+
+| Newly qualified scene | 4×16 normalized error | 8×32 normalized error |
+|---|---:|---:|
+| Triangle drop | 1.630 | 0.130 |
+| Twelve-body stack | 0.446 | 0.370 |
+| 30:1 mass contrast | 0.576 | 0.355 |
+
+The 8×32 preset passes all ten initial qualified references and these three
+additional qualified scenes. The 4×16 preset passes twelve of those thirteen;
+it is a useful cheaper option, but cannot support the same tested accuracy
+scope. The adapter now defaults to 8×32. The higher setting still has no
+accuracy guarantee in the four unresolved cases or unseen physical conditions.
+[All follow-up comparisons](rigid-benchmarks/results/follow-up-comparisons.json)
+are retained; no physical coefficients or controller thresholds were fitted
+to make them pass.
 
 The benchmark does not include joints, 3D contact cones, materials with true
 elastic contact history, separate static/dynamic coefficients, rolling in the

@@ -1,7 +1,7 @@
 """Planar polygon/compound rigid dynamics through pinned Box2D comparators.
 
 Build: see rigid_backend/README.md for both pinned backends.
-Run a scene: python rigid_engine.py scene.json --output result.json --preset accurate
+Run a scene: python rigid_engine.py scene.json --output result.json --preset high
 """
 import argparse
 import hashlib
@@ -91,7 +91,7 @@ def validate_scene(scene):
                     raise ValueError("Restitution must lie in [0,1]")
 
 
-def run(scene, *, dt=1 / 120, primary_steps=4, substeps=16, policy=None, backend="block", binary=None):
+def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend="block", binary=None):
     """Run an entire scene, retaining the same world through adaptive changes.
 
     State columns: COM x,y [m], angle [rad], vx,vy [m/s], omega [rad/s].
@@ -203,8 +203,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("scene", type=Path)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--preset", choices=PRESETS, default="accurate",
-                        help="Fixed numerical effort; accurate is the measured conservative block baseline")
+    parser.add_argument("--preset", choices=PRESETS, default="high",
+                        help="Fixed numerical effort; high is the measured conservative block baseline")
     parser.add_argument("--primary-steps", type=int, help="Override preset collision updates")
     parser.add_argument("--substeps", type=int, help="Override preset solver steps; see backend semantics")
     parser.add_argument("--adaptive", action="store_true", help="Use the experimental dynamic effort controller")

@@ -10,8 +10,38 @@ from research.rigid_scenes import scenes
 from research.run_rigid_study import REFERENCE_BUDGET, errors, normalized_error, diagnostics, analytic_check
 
 
+def compare_preserved(root):
+    checks=json.loads((root/'follow-up-refinement.json').read_text());records=[]
+    with zipfile.ZipFile(root/'follow-up-traces.zip') as follow, zipfile.ZipFile(root/'traces.zip') as original:
+        for check in checks:
+            if not check['follow_up_qualified']:continue
+            id=check['case_id']
+            with np.load(io.BytesIO(follow.read(f'{id}_64_128.npz')),allow_pickle=False) as arrays:
+                reference={k:arrays[k].copy() for k in arrays.files}
+            for mode in ['block_fast','block_standard','block_accurate','block_high','block_adaptive','reference_block']:
+                with np.load(io.BytesIO(original.read(f'{id}_{mode}.npz')),allow_pickle=False) as arrays:
+                    candidate={k:arrays[k].copy() for k in arrays.files}
+                for k in ('mass','inertia','times'):
+                    if not np.allclose(reference[k],candidate[k],rtol=1e-5,atol=1e-7):
+                        raise ValueError('Preserved physical setup changed')
+                d=candidate['states']-reference['states']
+                e={'rms_position_m':float(np.sqrt(np.mean(np.sum(d[:,:,:2]**2,axis=2)))),
+                   'rms_velocity_m_s':float(np.sqrt(np.mean(np.sum(d[:,:,3:5]**2,axis=2)))),
+                   'rms_spin_rad_s':float(np.sqrt(np.mean(d[:,:,5]**2)))}
+                records.append({'case_id':id,'mode':mode,'reference':'exploratory_64_primary_128_velocity_iterations',
+                    'errors':e,'normalized_error':normalized_error(e),'within_budget':normalized_error(e)<=1})
+    return {'scope':'Exploratory comparison of preserved first-study histories against newly qualified higher-work references. No policy retuning; original held-out evaluation unchanged.','records':records}
+
+
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--compare-only',action='store_true',help='Recompute comparisons from preserved archives without running solvers')
+    args=parser.parse_args()
     root=Path('research/rigid-benchmarks/results')
+    if args.compare_only:
+        (root/'follow-up-comparisons.json').write_text(json.dumps(compare_preserved(root),indent=2)+'\n')
+        return
     initial=json.loads((root/'reference-checks.json').read_text())
     failed={r['case_id'] for r in initial if r['backend']=='block' and not r['successive_refinement_checks_passed']}
     # Include the isolated rebound to distinguish restitution and impact timing.
@@ -51,5 +81,7 @@ def main():
     r=run(scene,policy=policy)
     (root/'adaptive-rebound-check.json').write_text(json.dumps({'case_id':scene['id'],'policy':policy,'analytic':analytic_check(scene,r),
         'diagnostics':diagnostics(scene,r), 'note':'Correct outgoing velocities and zero spin do not imply accurate impact timing or full-history agreement.'},indent=2)+'\n')
+
+    (root/'follow-up-comparisons.json').write_text(json.dumps(compare_preserved(root),indent=2)+'\n')
 
 if __name__=='__main__':main()

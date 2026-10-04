@@ -1,17 +1,17 @@
 {
-  "recorded_utc": "2026-10-04T20:44:10.723574+00:00",
+  "recorded_utc": "2026-10-04T20:47:29.261798+00:00",
   "scope": "Numerical and analytic rigid verification; not experimental material validation.",
-  "tested_source_base_commit": "a626479c1a757dfc5158d1c8b2ea63ed1d6f6812",
+  "tested_source_base_commit": "62e38def9334999d303399e3f3ad49adf683bd5d",
   "tested_working_source_sha256": {
-    "rigid_engine.py": "a685bf9c86aff3804a48cbf1a9fa4bb435cffb705d6d975eeada5aed8992aefb",
+    "rigid_engine.py": "1a59cf70612318b5a05e02131b159786219d1ffff1cc2a679b27880186a29fff",
     "rigid_backend/runner.cpp": "71507d8bd491c9319f5b3cdbf0a9e491835a73d8036d03ea89d6b96ca0132b07",
     "rigid_backend/compat2.h": "be4a946f8090b35af40c631ff370207a4f30236541bfb52b2b4addbb0d6900a6",
     "rigid_backend/CMakeLists.txt": "5323e397653cbe18cc1dfce2359b8cca67dbcedf426c63881fb28526e534c9e2",
-    "tests/test_rigid_engine.py": "f96a093cf0ac68d881484af18874cb960bde2d9c89938a2071b70199195bc34b",
+    "tests/test_rigid_engine.py": "15121415f0db1314c88ff17e2e4557b7d96b2050b452ec7507ed5d89ddd9a48a",
     "research/run_rigid_study.py": "1672aad88e9f1b2c4f97577012ed3de318370656b79f9f27e4ad3a70caba80d2",
-    "research/refine_rigid_references.py": "33e40464c097120073edfd57b904979f7ff601c59cdbd5eb2c6e4a2e3e2ed445",
+    "research/refine_rigid_references.py": "de9e2dbb9a74135bae74977d7f2437a58b24fe1f0ba492efcf5b5a831012ac7b",
     "research/time_rigid_modes.py": "b87bd12dfdef0fc46f58fd5c67bafba3c30a45e89cfdb6bdedd906533cdca255",
-    "research/audit_rigid_study.py": "5d72dbb6294e277bc35e34f102509d5f7b3ddcb7301c7539656aedd8e50a365b",
+    "research/audit_rigid_study.py": "cac6b3be89c9a7ed0cf58e869f6a0dcc4ccb8943eb1f4664f53e44a538afb73d",
     "research/rigid_scenes.py": "16e1da63b7c7c4b4981b72af376f69ce28b2abea6e5146b78544eafd13612938"
   },
   "environment": {
@@ -59,7 +59,14 @@
     "additional_exploratory_qualified_cases": 3,
     "qualified_held_out_adaptive_speed_wins": 0,
     "held_out_interleaved_timing_repeats": 20,
-    "physically_validated_cases": 0
+    "physically_validated_cases": 0,
+    "conservative_default": {
+      "backend": "block",
+      "primary_steps": 8,
+      "velocity_iterations": 32,
+      "qualified_cases_within_budget": 13,
+      "scope": "10 initial plus 3 exploratory qualified references; no experimental validation"
+    }
   },
   "limitations": "Self-reference convergence and synthetic idealized laws do not identify real material properties. Unqualified scenes and adaptive failures remain in the published data."
 }

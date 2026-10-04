@@ -22,7 +22,7 @@ licenses and relevant sample/solver sources are stored in
 the old solver implementation; it adapts public APIs to the common runner.
 
 `rigid_engine.run(scene, backend="block")` runs a headless scene. Its default
-is four primary updates and sixteen velocity iterations per output frame, the
+is eight primary updates and thirty-two velocity iterations per output frame, the
 measured conservative setting in [the executed study](../research/rigid-study-report.md).
 The CLI supports `--preset fast|standard|accurate|high`, numerical overrides, and
 `--adaptive --policy path/to/frozen-policy.json` for reproducible controller

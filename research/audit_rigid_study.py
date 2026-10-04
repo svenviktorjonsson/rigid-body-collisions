@@ -103,6 +103,11 @@ def audit(directory):
                     computed_changes.append(error)
             qualified=all(normalized_error(e,record['reference_budget'])<=1 for e in computed_changes)
             if qualified!=record['follow_up_qualified']:raise ValueError('Follow-up verdict changed')
+        if (directory/'follow-up-comparisons.json').exists():
+            from research.refine_rigid_references import compare_preserved
+            published=json.loads((directory/'follow-up-comparisons.json').read_text())
+            computed=compare_preserved(directory)
+            if published!=computed:raise ValueError('Follow-up comparison records changed')
         follow_up_count=len(follow_traces)
     print(json.dumps({'source_files_verified':len(sources),'traces_verified':len(traces),'comparisons_recomputed':len(rows),'follow_up_traces_verified':follow_up_count,
         'physically_validated_cases':0,'scope':'Numerical reproduction and file integrity, not material or reference truth'},indent=2))

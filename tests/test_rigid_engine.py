@@ -65,7 +65,7 @@ class RigidIntegrationTests(unittest.TestCase):
 
     def test_frequency_clipping_is_rejected(self):
         scene = make_scene("bad", [body(rectangle())], duration=1, contact_hertz=100)
-        with self.assertRaises(ValueError): run(scene, substeps=1, backend="temporal")
+        with self.assertRaises(ValueError): run(scene, primary_steps=1, substeps=1, backend="temporal")
 
     @unittest.skipUnless(BINARIES["temporal"].is_file(), "Build the temporal comparator")
     def test_temporal_rebound_counterexample_is_reported(self):

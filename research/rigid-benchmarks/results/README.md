@@ -33,3 +33,6 @@ histories. `adaptive-rebound-check.json` distinguishes outgoing impulse accuracy
 from sampled collision-time error. `interleaved-timings.json` preserves all twenty
 follow-up repetitions, mode order and end-to-end times for qualified held-out
 cases. Neither follow-up tunes a new controller on those cases.
+`follow-up-comparisons.json` compares the preserved trajectories with qualified
+higher-work references. This exposes the 4×16 triangle failure and supports the
+8×32 conservative default, without revising the original held-out score.
