@@ -35,11 +35,18 @@ def study():
     checkpoints = output / 'checkpoints'; checkpoints.mkdir(exist_ok=True)
     records = []; rng = np.random.default_rng(plan['interleave_seed'])
     source = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
-    hashes = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT / 'plan.json', Path(__file__), Path(__file__).parent / 'sparse_contact.py', Path(__file__).parent / 'container_scenes.py')}
+    inputs = (ROOT / 'plan.json', Path(__file__), Path(__file__).parent / 'sparse_contact.py', Path(__file__).parent / 'container_scenes.py', Path(__file__).parent / 'contact_solver.py')
+    hashes = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}
+    source_archive = output / 'execution-source.zip'
+    with zipfile.ZipFile(source_archive, 'w', zipfile.ZIP_DEFLATED) as z:
+        for p in inputs: z.write(p, p.name)
 
     def checkpoint(key, record, **arrays):
         records.append(record)
-        np.savez_compressed(checkpoints / (key + '.npz'), **arrays)
+        snapshot = checkpoints / (key + '.npz')
+        pending_snapshot = checkpoints / (key + '.tmp.npz')
+        np.savez_compressed(pending_snapshot, **arrays)
+        pending_snapshot.replace(snapshot)
         temporary = output / 'partial.tmp'
         temporary.write_text(json.dumps({'source_commit': source, 'source_sha256': hashes, 'records': records}, indent=2))
         temporary.replace(output / 'partial.json')
@@ -143,7 +150,8 @@ def study():
     summary = {'schema_version':1,'scope':plan['scope'],'source_commit':source,'source_sha256':hashes,
         'machine':platform.platform(),'numpy':np.__version__,'scipy':scipy.__version__,
         'thread_environment':{k:os.environ.get(k) for k in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS')},
-        'records':records,'states_zip_sha256':hashlib.sha256(archive.read_bytes()).hexdigest()}
+        'records':records,'states_zip_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
+        'execution_source_zip_sha256':hashlib.sha256(source_archive.read_bytes()).hexdigest()}
     (output / 'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 
 

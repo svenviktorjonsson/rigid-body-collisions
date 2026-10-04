@@ -6,7 +6,8 @@
     "/workspace/rigid-body-collisions/research/sparse-islands/plan.json": "cfb6af52f71475c322e76200676c00c8316d467aa426c4e40dee9e7aea37e5e6",
     "/workspace/rigid-body-collisions/research/run_sparse_study.py": "98ea14c3a0784841cf9b0624950defe968438d0a69ae642888d438d560b638fa",
     "/workspace/rigid-body-collisions/research/sparse_contact.py": "252165133fcee8165110303bbede8319b355ec224b711f218395e9bfd49a3008",
-    "/workspace/rigid-body-collisions/research/container_scenes.py": "7a73f7c896351c81d022e92ebe1b576fcdbefd94b4e05ad721bd4457bff35ee1"
+    "/workspace/rigid-body-collisions/research/container_scenes.py": "7a73f7c896351c81d022e92ebe1b576fcdbefd94b4e05ad721bd4457bff35ee1",
+    "/workspace/rigid-body-collisions/research/contact_solver.py": "269219a43185e52b161da3045e8ec1421ea432d8d17766ef5a579dde383345ad"
   },
   "machine": "Linux-6.18.44-x86_64-with-glibc2.41",
   "numpy": "2.3.5",
@@ -4726,5 +4727,7 @@
       "solve_s": 0.0023087860026862472
     }
   ],
-  "states_zip_sha256": "332f3eecb8ae3f3cd71b2be22d5a2c9d07552f3828778063c2b9e2143a581f99"
+  "states_zip_sha256": "332f3eecb8ae3f3cd71b2be22d5a2c9d07552f3828778063c2b9e2143a581f99",
+  "execution_source_zip_sha256": "f5bf9307b8e2e56beb81340bcc557883458a4eccb19e9c3a9be63df6db27534c",
+  "archival_note": "Execution source archived directly from the recorded launch commit, with dense baseline included, after the study. Snapshots and timing samples remain unchanged."
 }
