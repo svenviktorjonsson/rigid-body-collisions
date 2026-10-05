@@ -1,0 +1,43 @@
+{
+  "purpose": "Original rotating disk25 and mixed convex/concave polygon9 trajectories: isolate supported1um numerical slop and existing internal-seam suppression, with geometry/material/motion/gates unchanged. Production defaults untouched. No performance gate until entire suite qualifies.",
+  "cases": [
+    "2d_disks",
+    "2d_mixed_polygons"
+  ],
+  "reference_levels": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.005,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000
+    }
+  ],
+  "phases": {
+    "2d_disks": [
+      false
+    ],
+    "2d_mixed_polygons": [
+      false,
+      true
+    ]
+  },
+  "binary": "build/rigid_double_tight/rigid_runner",
+  "substeps": 128,
+  "position_iterations": 12,
+  "linear_slop_m": 1e-06,
+  "rule": "Execute all five levels per phase. Both final adjacent quarter-budget edges plus original physical gates required. Only numerical flag suppress_internal_edges changes in second polygon phase. Preserve every failed comparison and exact resulting scene hashes. Count positive friction and removed seam contacts. No speed claims."
+}
