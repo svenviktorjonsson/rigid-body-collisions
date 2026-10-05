@@ -27,7 +27,8 @@ jobs:
       - name: Build pinned Float64 3D contact backend
         run: |
           cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build build/spatial --target spatial_runner -j 2
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks -j 2
+          build/spatial/spatial_qp_checks
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend
       - name: Engine and benchmark-tool regressions

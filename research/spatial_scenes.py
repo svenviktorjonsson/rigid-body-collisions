@@ -43,3 +43,25 @@ def container(side=3,speed=20.,shake=False,shape='sphere',seed=42,spin=0.,durati
                     body=dict(position=position,friction=math.sqrt(.4),shapes=[dict(kind='hull',vertices=points.tolist(),density=500.)])
                 bodies.append(body)
     return dict(duration=duration,gravity=[0,0,-9.81],bodies=bodies,container_interior_half_extents_m=[half]*3),half
+
+
+def touching_container(side=3,speed=100.,duration=.04,epsilon_m=1e-10):
+    """Closed 3D packed contact graph, zero friction/gravity: exact velocity U.
+
+    Initial overlaps <=3*epsilon_m deliberately stabilize contact discovery at
+    floating-point boundaries. This is disclosed geometry tolerance, not material
+    compliance. The velocity-only profile must keep it below the analytic gate.
+    """
+    spacing=.2-epsilon_m;half=(side-1)*spacing/2+.1-epsilon_m
+    walls=[]
+    for axis in range(3):
+        for sign in [-1,1]:
+            center=np.zeros(3);center[axis]=sign*(half+.025)
+            ext=np.full(3,half+.05);ext[axis]=.025
+            walls.append(dict(kind='box',center=center.tolist(),half_extents=ext.tolist()))
+    bodies=[dict(type='kinematic',position=[0,0,0],velocity=[speed,0,0],friction=0,shapes=walls)]
+    for x in range(side):
+        for y in range(side):
+            for z in range(side):
+                bodies.append(sphere(spacing*(np.array([x,y,z])-(side-1)/2),friction=0))
+    return dict(duration=duration,gravity=[0,0,0],container_interior_half_extents_m=[half]*3,bodies=bodies),half

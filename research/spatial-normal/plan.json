@@ -1,0 +1,21 @@
+{
+ "version":1,
+ "purpose":"Analytic real-3D normal-contact verification and identical-algorithm preassembly-elimination timing ablation",
+ "dt_s":0.01,
+ "scenes":[
+  {"id":"row64_x","kind":"row","count":64,"axis":0,"speed":100},
+  {"id":"row64_y","kind":"row","count":64,"axis":1,"speed":100},
+  {"id":"row64_z","kind":"row","count":64,"axis":2,"speed":100},
+  {"id":"row128_x","kind":"row","count":128,"axis":0,"speed":100},
+  {"id":"packed27","kind":"packed","side":3,"speed":100},
+  {"id":"packed64","kind":"packed","side":4,"speed":100}
+ ],
+ "geometry_tolerance_m":1e-10,
+ "modes":{
+  "postassembly":{"solver":"normal_coupled","primary_steps":4,"iterations":64,"travel_fraction":0.15,"kinematic_contact_phase":"start","position_stabilization":"velocity_only","preassembly_elimination":false},
+  "compact":{"solver":"normal_coupled","primary_steps":4,"iterations":64,"travel_fraction":0.15,"kinematic_contact_phase":"start","position_stabilization":"velocity_only","preassembly_elimination":true}
+ },
+ "warmups":1,"retained_repetitions":3,
+ "analytic_gates":{"max_position_error_m":1e-8,"max_velocity_error_m_s":1e-8,"max_omega_rad_s":1e-8,"max_contact_penetration_m":1e-8,"max_closing_contact_speed_m_s":1e-8,"max_container_surface_excess_m":1e-8,"boundary_work_error_J":1e-5,"energy_balance_error_J":1e-5,"coupled_fallbacks":0,"normal_qp_rejections":0},
+ "rules":["Both modes use the same active-set/Cholesky algorithm, geometry, material, timestep guard, contact phase and stabilization", "Every analytic gate and every repetition must pass before any performance ratio is claimed", "Every dynamic body must have velocity U after the first sampled impact frame and position x0+Ut throughout the horizon", "No gravity, friction, restitution, rolling or position projection is present; this is an exactly solvable normal-only benchmark", "Initial overlap at most a few times 1e-10m is declared to stabilize floating-point touching-contact discovery; it must remain below 1e-8m", "Removing exactly fixed-zero tangent variables before versus after mobility assembly is an exact representation change", "Matrix bytes measure only the scalar mobility payload, not process RSS or all solver work buffers", "Timings include native guard, solver and diagnostics, exclude startup/serialization; one warmup and three retained repetitions", "This evidence does not qualify any of the failed frictional trajectories or constitute experimental material validation"]
+}

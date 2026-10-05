@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 from scipy.spatial.transform import Rotation
 from spatial_engine import BINARY, run, moments, prepare, energy, errors
-from research.spatial_scenes import wall_impact, driven_row, container
+from research.spatial_scenes import wall_impact, driven_row, container, touching_container
 from research.spatial_metrics import diagnostics
 
 
@@ -61,6 +61,27 @@ class Mechanics3D(unittest.TestCase):
             np.testing.assert_allclose(velocity,expected,atol=.015)
             # Upstream MLCP can fall back on degenerate friction/split rows.
             self.assertEqual(r['coupled_updates'],r['collision_updates'])
+
+    def test_normal_coupled_full_3d_packed_box(self):
+        for side in (3,4):
+            scene,half=touching_container(side=side)
+            r=run(scene,dt=.01,solver='normal_coupled',kinematic_contact_phase='start',position_stabilization='velocity_only')
+            state=np.asarray(r['states'])
+            exact=state[0,1:,:3]+np.asarray(r['times'])[:,None,None]*[100,0,0]
+            np.testing.assert_allclose(state[:,1:,:3],exact,atol=1e-8)
+            np.testing.assert_allclose(state[1:,1:,7:10],np.broadcast_to([100,0,0],state[1:,1:,7:10].shape),atol=1e-8)
+            self.assertLess(r['max_contact_penetration_m'],1e-8)
+            self.assertLess(r['max_container_surface_excess_m'],1e-8)
+            self.assertGreater(r['normal_qp_solves'],0)
+            self.assertEqual(r['normal_qp_rejections'],0)
+            self.assertEqual(r['coupled_fallbacks'],0)
+            self.assertAlmostEqual(r['boundary_work_J'],side**3*100**2,delta=1e-5)
+
+    def test_normal_profile_rejects_friction_and_restitution(self):
+        scene=wall_impact()
+        with self.assertRaises(ValueError):run(scene,solver='normal_coupled')
+        scene=driven_row();scene['bodies'][1]['friction']=.1
+        with self.assertRaises(ValueError):run(scene,solver='normal_coupled')
 
     def test_100_m_s_wall_drives_64_bodies(self):
         r=run(driven_row(64,speed=100),dt=.01)

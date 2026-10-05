@@ -22,3 +22,8 @@ target_link_libraries(spatial_runner PRIVATE BulletDynamics BulletCollision Line
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
  target_compile_options(spatial_runner PRIVATE -Wall -Wextra -Wpedantic -ffp-contract=off)
 endif()
+add_executable(spatial_qp_checks qp_checks.cpp)
+target_compile_features(spatial_qp_checks PRIVATE cxx_std_17)
+target_compile_definitions(spatial_qp_checks PRIVATE BT_USE_DOUBLE_PRECISION)
+target_include_directories(spatial_qp_checks PRIVATE ${bullet_SOURCE_DIR}/src)
+target_link_libraries(spatial_qp_checks PRIVATE BulletDynamics BulletCollision LinearMath)

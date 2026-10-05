@@ -58,3 +58,41 @@ split position corrections do not count as physical impulses.
 The full engine is 3D; analytic regression tests and held-out scenes must establish
 each claim. Synthetic values in `research/spatial_scenes.py` are not calibrated
 physical materials. This backend is public Python/C++ research, not a Vektor port.
+
+## Exact normal-contact profile (3D)
+
+`solver='normal_coupled'` is restricted to **zero friction and zero restitution**.
+It retains native discovery, full 3D lever arms/inertia, integration and all
+multiple-contact coupling. It solves the normal nonnegative quadratic program
+with Cholesky on positive definite active faces and a bound active set. Every
+accepted result checks unilateral feasibility and complementarity; singular or
+failed faces fall back to disclosed upstream Dantzig/sequential handling. No
+regularization or compliance is added. Pressure may be nonunique while velocity
+is unique. Four native analytic QP checks cover inactive, redundant, coupled and
+separating constraints; full 3D packed-box regressions check actual trajectories.
+
+The normal profile eliminates exactly fixed-zero tangent variables **before**
+assembling mobility. `preassembly_elimination=False` retains them through assembly
+and removes them afterwards, using the identical normal algorithm. This provides
+a fair numerical/timing ablation. Both modes preserve every physical coupling
+that acts on a nonzero impulse. With two tangent rows per point, mobility has c
+rather than 3c rows, giving nine times less scalar matrix storage, not nine times
+less total process memory. This restriction must not be applied to frictional
+contacts. Existing frictional modes retain both tangent directions.
+
+`kinematic_contact_phase='start'` computes contacts at the current wall pose with
+its explicitly commanded velocity and advances the wall after dynamic integration.
+The original `'end'` option (default) advances walls before contact discovery and
+retains the frozen frictional study's numerical convention. Neither moves contents
+by assignment. The start option avoids injecting wall-travel penetration into an
+already touching row. It overrides Bullet's automatic inference of kinematic
+velocities; rotation and translation still follow the same prescribed schedule.
+
+`position_stabilization='velocity_only'` disables split projection and ERP. It is
+useful for the exactly touching, frictionless analytic fixtures: no invented
+position-correction impulse enters their velocity solution. It does not repair
+preexisting macroscopic overlap. Default `'split'` retains Bullet position
+projection. Geometric violations must be monitored independently in either mode.
+The analytic packed fixtures disclose initial overlaps around 1e-10m to make
+floating-point touching-contact discovery reliable, and require them to stay
+below 1e-8m. They are not measured material experiments.

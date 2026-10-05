@@ -8,22 +8,36 @@
 #include <memory>
 #include <vector>
 using json=nlohmann::json;
+#include "normal_qp.h"
 btVector3 vec(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>()};}
 btQuaternion quat(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>(),j[3].get<double>()};}
 json array(const btVector3& v){return {v.x(),v.y(),v.z()};}
 class Dantzig : public btDantzigSolver {public: Dantzig(){m_acceptableUpperLimitSolution=btScalar(1e30);}};
+class PrescribedWorld : public btDiscreteDynamicsWorld {
+public:
+ bool start_phase=false;
+ using btDiscreteDynamicsWorld::btDiscreteDynamicsWorld;
+protected:
+ void saveKinematicState(btScalar h) override {if(!start_phase)btDiscreteDynamicsWorld::saveKinematicState(h);}
+};
 struct Body {std::unique_ptr<btRigidBody> rb; bool kin; btVector3 pos,v,w; btQuaternion q; double radius; json schedule;};
 int main(){try{
  static_assert(sizeof(btScalar)==8,"Double precision required");
  json in; std::cin>>in;
  btDefaultCollisionConfiguration config; btCollisionDispatcher dispatch(&config); btDbvtBroadphase broad;
- Dantzig dantzig; btMLCPSolver mlcp(&dantzig); btSequentialImpulseConstraintSolver sequential;
- bool adaptive=in.at("solver")=="adaptive",coupled=in.at("solver")=="coupled";
+ Dantzig dantzig;NormalFirstDantzig normal;
+ bool normal_solver=in.at("solver")=="normal_coupled";
+ bool compact=in.value("preassembly_elimination",true);
+ RecordedMLCP regular_mlcp(&dantzig),post_normal_mlcp(&normal);NormalMLCP normal_mlcp(&normal);
+ btMLCPSolver& mlcp=normal_solver?(compact?static_cast<btMLCPSolver&>(normal_mlcp):static_cast<btMLCPSolver&>(post_normal_mlcp)):static_cast<btMLCPSolver&>(regular_mlcp); btSequentialImpulseConstraintSolver sequential;
+ bool adaptive=in.at("solver")=="adaptive",coupled=in.at("solver")=="coupled"||normal_solver;
  int dense_steps=0,fast_steps=0,dwell=0,contacts_previous=0;double residual_previous=0;
- btDiscreteDynamicsWorld world(&dispatch,&broad,coupled?static_cast<btConstraintSolver*>(&mlcp):static_cast<btConstraintSolver*>(&sequential),&config);
+ PrescribedWorld world(&dispatch,&broad,coupled?static_cast<btConstraintSolver*>(&mlcp):static_cast<btConstraintSolver*>(&sequential),&config);
+ world.start_phase=in.value("kinematic_contact_phase",std::string("end"))=="start";
  world.setGravity(vec(in.at("gravity")));
  auto& info=world.getSolverInfo(); info.m_numIterations=in.at("iterations"); info.m_splitImpulse=true;
  info.m_splitImpulsePenetrationThreshold=0; info.m_restitutionVelocityThreshold=0;
+ if(in.value("position_stabilization",std::string("split"))=="velocity_only"){info.m_splitImpulse=false;info.m_erp=0;info.m_erp2=0;}
  info.m_solverMode=SOLVER_USE_WARMSTARTING|SOLVER_USE_2_FRICTION_DIRECTIONS|SOLVER_DISABLE_VELOCITY_DEPENDENT_FRICTION_DIRECTION;
  std::vector<std::unique_ptr<btCollisionShape>> shapes; std::vector<Body> bodies;
  for(const auto& b:in.at("bodies")){
@@ -66,7 +80,9 @@ int main(){try{
    if(fraction>0)h=std::min(h,fraction*feature/(2*speed+std::sqrt(2*accel*fraction*feature)+1e-30));
    for(auto& b:bodies)if(b.kin)for(const auto& cmd:b.schedule){double event=cmd.at("time_s").get<double>();if(event>t+1e-12)h=std::min(h,event-t);}
    if(h<1e-12||++count>100000)throw std::runtime_error("Travel guard exhausted; reject rather than tunnel");
+   if(!world.start_phase){
    for(auto& b:bodies)if(b.kin){b.rb->setInterpolationWorldTransform(b.rb->getWorldTransform());b.pos+=b.v*h; double w=b.w.length();if(w>0){b.q=btQuaternion(b.w/w,w*h)*b.q;b.q.normalize();}b.rb->setWorldTransform(btTransform(b.q,b.pos));b.rb->setLinearVelocity(b.v);b.rb->setAngularVelocity(b.w);world.updateSingleAabb(b.rb.get());}
+   }
    if(adaptive){
     if(contacts_previous>=12||residual_previous>.01)dwell=24;
     coupled=dwell>0;if(dwell>0)dwell--;
@@ -79,13 +95,17 @@ int main(){try{
    for(int k=0;k<dispatch.getNumManifolds();k++){
     auto m=dispatch.getManifoldByIndexInternal(k); auto a=static_cast<const btRigidBody*>(m->getBody0());auto b=static_cast<const btRigidBody*>(m->getBody1());
     for(int c=0;c<m->getNumContacts();c++){auto& p=m->getContactPoint(c);
-     if(p.getAppliedImpulse()>0)contacts_previous++;maxpenetration=std::max(maxpenetration,-static_cast<double>(p.getDistance()));
+     if(p.getAppliedImpulse()>0)contacts_previous++;
+     maxpenetration=std::max(maxpenetration,-static_cast<double>(p.getDistance()));
      auto va=a->getVelocityInLocalPoint(p.getPositionWorldOnA()-a->getCenterOfMassPosition());auto vb=b->getVelocityInLocalPoint(p.getPositionWorldOnB()-b->getCenterOfMassPosition());
      if(p.getDistance()<=0){residual_previous=std::max(residual_previous,std::max(0.,-static_cast<double>((va-vb).dot(p.m_normalWorldOnB))));maxresidual=std::max(maxresidual,residual_previous);}
      btVector3 impulse=p.m_normalWorldOnB*p.getAppliedImpulse()+p.m_lateralFrictionDir1*p.m_appliedImpulseLateral1+p.m_lateralFrictionDir2*p.m_appliedImpulseLateral2;
      if(bodies[a->getUserIndex()].kin)work-=impulse.dot(va);
      if(bodies[b->getUserIndex()].kin)work+=impulse.dot(vb);
     }
+   }
+   if(world.start_phase){
+   for(auto& b:bodies)if(b.kin){b.rb->setInterpolationWorldTransform(b.rb->getWorldTransform());b.pos+=b.v*h; double w=b.w.length();if(w>0){b.q=btQuaternion(b.w/w,w*h)*b.q;b.q.normalize();}b.rb->setWorldTransform(btTransform(b.q,b.pos));b.rb->setLinearVelocity(b.v);b.rb->setAngularVelocity(b.w);world.updateSingleAabb(b.rb.get());}
    }
    if(in.contains("container_half")){
     auto box=bodies[0].rb->getWorldTransform();
@@ -109,7 +129,9 @@ int main(){try{
   updates.push_back(count);record((f+1)*dt);
  }
  double seconds=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
- json out={{"states",states},{"times",times},{"updates",updates},{"step_s",seconds},{"collision_updates",total},{"boundary_work_J",work},{"max_contact_penetration_m",maxpenetration},{"max_closing_contact_speed_m_s",maxresidual},{"coupled_fallbacks",mlcp.getNumFallbacks()},{"coupled_updates",dense_steps},{"sequential_updates",fast_steps},{"scalar_precision","float64"}};
+ json out={{"states",states},{"times",times},{"updates",updates},{"step_s",seconds},{"collision_updates",total},{"boundary_work_J",work},{"max_contact_penetration_m",maxpenetration},{"max_closing_contact_speed_m_s",maxresidual},{"coupled_fallbacks",mlcp.getNumFallbacks()},{"coupled_updates",dense_steps},{"sequential_updates",fast_steps},{"scalar_precision","float64"},{"normal_qp_solves",normal.normal_solves},{"normal_qp_rejections",normal.normal_rejections},{"normal_matrix_rows_max",normal_mlcp.rows_max},{"eliminated_tangent_rows_max",normal_mlcp.removed_rows_max}};
+ int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):regular_mlcp.rows_max;
+ out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());
  std::cout<<out.dump()<<'\n';

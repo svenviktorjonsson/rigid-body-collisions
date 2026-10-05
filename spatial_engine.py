@@ -130,19 +130,23 @@ def prepare(scene):
     return bodies,masses,tensors,axes,min(features)
 
 
-def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, binary=BINARY):
+def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, kinematic_contact_phase="end", position_stabilization="split", preassembly_elimination=True, binary=BINARY):
     duration=positive(scene['duration'],'duration');dt=positive(dt,'dt')
     frames=round(duration/dt)
     if frames<1 or not np.isclose(frames*dt,duration,rtol=1e-10,atol=1e-12):raise ValueError('Duration must match output frames')
     for value,label in ((primary_steps,'primary_steps'),(iterations,'iterations')):
         if type(value)!=int or not 1<=value<=4096:raise ValueError(f'Invalid {label}')
-    if solver not in ('coupled','sequential','adaptive'):raise ValueError('Invalid solver')
+    if type(preassembly_elimination) is not bool:raise ValueError('preassembly_elimination must be bool')
+    if solver not in ('coupled','sequential','adaptive','normal_coupled'):raise ValueError('Invalid solver')
     travel_fraction=positive(travel_fraction,'travel fraction',zero=True)
     if travel_fraction> .25:raise ValueError('Travel fraction maximum is .25')
+    if kinematic_contact_phase not in ('start','end'):raise ValueError('Invalid kinematic contact phase')
     bodies,mass,inertia,axes,feature=prepare(scene)
+    if solver=='normal_coupled' and any(b['friction']!=0 or b['restitution']!=0 for b in bodies):raise ValueError('normal_coupled requires zero friction and restitution; use coupled otherwise')
+    if position_stabilization not in ('split','velocity_only'):raise ValueError('Invalid position stabilization')
     margin=positive(scene.get('margin_m',0),'margin',zero=True)
     if margin>feature*.1:raise ValueError('Margin exceeds 10% of feature')
-    wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin)
+    wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination)
     if 'container_interior_half_extents_m' in scene:
         half=vector(scene['container_interior_half_extents_m'],3,'container half extents')
         if np.min(half)<=0 or bodies[0]['type']!='kinematic':raise ValueError('Container monitor requires positive extents and first kinematic body')
@@ -154,7 +158,7 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
     for i,Q in enumerate(axes):
         states[:,i,3:7]=(Rotation.from_quat(states[:,i,3:7])*Rotation.from_matrix(Q.T)).as_quat()
     if not np.isfinite(states).all():raise RuntimeError('Nonfinite 3D state')
-    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,dantzig_impulse_sanity_limit=1e30,adaptive_policy={'contact_threshold':12,'closing_speed_threshold_m_s':.01,'dwell_updates':24,'fast_iterations':8},friction='two-direction pyramid; product mixing',restitution='product mixing; zero velocity threshold'))
+    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,dantzig_impulse_sanity_limit=1e30,adaptive_policy={'contact_threshold':12,'closing_speed_threshold_m_s':.01,'dwell_updates':24,'fast_iterations':8},friction='two-direction pyramid; product mixing',restitution='product mixing; zero velocity threshold'))
     return out
 
 
