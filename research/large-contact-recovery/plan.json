@@ -13,6 +13,7 @@
   "execution": "Sequential single-thread. Retain declines. Stop larger budgets for an input after original-law acceptance. Native replay plus independent frozen external law audit required. Compile/run after existing larger reference driver finishes to avoid concurrent native work.",
   "prototype_hashes": {
     "shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "component_replay.cpp": "cebd71401c01dffbe784d41dd38e2ce1fbf5f23adcec5c841ad63a55a92a5629",
     "projection_more.h": "de97d1085e78020ca7ca398526a78dd32101bc84d9e45705c8ee27ed9721d450",
     "normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
     "newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
@@ -35,5 +36,6 @@
     "support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
     "coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
     "spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7"
-  }
+  },
+  "component_variant": "Exact nonzero A or transpose/dependency connectivity. Each block<=64 rows; fresh same declared128/512/2048 caps PER block. No coupling cutoff, all components execute; global native original-law/passivity gate required. Original direct1024-row variant remains isolated comparator. No runtime acceptance claim."
 }
