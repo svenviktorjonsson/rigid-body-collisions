@@ -1,0 +1,38 @@
+{
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "runs": [
+    {
+      "id": 37358743524,
+      "head_sha": "108a9bb4c7899f75d760b27b179cc56557904a08",
+      "conclusion": "success",
+      "html_url": "https://github.com/svenviktorjonsson/rigid-body-collisions/actions/runs/37358743524",
+      "jobs": [
+        {
+          "name": "checks (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "checks (3.12)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37358735662,
+      "head_sha": "108a9bb4c7899f75d760b27b179cc56557904a08",
+      "conclusion": "success",
+      "html_url": "https://github.com/svenviktorjonsson/rigid-body-collisions/actions/runs/37358735662",
+      "jobs": [
+        {
+          "name": "checks (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "checks (3.11)",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "full_new_hull_reference_qualified": false
+}
