@@ -55,11 +55,23 @@ collision skin, friction mixing and rolling restrictions.
 The [seeded random-shape study](research/random-shapes/report.md) adds convex
 hulls, concave triangle compounds and shaking boxes with 36 mixed shapes.
 All 24 frozen physical-contact solves pass independently audited mechanics;
-four of eight full-trajectory references qualify. Both concave drops and mixed
-boxes remain unresolved, and the temporal backend rejects two mixed geometries.
+the initial study qualified four of eight full-trajectory references and retained
+two native geometry rejections.
 The [illustrated PDF](research/random-shapes/report.pdf) and archived inputs,
 trajectories, timings and rejection reasons preserve these limits. Disk-row
 speedups are not established for arbitrary random shapes.
+
+The [follow-up fix validation](research/random-shape-resolution/report.md)
+resolves both geometry rejections and qualifies both original concave drops.
+Full Float64, exact convex partition merges, analytic wall motion and separate
+position iterations are available as tested diagnostic controls. Of two new
+concave seeds, one qualifies and one remains unresolved; both 36-body packed
+boxes still fail. Sixty new histories and the unchanged accuracy gates are
+independently audited. The [illustrated report](research/random-shape-resolution/report.pdf)
+records these limits. `fidelity.select()` provides offline cost selection only
+after reference qualification and returns no verified choice for failed cases.
+The controller saves time against its continuous fine setting on three qualified
+scenes, while cheaper passing fixed settings still exist. All validation is 2D.
 
 ## Reproduce and inspect evidence
 
