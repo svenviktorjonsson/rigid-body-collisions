@@ -44,7 +44,7 @@ def main():
         for i,(name,index) in enumerate([('translate64_spheres',-1),('shake_rotate27_hulls42',0),('shake_rotate27_hulls42',-1)],1):
             item=scenes[name];result=json.loads(z.read(f'{name}/standard/0.json'));ax=fig.add_subplot(1,3,i,projection='3d');draw(ax,item['scene'],result,item['half'],index)
             ax.set_title(('64 spheres, 20 m/s, t=1 s' if i==1 else f'27 random hulls, t={0 if index==0 else .12:g} s')+'\nContainer coordinates',fontsize=10)
-        fig.tight_layout();fig.savefig(DIRECTORY/'shapes3d.png',dpi=200);plt.close(fig)
+        fig.tight_layout();fig.savefig(DIRECTORY/'shapes3d.png',dpi=200,bbox_inches='tight',pad_inches=.15);plt.close(fig)
     names=list(data['scenes']);fig,axes=plt.subplots(1,2,figsize=(12,4.5));x=np.arange(len(names))
     for offset,mode in enumerate(plan['candidate_modes']):
         values=[data['scenes'][name]['candidates'][mode]['median_step_s'] for name in names]
