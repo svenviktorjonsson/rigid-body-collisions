@@ -53,14 +53,52 @@ class ElasticPatchTests(unittest.TestCase):
             self.assert_energy(r)
 
     def test_floor_ceiling_repeated_vertical_bounces_reverse_spin(self):
-        r=self.run_drop(self.matched(),planes=(Plane(),Plane((0.,0.,-1.),-.23,'ceiling')),duration=.18)
-        lifts=[e for e in r['events'] if e['kind']=='lift_off']
-        self.assertGreaterEqual(len(lifts),4)
-        for i,e in enumerate(lifts):
-            sign=(-1.)**i
-            self.assertAlmostEqual(e['velocity_m_s'][2],sign,places=6)
-            self.assertAlmostEqual(e['omega_rad_s'][2],-10*sign,places=6)
-            self.assertLess(e['separation_loss_J'],1e-10)
+        for initial_sign in [-1.,1.]:
+            r=self.run_drop(self.matched(),omega=(0.,0.,10*initial_sign),
+                            planes=(Plane(),Plane((0.,0.,-1.),-.23,'ceiling')),duration=.18)
+            lifts=[e for e in r['events'] if e['kind']=='lift_off']
+            self.assertGreaterEqual(len(lifts),4)
+            for i,e in enumerate(lifts):
+                sign=(-1.)**i
+                self.assertEqual(e['plane'],'floor' if i%2==0 else 'ceiling')
+                self.assertAlmostEqual(e['velocity_m_s'][2],sign,places=6)
+                self.assertAlmostEqual(e['omega_rad_s'][2],-10*sign*initial_sign,places=6)
+                self.assertLess(e['separation_loss_J'],1e-10)
+            self.assert_energy(r)
+
+    def test_hybrid_yield_solves_high_spin_with_original_work_budget(self):
+        for sign in [-1.,1.]:
+            m=Material(friction=.5)
+            r=self.run_drop(m,omega=(0.,0.,10*sign),max_rhs_evaluations=20000,
+                            rtol=1e-12,atol=1e-14,max_step=.0001)
+            self.assertLess(r['rhs_evaluations'],20000)
+            self.assertEqual([e['kind'] for e in r['material_events']],['yield','release'])
+            self.assertGreater(r['states'][-1,8]*sign,0.)
+            self.assertLess(r['states'][-1,8]*sign,10.)
+            self.assertGreater(r['dissipated_J'][-1],.1)
+            L=r['couple_impulse_N_m_s'][-1]
+            np.testing.assert_allclose(m.inertia*(r['states'][-1,6:9]-[0,0,10*sign]),L,atol=1e-10)
+            self.assertLessEqual(abs(L[2]),m.friction*m.effective_length*r['linear_impulse_N_s'][-1,2]+1e-9)
+            self.assertLess(r['max_yield_excess_N'],1e-5)
+            self.assert_energy(r)
+
+    def test_grazing_contacts_have_no_spurious_zero_time_transitions(self):
+        for v in [(0.,0.,0.),(1.,0.,0.)]:
+            r=self.run_drop(self.matched(),position=(0.,0.,.1),velocity=v,
+                            duration=.02,max_rhs_evaluations=1)
+            self.assertEqual(r['events'],[])
+            self.assertEqual(r['rhs_evaluations'],0)
+            np.testing.assert_allclose(r['states'][:,:3],np.array([0.,0.,.1])+r['times'][:,None]*v,atol=1e-15)
+            np.testing.assert_allclose(r['couple_impulse_N_m_s'],0.,atol=1e-15)
+            self.assert_energy(r)
+
+    def test_ballistic_gravity_uses_exact_motion_without_contact_evaluations(self):
+        g=np.array([0.,0.,-9.81]);v=np.array([2.,1.,0.]);x=np.array([0.,0.,1.])
+        r=self.run_drop(self.matched(),position=x,velocity=v,gravity=g,duration=.05,max_rhs_evaluations=1)
+        t=r['times'][:,None]
+        np.testing.assert_allclose(r['states'][:,:3],x+t*v+.5*t*t*g,atol=1e-15)
+        np.testing.assert_allclose(r['states'][:,3:6],v+t*g,atol=1e-15)
+        self.assertEqual(r['rhs_evaluations'],0)
         self.assert_energy(r)
 
     def test_small_friction_does_not_reverse_spin(self):

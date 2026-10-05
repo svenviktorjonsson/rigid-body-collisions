@@ -67,22 +67,41 @@ class ElasticImpulseTests(unittest.TestCase):
         self.assertLess(resolved['dissipated_J'],1e-9)
         self.assertEqual(material.compression_exponent,2)
 
+    def test_dispatcher_resolves_yielding_twist_with_both_signs_and_same_material(self):
+        for sign in [-1.,1.]:
+            for material,expected_spin,expected_loss in [
+                    (self.material(friction=.1),9.,.038),
+                    (Material(friction=.5),5.20433335,None)]:
+                resolved=resolve_impact(material,[0,0,1],[0,0,-1],[0,0,10*sign],
+                                        max_rhs_evaluations=20000,rtol=1e-12,atol=1e-14)
+                self.assertEqual(resolved['method'],'resolved-compliant')
+                self.assertAlmostEqual(resolved['omega'][2],sign*expected_spin,places=5)
+                self.assertLess(resolved['energy_residual_J'],1e-8)
+                if expected_loss is not None:self.assertAlmostEqual(resolved['dissipated_J'],expected_loss,places=7)
+                self.assertGreater(resolved['dissipated_J'],0.)
+                np.testing.assert_allclose(material.inertia*(resolved['omega']-[0,0,10*sign]),
+                                           resolved['independent_couple_impulse_N_m_s'],atol=1e-10)
+
     def test_same_floor_bounces_reverse_horizontal_motion_and_spin(self):
         m=self.material(normal_stiffness=1e8,tangent_stiffness=1e8*2/7,twist_stiffness=4e5)
-        r=simulate(m,position=[0,0,.1001],velocity=[.2,0,-1.],omega=[0,-5.,0],
-                   gravity=[0,0,-9.81],duration=.46,sample_dt=.0005,
-                   max_step=.0001,rtol=1e-11,atol=1e-13)
-        lifts=[e for e in r['events'] if e['kind']=='lift_off']
-        self.assertGreaterEqual(len(lifts),3)
-        for i,e in enumerate(lifts):
-            sign=(-1)**i
-            self.assertAlmostEqual(e['velocity_m_s'][0],-.2*sign,places=4)
-            self.assertAlmostEqual(e['omega_rad_s'][1],5*sign,places=4)
-        self.assertLess(max(abs(r['energy_residual_J'])),1e-8)
-        # Gravity perturbs the contact half-period, so a small residual
-        # shear store is dissipated explicitly rather than silently deleted.
-        self.assertGreaterEqual(r['dissipated_J'][-1],0.)
-        self.assertLess(r['dissipated_J'][-1],1e-5)
+        for initial_sign in [-1.,1.]:
+            r=simulate(m,position=[0,0,.1001],velocity=[.2*initial_sign,0,-1.],
+                       omega=[0,-5.*initial_sign,10.*initial_sign],gravity=[0,0,-9.81],
+                       duration=.46,sample_dt=.0005,max_step=.000002,rtol=1e-11,atol=1e-13)
+            lifts=[e for e in r['events'] if e['kind']=='lift_off']
+            self.assertGreaterEqual(len(lifts),3)
+            for i,e in enumerate(lifts):
+                sign=(-1)**i*initial_sign
+                self.assertAlmostEqual(e['velocity_m_s'][0],-.2*sign,places=4)
+                self.assertAlmostEqual(e['omega_rad_s'][1],5*sign,places=4)
+                self.assertAlmostEqual(e['omega_rad_s'][2],-10*sign,places=4)
+                # Finite-gravity contact has a brief yield tail. Resolved flow
+                # releases its memory before lift-off instead of deleting it.
+                self.assertLess(e['separation_loss_J'],1e-8)
+            self.assertLess(max(abs(r['energy_residual_J'])),1e-8)
+            self.assertGreaterEqual(r['dissipated_J'][-1],0.)
+            self.assertLess(r['dissipated_J'][-1],1e-5)
+            self.assertTrue(any(e['kind']=='yield' for e in r['material_events']))
 
     def test_same_material_slow_rapid_with_compression_budget(self):
         m=self.material(normal_stiffness=1e8,tangent_stiffness=1e8*2/7,twist_stiffness=4e5)

@@ -9,6 +9,7 @@ loss; matched oscillator cases have zero residual. The shared L2 yield is a
 phenomenological generalized slider, not a derived exact finite-patch surface.
 """
 from dataclasses import dataclass
+from types import SimpleNamespace
 import numpy as np
 from scipy.integrate import solve_ivp
 
@@ -67,7 +68,21 @@ class Plane:
         return np.stack([t1, np.cross(n, t1)], axis=1)
 
 
-def contact(material, plane, x, v, omega, history):
+def yield_state(material, plane, x, v, omega, history):
+    """Yield gap and outward elastic loading drive for hybrid mode events."""
+    m=material;n=np.asarray(plane.normal);delta=max(0.,m.radius-(n@x-plane.offset))
+    if delta==0 or m.friction==0:return -m.friction*m.normal_stiffness*delta,0.
+    f=(delta/m.radius)**m.compression_exponent;elastic=f*m.stiffness*np.asarray(history)
+    magnitude=np.linalg.norm(elastic);cap=m.friction*m.normal_stiffness*delta
+    if magnitude==0:return -cap,0.
+    u=np.r_[plane.basis.T@(v+np.cross(omega,-m.radius*n)),m.effective_length*(n@omega)]
+    delta_dot=-n@v
+    raw=m.compression_exponent*delta_dot/delta*elastic+f*m.stiffness*u
+    drive=float(elastic@raw/magnitude-m.friction*m.normal_stiffness*delta_dot)
+    return float(magnitude-cap),drive
+
+
+def contact(material, plane, x, v, omega, history, *, plastic_active=None):
     """Return force, independent couple, strain rate, energy, dissipation, load.
 
     Strain is [two tangent displacements, a_eff * relative twist angle].
@@ -98,7 +113,8 @@ def contact(material, plane, x, v, omega, history):
         # No material shear/twist contact; no artificial spring memory.
         elastic[:] = 0.; history_energy = 0.; normal = base_normal
         rate[:] = 0.
-    elif magnitude > 0 and magnitude >= cap*(1.-1e-9):
+    elif magnitude > 0 and (plastic_active is True or
+                           (plastic_active is None and magnitude >= cap*(1.-1e-9))):
         direction = elastic/magnitude
         # Differentiate |f K h| <= mu*N_base. At the boundary, remove
         # outward motion by nonnegative associated plastic flow.
@@ -118,11 +134,38 @@ def contact(material, plane, x, v, omega, history):
     return force, couple, rate, stored, normal_loss+plastic_power, normal, magnitude-m.friction*m.normal_stiffness*delta
 
 
+def ballistic_segment(material,planes,gravity,start,end,initial):
+    """Exact free motion up to the earliest inward geometric crossing."""
+    remaining=end-start;crossings=[]
+    for j,p in enumerate(planes):
+        n=np.asarray(p.normal)
+        a=-.5*n@gravity;b=-n@initial[3:6];c=material.radius-(n@initial[:3]-p.offset)
+        roots=np.roots([a,b,c]) if a!=0 else ([-c/b] if b!=0 else [])
+        for root in roots:
+            if np.isreal(root):
+                value=float(root)
+                if value>0 and value<=remaining and b+2*a*value>0:crossings.append((value,j))
+    flight=min((value for value,j in crossings),default=remaining);stop=start+flight
+    def solution(times):
+        dt=np.asarray(times)-start
+        if dt.ndim==0:
+            state=initial.copy();state[:3]+=initial[3:6]*dt+.5*gravity*dt*dt
+            state[3:6]+=gravity*dt;return state
+        state=np.repeat(initial[:,None],len(dt),axis=1)
+        state[:3]+=initial[3:6,None]*dt+.5*gravity[:,None]*dt*dt
+        state[3:6]+=gravity[:,None]*dt;return state
+    t_events=[np.array([]) for _ in planes]
+    for value,j in crossings:
+        if abs(value-flight)<=1e-13*max(1.,flight):t_events[j]=np.array([stop])
+    times=np.array([start,stop])
+    return SimpleNamespace(t=times,y=solution(times),sol=solution,t_events=t_events,success=True)
+
+
 def simulate(material, *, position=(0.,0.,.2), velocity=(0.,0.,-1.),
              omega=(0.,0.,0.), planes=(Plane(),), gravity=(0.,0.,0.),
              duration=.1, sample_dt=.0002, max_step=.0001,
              rtol=1e-9, atol=1e-11, max_rhs_evaluations=200000):
-    """Adaptive DOP853 integration with exact entry/lift-off event detection.
+    """Hybrid elastic/plastic DOP853 contact and exact ballistic free motion.
 
     Report collision linear impulse and independent couple impulse separately.
     The result also retains every solver's steps, contact events and energy
@@ -137,10 +180,15 @@ def simulate(material, *, position=(0.,0.,.2), velocity=(0.,0.,-1.),
     if duration <= 0 or sample_dt <= 0 or max_step <= 0 or rtol <= 0 or atol <= 0: raise ValueError('integration controls must be positive')
     hi=9; di=hi+3*nplanes; pi=di+1; li=pi+3
     y=np.zeros(li+3); y[:9]=np.r_[position,velocity,omega]
-    active=[m.radius-(np.asarray(p.normal)@y[:3]-p.offset)>0 for p in planes]
+    active=[]
+    for p in planes:
+        n=np.asarray(p.normal);gap=m.radius-(n@y[:3]-p.offset);approach=-n@y[3:6]
+        active.append(bool(gap>0 or (gap==0 and (approach>0 or (approach==0 and -n@gravity>0)))))
+    plastic_active=[False]*nplanes
     if not isinstance(max_rhs_evaluations,int) or max_rhs_evaluations<1: raise ValueError('max_rhs_evaluations must be a positive integer')
     rhs_evaluations=0
-    segments=[]; events=[]; internal=[]; right_limits=[]; t=0.; segments_limit=10000
+    segments=[]; events=[]; material_events=[]; internal=[]; right_limits=[]; t=0.; segments_limit=10000
+    free_flight_segments=0
     def rhs(_, state):
         nonlocal rhs_evaluations
         rhs_evaluations += 1
@@ -151,7 +199,8 @@ def simulate(material, *, position=(0.,0.,.2), velocity=(0.,0.,-1.),
         for j,p in enumerate(planes):
             if not active[j]: continue
             h=state[hi+3*j:hi+3*j+3]
-            force,couple,rate,_,loss,_,_=contact(m,p,state[:3],state[3:6],state[6:9],h)
+            force,couple,rate,_,loss,_,_=contact(m,p,state[:3],state[3:6],state[6:9],h,
+                                              plastic_active=plastic_active[j])
             totalforce+=force; couple_total+=couple
             totaltorque+=np.cross(-m.radius*np.asarray(p.normal),force)+couple
             derivative[hi+3*j:hi+3*j+3]=rate; derivative[di]+=loss
@@ -160,20 +209,42 @@ def simulate(material, *, position=(0.,0.,.2), velocity=(0.,0.,-1.),
         derivative[pi:pi+3]=totalforce; derivative[li:li+3]=couple_total
         return derivative
     while t < duration-1e-14:
-        event_functions=[]
+        event_functions=[];event_kinds=[]
         for j,p in enumerate(planes):
-            def event(_,state,p=p): return m.radius-(np.asarray(p.normal)@state[:3]-p.offset)
+            def event(_,state,p=p,j=j):
+                n=np.asarray(p.normal);gap=m.radius-(n@state[:3]-p.offset)
+                # An inactive grazing contact has no crossing: returning zero
+                # forever would cause spurious alternating t=0 transitions.
+                if not active[j] and gap==0 and -n@state[3:6]<=0:return -1e-15*m.radius
+                return gap
             event.terminal=True; event.direction=-1 if active[j] else 1
-            event_functions.append(event)
-        solution=solve_ivp(rhs,(t,duration),y,method='DOP853',rtol=rtol,atol=atol,
-                           max_step=max_step,dense_output=True,events=event_functions)
+            event_functions.append(event);event_kinds.append(('contact',j))
+            if active[j] and m.friction>0 and np.any(m.stiffness>0):
+                mode='release' if plastic_active[j] else 'yield'
+                def mode_event(_,state,j=j,p=p,mode=mode):
+                    h=state[hi+3*j:hi+3*j+3]
+                    gap,drive=yield_state(m,p,state[:3],state[3:6],state[6:9],h)
+                    return drive if mode=='release' else gap
+                mode_event.terminal=True;mode_event.direction=-1 if mode=='release' else 1
+                event_functions.append(mode_event);event_kinds.append((mode,j))
+        if not any(active):
+            solution=ballistic_segment(m,planes,gravity,t,duration,y)
+            free_flight_segments+=1
+        else:
+            solution=solve_ivp(rhs,(t,duration),y,method='DOP853',rtol=rtol,atol=atol,
+                               max_step=max_step,dense_output=True,events=event_functions)
         if not solution.success: raise RuntimeError(solution.message)
         segments.append(solution); internal.extend(solution.t.tolist())
         t=float(solution.t[-1]); y=solution.y[:,-1].copy()
-        triggered=[j for j,e in enumerate(solution.t_events) if len(e)]
+        triggered=[event_kinds[i] for i,e in enumerate(solution.t_events) if len(e)]
         if not triggered: break
-        for j in triggered:
+        for kind,j in triggered:
+            if kind!='contact':
+                plastic_active[j]=kind=='yield'
+                material_events.append(dict(time_s=t,plane=planes[j].name,kind=kind))
+                continue
             entering=not active[j]; active[j]=entering
+            plastic_active[j]=False
             separation_loss = 0.
             if not entering and m.compression_exponent == 0:
                 h = y[hi+3*j:hi+3*j+3]
@@ -223,10 +294,13 @@ def simulate(material, *, position=(0.,0.,.2), velocity=(0.,0.,-1.),
     total=kinetic+potential+stored
     accounted=total+states[:,di]
     return {'times':times,'states':states[:,:9], 'strain':states[:,hi:di],
+            'internal_times':np.concatenate([segment.t for segment in segments]),
+            'internal_states':np.concatenate([segment.y.T for segment in segments]),
             'kinetic_J':kinetic,'potential_J':potential,'stored_J':stored,
             'history_stored_J':history_store, 'normal_stored_J':normal_store,
             'tangent_stored_J':tangent_store,'twist_stored_J':twist_store, 'dissipated_J':states[:,di],
             'energy_residual_J':accounted-accounted[0], 'normal_force_N':normal,
             'linear_impulse_N_s':states[:,pi:pi+3], 'couple_impulse_N_m_s':states[:,li:li+3],
-            'events':events,'internal_steps':len(internal),'rhs_evaluations':rhs_evaluations,
+            'events':events,'material_events':material_events,'free_flight_segments':free_flight_segments,
+            'internal_steps':len(internal),'rhs_evaluations':rhs_evaluations,
             'max_yield_excess_N':peak_yield}
