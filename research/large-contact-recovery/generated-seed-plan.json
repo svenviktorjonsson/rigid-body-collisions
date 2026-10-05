@@ -34,5 +34,10 @@
     "coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
     "spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7"
   },
-  "driver_source_sha256": "5e34808d404bcabc28780afb56c67d0289403b777163354e41bda3fcc8866c14"
+  "driver_source_sha256": "5e34808d404bcabc28780afb56c67d0289403b777163354e41bda3fcc8866c14",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40"
+  }
 }
