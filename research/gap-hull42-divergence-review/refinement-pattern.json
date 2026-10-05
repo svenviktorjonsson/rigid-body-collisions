@@ -1,0 +1,18 @@
+{
+  "time_s": 0.01,
+  "values": {
+    "position_m": {
+      "finer_to_coarser_adjacent_error_ratio": 1.9541258579818328,
+      "first_frame_adjacent_error_vector_cosine": -0.9542636930564679
+    },
+    "velocity_m_s": {
+      "finer_to_coarser_adjacent_error_ratio": 2.0777594613483066,
+      "first_frame_adjacent_error_vector_cosine": -0.9495627440514198
+    },
+    "omega_rad_s": {
+      "finer_to_coarser_adjacent_error_ratio": 1.7623687910353623,
+      "first_frame_adjacent_error_vector_cosine": -0.7234510997093773
+    }
+  },
+  "interpretation": "Early errors are nonmonotone and some error vectors nearly oppose. Compatible with event/grid sensitivity; does not identify causation."
+}

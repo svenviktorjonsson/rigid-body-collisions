@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "execution_source": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "source_files_verified": 33,
+  "independent_perframe_RMS_max_discrepancy": 1.4210854715202004e-14,
+  "source_ordered_cached_bounds_independently_recomputed": true,
+  "cache_source_files_verified": 9,
+  "first_observed_difference_time_s": 0.01,
+  "first_observed_difference_precedes_first_wall_reversal": true,
+  "wall_clock_or_endpoint_mismatch_supported": false,
+  "physical_gates_versus_refinement_distinguished": true,
+  "causal_identification": false,
+  "trajectory_qualified": false,
+  "scope": "Independent read-only trace/provenance/physical calculations; no native execution."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "read-only-hull-divergence-review-manifest-v1",
+  "execution_source": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "passed_audit": true,
+  "native_execution": false,
+  "trajectory_qualified": false,
+  "files_sha256": {
+    "research/gap-hull42-divergence-review/README.md": "6e51da4233a4214ed415f36eba20553a8be246b68f94239f3f8860696422400e",
+    "research/gap-hull42-divergence-review/analysis.json": "ac81222ff39c59fd97299a7536a8edb56300c038661f3e1ba27af06136071a30",
+    "research/gap-hull42-divergence-review/analyze.py": "cafc7c111b1a99d2b68204441a0aef9bcb16076ff5f66d4b86b919a1eb4f3475",
+    "research/gap-hull42-divergence-review/audit.py": "ded58fa6bb908911aeaadedf1c25fdc5ef2964b39a5e0b5639cbc01420913857",
+    "research/gap-hull42-divergence-review/collision-cache-plan.json": "223c0bf2d032e1123f5e27722e9b14d827e1cf0f829860b703a11223e6267862",
+    "research/gap-hull42-divergence-review/collision-config-plan.json": "0edeac5b5ae4cd38543cba42db74af9fe02b30a8898854c1b2f1cfa322d720b3",
+    "research/gap-hull42-divergence-review/collision-config.json": "5c0b15e13b02966bbfa4503007af686d5ba5146b108d61a21b7c27c0e36f8893",
+    "research/gap-hull42-divergence-review/collision-config.json.historical": "e3f7da2fd68a00be1eb93c48415ef42e4c677c6a909aa99c840701eeb0b3df9f",
+    "research/gap-hull42-divergence-review/configuration.py": "aa4ae6ac7c40f32fd8d1af61a36cfd3de078719c4c493181f4e79f6426bdd9b4",
+    "research/gap-hull42-divergence-review/configuration.py.historical": "f8f91759578d3a57b49a8c95a79ad105ba5416f592c968a160f89dcb2d4d8c06",
+    "research/gap-hull42-divergence-review/failed-analysis-initial.json": "ab956398f124b30b17d2aeef2d0414c9a434b0972082d64b0784b65c82d1267f",
+    "research/gap-hull42-divergence-review/independent-audit.json": "d8c55b29fcaf8af743aef9019de0767d5d3a6d503af6938eb13d0eb139e3fc06",
+    "research/gap-hull42-divergence-review/plan.json": "eece3c795023e659778598dd9629f08eba90b44afa59075e08a7ba3bac7fc14f",
+    "research/gap-hull42-divergence-review/refinement-errors.pdf": "0c383a5d7aeb2b53a4e36423465d7b4df49018c77e3ec15627d6dfcbc9159e26",
+    "research/gap-hull42-divergence-review/refinement-errors.png": "8b943ea85b99a106bcaa5efa3005ec00d7994cf5fa317dd0e22a554b576c7034",
+    "research/gap-hull42-divergence-review/refinement-pattern.json": "40cd6b7bd226cd0f577dd52a535ce53f8b12c87eade042c7fadc52b9ef20847d",
+    "research/gap-hull42-divergence-review/render.py": "854d77f89bab0593829a85c005b9643455f4c67e90ea905c99efb035068e9da1",
+    "research/gap-hull42-divergence-review/reviewed-source.zip": "4ff74979583c5158b386e3f550cc52b175ee83304d2449e26292df2e043a759f"
+  }
+}

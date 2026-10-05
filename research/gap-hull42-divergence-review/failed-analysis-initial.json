@@ -1,0 +1,5 @@
+{
+  "error": "Initial analyzer assumed attempt_status completed; actual archive status schema differs. No numerical analysis or source/native mutation occurred.",
+  "source_sha256": "bd8540f186afa20abd9674e3f3b44bbd0bf2f399633a6f47efef5d95ff3392a9",
+  "actual_status": "history_complete"
+}

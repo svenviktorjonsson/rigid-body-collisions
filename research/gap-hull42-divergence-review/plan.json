@@ -1,0 +1,21 @@
+{
+  "schema": "prospective-gap-hull42-trajectory-diagnostic-v1",
+  "execution_source": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "scene": "fast_shake8_hulls42",
+  "inputs_sha256": {
+    "research/hull-gap-completion/plan.json": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737",
+    "research/hull-gap-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-gap-completion/results/checkpoints/fast_shake8_hulls42/reference_0.json": "c7a58fa7c9138a5eed355ac2b1699d084e62d1307c92c297ca8c984922595fda",
+    "research/hull-gap-completion/results/checkpoints/fast_shake8_hulls42/reference_1.json": "0a5aea92481f52321158dab0548519fdcd9e961b79c11276c6cd6dee4872d337",
+    "research/hull-gap-completion/results/checkpoints/fast_shake8_hulls42/reference_2.json": "4ae6127bb7072116dfb581c30670b489464216147f42973be23a938673b4455e"
+  },
+  "analysis": [
+    "Per-output-frame and full-time/body RMS of position,velocity,omega and orientation for adjacent and coarse/fine pairs; independent quaternion relative-angle calculation",
+    "First threshold crossings using original quarter-budget thresholds and first measurable difference above1e-10; preserve both definitions",
+    "Per-body first crossing and largest contributors, physical body energies/momenta, container analytical schedule/endpoints and output-sampled kinematic state differences",
+    "Per-output update counts and counts-per-interval/h averages; exact internal contacts/steps cannot be inferred from update counts alone",
+    "Check convergence trend/error ratios and temporal correlation with prescribed reversals at.04/.08; do not identify cache/chaos/multiple-impact causes from absent event traces"
+  ],
+  "immutable_rule": "Read only completed immutable seed42 checkpoints. No native execution/build, guarded-source changes, material or acceptance changes. Preserve negative conclusions and hash every analysis source/output.",
+  "scope": "Evidence for a diagnostic next test, not causal identification or full trajectory qualification."
+}

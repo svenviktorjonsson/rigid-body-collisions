@@ -1,0 +1,227 @@
+{
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "source_sha256": "aa4ae6ac7c40f32fd8d1af61a36cfd3de078719c4c493181f4e79f6426bdd9b4",
+  "upstream_source_sha256": {
+    "src/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp": "9196d824cb7bdd496d9cdeba4e5da0f82344ab6b2a40f76cf9326073fc88e932",
+    "src/BulletCollision/CollisionDispatch/btCollisionObject.cpp": "22fb4eb7f21b4e0aaece8e31c1dfd598a0d460e8b7d73cb2060dc4f58dbe1e60",
+    "src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp": "e79733f5b8be9fe7df9652f1ccb8b97dcc8b0b313dd52de23b7a9b720eaeb797",
+    "src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp": "62c1a73bc762267a7b6c3bceadf3fc90b2a9793907dd97cce64f4bcd015bf21a",
+    "src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp": "de382ea711ec461c33f1f13c3cc8ff71612158d22054e75beac4e6aee19ef615",
+    "src/BulletCollision/CollisionShapes/btCollisionShape.cpp": "2749c41e560ad79a763a11fda60a67ef6c28acb2e7f1c774c035572b23cf8b04",
+    "src/BulletCollision/BroadphaseCollision/btDispatcher.h": "70529882eadeedcc19e478893584a413e14598af5df9e8adabfc452e26fb1369"
+  },
+  "all_bodies_wrapped_in_compound_shapes": true,
+  "CCD_motion_threshold_default": 0,
+  "CCD_swept_sphere_radius_default": 0,
+  "dispatcher_useContinuous_default": true,
+  "default_CCD_requires_nonzero_motion_threshold": true,
+  "predictive_and_clamping_CCD_require_convex_top_level_shape": true,
+  "default_relative_contact_breaking_factor": 0.02,
+  "declared_narrow_phase_margin_m": 0.0,
+  "hull_cached_margin_at_recalc_m": 0.04,
+  "constructor_cache_inconsistency": "recalcLocalAabb before setting margin; inherited setMargin does not invalidate/recalculate cached bounds",
+  "cache_evidence_sha256": {
+    "src/BulletCollision/CollisionShapes/btConvexInternalShape.h": "11fa3258c60b76cbbbf03e2c349d7b1fb03c0c25ade91ff7475cfb74b3bd11ee",
+    "src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp": "43423572a25396fadf324b1a6431d07d32d275548c5076f182a7c8c679cda0e6",
+    "src/BulletCollision/CollisionShapes/btCollisionMargin.h": "6206254a235292287b3d19c142d45c0d55b022a15155835be2109c43efe0b579",
+    "src/BulletCollision/CollisionShapes/btConvexHullShape.h": "209211f19fa98cc6a085d95266c4c15ee8a2bf3be5cc29403d858e8f26e97929",
+    "src/BulletCollision/CollisionShapes/btConvexHullShape.cpp": "763b3aea6d294c85a2dd0597d3ee476b81870e4a9c6638cfa68dcb3949142801",
+    "src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h": "9955326413a75fbc719f3c86316b4b0fffdc35d647067c7e739a1b8b67042cf5",
+    "src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp": "b7ef2abbbe4e055ddbb66e56d8be4c30fc4d64ea61f4b70b06afef47b717f706",
+    "src/BulletCollision/CollisionShapes/btCompoundShape.cpp": "7987b487b06dd6ec8520a64f0e645210fb98967b82179c234bd6fbbaa0540585",
+    "src/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.cpp": "5b0a5553fbf0aa3c57fd9af431775613f0a6c7da46a7efe78443d1eb2563daa6"
+  },
+  "relative_compound_threshold_estimates": [
+    {
+      "body_id": 0,
+      "compound_angular_motion_disc_m": 0.5196152422706632,
+      "relative_contact_breaking_threshold_m": 0.010392304845413265,
+      "consistent_declared_margin_threshold_m": 0.010392304845413265,
+      "travel_guard_radius_m": 0.7
+    },
+    {
+      "body_id": 1,
+      "compound_angular_motion_disc_m": 0.3442732290368296,
+      "relative_contact_breaking_threshold_m": 0.0068854645807365925,
+      "consistent_declared_margin_threshold_m": 0.00458493150933297,
+      "travel_guard_radius_m": 0.10517929733498534
+    },
+    {
+      "body_id": 2,
+      "compound_angular_motion_disc_m": 0.31584928198930506,
+      "relative_contact_breaking_threshold_m": 0.0063169856397861015,
+      "consistent_declared_margin_threshold_m": 0.004074904649792154,
+      "travel_guard_radius_m": 0.11921793161058605
+    },
+    {
+      "body_id": 3,
+      "compound_angular_motion_disc_m": 0.31687099211153735,
+      "relative_contact_breaking_threshold_m": 0.006337419842230747,
+      "consistent_declared_margin_threshold_m": 0.004276847914306835,
+      "travel_guard_radius_m": 0.11123374419547233
+    },
+    {
+      "body_id": 4,
+      "compound_angular_motion_disc_m": 0.29116518172510375,
+      "relative_contact_breaking_threshold_m": 0.005823303634502075,
+      "consistent_declared_margin_threshold_m": 0.003971266279543104,
+      "travel_guard_radius_m": 0.11171805703559735
+    },
+    {
+      "body_id": 5,
+      "compound_angular_motion_disc_m": 0.34290791870916726,
+      "relative_contact_breaking_threshold_m": 0.006858158374183345,
+      "consistent_declared_margin_threshold_m": 0.004731919646931189,
+      "travel_guard_radius_m": 0.10336719443003119
+    },
+    {
+      "body_id": 6,
+      "compound_angular_motion_disc_m": 0.25748303784089316,
+      "relative_contact_breaking_threshold_m": 0.005149660756817863,
+      "consistent_declared_margin_threshold_m": 0.0035281944523092236,
+      "travel_guard_radius_m": 0.11406695454516941
+    },
+    {
+      "body_id": 7,
+      "compound_angular_motion_disc_m": 0.35321809303305374,
+      "relative_contact_breaking_threshold_m": 0.007064361860661075,
+      "consistent_declared_margin_threshold_m": 0.004835051974824163,
+      "travel_guard_radius_m": 0.10242487482560736
+    },
+    {
+      "body_id": 8,
+      "compound_angular_motion_disc_m": 0.3348599935148311,
+      "relative_contact_breaking_threshold_m": 0.006697199870296622,
+      "consistent_declared_margin_threshold_m": 0.004561964398497335,
+      "travel_guard_radius_m": 0.1205190216189093
+    }
+  ],
+  "first_travel_bounds": [
+    {
+      "travel_fraction": 0.06,
+      "feature_m": 0.025,
+      "initial_surface_speed_bound_m_s": 20,
+      "initial_h_s": 3.7339857062371515e-05
+    },
+    {
+      "travel_fraction": 0.03,
+      "feature_m": 0.025,
+      "initial_surface_speed_bound_m_s": 20,
+      "initial_h_s": 1.869331001391916e-05
+    },
+    {
+      "travel_fraction": 0.015,
+      "feature_m": 0.025,
+      "initial_surface_speed_bound_m_s": 20,
+      "initial_h_s": 9.35493929840064e-06
+    }
+  ],
+  "initial_free_motion_wall_contacts": [
+    {
+      "body_id": 1,
+      "initial_negative_x_wall_gap_m": 0.08637242503019166,
+      "free_motion_first_negative_x_wall_time_s": 0.004318621251509583,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 2,
+      "initial_negative_x_wall_gap_m": 0.07977467912779054,
+      "free_motion_first_negative_x_wall_time_s": 0.003988733956389527,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 3,
+      "initial_negative_x_wall_gap_m": 0.07482452179315036,
+      "free_motion_first_negative_x_wall_time_s": 0.003741226089657518,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 4,
+      "initial_negative_x_wall_gap_m": 0.06576752093552082,
+      "free_motion_first_negative_x_wall_time_s": 0.0032883760467760413,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 5,
+      "initial_negative_x_wall_gap_m": 0.26497110897386206,
+      "free_motion_first_negative_x_wall_time_s": 0.013248555448693102,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 6,
+      "initial_negative_x_wall_gap_m": 0.2697923973635147,
+      "free_motion_first_negative_x_wall_time_s": 0.013489619868175734,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 7,
+      "initial_negative_x_wall_gap_m": 0.2642138100336206,
+      "free_motion_first_negative_x_wall_time_s": 0.01321069050168103,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    },
+    {
+      "body_id": 8,
+      "initial_negative_x_wall_gap_m": 0.2623187389265802,
+      "free_motion_first_negative_x_wall_time_s": 0.01311593694632901,
+      "scope": "Only initial free horizontal motion with \u03a90=0; excludes earlier interactions with other bodies."
+    }
+  ],
+  "actual_internal_event_times_available": false,
+  "source_facts": [
+    {
+      "path": "spatial_backend/runner.cpp",
+      "lines": [
+        77,
+        81,
+        140,
+        151
+      ],
+      "fact": "Every shape wrapped in a compound; state-speed travel guard and schedule clipping precede one Bullet stepSimulation(h,0,h)."
+    },
+    {
+      "path": "src/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp",
+      "lines": [
+        452,
+        473,
+        486,
+        863,
+        865,
+        965,
+        968
+      ],
+      "fact": "Discrete collision discovery before velocity constraints and transform integration; both predictive and clamping CCD require nonzero body threshold and isConvex()."
+    },
+    {
+      "path": "src/BulletCollision/CollisionDispatch/btCollisionObject.cpp",
+      "lines": [
+        48,
+        49
+      ],
+      "fact": "Default swept sphere radius and motion threshold are zero; adapter does not override them."
+    },
+    {
+      "path": "src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp",
+      "lines": [
+        32,
+        74,
+        75
+      ],
+      "fact": "Default relative contact-breaking threshold uses minimum of both shapes angular motion discs times0.02, not fixed0.02m for every body."
+    },
+    {
+      "path": "src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp",
+      "lines": [
+        26,
+        261,
+        264,
+        281
+      ],
+      "fact": "Persistent points/normals/impulses are retained until distance or tangential displacement thresholds remove them; endpoint distances refreshed using stored normal."
+    }
+  ],
+  "limitations": [
+    "Threshold estimates use independently reconstructed compound localAABB formula; no native threshold observer was run.",
+    "Enabling per-body CCD settings alone would still skip top-level compound shapes; sphere motion clamping is not exact arbitrary-polyhedron contact timing.",
+    "Finite-step discovery/cache sensitivity is plausible but not proven by these output-sampled trajectories."
+  ]
+}
