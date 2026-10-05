@@ -1,0 +1,48 @@
+{
+  "scope": "Enumerate proper nonempty subsets of five previously pressure-active contacts, largest support first. Inactive contacts have all three forces zero. Original active normal and sticking equations linearly eliminated; enumerate sliding subsets with exact original cones. Original all-row acceptance and native budget-zero mandatory; no tolerance or physical-law change. No performance or trajectory claim. Earlier all-active support results retained separately.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87"
+  },
+  "component_rows": [
+    0,
+    1,
+    15,
+    99,
+    100,
+    101,
+    102,
+    129,
+    130,
+    82,
+    83,
+    84,
+    85,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270
+  ],
+  "active_normal_rows": [
+    1,
+    15,
+    83,
+    84,
+    85
+  ],
+  "limits": {
+    "raw_evaluations_per_start_method": 2048,
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "angle_offsets": [
+      0,
+      3.141592653589793
+    ]
+  },
+  "execution": "Single-thread discovery; may run concurrently with untimed world diagnostic."
+}
