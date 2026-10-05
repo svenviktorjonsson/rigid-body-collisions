@@ -1,0 +1,10 @@
+{
+  "event": "actual_signal_pause",
+  "reason": "Parent requested prospective source commit/publish before long operations; already-running attempt preserved and paused. No source or algorithm changed.",
+  "utc": "2026-10-05T18:10:22Z",
+  "runner_pid": 68031,
+  "native_pid": 68052,
+  "completed_rows": 108,
+  "native_steady_clock_continues_during_pause": true,
+  "next_row_solve_seconds_will_include_pause": true
+}
