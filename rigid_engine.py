@@ -116,7 +116,8 @@ def validate_scene(scene):
 
 
 
-def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend="block", binary=None):
+def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend="block", binary=None,
+        position_iterations=3):
     """Run an entire scene, retaining the same world through adaptive changes.
 
     State columns: COM x,y [m], angle [rad], vx,vy [m/s], omega [rad/s].
@@ -136,7 +137,10 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
     if frames < 1 or not np.isclose(frames * dt, scene["duration"], rtol=1e-9, atol=1e-12):
         raise ValueError("Duration must be an integer number of output frames")
     _positive_integer(primary_steps, "primary_steps", 4096)
-    _positive_integer(substeps, "substeps")
+    _positive_integer(substeps, "substeps", 4096 if backend == 'block' else 128)
+    _positive_integer(position_iterations, 'position_iterations', 128)
+    if backend != 'block' and position_iterations != 3:
+        raise ValueError('Position iteration override applies to the block backend only')
     p = dict(DEFAULT_POLICY)
     if policy is not None:
         if not isinstance(policy, dict) or set(policy) - set(p):
@@ -195,6 +199,8 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
                            shape["radius"], *shape.get("center", [0, 0])])
     values.append(len(commands))
     for command in commands: values.extend(command)
+    values.extend([int(scene.get('suppress_internal_edges', False)), position_iterations,
+                   int(scene.get('analytic_kinematics', False))])
     executable = Path(binary) if binary is not None else BINARIES[backend]
     if not executable.is_file():
         raise FileNotFoundError(f"Build the pinned backend first: {executable}")
@@ -214,8 +220,17 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
                        "contact_hertz": hertz if backend == "temporal" else None,
                        "contact_damping_ratio": 1 if backend == "temporal" else None,
                        "max_contact_push_speed": 1 if backend == "temporal" else None,
-                       "position_iterations": 3 if backend == "block" else None,
+                       "position_iterations": position_iterations if backend == "block" else None,
                        "sleep": False, "continuous_collision": True}
+    numerical_model['suppress_internal_edges'] = bool(scene.get('suppress_internal_edges', False))
+    numerical_model['scalar_precision'] = result.get('scalar_precision', 'float32')
+    numerical_model['analytic_kinematics'] = bool(scene.get('analytic_kinematics', False))
+    if numerical_model['scalar_precision'] == 'float64':
+        manifest = executable.resolve().parent/'precision-source.json'
+        if not manifest.is_file():
+            raise RuntimeError('Float64 diagnostic requires its precision-source.json manifest')
+        numerical_model['precision_source_sha256'] = hashlib.sha256(manifest.read_bytes()).hexdigest()
+        numerical_model['implementation_note'] = 'Locally transformed Float64 Box2D diagnostic; not an upstream Float64 release'
     states = np.asarray(result["states"])
     if states.ndim != 3 or states.shape[1] == 0:
         raise ValueError("At least one dynamic body is required for this state adapter")
@@ -251,6 +266,8 @@ def main():
                         help="Fixed numerical effort; high is the measured conservative block baseline")
     parser.add_argument("--primary-steps", type=int, help="Override preset collision updates")
     parser.add_argument("--substeps", type=int, help="Override preset solver steps; see backend semantics")
+    parser.add_argument('--position-iterations', type=int, default=3,
+                        help='Block backend pose correction work, independently from velocity iterations')
     parser.add_argument("--adaptive", action="store_true", help="Use the experimental dynamic effort controller")
     parser.add_argument("--policy", type=Path, help="Load an adaptive policy dict or frozen-policy.json")
     parser.add_argument("--backend", choices=BINARIES, default="block")
@@ -264,7 +281,8 @@ def main():
         policy = document.get("policy", document)
     result = run(json.loads(args.scene.read_text()),
                  primary_steps=primary if args.primary_steps is None else args.primary_steps,
-                 substeps=solver if args.substeps is None else args.substeps, policy=policy, backend=args.backend)
+                 substeps=solver if args.substeps is None else args.substeps, policy=policy, backend=args.backend,
+                 position_iterations=args.position_iterations)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, allow_nan=False) + "\n")
 

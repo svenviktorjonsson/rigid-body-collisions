@@ -41,6 +41,35 @@ tolerance, not extra mass. The block backend requires skin at least 0.005 m.
 The temporal backend supports an explicit zero skin if desired. Do not silently
 compare different collision skins. Compound fixture seams can affect contacts.
 
+Already ordered temporal-backend polygons are authored at a temporary scale
+when needed to preserve shallow corners through native hull construction, then
+restored to their original core dimensions. World units and solver slop do not
+change. `run(..., position_iterations=12)` independently refines block pose
+correction; the default remains three. Higher diagnostic collision/velocity work
+is allowed, but increased work is not an accuracy certificate.
+
+Two explicit scene controls support diagnosis: `analytic_kinematics: true`
+corrects prescribed poses from a double accumulator at each primary update,
+while retaining prescribed velocities; `suppress_internal_edges: true` filters
+points whose outward reaction direction enters another fixture's core. Both are
+off by default. The latter is experimental and does not coalesce duplicate
+exterior manifolds. Numerical metadata records both controls.
+
+`research/convex_partition.py` merges equal-material adjacent pieces only when
+their convex hull has the same area as their union; it preserves the boundary,
+mass and inertia. Stateful or heterogeneous patch boundaries must be retained.
+
+An experimental full-Float64 diagnostic can be built with
+`python -m research.build_precision_backend`, then selected in Python with
+`run(scene, binary="build/rigid_double/rigid_runner")`. The script checks the
+pinned upstream archive and retains original/transformed source hashes in
+`build/rigid_double/precision-source.json`. It changes project scalar types,
+literals, math calls and precision constants throughout narrowphase, transforms
+and solving. This is a locally transformed comparator, not an upstream Float64
+release or verification of every Box2D feature. Output labels the precision and
+requires its source manifest. Geometry, primitive mechanics and precision
+controls are tested separately; packed trajectory convergence remains a gate.
+
 Both backends use their established single-coefficient dry friction model and
 default mixing: geometric mean for friction, maximum for restitution. Separate
 elastic static/dynamic material laws are not implemented here. The block backend

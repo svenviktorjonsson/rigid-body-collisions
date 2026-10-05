@@ -43,7 +43,8 @@ inline b2WorldId b2CreateWorld(const RigidWorldDef* def) {
     world->SetContinuousPhysics(def->enableContinuous); return world;
 }
 inline void b2DestroyWorld(b2WorldId world) { delete world; }
-inline void b2World_Step(b2WorldId world, float dt, int iterations) { world->Step(dt, iterations, 3); }
+inline int rigidPositionIterations=3;
+inline void b2World_Step(b2WorldId world, float dt, int iterations) { world->Step(dt, iterations, rigidPositionIterations); }
 inline b2BodyId b2CreateBody(b2WorldId world, const RigidBodyDef* d) {
     b2BodyDef def; def.type=d->type; def.position=d->position; def.angle=d->rotation.GetAngle();
     def.linearVelocity=d->linearVelocity; def.angularVelocity=d->angularVelocity;
@@ -85,6 +86,7 @@ inline float b2Body_GetAngularVelocity(b2BodyId b) { return b->GetAngularVelocit
 inline b2Vec2 b2Body_GetWorldCenterOfMass(b2BodyId b) { return b->GetWorldCenter(); }
 inline b2Rot b2Body_GetRotation(b2BodyId b) { return b->GetTransform().q; }
 inline b2Transform b2Body_GetTransform(b2BodyId b) { return b->GetTransform(); }
+inline void b2Body_SetTransform(b2BodyId b,b2Vec2 p,b2Rot q) { b->SetTransform(p,q.GetAngle()); }
 inline float b2Body_GetMass(b2BodyId b) { return b->GetMass(); }
 inline float b2Body_GetRotationalInertia(b2BodyId b) {
     return std::max(0.f,b->GetInertia()-b->GetMass()*b2Dot(b->GetLocalCenter(),b->GetLocalCenter()));

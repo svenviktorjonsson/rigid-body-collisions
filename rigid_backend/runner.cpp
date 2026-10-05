@@ -20,6 +20,7 @@ using RigidMassData = b2MassData;
 #include <set>
 #include <stdexcept>
 #include <vector>
+#include <unordered_map>
 
 using Clock = std::chrono::steady_clock;
 static double seconds(Clock::time_point start) {
@@ -74,7 +75,72 @@ struct Body {
     bool dynamic;
     bool kinematic;
     float extent = 1e20f, radius = 0, mass = 0, inertia = 0;
+    std::array<double,3> prescribedPose{};
 };
+struct BoundaryFixture { b2ShapeId id; int body; float radius; std::vector<b2Vec2> vertices; };
+struct BoundaryFilter {
+    std::vector<BoundaryFixture> fixtures;
+    std::unordered_map<uint64_t,size_t> index;
+    std::vector<std::vector<size_t>> bodyFixtures;
+    long long removed=0;
+    bool internal(b2ShapeId shape,b2Vec2 surface,b2Vec2 outward) const {
+        auto found=index.find(b2StoreShapeId(shape));
+        if(found==index.end()) return false;
+        const auto& fixture=fixtures[found->second];
+        if(bodyFixtures[fixture.body].size()<2) return false;
+        auto transform=b2Body_GetTransform(b2Shape_GetBody(shape));
+        // Step just outside the fixture's unrounded core in the reaction direction.
+        b2Vec2 sample=b2Add(surface,b2MulSV(1e-5f-fixture.radius,outward));
+#ifdef RIGID_BLOCK_BACKEND
+        sample=b2MulT(transform,sample);
+#else
+        sample=b2InvTransformPoint(transform,sample);
+#endif
+        for(auto otherIndex:bodyFixtures[fixture.body]) {
+            if(otherIndex==found->second) continue;
+            const auto& polygon=fixtures[otherIndex].vertices;
+            bool inside=true;
+            for(size_t i=0;i<polygon.size();++i) {
+                auto a=polygon[i], b=polygon[(i+1)%polygon.size()];
+                double dx=double(b.x)-a.x,dy=double(b.y)-a.y;
+                double side=(dx*(double(sample.y)-a.y)-dy*(double(sample.x)-a.x))/std::hypot(dx,dy);
+                if(side<=1e-7) { inside=false; break; }
+            }
+            if(inside) return true;
+        }
+        return false;
+    }
+};
+#ifdef RIGID_BLOCK_BACKEND
+struct BoundaryListener : b2ContactListener {
+    BoundaryFilter* filter;
+    explicit BoundaryListener(BoundaryFilter* f):filter(f){}
+    void PreSolve(b2Contact* contact,const b2Manifold*) override {
+        auto* m=contact->GetManifold(); b2WorldManifold world;
+        contact->GetWorldManifold(&world);
+        int kept=0;
+        for(int i=0;i<m->pointCount;++i) {
+            auto n=world.normal,p=world.points[i]; float separation=world.separations[i];
+            bool hide=filter->internal(contact->GetFixtureA(),p+(-.5f*separation)*n,n) ||
+                      filter->internal(contact->GetFixtureB(),p+(.5f*separation)*n,-n);
+            if(hide) ++filter->removed; else m->points[kept++]=m->points[i];
+        }
+        m->pointCount=kept;
+    }
+};
+#else
+static bool filterBoundary(b2ShapeId a,b2ShapeId b,b2Manifold* m,void* context) {
+    auto* filter=static_cast<BoundaryFilter*>(context); int kept=0;
+    for(int i=0;i<m->pointCount;++i) {
+        auto n=m->normal,p=m->points[i].point; float separation=m->points[i].separation;
+        bool hide=filter->internal(a,b2Add(p,b2MulSV(-.5f*separation,n)),n) ||
+                  filter->internal(b,b2Add(p,b2MulSV(.5f*separation,n)),b2MulSV(-1,n));
+        if(hide) ++filter->removed; else m->points[kept++]=m->points[i];
+    }
+    m->pointCount=kept;
+    return kept>0;
+}
+#endif
 struct Command { int frame, body; b2Vec2 velocity; float omega; };
 #ifndef RIGID_BLOCK_BACKEND
 static RigidManifold rigidCollideShapes(b2ShapeId a,b2Transform xa,b2ShapeId b,b2Transform xb) {
@@ -162,6 +228,7 @@ int main() {
         throw std::runtime_error("Invalid integration settings");
     b2WorldId world = b2CreateWorld(&wd);
     int bodyCount = read<int>(); std::vector<Body> bodies;
+    BoundaryFilter boundary; boundary.bodyFixtures.resize(bodyCount);
     for (int i = 0; i < bodyCount; ++i) {
         RigidBodyDef bd = b2DefaultBodyDef(); int type = read<int>();
         bd.type = type == 2 ? b2_dynamicBody : (type == 1 ? b2_kinematicBody : b2_staticBody);
@@ -170,6 +237,7 @@ int main() {
         bd.linearVelocity = {read<float>(), read<float>()}; bd.angularVelocity = read<float>();
         bd.userData = reinterpret_cast<void*>(intptr_t(i + 1)); bd.enableSleep = false;
         Body body{b2CreateBody(world, &bd), type == 2, type == 1};
+        body.prescribedPose={bd.position.x,bd.position.y,std::atan2(bd.rotation.s,bd.rotation.c)};
         float mass = 0, inertiaOrigin = 0; b2Vec2 moment{0, 0};
         int shapeCount = read<int>();
         for (int j = 0; j < shapeCount; ++j) {
@@ -217,7 +285,17 @@ int main() {
 #else
             b2Polygon polygon=core; polygon.radius=skin;
 #endif
-            b2CreatePolygonShape(body.id, &sd, &polygon);
+            auto shape=b2CreatePolygonShape(body.id, &sd, &polygon);
+            BoundaryFixture fixture{shape,i,skin,{}};
+            double signedArea=0;
+            for(int k=0;k<count;++k) {
+                fixture.vertices.push_back(vertices[k]);
+                signedArea+=double(vertices[k].x)*vertices[(k+1)%count].y-double(vertices[k].y)*vertices[(k+1)%count].x;
+            }
+            if(signedArea<0) std::reverse(fixture.vertices.begin(),fixture.vertices.end());
+            boundary.index[b2StoreShapeId(shape)]=boundary.fixtures.size();
+            boundary.bodyFixtures[i].push_back(boundary.fixtures.size());
+            boundary.fixtures.push_back(fixture);
             body.extent = std::min(body.extent, std::min(hi.x - lo.x, hi.y - lo.y));
         }
         if (body.dynamic && mass > 0) {
@@ -237,6 +315,22 @@ int main() {
         commands.push_back({frame,body,velocity,omega});
     }
     std::stable_sort(commands.begin(),commands.end(),[](const Command& a,const Command& b){return a.frame<b.frame;});
+    int suppressInternal=0;
+    // Optional diagnostic policy appended to rigid-v2; old inputs keep old behaviour.
+    if(!(std::cin>>suppressInternal)) std::cin.clear();
+    int positionIterations=3, analyticKinematics=0;
+    if(!(std::cin>>positionIterations)) std::cin.clear();
+    if(!(std::cin>>analyticKinematics)) std::cin.clear();
+#ifdef RIGID_BLOCK_BACKEND
+    rigidPositionIterations=positionIterations;
+    BoundaryListener listener(&boundary);
+    if(suppressInternal) world->SetContactListener(&listener);
+#else
+    if(suppressInternal) {
+        b2World_SetPreSolveCallback(world,filterBoundary,&boundary);
+        for(const auto& fixture:boundary.fixtures) b2Shape_EnablePreSolveEvents(fixture.id,true);
+    }
+#endif
     size_t commandIndex=0;
     std::vector<std::vector<std::array<float,6>>> kinematicHistory;
     auto captureKinematics=[&]() {
@@ -279,7 +373,17 @@ int main() {
         }
         selected.push_back(adaptive ? current : -1);
         auto clock = Clock::now();
-        for (int k = 0; k < primary; ++k) b2World_Step(world, dt / primary, substeps);
+        for (int k = 0; k < primary; ++k) {
+            b2World_Step(world, dt / primary, substeps);
+            if(analyticKinematics) for(auto& body:bodies) if(body.kinematic) {
+                auto v=b2Body_GetLinearVelocity(body.id); auto w=b2Body_GetAngularVelocity(body.id);
+                body.prescribedPose[0]+=double(v.x)*double(dt)/primary;
+                body.prescribedPose[1]+=double(v.y)*double(dt)/primary;
+                body.prescribedPose[2]+=double(w)*double(dt)/primary;
+                b2Vec2 target{float(body.prescribedPose[0]),float(body.prescribedPose[1])};
+                b2Body_SetTransform(body.id,target,b2MakeRot(float(body.prescribedPose[2])));
+            }
+        }
         stepSeconds += seconds(clock); work += primary * substeps;
         // This observable covers reported contact pairs, not a certificate against all missed collisions.
         Features measured = features(bodies, dt);
@@ -287,12 +391,17 @@ int main() {
         std::cout << ','; snapshot(std::cout, bodies);
         captureKinematics();
     }
-    std::cout << "],\"mass\":["; bool comma = false;
+#ifdef RIGID_DOUBLE_PRECISION
+    std::cout << "],\"scalar_precision\":\"float64\",\"mass\":["; bool comma = false;
+#else
+    std::cout << "],\"scalar_precision\":\"float32\",\"mass\":["; bool comma = false;
+#endif
     for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.mass; }
     std::cout << "],\"inertia\":["; comma = false;
     for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.inertia; }
     std::cout << "],\"step_s\":" << stepSeconds << ",\"controller_s\":" << controllerSeconds
               << ",\"reported_max_penetration_fraction\":" << maximumPenetration
+              << ",\"internal_contact_points_removed\":" << boundary.removed
               << ",\"solver_work_total\":" << work << ",\"switches\":" << switches << ",\"level_frames\":[";
     for (int i = 0; i < 4; ++i) std::cout << (i ? "," : "") << histogram[i];
     std::cout << "],\"selected_levels\":[";
