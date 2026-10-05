@@ -7,6 +7,8 @@
 #include <limits>
 #include "coulomb_trust.h"
 #include "translation_split.h"
+#include "pressure_release.h"
+#include "coulomb_active.h"
 
 // Upstream friction RHS omits this angular free-velocity increment, although
 // normal RHS and final body writeback include it. Preserve the signed B row.
@@ -19,7 +21,9 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 struct CoulombStats {
  int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,rank_restarts=0,opposing_restarts=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
- int continuation_solves=0;
+ normal_pressure::Stats pressure;int pressure_solves=0;
+ circular_active::Stats active;int active_solves=0;
+ int continuation_solves=0;unsigned long long iteration_sweeps_total=0;
  circular_trust::Stats continuation;
 };
 
@@ -150,6 +154,7 @@ inline bool coulombIterate(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x
    }
    if(sweep==budget){if(rejected_impulses)*rejected_impulses=p;return false;}
   }
+  stats.iteration_sweeps_total++;
   if(sweep>=32&&sweep%16==0)newton();
   // Coupled block Gauss-Seidel: solve a normal, then its circular tangent block.
   for(auto& c:contacts){
@@ -179,18 +184,46 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  const btVectorXu& lo,const btVectorXu& hi,const btAlignedObjectArray<int>& dep,
  int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr,bool allow_recovery=true){
  std::vector<double> rejected;
- if(coulombIterate(A,b,x,lo,hi,dep,budget,tolerance,stats,&rejected))return true;
- // Recovery has a separately bounded numerical budget, and the original gate.
- // Preserve the warm rejected iterate only as a starting guess, never as output.
+ const bool recover=allow_recovery&&budget>=64;
+ const int first_budget=recover?std::min(budget,256):budget;
+ if(coulombIterate(A,b,x,lo,hi,dep,first_budget,tolerance,stats,&rejected))return true;
+ // Short initial iteration phase, followed by original-law recovery. Numerical
+ // trials are not applied. If search fails, preserve the remaining sweep budget.
  btVectorXu candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
- if(allow_recovery&&budget>=64&&circular_polish::solve(A,b,candidate,hi,dep,tolerance,stats)){x=candidate;stats.sweeps_max=std::max(stats.sweeps_max,budget);return true;}
- if(allow_recovery&&budget>=64&&circular_trust::solve(A,b,candidate,hi,dep,tolerance,stats.continuation)){
+ if(recover){
+  bool normal_only=true;std::vector<int> normals;
+  for(int i=0;i<b.rows();i++){if(dep[i]<0)normals.push_back(i);else normal_only&=hi[i]==0;}
+  if(normal_only){
+   const int n=static_cast<int>(normals.size());btMatrixXu N(n,n);btVectorXu rhs(n),upper(n),seed(n),answer(n);
+   for(int i=0;i<n;i++){rhs[i]=b[normals[i]];upper[i]=hi[normals[i]];seed[i]=rejected[normals[i]];for(int j=0;j<n;j++)N.setElem(i,j,A(normals[i],normals[j]));}
+   if(normal_pressure::solve(N,rhs,upper,seed,answer,tolerance,stats.pressure)){
+    x.setZero();for(int i=0;i<n;i++)x[normals[i]]=answer[i];stats.solves++;stats.pressure_solves++;
+    stats.last_residual=stats.pressure.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+    double change=0;for(int i=0;i<n;i++){double w=-rhs[i];for(int j=0;j<n;j++)w+=N(i,j)*answer[j];change+=.5*answer[i]*(w-rhs[i]);}
+    stats.passive_change_max=std::max(stats.passive_change_max,change);stats.sweeps_max=std::max(stats.sweeps_max,first_budget);return true;
+   }
+  }
+ }
+ if(recover&&circular_active::solve(A,b,candidate,hi,dep,tolerance,stats.active)){
+  x=candidate;stats.solves++;stats.active_solves++;stats.last_residual=stats.active.residual;
+  stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+  double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
+  stats.passive_change_max=std::max(stats.passive_change_max,change);stats.sweeps_max=std::max(stats.sweeps_max,first_budget);return true;
+ }
+ if(recover&&circular_trust::solve(A,b,candidate,hi,dep,tolerance,stats.continuation)){
   x=candidate;stats.solves++;stats.continuation_solves++;
   double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
   stats.passive_change_max=std::max(stats.passive_change_max,change);
   stats.last_residual=stats.continuation.residual;
   stats.residual_max=std::max(stats.residual_max,stats.last_residual);
-  stats.sweeps_max=std::max(stats.sweeps_max,budget);return true;
+  stats.sweeps_max=std::max(stats.sweeps_max,first_budget);return true;
+ }
+ if(recover&&circular_polish::solve(A,b,candidate,hi,dep,tolerance,stats)){
+  x=candidate;stats.sweeps_max=std::max(stats.sweeps_max,first_budget);return true;
+ }
+ if(first_budget<budget){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  if(coulombIterate(A,b,candidate,lo,hi,dep,budget-first_budget,tolerance,stats,&rejected)){x=candidate;return true;}
  }
  if(rejected_impulses)*rejected_impulses=rejected;
  return false;

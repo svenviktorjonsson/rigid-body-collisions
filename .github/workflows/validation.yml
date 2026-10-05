@@ -29,11 +29,12 @@ jobs:
       - name: Build pinned Float64 3D contact backend
         run: |
           cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks -j 2
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks -j 2
           build/spatial/spatial_qp_checks
           build/spatial/spatial_friction_checks
           build/spatial/shared_contact_checks
           build/spatial/translation_split_checks
+          build/spatial/active_contact_checks
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull42-rejected.json > /tmp/replayed-hull42.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-rejected.json > /tmp/replayed-hull7301.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-later-rejected.json > /tmp/replayed-hull7301-later.json
@@ -45,6 +46,11 @@ jobs:
           build/spatial/spatial_coulomb_replay research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json > /tmp/replayed-fast_rotate_shake27_hulls7301-0.json
           build/spatial/spatial_coulomb_replay research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json > /tmp/replayed-fast_rotate_shake27_hulls7301-1.json
           build/spatial/spatial_coulomb_replay research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json > /tmp/replayed-fast_rotate_shake27_hulls7301-2.json
+          build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json > /tmp/replayed-active-fast_shake8_hulls42-0.json
+          build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json > /tmp/replayed-active-fast_shake8_hulls42-1.json
+          build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json > /tmp/replayed-active-fast_shake8_hulls42-2.json
+          build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json > /tmp/replayed-active-fast_rotate_shake27_hulls7301-0.json
+          build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json > /tmp/replayed-active-fast_rotate_shake27_hulls7301-2.json
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend
       - name: Engine and benchmark-tool regressions
@@ -77,6 +83,7 @@ jobs:
           python -m research.audit_contact_completion
           python -m research.audit_interrupted_hulls
           python -m research.audit_coulomb_trust_recovery
+          python -m research.audit_large_contact_completion --final-native
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json

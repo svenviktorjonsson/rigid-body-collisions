@@ -1,3 +1,4 @@
+#include <cstdio>
 // Project adapter; Bullet itself is unmodified and retains its upstream license.
 #include <btBulletDynamicsCommon.h>
 #include <BulletDynamics/MLCPSolvers/btMLCPSolver.h>
@@ -86,6 +87,20 @@ int main(){try{
  record(0); double dt=in.at("dt"), feature=in.at("minimum_feature_m"), fraction=in.at("travel_fraction"),work=0,maxpenetration=0,maxresidual=0;
  double surface_excess=-BT_LARGE_FLOAT;
  int frames=in.at("frames"),primary=in.at("primary_steps"),total=0;
+ auto checkpoint=[&](){
+  if(!in.contains("progress_checkpoint_path"))return;
+  const std::string path=in.at("progress_checkpoint_path"),temporary=path+".tmp";
+  json progress={{"schema","native-spatial-progress-v1"},{"states_backend",states},{"times",times},
+    {"orientation_frame","backend principal inertia axes"},{"wire_bodies",in.at("bodies")},
+    {"boundary_work_J",work},{"completed_output_frames",states.size()-1},{"expected_output_frames",frames},
+    {"complete",states.size()==static_cast<size_t>(frames+1)},{"collision_updates",total},
+    {"coulomb_residual_max_m_s",coulomb_mlcp.stats.residual_max},
+    {"max_container_surface_excess_m",surface_excess}};
+  std::ofstream file(temporary);if(!file)throw std::runtime_error("Cannot write progress checkpoint");
+  file<<progress.dump()<<"\n";file.close();if(!file||std::rename(temporary.c_str(),path.c_str())!=0)
+   throw std::runtime_error("Cannot publish progress checkpoint");
+ };
+ checkpoint();
  auto start=std::chrono::steady_clock::now();
  for(int f=0;f<frames;f++){
   double left=dt;int count=0;
@@ -153,7 +168,7 @@ int main(){try{
    }
    left-=h;
   }
-  updates.push_back(count);record((f+1)*dt);
+  updates.push_back(count);record((f+1)*dt);checkpoint();
  }
  double seconds=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
  json out={{"states",states},{"times",times},{"updates",updates},{"step_s",seconds},{"collision_updates",total},{"boundary_work_J",work},{"max_contact_penetration_m",maxpenetration},{"max_closing_contact_speed_m_s",maxresidual},{"coupled_fallbacks",mlcp.getNumFallbacks()},{"coupled_updates",dense_steps},{"sequential_updates",fast_steps},{"scalar_precision","float64"},{"normal_qp_solves",normal.normal_solves},{"normal_qp_rejections",normal.normal_rejections},{"normal_matrix_rows_max",normal_mlcp.rows_max},{"eliminated_tangent_rows_max",normal_mlcp.removed_rows_max}};
@@ -162,6 +177,17 @@ int main(){try{
  out["shared_contact_rows"]=coulomb_mlcp.shared_point_rows;out["shared_contact_transport_max_m"]=coulomb_mlcp.shared_point_transport_max_m;out["contact_point_policy"]=point_policy;
  out["translation_split_solves"]=coulomb_mlcp.translation_split_solves;out["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
+ out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;
+ const auto& active=coulomb_mlcp.stats.active;out["coulomb_active_solves"]=coulomb_mlcp.stats.active_solves;
+ out["coulomb_active_subset_passes"]=active.passes;out["coulomb_active_mode_guesses"]=active.mode_guesses;
+ out["coulomb_active_expanded_contacts"]=active.expanded_contacts;
+ out["coulomb_active_svd_calls"]=active.search.svd_calls;out["coulomb_active_pressure_svd_calls"]=active.search.pressure_svd_calls;
+ out["coulomb_active_damped_steps"]=active.search.damped_steps;out["coulomb_active_pivot_calls"]=active.search.normal_pivot_attempts;
+ out["position_active_solves"]=coulomb_mlcp.position_stats.active_solves;
+ out["position_active_svd_calls"]=coulomb_mlcp.position_stats.active.search.svd_calls;
+ out["position_active_pressure_svd_calls"]=coulomb_mlcp.position_stats.active.search.pressure_svd_calls;
+ out["coulomb_pressure_solves"]=coulomb_mlcp.stats.pressure_solves;out["coulomb_pressure_svd_calls"]=coulomb_mlcp.stats.pressure.svd_calls;
+ out["position_pressure_solves"]=coulomb_mlcp.position_stats.pressure_solves;out["position_pressure_svd_calls"]=coulomb_mlcp.position_stats.pressure.svd_calls;
  const auto& continuation=coulomb_mlcp.stats.continuation;
  out["coulomb_continuation_attempts"]=continuation.attempts;out["coulomb_continuation_stages"]=continuation.stages;
  out["coulomb_continuation_svd_calls"]=continuation.svd_calls;out["coulomb_continuation_damped_steps"]=continuation.damped_steps;

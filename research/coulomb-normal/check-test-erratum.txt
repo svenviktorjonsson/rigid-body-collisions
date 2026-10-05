@@ -1,0 +1,1 @@
+The first synthetic-test run failed its exact-floating-point p[3]==0.25 assertion. The solver uses the unchanged 1e-8 contact acceptance tolerance; demanding exact floating-point equality was an invalid test requirement. Corrected assertion independently checks |p[3]-0.25|<=1e-8. No solver source or physical gate changed.

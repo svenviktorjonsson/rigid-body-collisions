@@ -1,0 +1,44 @@
+{
+  "protocol": "isolated captured-system recovery; not a completed trajectory or qualified accuracy comparison",
+  "baseline_source_commit": "f2097b0",
+  "prototype_source_hashes": {
+    "research/coulomb-normal/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "research/coulomb-normal/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "research/coulomb-normal/coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+    "research/coulomb-normal/coulomb_active_replay.cpp": "7bd6447461acda01ec87d4a600c442bf8213b6c2f5390eeb478e0a590f00cb16",
+    "research/coulomb-normal/checks.cpp": "7fcf62dada70e1ef7ebe5494cc957dc73b26b41b37b56d0962f10bc84ba112c4",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63"
+  },
+  "source_archive_sha256": "64295a4e57b9e8cbcdbe9de932caa8cf62d30e64ed9c62c6c2f4677de9f158ec",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "compile_flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off"
+  ],
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "static_libraries_sha256": {
+    "build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "replay_binary_sha256": "6d6c6d427fc2cb9fdf5f8477742341b45f5ec04042d30541c767126de3f594be",
+  "checks_binary_sha256": "a0f313b9ff569fb1690b8e355291c6daaaa1f11227550b4175b922e3cac8084f",
+  "limits": {
+    "full_rows": 4096,
+    "reduced_rows": 384,
+    "subset_passes": 8,
+    "newton_steps": 512,
+    "main_svd_calls": 256,
+    "damped_steps": 512,
+    "friction_continuation_attempts": 96,
+    "pressure_face_attempts": 128,
+    "pressure_svd_calls": 128,
+    "normal_pivot_guide_calls": 8,
+    "normal_pivot_internal_limit": "Bullet API does not expose an internal pivot-count limit"
+  },
+  "qualification": false
+}
