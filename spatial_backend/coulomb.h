@@ -137,7 +137,7 @@ inline bool coulombIterate(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x
     for(int i=0;i<n;i++){change+=.5*p[i]*(w[i]-b[i]);scale+=std::abs(p[i]*b[i]);}
     // With e=0 and separate position correction this is an upper bound on
     // E_after-E_before-W_wall. Positive-gap targets add a conservative term.
-    if(change>tolerance*scale)throw std::runtime_error("Coulomb passivity gate failed");
+    if(!std::isfinite(change)||!std::isfinite(scale)||change>tolerance*scale)throw std::runtime_error("Coulomb passivity gate failed");
     for(auto& c:contacts)if(p[c.normal]>hi[c.normal]){if(rejected_impulses)*rejected_impulses=p;return false;}
     for(int i=0;i<n;i++)x[i]=p[i];
     stats.solves++;stats.sweeps_max=std::max(stats.sweeps_max,sweep);

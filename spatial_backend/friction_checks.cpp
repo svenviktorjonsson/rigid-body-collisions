@@ -54,6 +54,13 @@ int main(){
  check(.2,2,.8,0,-3,0,.4); // Normal/tangent cross coupling changes required pn.
  check(.2,2,.1,.2,0,0,.4);
  check(0,2,0,0,-3,2,0); // Zero friction still solves normals.
+ // Finite states can overflow an energy product; that is rejection, not passivity.
+ {btMatrixXu A(3,3);A.setZero();for(int i=0;i<3;i++)A.setElem(i,i,1);
+  btVectorXu b(3),x(3),lo(3),hi(3);btAlignedObjectArray<int>dep;dep.resize(3);
+  for(int i=0;i<3;i++){b[i]=x[i]=i==0?1e200:0;lo[i]=0;hi[i]=i==0?1e300:0;dep[i]=i==0?-1:0;}
+  CoulombStats stats;bool rejected=false;try{coulombSolve(A,b,x,lo,hi,dep,64,1e-8,stats);}catch(const std::runtime_error& e){rejected=std::string(e.what()).find("passivity gate failed")!=std::string::npos;}
+  if(!rejected)throw std::runtime_error("Nonfinite energy ledger was accepted");
+ }
  GyroInspect gyro;gyro.check();
- std::cout<<"Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks)\n";
+ std::cout<<"Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks + energy overflow rejection)\n";
 }
