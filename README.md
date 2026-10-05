@@ -52,6 +52,15 @@ For the block backend, the latter means velocity iterations; for the temporal
 backend it means temporal substeps. See the backend guide for geometry, units,
 collision skin, friction mixing and rolling restrictions.
 
+The [seeded random-shape study](research/random-shapes/report.md) adds convex
+hulls, concave triangle compounds and shaking boxes with 36 mixed shapes.
+All 24 frozen physical-contact solves pass independently audited mechanics;
+four of eight full-trajectory references qualify. Both concave drops and mixed
+boxes remain unresolved, and the temporal backend rejects two mixed geometries.
+The [illustrated PDF](research/random-shapes/report.pdf) and archived inputs,
+trajectories, timings and rejection reasons preserve these limits. Disk-row
+speedups are not established for arbitrary random shapes.
+
 ## Reproduce and inspect evidence
 
 ```sh

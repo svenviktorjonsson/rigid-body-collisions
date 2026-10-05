@@ -135,7 +135,8 @@ def audit():
                     assert item['normal_tangent_cross_nnz'] > 0
                     assert len(item['timings']) == plan['repeats']
                     assert item['median_total_s'] == statistics.median(t['total_s'] for t in item['timings'])
-    print(f'Random shapes: 80 native histories, 12 physical contact geometries, '
+    retained = sum(r['accepted'] for r in summary['records'])
+    print(f'Random shapes: 80 native attempts, {retained} retained histories, 12 physical contact geometries, '
           f'{sum(k["accepted"] for k in summary["kernels"])}/24 accepted solves; '
           f'{qualified_count}/8 references qualified. All archived results audit.')
 
