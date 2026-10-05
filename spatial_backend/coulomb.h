@@ -337,6 +337,7 @@ protected:
    if(translation_split){
     double residual=0;
     if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual,&position_stats.null_pressure,recovery_enabled)){
+     if(position_geometry_observer)position_geometry_observer(m_allConstraintPtrArray,m_tmpSolverBodyPool,normals,m_bSplit,info.m_timeStep);
      if(rejection_observer){
       btVectorXu lower(k);btAlignedObjectArray<int> independent;independent.resize(k);std::vector<double> rejected_position(k);
       for(int i=0;i<k;i++){lower[i]=0;independent[i]=-1;rejected_position[i]=x[i];}
@@ -359,6 +360,10 @@ protected:
   return true;
  }
 public:
+ // Observation only: exact failed-step geometry goes to a separate companion.
+ std::function<void(const btAlignedObjectArray<btSolverConstraint*>&,
+  const btAlignedObjectArray<btSolverBody>&,const std::vector<int>&,
+  const btVectorXu&,double)> position_geometry_observer;
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
  bool recovery_enabled=true,shared_contact_point=true;

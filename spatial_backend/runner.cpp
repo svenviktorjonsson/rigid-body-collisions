@@ -11,6 +11,7 @@
 #include <fstream>
 using json=nlohmann::json;
 #include "coulomb.h"
+#include "position_geometry.h"
 btVector3 vec(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>()};}
 btQuaternion quat(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>(),j[3].get<double>()};}
 json array(const btVector3& v){return {v.x(),v.y(),v.z()};}
@@ -39,13 +40,23 @@ int main(){try{
  coulomb_mlcp.translation_split=in.value("position_stabilization",std::string("split"))=="split_translation";
  if(coulomb_mlcp.translation_split&&!coulomb_solver)throw std::runtime_error("Translation-only split requires coulomb solver");
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
+ json position_geometry_snapshot;
  if(in.contains("rejected_contact_path")){
   std::string path=in.at("rejected_contact_path");
+  coulomb_mlcp.position_geometry_observer=[&](const auto& rows,const auto& solver_bodies,const auto& normals,const auto& split,double h){
+   position_geometry_snapshot=positionGeometry(rows,solver_bodies,normals,split,h);
+   position_geometry_snapshot["wire_bodies"]=in.at("bodies");
+   position_geometry_snapshot["margin_m"]=in.value("margin_m",0.);
+  };
   coulomb_mlcp.rejection_observer=[&,path](const auto& A,const auto& b,const auto& p,const auto& lo,const auto& hi,const auto& dep,const char* phase,double residual,double h){
    json matrix=json::array(),rhs=json::array(),lower=json::array(),upper=json::array(),dependencies=json::array();
    for(int i=0;i<b.rows();i++){json row=json::array();for(int j=0;j<b.rows();j++)row.push_back(A(i,j));matrix.push_back(row);rhs.push_back(b[i]);lower.push_back(lo[i]);upper.push_back(hi[i]);dependencies.push_back(dep[i]);}
    const bool normal_only=std::string(phase)=="position_translation";
    json snapshot={{"schema",normal_only?"normal-only-position-rejection-v1":"circular-coulomb-rejection-v1"},{"phase",phase},{"A",matrix},{"b",rhs},{"p",p},{"lo",lower},{"hi",upper},{"dependencies",dependencies},{"residual_m_s",residual},{"tolerance_m_s",coulomb_mlcp.tolerance},{"internal_dt_s",h},{"iteration_budget",in.at("iterations")}};
+   if(normal_only&&!position_geometry_snapshot.is_null()){
+    std::ofstream geometry(path+".geometry.json");if(!geometry)throw std::runtime_error("Cannot write position geometry diagnostic");
+    geometry<<position_geometry_snapshot.dump()<<"\n";geometry.close();if(!geometry)throw std::runtime_error("Failed writing position geometry diagnostic");
+   }
    std::ofstream file(path);if(!file)throw std::runtime_error("Cannot write rejected contact diagnostic");file<<snapshot.dump()<<"\n";file.close();if(!file)throw std::runtime_error("Failed writing rejected contact diagnostic");
   };
  }
