@@ -30,3 +30,8 @@ research/hull-aabb-cache-review/results/cache_control
 research/early-component-policy-review/run-*/policy_checks
 research/early-component-policy-review/run-*/replay_candidate
 research/early-component-policy-review/run-*/replay_frozen
+
+research/live-integration-review/run-*/runner
+research/live-integration-review/run-*/translation_combined_checks
+research/live-integration-review/run-*/coulomb_early_checks
+research/live-integration-review/run-*/cmake-no-lapack/

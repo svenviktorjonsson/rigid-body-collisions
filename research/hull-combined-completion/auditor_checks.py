@@ -3,7 +3,7 @@
 Existing native records are read-only fixtures; their use is not a combined-policy
 trajectory result. Synthetic modifications exercise rejection of malformed data.
 """
-import copy,hashlib,json,tempfile
+import copy,hashlib,importlib.util,json,tempfile
 from pathlib import Path
 from research.audit_hull_combined_completion import (
     ROOT,STUDY,FIELDS,CHANGE,audit_plan,ledger,position_projection,count,
@@ -24,6 +24,11 @@ def main():
     checks.append('Pending preceding baseline cannot become execution evidence; finalized baseline must validate explicitly')
     with tempfile.TemporaryDirectory(prefix='combined-auditor-controls-') as name:
         temporary=Path(name)
+        pending_fixture=copy.deepcopy(plan)
+        pending_fixture.update(preceding_protocol_freeze_status='PENDING_CURRENT_SIX_ATTEMPT_TERMINAL_ARCHIVE',preceding_protocol_artifact_hashes={},preparation_status='READY_WITH_SCOPE_AWAITING_FINAL_FREEZE')
+        (temporary/'plan.json').write_text(json.dumps(pending_fixture))
+        audit_plan(temporary)
+        rejects(lambda:audit_plan(temporary,require_ready=True))
         for mutate in (
             lambda p:p['common'].update(early_component_recovery=False),
             lambda p:p['common'].update(position_stabilization='split_translation_gap'),
@@ -51,7 +56,23 @@ def main():
         for malformed in (True,-1,1.,float('nan')):rejects(lambda:count(malformed))
         for residual in (float('nan'),float('inf'),-1.,1.001e-8):
             rejects(lambda:position_projection(dict(translation_split_solves=3,translation_split_residual_max_m_s=residual),1e-8))
-        checks.append('Finite ledger/vector/triangle/zero-update and strict projection/counter controls')
+        # Producer bookkeeping control uses synthetic gates only; this is no native trajectory.
+        spec=importlib.util.spec_from_file_location('combined_producer_control',STUDY/'runner.py')
+        producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
+        producer.diagnostics=lambda scene,result,half:{key:0. for key in plan['physical_gates']}
+        producer.errors=lambda a,b:{key:0. for key in plan['trajectory_budget']}
+        good=dict(coulomb_residual_max_m_s=0.,translation_split_solves=1,translation_split_residual_max_m_s=0.,contact_point_policy='shared',numerical_model={'contact_point_policy':'shared'})
+        test_scene={'container_interior_half_extents_m':[1.]}
+        test_runs={f'reference_{i}':copy.deepcopy(good) for i in range(3)}
+        assert producer.qualify(plan,test_scene,test_runs)['reference_qualified']
+        for badvalue in (float('nan'),-1.,1.001e-8):
+            badruns=copy.deepcopy(test_runs);badruns['reference_1']['translation_split_residual_max_m_s']=badvalue
+            assert not producer.qualify(plan,test_scene,badruns)['reference_qualified']
+        badruns=copy.deepcopy(test_runs);del badruns['reference_1']['translation_split_residual_max_m_s']
+        assert not producer.qualify(plan,test_scene,badruns)['reference_qualified']
+        badruns=copy.deepcopy(test_runs);badruns['reference_1']['translation_split_solves']=True
+        assert not producer.qualify(plan,test_scene,badruns)['reference_qualified']
+        checks.append('Finite ledger/vector/triangle/zero-update, strict projection/counter AND producer position-eligibility controls')
         saved=dict(native_prefix=record,final=record,prefix_available=True,final_available=True)
         ledger_agreement(record,record,saved)
         altered=dict(record);altered[FIELDS[1]]=.02

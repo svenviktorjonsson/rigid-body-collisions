@@ -31,7 +31,7 @@ jobs:
       - name: Build pinned Float64 3D contact backend
         run: |
           cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks coulomb_restart_checks support_restart_checks -j 2
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks coulomb_restart_checks support_restart_checks translation_combined_checks coulomb_early_checks -j 2
           build/spatial/spatial_qp_checks
           build/spatial/spatial_friction_checks
           build/spatial/shared_contact_checks
@@ -40,6 +40,8 @@ jobs:
           build/spatial/normal_null_checks
           build/spatial/coulomb_restart_checks
           build/spatial/support_restart_checks
+          build/spatial/translation_combined_checks
+          build/spatial/coulomb_early_checks
           python research/component-recovery-integration/audit.py
           python research/component-recovery-integration/checks.py
           python -m research.verify_native_contact_replays
@@ -54,7 +56,15 @@ jobs:
           python research/translation-gap-position-review/audit.py
           python research/translation-gap-position-review/audit_native.py
           python research/translation-first256-review/audit_v2.py
-          python -m research.audit_hull_gap_completion --plan-only
+          python -m research.audit_hull_gap_completion --source-commit 108a9bb4c7899f75d760b27b179cc56557904a08 --receipt-prefix ci-final-gap
+          python research/hull-aabb-cache-review/audit.py
+          early_audit_dir=$(mktemp -d)
+          cp -R research/early-component-policy-review/run-20261005T191156Z/. "$early_audit_dir/"
+          rm "$early_audit_dir/decline-budget-audit-launch.json"
+          python research/early-component-policy-review/audit_isolated.py "$early_audit_dir"
+          python research/early-component-policy-review/audit_decline_and_caps.py "$early_audit_dir"
+          python -m research.audit_hull_combined_completion --plan-only
+          python -m research.hull-combined-completion.auditor_checks
           python -m research.hull-gap-completion.auditor_checks
           python research/translation-position-certificate/verify.py
           python -m unittest discover -s research/translation-position-certificate -p 'test_*.py' -v

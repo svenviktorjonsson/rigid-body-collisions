@@ -102,9 +102,15 @@ def qualify(plan,scene,runs):
         d=diagnostics(scene,result,scene['container_interior_half_extents_m'][0]);physical[lane]=d
         finite=all(np.isfinite(value) for value in d.values())
         gates=all(key in d and d[key]<=limit for key,limit in plan['physical_gates'].items())
-        contact=np.isfinite(result['coulomb_residual_max_m_s']) and result['coulomb_residual_max_m_s']<=plan['common']['contact_tolerance_m_s']
+        contact=np.isfinite(result['coulomb_residual_max_m_s']) and 0<=result['coulomb_residual_max_m_s']<=plan['common']['contact_tolerance_m_s']
+        position_solves=result.get('translation_split_solves')
+        position_residual=result.get('translation_split_residual_max_m_s')
+        position=bool(isinstance(position_solves,int) and not isinstance(position_solves,bool) and position_solves>=0
+                      and position_residual is not None and np.isfinite(position_residual)
+                      and 0<=position_residual<=plan['common']['contact_tolerance_m_s']
+                      and (position_solves>0 or position_residual==0))
         shared=result.get('contact_point_policy')=='shared' and result.get('numerical_model',{}).get('contact_point_policy')=='shared'
-        eligible[lane]=bool(finite and gates and contact and shared)
+        eligible[lane]=bool(finite and gates and contact and position and shared)
     edges=[]
     for left,right in [('reference_0','reference_1'),('reference_1','reference_2')]:
         error=errors(runs[left],runs[right]) if eligible.get(left) and eligible.get(right) else None
@@ -117,7 +123,14 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--source-commit');parser.add_argument('--check-plan',action='store_true')
     parser.add_argument('--workload-note',default='Parallel collaborative workload; descriptive timings only')
     args=parser.parse_args();plan=json.loads(PLAN.read_text());authored=validate_plan(plan)
-    if args.check_plan:print('READY WITH SCOPE: six exact source52 lanes; combined position policy, early recovery AND shape-cache margin order declared; preceding archive/auditor/root final freeze pending; no native execution');return
+    if args.check_plan:
+        ready=plan['preceding_protocol_freeze_status']=='FINALIZED_SIX_ATTEMPT_ARCHIVE' and plan['preparation_status']=='FINALIZED_FOR_ROOT_PUBLISHED_EXECUTION'
+        if ready:
+            validate_plan(plan,require_ready=True)
+            print('READY protocol: six exact source52 lanes; THREE numerical changes; predecessor six terminal archives frozen; execution still requires root-published integration SHA and ready native build; no native execution')
+        else:
+            print('PENDING predecessor archive/source freeze: prospective six exact source52 lanes and THREE declarations valid; no native execution')
+        return
     authored=validate_plan(plan,require_ready=True)
     for key,value in plan['thread_environment'].items():
         if os.environ.get(key)!=value:raise RuntimeError('Set '+key+'='+value+' before native study execution')

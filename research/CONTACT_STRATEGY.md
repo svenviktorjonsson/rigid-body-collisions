@@ -51,7 +51,7 @@ Current evidence includes independently qualified slow shaking, rapid translatio
 and fast eight-box shaking. The corrected shared-point 27-sphere fast-shaking
 study qualifies both adjacent reference edges and verifies 7.17x native gain
 for its declared scene and budgets. Complete random-hull trajectories require
-separate qualification. Sixteen captured hull systems now pass the combined
+separate qualification. Twenty-two retained captured contact systems now pass the combined
 primary/active-contact/continuation/polishing solver. Fresh full trajectories
 have reached later failures; they remain unqualified until all physical and
 refinement gates pass.
@@ -164,6 +164,17 @@ The numerical pose ledger uses the final physical velocity, including applied
 velocity and external-force increments, to record displacement cross momentum.
 It separately reports signed and absolute gravity-potential and orbital-momentum
 changes. These corrections are disclosed, not subtracted from the original energy
-gate. The prospective six-run hull study keeps the original bodies, wall schedules,
-friction, tolerances and both refinement edges. Accepted partial frames cannot
-qualify a trajectory. Source freeze: 108a9bb4c7899f75d760b27b179cc56557904a08.
+gate. The source108 six-run study completed all six histories without rejections;
+all individual physical/contact/ledger gates pass, but both scenes fail both
+original quarter-budget refinement edges. No dense-hull trajectory is qualified.
+
+The next combined rule subtracts accepted physical point motion, including spin,
+from every desired numerical position rate; a native writeback oracle and actual
+opposing-wall sphere test verify that clearance is not consumed twice. Hull bounds
+are recalculated after setting the authored margin. An optional early component
+search uses the actual first256 rejected iterate, restores its exact seed on
+decline and preserves every original final law gate. Default ordering stays
+unchanged; early and later helper caps are separate, and declines can add work.
+The fresh full protocol declares all three numerical choices together, retains
+all original gates and forbids causal attribution or a speed ranking from this
+joint experiment. Its results must be independently audited before qualification.

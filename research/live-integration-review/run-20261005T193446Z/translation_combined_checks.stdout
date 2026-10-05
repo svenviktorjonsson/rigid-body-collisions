@@ -1,0 +1,4 @@
+PASS actual upstream parity: warm normal/two tangents/fixed and rotating kinematic slots/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged
+PASS full angular physical normal rate; fake push/turn excluded
+PASS finite/dimension/index/alias rejection and output preservation; normal-order target bookkeeping
+PASS all 15 distance/rate branches, signed remaining clearance and opposing-face zero-push control

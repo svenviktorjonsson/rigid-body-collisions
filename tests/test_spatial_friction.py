@@ -142,3 +142,49 @@ class Coulomb3D(unittest.TestCase):
         with self.assertRaises(ValueError):self.simulate(scene)
         with self.assertRaises(ValueError):run(floor_ball([1,0,-2]),solver='coulomb')
         with self.assertRaises(ValueError):self.simulate(floor_ball([1,0,-2]),contact_recovery='yes')
+
+
+    def test_combined_pose_policy_does_not_spend_clearance_twice(self):
+        radius=.1
+        scene=dict(duration=.001,gravity=[0,0,0],bodies=[
+            dict(type='static',position=[-.1095,0,0],friction=0,
+                 shapes=[dict(kind='box',half_extents=[.01,1,1])]),
+            dict(type='static',position=[.111000001,0,0],friction=0,
+                 shapes=[dict(kind='box',half_extents=[.01,1,1])]),
+            dict(position=[0,0,0],velocity=[.95,0,0],friction=0,
+                 density=1/(4*np.pi*radius**3/3),
+                 shapes=[dict(kind='sphere',radius=radius)])])
+        old=self.simulate(scene,dt=.001,primary_steps=1,travel_fraction=0,
+                          position_stabilization='split_translation_gap')
+        with tempfile.TemporaryDirectory() as directory:
+            checkpoint=Path(directory)/'progress.json'
+            new=self.simulate(scene,dt=.001,primary_steps=1,travel_fraction=0,
+                              position_stabilization='split_translation_combined',
+                              early_component_recovery=True,
+                              progress_checkpoint_path=checkpoint)
+            prefix=json.loads(checkpoint.read_text())
+        old_state=np.asarray(old['states'])[-1,2]
+        new_state=np.asarray(new['states'])[-1,2]
+        right_face=.101000001
+        self.assertLess(right_face-old_state[0]-radius,-4.9e-5)
+        self.assertGreater(right_face-new_state[0]-radius,4.9e-5)
+        np.testing.assert_allclose(new_state[:3],[.00095,0,0],atol=1e-12)
+        np.testing.assert_allclose(new_state[7:13],[.95,0,0,0,0,0],atol=1e-12)
+        np.testing.assert_allclose(old_state[7:13],new_state[7:13],atol=1e-12)
+        self.assertAlmostEqual(energy(new)[-1],energy(new)[0],delta=1e-12)
+        self.assertEqual(new['translation_pose_displacement_max_m'],0)
+        self.assertLessEqual(new['coulomb_residual_max_m_s'],1e-8)
+        self.assertLessEqual(new['translation_split_residual_max_m_s'],1e-8)
+        self.assertEqual(new['early_component_policy']['attempts'],0)
+        self.assertTrue(new['numerical_model']['early_component_recovery'])
+        self.assertEqual(new['numerical_model']['shape_cache_margin_order'],'margin before recalc')
+        for key in new:
+            if key.startswith('translation_pose_'):
+                self.assertEqual(prefix[key],new[key])
+
+    def test_early_recovery_requires_a_boolean_and_enabled_coulomb_recovery(self):
+        scene=floor_ball([0,0,0])
+        for options in (dict(early_component_recovery=1),
+                        dict(early_component_recovery=True,contact_recovery=False)):
+            with self.assertRaises(ValueError):self.simulate(scene,**options)
+        with self.assertRaises(ValueError):run(scene,early_component_recovery=True)

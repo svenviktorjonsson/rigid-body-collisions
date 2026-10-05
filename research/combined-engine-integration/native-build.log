@@ -1,0 +1,405 @@
+ninja: warning: premature end of file; recovering
+[1/8] Building CXX object CMakeFiles/spatial_coulomb_replay.dir/coulomb_replay.cpp.o
+[2/8] Building CXX object CMakeFiles/translation_combined_checks.dir/translation_combined_checks.cpp.o
+[3/8] Building CXX object CMakeFiles/spatial_runner.dir/runner.cpp.o
+In file included from /workspace/rigid-body-collisions/spatial_backend/runner.cpp:5:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h: In member function ‘virtual bool btDantzigSolver::solveMLCP(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, bool)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:187: warning: unused parameter ‘numIterations’ [-Wunused-parameter]
+   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)
+      |                                                                                                                                                                                       ~~~~^~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:207: warning: unused parameter ‘useSparsity’ [-Wunused-parameter]
+   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)
+      |                                                                                                                                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~
+In file included from /workspace/rigid-body-collisions/spatial_backend/translation_split.h:9,
+                 from /workspace/rigid-body-collisions/spatial_backend/coulomb.h:9,
+                 from /workspace/rigid-body-collisions/spatial_backend/runner.cpp:13:
+/workspace/rigid-body-collisions/spatial_backend/normal_null.h: In function ‘bool normal_null::solve(const btMatrixXd&, const btVectorXd&, const btVectorXd&, const btVectorXd&, btVectorXd&, double, Stats&, int)’:
+/workspace/rigid-body-collisions/spatial_backend/normal_null.h:21:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   21 |   for(double v:delta)magnitude=std::max(magnitude,std::abs(v));const bool nullStep=magnitude>1e-12;
+      |   ^~~
+/workspace/rigid-body-collisions/spatial_backend/normal_null.h:21:64: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   21 |   for(double v:delta)magnitude=std::max(magnitude,std::abs(v));const bool nullStep=magnitude>1e-12;
+      |                                                                ^~~~~
+In file included from /workspace/rigid-body-collisions/spatial_backend/coulomb.h:10:
+/workspace/rigid-body-collisions/spatial_backend/translation_combined.h: In function ‘bool combined_translation_review::targets(const btAlignedObjectArray<btSolverConstraint*>&, const std::vector<int>&, const std::vector<double>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, double, double, btVectorXd&, btVectorXd*, btVectorXd*)’:
+/workspace/rigid-body-collisions/spatial_backend/translation_combined.h:109:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  109 |  if(desired_rates)*desired_rates=desired_values;return true;
+      |  ^~
+/workspace/rigid-body-collisions/spatial_backend/translation_combined.h:109:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  109 |  if(desired_rates)*desired_rates=desired_values;return true;
+      |                                                 ^~~~~~
+In file included from /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:18,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletCollision/CollisionDispatch/btCollisionWorld.h:78,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/btBulletCollisionCommon.h:22,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/btBulletDynamicsCommon.h:20,
+                 from /workspace/rigid-body-collisions/spatial_backend/runner.cpp:3:
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:117:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[0]’ may be used uninitialized [-Wmaybe-uninitialized]
+  117 |                 m_el[0] = other.m_el[0];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+In file included from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletCollision/CollisionDispatch/btCollisionObject.h:34,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletCollision/CollisionDispatch/btCollisionWorld.h:79:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:118:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[1]’ may be used uninitialized [-Wmaybe-uninitialized]
+  118 |                 m_el[1] = other.m_el[1];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:119:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[2]’ may be used uninitialized [-Wmaybe-uninitialized]
+  119 |                 m_el[2] = other.m_el[2];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btTransform::btTransform(const btTransform&)’,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:62:19: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_origin’ may be used uninitialized [-Wmaybe-uninitialized]
+   62 |                   m_origin(other.m_origin)
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In file included from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverConstraint.h:26,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btTypedConstraint.h:20,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h:21,
+                 from /workspace/rigid-body-collisions/build/bullet-inspect/src/btBulletDynamicsCommon.h:27:
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_deltaLinearVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_deltaAngularVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_angularFactor’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_linearFactor’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_invMass’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_pushVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_turnVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_linearVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_angularVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_externalForceImpulse’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘btAlignedObjectArray<T>::btAlignedObjectArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:9,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:33:43:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_externalTorqueImpulse’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:137:23: note: ‘<anonymous>’ declared here
+  137 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:117:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[0]’ may be used uninitialized [-Wmaybe-uninitialized]
+  117 |                 m_el[0] = other.m_el[0];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:118:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[1]’ may be used uninitialized [-Wmaybe-uninitialized]
+  118 |                 m_el[1] = other.m_el[1];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btMatrix3x3::btMatrix3x3(const btMatrix3x3&)’,
+    inlined from ‘btTransform::btTransform(const btTransform&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:61:5,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btMatrix3x3.h:119:25: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_basis.btMatrix3x3::m_el[2]’ may be used uninitialized [-Wmaybe-uninitialized]
+  119 |                 m_el[2] = other.m_el[2];
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btTransform::btTransform(const btTransform&)’,
+    inlined from ‘btSolverBody::btSolverBody(const btSolverBody&)’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btTransform.h:62:19: warning: ‘<unnamed>.btSolverBody::m_worldTransform.btTransform::m_origin’ may be used uninitialized [-Wmaybe-uninitialized]
+   62 |                   m_origin(other.m_origin)
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_deltaLinearVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_deltaAngularVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_angularFactor’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_linearFactor’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_invMass’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_pushVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_turnVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_linearVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_angularVelocity’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_externalForceImpulse’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+In copy constructor ‘btSolverBody::btSolverBody(const btSolverBody&)’,
+    inlined from ‘void btAlignedObjectArray<T>::resize(int, const T&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:223:5,
+    inlined from ‘void btAlignedObjectArray<T>::copyFromArray(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:9,
+    inlined from ‘btAlignedObjectArray<T>& btAlignedObjectArray<T>::operator=(const btAlignedObjectArray<T>&) [with T = btSolverBody]’ at /workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:59:16,
+    inlined from ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’ at /workspace/rigid-body-collisions/spatial_backend/translation_combined.h:50:9:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/ConstraintSolver/btSolverBody.h:104:1: warning: ‘<unnamed>.btSolverBody::m_externalTorqueImpulse’ may be used uninitialized [-Wmaybe-uninitialized]
+  104 | btSolverBody
+      | ^~~~~~~~~~~~
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h: In function ‘bool combined_translation_review::acceptedPhysicalBodies(const btAlignedObjectArray<btSolverConstraint*>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, btAlignedObjectArray<btSolverBody>&)’:
+/workspace/rigid-body-collisions/build/bullet-inspect/src/LinearMath/btAlignedObjectArray.h:499:23: note: ‘<anonymous>’ declared here
+  499 |                 resize(otherSize);
+      |                 ~~~~~~^~~~~~~~~~~
+[4/8] Linking CXX executable spatial_runner
+[5/8] Linking CXX executable spatial_coulomb_replay
+[6/8] Linking CXX executable translation_combined_checks
+[7/8] Building CXX object CMakeFiles/coulomb_early_checks.dir/coulomb_early_checks.cpp.o
+[8/8] Linking CXX executable coulomb_early_checks

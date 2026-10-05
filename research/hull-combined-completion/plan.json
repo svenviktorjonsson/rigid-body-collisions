@@ -63,7 +63,7 @@
   "baseline_plan": "research/hull-translation-completion/plan.json",
   "baseline_scenes": "research/hull-translation-completion/results/scenes.json",
   "changed_discretization": "All normal POSITION targets, after accepted physical impulses, equal desired legacy ERP rate (penetrating), zero (within slop), or negative available gap/internal timestep (separated), minus actual final physical normal rate including linear AND angular contributions. Shared contact geometry and physical Coulomb equations unchanged; no angular pose correction. Also set the declared margin before recalculating local AABB; unchanged authored geometry/material, explicitly changed broadphase/relative-breaking cache behavior.",
-  "execution_rule": "Do not build or execute while preceding source108a9bb4c7899f75d760b27b179cc56557904a08 six-lane study is running. Root finalizes preceding terminal archives/hashes, helper/auditor source paths, native build and plan, then commits/publishes exact40-character integration SHA. Guard committed source bytes, native binary, all linked runtime libraries and original/preceding frozen archives before and after EACH attempt. No skipped lane, undeclared retry, invented terminal outcome or artifact overwrite.",
+  "execution_rule": "Predecessor source108 six lanes are terminal and its immutable archives are published; five hashes are frozen in this plan. Root finishes native integration/build, then commits/publishes this plan, runner and auditors under an exact40-character source SHA before execution. Guard committed source bytes, native binary, all linked runtime libraries and original/preceding frozen archives before and after EACH attempt. No skipped lane, undeclared retry, invented terminal outcome or artifact overwrite.",
   "performance_scope": "Costs are descriptive under recorded concurrent workload, not a controlled speed-ranking experiment.",
   "contact_point_policy": "shared",
   "paired_shared_plan": "research/shared-hull-followup/plan.json",
@@ -102,12 +102,18 @@
     "MKL_NUM_THREADS": "1",
     "NUMEXPR_NUM_THREADS": "1"
   },
-  "preparation_status": "READY_WITH_SCOPE_AWAITING_FINAL_FREEZE",
+  "preparation_status": "FINALIZED_FOR_ROOT_PUBLISHED_EXECUTION",
   "preceding_protocol_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
   "preceding_protocol_plan": "research/hull-gap-completion/plan.json",
   "preceding_protocol_results": "research/hull-gap-completion/results",
-  "preceding_protocol_freeze_status": "PENDING_CURRENT_SIX_ATTEMPT_TERMINAL_ARCHIVE",
-  "preceding_protocol_artifact_hashes": {},
+  "preceding_protocol_freeze_status": "FINALIZED_SIX_ATTEMPT_ARCHIVE",
+  "preceding_protocol_artifact_hashes": {
+    "research/hull-gap-completion/results/summary.json": "1c2cfd56d73f6ca6014c0f799b088a81863207762b3549544a77bd608717109d",
+    "research/hull-gap-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-gap-completion/results/traces.zip": "af7d694e3546e8c83ac598fabe40487c3a9c56e8aecd879e83e8b7a68f012800",
+    "research/hull-gap-completion/results/execution-source.zip": "d3341eddf5809e5d5e61eb619e8de4bc17eef79c43367de58ee382fe9e6ed028",
+    "research/hull-gap-completion/plan.json": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737"
+  },
   "combined_rule": "After the accepted physical impulse solve, subtract the final physical normal point rate, INCLUDING angular velocities and accepted/external changes, from EVERY desired position normal rate. Desired rate retains legacy ERP for penetration, zero within slop, and negative signed available clearance divided by internal timestep when separated. Physical impulse rows keep original RHS/law/gates.",
   "early_recovery_rule": "Optional boolean early_component_recovery=true tries the existing V3 exact-component recovery after the first 256 actual rejected sweeps and before the older recovery sequence. Default false stays unchanged for all prior protocols. Existing search budgets, original-law final acceptance and actual rejection accounting remain disclosed.",
   "freeze_required_paths": [
@@ -121,5 +127,6 @@
     "baseline": "recalc before margin",
     "candidate": "margin before recalc"
   },
-  "shape_cache_rule": "Set the already-declared collision margin BEFORE recalcLocalAabb so cached broadphase bounds correspond to the authored margin. Actual hull vertices, declared margin, inertia and material remain unchanged. Broadphase/relative-breaking cache behavior changes explicitly; three changed numerical choices preclude causal attribution."
+  "shape_cache_rule": "Set the already-declared collision margin BEFORE recalcLocalAabb so cached broadphase bounds correspond to the authored margin. Actual hull vertices, declared margin, inertia and material remain unchanged. Broadphase/relative-breaking cache behavior changes explicitly; three changed numerical choices preclude causal attribution.",
+  "preceding_archive_publication_commit": "579ae11365e87a84bfcb39ce14568282398299c3"
 }

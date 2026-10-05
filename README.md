@@ -114,7 +114,7 @@ correction, which otherwise can add kinetic energy to a spinning anisotropic bod
 It preserves the physical velocity solve; positional translation still requires
 separate gravitational-energy and orbital-momentum accounting.
 
-The [latest completed shared-hull study](research/hull-translation-completion)
+The [earlier translation-only shared-hull study](research/hull-translation-completion)
 retains six uninterrupted attempts: three eight-body histories and three
 27-body solver rejections, with **zero qualified references**. Both completed
 refinement edges exceed every unchanged trajectory budget. The two new velocity
@@ -137,10 +137,26 @@ The existing native solver passes the revised saved 74-row problem at
 independent geometry re-query. This is a declared change to the numerical repair,
 not a solution of the old inconsistent equations. Native output and atomic
 progress disclose numerical gravitational-energy and orbital-momentum changes.
-The [six full-trajectory protocol](research/hull-gap-completion) is frozen at
-`108a9bb4c7899f75d760b27b179cc56557904a08`; its results require independent physical
-and refinement checks before qualification. The integration passes 160 Python
-regressions and native translation checks.
+The [completed six full trajectories](research/hull-gap-completion/RESULTS.md),
+frozen at `108a9bb4c7899f75d760b27b179cc56557904a08`, have **six complete histories,
+zero solver rejections, and zero qualified references**. Individual physical,
+contact and ledger checks pass, but both scenes fail both original refinement
+edges. Passing contact equations does not establish trajectory accuracy.
+
+The new opt-in `position_stabilization="split_translation_combined"` subtracts
+accepted physical linear and angular contact motion from every desired numerical
+position rate. This prevents physical motion and pose repair spending the same
+gap twice. A real two-wall sphere control changes a 50-micrometre overlap into
+50 micrometres of clearance without changing velocity or energy. Hull construction
+also sets its declared margin before recomputing cached bounds; eight independent
+cache controls pass. The opt-in `early_component_recovery=True` uses the actual
+rejected first256 iterate before the old recovery pipeline. Its isolated66 outputs
+pass original-law gates; default22 outputs remain exact, and all5 early declines
+retain the original endpoint with their added work disclosed. No universal speed
+ranking is claimed. The integration passes162 engine and10 contact-model tests.
+The [fresh six-trajectory protocol](research/hull-combined-completion) preserves
+all original scene, material, contact, energy and refinement gates while declaring
+these three numerical changes together; its accuracy remains to be evaluated.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
