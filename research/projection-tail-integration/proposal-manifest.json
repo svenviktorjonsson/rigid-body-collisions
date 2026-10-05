@@ -1,0 +1,11 @@
+{
+  "status": "UNAPPLIED_UNCOMPILED_PENDING_23_INPUT_PROOF",
+  "baseline_live_source": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "validated_isolated_helper_source": "170d798b113863dc4bee3df515bb8ab63175ea21",
+  "files": {
+    "research/projection-tail-integration/proposed/coulomb.h": "bcd98a25c10d0e691d433284b74079a8b74d8c3e096247ccb1fec4d34f5d75e0",
+    "research/projection-tail-integration/proposed/projection_more.h": "784773028b2c5c7312adb4bc5b6d1d1fdd21f8b23a29a58b5596446bc5e4d895",
+    "research/projection-tail-integration/proposed/projection_tail_checks.cpp": "c6841481b13b5f6b4ed48cfef485c070926bea0b1bf0a311492785ec50b47012",
+    "research/projection-tail-integration/proposed/runner.cpp": "a47e4eb2f272d5ccf69fa713df11ee3a718ca86b7110b50642e385be828d5af2"
+  }
+}

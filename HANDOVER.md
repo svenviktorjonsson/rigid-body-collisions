@@ -1,0 +1,65 @@
+# Physics-engine continuation
+
+User requested a push and handover on October5,2026 to continue in another chat. Continue on `svenviktorjonsson/rigid-body-collisions`, branch `research/adaptive-benchmark-validation`. Root coordinates commits/publication; do not merge main or force-push. User authorizes frequent pushes and parallel research/review. Keep original material and physical/accuracy gates; preserve actual failures and source provenance.
+
+## Verified production and rubber-like examples
+
+Live production source is **bca35c3103a78c731b37ea8a467e5fc71d13e8aa**; later checkpoints add evidence and a corrected test fixture. The bounded projection-tail proposal below is NOT integrated.
+
+- 162 engine +10 contact-model regressions pass. Native mechanical checks and all22 retained original-law contact replays pass. Independent no-LAPACK/API/rotating-wall review passes17 checks. A corrected1kg opposing-wall fixture passes its11-test friction suite; the earlier body-level density fixture error is retained.
+- Combined translation repair subtracts actual accepted final physical contact motion, including angular/warm/external/gyro increments, from every desired position normal rate. This fixes double consumption of clearance; actual1kg ball control changes rightgap−49.999µm to+50.001µm, samevx.95m/s/K.45125J, no new numerical pose displacement.
+- Hull margin is set before recalculating cached AABBs;8 independent geometry controls pass. Contact discovery intentionally changes, so solver endpoint parity is not legacy world-trajectory identity.
+- `early_component_recovery=False` remains default. Opt-in early component search uses the actual first256 rejected iterate and unchanged original full-row gates. Isolated66 replies pass, all22 defaults are exact,17 early successes/5 declines; declined work is retained and caps are fresh/separate from the later tail.
+- Elastic sphere/fixed-plane prototype: **18 scenarios/54 histories/0 rejections**, both twist signs reverse,5 alternating floor/ceiling impacts,3 same-floor back-and-forth bounces undergravity. Stored elastic energy and independent angular couple impulses are audited. Lowcapacity controls correctly retain spin. These are synthetic material parameters, not measured rubber; native arbitrary-body/many-contact elastic couples remain unverified.
+
+Paper/visuals: `research/elastic-completion/report.pdf`, `floor-ceiling-preview.gif`, `same-floor-preview.gif`; `research/elastic-completion-visuals/demo.html` and typeset figures. User dislikes raw LaTeX in chat: show typeset figures or plain readable values.
+
+## Dense-shape accuracy is still unresolved
+
+Predecessor frozen source **108a9bb4c7899f75d760b27b179cc56557904a08**: `research/hull-gap-completion` completes6 histories/0 rejects/0 qualified references. Individual physics/contact/position/ledger gates pass; both original refinement edges fail in both scenes. The old74-row bounded position-system inconsistency certificate remains valid for its old targets; it is not physical geometry or Coulomb-law infeasibility.
+
+Frozen live-source **bca35c3**: `research/hull-combined-completion/RESULTS.md` retains6 uninterrupted attempts, **5 full histories/1 actual42-row velocity rejection/0 qualified references**. All5 completed lanes pass individual gates. Eight-body seed42 middlelevel rejects at residual3.102141818e−5m/s after0.08s, blocking both original refinement edges. Twenty-seven-body seed7301 completes all3 but fails every quarter-budget edge: position.0940804/.0736703m, velocity5.78974/6.67731m/s, spin82.8643/82.5177rad/s, orientation1. 34852/1.16538rad. Do not skip the rejected level or promote accepted contact equations into trajectory accuracy.
+
+All bca study archives and independent full-source/current-runtime/physical/prefix/geometry/inertia/pose-ledger audits are sealed and published; guards released. Three numerical changes were declared together. Costs are descriptive, not a controlled speed ranking. No CCD is active for these top-level compound hull bodies; contact/manifold timing remains a separate accuracy issue.
+
+## New42-row numerical recovery: evidence and current running check
+
+Capture: `research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json`, SHA256 `53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c`.
+
+`research/new-combined-contact-review/run-20261005T194211Z` finds strict original-law roots with SciPy LM/TRF and unchanged native budget0 acceptance. Near-redundant normal/tangent response directions agree to roundoff, not bitwise equality. A numerical face-seed experiment also accepts with originalPGS, but its generic native relation proposal is unexecuted and not chosen for integration.
+
+Chosen helper research: frozen **170d798b113863dc4bee3df515bb8ab63175ea21**, `research/new-combined-projection-review/projection_more_v2.h`. A warm original-projection/column-scaled More search on≤64 fullrows with fresh **2048SVD/2048iteration** caps accepts the new42 at **7.6059686e−9m/s**,1283SVD/steps, passivity−3.60146098J. Nine controls pass. All four1024-budget variants and an exact-component/global1024 trial genuinely fail and remain archived. No merit/scaling superiority is established; greater bounded numerical effort is the supported explanation.
+
+Both cheap independent audits pass:
+
+```
+python research/new-combined-projection-review/audit_failed_trials.py
+python research/new-combined-projection-review/audit_v2.py
+```
+
+The **23-input baseline/candidate preservation run is active at handover preparation**. Agent `critical_review` runs `run23_v2.py`, authorized from exact published **9e546715d14a5b0468f984f3b5f18eff02dfb6dd**. DriverPID86495; parent shellPID86492. Latest visible progress21 completed pairs; no success claim for the whole corpus yet. Outputs/receipts are `.../23-results/`, logs `23-run.stdout/stderr`, compile receipts `23-compile*`. Baseline/candidate executables use immutable snapshots and read-only current native libraries; production source/binary/library guards remain active until this run and strict `audit23.py` complete.
+
+**First next-chat action:** inspect processes, `23-results/summary.json`, strict audit receipt, logs and guard reports. Wait for the already-running bounded46 replies if still active. Do not modify production/build/runtime while the guard remains active. Do not rerun the driver over existing artifacts. If interrupted or environment replaced, retain existing outputs as partial evidence and author a new prospectively frozen launch/output directory rather than overwrite or invent completion. A passing result must show candidate23/23 original-law acceptance, exact old22 endpoints/old counters with helper bypassed, and strict finite-energy/bounds/friction/passivity/cap/source/executable guards. Additional candidate source paths changed only include paths/namespace alias; numerical method is exactly170.
+
+## Concrete next steps after23 proof
+
+`research/projection-tail-integration/proposed/` contains **unapplied/uncompiled** reviewed-by-root draft production files, with manifest and README. Do not treat them as implementation acceptance. Review against current production, then integrate ONLY after23 proof/guard release:
+
+1. Copy validated helper to `spatial_backend/projection_more.h`; insert its tail after every existing velocity recovery lane declines, using actual final rejectedPGS seed. Preserve accepted old22 endpoints. Independent original full projection/bounds/finite-passivity gate remains mandatory. No material/tolerance changes.
+2. Add LAPACK-enabled `projection_tail_checks` CMake/CI target, Float64/Bullet/LAPACK links; update Python numerical metadata and23 live replay validator. Draft runner adds final/atomic-prefix `projection_tail_policy`: stage=`after_all_existing_pipeline_failure`, compiled/enabled, caps64/2048/2048 and actual attempts/solves/declines/SVD/iteration/Newton counters. Root draft additionally rechecks original residual and normal bounds before applying impulses. Compile/test all affected native targets, live23 replays and appropriate engine regressions; independently review.
+3. `research/hull-search-completion` and `research/audit_hull_search_completion.py` prepare the next **six unchanged full trajectories**. Common/scenes/material/gravity/wall schedules/quarter gates remain exactlyoriginal52/bca. Fourteen earlier archive pins stay immutable. A separately declared bounded numerical-search tail is the only additional search change. Protocol remains PENDING until reviewed integration, BUILDREADY,23default proof, finalized approvals/config and an exact **published40-character source SHA**. Then run all6 exactlyonce, retain all rejects/prefixes/ledgers, audit full provenance/runtime/physics and BOTH edges. Never claim convergence without them.
+4. Update README/strategy/draftPR and paired organization handovers from actual outcomes. DraftPR: https://github.com/svenviktorjonsson/rigid-body-collisions/pull/1 (still needs final scope refresh). Do not merge it.
+
+## Publishing and organization handover
+
+Directgitpush historically returns401. Exact nonforced GitData publication:
+
+```
+python /tmp/publish-physics-commit.py HEAD
+```
+
+Wait for a publisher to finish before movingHEAD. If a new environment lacks this helper, use available GitHub tools/credentials or reconstruct exact GitData publication; never force references. Keep ordinary source/evidence checkpoints frequent.
+
+Correct integration target **vektor-flow/bootstrap, working**, paired **vektor-flow/spec, working**. Private docs-only checkpoints: spec **bf0217e822d249cb28f08cac3bb0511e6f6402ff**, bootstrap **fbc6686d3c27d8510ede0f47ad39c166c2fad297**. Bootstrap owns full handover; spec is a short pointer. Their organization branches advanced to consolidated **0130unverified compiler candidate** during this work; preserve latest handover/compiler/fixture/patch bytes. Read current AGENTS/HANDOVER and fetch/fast-forward before editing; publish spec first then exactpin bootstrap. This research does not implement a VKF port or qualify Section0/main/release. October5 GPU resumption is documented in their latest handover; do not substitute older deferral prose or initiate hardware work for this physics handover.
+
+HostedCI: paired source108/e2/evidence579 runs passed. Current bca Python3.11 jobs pass; Python3.12 jobs were cancelled without a failed step; rerun-failed-jobs was requested for run37364665223. Newer pushes are queued. Check actual latest job conclusions; do not claim all current hosted matrices green.
