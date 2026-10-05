@@ -73,3 +73,15 @@ All 139 snapshots independently audit; 96/100 irregular Coulomb stress cases
 pass and four are retained as rejected. This is frozen-contact performance,
 not full-engine throughput. See the [PDF](sparse-islands/report.pdf) and
 [typeset algorithm](sparse-islands/algorithm.pdf).
+
+## Real 3D validation
+
+[3D native backend](../spatial_backend/README.md), [frozen protocol](spatial-validation/plan.json),
+[report](spatial-validation/report.md), [typeset PDF](spatial-validation/report.pdf)
+and [rendered random shapes](spatial-validation/shapes3d.png). Full Float64 3D
+mechanics and fast moving-wall tests pass; 102 archived histories independently
+audit. One of six trajectory references qualifies; all five dense frictional
+references fail the frozen gates. No general dense accuracy claim follows.
+
+Run `python -m unittest tests.test_spatial_engine -v` after building the native
+backend, and `python -m research.audit_spatial_study` to audit retained evidence.

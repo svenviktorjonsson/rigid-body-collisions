@@ -1,7 +1,16 @@
 # Rigid body collisions
 
-A planar physics-engine prototype with executable collision research and
-reproducible speed/accuracy benchmarks.
+A physics-engine research prototype with real 2D and 3D native collision backends
+and reproducible speed/accuracy benchmarks.
+
+The [Float64 3D backend](spatial_backend/README.md) supports arbitrary convex
+hulls, boxes, spheres and compounds, full inertia tensors, quaternion rotation
+and prescribed moving walls. Twelve mechanics tests include 100 m/s walls driving
+64 bodies and 20 m/s containers with 64 spheres or 27 random rotating hulls.
+The [3D evidence report](research/spatial-validation/report.pdf) retains
+102 histories. Only the frictionless row qualifies its frozen trajectory gate;
+all five dense frictional references remain unqualified. Passing containment
+and no-tunneling tests does not establish their trajectory accuracy.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body

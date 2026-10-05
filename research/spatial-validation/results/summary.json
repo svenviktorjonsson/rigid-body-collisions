@@ -1,0 +1,1076 @@
+{
+  "binary_sha256": "09e9dd032078254c18a66c57484e7a1544caa4f9e9a4b3b974349f692766fe62",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "execution_source_commit": "6576bc61852f677a06f6e85d34e6f5b649fb6499",
+  "plan_sha256": "412dc7c3c26f6c75d72fe206e13155602570f98808eebeaf14077ae46c8ac100",
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "warmups": {
+    "row64_100ms/fast": {
+      "step_s": 0.089191571,
+      "states_sha256": "c5c9834eb7d1ae878138c3d2e638d5f61d5ed9a6650e71cdc88e2a6fddd92a5c"
+    },
+    "row64_100ms/standard": {
+      "step_s": 0.321121885,
+      "states_sha256": "3c05df0bbc9fa81bc16532eb8a6ca68864464b971500976597b972851f033544"
+    },
+    "row64_100ms/coupled": {
+      "step_s": 0.482801922,
+      "states_sha256": "0039b088a18cc3f544b801403e6e1a447f196d369e6e931afdab49b2ebda794e"
+    },
+    "row64_100ms/adaptive": {
+      "step_s": 0.428965158,
+      "states_sha256": "c39fdd94cac2dee1e2a3630d6b3c400a914a15c7f88df867e3f6f5f080b94eff"
+    },
+    "translate64_spheres/fast": {
+      "step_s": 2.199622764,
+      "states_sha256": "f31ce99ef6b534b6e5d074ff56426917b5f2625d0276e1bae40b0f44b756f4dd"
+    },
+    "translate64_spheres/standard": {
+      "step_s": 5.113852599,
+      "states_sha256": "0f72b850c647f136fc8316b656374dcfbb788ae7004eaf3ddf366e5053a3d65a"
+    },
+    "translate64_spheres/coupled": {
+      "step_s": 36.230691063,
+      "states_sha256": "e62b92d336e2a2cd7d5f19525cc7149c987faf4ce4879f3c2b480755ebd993f7"
+    },
+    "translate64_spheres/adaptive": {
+      "step_s": 31.75444296,
+      "states_sha256": "ff1e592a918ff717abeb1fdcba99bff76ef890e4b19f925e4e1cb738b178855e"
+    },
+    "shake27_spheres/fast": {
+      "step_s": 0.078726328,
+      "states_sha256": "5ab0cd1e74a55b28023fbc0eccb70245f7cbf254c68332004d2d8efb8695cb6e"
+    },
+    "shake27_spheres/standard": {
+      "step_s": 0.122678153,
+      "states_sha256": "283b2950ff810387567008961e8c7df941f689f2ef5a9f56cdb6fb86e2eaabff"
+    },
+    "shake27_spheres/coupled": {
+      "step_s": 0.269337679,
+      "states_sha256": "3a5a4c7b23a568e3be6478c6f2872aeccf18b7cdeaffd0867e55f7c2d2494512"
+    },
+    "shake27_spheres/adaptive": {
+      "step_s": 0.143467942,
+      "states_sha256": "3048d556da49307ac6bdb92ccbacec87a3800bb207451764d292fef37290b5ad"
+    },
+    "translate27_boxes/fast": {
+      "step_s": 0.061762144,
+      "states_sha256": "4347916217cc0b8cdb48c2131a08fc9028764a7e61ef4523cd63d4906918e618"
+    },
+    "translate27_boxes/standard": {
+      "step_s": 0.090017604,
+      "states_sha256": "01b50aa68eb37b2d33e5b4a012c06b7b0eeaeec5c62ca0b1854ad129cb62a4d7"
+    },
+    "translate27_boxes/coupled": {
+      "step_s": 0.318150646,
+      "states_sha256": "20d04e4212820c1935f48a1fff6918c8e782806ae6d012321fbe171ab6100e33"
+    },
+    "translate27_boxes/adaptive": {
+      "step_s": 0.356915897,
+      "states_sha256": "64535c2798a5ddba53ad13cf9e3b8c046a06e00259313e7d977552516928a032"
+    },
+    "shake_rotate27_hulls42/fast": {
+      "step_s": 0.933497247,
+      "states_sha256": "b9ac8e930bc9fb394b5743adf8783c9e92274ee3b563a5bcba2ddc2c4e255e48"
+    },
+    "shake_rotate27_hulls42/standard": {
+      "step_s": 1.211691647,
+      "states_sha256": "eff449b07768a23a7a4873531103a0fe34d89d701db7d4d93c0e646cf00bc80e"
+    },
+    "shake_rotate27_hulls42/coupled": {
+      "step_s": 1.841299446,
+      "states_sha256": "cabaea2a3eae298a3d4d7e97006bd23ad8d1219f0f4bde02701e3fecccbed909"
+    },
+    "shake_rotate27_hulls42/adaptive": {
+      "step_s": 2.11215939,
+      "states_sha256": "7124ba19e8140123c4bdcad6c8c7db5dbb9c2b3b605d9097efd5ed2c9766f80f"
+    },
+    "shake_rotate27_hulls7301/fast": {
+      "step_s": 0.99906533,
+      "states_sha256": "a550e89d12c965967aa04622226d351b1a5395b73a8c552a16bbde4a837d8fb5"
+    },
+    "shake_rotate27_hulls7301/standard": {
+      "step_s": 1.415785807,
+      "states_sha256": "4ffcbab9fb3b9ca4ec9874b2e22782fecef0fddbdced27643a53e17e2c45b9b2"
+    },
+    "shake_rotate27_hulls7301/coupled": {
+      "step_s": 2.961816075,
+      "states_sha256": "d6d91eb627eba87e2d9694ed2f36567bc5d40835f9e12d6493a3659facca4eb4"
+    },
+    "shake_rotate27_hulls7301/adaptive": {
+      "step_s": 3.097408139,
+      "states_sha256": "8902abc6587dc042af2421bb4b9b915d467acc5aad85697ce3fb2eeb389281b7"
+    }
+  },
+  "history_count": 102,
+  "scenes": {
+    "row64_100ms": {
+      "reference_qualified": true,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.0006700342494475861,
+            "velocity_m_s": 4.414990322726801e-12,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 0.5360273995580689
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.0003354101726225386,
+            "velocity_m_s": 3.3498876194557903e-12,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 0.2683281380980309
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 1.9950232112090532e-11,
+            "velocity_m_s": 1.1459159317099537e-11,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 1.5960185689672425e-08
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 4.1040623997102504e-14,
+            "velocity_m_s": 1.2965406299155136e-11,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 1.0372325039324108e-09
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -319999.99999997724,
+        "max_contact_penetration_m": 0.0015892980818879576,
+        "max_closing_contact_speed_m_s": 1.4253265843476155,
+        "coupled_fallbacks": 0,
+        "row_final_velocity_max_error_m_s": 8.338929546880536e-11
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.35956576636123283,
+            "velocity_m_s": 11.646635606991165,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 232.93271213982328,
+          "accuracy_qualified": false,
+          "median_step_s": 0.100859871,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -319990.84767085087,
+            "max_contact_penetration_m": 0.033182733248148744,
+            "max_closing_contact_speed_m_s": 22.064136562611495,
+            "coupled_fallbacks": 0,
+            "row_final_velocity_max_error_m_s": 0.7543265734888678
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1068,
+          "collision_updates": 1068
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.009620017867346299,
+            "velocity_m_s": 0.00275814809219287,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 1.9240035734692598,
+          "accuracy_qualified": false,
+          "median_step_s": 0.325525001,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -319999.99999999866,
+            "max_contact_penetration_m": 0.008214793828833333,
+            "max_closing_contact_speed_m_s": 5.8281253489813585,
+            "coupled_fallbacks": 0,
+            "row_final_velocity_max_error_m_s": 5.9543481256696396e-12
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1068,
+          "collision_updates": 1068
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.002771179611214358,
+            "velocity_m_s": 1.5866413840330723e-11,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 0.5542359222428717,
+          "accuracy_qualified": true,
+          "median_step_s": 0.44563623,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -320000.00000000035,
+            "max_contact_penetration_m": 0.029212321851386502,
+            "max_closing_contact_speed_m_s": 7.9386579358502445,
+            "coupled_fallbacks": 1052,
+            "row_final_velocity_max_error_m_s": 7.190692485892214e-12
+          },
+          "coupled_updates": 1068,
+          "sequential_updates": 0,
+          "collision_updates": 1068
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.0032993748785734816,
+            "velocity_m_s": 1.5827841815101177e-11,
+            "omega_rad_s": 0.0,
+            "orientation_rad": 0.0
+          },
+          "normalized": 0.6598749757146963,
+          "accuracy_qualified": true,
+          "median_step_s": 0.406346616,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -320000.0000000011,
+            "max_contact_penetration_m": 0.026233700599216203,
+            "max_closing_contact_speed_m_s": 6.674194335937514,
+            "coupled_fallbacks": 811,
+            "row_final_velocity_max_error_m_s": 9.308109838457312e-12
+          },
+          "coupled_updates": 850,
+          "sequential_updates": 218,
+          "collision_updates": 1068
+        }
+      },
+      "choice": "adaptive"
+    },
+    "translate64_spheres": {
+      "reference_qualified": false,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.003429399011017048,
+            "velocity_m_s": 0.030802083071119712,
+            "omega_rad_s": 0.25474783881450436,
+            "orientation_rad": 0.03442518357464961
+          },
+          "normalized": 13.770073429859844
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.0014423634554525978,
+            "velocity_m_s": 0.023400424001057962,
+            "omega_rad_s": 0.17770082038246474,
+            "orientation_rad": 0.014815608091031413
+          },
+          "normalized": 7.108032815298589
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.00020135467640869167,
+            "velocity_m_s": 0.008294190737728429,
+            "omega_rad_s": 0.06057982017307122,
+            "orientation_rad": 0.0023414482265424422
+          },
+          "normalized": 2.4231928069228483
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 0.00023637356235434943,
+            "velocity_m_s": 0.0021225948551369823,
+            "omega_rad_s": 0.03275686591116155,
+            "orientation_rad": 0.002682600981916465
+          },
+          "normalized": 1.310274636446462
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -12836.568322756717,
+        "max_contact_penetration_m": 0.00016522694655959902,
+        "max_closing_contact_speed_m_s": 0.002822568115112133,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 0.00014879310392190703,
+        "container_surface_excess_m": 0.00017877594238246974
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.004514948444433149,
+            "velocity_m_s": 0.04234078674995991,
+            "omega_rad_s": 0.38453663306467795,
+            "orientation_rad": 0.04460581326853721
+          },
+          "normalized": 4.46058132685372,
+          "accuracy_qualified": false,
+          "median_step_s": 2.171619386,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -12836.524696685115,
+            "max_contact_penetration_m": 0.001464911624645987,
+            "max_closing_contact_speed_m_s": 1.6515575024550586,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 0.0016834209105174303,
+            "container_surface_excess_m": 0.0017907020462627488
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 10912,
+          "collision_updates": 10912
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.0042408426109842474,
+            "velocity_m_s": 0.037387339071963725,
+            "omega_rad_s": 0.3304883477295636,
+            "orientation_rad": 0.042152033973049015
+          },
+          "normalized": 4.215203397304902,
+          "accuracy_qualified": false,
+          "median_step_s": 5.145908027,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -12834.540817865161,
+            "max_contact_penetration_m": 0.0016005242770107397,
+            "max_closing_contact_speed_m_s": 0.02387428322749308,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 9.141495429298985e-06,
+            "container_surface_excess_m": 7.128656125232613e-05
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 10881,
+          "collision_updates": 10881
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.004352994105513422,
+            "velocity_m_s": 0.038762624509449714,
+            "omega_rad_s": 0.32895256347308627,
+            "orientation_rad": 0.04299884275660663
+          },
+          "normalized": 4.299884275660663,
+          "accuracy_qualified": false,
+          "median_step_s": 34.32099088,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -12834.544669278277,
+            "max_contact_penetration_m": 0.0016005243218710774,
+            "max_closing_contact_speed_m_s": 0.023155761806639998,
+            "coupled_fallbacks": 5370,
+            "sampled_container_surface_excess_m": 2.3352568534140694e-05,
+            "container_surface_excess_m": 7.329743915895914e-05
+          },
+          "coupled_updates": 10877,
+          "sequential_updates": 0,
+          "collision_updates": 10877
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.0045738693272263835,
+            "velocity_m_s": 0.041488942221678954,
+            "omega_rad_s": 0.3465978822533282,
+            "orientation_rad": 0.04561215952800734
+          },
+          "normalized": 4.561215952800734,
+          "accuracy_qualified": false,
+          "median_step_s": 30.768179955,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -12834.541779793602,
+            "max_contact_penetration_m": 0.0016005243218710774,
+            "max_closing_contact_speed_m_s": 0.022570401996811366,
+            "coupled_fallbacks": 4149,
+            "sampled_container_surface_excess_m": 2.3351016709471928e-05,
+            "container_surface_excess_m": 7.329599670302667e-05
+          },
+          "coupled_updates": 9873,
+          "sequential_updates": 1000,
+          "collision_updates": 10873
+        }
+      },
+      "choice": null
+    },
+    "shake27_spheres": {
+      "reference_qualified": false,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.0003707257444173126,
+            "velocity_m_s": 0.004610585266245251,
+            "omega_rad_s": 0.21363499326465088,
+            "orientation_rad": 0.005033341257017551
+          },
+          "normalized": 8.545399730586034
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.0003928324223297554,
+            "velocity_m_s": 0.07921160219800358,
+            "omega_rad_s": 0.5054852436339765,
+            "orientation_rad": 0.006598055489235432
+          },
+          "normalized": 20.21940974535906
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.00032516908957527975,
+            "velocity_m_s": 0.07906950081024669,
+            "omega_rad_s": 0.5012569895866908,
+            "orientation_rad": 0.006383005216671207
+          },
+          "normalized": 20.05027958346763
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 3.24586618722474e-06,
+            "velocity_m_s": 8.333041228894486e-05,
+            "omega_rad_s": 0.0014579118947929206,
+            "orientation_rad": 6.27453999608164e-05
+          },
+          "normalized": 0.058316475791716824
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -48591.39593858606,
+        "max_contact_penetration_m": 0.00044989301727244024,
+        "max_closing_contact_speed_m_s": 0.0009861336861721013,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 1.6653345369377348e-16,
+        "container_surface_excess_m": 2.0631722390807017e-05
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.004850724257863606,
+            "velocity_m_s": 0.20381936993102262,
+            "omega_rad_s": 1.6239252047639796,
+            "orientation_rad": 0.036440531869901094
+          },
+          "normalized": 16.239252047639795,
+          "accuracy_qualified": false,
+          "median_step_s": 0.078185631,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -48788.955021896785,
+            "max_contact_penetration_m": 0.0044567585220018635,
+            "max_closing_contact_speed_m_s": 2.6696581196084,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 1.7247066171344194e-06,
+            "container_surface_excess_m": 0.0011482864148317229
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1409,
+          "collision_updates": 1409
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.0017341755120736124,
+            "velocity_m_s": 0.08863158669793395,
+            "omega_rad_s": 1.0831110116198606,
+            "orientation_rad": 0.021479091584967767
+          },
+          "normalized": 10.831110116198605,
+          "accuracy_qualified": false,
+          "median_step_s": 0.101888111,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -48588.01635208806,
+            "max_contact_penetration_m": 0.004988363288379455,
+            "max_closing_contact_speed_m_s": 0.011440765657966132,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 5.196337249380178e-10,
+            "container_surface_excess_m": 0.001040988991541647
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1375,
+          "collision_updates": 1375
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.0015496088487676142,
+            "velocity_m_s": 0.04507931384134871,
+            "omega_rad_s": 1.1344084077222016,
+            "orientation_rad": 0.02343952234922517
+          },
+          "normalized": 11.344084077222016,
+          "accuracy_qualified": false,
+          "median_step_s": 0.142327817,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -48587.44993526599,
+            "max_contact_penetration_m": 0.004988362943663338,
+            "max_closing_contact_speed_m_s": 0.01101005731426829,
+            "coupled_fallbacks": 3,
+            "sampled_container_surface_excess_m": 1.0822460150272661e-09,
+            "container_surface_excess_m": 0.0010409907605754554
+          },
+          "coupled_updates": 1375,
+          "sequential_updates": 0,
+          "collision_updates": 1375
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.001551864429950591,
+            "velocity_m_s": 0.044920393787170866,
+            "omega_rad_s": 1.1319221462277453,
+            "orientation_rad": 0.023347718269810868
+          },
+          "normalized": 11.319221462277453,
+          "accuracy_qualified": false,
+          "median_step_s": 0.140075029,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -48587.45821512738,
+            "max_contact_penetration_m": 0.00496887309713645,
+            "max_closing_contact_speed_m_s": 0.1561922824391111,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 1.2469218435562368e-09,
+            "container_surface_excess_m": 0.0010409897400585622
+          },
+          "coupled_updates": 511,
+          "sequential_updates": 864,
+          "collision_updates": 1375
+        }
+      },
+      "choice": null
+    },
+    "translate27_boxes": {
+      "reference_qualified": false,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.08271958114179884,
+            "velocity_m_s": 1.17386261219414,
+            "omega_rad_s": 4.27201019424648,
+            "orientation_rad": 0.24998711832195336
+          },
+          "normalized": 170.8804077698592
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.06408243824045229,
+            "velocity_m_s": 0.9857881963902639,
+            "omega_rad_s": 3.532171967423659,
+            "orientation_rad": 0.17312956314662353
+          },
+          "normalized": 141.28687869694636
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.06220107492539259,
+            "velocity_m_s": 0.9511001466506137,
+            "omega_rad_s": 4.5093474604211785,
+            "orientation_rad": 0.23472265200924766
+          },
+          "normalized": 180.37389841684714
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 0.0137606414091268,
+            "velocity_m_s": 0.30113493034716377,
+            "omega_rad_s": 2.887794797313294,
+            "orientation_rad": 0.08664112411994504
+          },
+          "normalized": 115.51179189253176
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -5395.761071149423,
+        "max_contact_penetration_m": 0.00017809329928381024,
+        "max_closing_contact_speed_m_s": 0.003918692226899166,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 7.596848245472465e-07,
+        "container_surface_excess_m": 9.133731164512326e-06
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.07700039820817743,
+            "velocity_m_s": 1.1660976580871965,
+            "omega_rad_s": 5.288062343790532,
+            "orientation_rad": 0.28943485989088386
+          },
+          "normalized": 52.88062343790532,
+          "accuracy_qualified": false,
+          "median_step_s": 0.06370748,
+          "diagnostics": {
+            "quaternion_norm_error": 1.1102230246251565e-16,
+            "energy_change_minus_boundary_work_J": -5393.543322237217,
+            "max_contact_penetration_m": 0.001149832049628527,
+            "max_closing_contact_speed_m_s": 1.1319321009050043,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 9.92112861980532e-06,
+            "container_surface_excess_m": 0.00010804523031687774
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1403,
+          "collision_updates": 1403
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.055293358059858674,
+            "velocity_m_s": 0.8607104232287691,
+            "omega_rad_s": 3.742063219263832,
+            "orientation_rad": 0.17091405389644826
+          },
+          "normalized": 37.420632192638315,
+          "accuracy_qualified": false,
+          "median_step_s": 0.088192638,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -5397.607055652014,
+            "max_contact_penetration_m": 0.0013941463701828722,
+            "max_closing_contact_speed_m_s": 0.14398141409204807,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": -0.00112933109902702,
+            "container_surface_excess_m": -0.0010417592696525535
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 1328,
+          "collision_updates": 1328
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.05531127583276557,
+            "velocity_m_s": 0.8609487581462805,
+            "omega_rad_s": 3.745384700379147,
+            "orientation_rad": 0.17091408342550005
+          },
+          "normalized": 37.453847003791466,
+          "accuracy_qualified": false,
+          "median_step_s": 0.315038124,
+          "diagnostics": {
+            "quaternion_norm_error": 1.1102230246251565e-16,
+            "energy_change_minus_boundary_work_J": -5397.611914941444,
+            "max_contact_penetration_m": 0.0013941463701828722,
+            "max_closing_contact_speed_m_s": 0.14398141409204807,
+            "coupled_fallbacks": 360,
+            "sampled_container_surface_excess_m": -0.001527842916530353,
+            "container_surface_excess_m": -0.0010417592696525535
+          },
+          "coupled_updates": 1328,
+          "sequential_updates": 0,
+          "collision_updates": 1328
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.09207518493648759,
+            "velocity_m_s": 1.3952181393359577,
+            "omega_rad_s": 5.650703631456197,
+            "orientation_rad": 0.2668160239475202
+          },
+          "normalized": 56.507036314561965,
+          "accuracy_qualified": false,
+          "median_step_s": 0.390954516,
+          "diagnostics": {
+            "quaternion_norm_error": 0.0,
+            "energy_change_minus_boundary_work_J": -5422.579141999928,
+            "max_contact_penetration_m": 0.0013067351823436296,
+            "max_closing_contact_speed_m_s": 0.046508945646824174,
+            "coupled_fallbacks": 938,
+            "sampled_container_surface_excess_m": 5.8112380092179006e-05,
+            "container_surface_excess_m": 0.00019312438570939783
+          },
+          "coupled_updates": 1018,
+          "sequential_updates": 350,
+          "collision_updates": 1368
+        }
+      },
+      "choice": null
+    },
+    "shake_rotate27_hulls42": {
+      "reference_qualified": false,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.09033385635087933,
+            "velocity_m_s": 6.164793871883993,
+            "omega_rad_s": 79.58991651256574,
+            "orientation_rad": 1.3449961228940583
+          },
+          "normalized": 3183.596660502629
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.09734273507539008,
+            "velocity_m_s": 7.23394526805619,
+            "omega_rad_s": 98.93300177024041,
+            "orientation_rad": 1.4355876679846142
+          },
+          "normalized": 3957.320070809616
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.09400976165993714,
+            "velocity_m_s": 7.706473289263879,
+            "omega_rad_s": 88.72288497022656,
+            "orientation_rad": 1.3608503296046013
+          },
+          "normalized": 3548.915398809062
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 0.086390217203352,
+            "velocity_m_s": 7.461817002311496,
+            "omega_rad_s": 88.78975390822848,
+            "orientation_rad": 1.4349410377220826
+          },
+          "normalized": 3551.590156329139
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -27850.59323566964,
+        "max_contact_penetration_m": 0.00014835674958543638,
+        "max_closing_contact_speed_m_s": 0.021953705111612196,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 4.4567909055492905e-05,
+        "container_surface_excess_m": 7.913863377656538e-05
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.08448714676612445,
+            "velocity_m_s": 7.2075001895030155,
+            "omega_rad_s": 83.54730820367547,
+            "orientation_rad": 1.358090807619376
+          },
+          "normalized": 835.4730820367547,
+          "accuracy_qualified": false,
+          "median_step_s": 0.959088592,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -27928.844378189795,
+            "max_contact_penetration_m": 0.0019495002789256823,
+            "max_closing_contact_speed_m_s": 7.796688924253018,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 0.0006541605898744973,
+            "container_surface_excess_m": 0.0010343642793730345
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 2398,
+          "collision_updates": 2398
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.10033588213303403,
+            "velocity_m_s": 7.90308865177982,
+            "omega_rad_s": 99.05058245357785,
+            "orientation_rad": 1.4547959379632402
+          },
+          "normalized": 990.5058245357784,
+          "accuracy_qualified": false,
+          "median_step_s": 1.211231645,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -28072.06326634097,
+            "max_contact_penetration_m": 0.001169757321557287,
+            "max_closing_contact_speed_m_s": 0.2084553832729803,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 0.0004996843174747689,
+            "container_surface_excess_m": 0.0005288587250396048
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 2590,
+          "collision_updates": 2590
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.0829996897548386,
+            "velocity_m_s": 6.844823909503984,
+            "omega_rad_s": 90.67537952583601,
+            "orientation_rad": 1.4192944729483181
+          },
+          "normalized": 906.75379525836,
+          "accuracy_qualified": false,
+          "median_step_s": 2.169434648,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -27356.00115384195,
+            "max_contact_penetration_m": 0.0011351425142178526,
+            "max_closing_contact_speed_m_s": 0.23672189061371585,
+            "coupled_fallbacks": 2453,
+            "sampled_container_surface_excess_m": 0.0005479246309261776,
+            "container_surface_excess_m": 0.0005889318409398325
+          },
+          "coupled_updates": 2593,
+          "sequential_updates": 0,
+          "collision_updates": 2593
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.09414048374493561,
+            "velocity_m_s": 6.521668622976013,
+            "omega_rad_s": 90.69335995478372,
+            "orientation_rad": 1.3533141917757054
+          },
+          "normalized": 906.9335995478372,
+          "accuracy_qualified": false,
+          "median_step_s": 2.0622189,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -27646.637028056717,
+            "max_contact_penetration_m": 0.0009291678326735818,
+            "max_closing_contact_speed_m_s": 0.1871994397192465,
+            "coupled_fallbacks": 2106,
+            "sampled_container_surface_excess_m": 0.0005352955199262599,
+            "container_surface_excess_m": 0.0005441100197538518
+          },
+          "coupled_updates": 2224,
+          "sequential_updates": 208,
+          "collision_updates": 2432
+        }
+      },
+      "choice": null
+    },
+    "shake_rotate27_hulls7301": {
+      "reference_qualified": false,
+      "reference_edges": [
+        {
+          "modes": [
+            "travel06",
+            "travel03"
+          ],
+          "errors": {
+            "position_m": 0.11892414417168944,
+            "velocity_m_s": 8.406036967614805,
+            "omega_rad_s": 91.941965520869,
+            "orientation_rad": 1.3189327803959896
+          },
+          "normalized": 3677.67862083476
+        },
+        {
+          "modes": [
+            "travel03",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.09028210977223947,
+            "velocity_m_s": 7.967972200906437,
+            "omega_rad_s": 81.0407975604483,
+            "orientation_rad": 1.3397937947726248
+          },
+          "normalized": 3241.6319024179315
+        },
+        {
+          "modes": [
+            "iterations64",
+            "travel015"
+          ],
+          "errors": {
+            "position_m": 0.08832338983956975,
+            "velocity_m_s": 7.091701154077836,
+            "omega_rad_s": 93.75906615159585,
+            "orientation_rad": 1.3795990420405952
+          },
+          "normalized": 3750.362646063834
+        },
+        {
+          "modes": [
+            "travel015",
+            "reference"
+          ],
+          "errors": {
+            "position_m": 0.10281448160981407,
+            "velocity_m_s": 7.8695674633896635,
+            "omega_rad_s": 80.00511420017656,
+            "orientation_rad": 1.3217772953981517
+          },
+          "normalized": 3200.2045680070623
+        }
+      ],
+      "reference_diagnostics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -28522.052341033937,
+        "max_contact_penetration_m": 7.336327449937073e-05,
+        "max_closing_contact_speed_m_s": 0.02333719569992354,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 4.549072037840496e-05,
+        "container_surface_excess_m": 5.1748618272118296e-05
+      },
+      "candidates": {
+        "fast": {
+          "errors": {
+            "position_m": 0.11719499649974591,
+            "velocity_m_s": 7.581489498694474,
+            "omega_rad_s": 86.81363072341922,
+            "orientation_rad": 1.3714628580470842
+          },
+          "normalized": 868.1363072341921,
+          "accuracy_qualified": false,
+          "median_step_s": 1.167537652,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -28061.178702120676,
+            "max_contact_penetration_m": 0.0009720794940737048,
+            "max_closing_contact_speed_m_s": 3.2317851438943044,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 0.000521727734516475,
+            "container_surface_excess_m": 0.000582079053869422
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 2445,
+          "collision_updates": 2445
+        },
+        "standard": {
+          "errors": {
+            "position_m": 0.1036666277741569,
+            "velocity_m_s": 7.4162569073693385,
+            "omega_rad_s": 96.21573957008667,
+            "orientation_rad": 1.562595055731743
+          },
+          "normalized": 962.1573957008667,
+          "accuracy_qualified": false,
+          "median_step_s": 1.515137645,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -28439.530237582443,
+            "max_contact_penetration_m": 0.001107392012540745,
+            "max_closing_contact_speed_m_s": 0.2181674875657751,
+            "coupled_fallbacks": 0,
+            "sampled_container_surface_excess_m": 0.0005191727055877116,
+            "container_surface_excess_m": 0.0006158734429869694
+          },
+          "coupled_updates": 0,
+          "sequential_updates": 2513,
+          "collision_updates": 2513
+        },
+        "coupled": {
+          "errors": {
+            "position_m": 0.10975342729905929,
+            "velocity_m_s": 6.4784761349470825,
+            "omega_rad_s": 94.37469418463611,
+            "orientation_rad": 1.5147226885765215
+          },
+          "normalized": 943.7469418463611,
+          "accuracy_qualified": false,
+          "median_step_s": 2.242703995,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -28328.17278479864,
+            "max_contact_penetration_m": 0.0007305107167501004,
+            "max_closing_contact_speed_m_s": 0.2543953262665633,
+            "coupled_fallbacks": 2295,
+            "sampled_container_surface_excess_m": 0.00024066637751807285,
+            "container_surface_excess_m": 0.000292139006827008
+          },
+          "coupled_updates": 2545,
+          "sequential_updates": 0,
+          "collision_updates": 2545
+        },
+        "adaptive": {
+          "errors": {
+            "position_m": 0.10701459285817252,
+            "velocity_m_s": 7.93968034663432,
+            "omega_rad_s": 103.36941037944949,
+            "orientation_rad": 1.4185287381353924
+          },
+          "normalized": 1033.6941037944948,
+          "accuracy_qualified": false,
+          "median_step_s": 1.87828082,
+          "diagnostics": {
+            "quaternion_norm_error": 2.220446049250313e-16,
+            "energy_change_minus_boundary_work_J": -28643.203986310837,
+            "max_contact_penetration_m": 0.0010175319363219762,
+            "max_closing_contact_speed_m_s": 0.28765028844898566,
+            "coupled_fallbacks": 2153,
+            "sampled_container_surface_excess_m": 0.0004974982710677645,
+            "container_surface_excess_m": 0.000781200848281205
+          },
+          "coupled_updates": 2251,
+          "sequential_updates": 304,
+          "collision_updates": 2555
+        }
+      },
+      "choice": null
+    }
+  },
+  "hashes": {
+    "scenes.json": "8f077a8825a7edad3d3720bcc97d4256074aa9317090bb8e1aef31d7df78b262",
+    "traces.zip": "9fa74b00f501c64ebe6b1b94453d248cdc7c03ef832dab8d03c6c74082f23e7b",
+    "execution-source.zip": "9fe5ebd4895056d8a21417a130a0f7947139f1f70ebbe6fcbb4e528d0d9eb0a3"
+  }
+}
