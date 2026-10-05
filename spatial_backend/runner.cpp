@@ -54,7 +54,7 @@ int main(){try{
   }
   double mass=b.at("mass"); bool kin=b.at("type")=="kinematic";
   btRigidBody::btRigidBodyConstructionInfo ci(mass,nullptr,compound.get(),vec(b.at("principal_inertia")));
-  auto rb=std::make_unique<btRigidBody>(ci); rb->setWorldTransform(btTransform(quat(b.at("orientation")),vec(b.at("position"))));
+  auto rb=std::make_unique<btRigidBody>(ci); rb->setCenterOfMassTransform(btTransform(quat(b.at("orientation")),vec(b.at("position"))));
   rb->setInterpolationWorldTransform(rb->getWorldTransform());
   rb->setLinearVelocity(vec(b.at("velocity")));rb->setAngularVelocity(vec(b.at("omega")));
   rb->setFriction(b.at("friction").get<double>()); rb->setRestitution(b.at("restitution").get<double>());
