@@ -17,6 +17,19 @@ class Geometry3D(unittest.TestCase):
         np.testing.assert_allclose(I,R@np.diag([208,160,80])@R.T,atol=1e-11)
         self.assertGreater(abs(I[0,1]),1)
 
+    @unittest.skipUnless(BINARY.exists(), 'Build native spatial backend')
+    def test_prescribed_reversal_reaches_contacts_without_one_step_delay(self):
+        scene,_=touching_container(side=2,speed=100,duration=.02)
+        scene['bodies'][0]['velocity_schedule']=[dict(time_s=.01,velocity=[-100,0,0])]
+        result=run(scene,dt=.01,primary_steps=1,travel_fraction=0,
+                   solver='normal_coupled',kinematic_contact_phase='start',
+                   position_stabilization='velocity_only')
+        state=np.asarray(result['states'])
+        np.testing.assert_allclose(state[1,1:,7:10],np.tile([100,0,0],(8,1)),atol=1e-8)
+        np.testing.assert_allclose(state[2,1:,7:10],np.tile([-100,0,0],(8,1)),atol=1e-8)
+        np.testing.assert_allclose(state[2,:,:3],state[0,:,:3],atol=1e-8)
+        self.assertEqual(result['coupled_fallbacks'],0)
+
     def test_compound_parallel_axis_and_principal_frame(self):
         s=dict(duration=.1,bodies=[dict(shapes=[dict(kind='sphere',radius=1,center=[-2,0,0]),dict(kind='sphere',radius=1,center=[2,0,0])])])
         bodies,mass,I,Q,_=prepare(s)

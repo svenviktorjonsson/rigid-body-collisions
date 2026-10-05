@@ -80,6 +80,9 @@ int main(){try{
    if(fraction>0)h=std::min(h,fraction*feature/(2*speed+std::sqrt(2*accel*fraction*feature)+1e-30));
    for(auto& b:bodies)if(b.kin)for(const auto& cmd:b.schedule){double event=cmd.at("time_s").get<double>();if(event>t+1e-12)h=std::min(h,event-t);}
    if(h<1e-12||++count>100000)throw std::runtime_error("Travel guard exhausted; reject rather than tunnel");
+   // A schedule change must reach contact discovery on this update, including
+   // start-phase integration where saveKinematicState is intentionally skipped.
+   for(auto& b:bodies)if(b.kin){b.rb->setLinearVelocity(b.v);b.rb->setAngularVelocity(b.w);}
    if(!world.start_phase){
    for(auto& b:bodies)if(b.kin){b.rb->setInterpolationWorldTransform(b.rb->getWorldTransform());b.pos+=b.v*h; double w=b.w.length();if(w>0){b.q=btQuaternion(b.w/w,w*h)*b.q;b.q.normalize();}b.rb->setWorldTransform(btTransform(b.q,b.pos));b.rb->setLinearVelocity(b.v);b.rb->setAngularVelocity(b.w);world.updateSingleAabb(b.rb.get());}
    }
