@@ -48,8 +48,8 @@ pdflatex -interaction=nonstopmode -halt-on-error research-assessment.tex
 ## Not completed
 
 A production-quality arbitrary-body engine, adaptive coarse-cell/interface
-selection, calibrated material tables, an exact global frictional solver, 3D
-implementation and experimental validation remain research work. Executable
+selection, calibrated material tables, an exact global frictional solver, verified arbitrary-shape 3D
+trajectories and experimental validation remain research work. Executable
 planar polygon comparisons and held-out numerical adaptation tests now exist;
 those tests do not establish an adaptive speed advantage. No general new model
 or publication-worthy superiority has been established.
@@ -93,3 +93,20 @@ backend, and `python -m research.audit_spatial_study` to audit retained evidence
 speedup with identical states and nine times less scalar mobility storage.
 Restriction: zero friction and restitution; dense frictional accuracy is still
 unqualified. Run `python -m research.audit_spatial_normal` to inspect the evidence.
+
+## Verified fast shaking and bounded numerical recovery
+
+The [fast-shaking follow-up](fast-shake-diagnostic/report.pdf) qualifies both
+new reference ladders under unchanged budgets and retains the original failure.
+The [six-run cost comparison](shake-performance/report.pdf) verifies a 6.11x
+native gain for this 27-sphere scene: 2.97 versus 18.18 seconds median, with
+identical configured material and all repetitions passing both references.
+Audits: `research.audit_fast_shake_diagnostic`, `research.audit_shake_performance`.
+
+[Contact-system recovery](coulomb-diagnostics/README.md) uses the same normal and
+circular-friction equations, bounded minimum-norm steps, mechanical-null pressure
+relocation and cold restarts. Three native captures pass contact/passivity gates.
+Full random-hull follow-ups still reject; read [the first](spatial-friction-recovery/report.pdf)
+and [larger-cap report](spatial-friction-recovery384/report.pdf). These numerical
+results do not establish novelty, authentic material parameters, a convergence
+order or general arbitrary-body elastic history integration.

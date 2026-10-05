@@ -24,10 +24,26 @@ residual-driven sticking/sliding solves, immediate prescribed-wall reversals and
 correct first-collision world inertia. Three of six new references qualify:
 slow shaking with 27 spheres, 20 m/s translation with 27 spheres and 20 m/s
 shaking with eight boxes. The archive retains 76 attempts, 52 complete histories
-and 24 solver rejections. Fast 27-sphere shaking still fails trajectory refinement.
+and 24 solver rejections. Its original fast 27-sphere shaking refinement fails.
 A separately verified [gyroscopic RHS correction](research/spatial-friction-gyro/report.pdf)
 restores free angular velocity to tangent equations; all six paired hull attempts
 remain rejected. No fallback to a different friction law is accepted in this lane.
+
+A [same-law fast-shaking follow-up](research/fast-shake-diagnostic/report.pdf)
+qualifies two finer references while retaining the earlier nonmonotonic failure.
+The verified fast setting passes both references in all three repetitions.
+A [predeclared repeated cost comparison](research/shake-performance/report.pdf)
+measures **6.11x faster native stepping** (2.97 versus 18.18 seconds median)
+for this 27-sphere scene with unchanged material and accuracy budgets.
+This is a scoped numerical result, not calibrated material or a universal ranking.
+
+[Bounded contact recovery](research/coulomb-diagnostics/README.md) adds
+minimum-norm Newton steps, certified velocity-neutral pressure relocation and
+cold restarts on the same circular law. Three captured hull systems pass native
+and independent contact/passivity gates, including a 267-row system. The
+[six-attempt full follow-up](research/spatial-friction-recovery/report.pdf) and
+[larger-cap follow-up](research/spatial-friction-recovery384/report.pdf) still
+reject later systems; general hull trajectory accuracy remains unqualified.
 
 The [elastic wrench study](research/elastic-patch/report.pdf) separately models
 stored tangential energy and an independent twisting couple at a computational
