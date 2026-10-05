@@ -180,6 +180,17 @@ int main(){try{
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
  out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;
  out["lapack_contact_recovery_compiled"]=coulombLapackRecoveryEnabled();
+ out["coulomb_support_solves"]=coulomb_mlcp.stats.support_solves;
+ out["coulomb_support_helper_calls"]=coulomb_mlcp.stats.support_helper_calls;
+ out["coulomb_support_skipped_components"]=coulomb_mlcp.stats.support_skipped_components;
+ out["coulomb_support_component_cap_rejections"]=coulomb_mlcp.stats.support_component_cap_rejections;
+ out["coulomb_support_passes"]=coulomb_mlcp.stats.support_passes;
+ out["coulomb_support_largest_rows"]=coulomb_mlcp.stats.support_largest_rows;
+ out["coulomb_support_expanded_contacts"]=coulomb_mlcp.stats.support_expanded_contacts;
+ out["coulomb_support_svd_calls"]=coulomb_mlcp.stats.support_svd_calls;
+ out["coulomb_support_iteration_steps"]=coulomb_mlcp.stats.support_iteration_steps;
+ out["coulomb_support_pressure_svd_calls"]=coulomb_mlcp.stats.support_pressure_svd_calls;
+ out["coulomb_support_pivot_calls"]=coulomb_mlcp.stats.support_pivot_calls;
  out["coulomb_supplemental_solves"]=coulomb_mlcp.stats.supplemental_solves;
  out["coulomb_supplemental_svd_calls"]=coulomb_mlcp.stats.supplemental_svd_calls;
  out["coulomb_supplemental_iteration_steps"]=coulomb_mlcp.stats.supplemental_iteration_steps;

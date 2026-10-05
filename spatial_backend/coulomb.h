@@ -11,7 +11,7 @@
 #include "normal_null.h"
 #include "coulomb_active.h"
 #ifdef SPATIAL_LAPACK_RECOVERY
-#include "coulomb_restart.h"
+#include "support_restart.h"
 #endif
 
 inline bool coulombLapackRecoveryEnabled(){
@@ -37,6 +37,7 @@ struct CoulombStats {
  normal_null::Stats null_pressure;
  int supplemental_solves=0,supplemental_svd_calls=0,supplemental_iteration_steps=0,supplemental_damped_steps=0,supplemental_pressure_svd_calls=0,supplemental_pressure_attempts=0,supplemental_pivot_calls=0,supplemental_projector_calls=0,supplemental_restarts=0;
  double supplemental_null_response_max=0;
+ int support_solves=0,support_helper_calls=0,support_skipped_components=0,support_component_cap_rejections=0,support_passes=0,support_largest_rows=0,support_expanded_contacts=0,support_svd_calls=0,support_iteration_steps=0,support_pressure_svd_calls=0,support_pivot_calls=0;
  circular_active::Stats active;int active_solves=0;
  int continuation_solves=0;unsigned long long iteration_sweeps_total=0;
  circular_trust::Stats continuation;
@@ -258,6 +259,25 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
   if(accepted){
    x=candidate;stats.solves++;stats.supplemental_solves++;
    stats.last_residual=supplemental.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+   double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
+   stats.passive_change_max=std::max(stats.passive_change_max,change);return true;
+  }
+ }
+ if(recover&&b.rows()<=4096){
+  // Match the actual world's final rejected PGS seed; never apply that seed
+  // unless the complete original system passes the supplemental physical gate.
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  support_restart_v3::Stats support;
+  const bool accepted=support_restart_v3::solve(A,b,candidate,hi,dep,tolerance,support);
+  stats.support_helper_calls+=support.helper_calls;stats.support_skipped_components+=support.skipped_components;
+  stats.support_component_cap_rejections+=support.component_cap_rejections;stats.support_passes+=support.passes;
+  stats.support_largest_rows=std::max(stats.support_largest_rows,support.largest_reduced_rows);
+  stats.support_expanded_contacts+=support.expanded_contacts;stats.support_svd_calls+=support.svd_calls;
+  stats.support_iteration_steps+=support.iteration_steps;stats.support_pressure_svd_calls+=support.pressure_svd_calls;
+  stats.support_pivot_calls+=support.pivot_attempts;
+  if(accepted){
+   x=candidate;stats.solves++;stats.support_solves++;
+   stats.last_residual=support.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
    double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
    stats.passive_change_max=std::max(stats.passive_change_max,change);return true;
   }
