@@ -112,7 +112,8 @@
   "early_recovery_rule": "Optional boolean early_component_recovery=true tries the existing V3 exact-component recovery after the first 256 actual rejected sweeps and before the older recovery sequence. Default false stays unchanged for all prior protocols. Existing search budgets, original-law final acceptance and actual rejection accounting remain disclosed.",
   "freeze_required_paths": [
     "spatial_backend/translation_combined.h",
-    "research/audit_hull_combined_completion.py"
+    "research/audit_hull_combined_completion.py",
+    "research/hull-combined-completion/auditor_checks.py"
   ],
   "planned_combined_helper": "spatial_backend/translation_combined.h",
   "prospective_only": true,

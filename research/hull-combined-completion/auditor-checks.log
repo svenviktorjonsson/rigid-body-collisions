@@ -1,0 +1,22 @@
+Shared hull audit PASS: 2 histories; 4 retained rejections; 0 qualified references
+Shared hull audit PASS: 3 histories; 3 retained rejections; 0 qualified references
+{
+  "schema": "prospective-combined-auditor-controls-v1",
+  "checks": [
+    "Pending preceding baseline cannot become execution evidence",
+    "Three declarations, original duration/lanes/slop/contact/energy/containment/quarter gates and no fabricated freeze hashes",
+    "Finite ledger/vector/triangle/zero-update and strict projection/counter controls",
+    "Final/native-prefix finite ledger equality and availability controls",
+    "Portable runtime manifest includes ALL recorded libraries and loader; malformed hash/path or missing loader rejected",
+    "Native principal/authored conversion and full tensor energy controls; partial or failed physical prefix never qualifies",
+    "Combined native model requires early=true and corrected cache order; historical/float32 policies rejected",
+    "New translation reject requires finite symmetric pure-normal matrix; no historical missing-capture exception",
+    "Both exact quarter-budget edges required; missing/rejected/partial lane cannot be skipped",
+    "hull-active-completion original receipt reproduced BYTE IDENTICALLY; historical auditor unchanged",
+    "hull-translation-completion original receipt reproduced BYTE IDENTICALLY; historical auditor unchanged"
+  ],
+  "native_execution": false,
+  "combined_trajectory_executed": false,
+  "fixture_scope": "Existing historical/native records read only plus synthetic malformed controls; not combined-policy evidence",
+  "historical_sources_or_receipts_mutated": false
+}

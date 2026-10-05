@@ -1,0 +1,78 @@
+[
+  {
+    "name": "policy_checks",
+    "command": [
+      "/usr/bin/x86_64-linux-gnu-g++-14",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-DSPATIAL_LAPACK_RECOVERY=1",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "-I/workspace/rigid-body-collisions/research/early-component-policy-review/candidate/spatial_backend",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/policy_checks.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "/lib/x86_64-linux-gnu/liblapack.so.3",
+      "/lib/x86_64-linux-gnu/libblas.so.3",
+      "-o",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/policy_checks"
+    ],
+    "started_utc": "2026-10-05T19:11:56.283977+00:00",
+    "returncode": 0,
+    "binary_sha256": "91e8e5ef8df9a16d9fd0450b92a7edb06d03ca6935fa496774165c36e1229292"
+  },
+  {
+    "name": "replay_frozen",
+    "command": [
+      "/usr/bin/x86_64-linux-gnu-g++-14",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-DSPATIAL_LAPACK_RECOVERY=1",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "-I/workspace/rigid-body-collisions/research/early-component-policy-review/frozen/spatial_backend",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/replay_policy.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "/lib/x86_64-linux-gnu/liblapack.so.3",
+      "/lib/x86_64-linux-gnu/libblas.so.3",
+      "-o",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen"
+    ],
+    "started_utc": "2026-10-05T19:12:15.165049+00:00",
+    "returncode": 0,
+    "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5"
+  },
+  {
+    "name": "replay_candidate",
+    "command": [
+      "/usr/bin/x86_64-linux-gnu-g++-14",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-DSPATIAL_LAPACK_RECOVERY=1",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "-DEARLY_POLICY_CANDIDATE=1",
+      "-I/workspace/rigid-body-collisions/research/early-component-policy-review/candidate/spatial_backend",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/replay_policy.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "/lib/x86_64-linux-gnu/liblapack.so.3",
+      "/lib/x86_64-linux-gnu/libblas.so.3",
+      "-o",
+      "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate"
+    ],
+    "started_utc": "2026-10-05T19:12:40.732113+00:00",
+    "returncode": 0,
+    "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e"
+  }
+]

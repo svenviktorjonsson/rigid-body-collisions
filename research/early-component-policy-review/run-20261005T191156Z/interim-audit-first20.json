@@ -1,0 +1,389 @@
+{
+  "scope": "Interim first20completeinputs only;fullaudit/last2pending",
+  "rows": [
+    {
+      "index": 0,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 6,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 5
+      },
+      "max_response_delta": 1.5847589907025394e-10
+    },
+    {
+      "index": 1,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 381,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 336
+      },
+      "max_response_delta": 7.238654120556021e-14
+    },
+    {
+      "index": 2,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 6,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 5
+      },
+      "max_response_delta": 1.7004353480842838e-10
+    },
+    {
+      "index": 3,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 4,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 3
+      },
+      "max_response_delta": 1.2408674438663114e-08
+    },
+    {
+      "index": 4,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 5,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 4
+      },
+      "max_response_delta": 2.9465393259882344e-05
+    },
+    {
+      "index": 5,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 5,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 4
+      },
+      "max_response_delta": 3.696650725110162e-09
+    },
+    {
+      "index": 6,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 5,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 4
+      },
+      "max_response_delta": 1.74213421466618e-12
+    },
+    {
+      "index": 7,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 6,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 5
+      },
+      "max_response_delta": 2.3914037416972178e-11
+    },
+    {
+      "index": 8,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 428,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 379
+      },
+      "max_response_delta": 1.0658141036401503e-13
+    },
+    {
+      "index": 9,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 8,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 7
+      },
+      "max_response_delta": 9.877618935456856e-09
+    },
+    {
+      "index": 10,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 72,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 71
+      },
+      "max_response_delta": 5.398390623412297e-10
+    },
+    {
+      "index": 11,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 2,
+        "iteration_steps": 13,
+        "passes": 2,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 11
+      },
+      "max_response_delta": 1.2206902155753596e-12
+    },
+    {
+      "index": 12,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 1,
+        "declines": 1,
+        "helper_calls": 0,
+        "iteration_steps": 0,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 0,
+        "svd_calls": 0
+      },
+      "max_response_delta": 0.0
+    },
+    {
+      "index": 13,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 2,
+        "iteration_steps": 131,
+        "passes": 2,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 129
+      },
+      "max_response_delta": 3.552713678800501e-15
+    },
+    {
+      "index": 14,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 1,
+        "helper_calls": 2,
+        "iteration_steps": 1077,
+        "passes": 3,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 0,
+        "svd_calls": 1024
+      },
+      "max_response_delta": 0.0
+    },
+    {
+      "index": 15,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 1,
+        "helper_calls": 2,
+        "iteration_steps": 1062,
+        "passes": 3,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 0,
+        "svd_calls": 1024
+      },
+      "max_response_delta": 0.0
+    },
+    {
+      "index": 16,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 1,
+        "iteration_steps": 6,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 5
+      },
+      "max_response_delta": 1.3620993222218658e-11
+    },
+    {
+      "index": 17,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 0,
+        "helper_calls": 2,
+        "iteration_steps": 38,
+        "passes": 2,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 1,
+        "svd_calls": 36
+      },
+      "max_response_delta": 1.2126506743204146e-10
+    },
+    {
+      "index": 18,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 1,
+        "helper_calls": 1,
+        "iteration_steps": 520,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 0,
+        "svd_calls": 512
+      },
+      "max_response_delta": 0.0
+    },
+    {
+      "index": 19,
+      "default_exact": true,
+      "all_native_original_gates_pass": true,
+      "early": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "declines": 1,
+        "helper_calls": 1,
+        "iteration_steps": 534,
+        "passes": 1,
+        "pivot_calls": 0,
+        "pressure_attempts": 0,
+        "pressure_svd_calls": 0,
+        "solves": 0,
+        "svd_calls": 512
+      },
+      "max_response_delta": 0.0
+    }
+  ],
+  "default_exact_count": 20,
+  "early_successes": 15,
+  "early_declines": 5,
+  "max_response_delta": 2.9465393259882344e-05
+}

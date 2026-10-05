@@ -1,0 +1,1204 @@
+{
+  "outputs": "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z",
+  "compile_receipts": [
+    {
+      "name": "policy_checks",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-g++-14",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-DBT_USE_DOUBLE_PRECISION",
+        "-DSPATIAL_LAPACK_RECOVERY=1",
+        "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+        "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+        "-I/workspace/rigid-body-collisions/research/early-component-policy-review/candidate/spatial_backend",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/policy_checks.cpp",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+        "/lib/x86_64-linux-gnu/liblapack.so.3",
+        "/lib/x86_64-linux-gnu/libblas.so.3",
+        "-o",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/policy_checks"
+      ],
+      "started_utc": "2026-10-05T19:11:56.283977+00:00",
+      "returncode": 0,
+      "binary_sha256": "91e8e5ef8df9a16d9fd0450b92a7edb06d03ca6935fa496774165c36e1229292"
+    },
+    {
+      "name": "replay_frozen",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-g++-14",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-DBT_USE_DOUBLE_PRECISION",
+        "-DSPATIAL_LAPACK_RECOVERY=1",
+        "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+        "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+        "-I/workspace/rigid-body-collisions/research/early-component-policy-review/frozen/spatial_backend",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/replay_policy.cpp",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+        "/lib/x86_64-linux-gnu/liblapack.so.3",
+        "/lib/x86_64-linux-gnu/libblas.so.3",
+        "-o",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen"
+      ],
+      "started_utc": "2026-10-05T19:12:15.165049+00:00",
+      "returncode": 0,
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5"
+    },
+    {
+      "name": "replay_candidate",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-g++-14",
+        "-std=c++17",
+        "-O2",
+        "-ffp-contract=off",
+        "-DBT_USE_DOUBLE_PRECISION",
+        "-DSPATIAL_LAPACK_RECOVERY=1",
+        "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+        "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+        "-DEARLY_POLICY_CANDIDATE=1",
+        "-I/workspace/rigid-body-collisions/research/early-component-policy-review/candidate/spatial_backend",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/replay_policy.cpp",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+        "/lib/x86_64-linux-gnu/liblapack.so.3",
+        "/lib/x86_64-linux-gnu/libblas.so.3",
+        "-o",
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate"
+      ],
+      "started_utc": "2026-10-05T19:12:40.732113+00:00",
+      "returncode": 0,
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e"
+    }
+  ],
+  "controls": [
+    {
+      "binary": "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/policy_checks",
+      "binary_sha256": "91e8e5ef8df9a16d9fd0450b92a7edb06d03ca6935fa496774165c36e1229292",
+      "returncode": 0
+    }
+  ],
+  "replays": [
+    {
+      "index": 0,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.1504441580036655,
+      "stdout_sha256": "08cc90c12ef763807842c2f9ba9f6029e4fd93d012afe1c96a8920e960086e38",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 0,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.09928523399867117,
+      "stdout_sha256": "5f56445907fb8b3f61b3c37372cd50a0006c4a7e403117bc4b4ff294fdbc4e62",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 0,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.14468993300397415,
+      "stdout_sha256": "b561bba3d0c0dfeb27fd91180ced4dc512330eb9861d9272ff43d2822dd325ae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 1,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.07594067099853419,
+      "stdout_sha256": "418206f01f1e7353d9061c5974c6bc004d52673715056052557e4618b24f2c2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 1,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.0714877680002246,
+      "stdout_sha256": "b7ea97f3313497a41bfc818d3139757591229bba70ec220441a9922c8a91b9bf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 1,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.07919105800101534,
+      "stdout_sha256": "c57f8158e909ff72efd851284f0723f099a9a3bf87531e12b2a196fd217b1ac4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 2,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.03798897299566306,
+      "stdout_sha256": "b5b871c8cb040f7cf885de23f58855841083ebd2e4e820b27cbdf23d38e75f1c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 2,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.05663525901036337,
+      "stdout_sha256": "05bcaf1f55769eb3c1709efbd13c3d1aaec2a00e289c902936cddeb8e7f04178",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 2,
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.03128070400271099,
+      "stdout_sha256": "7505b363d5715b64e9e3af4e73bfd86ad461bfd67026dc5aa6499aea389caa5b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 3,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.014560995987267233,
+      "stdout_sha256": "cfb21c6049abe79de51baea02ed6bc4217e4e90054539e074f79b6038b71552c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 3,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.009883061997243203,
+      "stdout_sha256": "b1d52fed3c72931750b6a382fa57833c7c2cb59a254cd80c3fd4827cb96b19bb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 3,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.00883740998688154,
+      "stdout_sha256": "baffe8e0fdf74aed02b540703557d9f272ca9b4405bdbc75b2c00e486e9342fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 4,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.015473481005756184,
+      "stdout_sha256": "3efeef940f578f243806807b67cedf51a36667bb6ae8dc37cb99e56437b75780",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 4,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.01251425500959158,
+      "stdout_sha256": "b228d87f3916a743dfe864caa11a8e0f908352d2869997a03c3a56f60e61b179",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 4,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.0172434390115086,
+      "stdout_sha256": "aaa8d3ad4a5f790773dadf54e07007b7fcceeaa0321054c79ea5890b62fea7de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 5,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.009864548002951778,
+      "stdout_sha256": "c8ea2b0a757eda8928c1a40506031a7b481268769c6f0d2d9b8bd4f2935e9681",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 5,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.01207278399670031,
+      "stdout_sha256": "defe5af425bf86b24afe3ae966e4ee108daa4929ece03482cad86da4a7d55474",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 5,
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.007997368011274375,
+      "stdout_sha256": "83d8594a9e2d43998d47e55974e4307b4f81a37676d2951debe076e74e0b48dd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.014365725000970997,
+      "stdout_sha256": "0899da46040e3054434b4abf71d3025795895d9b880b6ada237a570669ed7370",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.009815017998334952,
+      "stdout_sha256": "9760a54e58ec60c752079458454f9b4b96bedf754006d43d6e444bd6f0d5fe4b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.016459940990898758,
+      "stdout_sha256": "512f5486e01466bb6c84f71271b1f5fdc9d28065fd22e644107aa9bf242c99e1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 7,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 1.5365123170049628,
+      "stdout_sha256": "1042d4d9454840eb892a6b96eff1dec43b2d533a357bde65059fbe5d689ec10a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 7,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 1.5109882039978402,
+      "stdout_sha256": "16c5ab6cb36d8628c10ad9e24f3c904743d284e2b81117035167ce940d94ab29",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 7,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.2549212290032301,
+      "stdout_sha256": "c4c91f1b69d71d197f3553932db6734e31a360668babbba3330a14e962282d28",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 8,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.1134073389985133,
+      "stdout_sha256": "a3d073dd1807ca4c871cf04ce68da9617bc56713d8bcf1e1039ffeb35a50047a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 8,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.11817152200092096,
+      "stdout_sha256": "358d8e0c6e401e22a295e9742365ce95fb1637dbd4800fcc070070fbcbb4cca6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 8,
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.13847460100078024,
+      "stdout_sha256": "fd0f0d6047e035ece8037e605117b1b634e7877b174ff4414a50c9a0fd88ee7d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 9,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.008843686999171041,
+      "stdout_sha256": "e29e12f6b278e115c88b9e9f66ce3daca46bb5a5822a1f8655a1013bd3f5e271",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 9,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.010137280987692066,
+      "stdout_sha256": "10613f286b3d47a6f859900c61298290a104e9687de0f8ca27f5ca0fee8e5915",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 9,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.016936541986069642,
+      "stdout_sha256": "01fe22536e8f1d151bc06a5e005dd69823f694c5417b6b3f74be4d868fccd8ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 10,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.03362018900224939,
+      "stdout_sha256": "18ba59bbfe607e1e68fb49912e6aeb062248cd8e77e66fd7344eb411bbff0e03",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 10,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.053471805003937334,
+      "stdout_sha256": "e2e1b981eeafb396d484023366b2c214e8577367d53cd06abbf0933fe9e53814",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 10,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.022482789994683117,
+      "stdout_sha256": "1e1084aecec116acad67b7178d6bdae20c0c9f4230c53319491809f21b40682c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 11,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.020242533995769918,
+      "stdout_sha256": "bd528a071dc6adf87439153864d13daf758e30aadc016dc1ef974e174240d709",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 11,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.014593056999729015,
+      "stdout_sha256": "b346e8ae63a8b3604e07da5e8c401c517b74a55d5a6b6c9891082b1d1776a761",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 11,
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.01650804199744016,
+      "stdout_sha256": "6a6ab4016423def74a07ff67583eb3ba6199bd1e82efd61bcbe5211176707d4c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 12,
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.20010856400767807,
+      "stdout_sha256": "40aef66eb6c3cb1a7851485621f72c0868e41f66516e734e16a59faa5bc8f82e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 12,
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.18613313499372452,
+      "stdout_sha256": "1fb7acb14b24f6c0d02f62d35a21e88077b6b42498ba7e120f4a7bf6b70d80d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 12,
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.19393728399882093,
+      "stdout_sha256": "ced4f097862eede19b6f3bfce54841013406e6b0e34e32389e296ce18bbfaf95",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 13,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 1.1040709959925152,
+      "stdout_sha256": "7a64bd51eeba98c2ac8fad2e6c0b1cf1f1499d0f9255c9b29216513eaa8971bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 13,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 1.05722272300045,
+      "stdout_sha256": "fecdb56ccc1189a4d8034620c64e089a57939d9efc3c993bcb9e2c74beff0e6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 13,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.020521750004263595,
+      "stdout_sha256": "ac4b6062d9a7dd1e3f3c814f2e56c1278025a65c3d4109ba3f1813d2dda2d91c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 14,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.4991230300074676,
+      "stdout_sha256": "f277de963e168a5861831b39f01683175b362f8c259e77e9a2f06eb53758c43b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 14,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.4822800480033038,
+      "stdout_sha256": "cb16004be4e541f961e1fc908f02f0afce554014ab1c1ca84940a83dee57d89c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 14,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.9638015939999605,
+      "stdout_sha256": "1ee577de572e5957773a02df43a958410962c3632639a1c388134b973ec09c78",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 15,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.5449341789935715,
+      "stdout_sha256": "215a5c2b54331f0d6893568ee7595517bcd60a56e5a40bf7ed34a14a4f43675f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 15,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.9910576500114985,
+      "stdout_sha256": "d02004585fa43027025a703e58c5a11a51d37e9df0dabd27c37b787adab69cb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 15,
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.5805026070011081,
+      "stdout_sha256": "4c8593cf515cac4cdbcaee2d332080599ab8324c2868cd9e352e23eb6f2fe05a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 16,
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/coulomb-diagnostics/hull42-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.007882737001636997,
+      "stdout_sha256": "662bf225ab824ef7f85eae3ba049163892f5d0007a43e17686e664761b0d4fc6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 16,
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull42-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.007223951004561968,
+      "stdout_sha256": "87fa39009dff6edc207759ab02b017937b3171788a83d2836fd292816a6195fa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 16,
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull42-rejected.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.007744449001620524,
+      "stdout_sha256": "9bdab2629b0ed405741d3cfb4606c4cc9dbc2e4dd0ea069ff505e93286b103da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 17,
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/coulomb-diagnostics/hull7301-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 5.100606767999125,
+      "stdout_sha256": "d7ebd38197457a8d785177c655706b7e68b5bf58a69724ccee25d7d516e125c0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 17,
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull7301-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 2.7846473779936787,
+      "stdout_sha256": "02fc883e0e4f56774e634ea8fd2310e2e0b098e73f26c7d35a54db7d680d5b12",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 17,
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull7301-rejected.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.03412786500121001,
+      "stdout_sha256": "42de1415326cfb443bf83873e24bd96cf567945be9b1442a3f3cc23c8e2dc919",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 18,
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/coulomb-diagnostics/hull7301-later-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 59.68860308500007,
+      "stdout_sha256": "d7f77159bffe6b3d6ee9566c6ae610053f05ce757c7ce2d0a3ee34a12c744b2a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 18,
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull7301-later-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 28.903306453998084,
+      "stdout_sha256": "3585dacdac902863da262a7e7291583649eb7b66ba8612e539c3087e2df12d5a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 18,
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-diagnostics/hull7301-later-rejected.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 29.97125692901318,
+      "stdout_sha256": "4beb8477c82aa512a970a2073e61036c3a99724288dcec9d1dc01a2f1e87f485",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 19,
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/coulomb-followup/hull42-second-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 0.2133869700046489,
+      "stdout_sha256": "a676a02d0fe75fa973bdb4945ebc26be2451f315b92159b1970cedd284bab7d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 19,
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-followup/hull42-second-rejected.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.41431264000129886,
+      "stdout_sha256": "3898d6fb237e5f80b36c708f2d490bf8c6e02595747eea6670dd4f84d57f53b6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 19,
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/coulomb-followup/hull42-second-rejected.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.41506943201238755,
+      "stdout_sha256": "b21a4077616abb26824baa9ed73778abf8dac5e50ff18ced25d21fde09975774",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 20,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 63.25404473200615,
+      "stdout_sha256": "b81c1f40ef8c8f685ac0d56c56657dbe847d2f5abd385d935d186428dabd8483",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 20,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 34.896898474995396,
+      "stdout_sha256": "0b0ae97d5dbc746fc39374de06967eeebe6281dba8d39854772fc81c7a5c6488",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 20,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.16077094701176975,
+      "stdout_sha256": "52f325472737fab9cf4f86ac1ff564a4e5297702822dc9d0915ed8ae20e62e10",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 21,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "frozen_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5",
+      "elapsed_s_descriptive": 78.90886127599515,
+      "stdout_sha256": "3696a6431918f8a6987913875e20a090c00db491bcd7cba89cbeda772083436a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 21,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "candidate_default",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "default"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 76.36517520299822,
+      "stdout_sha256": "213fcac3c840e9cbce755458f585047d3751ab1b65ad1187f9f92a89ab1634ec",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 21,
+      "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "label": "candidate_early",
+      "returncode": 0,
+      "command": [
+        "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+        "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "4096",
+        "early"
+      ],
+      "binary_sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e",
+      "elapsed_s_descriptive": 0.13922511399141513,
+      "stdout_sha256": "28121b42fdaa1b7b4629c2b64839a08ecee966c4edec1ddb207be2c81e81b337",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "postexecution_guards": {
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb.h": "1399b11a98551df77ccdbe51e3fa2ef0980a8536fb51f7c0a46f56b8c52ea8d1",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "/workspace/rigid-body-collisions/spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "/workspace/rigid-body-collisions/spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "/workspace/rigid-body-collisions/spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "/workspace/rigid-body-collisions/spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "/workspace/rigid-body-collisions/spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "/workspace/rigid-body-collisions/spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "/workspace/rigid-body-collisions/spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "/workspace/rigid-body-collisions/spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "/workspace/rigid-body-collisions/spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "/workspace/rigid-body-collisions/spatial_backend/translation_split.h": "d5fec76446519e9d225ebf7432e79462c2cbfd8ebab9020759b37a93231b8282",
+    "/workspace/rigid-body-collisions/spatial_backend/active_contact_checks.cpp": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_replay.cpp": "2bb01361d54a0a6b36566a60bdb3f175b19345c36d54438bcc82b0c2dc0434ea",
+    "/workspace/rigid-body-collisions/spatial_backend/coulomb_restart_checks.cpp": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f",
+    "/workspace/rigid-body-collisions/spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "/workspace/rigid-body-collisions/spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "/workspace/rigid-body-collisions/spatial_backend/qp_checks.cpp": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb",
+    "/workspace/rigid-body-collisions/spatial_backend/runner.cpp": "354aaca4b6882daa294eb56da73566270bc0fc5c5032625c0dae2064aa70672a",
+    "/workspace/rigid-body-collisions/spatial_backend/shared_contact_checks.cpp": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5",
+    "/workspace/rigid-body-collisions/spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "/workspace/rigid-body-collisions/spatial_backend/translation_split_checks.cpp": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5",
+    "/workspace/rigid-body-collisions/spatial_backend/CMakeLists.txt": "f758799b5704fab8c7af853356c387e59a13ca9a26083835db3fcb74e88bfbc9",
+    "/workspace/rigid-body-collisions/spatial_engine.py": "c94c887b5392d06fc71432e32345c104224c13379124c6fc360aa4de53b503aa",
+    "/workspace/rigid-body-collisions/build/spatial/spatial_runner": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6",
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/usr/bin/x86_64-linux-gnu-g++-14": "6b3696e4dcb85e1c949c732a02befa50e3983ecf94ce7e8e58d9d503b954b79d"
+  },
+  "guard_differences": {},
+  "executables": {
+    "policy_checks": {
+      "path": "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/policy_checks",
+      "sha256": "91e8e5ef8df9a16d9fd0450b92a7edb06d03ca6935fa496774165c36e1229292"
+    },
+    "replay_frozen": {
+      "path": "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_frozen",
+      "sha256": "2c9041a843f2fcae569e6bfce2f5e92b04eb4e4c1f7d53c103f5df7ce5e954f5"
+    },
+    "replay_candidate": {
+      "path": "/workspace/rigid-body-collisions/research/early-component-policy-review/run-20261005T191156Z/replay_candidate",
+      "sha256": "86bb838b8c49c9fbf4dc396f1ec619d782d3f43c68dd440d5e94fb3f6f93634e"
+    }
+  },
+  "finished_utc": "2026-10-05T19:19:37.273709+00:00",
+  "original_plan_unchanged": true
+}

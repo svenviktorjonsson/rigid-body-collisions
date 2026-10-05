@@ -25,3 +25,8 @@ research/spatial-friction-recovery384/results/checkpoints/
 research/translation-gap-position-review/results/geometry_requery
 research/translation-gap-position-review/native-results/native_replay
 research/translation-gap-position-review/native-results/geometry_requery
+
+research/hull-aabb-cache-review/results/cache_control
+research/early-component-policy-review/run-*/policy_checks
+research/early-component-policy-review/run-*/replay_candidate
+research/early-component-policy-review/run-*/replay_frozen

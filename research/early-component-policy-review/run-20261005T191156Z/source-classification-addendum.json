@@ -1,0 +1,280 @@
+{
+  "schema": "execution-source-classification-v1",
+  "published_policy_source": "e2b60a525058cbbc344cc972d684dff31ecbaf35",
+  "original_before_receipt_unchanged": true,
+  "source_classification": {
+    "plan.json": {
+      "classification": "published_exact",
+      "executed_sha256": "77c16f70c0acd934430c893f65f931416469816201184c072b8cfd959293a051"
+    },
+    "authorization-addendum.json": {
+      "classification": "local_new_launch_material_not_in_published_commit",
+      "executed_sha256": "d66655c1ad41a211267f203288f2297be194b447e12d4c62e0e9eeeb111cdb67"
+    },
+    "manifest.json": {
+      "classification": "published_exact",
+      "executed_sha256": "791b75dbb88235a733099228ba2761d17553a18577fff0e87471cb596ec0ccfa"
+    },
+    "policy_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "9345a07f94883101ca93a6b95e5988eaa1939cbb0d935686876e7b60b9f9a50f"
+    },
+    "replay_policy.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "6db041717021170017117b4256028baa0952c57846c223d84bb9f7e3ae02c2f4"
+    },
+    "run_isolated_v2.py": {
+      "classification": "local_new_launch_material_not_in_published_commit",
+      "executed_sha256": "0e49c11d1e4f4de63425174a95b16d04100be387b33f14cfbf923b4c989b5206"
+    },
+    "frozen/spatial_backend/CMakeLists.txt": {
+      "classification": "published_exact",
+      "executed_sha256": "f758799b5704fab8c7af853356c387e59a13ca9a26083835db3fcb74e88bfbc9"
+    },
+    "frozen/spatial_backend/active_contact_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f"
+    },
+    "frozen/spatial_backend/coulomb.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1399b11a98551df77ccdbe51e3fa2ef0980a8536fb51f7c0a46f56b8c52ea8d1"
+    },
+    "frozen/spatial_backend/coulomb_active.h": {
+      "classification": "published_exact",
+      "executed_sha256": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b"
+    },
+    "frozen/spatial_backend/coulomb_active_trust.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791"
+    },
+    "frozen/spatial_backend/coulomb_fb_direct.h": {
+      "classification": "published_exact",
+      "executed_sha256": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66"
+    },
+    "frozen/spatial_backend/coulomb_homotopy_guide.h": {
+      "classification": "published_exact",
+      "executed_sha256": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913"
+    },
+    "frozen/spatial_backend/coulomb_more.h": {
+      "classification": "published_exact",
+      "executed_sha256": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4"
+    },
+    "frozen/spatial_backend/coulomb_neutral.h": {
+      "classification": "published_exact",
+      "executed_sha256": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e"
+    },
+    "frozen/spatial_backend/coulomb_polish.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00"
+    },
+    "frozen/spatial_backend/coulomb_replay.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "2bb01361d54a0a6b36566a60bdb3f175b19345c36d54438bcc82b0c2dc0434ea"
+    },
+    "frozen/spatial_backend/coulomb_restart.h": {
+      "classification": "published_exact",
+      "executed_sha256": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe"
+    },
+    "frozen/spatial_backend/coulomb_restart_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f"
+    },
+    "frozen/spatial_backend/coulomb_trust.h": {
+      "classification": "published_exact",
+      "executed_sha256": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409"
+    },
+    "frozen/spatial_backend/friction_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94"
+    },
+    "frozen/spatial_backend/newton_linear.h": {
+      "classification": "published_exact",
+      "executed_sha256": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2"
+    },
+    "frozen/spatial_backend/normal_null.h": {
+      "classification": "published_exact",
+      "executed_sha256": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa"
+    },
+    "frozen/spatial_backend/normal_null_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384"
+    },
+    "frozen/spatial_backend/normal_qp.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63"
+    },
+    "frozen/spatial_backend/position_geometry.h": {
+      "classification": "published_exact",
+      "executed_sha256": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc"
+    },
+    "frozen/spatial_backend/pressure_release.h": {
+      "classification": "published_exact",
+      "executed_sha256": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8"
+    },
+    "frozen/spatial_backend/qp_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb"
+    },
+    "frozen/spatial_backend/restart_validate.h": {
+      "classification": "published_exact",
+      "executed_sha256": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77"
+    },
+    "frozen/spatial_backend/runner.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "354aaca4b6882daa294eb56da73566270bc0fc5c5032625c0dae2064aa70672a"
+    },
+    "frozen/spatial_backend/shared_contact.h": {
+      "classification": "published_exact",
+      "executed_sha256": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a"
+    },
+    "frozen/spatial_backend/shared_contact_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5"
+    },
+    "frozen/spatial_backend/spectral_more.h": {
+      "classification": "published_exact",
+      "executed_sha256": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7"
+    },
+    "frozen/spatial_backend/support_restart.h": {
+      "classification": "published_exact",
+      "executed_sha256": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988"
+    },
+    "frozen/spatial_backend/support_restart_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e"
+    },
+    "frozen/spatial_backend/translation_split.h": {
+      "classification": "published_exact",
+      "executed_sha256": "d5fec76446519e9d225ebf7432e79462c2cbfd8ebab9020759b37a93231b8282"
+    },
+    "frozen/spatial_backend/translation_split_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5"
+    },
+    "candidate/spatial_backend/CMakeLists.txt": {
+      "classification": "published_exact",
+      "executed_sha256": "f758799b5704fab8c7af853356c387e59a13ca9a26083835db3fcb74e88bfbc9"
+    },
+    "candidate/spatial_backend/active_contact_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f"
+    },
+    "candidate/spatial_backend/coulomb.h": {
+      "classification": "published_exact",
+      "executed_sha256": "0e117fa378db5df455aaaaa6e9ceaa230c0383c0d1d2be333b8fd6ac577293fc"
+    },
+    "candidate/spatial_backend/coulomb_active.h": {
+      "classification": "published_exact",
+      "executed_sha256": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b"
+    },
+    "candidate/spatial_backend/coulomb_active_trust.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791"
+    },
+    "candidate/spatial_backend/coulomb_fb_direct.h": {
+      "classification": "published_exact",
+      "executed_sha256": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66"
+    },
+    "candidate/spatial_backend/coulomb_homotopy_guide.h": {
+      "classification": "published_exact",
+      "executed_sha256": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913"
+    },
+    "candidate/spatial_backend/coulomb_more.h": {
+      "classification": "published_exact",
+      "executed_sha256": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4"
+    },
+    "candidate/spatial_backend/coulomb_neutral.h": {
+      "classification": "published_exact",
+      "executed_sha256": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e"
+    },
+    "candidate/spatial_backend/coulomb_polish.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00"
+    },
+    "candidate/spatial_backend/coulomb_replay.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "2bb01361d54a0a6b36566a60bdb3f175b19345c36d54438bcc82b0c2dc0434ea"
+    },
+    "candidate/spatial_backend/coulomb_restart.h": {
+      "classification": "published_exact",
+      "executed_sha256": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe"
+    },
+    "candidate/spatial_backend/coulomb_restart_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f"
+    },
+    "candidate/spatial_backend/coulomb_trust.h": {
+      "classification": "published_exact",
+      "executed_sha256": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409"
+    },
+    "candidate/spatial_backend/friction_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94"
+    },
+    "candidate/spatial_backend/newton_linear.h": {
+      "classification": "published_exact",
+      "executed_sha256": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2"
+    },
+    "candidate/spatial_backend/normal_null.h": {
+      "classification": "published_exact",
+      "executed_sha256": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa"
+    },
+    "candidate/spatial_backend/normal_null_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384"
+    },
+    "candidate/spatial_backend/normal_qp.h": {
+      "classification": "published_exact",
+      "executed_sha256": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63"
+    },
+    "candidate/spatial_backend/position_geometry.h": {
+      "classification": "published_exact",
+      "executed_sha256": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc"
+    },
+    "candidate/spatial_backend/pressure_release.h": {
+      "classification": "published_exact",
+      "executed_sha256": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8"
+    },
+    "candidate/spatial_backend/qp_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb"
+    },
+    "candidate/spatial_backend/restart_validate.h": {
+      "classification": "published_exact",
+      "executed_sha256": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77"
+    },
+    "candidate/spatial_backend/runner.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "54a966d3a06f2485bafbb0b98cdf67063151f3a8f08d1f9f4850fe42e9506aae"
+    },
+    "candidate/spatial_backend/shared_contact.h": {
+      "classification": "published_exact",
+      "executed_sha256": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a"
+    },
+    "candidate/spatial_backend/shared_contact_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5"
+    },
+    "candidate/spatial_backend/spectral_more.h": {
+      "classification": "published_exact",
+      "executed_sha256": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7"
+    },
+    "candidate/spatial_backend/support_restart.h": {
+      "classification": "published_exact",
+      "executed_sha256": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988"
+    },
+    "candidate/spatial_backend/support_restart_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e"
+    },
+    "candidate/spatial_backend/translation_split.h": {
+      "classification": "published_exact",
+      "executed_sha256": "d5fec76446519e9d225ebf7432e79462c2cbfd8ebab9020759b37a93231b8282"
+    },
+    "candidate/spatial_backend/translation_split_checks.cpp": {
+      "classification": "published_exact",
+      "executed_sha256": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5"
+    }
+  },
+  "note": "Published commit contains policy/header/control/replay CPP and initial plan; actual execution driver v2, authorization addendum and compile-only include-path erratum were locally frozen after that publication. Exact hashes were recorded before compiling/executing; they must not be represented as bytes published in e2."
+}

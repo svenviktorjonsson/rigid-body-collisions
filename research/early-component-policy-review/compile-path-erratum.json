@@ -1,0 +1,14 @@
+{
+  "schema": "compile-path-erratum-v1",
+  "recorded_utc": "2026-10-05T19:11:55.846484+00:00",
+  "retained_failure": "run-20261005T191127Z/policy_checks.compile.stderr",
+  "cause": "Wrong readonly Bullet include directory; CMakeCache declares FETCHCONTENT_SOURCE_DIR_BULLET=build/bullet-inspect. No numerical code or policy change.",
+  "retained_driver_sha256": "d7dc35a9355acb0d1f1d413143c496565b562f89776f74dc7e49e8d4114ea4b8",
+  "new_driver": "run_isolated_v2.py",
+  "new_driver_sha256": "0e49c11d1e4f4de63425174a95b16d04100be387b33f14cfbf923b4c989b5206",
+  "diff": {
+    "before": "\"-I\" + str(deps / \"bullet-src/src\")",
+    "after": "\"-I\" + str(ROOT / \"build/bullet-inspect/src\")"
+  },
+  "candidate_and_original_plan_unchanged": true
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "stderr": "",
+  "controls": 8,
+  "production_unchanged": true,
+  "scope": "Cache-construction control only, no physical-world simulation or trajectory qualification."
+}

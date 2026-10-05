@@ -1,0 +1,14 @@
+{
+  "schema": "combined-auditor-prospective-preparation-v1",
+  "native_execution": false,
+  "combined_trajectory_executed": false,
+  "preceding_archive_freeze": "PENDING; no terminal outcomes or hashes invented",
+  "historical_auditors_modified": false,
+  "controls_passed": true,
+  "files": {
+    "research/audit_hull_combined_completion.py": "2a0a6e7e20d6974a3a1445e691019f2b1749b25932d861b649e1fa416d13be72",
+    "research/hull-combined-completion/auditor_checks.py": "418b68a8cd98128039c55c729f46ce5a2e06537b7f26826ee50819b1d07fb2a3",
+    "research/hull-combined-completion/auditor-checks.log": "eef2e326c8e105304d1f9bc52271aca51d269bc32d60440c659408b3eb067ceb",
+    "research/hull-combined-completion/auditor-checks-final-preparation.log": "afd0b6a816ab8bae0359ca17b8f96d5dddfccc8abd30c0f9280bded04eeed842"
+  }
+}

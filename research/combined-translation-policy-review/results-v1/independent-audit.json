@@ -1,0 +1,12 @@
+{
+  "schema": "independent-combined-translation-control-receipt-audit-v1",
+  "execution_source_commit": "f66193fc8cfa0329cbdad0eb2854ecaedce8ab4a",
+  "committed_compiled_source_integrity_passed": true,
+  "first_attempt_controls_passed": true,
+  "native_world_execution": false,
+  "trajectory_accuracy_qualified": false,
+  "producer_production_source_binary_and_libraries_guards_passed": true,
+  "four_thread_variables_set_to_one_by_launch_command": true,
+  "launch_command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python -m research.combined-translation-policy-review.run_controls --source-commit f66193fc8cfa0329cbdad0eb2854ecaedce8ab4a",
+  "checks": "Actual compiled upstream parity and four stdout groups, including15 target branches; source archive committed bytes. This helper predicts writeback of impulses already approved by the physical solver; it does not itself approve arbitrary impulses or qualify a world trajectory."
+}

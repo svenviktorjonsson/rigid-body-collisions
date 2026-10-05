@@ -1,0 +1,23 @@
+{
+  "schema": "native-cache-control-publication-manifest-v1",
+  "passed": true,
+  "controls": 8,
+  "source_commit": "de7eead49ac732a24a3d6ffe570fe877e793d64a",
+  "binary_excluded_but_hash_retained": true,
+  "files_sha256": {
+    "research/hull-aabb-cache-review/README.md": "d87a78d39d350177ad356ba085dd8cd2eb581c4111b1c2fe6f918d0dfc30c75f",
+    "research/hull-aabb-cache-review/audit.py": "7bb04c922b1065ac039f005f1715f2f80e0806a2cb8c3dcdce4585fccfe2792b",
+    "research/hull-aabb-cache-review/control.cpp": "db7da4abf142b3475e05a956ba7d66f067b300ad499d95e1957b27c8296cbe82",
+    "research/hull-aabb-cache-review/fixture.json": "d9b670306f9db24981176c71e909ca25ac6e26a02147a0d565e16b60fb76d230",
+    "research/hull-aabb-cache-review/plan.json": "cc11a9b50f3ae92313288228b3c33f0d2f3740bc9e59acfcef1dbf2ce1ddcd3e",
+    "research/hull-aabb-cache-review/results/compile.json": "84f9bba3295a42c76f067db9b481ee8163dc39d3e3ccde9d385fee7ba1b0f7ed",
+    "research/hull-aabb-cache-review/results/controls.json": "42b25936eddc886c994e3b47c5fff91adbd8538aee26c31079a68e8d35a4854f",
+    "research/hull-aabb-cache-review/results/independent-audit.json": "3912c3d8d504cfbed72afdcfe7d795da56d504ec16bdb30cf67a200a0d0bb939",
+    "research/hull-aabb-cache-review/results/invocation.json": "f5feb6776ffae69cfc801e8f4c56bc51fb9e201cdbbdb3e8e7b657ba3874fbef",
+    "research/hull-aabb-cache-review/results/provenance.json": "9af4c30400fd08018a7fe78072ca9e38dc8a2ed975906a1b3fb009f418413aa2",
+    "research/hull-aabb-cache-review/results/receipt.json": "46fe4c304f73a444af493a8eb8c34ea28c181eba38ca4ef4297afe7f4800a9fd",
+    "research/hull-aabb-cache-review/results/source.zip": "3f8d3e684864f9ddf136808f66755c7825d1f1bc5734c62ec02ed063605e92cb",
+    "research/hull-aabb-cache-review/results/stdout.jsonl": "c31ba8b4616540a4bea115e0f00d7b641c241b4bfef3e6c92045494fa0689a67",
+    "research/hull-aabb-cache-review/runner.py": "5209fbe78350c53c224cb543860d19f2f72b24149a7c324940046e3bc6c39fce"
+  }
+}
