@@ -1,0 +1,16 @@
+{
+  "scope": "Remaining original 21-row component: enumerate subsets of three through seven sliding contacts, two initial angle offsets per subset. Exact circular cones, unchanged full independent and native budget-zero acceptance.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87"
+  },
+  "execution": "Sequential single-thread numerical discovery concurrent with untimed world diagnostic. Every failed candidate retained; no performance claim.",
+  "limits": {
+    "max_selected_sliding_contacts": 7,
+    "max_starts": 256,
+    "raw_function_evaluations_per_method_start": 2048,
+    "methods": [
+      "lm",
+      "trf"
+    ]
+  }
+}
