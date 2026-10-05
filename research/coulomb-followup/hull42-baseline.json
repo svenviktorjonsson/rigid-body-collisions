@@ -1,0 +1,437 @@
+{
+  "analysis": {
+    "rows": 45,
+    "contacts": 15,
+    "rank": 34,
+    "min_eigenvalue": -8.55922959051582e-15,
+    "max_eigenvalue": 40.124793486267535,
+    "singular_values": [
+      40.124793486267606,
+      32.9444915873685,
+      32.700676292902166,
+      32.38803763290214,
+      29.129431902383413,
+      25.564850369752712,
+      21.614410217068162,
+      21.57563131478661,
+      19.1217117234154,
+      18.294748730242027,
+      18.1957265137297,
+      16.549366020077322,
+      15.186384592012073,
+      12.556900033197827,
+      11.93343169677498,
+      9.073259771044988,
+      8.090700902853746,
+      6.894854473415339,
+      5.555007598491043,
+      5.240600839055796,
+      5.15957145589772,
+      4.412029984022265,
+      3.441799240512476,
+      2.5182756248120524,
+      2.0715509226736164,
+      1.1788382954723984,
+      1.1189109730284772,
+      0.912219590691875,
+      0.6828975652504379,
+      0.5127766542308646,
+      0.49011111209077646,
+      0.2688498809386911,
+      0.1602771894270197,
+      0.12344111895235806,
+      5.457599839200657e-15,
+      4.54799502654178e-15,
+      2.8289956727994204e-15,
+      2.3062049912853106e-15,
+      1.9346597574257128e-15,
+      1.788041219575349e-15,
+      1.355569905349524e-15,
+      1.22543753994482e-15,
+      7.818143374673052e-16,
+      7.387797832142184e-16,
+      1.3994192846930076e-18
+    ],
+    "normal_target_witness": null,
+    "iterate": {
+      "accepted": false,
+      "residual_m_s": 1.0603230017657023e-05,
+      "passive_change_bound_J": -1.43276422128877,
+      "passivity_scale": 3.553028929429693,
+      "upper_bounds_ok": true,
+      "normal_min": 0.0
+    },
+    "jacobian_rank": 42,
+    "active_normal_rows": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      8,
+      13,
+      14
+    ],
+    "active_normal_target_range_error_m_s": 3.585836055169933e-15,
+    "worst_contacts": [
+      {
+        "normal": 0,
+        "tangents": [
+          15,
+          16
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.16865713171969726,
+        "normal_velocity": 8.688094688125148e-10,
+        "tangential_impulse_norm": 0.0674406498144033,
+        "tangential_velocity_norm": 1.0603230017657023e-05,
+        "normal_residual": 8.688094699004995e-10,
+        "tangent_residual": 1.0603230017657023e-05
+      },
+      {
+        "normal": 1,
+        "tangents": [
+          17,
+          18
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.052842905514500445,
+        "normal_velocity": -6.54367390195439e-06,
+        "tangential_impulse_norm": 0.018842448501413357,
+        "tangential_velocity_norm": 5.801780204496662e-06,
+        "normal_residual": 6.54367390195158e-06,
+        "tangent_residual": 5.801780204496662e-06
+      },
+      {
+        "normal": 2,
+        "tangents": [
+          19,
+          20
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.24680097184440794,
+        "normal_velocity": -1.389977010296528e-06,
+        "tangential_impulse_norm": 0.0018196049717727012,
+        "tangential_velocity_norm": 1.602165991125148e-11,
+        "normal_residual": 1.3899770103317257e-06,
+        "tangent_residual": 1.602165991125148e-11
+      },
+      {
+        "normal": 13,
+        "tangents": [
+          41,
+          42
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.46834239147517176,
+        "normal_velocity": 4.548361687284341e-12,
+        "tangential_impulse_norm": 0.18733695659006822,
+        "tangential_velocity_norm": 1.1567163937234348,
+        "normal_residual": 4.5481481014759e-12,
+        "tangent_residual": 6.6199210110076305e-15
+      },
+      {
+        "normal": 8,
+        "tangents": [
+          31,
+          32
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.24396832790314513,
+        "normal_velocity": -1.1102230246251565e-16,
+        "tangential_impulse_norm": 0.09758733116125798,
+        "tangential_velocity_norm": 1.4988858451157099,
+        "normal_residual": 0.0,
+        "tangent_residual": 9.992055909587988e-16
+      },
+      {
+        "normal": 7,
+        "tangents": [
+          29,
+          30
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.17606105489209156,
+        "normal_velocity": 1.0408340855860843e-17,
+        "tangential_impulse_norm": 0.07042442195683654,
+        "tangential_velocity_norm": 1.4988858346052574,
+        "normal_residual": 0.0,
+        "tangent_residual": 8.5660016617732365e-16
+      },
+      {
+        "normal": 14,
+        "tangents": [
+          43,
+          44
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0007282271632887721,
+        "normal_velocity": 8.673617379884035e-19,
+        "tangential_impulse_norm": 0.0002912908653155082,
+        "tangential_velocity_norm": 4.760217081575612,
+        "normal_residual": 8.127812185407448e-19,
+        "tangent_residual": 8.864852619501219e-18
+      },
+      {
+        "normal": 4,
+        "tangents": [
+          23,
+          24
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.00029914092646841944,
+        "normal_velocity": 0.0,
+        "tangential_impulse_norm": 0.00011965637058736754,
+        "tangential_velocity_norm": 3.6648326121437824,
+        "normal_residual": 0.0,
+        "tangent_residual": 1.858291686642299e-18
+      },
+      {
+        "normal": 3,
+        "tangents": [
+          21,
+          22
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 0.0009124603879894777,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.5076437251759149e-05,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 5,
+        "tangents": [
+          25,
+          26
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 1.3495254808399653,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 3.6778696652571856,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      }
+    ]
+  },
+  "recovery": {
+    "impulse": [
+      0.16865693845040078,
+      0.05284351497272805,
+      0.2468016570754603,
+      -6.680358712191944e-23,
+      0.00029914092646841895,
+      1.3830127757068757e-22,
+      1.8410411277246516e-22,
+      0.1760610548920918,
+      0.2439683279031454,
+      -3.077702006521282e-22,
+      5.462639354769514e-23,
+      2.919070158375246e-22,
+      -3.220902719602819e-22,
+      0.4683423711926309,
+      0.0007282271632887717,
+      0.025083498106054276,
+      0.06262541048755793,
+      0.01499168262823036,
+      0.0008146047522543308,
+      0.002517632833759138,
+      0.0008154148462571122,
+      -1.2286399764362027e-22,
+      4.8277194321808174e-23,
+      0.00011663498260417756,
+      2.6719428419497414e-05,
+      9.543514627923815e-22,
+      -1.686544430278401e-24,
+      4.76257853382212e-22,
+      -4.23727199034963e-23,
+      0.07042442154453418,
+      7.620520826322027e-06,
+      0.09758732990555206,
+      -1.565509545353364e-05,
+      -6.159136302744196e-23,
+      -1.6375692926335807e-22,
+      2.6187787615589794e-22,
+      2.9484366948588016e-23,
+      1.2893232412679364e-22,
+      -2.4464428260631875e-23,
+      1.2957332069296347e-22,
+      -1.7081725360561852e-22,
+      0.18073069818436566,
+      -0.04931071890051389,
+      0.00028657610176523933,
+      -5.2196801753527324e-05
+    ],
+    "velocity": [
+      5.272311476289815e-10,
+      -4.145054246129827e-10,
+      -1.12730630386082e-10,
+      0.0009158259628514465,
+      -5.421010862427522e-20,
+      1.3495254808399653,
+      82.92327321653372,
+      1.214306433183765e-16,
+      3.3306690738754696e-16,
+      158.35172796706223,
+      153.7462827008907,
+      240.15047808557503,
+      1.4251838658104952,
+      0.0,
+      0.0,
+      8.33224825013551e-06,
+      9.563991606835465e-07,
+      -7.077893549436998e-06,
+      1.860050997323781e-07,
+      -1.2543547003099342e-06,
+      -1.1424042603673523e-06,
+      -1.4881096573568812e-05,
+      -4.156820052812283e-06,
+      -3.5722936093278044,
+      -0.8183620493329036,
+      -3.6322474797103776,
+      0.5774976370138765,
+      -1.3571073438309813,
+      -1.666044367772722,
+      -1.4988858258299693,
+      -0.0001621921827895667,
+      -1.4988858258287767,
+      0.0002404533529095094,
+      0.2595876571468923,
+      -0.6357305005716093,
+      2.975352509352289,
+      -0.3888781284114698,
+      -1.3811773794118496,
+      -3.7531010449937092,
+      -0.06383210730450029,
+      -0.2941794739194113,
+      -1.115929284312271,
+      0.30447110426940316,
+      -4.683169358286132,
+      0.852989698257894
+    ],
+    "method": "semismooth-svd+least-squares",
+    "newton_residual_path": [
+      1.662330281666851
+    ],
+    "jacobian_ranks": [
+      45
+    ],
+    "evaluations": 52,
+    "optimizer_success": true,
+    "accepted": false,
+    "residual_m_s": 8.386957747386264e-06,
+    "passive_change_bound_J": -1.4327641775879498,
+    "passivity_scale": 3.552909764424747,
+    "upper_bounds_ok": true,
+    "normal_min": -3.220902719602819e-22,
+    "recovery_attempts": [
+      {
+        "label": "warm-newton",
+        "accepted": false,
+        "residual_m_s": 8.386957747165667e-06,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 1.0542825793611826e-05,
+        "newton_steps": 64,
+        "evaluations": 915
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747326607e-06,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747411585e-06,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747386264e-06,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957746945071e-06,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "warm-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 1.053016562230314e-05,
+        "newton_steps": 64,
+        "evaluations": 892
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.38695774691975e-06,
+        "newton_steps": 1,
+        "evaluations": 30
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747225324e-06,
+        "newton_steps": 1,
+        "evaluations": 30
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.346412367193041e-06,
+        "newton_steps": 64,
+        "evaluations": 927
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747386264e-06,
+        "newton_steps": 1,
+        "evaluations": 30
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.386957747165667e-06,
+        "newton_steps": 1,
+        "evaluations": 30
+      },
+      {
+        "label": "stagnated-mechanical-null-gauge",
+        "accepted": false,
+        "residual_m_s": 8.328436670150574e-06,
+        "newton_steps": 64,
+        "evaluations": 888
+      },
+      {
+        "label": "cold-newton",
+        "accepted": false,
+        "residual_m_s": 1.662330281666851,
+        "newton_steps": 2,
+        "evaluations": 31
+      },
+      {
+        "label": "least-squares",
+        "accepted": false,
+        "residual_m_s": 8.386957747386264e-06,
+        "newton_steps": 1,
+        "evaluations": 52
+      }
+    ]
+  }
+}

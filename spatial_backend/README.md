@@ -152,7 +152,7 @@ law. A snapshot describes one failed contact solve, not a completed trajectory.
 
 Circular-contact recovery now keeps the same isotropic law and residual/passivity
 gates while trying minimum-norm semismooth Newton steps, mechanically neutral
-pressure redistribution to adjacent friction faces, then a cold Newton restart.
+pressure redistribution to adjacent friction faces, and a cold Newton restart.
 The usual block iteration runs first. Recovery is limited to 384 rows, 64 Newton
 steps per attempt, four null directions for each of two starting faces, and both
 signs, with a global ceiling of 256 SVD calls (each at most 64 Jacobi sweeps); it requires an iteration budget of at least 64. It adds a bounded numerical
@@ -160,3 +160,10 @@ budget after the ordinary iteration budget. `contact_recovery=False` disables it
 Counters disclose recovered solves, polishing steps, gauge and cold restarts.
 Unconverged SVD steps and nonfinite energy scales reject. The physical mobility is never regularized. An unresolved system still rejects.
 Passing a captured system does not establish full-trajectory accuracy.
+
+Before the gauge and cold restarts, a bounded fallback tries up to eight positive-pressure contacts per
+starting face with tangential traction opposing the current slip. This is a
+feasible numerical initialization, which can change trial velocity; it is not a
+mechanical-null pressure move or a physical impulse. The unchanged full contact
+and finite energy gates still accept only the final result. All restarts share
+the same global SVD work budget, and counters disclose their use.

@@ -1,0 +1,86 @@
+{
+  "purpose": "Frozen-law second rejected hull diagnosis; acceptance is contact-local, not a whole-trajectory claim",
+  "parent_head_at_analysis": "0cab942b0fb0f8460511aa03dc0234bd36ae7744",
+  "files": {
+    "research/hull_recovery_followup.py": {
+      "sha256": "110f15680ffa4c4a54a9d2e2822088a90710c85f052950ee906843d1ef61cfea",
+      "bytes": 10949
+    },
+    "research/coulomb_diagnostics.py": {
+      "sha256": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84",
+      "bytes": 15157
+    },
+    "research/coulomb-followup/README.md": {
+      "sha256": "15171d189893a633bcd9028cc25531c2f9d940a913d538d7b438fe30be33af3c",
+      "bytes": 4828
+    },
+    "research/coulomb-followup/hull42-baseline.json": {
+      "sha256": "90f77009f4ee15826eee2d890861ed8e54949d786f4e487a7773559829ab6e5d",
+      "bytes": 11933
+    },
+    "research/coulomb-followup/hull42-boundary-derivative.json": {
+      "sha256": "fd8ecfa9529d48fb29b133c7791742ba0076020838599d59599f846680b3be27",
+      "bytes": 5426
+    },
+    "research/coulomb-followup/hull42-combination.json": {
+      "sha256": "d94453e112dbe96f4d25985f45d4a1384828436fc007f7e86851c5e20c6bf207",
+      "bytes": 149099
+    },
+    "research/coulomb-followup/hull42-continuation.json": {
+      "sha256": "48dcf10d6306cb4d616291e4b8d1615617536d4548955d54e0ef412b4c770e6f",
+      "bytes": 33471
+    },
+    "research/coulomb-followup/hull42-kick.json": {
+      "sha256": "ae2ff97c78917a3b92f222135c6c6c890c08f2f1b0c9f4f4ff61e372547d9ed6",
+      "bytes": 21680
+    },
+    "research/coulomb-followup/hull42-mechanical-gauge.json": {
+      "sha256": "1371bd7ea1b3320f5c223fe61bd696afaae5c9cc187c80e4e4717963863186f4",
+      "bytes": 17206
+    },
+    "research/coulomb-followup/hull42-opposing.json": {
+      "sha256": "5667628f1b273d9a1829ca95a3c7cd88e22a094cf36c6c37a19f4ede889f1c61",
+      "bytes": 16221
+    },
+    "research/coulomb-followup/hull42-second-rejected.json": {
+      "sha256": "c263492b847ec70be8c0ce25b59cc36f1074b3383945007da488903869bfb031",
+      "bytes": 20213
+    },
+    "research/coulomb-followup/hull7301-baseline-reproduced.json": {
+      "sha256": "e56f6d49e78d399fd1829addbb631078e81d37cb44b28f3a7e9f3db8c9b9f94b",
+      "bytes": 37113
+    },
+    "research/coulomb-followup/hull7301-baseline.json": {
+      "sha256": "8acfe00388a284e2e230d9748104c90cb7ed561d1a5586214244e685f2fee64e",
+      "bytes": 36860
+    },
+    "research/coulomb-followup/hull7301-second-rejected.json": {
+      "sha256": "ccd10a635622b90b61d39f3676d827dc3fdbee989eca616dd79fabe6b4430765",
+      "bytes": 393132
+    },
+    "research/coulomb-followup/independent-verification.json": {
+      "sha256": "7c63b652ee558452b409f1068cc2a01c6dc5f148f0ddea3b8c931f9eef82e4bd",
+      "bytes": 28596
+    },
+    "research/coulomb-followup/try_boundary_derivative.py": {
+      "sha256": "5ee4422adcda08c4a2f67cd5c751bbcdf2b6c8c2a3485dfff55e3434860a51aa",
+      "bytes": 1515
+    },
+    "research/coulomb-followup/try_continuation.py": {
+      "sha256": "c44d3e4cb1660642d7d3986efc3c22424544f3184ee0b3d201d5218b2df2dbc9",
+      "bytes": 835
+    },
+    "research/coulomb-followup/try_kick.py": {
+      "sha256": "ff0700fc7620bc481a1868114a4c286c1a4add0ae5953770ab0d8538b38bc913",
+      "bytes": 850
+    },
+    "research/coulomb-followup/try_mechanical_gauge.py": {
+      "sha256": "fe8c0ebc0bf3cf31ad000f394fea90434a38fa88dad9e305bb535e994c111f15",
+      "bytes": 1867
+    },
+    "research/coulomb-followup/verify.py": {
+      "sha256": "163a321a16ef4184b7ceb3614ac4d55d5adc06ed61e2fcc3c09799e11c11d578",
+      "bytes": 2745
+    }
+  }
+}

@@ -91,6 +91,8 @@ inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const bt
  std::vector<double>original(n);for(int i=0;i<n;i++)original[i]=x[i];auto p=original;
  if(newton(p))return true;
  auto stagnated=p;
+ for(const auto& start:{original,p})for(auto trial:gauges(start)){stats.gauge_restarts++;if(newton(trial))return true;}
+ stats.cold_restarts++;p.assign(n,0);if(newton(p))return true;
  // A feasible opposing-slip guess may cross a merit basin that neutral pressure
  // relocation cannot escape. This trial is never applied to bodies. The SAME
  // final contact/energy gate alone accepts its converged result.
@@ -105,8 +107,6 @@ inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const bt
    attempts++;stats.opposing_restarts++;if(newton(trial))return true;
   }
  }
- for(const auto& start:{original,p})for(auto trial:gauges(start)){stats.gauge_restarts++;if(newton(trial))return true;}
- stats.cold_restarts++;p.assign(n,0);if(newton(p))return true;
  if(remaining_svd_calls<=0)stats.polish_budget_rejections++;
  return false;
 }

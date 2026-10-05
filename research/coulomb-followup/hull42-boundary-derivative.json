@@ -1,0 +1,282 @@
+[
+  {
+    "epsilon": 0.0,
+    "start": "warm",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 0.0,
+    "start": "stalled",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge0",
+    "accepted": false,
+    "residual": 8.38695774691975e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge1",
+    "accepted": false,
+    "residual": 8.386957747225324e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge2",
+    "accepted": false,
+    "residual": 8.346412367193041e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge3",
+    "accepted": false,
+    "residual": 8.386957747386264e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge4",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 0.0,
+    "start": "gauge5",
+    "accepted": false,
+    "residual": 8.328436670150574e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "warm",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "stalled",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge0",
+    "accepted": false,
+    "residual": 8.38695774691975e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge1",
+    "accepted": false,
+    "residual": 8.386957747225324e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge2",
+    "accepted": false,
+    "residual": 8.346412367193041e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge3",
+    "accepted": false,
+    "residual": 8.386957747386264e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge4",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-12,
+    "start": "gauge5",
+    "accepted": false,
+    "residual": 8.328436670150574e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "warm",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "stalled",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge0",
+    "accepted": false,
+    "residual": 8.38695774691975e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge1",
+    "accepted": false,
+    "residual": 8.386957747225324e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge2",
+    "accepted": false,
+    "residual": 8.346412367193041e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge3",
+    "accepted": false,
+    "residual": 8.386957747386264e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge4",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-10,
+    "start": "gauge5",
+    "accepted": false,
+    "residual": 8.328436670150574e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "warm",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "stalled",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge0",
+    "accepted": false,
+    "residual": 8.38695774691975e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge1",
+    "accepted": false,
+    "residual": 8.386957747225324e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge2",
+    "accepted": false,
+    "residual": 8.346412367193041e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge3",
+    "accepted": false,
+    "residual": 8.386957747386264e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge4",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-08,
+    "start": "gauge5",
+    "accepted": false,
+    "residual": 8.328436670150574e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "warm",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "stalled",
+    "accepted": false,
+    "residual": 8.386957747165667e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge0",
+    "accepted": false,
+    "residual": 8.38695774691975e-06,
+    "iterations": 1
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge1",
+    "accepted": false,
+    "residual": 8.386956874222945e-06,
+    "iterations": 5
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge2",
+    "accepted": false,
+    "residual": 8.346412367193041e-06,
+    "iterations": 64
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge3",
+    "accepted": false,
+    "residual": 8.386958304798245e-06,
+    "iterations": 6
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge4",
+    "accepted": false,
+    "residual": 8.386957755226443e-06,
+    "iterations": 2
+  },
+  {
+    "epsilon": 1e-06,
+    "start": "gauge5",
+    "accepted": false,
+    "residual": 8.328436670150574e-06,
+    "iterations": 64
+  }
+]
