@@ -62,6 +62,19 @@ python /tmp/publish-physics-commit.py HEAD
 
 Wait for a publisher to finish before movingHEAD. If a new environment lacks this helper, use available GitHub tools/credentials or reconstruct exact GitData publication; never force references. Keep ordinary source/evidence checkpoints frequent.
 
-Correct integration target **vektor-flow/bootstrap, working**, paired **vektor-flow/spec, working**. Private docs-only checkpoints: spec **bf0217e822d249cb28f08cac3bb0511e6f6402ff**, bootstrap **fbc6686d3c27d8510ede0f47ad39c166c2fad297**. Bootstrap owns full handover; spec is a short pointer. Their organization branches advanced to consolidated **0130unverified compiler candidate** during this work; preserve latest handover/compiler/fixture/patch bytes. Read current AGENTS/HANDOVER and fetch/fast-forward before editing; publish spec first then exactpin bootstrap. This research does not implement a VKF port or qualify Section0/main/release. October5 GPU resumption is documented in their latest handover; do not substitute older deferral prose or initiate hardware work for this physics handover.
+Correct integration target **vektor-flow/bootstrap, working**, paired **vektor-flow/spec, working**. Latest paired docs-only checkpoints: spec **2a29d03aab6cd29b98b6730d38b309d7b1fa0950**, bootstrap **21d153e561aa9d3b00ea32fe0f8318b376c0259e**. Bootstrap owns full handover; spec is a short pointer. Their organization branches advanced to consolidated **0130unverified compiler candidate** during this work; preserve latest handover/compiler/fixture/patch bytes. Read current AGENTS/HANDOVER and fetch/fast-forward before editing; publish spec first then exactpin bootstrap. This research does not implement a VKF port or qualify Section0/main/release. October5 GPU resumption is documented in their latest handover; do not substitute older deferral prose or initiate hardware work for this physics handover.
 
 HostedCI: paired source108/e2/evidence579 runs passed. Current bca Python3.11 jobs pass; Python3.12 jobs were cancelled without a failed step; rerun-failed-jobs was requested for run37364665223. Newer pushes are queued. Check actual latest job conclusions; do not claim all current hosted matrices green.
+
+Publication fallback at final handover: the shellGitHub credential expired during
+the last upload and environment-status refresh did not renew it. GitHub connector
+GitData tools succeeded: create_blob → create_tree → create_commit → update_ref
+with force=false. Verify every blob and the complete tree against local Git, then
+verify remote branch and reconcile the identical local tree. Connector commit
+metadata can produce a different commitSHA: final sealed evidence initially local
+4aa139e1539473fbfde9443b24fa6ef340bb4222 was published canonically as
+a237f91ba332ce13f5414d8ff9b97c56a7de87c1 with identical tree
+a08899dcfb43f755b731c98e2bdfac4742433ddb. The local original is preserved on
+archive/local-handover-4aa139e. Frozen research sources170/9e/bca are unaffected.
+Use the GitHub connector if the old shell publisher still returns401; do not ask
+for approval to repeat the already-authorized nonforced publication.
