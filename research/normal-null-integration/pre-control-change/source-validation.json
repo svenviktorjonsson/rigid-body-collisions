@@ -1,0 +1,17 @@
+{
+  "source_sha256": {
+    "spatial_backend/coulomb.h": "de282bd3af3a7db8035fba4059976cdba64d1877b76cf9190968eafea66b01e2",
+    "spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "spatial_backend/translation_split.h": "5a1b2d7d94dbc517071053042ab73ab9ab6c6e48159f861ba16258e75158716c",
+    "spatial_backend/runner.cpp": "7569713ee417a99a1ea8509f0ce13da2092d0c2120f4be771a5c9d1e5e217552",
+    "spatial_backend/coulomb_replay.cpp": "cc5248085f5741c3ec8ef591cbbeb0d93b6ab4b5fafed56d3cfbbba6469283be",
+    "spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "spatial_engine.py": "564a431dfd224cd1687c93d0f97aba07ff4bbf2b70e419648a4362e9aeed0868"
+  },
+  "binary_sha256": "a92f548c6ad978774fe68e21d826c39ce19011066befe953ec05ea1a11b87769",
+  "all_old_sixteen_passed": true,
+  "new_position_capture_passed": true,
+  "accepted_count": 17,
+  "total_count": 20,
+  "scope": "Captured systems; three later velocity failures remain retained and unresolved in this production checkpoint."
+}

@@ -188,6 +188,16 @@ int main(){try{
  out["position_active_pressure_svd_calls"]=coulomb_mlcp.position_stats.active.search.pressure_svd_calls;
  out["coulomb_pressure_solves"]=coulomb_mlcp.stats.pressure_solves;out["coulomb_pressure_svd_calls"]=coulomb_mlcp.stats.pressure.svd_calls;
  out["position_pressure_solves"]=coulomb_mlcp.position_stats.pressure_solves;out["position_pressure_svd_calls"]=coulomb_mlcp.position_stats.pressure.svd_calls;
+ out["coulomb_null_pressure_solves"]=coulomb_mlcp.stats.null_pressure.solves;
+ out["coulomb_null_pressure_states"]=coulomb_mlcp.stats.null_pressure.states;
+ out["coulomb_null_pressure_svd_calls"]=coulomb_mlcp.stats.null_pressure.svd_calls;
+ out["coulomb_null_pressure_boundary_moves"]=coulomb_mlcp.stats.null_pressure.null_steps;
+ out["coulomb_null_trial_response_max_m_s"]=coulomb_mlcp.stats.null_pressure.maximum_null_velocity_change;
+ out["position_null_pressure_solves"]=coulomb_mlcp.position_stats.null_pressure.solves;
+ out["position_null_pressure_states"]=coulomb_mlcp.position_stats.null_pressure.states;
+ out["position_null_pressure_svd_calls"]=coulomb_mlcp.position_stats.null_pressure.svd_calls;
+ out["position_null_pressure_boundary_moves"]=coulomb_mlcp.position_stats.null_pressure.null_steps;
+ out["position_null_trial_response_max_m_s"]=coulomb_mlcp.position_stats.null_pressure.maximum_null_velocity_change;
  const auto& continuation=coulomb_mlcp.stats.continuation;
  out["coulomb_continuation_attempts"]=continuation.attempts;out["coulomb_continuation_stages"]=continuation.stages;
  out["coulomb_continuation_svd_calls"]=continuation.svd_calls;out["coulomb_continuation_damped_steps"]=continuation.damped_steps;

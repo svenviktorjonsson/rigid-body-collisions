@@ -1,0 +1,30 @@
+{
+  "source_sha256": {
+    "spatial_backend/coulomb.h": "00f667e9a7960ed06c5d12c442290b39f416d816defcb54455261dd02db83093",
+    "spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "spatial_backend/translation_split.h": "669b060f2c0ce95d866f9712c1351ba65eb81712fdd9d057355cb076dcfb2886",
+    "spatial_backend/runner.cpp": "7569713ee417a99a1ea8509f0ce13da2092d0c2120f4be771a5c9d1e5e217552",
+    "spatial_backend/coulomb_replay.cpp": "cc5248085f5741c3ec8ef591cbbeb0d93b6ab4b5fafed56d3cfbbba6469283be",
+    "spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "spatial_engine.py": "564a431dfd224cd1687c93d0f97aba07ff4bbf2b70e419648a4362e9aeed0868"
+  },
+  "binary_sha256": "a92f548c6ad978774fe68e21d826c39ce19011066befe953ec05ea1a11b87769",
+  "all_old_sixteen_passed": true,
+  "new_position_capture_passed": true,
+  "accepted_count": 17,
+  "total_count": 20,
+  "scope": "Captured systems; three later velocity failures remain retained and unresolved in this production checkpoint.",
+  "validation": {
+    "python_tests": 155,
+    "python_passed": true,
+    "native_normal_null_controls": 9,
+    "native_translation_controls_passed": true,
+    "native_circular_friction_controls_passed": true,
+    "native_active_controls_passed": true,
+    "elastic_cases": 18,
+    "elastic_histories": 54,
+    "elastic_rejects": 0,
+    "scope": "Exact final source captured-system checks and independent archived elastic audit; no fresh full-trajectory qualification."
+  }
+}

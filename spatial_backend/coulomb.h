@@ -8,6 +8,7 @@
 #include "coulomb_trust.h"
 #include "translation_split.h"
 #include "pressure_release.h"
+#include "normal_null.h"
 #include "coulomb_active.h"
 
 // Upstream friction RHS omits this angular free-velocity increment, although
@@ -22,6 +23,7 @@ struct CoulombStats {
  int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,rank_restarts=0,opposing_restarts=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
  normal_pressure::Stats pressure;int pressure_solves=0;
+ normal_null::Stats null_pressure;
  circular_active::Stats active;int active_solves=0;
  int continuation_solves=0;unsigned long long iteration_sweeps_total=0;
  circular_trust::Stats continuation;
@@ -196,9 +198,10 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
   if(normal_only){
    const int n=static_cast<int>(normals.size());btMatrixXu N(n,n);btVectorXu rhs(n),upper(n),seed(n),answer(n);
    for(int i=0;i<n;i++){rhs[i]=b[normals[i]];upper[i]=hi[normals[i]];seed[i]=rejected[normals[i]];for(int j=0;j<n;j++)N.setElem(i,j,A(normals[i],normals[j]));}
-   if(normal_pressure::solve(N,rhs,upper,seed,answer,tolerance,stats.pressure)){
-    x.setZero();for(int i=0;i<n;i++)x[normals[i]]=answer[i];stats.solves++;stats.pressure_solves++;
-    stats.last_residual=stats.pressure.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+   const bool null_ok=normal_null::solve(N,rhs,upper,seed,answer,tolerance,stats.null_pressure);
+   if(null_ok||normal_pressure::solve(N,rhs,upper,seed,answer,tolerance,stats.pressure)){
+    x.setZero();for(int i=0;i<n;i++)x[normals[i]]=answer[i];stats.solves++;if(!null_ok)stats.pressure_solves++;
+    stats.last_residual=null_ok?stats.null_pressure.residual:stats.pressure.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
     double change=0;for(int i=0;i<n;i++){double w=-rhs[i];for(int j=0;j<n;j++)w+=N(i,j)*answer[j];change+=.5*answer[i]*(w-rhs[i]);}
     stats.passive_change_max=std::max(stats.passive_change_max,change);stats.sweeps_max=std::max(stats.sweeps_max,first_budget);return true;
    }
@@ -278,7 +281,7 @@ protected:
    m_xSplit.setZero();
    if(translation_split){
     double residual=0;
-    if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual))
+    if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual,&position_stats.null_pressure,recovery_enabled))
      throw std::runtime_error("Translation-only position projection failed; repair initial overlap or refine timestep");
     translation_split_solves++;translation_split_residual_max=std::max(translation_split_residual_max,residual);
     for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];

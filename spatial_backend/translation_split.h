@@ -6,6 +6,7 @@
 #include <LinearMath/btMatrixX.h>
 #include <BulletDynamics/MLCPSolvers/btDantzigSolver.h>
 #include "normal_qp.h"
+#include "normal_null.h"
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -40,7 +41,7 @@ inline btMatrixXu assembleTranslationSplitMobility(
 // allowed; no compliance, eigenvalue shift or angular pose repair is introduced.
 // Every returned impulse passes the caller's ABSOLUTE velocity residual gate.
 inline bool translationSplitSolve(const btMatrixXu& A,const btVectorXu& b,
- const btVectorXu& upper,btVectorXu& x,double tolerance,int budget,double* final_residual=nullptr){
+ const btVectorXu& upper,btVectorXu& x,double tolerance,int budget,double* final_residual=nullptr,normal_null::Stats* recovery_stats=nullptr,bool allow_recovery=true){
  const int n=b.rows();if(A.rows()!=n||A.cols()!=n||upper.rows()!=n||x.rows()!=n||
      !(tolerance>0)||!std::isfinite(tolerance)||budget<0)return false;
  auto gate=[&](){
@@ -57,6 +58,11 @@ inline bool translationSplitSolve(const btMatrixXu& A,const btVectorXu& b,
  if(final_residual)*final_residual=std::numeric_limits<double>::infinity();
  x.setZero();
  if(normalQP(A,b,upper,x)&&gate())return true;
+ if(allow_recovery&&budget>=64){
+  normal_null::Stats local;auto& stats=recovery_stats?*recovery_stats:local;
+  btVectorXu candidate=x;
+  if(normal_null::solve(A,b,upper,x,candidate,tolerance,stats)){x=candidate;if(gate())return true;}
+ }
  // Cholesky can reject a singular face even when its pressure redistribution
  // is harmless. Projected iterations operate on the unchanged PSD mobility.
  for(int i=0;i<n;i++)if(!(A(i,i)>0)||!std::isfinite(A(i,i)))return false;

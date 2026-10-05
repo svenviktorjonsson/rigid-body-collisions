@@ -29,12 +29,13 @@ jobs:
       - name: Build pinned Float64 3D contact backend
         run: |
           cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks -j 2
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks -j 2
           build/spatial/spatial_qp_checks
           build/spatial/spatial_friction_checks
           build/spatial/shared_contact_checks
           build/spatial/translation_split_checks
           build/spatial/active_contact_checks
+          build/spatial/normal_null_checks
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull42-rejected.json > /tmp/replayed-hull42.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-rejected.json > /tmp/replayed-hull7301.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-later-rejected.json > /tmp/replayed-hull7301-later.json
@@ -51,6 +52,7 @@ jobs:
           build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json > /tmp/replayed-active-fast_shake8_hulls42-2.json
           build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json > /tmp/replayed-active-fast_rotate_shake27_hulls7301-0.json
           build/spatial/spatial_coulomb_replay research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json > /tmp/replayed-active-fast_rotate_shake27_hulls7301-2.json
+          build/spatial/spatial_coulomb_replay research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json > /tmp/replayed-normal-null-position291.json
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend
       - name: Engine and benchmark-tool regressions

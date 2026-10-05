@@ -152,13 +152,26 @@ law. A snapshot describes one failed contact solve, not a completed trajectory.
 
 Circular-contact recovery keeps the same isotropic law and residual/passivity
 gates. With recovery enabled and an iteration budget of at least 64, the first
-block-iteration phase uses at most 256 sweeps. A normal-only pressure-face search
+block-iteration phase uses at most 256 sweeps. Normal-only recovery first tries
+bounded descent along numerical pressure-null directions, then a pressure-face search
 and a warm active-contact search run next, followed by full continuation and the
 earlier minimum-norm polisher. If none passes, the solver spends the remainder
 of its original block-iteration budget. `contact_recovery=False` disables these
 searches. The physical mobility and material are never regularized or replaced.
-All sixteen retained captured systems pass; fresh full trajectories still expose
-later failures. Passing a capture does not establish trajectory accuracy.
+All sixteen earlier captured systems and the new 291-row position capture pass;
+three later frictional velocity captures still fail in this checkpoint. Passing
+a capture does not establish trajectory accuracy.
+
+The pressure-null search also supports translation-only position repair. It
+permits at most 384 normal rows and 128 active-face states/SVD calls per attempt.
+It moves pressure to a nonnegative boundary along the numerical null projection
+of the current gradient, or takes a minimum-norm range step. The original
+mobility, bounds, absolute residual and finite passivity gates remain unchanged.
+Counters record actual SVD calls, face moves and maximum trial velocity change.
+Recovery requires a budget of at least 64 and honors `contact_recovery=False`.
+Nine native controls include singular redundancy, infeasibility, unchanged output
+on failure, and explicit enable/disable behavior. Frozen replay evidence is in
+`research/normal-null-integration`; it retains all 20 successes and failures.
 
 Active search supports up to 4096 original rows and 384 reduced rows. Each
 candidate must pass the original all-row contact and finite energy gates;
