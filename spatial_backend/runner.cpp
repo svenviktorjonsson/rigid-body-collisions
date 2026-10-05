@@ -7,6 +7,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <fstream>
 using json=nlohmann::json;
 #include "coulomb.h"
 btVector3 vec(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>()};}
@@ -31,6 +32,16 @@ int main(){try{
  RecordedMLCP regular_mlcp(&dantzig),post_normal_mlcp(&normal);NormalMLCP normal_mlcp(&normal);
  bool coulomb_solver=in.at("solver")=="coulomb";CoulombMLCP coulomb_mlcp(&dantzig);
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
+ if(in.contains("rejected_contact_path")){
+  std::string path=in.at("rejected_contact_path");
+  coulomb_mlcp.rejection_observer=[&,path](const auto& A,const auto& b,const auto& p,const auto& lo,const auto& hi,const auto& dep,const char* phase,double residual,double h){
+   json matrix=json::array(),rhs=json::array(),lower=json::array(),upper=json::array(),dependencies=json::array();
+   for(int i=0;i<b.rows();i++){json row=json::array();for(int j=0;j<b.rows();j++)row.push_back(A(i,j));matrix.push_back(row);rhs.push_back(b[i]);lower.push_back(lo[i]);upper.push_back(hi[i]);dependencies.push_back(dep[i]);}
+   json snapshot={{"schema","circular-coulomb-rejection-v1"},{"phase",phase},{"A",matrix},{"b",rhs},{"p",p},{"lo",lower},{"hi",upper},{"dependencies",dependencies},{"residual_m_s",residual},{"tolerance_m_s",coulomb_mlcp.tolerance},{"internal_dt_s",h},{"iteration_budget",in.at("iterations")}};
+   std::ofstream file(path);if(!file)throw std::runtime_error("Cannot write rejected contact diagnostic");file<<snapshot.dump()<<"\n";file.close();if(!file)throw std::runtime_error("Failed writing rejected contact diagnostic");
+  };
+ }
+
  btMLCPSolver& mlcp=normal_solver?(compact?static_cast<btMLCPSolver&>(normal_mlcp):static_cast<btMLCPSolver&>(post_normal_mlcp)):(coulomb_solver?static_cast<btMLCPSolver&>(coulomb_mlcp):static_cast<btMLCPSolver&>(regular_mlcp)); btSequentialImpulseConstraintSolver sequential;
  bool adaptive=in.at("solver")=="adaptive",coupled=in.at("solver")=="coupled"||normal_solver||coulomb_solver;
  int dense_steps=0,fast_steps=0,dwell=0,contacts_previous=0;double residual_previous=0;

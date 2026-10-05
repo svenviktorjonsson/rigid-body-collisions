@@ -1,6 +1,9 @@
 """Independent mechanics expectations for circular 3D contact friction."""
 import unittest
 import subprocess
+import json
+import tempfile
+from pathlib import Path
 import numpy as np
 from spatial_engine import BINARY, run, energy
 from research.spatial_scenes import sphere, container
@@ -88,6 +91,25 @@ class Coulomb3D(unittest.TestCase):
             run(scene,dt=.01,solver='coulomb',kinematic_contact_phase='start',iterations=1)
         self.assertIn('residual gate failed',caught.exception.stderr)
         self.assertIn('no friction-law fallback',caught.exception.stderr)
+
+    def test_rejected_system_snapshot_is_reproducible_and_never_accepted(self):
+        scene,_=container(side=3,shake=True)
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'rejected.json'
+            with self.assertRaises(subprocess.CalledProcessError):
+                run(scene,solver='coulomb',kinematic_contact_phase='start',dt=.01,iterations=1,rejected_contact_path=path)
+            data=json.loads(path.read_text())
+            self.assertEqual(data['schema'],'circular-coulomb-rejection-v1')
+            self.assertEqual(data['phase'],'velocity')
+            A=np.asarray(data['A']);b=np.asarray(data['b']);p=np.asarray(data['p'])
+            self.assertEqual(A.shape,(len(p),len(p)))
+            np.testing.assert_allclose(A,A.T,atol=1e-12)
+            self.assertTrue(np.isfinite(A@p-b).all())
+            self.assertGreater(data['residual_m_s'],data['tolerance_m_s'])
+            original=path.read_bytes()
+            with self.assertRaises(ValueError):self.simulate(scene,rejected_contact_path=path)
+            self.assertEqual(path.read_bytes(),original)
+            with self.assertRaises(ValueError):run(scene,solver='sequential',rejected_contact_path=Path(directory)/'other.json')
 
     def test_profile_rejects_unsupported_material_and_phase(self):
         scene=floor_ball([1,0,-2]);scene['bodies'][1]['restitution']=.5

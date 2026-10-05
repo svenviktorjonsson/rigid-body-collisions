@@ -141,3 +141,11 @@ normal restitution, rolling or twisting couple. Independent elastic torque and
 stored tangential energy are studied separately in `research/elastic-patch`.
 Body coefficients are multiplied and upstream Bullet clamps the pair coefficient
 at 10. Parameters remain synthetic until measured material data support them.
+
+For a rejected circular-contact solve, `spatial_engine.run(...,
+rejected_contact_path=Path(...))` can save the exact assembled matrix, free-velocity
+RHS, row dependencies, bounds, final rejected iterate, velocity residual,
+internal timestep and iteration budget as JSON. This diagnostic is opt-in,
+requires a new destination in an existing directory, and keeps the original
+exception. It never applies the rejected iterate or substitutes another friction
+law. A snapshot describes one failed contact solve, not a completed trajectory.

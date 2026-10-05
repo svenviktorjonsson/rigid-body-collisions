@@ -137,7 +137,7 @@ def prepare(scene):
     return bodies,masses,tensors,axes,min(features)
 
 
-def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, kinematic_contact_phase="end", position_stabilization="split", preassembly_elimination=True, contact_tolerance_m_s=1e-8, contact_slop_m=1e-9, binary=BINARY):
+def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, kinematic_contact_phase="end", position_stabilization="split", preassembly_elimination=True, contact_tolerance_m_s=1e-8, contact_slop_m=1e-9, rejected_contact_path=None, binary=BINARY):
     duration=positive(scene['duration'],'duration');dt=positive(dt,'dt')
     frames=round(duration/dt)
     if frames<1 or not np.isclose(frames*dt,duration,rtol=1e-10,atol=1e-12):raise ValueError('Duration must match output frames')
@@ -159,6 +159,12 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
     margin=positive(scene.get('margin_m',0),'margin',zero=True)
     if margin>feature*.1:raise ValueError('Margin exceeds 10% of feature')
     wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,contact_tolerance_m_s=contact_tolerance_m_s,contact_slop_m=contact_slop_m)
+    if rejected_contact_path is not None:
+        if solver!='coulomb':raise ValueError('Rejection snapshots require coulomb solver')
+        path=Path(rejected_contact_path).expanduser().resolve()
+        if path.exists():raise ValueError('Rejection snapshot destination already exists')
+        if not path.parent.is_dir():raise ValueError('Rejection snapshot parent must exist')
+        wire['rejected_contact_path']=str(path)
     if 'container_interior_half_extents_m' in scene:
         half=vector(scene['container_interior_half_extents_m'],3,'container half extents')
         if np.min(half)<=0 or bodies[0]['type']!='kinematic':raise ValueError('Container monitor requires positive extents and first kinematic body')
