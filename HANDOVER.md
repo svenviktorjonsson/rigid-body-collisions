@@ -1,5 +1,9 @@
 # Physics-engine continuation
 
+## Active user request — October6,2026
+
+Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders are running from published6b63cb2; preserve outputs, do not restart over existing files. Solver/accuracy remediation precedes performance claims.
+
 ## Current Ubuntu continuation — October 5, 2026
 
 Remote pushes through a799038 were merged; production projection-tail integration is published at 8c7065eb8219cb0735aa3e742aa82b99521a26c1. Live23 original-law checks pass with prior22 response bytes/counters preserved. Current verification: 163 engine tests and35 subtests, ten contact-model tests and eleven native checks pass.

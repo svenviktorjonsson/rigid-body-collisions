@@ -1,0 +1,38 @@
+{
+  "objective": "All rapid-friction examples first qualify under unchanged original physical and trajectory gates; then at least2x performance improvement on EVERY case against its frozen working baseline. Continuous nonforced publication.",
+  "status": "baseline_blocked_by_accuracy_and_contact_rejections",
+  "cases": [
+    "2d_disks",
+    "2d_mixed_polygons",
+    "3d_sphere",
+    "3d_box",
+    "3d_hull",
+    "2d_shake9",
+    "2d_shake25",
+    "2d_mixed_polygons_36",
+    "2d_mixed_polygons_100",
+    "2d_disks_100",
+    "3d_hull_64",
+    "3d_hull_125",
+    "3d_sphere_125"
+  ],
+  "case_definitions": "Original five scenes in run.py; qualified translational9/25 disk scenes in planar_shake.py; six larger scenes in large_irregular.py. Authored scene hashes must match baseline exactly. Counts exclude boundary.",
+  "baseline_freeze": "Do not seal a global working baseline until every case completes and passes full original physical gates and BOTH adjacent quarter-budget reference refinement edges. Per-case baseline records published source SHA, complete authored scene/hash, runtime/binary hashes, numerical options, finest reference and proof of qualification. No relaxed gates, friction reduction, clipped rejected levels or unrecorded model substitution.",
+  "performance_gate": {
+    "minimum_gain_each_case": 2.0,
+    "primary_timer": "end-to-end adapter/process time measured around the same complete run invocation, including outputs; fixed output contract",
+    "secondary_timer": "native step_s with its actual model-specific scope retained",
+    "timing_repetitions": 5,
+    "protocol": "One warmup each, alternating sequential baseline/candidate order, fixed one-thread math environment. Preserve every sample, record host/runtime and process+native time. Median baseline/process divided by candidate/process >=2 for each case; no geometric-mean substitution.",
+    "candidate_acceptance": "Full physical gates and original trajectory error budgets against frozen independently qualified finest reference. Recompute original gate errors on every timed repetition. Deterministic repeated state bytes per variant, valid complete simulated horizon and identical mass/inertia/authored material/shape/motion/output times.",
+    "restriction": "Earlier fine-reference speed ratios are separate evidence, NOT proof of2x over the working baseline. Default policy/physics changes need explicit provenance and full-case requalification."
+  },
+  "research_sequence": [
+    "Finish and audit all six larger prospectively declared reference ladders, retaining all failures.",
+    "Analyze real rejected contact systems; test bounded unchanged-law recovery in isolated prototype builds before production.",
+    "Resolve original rotating and irregular-group trajectory accuracy failures with declared numerical/discovery changes and requalification, preserving previous evidence.",
+    "Freeze working baseline for all13 cases and publish it before optimization.",
+    "Profile collision discovery, assembly, recovery and stepping; implement and validate improvements, benchmark all cases and publish successes/declines continuously."
+  ],
+  "scope_limitations": "Synthetic models, no measured material calibration, VKF/compiler/main/GPU acceptance or release claim."
+}
