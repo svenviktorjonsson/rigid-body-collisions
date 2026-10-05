@@ -4,6 +4,31 @@
 
 Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders from published6b63cb2 are COMPLETE:20 full histories/10 genuine rejections (nine velocity, one translation-only position), no qualified references. Independent state/provenance/rejection audits pass. Preserve outputs; never restart over existing files. Isolated exact-component recovery pilots and rotating planar discovery trials are declared under research/large-contact-recovery and research/rapid-friction/planar-discovery-plan.json. Solver/accuracy remediation precedes performance claims.
 
+## Latest larger-case remediation — October6
+
+All30 larger reference attempts are sealed at e945742:20 histories/9 velocity
+rejections/1 translation-only position rejection, zero qualified references.
+Independent archive audit now covers189 retained records including15 rotating
+planar slop/seam controls; those controls also fail original accuracy edges.
+
+Position recovery is now integrated with512 normal rows only, same128 active
+states, original target/mobility/bounds/absolute1e-8 gate. Velocity normal-pressure
+limit remains384. Actual390-row rejection now passes full native pipeline at
+3.55e-15m/s; independent geometry/primal witness passes. LP success flag alone
+failed direct slack validation and is not the witness. Regression tests163/35
+subtests+10contact+11native checks, live23 and exact prior22 velocity bytes/counters
+pass. Read research/large-position-recovery/README.md. Archived original binaries
+are preserved and historical source hashes checked through their frozen Git pin.
+
+Large velocity pilots: projection/direct/component and FB merit all decline.
+Null-traction seeds plus bounded LM/TRF find strict original-law roots for162-row
+and423-row captures; unchanged native budget0 independently accepts both. The
+297-row capture's failing21-row component still declines after single/pair removal,
+inactive-face and cone-traction probes. All outputs remain under
+research/large-contact-recovery/. Do not integrate these exploratory roots as a
+solver or claim full histories; further bounded sliding-face/root/discovery work
+and fresh trajectory qualification are needed before sealing the13-case baseline.
+
 ## Current Ubuntu continuation — October 5, 2026
 
 Remote pushes through a799038 were merged; production projection-tail integration is published at 8c7065eb8219cb0735aa3e742aa82b99521a26c1. Live23 original-law checks pass with prior22 response bytes/counters preserved. Current verification: 163 engine tests and35 subtests, ten contact-model tests and eleven native checks pass.

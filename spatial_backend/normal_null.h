@@ -5,8 +5,8 @@
 #include <limits>
 namespace normal_null {
 struct Stats {int solves=0,states=0,svd_calls=0,null_steps=0,range_steps=0,released=0,entered=0,svd_rejections=0,budget_rejections=0;double residual=std::numeric_limits<double>::infinity(),maximum_null_velocity_change=0;};
-inline bool solve(const btMatrixXu&A,const btVectorXu&b,const btVectorXu&upper,const btVectorXu&seed,btVectorXu&out,double tolerance,Stats&stats,int limit=128){
- const int n=b.rows();if(n<=0||n>384||A.rows()!=n||A.cols()!=n||upper.rows()!=n||seed.rows()!=n||out.rows()!=n||limit<=0||limit>512||!(tolerance>0)||!std::isfinite(tolerance))return false;
+inline bool solve(const btMatrixXu&A,const btVectorXu&b,const btVectorXu&upper,const btVectorXu&seed,btVectorXu&out,double tolerance,Stats&stats,int limit=128,int maximum_rows=384){
+ const int n=b.rows();if(n<=0||maximum_rows<=0||maximum_rows>512||n>maximum_rows||A.rows()!=n||A.cols()!=n||upper.rows()!=n||seed.rows()!=n||out.rows()!=n||limit<=0||limit>512||!(tolerance>0)||!std::isfinite(tolerance))return false;
  std::vector<double>q(n),w(n);std::vector<bool>active(n);
  for(int i=0;i<n;i++){if(!(A(i,i)>0)||!std::isfinite(b[i])||!std::isfinite(seed[i])||!std::isfinite(upper[i])||upper[i]<0)return false;for(int j=0;j<n;j++)if(!std::isfinite(A(i,j)))return false;q[i]=std::max(0.,static_cast<double>(seed[i]));active[i]=q[i]>0;}
  auto gate=[&](){double residual=0,energy=0,scale=1;bool bounds=true;for(int i=0;i<n;i++){w[i]=-b[i];for(int j=0;j<n;j++)w[i]+=A(i,j)*q[j];if(!std::isfinite(w[i])||!std::isfinite(q[i]))return false;bounds&=q[i]>=0&&q[i]<=upper[i];residual=std::max(residual,std::abs(q[i]-std::max(0.,q[i]-w[i]/A(i,i)))*A(i,i));energy+=.5*q[i]*(w[i]-b[i]);scale+=std::abs(q[i]*b[i]);}stats.residual=residual;return bounds&&std::isfinite(residual)&&std::isfinite(energy)&&std::isfinite(scale)&&residual<=tolerance&&energy<=tolerance*scale;};

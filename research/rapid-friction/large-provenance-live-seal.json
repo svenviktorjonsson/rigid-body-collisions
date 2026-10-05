@@ -1,7 +1,6 @@
 {
   "passed": true,
-  "archived_source_binary_and_runtime_hashes_verified": true,
-  "current_live_source_and_binary_unchanged": false,
+  "frozen_source_and_runtime_unchanged": true,
   "source": "6b63cb23726b175bc1440b73fe18a768a500bdbf",
   "independent_rejection_count": 10,
   "rejections": [

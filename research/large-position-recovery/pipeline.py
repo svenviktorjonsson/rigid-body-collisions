@@ -20,6 +20,7 @@ error=float(np.max(np.abs(A-(J*inverse)@J.T)));assert error<1e-12
 lp=linprog(np.zeros(J.shape[1]),A_ub=-J,b_ub=-b,bounds=[(None,None)]*J.shape[1],method='highs',options={'primal_feasibility_tolerance':1e-10,'dual_feasibility_tolerance':1e-10})
 certificate={'gram_max_difference':error,'primal_lp_success':lp.success,'lp_status':lp.status,'lp_message':lp.message}
 if lp.success:certificate.update(primal_velocity=lp.x.tolist(),minimum_original_rate_slack_m_s=float(np.min(J@lp.x-b)))
+certificate['primal_direct_slack_verified']=bool(lp.success and certificate['minimum_original_rate_slack_m_s']>=-d['tolerance_m_s'])
 save(D/'geometry-primal.json',certificate)
 BUILD=Path('/home/viktor/.cache/physics-large-position-pipeline-20261006');BUILD.mkdir(exist_ok=False);base=ROOT/'build/spatial/_deps/bullet-build/src';libs=[base/'BulletDynamics/libBulletDynamics.a',base/'BulletCollision/libBulletCollision.a',base/'LinearMath/libLinearMath.a'];records=[]
 for cap in plan['native_variants']:

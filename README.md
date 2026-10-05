@@ -272,3 +272,9 @@ geometry and materials remain unchanged. Rotating groups, polygons, boxes and
 hulls remain unqualified. Exact settings, all failures and an independent audit
 of144 retained records accompany the report. Current tests:163 engine tests,
 35 subtests, ten contact-model tests and eleven native checks pass.
+
+The [larger position recovery fix](research/large-position-recovery/README.md)
+clears the retained390-row125-hull position system with the original absolute
+gate, exposing512-row position-only numerical search metadata. Velocity search
+defaults and all earlier22 contact response bytes/counters remain unchanged.
+Full rotating and irregular-shape trajectory qualification remains open.

@@ -1,0 +1,68 @@
+[  9%] Built target LinearMath
+[ 36%] Built target BulletDynamics
+[ 98%] Built target BulletCollision
+[100%] Built target spatial_runner
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[ 98%] Building CXX object CMakeFiles/spatial_position_replay.dir/position_replay.cpp.o
+[100%] Linking CXX executable spatial_position_replay
+[100%] Built target spatial_position_replay
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[ 98%] Building CXX object CMakeFiles/spatial_coulomb_replay.dir/coulomb_replay.cpp.o
+[100%] Linking CXX executable spatial_coulomb_replay
+[100%] Built target spatial_coulomb_replay
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[ 98%] Building CXX object CMakeFiles/translation_split_checks.dir/translation_split_checks.cpp.o
+[100%] Linking CXX executable translation_split_checks
+[100%] Built target translation_split_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target translation_combined_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Building CXX object CMakeFiles/normal_null_checks.dir/normal_null_checks.cpp.o
+[100%] Linking CXX executable normal_null_checks
+[100%] Built target normal_null_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[ 98%] Building CXX object CMakeFiles/spatial_friction_checks.dir/friction_checks.cpp.o
+[100%] Linking CXX executable spatial_friction_checks
+[100%] Built target spatial_friction_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Building CXX object CMakeFiles/coulomb_early_checks.dir/coulomb_early_checks.cpp.o
+[100%] Linking CXX executable coulomb_early_checks
+[100%] Built target coulomb_early_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target projection_tail_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target coulomb_restart_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target support_restart_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target active_contact_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target spatial_qp_checks
+[  9%] Built target LinearMath
+[ 71%] Built target BulletCollision
+[ 98%] Built target BulletDynamics
+[100%] Built target shared_contact_checks

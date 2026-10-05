@@ -140,6 +140,7 @@ int main(){try{
   progress["translation_split_solves"]=coulomb_mlcp.translation_split_solves;
   progress["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
   progress["projection_tail_policy"]=projection_policy();
+  progress["position_normal_search_policy"]={{"enabled",coulomb_mlcp.translation_split},{"max_normal_rows",512},{"max_active_states",128},{"stage","before projected position fallback"},{"final_gate","unchanged absolute original normal projection and bounds"}};
   progress["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
   progress["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
   progress["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;
@@ -225,6 +226,7 @@ int main(){try{
  int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):(coulomb_solver?coulomb_mlcp.rows_max:regular_mlcp.rows_max);
  out["tangent_gyro_correction_max_m_s"]=coulomb_mlcp.gyro_correction_max;out["coulomb_newton_steps"]=coulomb_mlcp.stats.newton_steps;out["position_iterative_solves"]=coulomb_mlcp.position_stats.solves;out["coulomb_solves"]=coulomb_mlcp.stats.solves;out["coulomb_fast_solves"]=coulomb_mlcp.stats.fast_solves;out["coulomb_sweeps_max"]=coulomb_mlcp.stats.sweeps_max;out["coulomb_residual_max_m_s"]=coulomb_mlcp.stats.residual_max;out["coulomb_passive_change_max_J"]=coulomb_mlcp.stats.passive_change_max;
  out["shared_contact_rows"]=coulomb_mlcp.shared_point_rows;out["shared_contact_transport_max_m"]=coulomb_mlcp.shared_point_transport_max_m;out["contact_point_policy"]=point_policy;
+ out["position_normal_search_policy"]={{"enabled",coulomb_mlcp.translation_split},{"max_normal_rows",512},{"max_active_states",128},{"stage","before projected position fallback"},{"final_gate","unchanged absolute original normal projection and bounds"}};
  out["translation_split_solves"]=coulomb_mlcp.translation_split_solves;out["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
  out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;

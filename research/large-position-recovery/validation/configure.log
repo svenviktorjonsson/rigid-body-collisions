@@ -1,0 +1,37 @@
+-- Difficult friction recovery LAPACK: /usr/lib/x86_64-linux-gnu/liblapack.so.3;/usr/lib/x86_64-linux-gnu/libblas.so.3
+CMake Deprecation Warning at /home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+Linux
+CMake Warning (dev) at /usr/share/cmake-4.2/Modules/FindOpenGL.cmake:534 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  /home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/CMakeLists.txt:312 (FIND_PACKAGE)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+OPENGL FOUND
+/usr/lib/x86_64-linux-gnu/libGL.so
+-- Using the multi-header code from /home/viktor/.cache/physics-relation-20261005/deps/_deps/json-src/include/
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/viktor/.cache/vkf-physics-continuation/build/spatial

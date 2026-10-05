@@ -93,7 +93,7 @@ inline bool translationSplitSolve(const btMatrixXu& A,const btVectorXu& b,
  if(allow_recovery&&budget>=64){
   normal_null::Stats local;auto& stats=recovery_stats?*recovery_stats:local;
   btVectorXu candidate=x;
-  if(normal_null::solve(A,b,upper,x,candidate,tolerance,stats)){x=candidate;if(gate())return true;}
+  if(normal_null::solve(A,b,upper,x,candidate,tolerance,stats,128,512)){x=candidate;if(gate())return true;}
  }
  // Cholesky can reject a singular face even when its pressure redistribution
  // is harmless. Projected iterations operate on the unchanged PSD mobility.
