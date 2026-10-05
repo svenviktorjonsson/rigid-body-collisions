@@ -1,5 +1,5 @@
 {
-  "record_count": 174,
+  "record_count": 189,
   "qualified_benchmarks": {
     "3d_sphere": {
       "median_s": {
@@ -61,6 +61,10 @@
     },
     "results-large-irregular": {
       "records": 30,
+      "qualified_references": 0
+    },
+    "results-planar-discovery": {
+      "records": 15,
       "qualified_references": 0
     }
   },
