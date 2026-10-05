@@ -1,0 +1,10 @@
+{
+  "schema": "read-only-native-pc-observation-plan-v1",
+  "purpose": "Identify current costly native recovery location; no physics/register writes and no performance ranking",
+  "running_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "expected_binary_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+  "samples": 3,
+  "mechanism": "PTRACE_ATTACH, wait for stop, PTRACE_GETREGS read instruction pointer only, PTRACE_DETACH immediately; no register or memory writes",
+  "timing_scope": "Actual observed attach/stop/detach times retained; any pause contaminates native elapsed wall-clock cost. Concurrent study costs already descriptive only.",
+  "decline": "If ptrace is denied or process has ended, retain the actual error; do not infer a solver function or retry against another PID. Never kill or manufacture terminal study outcome."
+}
