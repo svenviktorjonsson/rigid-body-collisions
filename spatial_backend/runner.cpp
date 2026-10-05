@@ -35,6 +35,8 @@ int main(){try{
  if((point_policy!="shared"&&point_policy!="separate")||(point_policy=="shared"&&!coulomb_solver))throw std::runtime_error("Invalid contact point policy for solver");
  coulomb_mlcp.shared_contact_point=point_policy=="shared";
  coulomb_mlcp.recovery_enabled=in.value("contact_recovery",true);
+ coulomb_mlcp.translation_split=in.value("position_stabilization",std::string("split"))=="split_translation";
+ if(coulomb_mlcp.translation_split&&!coulomb_solver)throw std::runtime_error("Translation-only split requires coulomb solver");
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
  if(in.contains("rejected_contact_path")){
   std::string path=in.at("rejected_contact_path");
@@ -158,6 +160,16 @@ int main(){try{
  int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):(coulomb_solver?coulomb_mlcp.rows_max:regular_mlcp.rows_max);
  out["tangent_gyro_correction_max_m_s"]=coulomb_mlcp.gyro_correction_max;out["coulomb_newton_steps"]=coulomb_mlcp.stats.newton_steps;out["position_iterative_solves"]=coulomb_mlcp.position_stats.solves;out["coulomb_solves"]=coulomb_mlcp.stats.solves;out["coulomb_fast_solves"]=coulomb_mlcp.stats.fast_solves;out["coulomb_sweeps_max"]=coulomb_mlcp.stats.sweeps_max;out["coulomb_residual_max_m_s"]=coulomb_mlcp.stats.residual_max;out["coulomb_passive_change_max_J"]=coulomb_mlcp.stats.passive_change_max;
  out["shared_contact_rows"]=coulomb_mlcp.shared_point_rows;out["shared_contact_transport_max_m"]=coulomb_mlcp.shared_point_transport_max_m;out["contact_point_policy"]=point_policy;
+ out["translation_split_solves"]=coulomb_mlcp.translation_split_solves;out["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
+ out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
+ const auto& continuation=coulomb_mlcp.stats.continuation;
+ out["coulomb_continuation_attempts"]=continuation.attempts;out["coulomb_continuation_stages"]=continuation.stages;
+ out["coulomb_continuation_svd_calls"]=continuation.svd_calls;out["coulomb_continuation_damped_steps"]=continuation.damped_steps;
+ out["coulomb_continuation_budget_rejections"]=continuation.budget_rejections;
+ out["coulomb_continuation_newton_steps"]=continuation.newton_steps;
+ out["coulomb_continuation_normal_qp_guides"]=continuation.normal_qp_guides;
+ out["coulomb_continuation_normal_pivot_attempts"]=continuation.normal_pivot_attempts;
+ out["coulomb_continuation_normal_pivot_guides"]=continuation.normal_pivot_guides;
  out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());

@@ -98,7 +98,7 @@ int main(int argc,char** argv){
                {"positive_friction_work_J",positive_friction_work},{"passive_change_bound_J",energy_change},{"passivity_scale",energy_scale},
                {"stats",{{"solves",stats.solves},{"sweeps_max",stats.sweeps_max},{"newton_steps",stats.newton_steps},
                          {"polish_solves",stats.polish_solves},{"polish_steps",stats.polish_steps},{"gauge_restarts",stats.gauge_restarts},
-                         {"rank_restarts",stats.rank_restarts},{"opposing_restarts",stats.opposing_restarts},{"cold_restarts",stats.cold_restarts},{"polish_svd_calls",stats.polish_svd_calls},
+                         {"continuation_solves",stats.continuation_solves},{"continuation_svd_calls",stats.continuation.svd_calls},{"continuation_stages",stats.continuation.stages},{"continuation_budget_rejections",stats.continuation.budget_rejections},{"rank_restarts",stats.rank_restarts},{"opposing_restarts",stats.opposing_restarts},{"cold_restarts",stats.cold_restarts},{"polish_svd_calls",stats.polish_svd_calls},
                          {"polish_budget_rejections",stats.polish_budget_rejections},{"polish_svd_rejections",stats.polish_svd_rejections},{"residual_m_s",stats.last_residual}}}};
   std::cout<<output.dump(2)<<'\n';return solver_ok&&law_ok&&energy_ok?0:2;
  }catch(const std::exception& error){std::cerr<<json({{"accepted",false},{"error",error.what()}}).dump()<<'\n';return 3;}

@@ -1,0 +1,296 @@
+{
+  "schema": "independent-elastic-tail-refinement-v1",
+  "source_commit": "9aa38ed2d9c7118394e3fd1ee744f4ee439b7dac",
+  "source_sha256": "d088556fdff08effdd3c1214265bdc27ae5f873d21d12503bad1017b73361973",
+  "cases": [
+    {
+      "atol": 1e-13,
+      "rhs_evaluations": 4144,
+      "energy_residual_max_J": 5.584421813864537e-13,
+      "max_yield_excess_N": 0.0007927334657970026,
+      "capacity_budget_N": 0.00011019617450993112,
+      "capacity_pass": false,
+      "dissipated_J": 8.979736440608822e-07,
+      "separation_loss_J": 1.2565291714085521e-14,
+      "plastic_loss_J": 8.979736314955905e-07,
+      "material_events": [
+        {
+          "time_s": 0.0004142734949742398,
+          "plane": "floor",
+          "kind": "yield"
+        }
+      ],
+      "contact_events": [
+        {
+          "separation_loss_J": 0.0,
+          "time_s": 9.995099805911513e-05,
+          "plane": "floor",
+          "kind": "entry",
+          "velocity_m_s": [
+            0.2,
+            0.0,
+            -1.00098051929096
+          ],
+          "omega_rad_s": [
+            0.0,
+            -5.0,
+            10.0
+          ],
+          "linear_impulse_N_s": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "separation_loss_J": 1.2565291714085521e-14,
+          "time_s": 0.0004143062711659445,
+          "plane": "floor",
+          "kind": "lift_off",
+          "velocity_m_s": [
+            -0.1999996260608976,
+            0.0,
+            1.0009805192911043
+          ],
+          "omega_rad_s": [
+            0.0,
+            4.999990651522437,
+            -9.999984094574444
+          ],
+          "linear_impulse_N_s": [
+            -0.3999996260608975,
+            0.0,
+            2.005044863811242
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            -0.07999993637829776
+          ]
+        }
+      ]
+    },
+    {
+      "atol": 1e-14,
+      "rhs_evaluations": 4507,
+      "energy_residual_max_J": 4.4941828036826337e-13,
+      "max_yield_excess_N": 8.914314169617012e-05,
+      "capacity_budget_N": 0.00011019617450993112,
+      "capacity_pass": true,
+      "dissipated_J": 8.980056961630026e-07,
+      "separation_loss_J": 1.5131573940390403e-16,
+      "plastic_loss_J": 8.980056960116869e-07,
+      "material_events": [
+        {
+          "time_s": 0.00041427349438943694,
+          "plane": "floor",
+          "kind": "yield"
+        }
+      ],
+      "contact_events": [
+        {
+          "separation_loss_J": 0.0,
+          "time_s": 9.995099805911513e-05,
+          "plane": "floor",
+          "kind": "entry",
+          "velocity_m_s": [
+            0.2,
+            0.0,
+            -1.00098051929096
+          ],
+          "omega_rad_s": [
+            0.0,
+            -5.0,
+            10.0
+          ],
+          "linear_impulse_N_s": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "separation_loss_J": 1.5131573940390403e-16,
+          "time_s": 0.0004143062711659609,
+          "plane": "floor",
+          "kind": "lift_off",
+          "velocity_m_s": [
+            -0.19999962604754995,
+            0.0,
+            1.0009805192912342
+          ],
+          "omega_rad_s": [
+            0.0,
+            4.999990651188748,
+            -9.999984094006669
+          ],
+          "linear_impulse_N_s": [
+            -0.39999962604755,
+            0.0,
+            2.0050448638113707
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            -0.07999993637602677
+          ]
+        }
+      ]
+    },
+    {
+      "atol": 1e-15,
+      "rhs_evaluations": 5029,
+      "energy_residual_max_J": 7.009948177483238e-13,
+      "max_yield_excess_N": 7.502097251444169e-06,
+      "capacity_budget_N": 0.00011019617450990338,
+      "capacity_pass": true,
+      "dissipated_J": 8.980091847009484e-07,
+      "separation_loss_J": 9.43438825468608e-19,
+      "plastic_loss_J": 8.98009184700005e-07,
+      "material_events": [
+        {
+          "time_s": 0.00041427349432562286,
+          "plane": "floor",
+          "kind": "yield"
+        }
+      ],
+      "contact_events": [
+        {
+          "separation_loss_J": 0.0,
+          "time_s": 9.995099805911513e-05,
+          "plane": "floor",
+          "kind": "entry",
+          "velocity_m_s": [
+            0.2,
+            0.0,
+            -1.00098051929096
+          ],
+          "omega_rad_s": [
+            0.0,
+            -5.0,
+            10.0
+          ],
+          "linear_impulse_N_s": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "separation_loss_J": 9.43438825468608e-19,
+          "time_s": 0.00041430627116587803,
+          "plane": "floor",
+          "kind": "lift_off",
+          "velocity_m_s": [
+            -0.19999962604609622,
+            0.0,
+            1.000980519290469
+          ],
+          "omega_rad_s": [
+            0.0,
+            4.999990651152404,
+            -9.999984093944924
+          ],
+          "linear_impulse_N_s": [
+            -0.39999962604609635,
+            0.0,
+            2.0050448638106064
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            -0.07999993637577982
+          ]
+        }
+      ]
+    },
+    {
+      "atol": 1e-16,
+      "rhs_evaluations": 5377,
+      "energy_residual_max_J": 4.563016631209393e-13,
+      "max_yield_excess_N": 1.0649975354099655e-06,
+      "capacity_budget_N": 0.00011019617450991726,
+      "capacity_pass": true,
+      "dissipated_J": 8.980095357036496e-07,
+      "separation_loss_J": 2.1821489942552324e-20,
+      "plastic_loss_J": 8.980095357036278e-07,
+      "material_events": [
+        {
+          "time_s": 0.0004142734943192881,
+          "plane": "floor",
+          "kind": "yield"
+        }
+      ],
+      "contact_events": [
+        {
+          "separation_loss_J": 0.0,
+          "time_s": 9.995099805911513e-05,
+          "plane": "floor",
+          "kind": "entry",
+          "velocity_m_s": [
+            0.2,
+            0.0,
+            -1.00098051929096
+          ],
+          "omega_rad_s": [
+            0.0,
+            -5.0,
+            10.0
+          ],
+          "linear_impulse_N_s": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "separation_loss_J": 2.1821489942552324e-20,
+          "time_s": 0.0004143062711660853,
+          "plane": "floor",
+          "kind": "lift_off",
+          "velocity_m_s": [
+            -0.1999996260459504,
+            0.0,
+            1.000980519291319
+          ],
+          "omega_rad_s": [
+            0.0,
+            4.999990651148749,
+            -9.999984093938725
+          ],
+          "linear_impulse_N_s": [
+            -0.39999962604595024,
+            0.0,
+            2.0050448638114586
+          ],
+          "couple_impulse_N_m_s": [
+            0.0,
+            0.0,
+            -0.07999993637575505
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Force-capacity failure of the coarse numerical profile is retained. Tighter numerical profiles converge on the same material and show the finite-gravity tail loss is plastic flow, not deleted separation energy."
+}

@@ -5,6 +5,8 @@
 #include <sstream>
 #include <functional>
 #include <limits>
+#include "coulomb_trust.h"
+#include "translation_split.h"
 
 // Upstream friction RHS omits this angular free-velocity increment, although
 // normal RHS and final body writeback include it. Preserve the signed B row.
@@ -17,6 +19,8 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 struct CoulombStats {
  int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,rank_restarts=0,opposing_restarts=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
+ int continuation_solves=0;
+ circular_trust::Stats continuation;
 };
 
 #include "coulomb_polish.h"
@@ -180,6 +184,14 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  // Preserve the warm rejected iterate only as a starting guess, never as output.
  btVectorXu candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
  if(allow_recovery&&budget>=64&&circular_polish::solve(A,b,candidate,hi,dep,tolerance,stats)){x=candidate;stats.sweeps_max=std::max(stats.sweeps_max,budget);return true;}
+ if(allow_recovery&&budget>=64&&circular_trust::solve(A,b,candidate,hi,dep,tolerance,stats.continuation)){
+  x=candidate;stats.solves++;stats.continuation_solves++;
+  double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
+  stats.passive_change_max=std::max(stats.passive_change_max,change);
+  stats.last_residual=stats.continuation.residual;
+  stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+  stats.sweeps_max=std::max(stats.sweeps_max,budget);return true;
+ }
  if(rejected_impulses)*rejected_impulses=rejected;
  return false;
 }
@@ -188,6 +200,14 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
 
 class CoulombMLCP : public RecordedMLCP {
 protected:
+ btScalar solveGroupCacheFriendlyIterations(btCollisionObject** bodies,int count,
+  btPersistentManifold** manifolds,int manifold_count,btTypedConstraint** constraints,
+  int constraint_count,const btContactSolverInfo& info,btIDebugDraw* debug) override {
+  auto result=RecordedMLCP::solveGroupCacheFriendlyIterations(bodies,count,manifolds,
+      manifold_count,constraints,constraint_count,info,debug);
+  if(translation_split&&info.m_splitImpulse)clearPositionTurns(m_tmpSolverBodyPool);
+  return result;
+ }
  void transportContactRows(){
   if(!shared_contact_point)return;
   for(int i=0;i<m_allConstraintPtrArray.size();i++){
@@ -221,8 +241,16 @@ protected:
    std::vector<int> normals;for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]<0)normals.push_back(i);
    int k=static_cast<int>(normals.size());btMatrixXu A(k,k);btVectorXu b(k),upper(k),x(k);
    for(int i=0;i<k;i++){b[i]=m_bSplit[normals[i]];upper[i]=m_hi[normals[i]];x[i]=0;for(int j=0;j<k;j++)A.setElem(i,j,m_A(normals[i],normals[j]));}
+   if(translation_split)A=assembleTranslationSplitMobility(m_allConstraintPtrArray,m_tmpSolverBodyPool,normals);
    m_xSplit.setZero();
-   if(normalQP(A,b,upper,x)){for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];}
+   if(translation_split){
+    double residual=0;
+    if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual))
+     throw std::runtime_error("Translation-only position projection failed; repair initial overlap or refine timestep");
+    translation_split_solves++;translation_split_residual_max=std::max(translation_split_residual_max,residual);
+    for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];
+   }
+   else if(normalQP(A,b,upper,x)){for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];}
    else{
     auto lower=m_lo,upper_full=m_hi;for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]>=0)lower[i]=upper_full[i]=0;
     if(!coulombSolve(m_A,m_bSplit,m_xSplit,lower,upper_full,m_limitDependencies,info.m_numIterations,tolerance,position_stats,rejection_observer?&rejected:nullptr,recovery_enabled)){
@@ -237,6 +265,7 @@ public:
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
  bool recovery_enabled=true,shared_contact_point=true;
+ bool translation_split=false;int translation_split_solves=0;double translation_split_residual_max=0;
  unsigned long long shared_point_rows=0;double shared_point_transport_max_m=0;
  double tolerance=1e-8,contact_slop_m=1e-9,gyro_correction_max=0;CoulombStats stats,position_stats;
  explicit CoulombMLCP(btMLCPSolverInterface* solver):RecordedMLCP(solver){}

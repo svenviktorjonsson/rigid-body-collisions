@@ -1,0 +1,16 @@
+{
+  "schema": "independent-completion-review-files-v1",
+  "files": {
+    "README.md": "7206b3257eeb6f2ba61d811e87209e89abbc69a83a015176d60236e308cae843",
+    "active_modes.py": "3e143e63b53a425e4035bd58de1ed561d0d2a8ff976a2ad78c3c9cc1c9deab24",
+    "elastic-tail-refinement.json": "1cdf8f264947b48f5ad5b9add99acea538f1c744bda220fc7c0a57d7432a0789",
+    "elastic_patch_after.py": "d088556fdff08effdd3c1214265bdc27ae5f873d21d12503bad1017b73361973",
+    "elastic_patch_before.py": "fb3390f632bd869d7404290bd9d7faf2b24a6d3916912ade4250e0313a24b142",
+    "elastic_tail_review.py": "c6fe2b3191111e0041c2d25054a0c53ddb73855c05f23e19c3f50e084c6bef4a",
+    "independent-review.json": "8dc5ed1ad8097477a0d0c189d507c7667f267eb72f8b3d70333b99faff17681a",
+    "mechanics_review.py": "0e43d7ed715d392b15d12ca5169f4f0ef03dec34fb7fa940cebd2df52f5c9f0d",
+    "seed42-51row-modes.json": "c7813e7fe3f56557d69d800521e59b499bce9ceb405a9b3083f7e6d49512fc31",
+    "split-energy-counterexample.json": "2eca1f7dc1b384531b59f1a4a92bb33e7cb6b0e6c86640b17a83fa662e172049",
+    "split_energy.py": "957e024cd32a0938a04946eb6fdef0cd86f47044ddafbd32fc617b1837574c7f"
+  }
+}
