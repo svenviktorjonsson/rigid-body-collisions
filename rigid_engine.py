@@ -150,7 +150,8 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
         if float(_finite(p[key], key)) <= 0:
             raise ValueError(f"Positive {key} required")
     for key in ("island_threshold", "dwell_frames", "high_primary_steps", "high_substeps"):
-        _positive_integer(p[key], key)
+        maximum = 4096 if key == 'high_primary_steps' or (key == 'high_substeps' and backend == 'block') else 128
+        _positive_integer(p[key], key, maximum)
     if type(p["minimum_level"]) is not int or not 0 <= p["minimum_level"] <= 3:
         raise ValueError("minimum_level must lie in [0,3]")
     hertz = scene.get("contact_hertz", 10)

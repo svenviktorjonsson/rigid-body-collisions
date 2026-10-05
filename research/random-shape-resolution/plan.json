@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "Follow-up after exploratory diagnosis. Preserve historical failures and original SI geometry, coefficients and accuracy budgets. Frozen protocol for fresh repeated validation; not a preregistration of all diagnostic observations.",
+  "original_seeds": [42, 7301],
+  "held_out_concave_seeds": [99017, 13579],
+  "reference_budget": {"rms_position_m": 0.005, "rms_velocity_m_s": 0.0125, "rms_spin_rad_s": 0.0125},
+  "budget": {"rms_position_m": 0.02, "rms_velocity_m_s": 0.05, "rms_spin_rad_s": 0.05},
+  "concave_reference_modes": [[128, 64], [256, 64], [512, 32], [512, 64], [512, 128]],
+  "concave_edges": [[[128, 64], [256, 64]], [[256, 64], [512, 64]], [[512, 32], [512, 64]], [[512, 64], [512, 128]]],
+  "concave_candidates": [[16, 32], [32, 32], [64, 32], [128, 32]],
+  "adaptive_policy": {"high_primary_steps": 128, "high_substeps": 32, "travel_threshold": 0.02},
+  "repeats": 3,
+  "warmups": 1,
+  "packed_modes": [[16, 128, 12], [32, 128, 12], [64, 32, 12], [64, 64, 12], [64, 128, 12], [64, 128, 3], [64, 128, 6]],
+  "packed_edges": [[[16, 128, 12], [32, 128, 12]], [[32, 128, 12], [64, 128, 12]], [[64, 32, 12], [64, 64, 12]], [[64, 64, 12], [64, 128, 12]], [[64, 128, 3], [64, 128, 6]], [[64, 128, 6], [64, 128, 12]]],
+  "packed_controls": {"precision": "float64 throughout native geometry and solver", "partition": "exact equal-material convex merges", "analytic_kinematics": true, "warmups": 0, "repeats": 1, "timing_scope": "diagnostic samples only; no performance comparison"},
+  "geometry_recheck": {"backend": "temporal", "primary_steps": 4, "substeps": 16, "scene_changes": "none"},
+  "sensitivity_control": {"seed": 42, "primary_steps": 128, "substeps": 64, "perturbation_m": 0.000001, "body_index": 1, "axis": 0, "scope": "different initial condition, not a fidelity accuracy comparison"},
+  "precision_control": {"duration_s": 1, "primary_steps": 512, "substeps": 8, "gravity_y_m_s2": -9.81, "initial_y_m": 5, "analytic_final_vy_m_s": -9.81, "float64_velocity_tolerance_m_s": 1e-10}
+}
