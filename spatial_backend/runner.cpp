@@ -31,6 +31,7 @@ int main(){try{
  bool compact=in.value("preassembly_elimination",true);
  RecordedMLCP regular_mlcp(&dantzig),post_normal_mlcp(&normal);NormalMLCP normal_mlcp(&normal);
  bool coulomb_solver=in.at("solver")=="coulomb";CoulombMLCP coulomb_mlcp(&dantzig);
+ coulomb_mlcp.recovery_enabled=in.value("contact_recovery",true);
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
  if(in.contains("rejected_contact_path")){
   std::string path=in.at("rejected_contact_path");
@@ -151,5 +152,5 @@ int main(){try{
  out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());
- std::cout<<out.dump()<<'\n';
+ out["coulomb_polish_solves"]=coulomb_mlcp.stats.polish_solves;out["coulomb_polish_svd_calls"]=coulomb_mlcp.stats.polish_svd_calls;out["coulomb_polish_budget_rejections"]=coulomb_mlcp.stats.polish_budget_rejections;out["coulomb_polish_svd_rejections"]=coulomb_mlcp.stats.polish_svd_rejections;out["coulomb_polish_steps"]=coulomb_mlcp.stats.polish_steps;out["coulomb_gauge_restarts"]=coulomb_mlcp.stats.gauge_restarts;out["coulomb_cold_restarts"]=coulomb_mlcp.stats.cold_restarts;std::cout<<out.dump()<<'\n';
  }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}

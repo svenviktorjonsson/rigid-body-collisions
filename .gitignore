@@ -15,3 +15,5 @@ research/spatial-validation/results/partial.json
 research/spatial-normal/results/checkpoints/
 research/spatial-friction/results/checkpoints/
 research/spatial-friction-gyro/results/checkpoints/
+
+research/spatial-friction-recovery/results/checkpoints/

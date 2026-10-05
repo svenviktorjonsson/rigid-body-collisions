@@ -115,3 +115,4 @@ class Coulomb3D(unittest.TestCase):
         scene=floor_ball([1,0,-2]);scene['bodies'][1]['restitution']=.5
         with self.assertRaises(ValueError):self.simulate(scene)
         with self.assertRaises(ValueError):run(floor_ball([1,0,-2]),solver='coulomb')
+        with self.assertRaises(ValueError):self.simulate(floor_ball([1,0,-2]),contact_recovery='yes')

@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <sstream>
 #include <functional>
+#include <limits>
 
 // Upstream friction RHS omits this angular free-velocity increment, although
 // normal RHS and final body writeback include it. Preserve the signed B row.
@@ -14,13 +15,15 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
- int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0;
+ int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
 };
 
+#include "coulomb_polish.h"
+
 // The same scalar rho is used for both tangent coordinates, preserving rotations
 // of their basis. Normal complementarity remains independent of the slip cone.
-inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
+inline bool coulombIterate(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  const btVectorXu& lo,const btVectorXu& hi,const btAlignedObjectArray<int>& dep,
  int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr){
  const int n=b.rows();
@@ -135,7 +138,7 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
     // With e=0 and separate position correction this is an upper bound on
     // E_after-E_before-W_wall. Positive-gap targets add a conservative term.
     if(change>tolerance*scale)throw std::runtime_error("Coulomb passivity gate failed");
-    for(auto& c:contacts)if(p[c.normal]>hi[c.normal])return false;
+    for(auto& c:contacts)if(p[c.normal]>hi[c.normal]){if(rejected_impulses)*rejected_impulses=p;return false;}
     for(int i=0;i<n;i++)x[i]=p[i];
     stats.solves++;stats.sweeps_max=std::max(stats.sweeps_max,sweep);
     stats.fast_solves+=sweep<=8;stats.residual_max=std::max(stats.residual_max,error);
@@ -168,6 +171,19 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  return false;
 }
 
+inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
+ const btVectorXu& lo,const btVectorXu& hi,const btAlignedObjectArray<int>& dep,
+ int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr,bool allow_recovery=true){
+ std::vector<double> rejected;
+ if(coulombIterate(A,b,x,lo,hi,dep,budget,tolerance,stats,&rejected))return true;
+ // Recovery has a separately bounded numerical budget, and the original gate.
+ // Preserve the warm rejected iterate only as a starting guess, never as output.
+ btVectorXu candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+ if(allow_recovery&&budget>=64&&circular_polish::solve(A,b,candidate,hi,dep,tolerance,stats)){x=candidate;stats.sweeps_max=std::max(stats.sweeps_max,budget);return true;}
+ if(rejected_impulses)*rejected_impulses=rejected;
+ return false;
+}
+
 class CoulombMLCP : public RecordedMLCP {
 protected:
  bool solveMLCP(const btContactSolverInfo& info) override {
@@ -185,7 +201,7 @@ protected:
    if(cp&&std::abs(cp->getDistance())<=contact_slop_m)m_bSplit[i]=0;
   }
   std::vector<double> rejected;
-  if(!coulombSolve(m_A,m_b,m_x,m_lo,m_hi,m_limitDependencies,info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr))
+  if(!coulombSolve(m_A,m_b,m_x,m_lo,m_hi,m_limitDependencies,info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr,recovery_enabled))
    {if(rejection_observer)rejection_observer(m_A,m_b,rejected,m_lo,m_hi,m_limitDependencies,"velocity",stats.last_residual,info.m_timeStep);std::ostringstream message;message<<"Coulomb residual gate failed ("<<stats.last_residual<<" m/s): increase iterations or refine timestep; no friction-law fallback";throw std::runtime_error(message.str());}
   if(info.m_splitImpulse){
    std::vector<int> normals;for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]<0)normals.push_back(i);
@@ -195,7 +211,7 @@ protected:
    if(normalQP(A,b,upper,x)){for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];}
    else{
     auto lower=m_lo,upper_full=m_hi;for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]>=0)lower[i]=upper_full[i]=0;
-    if(!coulombSolve(m_A,m_bSplit,m_xSplit,lower,upper_full,m_limitDependencies,info.m_numIterations,tolerance,position_stats,rejection_observer?&rejected:nullptr)){
+    if(!coulombSolve(m_A,m_bSplit,m_xSplit,lower,upper_full,m_limitDependencies,info.m_numIterations,tolerance,position_stats,rejection_observer?&rejected:nullptr,recovery_enabled)){
      if(rejection_observer)rejection_observer(m_A,m_bSplit,rejected,lower,upper_full,m_limitDependencies,"position",position_stats.last_residual,info.m_timeStep);
      throw std::runtime_error("Normal-only position projection residual failed; repair initial overlap or refine timestep");
     }
@@ -206,6 +222,7 @@ protected:
 public:
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
+ bool recovery_enabled=true;
  double tolerance=1e-8,contact_slop_m=1e-9,gyro_correction_max=0;CoulombStats stats,position_stats;
  explicit CoulombMLCP(btMLCPSolverInterface* solver):RecordedMLCP(solver){}
 };

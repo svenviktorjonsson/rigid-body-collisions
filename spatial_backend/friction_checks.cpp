@@ -31,6 +31,14 @@ public:
  }
 };
 int main(){
+ for(auto inputs:std::vector<std::pair<std::vector<double>,std::vector<double>>>{{{2,0,0,3},{4,9}},{{1,2,2,4},{3,6}},{{0,0,0,0},{0,0}}}){
+  auto r=minimumNormNewton(inputs.first,inputs.second,2);
+  if(!r.converged)throw std::runtime_error("Newton SVD did not converge");
+  for(int i=0;i<2;i++){double value=0;for(int j=0;j<2;j++)value+=inputs.first[i*2+j]*r.step[j];if(std::abs(value-inputs.second[i])>1e-10)throw std::runtime_error("Newton SVD linear mismatch");}
+  for(const auto& d:r.nullspace)for(int i=0;i<2;i++){double value=0;for(int j=0;j<2;j++)value+=inputs.first[i*2+j]*d[j];if(std::abs(value)>1e-10)throw std::runtime_error("Newton nullspace mismatch");}
+  if(inputs.first[0]==1&&(std::abs(r.step[0]-.6)>1e-10||std::abs(r.step[1]-1.2)>1e-10))throw std::runtime_error("Newton step is not minimum norm");
+ }
+
  auto check=[](double off,double pn,double pt,double ps,double wt,double ws,double mu){
   btMatrixXu A(3,3);A.setZero();A.setElem(0,0,1);A.setElem(1,1,3.5);A.setElem(2,2,3.5);A.setElem(0,1,off);A.setElem(1,0,off);
   btVectorXu b(3),x(3),lo(3),hi(3);double exact[]={pn,pt,ps},w[]={0,wt,ws};
@@ -47,5 +55,5 @@ int main(){
  check(.2,2,.1,.2,0,0,.4);
  check(0,2,0,0,-3,2,0); // Zero friction still solves normals.
  GyroInspect gyro;gyro.check();
- std::cout<<"Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression)\n";
+ std::cout<<"Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks)\n";
 }

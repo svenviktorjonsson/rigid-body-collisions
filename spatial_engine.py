@@ -137,12 +137,13 @@ def prepare(scene):
     return bodies,masses,tensors,axes,min(features)
 
 
-def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, kinematic_contact_phase="end", position_stabilization="split", preassembly_elimination=True, contact_tolerance_m_s=1e-8, contact_slop_m=1e-9, rejected_contact_path=None, binary=BINARY):
+def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', travel_fraction=.15, kinematic_contact_phase="end", position_stabilization="split", preassembly_elimination=True, contact_tolerance_m_s=1e-8, contact_slop_m=1e-9, rejected_contact_path=None, contact_recovery=True, binary=BINARY):
     duration=positive(scene['duration'],'duration');dt=positive(dt,'dt')
     frames=round(duration/dt)
     if frames<1 or not np.isclose(frames*dt,duration,rtol=1e-10,atol=1e-12):raise ValueError('Duration must match output frames')
     for value,label in ((primary_steps,'primary_steps'),(iterations,'iterations')):
         if type(value)!=int or not 1<=value<=4096:raise ValueError(f'Invalid {label}')
+    if type(contact_recovery) is not bool:raise ValueError('contact_recovery must be bool')
     if type(preassembly_elimination) is not bool:raise ValueError('preassembly_elimination must be bool')
     if solver not in ('coupled','sequential','adaptive','normal_coupled','coulomb'):raise ValueError('Invalid solver')
     travel_fraction=positive(travel_fraction,'travel fraction',zero=True)
@@ -158,7 +159,7 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
         raise ValueError('coulomb requires start-phase contacts and zero restitution')
     margin=positive(scene.get('margin_m',0),'margin',zero=True)
     if margin>feature*.1:raise ValueError('Margin exceeds 10% of feature')
-    wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,contact_tolerance_m_s=contact_tolerance_m_s,contact_slop_m=contact_slop_m)
+    wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,contact_tolerance_m_s=contact_tolerance_m_s,contact_slop_m=contact_slop_m,contact_recovery=contact_recovery)
     if rejected_contact_path is not None:
         if solver!='coulomb':raise ValueError('Rejection snapshots require coulomb solver')
         path=Path(rejected_contact_path).expanduser().resolve()
@@ -176,7 +177,7 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
     for i,Q in enumerate(axes):
         states[:,i,3:7]=(Rotation.from_quat(states[:,i,3:7])*Rotation.from_matrix(Q.T)).as_quat()
     if not np.isfinite(states).all():raise RuntimeError('Nonfinite 3D state')
-    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,dantzig_impulse_sanity_limit=1e30,adaptive_policy={'contact_threshold':12,'closing_speed_threshold_m_s':.01,'dwell_updates':24,'fast_iterations':8},contact_tolerance_m_s=contact_tolerance_m_s,contact_slop_m=contact_slop_m,tangent_gyro_rhs=('consistent free angular velocity' if solver=='coulomb' else 'upstream convention'),friction=('isotropic Coulomb disk; product mixing; residual-gated refinement' if solver=='coulomb' else 'two-direction pyramid; product mixing'),restitution='product mixing; zero velocity threshold'))
+    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,kinematic_contact_phase=kinematic_contact_phase,position_stabilization=position_stabilization,preassembly_elimination=preassembly_elimination,dantzig_impulse_sanity_limit=1e30,adaptive_policy={'contact_threshold':12,'closing_speed_threshold_m_s':.01,'dwell_updates':24,'fast_iterations':8},contact_tolerance_m_s=contact_tolerance_m_s,contact_slop_m=contact_slop_m,contact_recovery=dict(enabled=solver=='coulomb' and contact_recovery,max_rows=256,max_newton_steps_per_attempt=64,max_svd_calls_total=256,max_jacobi_sweeps_per_svd=64,max_gauge_directions_per_start=4,starts='warm, mechanically neutral gauges, cold',minimum_iteration_budget=64),tangent_gyro_rhs=('consistent free angular velocity' if solver=='coulomb' else 'upstream convention'),friction=('isotropic Coulomb disk; product mixing; residual-gated refinement' if solver=='coulomb' else 'two-direction pyramid; product mixing'),restitution='product mixing; zero velocity threshold'))
     return out
 
 
