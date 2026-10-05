@@ -51,9 +51,12 @@ contact gap or overlap. The Coulomb default now transports the complete contact
 rows and warm starts to one shared world point before mobility assembly; boundary
 work uses the same point. Analytic pair and full-tensor impulse tests verify
 momentum conservation. Explicit `contact_point_policy="separate"` retains the
-legacy comparison. Fresh shaking and hull reference protocols are declared in
-[shared shaking](research/shared-shake-study/plan.json) and
-[shared hulls](research/shared-hull-followup/plan.json); historical archives are unchanged.
+legacy comparison. A fresh [corrected-model shaking study](research/shared-shake-study/report.pdf)
+qualifies both reference edges and all repetitions, measuring **7.17x native gain**
+(3.17 versus22.77 seconds median) for the same synthetic27-sphere scene.
+The separate-endpoint6.11x result and all historical failed archives are preserved.
+Fresh [shared hulls](research/shared-hull-followup/plan.json) require independent
+qualification; this sphere result does not establish general hull accuracy.
 
 The [elastic wrench study](research/elastic-patch/report.pdf) separately models
 stored tangential energy and an independent twisting couple at a computational
