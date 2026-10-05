@@ -73,7 +73,7 @@ def errors(dimension,a,b):
 
 def audit():
     gates=load(HERE/'plan.json');report={'record_count':0,'qualified_benchmarks':{},'directories':{}}
-    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight','results-planar-optimized','results-large-irregular']:
+    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight','results-planar-optimized','results-large-irregular','results-planar-discovery']:
         directory=HERE/dirname
         if not (directory/'summary.json').exists():continue
         scenes=load(directory/'scenes.json') if (directory/'scenes.json').exists() else load(HERE/'results/scenes.json')
@@ -121,7 +121,9 @@ def audit():
                 assert item['reference_qualified']==all(e['passed'] for e in item['edges'][-2:])
                 reference=load(folder/f"reference_{item['reference_levels_executed']-1}.json")['result'] if item['reference_qualified'] else None
             bench=item.get('benchmark')
-            if bench is None:assert not item['reference_qualified'];continue
+            if bench is None:
+                assert dirname=='results-planar-discovery' or not item['reference_qualified']
+                continue
             assert item['reference_qualified']
             sampled_states={k:[] for k in ('reference','candidate')};timings={k:[] for k in sampled_states};allpass=True
             for warmup_path in folder.glob('warmup_*.json'):

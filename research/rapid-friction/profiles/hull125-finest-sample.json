@@ -1,0 +1,19 @@
+{
+  "case": "3d_hull_125",
+  "reference_level": 4,
+  "pid": 1200011,
+  "frequency_Hz": 49,
+  "duration_s": 5,
+  "samples": 240,
+  "lost_samples": 0,
+  "status": "Descriptive sampling of an in-progress original attempt; not a2x gate sample.",
+  "cost_leads_percent": {
+    "coulombIterate": 31.0,
+    "normalQP": 12.39,
+    "memset": 9.19,
+    "createMLCPFast": 8.4,
+    "compound_collision": 5.02
+  },
+  "method": "sudo -n perf record -F49 -g -p1200011 -- sleep5; copied into ordinary-user-owned research artifacts. No system settings changed.",
+  "qualification": "No trajectory or performance gate acceptance inferred from this short sample."
+}
