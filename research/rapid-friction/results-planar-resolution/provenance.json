@@ -1,0 +1,13 @@
+{
+  "source": "afd91e38d5190c5e3ab0b10edc57b8db00c50eb2",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar_resolution.py": "3de1a9acb1380cf3b20af75af9c260412ae5284eb715d130e2ebcd5acd02daf5",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar-resolution-plan.json": "fcd426693655e51d4c564cde713e5cc3a3c835c6519996e75afd611e8446ed9f",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/plan.json": "26f803be1d027a6283c2d810d9b3071ae7a688ab54ec7e1233c1a64e605b8af8",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_ledger/rigid_runner": "ee7839a5a334fa80a0d97abe565047939902579d6c34b2874efe1725abe28f0b",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/runner.cpp": "4711a42e0631975381e03b64bd82868e1d75c20a7ea512d0bcda7e02e20c3503",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/compat2.h": "d44db56ca09ac0379df6764b51be1e530eab323eae90e66b6c25b8cea5d30f68"
+  },
+  "scene_source_sha256": "14176f8d1af61aa4e4ee4baf087c785ad20bb3f5c27be513067f466fb536ab16"
+}
