@@ -1,0 +1,24 @@
+{
+  "schema": "independent-integrated-helper-source-review-v1",
+  "production_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "compiled_upstream_oracle_source_commit": "f66193fc8cfa0329cbdad0eb2854ecaedce8ab4a",
+  "helper_identical_except_first_comment": true,
+  "helper_sha256": "42f1408561f156a5edd5ada01e68f95e19893281b97ecb825ec767c24f3c9fbd",
+  "source_pointers": {
+    "accepted_physical_gate": "spatial_backend/coulomb.h:392",
+    "post_gate_clone": "spatial_backend/coulomb.h:404",
+    "target_after_clone": "spatial_backend/coulomb.h:405",
+    "position_only_rhs_write": "spatial_backend/coulomb.h:408",
+    "linear_only_mobility": "spatial_backend/coulomb.h:410",
+    "normal_only_split_solution": "spatial_backend/coulomb.h:411",
+    "strict_position_gate": "spatial_backend/coulomb.h:414",
+    "residual_counter_after_gate": "spatial_backend/coulomb.h:423",
+    "turn_clear_after_upstream_writeback": "spatial_backend/coulomb.h:360",
+    "exact_warm_delta_row_order": "spatial_backend/translation_combined.h:43",
+    "external_force_and_gyro_normal_rate": "spatial_backend/translation_combined.h:61",
+    "signed_remaining_target": "spatial_backend/translation_combined.h:79",
+    "optional_early_diagnostic_guard": "spatial_backend/runner.cpp:228",
+    "shape_density_input": "spatial_engine.py:95"
+  },
+  "manual_review_conclusion": "Invocation is after accepted physical solve and before position solve. Clone preserves warm deltas and applies accepted-minus-warm in exact upstream row/body order; rate contains full angular, external force and gyro. Position counters record only accepted repairs and final/prefix residuals match. Previous compiled actual upstream oracle supports noncollinear ordering; simple native sphere control does not independently exercise those modes."
+}

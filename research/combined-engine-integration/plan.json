@@ -1,0 +1,121 @@
+{
+  "schema": "prospective-independent-combined-engine-control-v3",
+  "production_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "purpose": "Retain actual native-world negative/control evidence for the opposing-face clearance counterexample, independently reviewing the accepted physical impulse clone and subsequent position target sequence.",
+  "scene": {
+    "duration": 0.001,
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "bodies": [
+      {
+        "type": "static",
+        "position": [
+          -0.1095,
+          0,
+          0
+        ],
+        "friction": 0,
+        "restitution": 0,
+        "shapes": [
+          {
+            "kind": "box",
+            "half_extents": [
+              0.01,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "static",
+        "position": [
+          0.111000001,
+          0,
+          0
+        ],
+        "friction": 0,
+        "restitution": 0,
+        "shapes": [
+          {
+            "kind": "box",
+            "half_extents": [
+              0.01,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0.95,
+          0,
+          0
+        ],
+        "omega": [
+          0,
+          0,
+          0
+        ],
+        "friction": 0,
+        "restitution": 0,
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ]
+      }
+    ]
+  },
+  "common": {
+    "dt": 0.001,
+    "primary_steps": 1,
+    "iterations": 4096,
+    "travel_fraction": 0,
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "contact_point_policy": "shared",
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true,
+    "early_component_recovery": false
+  },
+  "policies_in_order": [
+    "split_translation_gap",
+    "split_translation_combined"
+  ],
+  "geometric_targets": {
+    "right_wall_interior_x_m": 0.101000001,
+    "old_expected_x_m": 0.00105,
+    "new_expected_x_m": 0.00095,
+    "coordinate_tolerance_m": 1e-12
+  },
+  "assertions": [
+    "Both terminal histories finite, exactly one accepted internal update and two output frames.",
+    "Sphere independently checked mass1kg and full inertia.004identity kgm2; old/new final linear velocity[.95,0,0], omega0, and kinetic energy.45125J within1e-12.",
+    "Old right surface gap below\u221249micrometres; new above+49micrometres; old/new x match declared expected coordinates within1e-12.",
+    "Old numerical pose displacement approximately.1mm, new exactly0; no fake angular velocity, gravity-potential or orbital-angular-momentum change in this collinear gravity-free control.",
+    "Native physical and position residuals finite, nonnegative and within original1e-8; final ledger identical to final native principal-frame prefix ledger.",
+    "Early recovery false in both runs and attempts0; same committed production sources, binary/runtime bytes and physical_setup_id before/after both attempts. No performance ratio or other numerical schedule attribution."
+  ],
+  "execution_rule": "This plan is authored before either retained execution. Run only the existing read-only native binary; no production/test/build edits or compiler invocation. Record committed production bytes, actual binary and runtime hashes, and separate actual hashes for this independently authored launcher/plan if not yet published. Preserve every failure before correction and never overwrite prior evidence.",
+  "scope": "An intentionally overlapped initial configuration tests numerical position integration. This is actual native 3D sphere/planar-wall evidence, not a general nonlinear-geometry containment proof, a calibrated friction/rubber experiment, a trajectory accuracy order, or a full six-case qualification. Previous actual compiled upstream helper parity supports the angular/external/warm predictor separately; this collinear zero-torque control does not exercise those modes itself.",
+  "results_directory": "results-v3",
+  "previous_attempt": "results/first-attempt-failure.json; plan-v1.json and run-v1.py preserved unchanged; results-v2/first-attempt-failure.json and plan-v2.json/run-v2.py preserved",
+  "reuse_old_policy": {
+    "split_translation_gap-result.json": "f147e9c2abddb9cd85d3efc46877d6a7435cb23342d3234ecdf644d20a658769",
+    "split_translation_gap-progress.json": "3c2af847a1250cb8a774f09b84a48c190388249548ac146f73f8a06d72cc902f"
+  },
+  "reuse_old_provenance_sha256": "fab062718415736d14f4c262e14933f28e1cefd4a1d79bf71235b28931534391"
+}
