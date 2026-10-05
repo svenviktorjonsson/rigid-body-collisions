@@ -61,10 +61,6 @@ for index,(path,sha) in enumerate(plan['inputs'].items()):
         for label,seed in seeds:
             for method in plan['limits']['methods']:
                 count=0;best=clean(seed);best_res=float(np.max(np.abs(equations(best))));started=time.perf_counter();status='limit_or_decline'
-                def fun(q):
-                    nonlocal_placeholder=None
-                    global_unused=None
-                    return q
                 # Mutable counters retain every actual finite-difference evaluation.
                 box={'count':0,'best':best,'score':best_res,'solution':None}
                 def fun(q):
