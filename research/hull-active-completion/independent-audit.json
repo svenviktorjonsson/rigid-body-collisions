@@ -1,0 +1,106 @@
+{
+  "execution_source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "attempt_count": 6,
+  "history_count": 2,
+  "rejection_count": 4,
+  "rejections": [
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "rows": 60,
+      "residual_m_s": 0.00019896801538357334,
+      "reason": "Coulomb residual gate failed (0.000198968 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "rows": 39,
+      "residual_m_s": 1.3991591266711142e-06,
+      "reason": "Coulomb residual gate failed (1.39916e-06 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "rows": 51,
+      "residual_m_s": 1.445561977532797e-06,
+      "reason": "Coulomb residual gate failed (1.44556e-06 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "rows": 291,
+      "residual_m_s": 5.7946007852714123e-08,
+      "reason": "Normal-only position projection residual failed; repair initial overlap or refine timestep"
+    }
+  ],
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": null,
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": null,
+          "passed": false
+        }
+      ],
+      "diagnostics": {}
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": null,
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": {
+            "position_m": 0.10861622675569729,
+            "velocity_m_s": 6.122463521626093,
+            "omega_rad_s": 74.26224323510188,
+            "orientation_rad": 1.33364077766903
+          },
+          "passed": false
+        }
+      ],
+      "diagnostics": {
+        "reference_1": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -27612.483932920295,
+          "container_surface_excess_m": 0.00015506717979246742,
+          "sampled_container_surface_excess_m": 9.287919239209241e-06
+        },
+        "reference_2": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -28081.23693291234,
+          "container_surface_excess_m": 6.12996512543984e-05,
+          "sampled_container_surface_excess_m": 1.5378416030609188e-06
+        }
+      }
+    }
+  }
+}

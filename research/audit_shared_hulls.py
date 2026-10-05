@@ -75,7 +75,7 @@ def trajectory_error(left,right):
  vec=qa[:,:,3,None]*qb[:,:,:3]-qb[:,:,3,None]*qa[:,:,:3]-np.cross(qa[:,:,:3],qb[:,:,:3]);scalar=np.abs(np.sum(qa*qb,axis=-1));angle=2*np.arctan2(np.linalg.norm(vec,axis=-1),scalar)
  return dict(position_m=rms(a[:,:,:3]-b[:,:,:3]),velocity_m_s=rms(a[:,:,7:10]-b[:,:,7:10]),omega_rad_s=rms(a[:,:,10:13]-b[:,:,10:13]),orientation_rad=float(np.sqrt(np.mean(angle*angle))))
 
-def audit(study=DIRECTORY,source=SOURCE):
+def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None):
  study=Path(study);directory=study/'results';summary=json.loads((directory/'summary.json').read_text());plan=json.loads((study/'plan.json').read_text())
  assert summary['execution_source_commit']==source and summary['plan_sha256']==sha((study/'plan.json').read_bytes())
  assert summary['attempt_count']==summary['planned_attempt_count']==6 and summary['complete']
@@ -88,7 +88,15 @@ def audit(study=DIRECTORY,source=SOURCE):
   assert 'shared_contact.h' in archive.read('spatial_backend/coulomb.h').decode()
   assert archive.read(str((study/'plan.json').relative_to(ROOT)))==(study/'plan.json').read_bytes()
  baseline=json.loads((ROOT/plan['baseline_plan']).read_text());oldscenes=json.loads((ROOT/plan['baseline_scenes']).read_text());scenes=json.loads((directory/'scenes.json').read_text())
- for key in ['common','dt_s','trajectory_budget','physical_gates','reference_rule','scenes']:assert plan[key]==baseline[key]
+ if position_stabilization is None:
+  assert plan['common']==baseline['common']
+ else:
+  # Explicit prospective repair variant; historical callers retain exact controls.
+  assert position_stabilization=='split_translation' and baseline['common']['position_stabilization']=='split'
+  expected_common=dict(baseline['common']);expected_common['position_stabilization']=position_stabilization
+  assert plan['common']==expected_common
+  assert plan['declared_numerical_change']=={'position_stabilization':{'baseline':'split','candidate':'split_translation'}}
+ for key in ['dt_s','trajectory_budget','physical_gates','reference_rule','scenes']:assert plan[key]==baseline[key]
  assert scenes==oldscenes and plan['contact_point_policy']=='shared'
  expected={f'{c["id"]}/reference_{i}.json' for c in plan['scenes'] for i in range(3)};histories=0;rejections=[];receipts={}
  with zipfile.ZipFile(directory/'traces.zip') as archive:
