@@ -1,0 +1,16 @@
+{
+  "plan_commit": "d0da9dcda3c80ec59be40076b651b18d8881fcef",
+  "plan_sha256": "ccc011d2455dddcf858fff5d756e0b56c18c94c03ae2abf8960163a679e41acd",
+  "build_provenance_sha256": "61649b82d138025e692fe75ff981e8957a7b381b179ce7d214705d952c0ad074",
+  "phase": "validation",
+  "runner_sha256": "9fc93f3a30f1325b373d72b1199318dc0ce003faf392a369b49e9c5e46d93b85",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "affinity_cpu": 4,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "timing_scope": "Descriptive paired native solver costs under observed shared collaborative workload; CPU affinity does not establish full machine isolation."
+}

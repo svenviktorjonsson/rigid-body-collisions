@@ -1,0 +1,11 @@
+{
+  "schema": "qr-v1-timing-not-executed-v1",
+  "timing_experiment_executed": false,
+  "reason": "Untimed qualification found a functional regression: original 45-row seed42 reference_1 passes baseline but fails QR v1. Timing an unqualified replacement does not justify adoption.",
+  "baseline_accepted_of_20": 17,
+  "qr_accepted_of_20": 16,
+  "functional_regressions": 1,
+  "speed_claim": null,
+  "receipt": "validation-receipts.json",
+  "source_and_binary_controls": "../build-provenance.json"
+}

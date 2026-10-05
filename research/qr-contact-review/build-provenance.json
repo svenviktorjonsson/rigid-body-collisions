@@ -1,0 +1,84 @@
+{
+  "plan_sha256": "ccc011d2455dddcf858fff5d756e0b56c18c94c03ae2abf8960163a679e41acd",
+  "source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "source_hashes": {
+    "spatial_backend/coulomb.h": "9d23d1b3ec51d5e2e9db78bbd24a403ad3a1ede5348b215b67462dd8356cc114",
+    "spatial_backend/coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983"
+  },
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "variants": {
+    "baseline": {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-DNDEBUG",
+        "-DBT_USE_DOUBLE_PRECISION",
+        "-ffp-contract=off",
+        "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+        "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/include",
+        "/workspace/rigid-body-collisions/research/qr-contact-review/baseline/replay.cpp",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+        "-o",
+        "/workspace/rigid-body-collisions/research/qr-contact-review/baseline/replay"
+      ],
+      "binary_sha256": "1709e78bf96d04c9aec1c83d161361ce6fb7d0551bb40ea9492286b45ca90b14",
+      "files": {
+        "coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+        "normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+        "newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+        "replay.cpp": "5058d832a1a9101737558c71d6dd4982280a456336b582ae3e619201f54b0880",
+        "translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983",
+        "coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+        "coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+        "coulomb.h": "9d23d1b3ec51d5e2e9db78bbd24a403ad3a1ede5348b215b67462dd8356cc114",
+        "coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+        "shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+        "pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8"
+      }
+    },
+    "qr": {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-DNDEBUG",
+        "-DBT_USE_DOUBLE_PRECISION",
+        "-ffp-contract=off",
+        "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+        "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/include",
+        "/workspace/rigid-body-collisions/research/qr-contact-review/qr/replay.cpp",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+        "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+        "-o",
+        "/workspace/rigid-body-collisions/research/qr-contact-review/qr/replay"
+      ],
+      "binary_sha256": "06b4a497aa66bdcc01fd9ca083008150edb24016232741e07764332c3bbaff70",
+      "files": {
+        "coulomb_trust.h": "c9e56baa585500d6989f73c265c6fc728fc9d66c556b3c70215f6462bc44859c",
+        "normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+        "newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+        "replay.cpp": "d37794496cf325909194a249f8686282d5f8e9b43bcc9bf8b59ed29e803e8c61",
+        "translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983",
+        "coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+        "coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+        "qr_linear.h": "82012a3227a7c003bb86e81a823d32ec64303ac837a47351ca55452a645e5b80",
+        "coulomb.h": "9d23d1b3ec51d5e2e9db78bbd24a403ad3a1ede5348b215b67462dd8356cc114",
+        "coulomb_active_trust.h": "f96df4bbb75ba1c6d1a4c56a5065855b8ef5a5eba0b720e65c5a0193a23e068c",
+        "shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+        "pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8"
+      }
+    }
+  }
+}
