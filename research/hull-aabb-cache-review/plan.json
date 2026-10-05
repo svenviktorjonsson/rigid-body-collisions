@@ -1,0 +1,27 @@
+{
+  "schema": "prospective-native-hull-cache-order-controls-v1",
+  "engine_source_under_review": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "upstream_Bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "geometry_variants": 2,
+  "declared_margins_m": [
+    0,
+    0.003
+  ],
+  "child_transforms": [
+    "identity",
+    "rotation.37radaboutnormalized(1,2,3),translation(.014,-.003,.006)"
+  ],
+  "constructor_variants": [
+    "old:recalc-atdefault.04then-setmargin",
+    "corrected:setdeclaredmargin-before-recalc-and-addchild"
+  ],
+  "gates": "OldAABB matches stale.04plusdeclaredmargin formula; correctedAABB matches Bullet2declaredmargin formula and contains exact vertices+1margin support. Native support unchanged between constructors. Zero-margin identity bound exact. Compound bounds/relative-breakingthreshold correct. All errors<=1e-12m.",
+  "execution_rule": "Parent must publish source/plan checkpoint before compilation/execution. Mandatory frozen SHA. Build separate research executable against existing read-only Bullet libraries. Guard source/header/library/productionbinary hashes throughout; no production source/build mutations. Preserve every control and failure.",
+  "scope": "Native constructor/cache consistency controls only; neither causal trajectory proof nor fullhull qualification.",
+  "expected_control_count": 8,
+  "source_sha256": {
+    "research/hull-aabb-cache-review/control.cpp": "db7da4abf142b3475e05a956ba7d66f067b300ad499d95e1957b27c8296cbe82",
+    "research/hull-aabb-cache-review/fixture.json": "d9b670306f9db24981176c71e909ca25ac6e26a02147a0d565e16b60fb76d230",
+    "research/hull-aabb-cache-review/runner.py": "5209fbe78350c53c224cb543860d19f2f72b24149a7c324940046e3bc6c39fce"
+  }
+}
