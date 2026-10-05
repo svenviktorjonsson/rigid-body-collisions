@@ -20,6 +20,13 @@ subtests+10contact+11native checks, live23 and exact prior22 velocity bytes/coun
 pass. Read research/large-position-recovery/README.md. Archived original binaries
 are preserved and historical source hashes checked through their frozen Git pin.
 
+Fresh original125-hull finest trajectory at integrated88438b8 completes all
+192000 updates/0.12s and passes original full physical gates. Independent saved
+geometry/energy/source/runtime audit passes. See world-results/final.json and
+world-independent-audit.json under large-position-recovery. This is one full
+history, still without both adjacent refinement edges or a2x performance claim.
+Elapsed is descriptive because concurrent research/brief profiling was allowed.
+
 Large velocity pilots: projection/direct/component and FB merit all decline.
 Null-traction seeds plus bounded LM/TRF find strict original-law roots for162-row
 and423-row captures; unchanged native budget0 independently accepts both. The

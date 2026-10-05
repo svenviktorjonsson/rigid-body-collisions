@@ -27,6 +27,16 @@ Original binaries are preserved on this host and mapped in
 ../rapid-friction/reference-binary-snapshots.json. The state-only portable archive
 audit remains independent; the runtime provenance audit is host-specific.
 
-This establishes one instantaneous position-system fix, not full trajectory
-qualification or the requested all-case2x performance gate. Nine retained larger
-velocity rejections and rotating/irregular trajectory accuracy still need work.
+The fresh original125-hull finest history now completes all192000 updates over
+0.12s and passes unchanged physical gates. Independent geometry/energy and
+source/binary/runtime audits pass; friction residual9.999823e-9m/s and position
+residual9.997125e-9m/s remain below1e-8. Maximum container surface excess17.37um
+is below the original2mm limit. Source is88438b8. Read world-results/final.json
+and world-independent-audit.json; historical failed attempt remains preserved.
+
+This establishes a full working history for one large irregular3D case, but not
+reference refinement qualification or the requested all-case2x gate. Elapsed
+1737.56s is descriptive: concurrent research and a brief perf sample ran during
+this correctness diagnostic. Both adjacent refinement edges are still required.
+Nine retained larger velocity rejections and rotating/irregular trajectory
+accuracy still need work.
