@@ -39,7 +39,7 @@ This is a scoped numerical result for the frozen separate-endpoint geometry, not
 
 [Bounded contact recovery](research/coulomb-diagnostics/README.md) adds
 minimum-norm Newton steps, certified velocity-neutral pressure relocation and
-cold restarts on the same circular law. Four captured hull systems pass native
+cold restarts on the same circular law. Five captured hull systems pass native
 and independent contact/passivity gates, including a 267-row system. The
 [six-attempt full follow-up](research/spatial-friction-recovery/report.pdf) and
 [larger-cap follow-up](research/spatial-friction-recovery384/report.pdf) still
@@ -58,6 +58,10 @@ The separate-endpoint6.11x result and all historical failed archives are preserv
 The fresh [shared hull follow-up](research/shared-hull-followup/report.pdf)
 retains six later solver rejections and zero qualified references; this sphere
 result does not establish general hull accuracy.
+A [numerical-Jacobian follow-up](research/shared-hull-rank-followup/report.pdf)
+recovers the weak 48-row capture and advances one trajectory, which then rejects
+later. Its six complete attempts remain zero qualified references. Only the
+numerical search increment changes; physical mobility and gates remain unchanged.
 
 The [elastic wrench study](research/elastic-patch/report.pdf) separately models
 stored tangential energy and an independent twisting couple at a computational

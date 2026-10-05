@@ -1,0 +1,67 @@
+{
+  "native_source_commit": "0862e30736af34b3736e53154f0679a790113f9f",
+  "python_tests": {
+    "root": 145,
+    "research": 10,
+    "passed": true
+  },
+  "native_binary_sha256": "f46461d5be76895025672efb8d38561ccae71f58df5ff6dee61c6dddc75d826d",
+  "captured_replays": [
+    {
+      "input": "research/coulomb-diagnostics/hull42-rejected.json",
+      "output": "research/validation-2026-10-05/capture-0.json",
+      "rows": 18,
+      "residual_m_s": 4.809548839465017e-09
+    },
+    {
+      "input": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "output": "research/validation-2026-10-05/capture-1.json",
+      "rows": 108,
+      "residual_m_s": 1.531837698625351e-10
+    },
+    {
+      "input": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "output": "research/validation-2026-10-05/capture-2.json",
+      "rows": 267,
+      "residual_m_s": 1.9743521631246623e-12
+    },
+    {
+      "input": "research/coulomb-followup/hull42-second-rejected.json",
+      "output": "research/validation-2026-10-05/capture-3.json",
+      "rows": 45,
+      "residual_m_s": 1.816864423207348e-11
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "output": "research/validation-2026-10-05/capture-4.json",
+      "rows": 48,
+      "residual_m_s": 5.577006283435214e-09
+    }
+  ],
+  "hosted_ci": {
+    "source_commit": "0862e30736af34b3736e53154f0679a790113f9f",
+    "workflows": [
+      37305827450,
+      37305821084
+    ],
+    "python_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "conclusion": "success"
+  },
+  "scope": "External public Python/C++ physics validation, not Vektor/native/WASM/GPU or authentic-material acceptance",
+  "hashes": {
+    "root-tests.log": "6c21d86907e6a039caf91260bebb2b3a771b3029f4f0b42b4d13f049a8457a24",
+    "capture-3.json": "05c2fc15867435f333adb7c3ef16112a6bb2f38bc378805b8925085c6d7491dc",
+    "shared_contact_checks.log": "b22c269e5bec0749003cb95fd64b74adee6c67a4895d7fc50d617396856fa28b",
+    "research-tests.log": "f1589fd86d1f4868020308e6888d37e3c76fb413aec580005499cef125c7899d",
+    "spatial_qp_checks.log": "b3ede1eb160ceb66c25fbce57e5c5710858d65cd00a07c3f9839c3218c84d982",
+    "spatial_friction_checks.log": "61074c4ab93274f671eb492599de524b3418cd5d53acc218a67a59c75582edc8",
+    "capture-0.json": "693bcb437c8db8d807d6b22733831efb1a59952eb115a3d8220aae1cca53a71f",
+    "capture-4.json": "805a9d7da6069a3812fb04ce99a6014b4b65a9dbf53659c9625969eeef676c8c",
+    "archive-audits.log": "ec30e0715cac0982f310e6814e401b6ce4f392f9b35aedcd670d4b3892f7a6d4",
+    "capture-1.json": "6fe8d8b13d2344e0cfe4a19c2168531714c485bbb6ece445114d17310c79ddb4",
+    "capture-2.json": "05fa781ef1ec86b1c96005b0b5980a90e52b3763f79bed63c391a80c435be89b"
+  }
+}

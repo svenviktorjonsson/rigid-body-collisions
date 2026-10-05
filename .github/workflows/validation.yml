@@ -63,6 +63,7 @@ jobs:
           python -m research.audit_shake_performance
           python -m research.audit_shared_shake
           python -m research.audit_shared_hulls
+          python -m research.audit_shared_hulls --directory research/shared-hull-rank-followup --source-commit 0862e30736af34b3736e53154f0679a790113f9f
           python -m research.audit_elastic_patch
           python -m research.audit_elastic_patch --directory research/elastic-patch-refined
       - name: Exercise the explicitly synthetic comparison fixtures

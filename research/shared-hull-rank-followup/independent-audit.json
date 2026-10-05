@@ -1,0 +1,104 @@
+{
+  "execution_source_commit": "0862e30736af34b3736e53154f0679a790113f9f",
+  "attempt_count": 6,
+  "history_count": 0,
+  "rejection_count": 6,
+  "rejections": [
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "rows": 48,
+      "residual_m_s": 1.1475683256657652e-06,
+      "reason": "Coulomb residual gate failed (1.14757e-06 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "rows": 51,
+      "residual_m_s": 0.000628978584597181,
+      "reason": "Coulomb residual gate failed (0.000628979 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "rows": 30,
+      "residual_m_s": 1.7766607656808651e-06,
+      "reason": "Coulomb residual gate failed (1.77666e-06 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "rows": 216,
+      "residual_m_s": 4.4907070551831005e-07,
+      "reason": "Coulomb residual gate failed (4.49071e-07 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "rows": 192,
+      "residual_m_s": 1.9651417266622153e-05,
+      "reason": "Coulomb residual gate failed (1.96514e-05 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "rows": 123,
+      "residual_m_s": 0.005970881137765776,
+      "reason": "Coulomb residual gate failed (0.00597088 m/s): increase iterations or refine timestep; no friction-law fallback"
+    }
+  ],
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": null,
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": null,
+          "passed": false
+        }
+      ],
+      "diagnostics": {}
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": null,
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": null,
+          "passed": false
+        }
+      ],
+      "diagnostics": {}
+    }
+  }
+}

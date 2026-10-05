@@ -70,7 +70,7 @@ The native recovery operates only after iterative exhaustion and is optional.
 It searches neighboring friction faces through a certified mechanical null
 direction, checks the resulting velocity change, and accepts only the unchanged
 full contact residual and finite passivity bound. Its work is capped at 384
-rows and 256 numerical SVD calls. Bounded opposing-slip guesses run before gauges/cold restarts and never reach bodies unless the original gates pass. Four captured random-hull systems recover;
+rows and 256 numerical SVD calls. Bounded opposing-slip guesses run before gauges/cold restarts and never reach bodies unless the original gates pass. Five captured random-hull systems recover;
 the separate six-attempt whole-trajectory follow-up still rejects. Preserve
 that distinction when choosing or porting this method.
 
@@ -84,3 +84,13 @@ Python conservation checks distinguish exact impulse momentum from subsequent
 full-tensor orientation integration drift. Historical separate-point references
 and the 6.11x timing result remain frozen evidence for that earlier convention;
 fresh shared-point protocols must qualify independently.
+
+
+A bounded numerical-Jacobian rank retry drops weak search directions below1e-10
+of the maximum singular value, versus the ordinary1e-12 cutoff. It changes only
+a Newton increment, never the physical mobility or exact final contact law.
+The48-row shared capture passes; its fresh full trajectory then fails later.
+Both six-attempt shared hull follow-ups retain every rejection and qualify no
+reference. The corrected-geometry27-sphere study independently qualifies a7.17x
+native gain with fixed budgets; this does not establish general hull accuracy or
+authentic material coefficients.
