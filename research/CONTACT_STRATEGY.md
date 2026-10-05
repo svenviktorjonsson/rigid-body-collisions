@@ -70,6 +70,17 @@ The native recovery operates only after iterative exhaustion and is optional.
 It searches neighboring friction faces through a certified mechanical null
 direction, checks the resulting velocity change, and accepts only the unchanged
 full contact residual and finite passivity bound. Its work is capped at 384
-rows and 256 numerical SVD calls. Two captured random-hull systems recover;
+rows and 256 numerical SVD calls. Bounded opposing-slip guesses run before gauges/cold restarts and never reach bodies unless the original gates pass. Four captured random-hull systems recover;
 the separate six-attempt whole-trajectory follow-up still rejects. Preserve
 that distinction when choosing or porting this method.
+
+
+The Coulomb default uses a shared world contact point, with both complete signed
+rows transported before assembly and boundary work evaluated consistently.
+Finite pairs use their endpoint midpoint; finite-infinite contacts use the finite
+surface endpoint. Separate-endpoint friction at a nonzero gap or overlap can
+produce an internal couple and violate total angular momentum. The native and
+Python conservation checks distinguish exact impulse momentum from subsequent
+full-tensor orientation integration drift. Historical separate-point references
+and the 6.11x timing result remain frozen evidence for that earlier convention;
+fresh shared-point protocols must qualify independently.

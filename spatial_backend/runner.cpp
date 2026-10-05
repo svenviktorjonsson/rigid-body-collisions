@@ -31,6 +31,9 @@ int main(){try{
  bool compact=in.value("preassembly_elimination",true);
  RecordedMLCP regular_mlcp(&dantzig),post_normal_mlcp(&normal);NormalMLCP normal_mlcp(&normal);
  bool coulomb_solver=in.at("solver")=="coulomb";CoulombMLCP coulomb_mlcp(&dantzig);
+ std::string point_policy=in.value("contact_point_policy",coulomb_solver?std::string("shared"):std::string("separate"));
+ if((point_policy!="shared"&&point_policy!="separate")||(point_policy=="shared"&&!coulomb_solver))throw std::runtime_error("Invalid contact point policy for solver");
+ coulomb_mlcp.shared_contact_point=point_policy=="shared";
  coulomb_mlcp.recovery_enabled=in.value("contact_recovery",true);
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
  if(in.contains("rejected_contact_path")){
@@ -114,7 +117,12 @@ int main(){try{
     for(int c=0;c<m->getNumContacts();c++){auto& p=m->getContactPoint(c);
      if(p.getAppliedImpulse()>0)contacts_previous++;
      maxpenetration=std::max(maxpenetration,-static_cast<double>(p.getDistance()));
-     auto va=a->getVelocityInLocalPoint(p.getPositionWorldOnA()-a->getCenterOfMassPosition());auto vb=b->getVelocityInLocalPoint(p.getPositionWorldOnB()-b->getCenterOfMassPosition());
+     auto pointA=p.getPositionWorldOnA(),pointB=p.getPositionWorldOnB();
+     if(coulomb_solver&&coulomb_mlcp.shared_contact_point){
+      auto common=a->getInvMass()>0&&b->getInvMass()==0?pointA:(b->getInvMass()>0&&a->getInvMass()==0?pointB:pointA*.5+pointB*.5);
+      pointA=pointB=common;
+     }
+     auto va=a->getVelocityInLocalPoint(pointA-a->getCenterOfMassPosition());auto vb=b->getVelocityInLocalPoint(pointB-b->getCenterOfMassPosition());
      if(p.getDistance()<=0){residual_previous=std::max(residual_previous,std::max(0.,-static_cast<double>((va-vb).dot(p.m_normalWorldOnB))));maxresidual=std::max(maxresidual,residual_previous);}
      btVector3 impulse=p.m_normalWorldOnB*p.getAppliedImpulse()+p.m_lateralFrictionDir1*p.m_appliedImpulseLateral1+p.m_lateralFrictionDir2*p.m_appliedImpulseLateral2;
      if(bodies[a->getUserIndex()].kin)work-=impulse.dot(va);
@@ -149,6 +157,7 @@ int main(){try{
  json out={{"states",states},{"times",times},{"updates",updates},{"step_s",seconds},{"collision_updates",total},{"boundary_work_J",work},{"max_contact_penetration_m",maxpenetration},{"max_closing_contact_speed_m_s",maxresidual},{"coupled_fallbacks",mlcp.getNumFallbacks()},{"coupled_updates",dense_steps},{"sequential_updates",fast_steps},{"scalar_precision","float64"},{"normal_qp_solves",normal.normal_solves},{"normal_qp_rejections",normal.normal_rejections},{"normal_matrix_rows_max",normal_mlcp.rows_max},{"eliminated_tangent_rows_max",normal_mlcp.removed_rows_max}};
  int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):(coulomb_solver?coulomb_mlcp.rows_max:regular_mlcp.rows_max);
  out["tangent_gyro_correction_max_m_s"]=coulomb_mlcp.gyro_correction_max;out["coulomb_newton_steps"]=coulomb_mlcp.stats.newton_steps;out["position_iterative_solves"]=coulomb_mlcp.position_stats.solves;out["coulomb_solves"]=coulomb_mlcp.stats.solves;out["coulomb_fast_solves"]=coulomb_mlcp.stats.fast_solves;out["coulomb_sweeps_max"]=coulomb_mlcp.stats.sweeps_max;out["coulomb_residual_max_m_s"]=coulomb_mlcp.stats.residual_max;out["coulomb_passive_change_max_J"]=coulomb_mlcp.stats.passive_change_max;
+ out["shared_contact_rows"]=coulomb_mlcp.shared_point_rows;out["shared_contact_transport_max_m"]=coulomb_mlcp.shared_point_transport_max_m;out["contact_point_policy"]=point_policy;
  out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());

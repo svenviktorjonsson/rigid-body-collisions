@@ -35,15 +35,25 @@ The verified fast setting passes both references in all three repetitions.
 A [predeclared repeated cost comparison](research/shake-performance/report.pdf)
 measures **6.11x faster native stepping** (2.97 versus 18.18 seconds median)
 for this 27-sphere scene with unchanged material and accuracy budgets.
-This is a scoped numerical result, not calibrated material or a universal ranking.
+This is a scoped numerical result for the frozen separate-endpoint geometry, not calibrated material or a universal ranking. The corrected shared-point default requires fresh qualification.
 
 [Bounded contact recovery](research/coulomb-diagnostics/README.md) adds
 minimum-norm Newton steps, certified velocity-neutral pressure relocation and
-cold restarts on the same circular law. Three captured hull systems pass native
+cold restarts on the same circular law. Four captured hull systems pass native
 and independent contact/passivity gates, including a 267-row system. The
 [six-attempt full follow-up](research/spatial-friction-recovery/report.pdf) and
 [larger-cap follow-up](research/spatial-friction-recovery384/report.pdf) still
 reject later systems; general hull trajectory accuracy remains unqualified.
+
+A [contact-point conservation review](research/predictive-contact-review/review.pdf)
+finds an angular-momentum defect in separate endpoint force impulses at nonzero
+contact gap or overlap. The Coulomb default now transports the complete contact
+rows and warm starts to one shared world point before mobility assembly; boundary
+work uses the same point. Analytic pair and full-tensor impulse tests verify
+momentum conservation. Explicit `contact_point_policy="separate"` retains the
+legacy comparison. Fresh shaking and hull reference protocols are declared in
+[shared shaking](research/shared-shake-study/plan.json) and
+[shared hulls](research/shared-hull-followup/plan.json); historical archives are unchanged.
 
 The [elastic wrench study](research/elastic-patch/report.pdf) separately models
 stored tangential energy and an independent twisting couple at a computational

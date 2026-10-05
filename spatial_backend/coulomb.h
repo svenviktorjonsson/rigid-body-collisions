@@ -184,8 +184,22 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  return false;
 }
 
+#include "shared_contact.h"
+
 class CoulombMLCP : public RecordedMLCP {
 protected:
+ void transportContactRows(){
+  if(!shared_contact_point)return;
+  for(int i=0;i<m_allConstraintPtrArray.size();i++){
+   auto& row=*m_allConstraintPtrArray[i];int dep=m_limitDependencies[i];
+   auto* cp=static_cast<btManifoldPoint*>(m_allConstraintPtrArray[dep>=0?dep:i]->m_originalContactPoint);
+   if(!cp)throw std::runtime_error("Shared contact row has no manifold point");
+   double moved=transportSharedContactRow(row,m_tmpSolverBodyPool[row.m_solverBodyIdA],m_tmpSolverBodyPool[row.m_solverBodyIdB],*cp,dep>=0);
+   shared_point_transport_max_m=std::max(shared_point_transport_max_m,moved);shared_point_rows++;
+  }
+ }
+ void createMLCPFast(const btContactSolverInfo& info) override {transportContactRows();RecordedMLCP::createMLCPFast(info);}
+ void createMLCP(const btContactSolverInfo& info) override {transportContactRows();RecordedMLCP::createMLCP(info);}
  bool solveMLCP(const btContactSolverInfo& info) override {
   if(!m_A.rows())return true;
   for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]>=0){
@@ -222,7 +236,8 @@ protected:
 public:
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
- bool recovery_enabled=true;
+ bool recovery_enabled=true,shared_contact_point=true;
+ unsigned long long shared_point_rows=0;double shared_point_transport_max_m=0;
  double tolerance=1e-8,contact_slop_m=1e-9,gyro_correction_max=0;CoulombStats stats,position_stats;
  explicit CoulombMLCP(btMLCPSolverInterface* solver):RecordedMLCP(solver){}
 };

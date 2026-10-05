@@ -1,0 +1,5882 @@
+[
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 0.000282464,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.0076461669959826395,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "dca605ef787a937a44ead3939972ff6a43247354d5ef4668aa6e216e73f2bf3a",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": -0.001,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      1.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.0071428571428571435,
+          0.0,
+          0.0995,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ],
+        [
+          -0.0071428571428571435,
+          0.0,
+          -0.0995,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          -0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 8.9512e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.008036918996367604,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "e8acbefa1c8e1af57af2252f42544c8dbe095752743b63c596d3cf687211d940",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": -0.001,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.00028571428571427804,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0002857142857142857,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      0.7142857142857143
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.0071428571428571435,
+          0.0,
+          0.0995,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ],
+        [
+          -0.0071428571428571435,
+          0.0,
+          -0.0995,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          -0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 5.5168e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006268162003834732,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "14e048a2fa1d28eaaee91350f808657738eb6929504e8821e5d65fec5679f55e",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": -0.001,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.00028571428571427804,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0002857142857142857,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      0.7142857142857143
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 5.4818e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006748583997250535,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "c6063da74c5bff6a465b9eb4d7a08cb7f7f56fb6450bcaf9381c7bb3780f0226",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      1.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.0071428571428571435,
+          0.0,
+          0.1,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ],
+        [
+          -0.0071428571428571435,
+          0.0,
+          -0.1,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          -0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 5.1319e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007381646006251685,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "c30c8ed0c93196374531f35bb19d6ebab645a257312ca5ffbb9cb51e190cb421",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      0.7142857142857143
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 72,
+    "mobility_rows_max": 3,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.0071428571428571435,
+          0.0,
+          0.1,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ],
+        [
+          -0.0071428571428571435,
+          0.0,
+          -0.1,
+          0.0,
+          0.03570669387583191,
+          0.0,
+          0.9993623126836721,
+          -0.7142857142857143,
+          0.0,
+          0.0,
+          0.0,
+          7.1428571428571415,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 5.824e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.012056228006258607,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "c98a3834427f2c1f9fc7fe8b5ec7cff91b2d7d991a86de9ef09bce55668918b1",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      0.7142857142857143
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.8407e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.017673706999630667,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "c298cb26c311dc1e779175537de5ad15d3b86744533464ad2037f4019de867e2",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 1e-10,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.1802e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007573320996016264,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "d6b4df5c086b8cdbcf4f65c5d0539ed45997b82f6d88b2ecc97ec3c8b7da16e8",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 1e-10,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.6207e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007141825000871904,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "7f754cbed1a2409ae6bee6a6962bdadca4c9cfcb08f464d52d1d2bcbf457c01f",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 1e-10,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.4059e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007884858001489192,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "c79190216be12a9e4b6bb9206007d9ed6ce65f812c4ac790cb5dd559a39563cf",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.001,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.4165e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007240349004860036,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "8ce523b0ddc12f57e3aa3ac9ee229bd483d536e270d375f1ed60faaed32eae6a",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.001,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.5093e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006923955996171571,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "8652617889775b1cb38a42e197274c1a09926cafa44ab332b944f94b803b0ef7",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.001,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.943e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.01365071500185877,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "8159af64c3bb397ac0b1322e587c1fe0a6b05b24896e18a66827923697862ff1",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.01,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.4293e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.00601786699553486,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "7f78a4d3b7c9f33e4f73ae288076ea8cfe85d87e55c6af8a7423a882083011e0",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.01,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 0.000109637,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.008034261001739651,
+    "mass": [
+      1.0,
+      1.0
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ],
+      [
+        [
+          0.004000000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000000000001
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "58ea887d63fdc874c5b4e382ffbbbc8f734586cf62844221953dd2d63900ae84",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "sphere",
+      "gap_m": 0.01,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.915836822519167e-09,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.0995000000047896,
+          -1.3630718775914375e-12,
+          -2.258488729367514e-11,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          4.789593166520945e-10,
+          -2.726143755182875e-10,
+          -4.5169774587350275e-09,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.0995000000047896,
+          1.3630718775914375e-12,
+          2.258488729367514e-11,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          -4.789593166520945e-10,
+          2.726143755182875e-10,
+          4.5169774587350275e-09,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 0.000202996,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.00761081300152,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "92613436edbd5576b3328129990b22e663cc588bec710473df467cf122795b4e",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": -0.001,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      -8.40841187879625e-39
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0000000004789595
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      1.0000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 10,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.7491960476337803e-10,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 184,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.006000000001940184,
+          -1.4208155756267087e-14,
+          0.0995,
+          -1.0654615603641692e-13,
+          0.02999550018795083,
+          4.1947573922464325e-12,
+          0.9995500337494241,
+          0.6000000001940184,
+          -1.4208155756267087e-12,
+          2.220446049250313e-16,
+          -2.1312427927613613e-11,
+          5.999999997089723,
+          8.390773343856713e-10
+        ],
+        [
+          -0.006000000001940184,
+          1.4208155756267087e-14,
+          -0.0995,
+          -1.0654421339572827e-13,
+          0.02999550018795083,
+          -4.1947573922464325e-12,
+          0.9995500337494241,
+          -0.6000000001940184,
+          1.4208155756267087e-12,
+          -2.220446049250313e-16,
+          -2.1312039341190544e-11,
+          5.999999997089723,
+          -8.390773343856713e-10
+        ]
+      ]
+    ],
+    "step_s": 0.001762284,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.008528284000931308,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "db296de886065ac1956a21c767b2ccd4ede3161aea2315448177847187d5fe4d",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": -0.001,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      -1.4208155756459833e-15,
+      0.00039999999980602774,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.39999999980598167,
+      -1.4208155756267091e-12,
+      1.0000000000000004
+    ],
+    "endpoint_predicted_delta_L": [
+      -1.4208155756267093e-15,
+      0.00039999999980598166,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      0.6000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.915836822519167e-09,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0010000000000000009,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0995,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.005999999999852817,
+          -1.4718317710438189e-13,
+          0.0995000000047896,
+          -2.4665756503173693e-12,
+          0.02999550018102431,
+          -1.839515141000878e-12,
+          0.9995500337496319,
+          0.5999999999852816,
+          -1.471831771043819e-11,
+          4.789593166520945e-10,
+          -4.933891351033282e-10,
+          5.999999995703798,
+          -3.6795821944934914e-10
+        ],
+        [
+          -0.005999999999852817,
+          1.4718317710438189e-13,
+          -0.0995000000047896,
+          2.591592017037723e-13,
+          0.029995500226173758,
+          1.839515141000046e-12,
+          0.999550033748277,
+          -0.5999999999852816,
+          1.471831771043819e-11,
+          -4.789593166520945e-10,
+          5.183961593324682e-11,
+          6.000000004737752,
+          3.6795821944934914e-10
+        ]
+      ]
+    ],
+    "step_s": 0.000188739,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006405356005416252,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "b056f0d13d4ec10beac0f00989ee478228f7f822c3d2f03fc8f270e15b303ebc",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": -0.001,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      -1.471823675667624e-14,
+      0.00040000000001474967,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.40000000001471847,
+      -1.4718317710438192e-11,
+      1.0000000004789595
+    ],
+    "endpoint_predicted_delta_L": [
+      -1.471831771043819e-14,
+      0.0004000000000147185,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      0.6000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.915836822519167e-09,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.1000000000047896,
+          -1.3630718775914375e-12,
+          -2.258488729367514e-11,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          4.789593166520945e-10,
+          -2.726143755182875e-10,
+          -4.5169774587350275e-09,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.1000000000047896,
+          1.3630718775914375e-12,
+          2.258488729367514e-11,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          -4.789593166520945e-10,
+          2.726143755182875e-10,
+          4.5169774587350275e-09,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 0.000103875,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006963715000892989,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "066f9f2545caba30fc3d5b453cde88c5ea772440b7cc543b83edad2c57ddf9c8",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      -8.40841187879625e-39
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0000000004789595
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      1.0000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 10,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.7491960476337803e-10,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 184,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.006000000001940184,
+          -1.4208155756267087e-14,
+          0.1,
+          -1.0654615603641692e-13,
+          0.02999550018795083,
+          4.1947573922464325e-12,
+          0.9995500337494241,
+          0.6000000001940184,
+          -1.4208155756267087e-12,
+          2.220446049250313e-16,
+          -2.1312427927613613e-11,
+          5.999999997089723,
+          8.390773343856713e-10
+        ],
+        [
+          -0.006000000001940184,
+          1.4208155756267087e-14,
+          -0.1,
+          -1.0654421339572827e-13,
+          0.02999550018795083,
+          -4.1947573922464325e-12,
+          0.9995500337494241,
+          -0.6000000001940184,
+          1.4208155756267087e-12,
+          -2.220446049250313e-16,
+          -2.1312039341190544e-11,
+          5.999999997089723,
+          -8.390773343856713e-10
+        ]
+      ]
+    ],
+    "step_s": 0.001101589,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007329907995881513,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "9fa736de474d60bb8ce15daaec915a042f6ac1dd76c4c08cfcc0b5f214cae20d",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      -1.9260827861876224e-26,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.39999999980598167,
+      -1.4208155756267091e-12,
+      1.0000000000000004
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      0.6000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 1,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 1.915836822519167e-09,
+    "coulomb_solves": 1,
+    "coulomb_sweeps_max": 8,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 1152,
+    "mobility_rows_max": 12,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.005999999999852817,
+          -1.4718317710438189e-13,
+          0.1000000000047896,
+          -2.4665756503173693e-12,
+          0.02999550018102431,
+          -1.839515141000878e-12,
+          0.9995500337496319,
+          0.5999999999852816,
+          -1.471831771043819e-11,
+          4.789593166520945e-10,
+          -4.933891351033282e-10,
+          5.999999995703798,
+          -3.6795821944934914e-10
+        ],
+        [
+          -0.005999999999852817,
+          1.4718317710438189e-13,
+          -0.1000000000047896,
+          2.591592017037723e-13,
+          0.029995500226173758,
+          1.839515141000046e-12,
+          0.999550033748277,
+          -0.5999999999852816,
+          1.471831771043819e-11,
+          -4.789593166520945e-10,
+          5.183961593324682e-11,
+          6.000000004737752,
+          3.6795821944934914e-10
+        ]
+      ]
+    ],
+    "step_s": 7.4812e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.007369470986304805,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "41d94c1f1134b1ffc6154e6d6cbd44e5943c7c646dbb1f9d5d537f6375399628",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      8.09537621025257e-20,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      -0.40000000001471847,
+      -1.4718317710438192e-11,
+      1.0000000004789595
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      0.6000000000000002
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.363e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006685589003609493,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "dbb18933b9af84c49df7c4ffa288d688fd085ad5094a85a0197e7711df62dc25",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 1e-10,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 5.3866e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.015062631006003357,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "f2181f585022baf4e6948e56eed4e5267e1f67807307ff0730e5b82fe16ab448",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 1e-10,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09000000005000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.1707e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.00666578600066714,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "6c0de085dce99023bf8b95c80fb1c46c5b7174adc3a9840ac8e01189e07a8feb",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 1e-10,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.7814e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.006810937004047446,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "320458e65f04159268480116e089a325a5b66312c02640f7d80330e52d65b062",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.001,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.0586e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.00633455699426122,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "48f6b00e1a40b90286b274a8d19ccaf3c25371ab13ae548fd1cf4a303e7bd76b",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.001,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.1005,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09050000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.5439e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.005804877990158275,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "f74c01e957fe0c016dd66d36c1723a707a2759c1976915d80218d3bf505cc399",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.001,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.5688e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.0066387620026944205,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "1df94f9d7fee83cdc61bd986e29fad17f03fda0562efdacbcd9c020f54e70a02",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.01,
+      "pair_mu": 0
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.1883e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.005448889001854695,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "75304aa6d5974bdc34e2974421882e1bab30affca5d387effa61594ffc5842f6",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.01,
+      "pair_mu": 0.4
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  },
+  {
+    "boundary_work_J": 0.0,
+    "collision_updates": 1,
+    "coulomb_fast_solves": 0,
+    "coulomb_newton_steps": 0,
+    "coulomb_passive_change_max_J": 0.0,
+    "coulomb_residual_max_m_s": 0.0,
+    "coulomb_solves": 0,
+    "coulomb_sweeps_max": 0,
+    "coupled_fallbacks": 0,
+    "coupled_updates": 1,
+    "eliminated_tangent_rows_max": 0,
+    "max_closing_contact_speed_m_s": 0.0,
+    "max_contact_penetration_m": 0.0,
+    "mobility_matrix_bytes_max": 0,
+    "mobility_rows_max": 0,
+    "normal_matrix_rows_max": 0,
+    "normal_qp_rejections": 0,
+    "normal_qp_solves": 0,
+    "position_iterative_solves": 0,
+    "scalar_precision": "float64",
+    "sequential_updates": 0,
+    "states": [
+      [
+        [
+          0.0,
+          0.0,
+          0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.10500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.0,
+          0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.01,
+          0.0,
+          -0.09500000000000001,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    ],
+    "step_s": 3.1736e-05,
+    "tangent_gyro_correction_max_m_s": 0.0,
+    "times": [
+      0.0,
+      0.01
+    ],
+    "updates": [
+      1
+    ],
+    "wall_time_s": 0.008207919003325514,
+    "mass": [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    "inertia_body_kg_m2": [
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ],
+      [
+        [
+          0.006666666666666669,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.006666666666666669,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006666666666666669
+        ]
+      ]
+    ],
+    "body_types": [
+      "dynamic",
+      "dynamic"
+    ],
+    "physical_setup_id": "bed355290cf7e2cc0b8eadd0d10db0b0fc18bede35a977309caca595f07c71ce",
+    "numerical_model": {
+      "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+      "solver": "coulomb",
+      "primary_steps": 1,
+      "iterations": 4096,
+      "travel_fraction": 0.0,
+      "margin_m": 0.0,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "velocity_only",
+      "preassembly_elimination": true,
+      "dantzig_impulse_sanity_limit": 1e+30,
+      "adaptive_policy": {
+        "contact_threshold": 12,
+        "closing_speed_threshold_m_s": 0.01,
+        "dwell_updates": 24,
+        "fast_iterations": 8
+      },
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "tangent_gyro_rhs": "consistent free angular velocity",
+      "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+      "restitution": "product mixing; zero velocity threshold"
+    },
+    "case": {
+      "shape": "box",
+      "gap_m": 0.01,
+      "pair_mu": 1
+    },
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_J": [
+      2.0000000000000004,
+      2.0000000000000004
+    ]
+  }
+]

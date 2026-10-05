@@ -1,0 +1,80 @@
+{
+  "purpose": "Qualify the corrected shared-contact geometry and compare same-material numerical effort",
+  "scene": "research/fast-shake-diagnostic/scene.json",
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true,
+    "contact_point_policy": "shared"
+  },
+  "settings": {
+    "reference": {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    "candidate": {
+      "dt": 0.01,
+      "primary_steps": 4,
+      "travel_fraction": 0.015
+    }
+  },
+  "order": [
+    "reference_0",
+    "candidate_0",
+    "candidate_1",
+    "reference_1",
+    "reference_2",
+    "candidate_2"
+  ],
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "rule": "Commit source and plan before execution. Run all three shared-geometry references, then all six interleaved timing attempts, retaining every rejection. Both consecutive reference edges must pass quarter budgets and all physical/residual gates. Every timing repetition must pass full budgets against the fresh finest reference; repeated states must match bitwise. If reference qualification or any repetition fails, report no verified speed ratio. Legacy separate-point reference histories are not qualification data for this model.",
+  "scope": "Synthetic 27 spheres in a container shaking at plus/minus20m/s for0.12s. Same geometry/mu/restitution/gravity/prescribed motion; only numerical work differs. No material tuning, no claimed order, universal engine ranking or Vektor-native performance. Interleaved sequential launches on one environment; residual background machine load cannot be fully controlled. Native time includes stepping/state recording and excludes process/JSON overhead; whole-process time retained separately. Changed geometry convention: finite-finite midpoint; finite-infinite finite surface endpoint; Jacobian/RHS/warmstart/work transported consistently. No inference that this removes the previously diagnosed shaking branch sensitivity.",
+  "reference_levels": {
+    "fixed_5us": {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "travel_fraction": 0
+    },
+    "fixed_2_5us": {
+      "dt": 0.01,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    "fixed_1_25us": {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  },
+  "reference_edges": [
+    [
+      "fixed_5us",
+      "fixed_2_5us"
+    ],
+    [
+      "fixed_2_5us",
+      "fixed_1_25us"
+    ]
+  ],
+  "reference_budget": {
+    "position_m": 0.00125,
+    "velocity_m_s": 0.0125,
+    "omega_rad_s": 0.025,
+    "orientation_rad": 0.0025
+  }
+}

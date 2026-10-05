@@ -1,0 +1,1832 @@
+[
+  {
+    "shape": "sphere",
+    "gap_m": -0.001,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": -0.001,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": -0.001,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 1e-10,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 1e-10,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 1e-10,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.001,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.001,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.001,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.01,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.01,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "sphere",
+    "gap_m": 0.01,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "sphere",
+              "radius": 0.1,
+              "density": 238.732414637843
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": -0.001,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": -0.001,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": -0.001,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.0995
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.0995
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 1e-10,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 1e-10,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 1e-10,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10000000005000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10000000005000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.001,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.001,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.001,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.1005
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.1005
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.01,
+    "pair_mu": 0,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.01,
+    "pair_mu": 0.4,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 0.6324555320336759,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "shape": "box",
+    "gap_m": 0.01,
+    "pair_mu": 1,
+    "scene": {
+      "duration": 0.01,
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "bodies": [
+        {
+          "position": [
+            0,
+            0,
+            0.10500000000000001
+          ],
+          "velocity": [
+            1,
+            0,
+            -1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        },
+        {
+          "position": [
+            0,
+            0,
+            -0.10500000000000001
+          ],
+          "velocity": [
+            -1,
+            0,
+            1
+          ],
+          "friction": 1.0,
+          "restitution": 0,
+          "shapes": [
+            {
+              "kind": "box",
+              "half_extents": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "density": 125
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

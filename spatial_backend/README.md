@@ -167,3 +167,15 @@ feasible numerical initialization, which can change trial velocity; it is not a
 mechanical-null pressure move or a physical impulse. The unchanged full contact
 and finite energy gates still accept only the final result. All restarts share
 the same global SVD work budget, and counters disclose their use.
+
+The circular solver defaults to `contact_point_policy="shared"`. Both finite
+bodies use the midpoint of their surface contact endpoints; against a fixed or
+kinematic body, the finite body's endpoint is used. Normal and tangent lever
+arms, world-inertia angular mobility, free-velocity and split RHS, and already
+applied warm angular impulses are transported before matrix assembly. Boundary
+work uses the same common point. `"separate"` is an explicit legacy comparator;
+other solver lanes retain their existing separate-point convention. Unsupported
+CFM, contact stiffness/damping and friction anchors reject in this shared lane.
+This corrects the internal moment produced by separated equal/opposite forces;
+full-tensor orientation integration has a separate finite-step momentum error.
+Old trajectory/performance archives qualify their frozen geometry only.
