@@ -1,0 +1,37 @@
+[
+  {
+    "path": "spatial_backend/coulomb.h",
+    "before": "struct CoulombStats {\n",
+    "after": "struct CoulombStats {\n // Optional schedule receipts; these aggregate across calls, never set caps.\n int early_component_attempts=0,early_component_solves=0,early_component_declines=0;\n int early_component_helper_calls=0,early_component_skipped_components=0;\n int early_component_cap_rejections=0,early_component_passes=0,early_component_largest_rows=0;\n int early_component_expanded_contacts=0,early_component_svd_calls=0;\n int early_component_iteration_steps=0,early_component_pressure_svd_calls=0;\n int early_component_pressure_attempts=0,early_component_pivot_calls=0;\n"
+  },
+  {
+    "path": "spatial_backend/coulomb.h",
+    "before": "int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr,bool allow_recovery=true){",
+    "after": "int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr,bool allow_recovery=true,bool early_component_recovery=false){"
+  },
+  {
+    "path": "spatial_backend/coulomb.h",
+    "before": " btVectorXu candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];\n if(recover){",
+    "after": " btVectorXu candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];\n#ifdef SPATIAL_LAPACK_RECOVERY\n // RESEARCH OPTION: default false preserves the frozen lane ordering.\n // Use the actual first256 rejected iterate, not a cold/captured proxy seed.\n if(early_component_recovery&&recover&&first_budget==256&&b.rows()<=4096){\n  support_restart_v3::Stats early; // Fresh independent caps for THIS call.\n  stats.early_component_attempts++;\n  const bool accepted=support_restart_v3::solve(A,b,candidate,hi,dep,tolerance,early);\n  stats.early_component_helper_calls+=early.helper_calls;\n  stats.early_component_skipped_components+=early.skipped_components;\n  stats.early_component_cap_rejections+=early.component_cap_rejections;\n  stats.early_component_passes+=early.passes;\n  stats.early_component_largest_rows=std::max(stats.early_component_largest_rows,early.largest_reduced_rows);\n  stats.early_component_expanded_contacts+=early.expanded_contacts;\n  stats.early_component_svd_calls+=early.svd_calls;\n  stats.early_component_iteration_steps+=early.iteration_steps;\n  stats.early_component_pressure_svd_calls+=early.pressure_svd_calls;\n  stats.early_component_pressure_attempts+=early.pressure_attempts;\n  stats.early_component_pivot_calls+=early.pivot_attempts;\n  // Aggregate BOTH early and existing later tail work, including declines.\n  stats.support_helper_calls+=early.helper_calls;\n  stats.support_skipped_components+=early.skipped_components;\n  stats.support_component_cap_rejections+=early.component_cap_rejections;\n  stats.support_passes+=early.passes;\n  stats.support_largest_rows=std::max(stats.support_largest_rows,early.largest_reduced_rows);\n  stats.support_expanded_contacts+=early.expanded_contacts;\n  stats.support_svd_calls+=early.svd_calls;\n  stats.support_iteration_steps+=early.iteration_steps;\n  stats.support_pressure_svd_calls+=early.pressure_svd_calls;\n  stats.support_pivot_calls+=early.pivot_attempts;\n  if(accepted){\n   // V3 returns true only after its ORIGINAL full-row/bounds/passivity gate.\n   x=candidate;stats.solves++;stats.support_solves++;stats.early_component_solves++;\n   stats.last_residual=early.residual;stats.residual_max=std::max(stats.residual_max,early.residual);\n   stats.sweeps_max=std::max(stats.sweeps_max,first_budget);\n   double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}\n   stats.passive_change_max=std::max(stats.passive_change_max,change);\n   return true;\n  }\n  stats.early_component_declines++;\n  // A declined trial NEVER reaches x; restore the exact original next-lane seed.\n  candidate=x;for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];\n }\n#endif\n if(recover){"
+  },
+  {
+    "path": "spatial_backend/coulomb.h",
+    "before": "info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr,recovery_enabled))",
+    "after": "info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr,recovery_enabled,early_component_recovery))"
+  },
+  {
+    "path": "spatial_backend/coulomb.h",
+    "before": " bool recovery_enabled=true,shared_contact_point=true;",
+    "after": " bool early_component_recovery=false; // Explicit research opt-in; velocity solve only.\n bool recovery_enabled=true,shared_contact_point=true;"
+  },
+  {
+    "path": "spatial_backend/runner.cpp",
+    "before": " coulomb_mlcp.recovery_enabled=in.value(\"contact_recovery\",true);",
+    "after": " coulomb_mlcp.recovery_enabled=in.value(\"contact_recovery\",true);\n coulomb_mlcp.early_component_recovery=in.value(\"early_component_recovery\",false);\n if(coulomb_mlcp.early_component_recovery&&(!coulomb_solver||!coulomb_mlcp.recovery_enabled||!coulombLapackRecoveryEnabled()))throw std::runtime_error(\"Early component schedule requires Coulomb and enabled compiled recovery\");"
+  },
+  {
+    "path": "spatial_backend/runner.cpp",
+    "before": " out[\"coulomb_support_solves\"]=coulomb_mlcp.stats.support_solves;",
+    "after": " if(coulomb_mlcp.early_component_recovery){\n  const auto& e=coulomb_mlcp.stats;\n  out[\"early_component_policy\"]={{\"enabled\",true},{\"seed\",\"actual first256 rejected PGS\"},\n   {\"attempts\",e.early_component_attempts},{\"solves\",e.early_component_solves},{\"declines\",e.early_component_declines},\n   {\"helper_calls\",e.early_component_helper_calls},{\"skipped_components\",e.early_component_skipped_components},\n   {\"component_cap_rejections\",e.early_component_cap_rejections},{\"passes\",e.early_component_passes},\n   {\"largest_rows\",e.early_component_largest_rows},{\"expanded_contacts\",e.early_component_expanded_contacts},\n   {\"svd_calls\",e.early_component_svd_calls},{\"iteration_steps\",e.early_component_iteration_steps},\n   {\"pressure_svd_calls\",e.early_component_pressure_svd_calls},{\"pressure_attempts\",e.early_component_pressure_attempts},\n   {\"pivot_calls\",e.early_component_pivot_calls},\n   {\"extra_budget\",\"early and later tail have independent fresh caps; aggregate support counters include both\"},\n   {\"claim\",\"optional original-law schedule; accepted root and trajectory may differ\"}};\n }\n out[\"coulomb_support_solves\"]=coulomb_mlcp.stats.support_solves;"
+  }
+]
