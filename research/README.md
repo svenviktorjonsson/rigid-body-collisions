@@ -85,3 +85,11 @@ references fail the frozen gates. No general dense accuracy claim follows.
 
 Run `python -m unittest tests.test_spatial_engine -v` after building the native
 backend, and `python -m research.audit_spatial_study` to audit retained evidence.
+
+[Exact 3D normal contacts and performance](spatial-normal/report.md),
+[typeset report](spatial-normal/report.pdf), [mechanics](spatial-normal/mechanics.pdf),
+[frozen protocol](spatial-normal/plan.json): six of six analytic cases pass,
+36 histories audit, and exact preassembly elimination gives 1.46–7.22x native
+speedup with identical states and nine times less scalar mobility storage.
+Restriction: zero friction and restitution; dense frictional accuracy is still
+unqualified. Run `python -m research.audit_spatial_normal` to inspect the evidence.

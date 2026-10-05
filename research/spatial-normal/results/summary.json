@@ -1,0 +1,662 @@
+{
+  "execution_source_commit": "76e44754c09c36112e161441462ac5cd34687a49",
+  "plan_sha256": "f0325b067e3594b88b890382390f0ad5a8d14314cb18d64e580b14164f9d2b36",
+  "binary_sha256": "a9fb16320b8dc4a45097adbfeb2f531ea507b361ea32ae21918b84657dea509b",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "warmups": {
+    "row64_x/postassembly": {
+      "step_s": 0.153824044,
+      "states_sha256": "397b1da4bec61a1e6c8182060df8c09e19be6013a4fceb15578cb0adaabf44f1"
+    },
+    "row64_x/compact": {
+      "step_s": 0.066823122,
+      "states_sha256": "397b1da4bec61a1e6c8182060df8c09e19be6013a4fceb15578cb0adaabf44f1"
+    },
+    "row64_y/postassembly": {
+      "step_s": 0.203723483,
+      "states_sha256": "6fdb2d8cfdf3a80141ac0306a50a280101e7d6f17db87de7338d7503954042ca"
+    },
+    "row64_y/compact": {
+      "step_s": 0.106972739,
+      "states_sha256": "6fdb2d8cfdf3a80141ac0306a50a280101e7d6f17db87de7338d7503954042ca"
+    },
+    "row64_z/postassembly": {
+      "step_s": 0.144041427,
+      "states_sha256": "c5347caa7193fe77ebb60224d34fe61408dd637d9319ad35b4125dc0e0afd242"
+    },
+    "row64_z/compact": {
+      "step_s": 0.160875444,
+      "states_sha256": "c5347caa7193fe77ebb60224d34fe61408dd637d9319ad35b4125dc0e0afd242"
+    },
+    "row128_x/postassembly": {
+      "step_s": 1.071338798,
+      "states_sha256": "21b719d6aaa3b967a02c60e3d3fb67a89516c02e88f5b8e6e65a9ab6f4ab579a"
+    },
+    "row128_x/compact": {
+      "step_s": 0.148875741,
+      "states_sha256": "21b719d6aaa3b967a02c60e3d3fb67a89516c02e88f5b8e6e65a9ab6f4ab579a"
+    },
+    "packed27/postassembly": {
+      "step_s": 1.082239087,
+      "states_sha256": "c272d05184fa081a55043d9215731df8fb21c48212394f7ab7dd851a07fc20cb"
+    },
+    "packed27/compact": {
+      "step_s": 0.328532099,
+      "states_sha256": "c272d05184fa081a55043d9215731df8fb21c48212394f7ab7dd851a07fc20cb"
+    },
+    "packed64/postassembly": {
+      "step_s": 4.518159232,
+      "states_sha256": "dc399e52f7de704a277505b6dedeed757b230293c1520c06e51b0cecdeff8961"
+    },
+    "packed64/compact": {
+      "step_s": 0.947040778,
+      "states_sha256": "dc399e52f7de704a277505b6dedeed757b230293c1520c06e51b0cecdeff8961"
+    }
+  },
+  "history_count": 36,
+  "scenes": {
+    "row64_x": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.137453478,
+          "mobility_rows_max": 192,
+          "mobility_matrix_bytes_max": 294912,
+          "normal_qp_solves": 1068
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.074002377,
+          "mobility_rows_max": 64,
+          "mobility_matrix_bytes_max": 32768,
+          "normal_qp_solves": 1068
+        }
+      },
+      "speedup": 1.857419769097417,
+      "mobility_payload_reduction": 9.0
+    },
+    "row64_y": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.165375934,
+          "mobility_rows_max": 192,
+          "mobility_matrix_bytes_max": 294912,
+          "normal_qp_solves": 1068
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.112977871,
+          "mobility_rows_max": 64,
+          "mobility_matrix_bytes_max": 32768,
+          "normal_qp_solves": 1068
+        }
+      },
+      "speedup": 1.4637904975214129,
+      "mobility_payload_reduction": 9.0
+    },
+    "row64_z": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.242388431,
+          "mobility_rows_max": 192,
+          "mobility_matrix_bytes_max": 294912,
+          "normal_qp_solves": 1068
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 5.426770144367765e-13,
+              "max_velocity_error_m_s": 1.1993961379630491e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.007094962979238e-10,
+              "max_closing_contact_speed_m_s": 3.637978807091713e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.3422915041446686e-08,
+              "energy_balance_error_J": 4.336470738053322e-08,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.070934851,
+          "mobility_rows_max": 64,
+          "mobility_matrix_bytes_max": 32768,
+          "normal_qp_solves": 1068
+        }
+      },
+      "speedup": 3.4170570260308293,
+      "mobility_payload_reduction": 9.0
+    },
+    "row128_x": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 1.186556279,
+          "mobility_rows_max": 384,
+          "mobility_matrix_bytes_max": 1179648,
+          "normal_qp_solves": 1068
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 3.637978807091713e-12,
+              "max_velocity_error_m_s": 5.417177817435004e-11,
+              "max_omega_rad_s": 0.0,
+              "max_contact_penetration_m": 1.0311823617215055e-10,
+              "max_closing_contact_speed_m_s": 7.275957614183426e-12,
+              "max_container_surface_excess_m": 0,
+              "boundary_work_error_J": 4.6938657760620117e-07,
+              "energy_balance_error_J": 4.6961940824985504e-07,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.164357105,
+          "mobility_rows_max": 128,
+          "mobility_matrix_bytes_max": 131072,
+          "normal_qp_solves": 1068
+        }
+      },
+      "speedup": 7.21937928390744,
+      "mobility_payload_reduction": 9.0
+    },
+    "packed27": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 1.013654651,
+          "mobility_rows_max": 324,
+          "mobility_matrix_bytes_max": 839808,
+          "normal_qp_solves": 2136
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5276668818842154e-13,
+              "max_velocity_error_m_s": 1.1775693451904009e-13,
+              "max_omega_rad_s": 1.040834086626918e-12,
+              "max_contact_penetration_m": 1.000080018798144e-10,
+              "max_closing_contact_speed_m_s": 8.326672693405986e-14,
+              "max_container_surface_excess_m": 1.0000827943557056e-10,
+              "boundary_work_error_J": 0.0,
+              "energy_balance_error_J": 0.0,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.33239057,
+          "mobility_rows_max": 108,
+          "mobility_matrix_bytes_max": 93312,
+          "normal_qp_solves": 2136
+        }
+      },
+      "speedup": 3.04958907528574,
+      "mobility_payload_reduction": 9.0
+    },
+    "packed64": {
+      "qualified": true,
+      "bitwise_identical_states": true,
+      "modes": {
+        "postassembly": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 4.567958529,
+          "mobility_rows_max": 720,
+          "mobility_matrix_bytes_max": 4147200,
+          "normal_qp_solves": 2136
+        },
+        "compact": {
+          "qualified": true,
+          "diagnostics": [
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            },
+            {
+              "max_position_error_m": 1.5898393712632242e-13,
+              "max_velocity_error_m_s": 6.280369841015468e-13,
+              "max_omega_rad_s": 3.925231150634664e-12,
+              "max_contact_penetration_m": 1.0002959571764336e-10,
+              "max_closing_contact_speed_m_s": 7.216449667618237e-13,
+              "max_container_surface_excess_m": 1.0001321992803014e-10,
+              "boundary_work_error_J": 3.4924596548080444e-10,
+              "energy_balance_error_J": 1.7462298274040222e-10,
+              "coupled_fallbacks": 0,
+              "normal_qp_rejections": 0
+            }
+          ],
+          "median_step_s": 0.950357554,
+          "mobility_rows_max": 240,
+          "mobility_matrix_bytes_max": 460800,
+          "normal_qp_solves": 2136
+        }
+      },
+      "speedup": 4.806568338173067,
+      "mobility_payload_reduction": 9.0
+    }
+  },
+  "hashes": {
+    "scenes.json": "2119108379bfbedfd9cf7a50f28acb8f7eb8539434e1bfcd9ec23b2d7fee9a5f",
+    "traces.zip": "a817b8b92d48afa1c5812d0d501dae65c596ff964eee32b51517624ba3e63ee2",
+    "execution-source.zip": "cbb3ab8c7f446c7301fea330949880e4f131d5a0575aabd8c581b5ac43129d5e"
+  },
+  "source_hashes": {
+    "spatial_engine.py": "01c5d8899ed4d906ad2eacb8fb01f566f2b26c60163683e60c5aa7e8f77406e1",
+    "spatial_backend/runner.cpp": "e0ba9fbe6e3b3bc621439b73411da3ce4595a9a0e3f23980a0ddb30c6cb9d36d",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/CMakeLists.txt": "c374d58b6a2c9bd458570f8dee08c1f9fd8fc78e061e9b2f0a0074a9a95a541f",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "research/run_spatial_normal.py": "4e0d14564fec02afc35eb4c1aa7b69a3f294416c0071928d5f745b5de0803374",
+    "research/spatial-normal/plan.json": "f0325b067e3594b88b890382390f0ad5a8d14314cb18d64e580b14164f9d2b36"
+  }
+}

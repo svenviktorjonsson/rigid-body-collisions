@@ -5,12 +5,19 @@ and reproducible speed/accuracy benchmarks.
 
 The [Float64 3D backend](spatial_backend/README.md) supports arbitrary convex
 hulls, boxes, spheres and compounds, full inertia tensors, quaternion rotation
-and prescribed moving walls. Twelve mechanics tests include 100 m/s walls driving
+and prescribed moving walls. Fifteen mechanics tests include 100 m/s walls driving
 64 bodies and 20 m/s containers with 64 spheres or 27 random rotating hulls.
 The [3D evidence report](research/spatial-validation/report.pdf) retains
 102 histories. Only the frictionless row qualifies its frozen trajectory gate;
 all five dense frictional references remain unqualified. Passing containment
 and no-tunneling tests does not establish their trajectory accuracy.
+
+The [3D normal-contact improvement](research/spatial-normal/report.pdf) verifies
+100 m/s walls moving full 27/64-body boxes and 64/128-body rows. All six analytic
+cases pass with no fallback. Removing fixed-zero tangent variables before assembly
+gives 1.46–7.22x measured native gain with bitwise-identical trajectories and nine
+times less mobility matrix storage. This optimized profile requires zero friction
+and restitution; it does not qualify the failed frictional scenes.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body

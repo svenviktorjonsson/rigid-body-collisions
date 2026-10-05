@@ -44,6 +44,7 @@ jobs:
           python -m research.audit_random_shape_study
           python -m research.audit_shape_resolution
           python -m research.audit_spatial_study
+          python -m research.audit_spatial_normal
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json

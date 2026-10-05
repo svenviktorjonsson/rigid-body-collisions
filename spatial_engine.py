@@ -79,11 +79,17 @@ def moments(shape):
 def prepare(scene):
     bodies=[]; masses=[]; tensors=[]; axes=[]; features=[]
     for authored in scene['bodies']:
+        if any(key in authored for key in ('mass','inertia','inertia_tensor')):
+            raise ValueError('3D mass/inertia are geometry-derived; set shape volume density')
+        if any(authored.get(key,0)!=0 for key in ('rolling','rolling_friction','twisting','spinning_friction')):
+            raise ValueError('Rolling/twisting moments are not implemented in this adapter')
         kind = authored.get('type', 'dynamic')
         if kind not in ('dynamic', 'static', 'kinematic'):
             raise ValueError('Invalid body type')
         parts=[]; mass=0.; first=np.zeros(3)
         for shape in authored['shapes']:
+            if any(key in shape for key in ('friction','restitution','rolling','rolling_friction','twisting','spinning_friction')):
+                raise ValueError('3D per-fixture material laws are not supported; set body friction/restitution')
             v, c, inertia, feature = moments(shape)
             rho = positive(shape.get('density', 1), 'volume density')
             R = rotation(shape.get('orientation', [0,0,0,1])).as_matrix()

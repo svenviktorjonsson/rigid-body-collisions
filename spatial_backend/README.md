@@ -50,6 +50,8 @@ at a contact. For a desired pair coefficient mu between identical bodies set eac
 body coefficient to sqrt(mu); a wall coefficient one retains the object's value.
 One friction coefficient supports sticking and sliding; separate static/dynamic,
 rolling/twisting and elastic tangential history are **not implemented here**.
+Nonzero rolling/twisting fields, explicit mass/inertia overrides and per-fixture
+material fields are rejected so authored physics cannot be silently ignored.
 Restitution is a normal velocity rule with zero velocity threshold. Prescribed-wall
 work is summed from normal and tangential impulses, including positive-gap predictive contacts,
 at wall point velocities;

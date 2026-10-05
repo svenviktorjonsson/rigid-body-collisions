@@ -30,6 +30,11 @@ class Geometry3D(unittest.TestCase):
         with self.assertRaises(ValueError):prepare(s)
         s=wall_impact();s['bodies'][1]['orientation']=[0,0,0,2]
         with self.assertRaises(ValueError):prepare(s)
+        for body_key in ('mass','inertia','rolling'):
+            s=wall_impact();s['bodies'][1][body_key]=1
+            with self.assertRaises(ValueError):prepare(s)
+        s=wall_impact();s['bodies'][1]['shapes'][0]['friction']=.5
+        with self.assertRaises(ValueError):prepare(s)
 
 
 @unittest.skipUnless(BINARY.exists(),'Build spatial_backend first')
@@ -76,6 +81,17 @@ class Mechanics3D(unittest.TestCase):
             self.assertEqual(r['normal_qp_rejections'],0)
             self.assertEqual(r['coupled_fallbacks'],0)
             self.assertAlmostEqual(r['boundary_work_J'],side**3*100**2,delta=1e-5)
+
+    def test_normal_profile_offcenter_full_tensor(self):
+        scene=dict(duration=.01,gravity=[0,0,0],bodies=[dict(type='kinematic',position=[-.35,0,0],velocity=[2,0,0],friction=0,shapes=[dict(kind='box',half_extents=[.05,2,2])]),dict(friction=0,shapes=[dict(kind='sphere',radius=.1,center=[0,.2,0]),dict(kind='sphere',radius=.1,center=[.4,-.2,.15])])])
+        r=run(scene,dt=.01,primary_steps=100,solver='normal_coupled',kinematic_contact_phase='start',position_stabilization='velocity_only')
+        mass=r['mass'][1];I=np.asarray(r['inertia_body_kg_m2'][1]);n=np.array([1.,0,0]);cross=np.cross([-.3,.2,-.075],n)
+        impulse=2/(1/mass+cross@np.linalg.solve(I,cross))
+        np.testing.assert_allclose(r['states'][-1][1][7:10],n*impulse/mass,atol=.01)
+        np.testing.assert_allclose(r['states'][-1][1][10:13],np.linalg.solve(I,cross*impulse),atol=.1)
+        self.assertGreater(abs(I[0,2]),0)
+        self.assertEqual(r['coupled_fallbacks'],0)
+        self.assertEqual(r['normal_qp_rejections'],0)
 
     def test_normal_profile_rejects_friction_and_restitution(self):
         scene=wall_impact()
