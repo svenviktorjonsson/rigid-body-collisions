@@ -154,9 +154,14 @@ rejected first256 iterate before the old recovery pipeline. Its isolated66 outpu
 pass original-law gates; default22 outputs remain exact, and all5 early declines
 retain the original endpoint with their added work disclosed. No universal speed
 ranking is claimed. The integration passes162 engine and10 contact-model tests.
-The [fresh six-trajectory protocol](research/hull-combined-completion) preserves
-all original scene, material, contact, energy and refinement gates while declaring
-these three numerical changes together; its accuracy remains to be evaluated.
+The [fresh six-trajectory results](research/hull-combined-completion/RESULTS.md)
+retain **five complete histories and one actual42-row velocity rejection**,
+with zero qualified references. Every completed lane passes its individual gates;
+the eight-body middle rejection blocks both accuracy edges, and the27-body edges
+fail unchanged trajectory budgets. Independent exact-system searches find roots
+for the new42-row capture which the unchanged native final gate accepts; a bounded
+search correction remains under investigation. All three numerical changes were
+declared together, so these timings do not establish causal speed gains.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body

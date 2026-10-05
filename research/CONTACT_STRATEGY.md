@@ -178,3 +178,10 @@ unchanged; early and later helper caps are separate, and declines can add work.
 The fresh full protocol declares all three numerical choices together, retains
 all original gates and forbids causal attribution or a speed ranking from this
 joint experiment. Its results must be independently audited before qualification.
+
+The bca35c3 combined six-lane study is complete:5 histories/1 actual velocity
+rejection/0 qualified references. All completed lanes pass individual gates.
+The42-row rejected system has independently found exact-law roots accepted by
+unchanged native verification, so this is another capped numerical-search failure.
+A bounded projection-merit fallback is being investigated; preserve the old failure
+and require23-capture/default-preservation proof plus fresh full trajectories.

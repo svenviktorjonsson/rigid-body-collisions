@@ -1,0 +1,257 @@
+{
+  "execution_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "plan_sha256": "f4a8c159348b3e601e75991cfcc9433c6288dcb293bd7fe7550ba4b57721a2d0",
+  "binary_sha256": "89c990c922b03bf8a8f865333518a434d0b335f0703cbc5db35b9c97a95d0a4e",
+  "source_hashes": {
+    "research/audit_hull_active_completion.py": "cf352db58c186589baef9e8aabf9f586d919d24a2e4b178024cf26beac03adfb",
+    "research/audit_hull_combined_completion.py": "2a0a6e7e20d6974a3a1445e691019f2b1749b25932d861b649e1fa416d13be72",
+    "research/audit_shared_hulls.py": "614e531c0717a883f95df15b46c580816b53f4af0680588f621759bd417ff9e9",
+    "research/hull-combined-completion/README.md": "df52eedef541747a8e6799c9acb2d48ca47b0115e798c6fd49465c3ac8c68403",
+    "research/hull-combined-completion/auditor_checks.py": "e83a6be7e575e76f66c1f7a84b34ff0ba17dde8e065ded764079d05ef32e52da",
+    "research/hull-combined-completion/plan.json": "f4a8c159348b3e601e75991cfcc9433c6288dcb293bd7fe7550ba4b57721a2d0",
+    "research/hull-combined-completion/runner.py": "90a484b4b8b8bcd87c7ecd82c4f5123dfb6b3b2df22fa3140b8a6a97154c6a2a",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "spatial_backend/CMakeLists.txt": "2014ac40e390275400c4a13f3a6860127f3cf118096bcb11e82a1717adcea29f",
+    "spatial_backend/active_contact_checks.cpp": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f",
+    "spatial_backend/coulomb.h": "ec2091a7534a91d1ea0ff1d60a554caf8b1775d296c96062ad5edeb082bcf7f9",
+    "spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/coulomb_early_checks.cpp": "9345a07f94883101ca93a6b95e5988eaa1939cbb0d935686876e7b60b9f9a50f",
+    "spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_replay.cpp": "2bb01361d54a0a6b36566a60bdb3f175b19345c36d54438bcc82b0c2dc0434ea",
+    "spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "spatial_backend/coulomb_restart_checks.cpp": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/qp_checks.cpp": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb",
+    "spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "spatial_backend/runner.cpp": "51dbefabbb65d9c6ab7010d5f32de71e2c798be130e8a97e1cb09073088f3032",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/shared_contact_checks.cpp": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5",
+    "spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "spatial_backend/translation_combined.h": "42f1408561f156a5edd5ada01e68f95e19893281b97ecb825ec767c24f3c9fbd",
+    "spatial_backend/translation_combined_checks.cpp": "eb060fd993aff9c71e27427a5b6db9196a9f06669bfc915a319ff6165dcd875a",
+    "spatial_backend/translation_split.h": "d5fec76446519e9d225ebf7432e79462c2cbfd8ebab9020759b37a93231b8282",
+    "spatial_backend/translation_split_checks.cpp": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5",
+    "spatial_engine.py": "8bf58b54c9f8ef2d0048aef417094995205d4c18edb846d21a5f049053ae1fb2",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78"
+  },
+  "runtime_library_hashes": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+  },
+  "workload_note": "Parallel collaborative workload; descriptive timings only",
+  "baseline_artifact_hashes": {
+    "research/hull-translation-completion/plan.json": "2d921b75a62190f84e02c2e3caaaebd511660e012819ad97bdbc4cac81c595c3",
+    "research/hull-translation-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-translation-completion/results/traces.zip": "576bbb9112854614f75e4c7070a08f062d3d964bd0f6c8841a4513c61fb6ce7f",
+    "research/hull-translation-completion/results/execution-source.zip": "2b2de09cc434c8a4c97c6a5a12ddf07cba96267f3320d436d9a86cb8a35ab4c9",
+    "research/hull-gap-completion/results/summary.json": "1c2cfd56d73f6ca6014c0f799b088a81863207762b3549544a77bd608717109d",
+    "research/hull-gap-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-gap-completion/results/traces.zip": "af7d694e3546e8c83ac598fabe40487c3a9c56e8aecd879e83e8b7a68f012800",
+    "research/hull-gap-completion/results/execution-source.zip": "d3341eddf5809e5d5e61eb619e8de4bc17eef79c43367de58ee382fe9e6ed028",
+    "research/hull-gap-completion/plan.json": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737"
+  },
+  "declared_numerical_change": {
+    "position_stabilization": {
+      "baseline": "split_translation_gap",
+      "candidate": "split_translation_combined"
+    },
+    "early_component_recovery": {
+      "baseline": false,
+      "candidate": true
+    },
+    "shape_cache_margin_order": {
+      "baseline": "recalc before margin",
+      "candidate": "margin before recalc"
+    }
+  },
+  "preceding_protocol_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 6,
+  "planned_attempt_count": 6,
+  "complete": true,
+  "interruption_count": 0,
+  "history_count": 5,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": false,
+        "reference_2": true
+      },
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -8237.581798009658,
+          "max_contact_penetration_m": 0.0008169069571384302,
+          "max_closing_contact_speed_m_s": 0.04249080643920218,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 6.86449420084223e-08,
+          "container_surface_excess_m": 0.0008169069571383747
+        },
+        "reference_2": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -8221.805251241318,
+          "max_contact_penetration_m": 9.125172521906588e-05,
+          "max_closing_contact_speed_m_s": 0.013927355865358315,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 5.7727443381061505e-09,
+          "container_surface_excess_m": 9.125172521906588e-05
+        }
+      },
+      "candidates": {},
+      "choice": null
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": {
+            "position_m": 0.09408040777129342,
+            "velocity_m_s": 5.789738930692406,
+            "omega_rad_s": 82.86427366829959,
+            "orientation_rad": 1.3485199360882254
+          }
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": {
+            "position_m": 0.07367027239314272,
+            "velocity_m_s": 6.677306936504556,
+            "omega_rad_s": 82.51771193376952,
+            "orientation_rad": 1.165378010989649
+          }
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -27939.68097004878,
+          "max_contact_penetration_m": 0.00038201840571227267,
+          "max_closing_contact_speed_m_s": 0.07611627023083667,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 2.6026058511818828e-05,
+          "container_surface_excess_m": 0.00038201840571211454
+        },
+        "reference_1": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -28327.53309167149,
+          "max_contact_penetration_m": 0.00017550868077511212,
+          "max_closing_contact_speed_m_s": 0.030023747457420313,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.4213472219359868e-05,
+          "container_surface_excess_m": 0.00017550868077520487
+        },
+        "reference_2": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -28530.215522731673,
+          "max_contact_penetration_m": 0.00013302178688950306,
+          "max_closing_contact_speed_m_s": 0.01979426329104561,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.503149656087118e-08,
+          "container_surface_excess_m": 7.492374768908183e-05
+        }
+      },
+      "candidates": {},
+      "choice": null
+    }
+  },
+  "rejection_diagnostics": {
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c",
+      "phase": "velocity",
+      "rows": 42,
+      "residual_m_s": 3.102141818461103e-05,
+      "tolerance_m_s": 1e-08
+    }
+  },
+  "changed_discretization": "All normal POSITION targets, after accepted physical impulses, equal desired legacy ERP rate (penetrating), zero (within slop), or negative available gap/internal timestep (separated), minus actual final physical normal rate including linear AND angular contributions. Shared contact geometry and physical Coulomb equations unchanged; no angular pose correction. Also set the declared margin before recalculating local AABB; unchanged authored geometry/material, explicitly changed broadphase/relative-breaking cache behavior.",
+  "accuracy_scope": "Only complete lanes passing original physical gates and BOTH quarter-trajectory edges qualify; solver gates alone confer no accuracy",
+  "interpretation": "Three numerical choices changed together; no causal attribution, candidate-cost trials or speed ranking",
+  "native_ledger_receipts": {
+    "fast_shake8_hulls42/reference_0.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_0.json",
+      "sha256": "2342b241979a8945ca3d53cf5b617fef554a69b88ebef9ba3fa430fe862aae9d"
+    },
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_1.json",
+      "sha256": "478c7fd3b9405440fee7d72d06b7d68562464938f60b4e88dc35ffbc4b3cade9"
+    },
+    "fast_shake8_hulls42/reference_2.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_2.json",
+      "sha256": "f654a064ce3c512c693dcc531837355591e8418120a6ef3f2bee6af11a74f28d"
+    },
+    "fast_rotate_shake27_hulls7301/reference_0.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "0b728991ce4a81394a62cd07ab0f5d6578988bce0a3818483c8ed61606b77261"
+    },
+    "fast_rotate_shake27_hulls7301/reference_1.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "a274c507ff72ce861a29f014a14b8913b29719a2bdf2b102ab7a5556254e616a"
+    },
+    "fast_rotate_shake27_hulls7301/reference_2.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "5141feebddd66d3081b2c5569311825f7e15104031799436f947d2db05c58da1"
+    }
+  },
+  "hashes": {
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "traces.zip": "09d41a8f01423ac379b3028502dc705cb583b5a2d2ea127be75fc528aff67442",
+    "execution-source.zip": "f311b0b3e752f1e25ae3958fe0b9803c31c446126f215ab3a677b8df4f4515d0"
+  }
+}

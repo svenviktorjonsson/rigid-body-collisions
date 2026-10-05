@@ -152,8 +152,8 @@ class Coulomb3D(unittest.TestCase):
             dict(type='static',position=[.111000001,0,0],friction=0,
                  shapes=[dict(kind='box',half_extents=[.01,1,1])]),
             dict(position=[0,0,0],velocity=[.95,0,0],friction=0,
-                 density=1/(4*np.pi*radius**3/3),
-                 shapes=[dict(kind='sphere',radius=radius)])])
+                 shapes=[dict(kind='sphere',radius=radius,
+                              density=1/(4*np.pi*radius**3/3))])])
         old=self.simulate(scene,dt=.001,primary_steps=1,travel_fraction=0,
                           position_stabilization='split_translation_gap')
         with tempfile.TemporaryDirectory() as directory:
@@ -163,6 +163,7 @@ class Coulomb3D(unittest.TestCase):
                               early_component_recovery=True,
                               progress_checkpoint_path=checkpoint)
             prefix=json.loads(checkpoint.read_text())
+        self.assertAlmostEqual(new['mass'][2],1,delta=1e-12)
         old_state=np.asarray(old['states'])[-1,2]
         new_state=np.asarray(new['states'])[-1,2]
         right_face=.101000001
