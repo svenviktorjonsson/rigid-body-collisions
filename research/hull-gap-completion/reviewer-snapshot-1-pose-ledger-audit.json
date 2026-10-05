@@ -1,0 +1,119 @@
+{
+  "schema": "independent-gap-pose-ledger-audit-v1",
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "snapshot_count": 3,
+  "cases": [
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "progress_sha256": "d845f8be014b479aba221c00f511774db0184ce3af3b03885d334bd7b230ef2f",
+      "complete": true,
+      "native_prefix": {
+        "translation_pose_ledger_updates": 5096,
+        "translation_pose_displacement_max_m": 7.52936791715175e-05,
+        "translation_pose_potential_change_J": -0.0004582188972546183,
+        "translation_pose_absolute_potential_change_J": 0.0041624945498532975,
+        "translation_pose_orbital_change_kg_m2_s": [
+          -0.0005791351103753148,
+          -0.006419506769088801,
+          -0.004657161688669701
+        ],
+        "translation_pose_absolute_orbital_change_kg_m2_s": 0.017657128285242903
+      },
+      "final": {
+        "translation_pose_ledger_updates": 5096,
+        "translation_pose_displacement_max_m": 7.52936791715175e-05,
+        "translation_pose_potential_change_J": -0.0004582188972546183,
+        "translation_pose_absolute_potential_change_J": 0.0041624945498532975,
+        "translation_pose_orbital_change_kg_m2_s": [
+          -0.0005791351103753148,
+          -0.006419506769088801,
+          -0.004657161688669701
+        ],
+        "translation_pose_absolute_orbital_change_kg_m2_s": 0.017657128285242903
+      },
+      "position_projection": {
+        "solves": 5015,
+        "residual_max_m_s": 8.631415200632819e-11,
+        "unchanged_tolerance_m_s": 1e-08,
+        "strict_position_projection_gate_passed": true
+      },
+      "accounting_passed": true,
+      "prefix_observation_only": false,
+      "trajectory_qualified": false
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "progress_sha256": "3d880123f95c4276e0f7c71060fefb782ddfb654cd3695584c2c733f9f21948e",
+      "complete": true,
+      "native_prefix": {
+        "translation_pose_ledger_updates": 11427,
+        "translation_pose_displacement_max_m": 3.973429494597003e-05,
+        "translation_pose_potential_change_J": -0.0005997041006187381,
+        "translation_pose_absolute_potential_change_J": 0.002543971239543094,
+        "translation_pose_orbital_change_kg_m2_s": [
+          5.8631665547809154e-05,
+          -0.0015681103002794302,
+          -0.0007783836050253063
+        ],
+        "translation_pose_absolute_orbital_change_kg_m2_s": 0.00927200951720829
+      },
+      "final": {
+        "translation_pose_ledger_updates": 11427,
+        "translation_pose_displacement_max_m": 3.973429494597003e-05,
+        "translation_pose_potential_change_J": -0.0005997041006187381,
+        "translation_pose_absolute_potential_change_J": 0.002543971239543094,
+        "translation_pose_orbital_change_kg_m2_s": [
+          5.8631665547809154e-05,
+          -0.0015681103002794302,
+          -0.0007783836050253063
+        ],
+        "translation_pose_absolute_orbital_change_kg_m2_s": 0.00927200951720829
+      },
+      "position_projection": {
+        "solves": 11266,
+        "residual_max_m_s": 3.762235242779245e-09,
+        "unchanged_tolerance_m_s": 1e-08,
+        "strict_position_projection_gate_passed": true
+      },
+      "accounting_passed": true,
+      "prefix_observation_only": false,
+      "trajectory_qualified": false
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "progress_sha256": "c9bfca172ba6549a1305b36d51e2e479a7a1dab2acf8fc5d4139941ef96b82b8",
+      "complete": false,
+      "native_prefix": {
+        "translation_pose_ledger_updates": 12460,
+        "translation_pose_displacement_max_m": 3.4756975471905715e-05,
+        "translation_pose_potential_change_J": -6.0242248547531464e-05,
+        "translation_pose_absolute_potential_change_J": 0.0005225829611779816,
+        "translation_pose_orbital_change_kg_m2_s": [
+          -3.110390282191781e-05,
+          -0.0007412421848738852,
+          -0.0012446809868151055
+        ],
+        "translation_pose_absolute_orbital_change_kg_m2_s": 0.0028384842037303903
+      },
+      "final": null,
+      "position_projection": {
+        "solves": 12139,
+        "residual_max_m_s": 6.967246422625646e-16,
+        "unchanged_tolerance_m_s": 1e-08,
+        "strict_position_projection_gate_passed": true
+      },
+      "accounting_passed": true,
+      "prefix_observation_only": true,
+      "trajectory_qualified": false
+    }
+  ],
+  "accounting_passed": true,
+  "trajectory_qualified": false,
+  "scope": "Finite native numerical pose accounting and signed/absolute bounds; final versus prefix consistency. Per-update impulses are not archived, so this is not independent reconstruction of each repair. Original endpoint physical gates remain uncorrected."
+}

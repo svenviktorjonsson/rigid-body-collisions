@@ -1,0 +1,69 @@
+{
+  "schema": "independent-gap-completed-scene-observation-v1",
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "scene": "fast_shake8_hulls42",
+  "checkpoint_hashes": {
+    "reference_0": "c7a58fa7c9138a5eed355ac2b1699d084e62d1307c92c297ca8c984922595fda",
+    "reference_1": "0a5aea92481f52321158dab0548519fdcd9e961b79c11276c6cd6dee4872d337",
+    "reference_2": "4ae6127bb7072116dfb581c30670b489464216147f42973be23a938673b4455e"
+  },
+  "full_tensor_metrics": {
+    "reference_0": {
+      "quaternion_norm_error": 1.1102230246251565e-16,
+      "energy_change_minus_boundary_work_J": -8123.373174966394,
+      "container_surface_excess_m": 0.0003764683958575321,
+      "sampled_container_surface_excess_m": 4.7379545892733965e-06
+    },
+    "reference_1": {
+      "quaternion_norm_error": 1.1102230246251565e-16,
+      "energy_change_minus_boundary_work_J": -8100.7866531341715,
+      "container_surface_excess_m": 0.00019867147472985014,
+      "sampled_container_surface_excess_m": 2.0124887423200732e-08
+    },
+    "reference_2": {
+      "quaternion_norm_error": 2.220446049250313e-16,
+      "energy_change_minus_boundary_work_J": -8044.53484905108,
+      "container_surface_excess_m": 0.000173784877359473,
+      "sampled_container_surface_excess_m": 2.8044354061229626e-09
+    }
+  },
+  "original_refinement_edges": [
+    {
+      "left": "reference_0",
+      "right": "reference_1",
+      "error": {
+        "position_m": 0.053654487096564875,
+        "velocity_m_s": 4.296497691710076,
+        "omega_rad_s": 93.14734404026453,
+        "orientation_rad": 1.1398196582250524
+      },
+      "original_quarter_budgets": {
+        "position_m": 0.00125,
+        "velocity_m_s": 0.0125,
+        "omega_rad_s": 0.025,
+        "orientation_rad": 0.0025
+      },
+      "passed": false
+    },
+    {
+      "left": "reference_1",
+      "right": "reference_2",
+      "error": {
+        "position_m": 0.056535990702348736,
+        "velocity_m_s": 5.186100641037533,
+        "omega_rad_s": 83.42254761113111,
+        "orientation_rad": 1.0120395191360643
+      },
+      "original_quarter_budgets": {
+        "position_m": 0.00125,
+        "velocity_m_s": 0.0125,
+        "omega_rad_s": 0.025,
+        "orientation_rad": 0.0025
+      },
+      "passed": false
+    }
+  ],
+  "scene_reference_qualified": false,
+  "six_attempt_study_complete": false,
+  "scope": "All three seed42 terminal histories independently compared; this is no full-study qualification."
+}

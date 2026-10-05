@@ -1,0 +1,657 @@
+{
+  "schema": "independent-native-hull-progress-audit-v1",
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "plan_sha256": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737",
+  "snapshot_count": 3,
+  "all_observed_snapshots_integrity_passed": true,
+  "cases": [
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "path": "results/progress/fast_shake8_hulls42/reference_0.json",
+      "sha256": "d845f8be014b479aba221c00f511774db0184ce3af3b03885d334bd7b230ef2f",
+      "complete": true,
+      "completed_output_frames": 12,
+      "expected_output_frames": 12,
+      "collision_updates": 5096,
+      "orientation_frame": "backend principal inertia axes",
+      "output_conversion": "R_authored = R_backend Q transpose; Q = R_initial_authored transpose R_initial_backend",
+      "basis_certificates": [
+        {
+          "body": 0,
+          "principal_to_authored_basis": [
+            [
+              2.220446049250313e-16,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              0.0,
+              2.220446049250313e-16
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 0.0
+        },
+        {
+          "body": 1,
+          "principal_to_authored_basis": [
+            [
+              0.6461879797285175,
+              0.625179297252163,
+              -0.4377121670020938
+            ],
+            [
+              -0.7089558039738679,
+              0.2794099880926437,
+              -0.6475428376299406
+            ],
+            [
+              -0.28252922480009746,
+              0.7287529793018759,
+              0.6237758670327795
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.5178830414797062e-18
+        },
+        {
+          "body": 2,
+          "principal_to_authored_basis": [
+            [
+              -0.5730411290518829,
+              -0.5743636721054406,
+              -0.5845769723317003
+            ],
+            [
+              -0.08201094673553025,
+              -0.6695398876261034,
+              0.7382347482292927
+            ],
+            [
+              -0.8154128212325862,
+              0.47098058457135894,
+              0.3365697846306702
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.2526065174565133e-19
+        },
+        {
+          "body": 3,
+          "principal_to_authored_basis": [
+            [
+              0.9610800703458263,
+              -0.2557508669210834,
+              -0.10448249831036667
+            ],
+            [
+              0.13915671724747092,
+              0.7748502747603673,
+              -0.6166380297619427
+            ],
+            [
+              0.23866400321156295,
+              0.5780990795468346,
+              0.7802826076481094
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 4,
+          "principal_to_authored_basis": [
+            [
+              -0.18401660456356828,
+              0.9785901709337917,
+              -0.09219092469797657
+            ],
+            [
+              -0.9431354874587038,
+              -0.14937401552654772,
+              0.2969559829023624
+            ],
+            [
+              0.27682727745099256,
+              0.14159336438282455,
+              0.950430417033159
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 5,
+          "principal_to_authored_basis": [
+            [
+              0.6431486827160257,
+              0.7105361452266848,
+              -0.28547882276457026
+            ],
+            [
+              -0.39330805654499235,
+              -0.013353176152365615,
+              -0.9193097765951613
+            ],
+            [
+              -0.6570148739392759,
+              0.7035339927914271,
+              0.27087151273160887
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 6,
+          "principal_to_authored_basis": [
+            [
+              -0.08683609193203473,
+              0.9807950045286642,
+              0.17464435928362715
+            ],
+            [
+              -0.027352023213896348,
+              0.1728932456386349,
+              -0.9845607103874525
+            ],
+            [
+              -0.9958470565122326,
+              -0.09027228092917605,
+              0.011813353959237216
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.5914196963582334e-19
+        },
+        {
+          "body": 7,
+          "principal_to_authored_basis": [
+            [
+              -0.5841057058464548,
+              -0.5662765674182773,
+              -0.5815078448229122
+            ],
+            [
+              -0.676715313217332,
+              0.7353470102639902,
+              -0.03634775581764896
+            ],
+            [
+              0.44819293753336076,
+              0.3722843317798703,
+              -0.8127284091604233
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 8,
+          "principal_to_authored_basis": [
+            [
+              -0.29014703549390874,
+              0.9226296834246834,
+              -0.2541046340737716
+            ],
+            [
+              -0.623277046114981,
+              -0.38367632603223273,
+              -0.6814089819107114
+            ],
+            [
+              -0.7261820856922049,
+              -0.03933121033068687,
+              0.6863764523303832
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        }
+      ],
+      "diagnostics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -8123.373174966394,
+        "container_surface_excess_m": 0.0003764683958575321,
+        "sampled_container_surface_excess_m": 4.7379545892733965e-06
+      },
+      "contact_residual_max_m_s": 9.99868291160314e-09,
+      "physical_gates_passed": true,
+      "strict_contact_gate_passed": true,
+      "prefix_observation_only": false,
+      "trajectory_qualified": false,
+      "completed_authored_trace_agrees": true
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "path": "results/progress/fast_shake8_hulls42/reference_1.json",
+      "sha256": "3d880123f95c4276e0f7c71060fefb782ddfb654cd3695584c2c733f9f21948e",
+      "complete": true,
+      "completed_output_frames": 12,
+      "expected_output_frames": 12,
+      "collision_updates": 11427,
+      "orientation_frame": "backend principal inertia axes",
+      "output_conversion": "R_authored = R_backend Q transpose; Q = R_initial_authored transpose R_initial_backend",
+      "basis_certificates": [
+        {
+          "body": 0,
+          "principal_to_authored_basis": [
+            [
+              2.220446049250313e-16,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              0.0,
+              2.220446049250313e-16
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 0.0
+        },
+        {
+          "body": 1,
+          "principal_to_authored_basis": [
+            [
+              0.6461879797285175,
+              0.625179297252163,
+              -0.4377121670020938
+            ],
+            [
+              -0.7089558039738679,
+              0.2794099880926437,
+              -0.6475428376299406
+            ],
+            [
+              -0.28252922480009746,
+              0.7287529793018759,
+              0.6237758670327795
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.5178830414797062e-18
+        },
+        {
+          "body": 2,
+          "principal_to_authored_basis": [
+            [
+              -0.5730411290518829,
+              -0.5743636721054406,
+              -0.5845769723317003
+            ],
+            [
+              -0.08201094673553025,
+              -0.6695398876261034,
+              0.7382347482292927
+            ],
+            [
+              -0.8154128212325862,
+              0.47098058457135894,
+              0.3365697846306702
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.2526065174565133e-19
+        },
+        {
+          "body": 3,
+          "principal_to_authored_basis": [
+            [
+              0.9610800703458263,
+              -0.2557508669210834,
+              -0.10448249831036667
+            ],
+            [
+              0.13915671724747092,
+              0.7748502747603673,
+              -0.6166380297619427
+            ],
+            [
+              0.23866400321156295,
+              0.5780990795468346,
+              0.7802826076481094
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 4,
+          "principal_to_authored_basis": [
+            [
+              -0.18401660456356828,
+              0.9785901709337917,
+              -0.09219092469797657
+            ],
+            [
+              -0.9431354874587038,
+              -0.14937401552654772,
+              0.2969559829023624
+            ],
+            [
+              0.27682727745099256,
+              0.14159336438282455,
+              0.950430417033159
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 5,
+          "principal_to_authored_basis": [
+            [
+              0.6431486827160257,
+              0.7105361452266848,
+              -0.28547882276457026
+            ],
+            [
+              -0.39330805654499235,
+              -0.013353176152365615,
+              -0.9193097765951613
+            ],
+            [
+              -0.6570148739392759,
+              0.7035339927914271,
+              0.27087151273160887
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 6,
+          "principal_to_authored_basis": [
+            [
+              -0.08683609193203473,
+              0.9807950045286642,
+              0.17464435928362715
+            ],
+            [
+              -0.027352023213896348,
+              0.1728932456386349,
+              -0.9845607103874525
+            ],
+            [
+              -0.9958470565122326,
+              -0.09027228092917605,
+              0.011813353959237216
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.5914196963582334e-19
+        },
+        {
+          "body": 7,
+          "principal_to_authored_basis": [
+            [
+              -0.5841057058464548,
+              -0.5662765674182773,
+              -0.5815078448229122
+            ],
+            [
+              -0.676715313217332,
+              0.7353470102639902,
+              -0.03634775581764896
+            ],
+            [
+              0.44819293753336076,
+              0.3722843317798703,
+              -0.8127284091604233
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 8,
+          "principal_to_authored_basis": [
+            [
+              -0.29014703549390874,
+              0.9226296834246834,
+              -0.2541046340737716
+            ],
+            [
+              -0.623277046114981,
+              -0.38367632603223273,
+              -0.6814089819107114
+            ],
+            [
+              -0.7261820856922049,
+              -0.03933121033068687,
+              0.6863764523303832
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        }
+      ],
+      "diagnostics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -8100.7866531341715,
+        "container_surface_excess_m": 0.00019867147472985014,
+        "sampled_container_surface_excess_m": 2.0124887423200732e-08
+      },
+      "contact_residual_max_m_s": 9.990119443570642e-09,
+      "physical_gates_passed": true,
+      "strict_contact_gate_passed": true,
+      "prefix_observation_only": false,
+      "trajectory_qualified": false,
+      "completed_authored_trace_agrees": true
+    },
+    {
+      "scene": "fast_shake8_hulls42",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "path": "results/progress/fast_shake8_hulls42/reference_2.json",
+      "sha256": "c9bfca172ba6549a1305b36d51e2e479a7a1dab2acf8fc5d4139941ef96b82b8",
+      "complete": false,
+      "completed_output_frames": 7,
+      "expected_output_frames": 12,
+      "collision_updates": 12460,
+      "orientation_frame": "backend principal inertia axes",
+      "output_conversion": "R_authored = R_backend Q transpose; Q = R_initial_authored transpose R_initial_backend",
+      "basis_certificates": [
+        {
+          "body": 0,
+          "principal_to_authored_basis": [
+            [
+              2.220446049250313e-16,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              0.0,
+              2.220446049250313e-16
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 0.0
+        },
+        {
+          "body": 1,
+          "principal_to_authored_basis": [
+            [
+              0.6461879797285175,
+              0.625179297252163,
+              -0.4377121670020938
+            ],
+            [
+              -0.7089558039738679,
+              0.2794099880926437,
+              -0.6475428376299406
+            ],
+            [
+              -0.28252922480009746,
+              0.7287529793018759,
+              0.6237758670327795
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.5178830414797062e-18
+        },
+        {
+          "body": 2,
+          "principal_to_authored_basis": [
+            [
+              -0.5730411290518829,
+              -0.5743636721054406,
+              -0.5845769723317003
+            ],
+            [
+              -0.08201094673553025,
+              -0.6695398876261034,
+              0.7382347482292927
+            ],
+            [
+              -0.8154128212325862,
+              0.47098058457135894,
+              0.3365697846306702
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.2526065174565133e-19
+        },
+        {
+          "body": 3,
+          "principal_to_authored_basis": [
+            [
+              0.9610800703458263,
+              -0.2557508669210834,
+              -0.10448249831036667
+            ],
+            [
+              0.13915671724747092,
+              0.7748502747603673,
+              -0.6166380297619427
+            ],
+            [
+              0.23866400321156295,
+              0.5780990795468346,
+              0.7802826076481094
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 4,
+          "principal_to_authored_basis": [
+            [
+              -0.18401660456356828,
+              0.9785901709337917,
+              -0.09219092469797657
+            ],
+            [
+              -0.9431354874587038,
+              -0.14937401552654772,
+              0.2969559829023624
+            ],
+            [
+              0.27682727745099256,
+              0.14159336438282455,
+              0.950430417033159
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 4.336808689942018e-19
+        },
+        {
+          "body": 5,
+          "principal_to_authored_basis": [
+            [
+              0.6431486827160257,
+              0.7105361452266848,
+              -0.28547882276457026
+            ],
+            [
+              -0.39330805654499235,
+              -0.013353176152365615,
+              -0.9193097765951613
+            ],
+            [
+              -0.6570148739392759,
+              0.7035339927914271,
+              0.27087151273160887
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 6,
+          "principal_to_authored_basis": [
+            [
+              -0.08683609193203473,
+              0.9807950045286642,
+              0.17464435928362715
+            ],
+            [
+              -0.027352023213896348,
+              0.1728932456386349,
+              -0.9845607103874525
+            ],
+            [
+              -0.9958470565122326,
+              -0.09027228092917605,
+              0.011813353959237216
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 3.5914196963582334e-19
+        },
+        {
+          "body": 7,
+          "principal_to_authored_basis": [
+            [
+              -0.5841057058464548,
+              -0.5662765674182773,
+              -0.5815078448229122
+            ],
+            [
+              -0.676715313217332,
+              0.7353470102639902,
+              -0.03634775581764896
+            ],
+            [
+              0.44819293753336076,
+              0.3722843317798703,
+              -0.8127284091604233
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        },
+        {
+          "body": 8,
+          "principal_to_authored_basis": [
+            [
+              -0.29014703549390874,
+              0.9226296834246834,
+              -0.2541046340737716
+            ],
+            [
+              -0.623277046114981,
+              -0.38367632603223273,
+              -0.6814089819107114
+            ],
+            [
+              -0.7261820856922049,
+              -0.03933121033068687,
+              0.6863764523303832
+            ]
+          ],
+          "independent_full_tensor_defect_kg_m2": 1.0842021724855044e-18
+        }
+      ],
+      "diagnostics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -4390.206196023568,
+        "container_surface_excess_m": 0.000173784877359473,
+        "sampled_container_surface_excess_m": 2.8044354061229626e-09
+      },
+      "contact_residual_max_m_s": 9.992830551148723e-09,
+      "physical_gates_passed": true,
+      "strict_contact_gate_passed": true,
+      "prefix_observation_only": true,
+      "trajectory_qualified": false
+    }
+  ],
+  "scope": "Snapshots of output-frame prefixes. Only completed final histories and both prescribed refinement edges can qualify a trajectory; partial progress cannot."
+}
