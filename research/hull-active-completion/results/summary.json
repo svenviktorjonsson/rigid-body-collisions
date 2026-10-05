@@ -1,0 +1,151 @@
+{
+  "execution_source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "plan_sha256": "e34d3b34bde7923dd15cf241399119d5be61ced74ea08587ff469334c3ab509a",
+  "binary_sha256": "99a0aec2ef59ad02a9fdbe1c692b9dda72b8278d2d8c0447f23c08dd3f8737ba",
+  "source_hashes": {
+    "research/hull-active-completion/plan.json": "e34d3b34bde7923dd15cf241399119d5be61ced74ea08587ff469334c3ab509a",
+    "research/hull-active-completion/runner.py": "41b7cc2f2cdc488f62ed817b3ca8508f9d02326142c2bc22c5fc8e38868d015d",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "spatial_backend/CMakeLists.txt": "31770379c9551fd59cf3491f26f9e3a51a90c0ebdc89ff260d1c35a2b0498c19",
+    "spatial_backend/coulomb.h": "9d23d1b3ec51d5e2e9db78bbd24a403ad3a1ede5348b215b67462dd8356cc114",
+    "spatial_backend/coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/runner.cpp": "5d8c9e771edb416565496c45747e4276dec000ddbe42e301d22367ad34b2bf5d",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983",
+    "spatial_engine.py": "d686d83b21b895698b1bd4d6e761be5eb14435b2ebe7ab95a8d9b20731f92664",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78"
+  },
+  "workload_note": "Parallel collaborative workload; descriptive timings only",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 6,
+  "planned_attempt_count": 6,
+  "complete": true,
+  "history_count": 2,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "diagnostics": {},
+      "candidates": {},
+      "choice": null
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": {
+            "position_m": 0.10861622675569729,
+            "velocity_m_s": 6.122463521626093,
+            "omega_rad_s": 74.26224323510188,
+            "orientation_rad": 1.33364077766903
+          }
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "diagnostics": {
+        "reference_1": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -27612.483932920295,
+          "max_contact_penetration_m": 0.00015506717979236852,
+          "max_closing_contact_speed_m_s": 0.03741656065254517,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.287919239209241e-06,
+          "container_surface_excess_m": 0.00015506717979246742
+        },
+        "reference_2": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -28081.23693291234,
+          "max_contact_penetration_m": 7.393739990716497e-05,
+          "max_closing_contact_speed_m_s": 0.02451791948892157,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.5378416030609188e-06,
+          "container_surface_excess_m": 6.12996512543984e-05
+        }
+      },
+      "candidates": {},
+      "choice": null
+    }
+  },
+  "rejection_diagnostics": {
+    "fast_shake8_hulls42/reference_0.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+      "phase": "velocity",
+      "rows": 60,
+      "residual_m_s": 0.00019896801538357334,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "ba80bbe35cb56243259ed1cc60ad85d85a404c342834adfb2bf51be037d66fce",
+      "phase": "velocity",
+      "rows": 39,
+      "residual_m_s": 1.3991591266711142e-06,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_2.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+      "phase": "velocity",
+      "rows": 51,
+      "residual_m_s": 1.445561977532797e-06,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_0.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+      "phase": "position",
+      "rows": 291,
+      "residual_m_s": 5.7946007852714123e-08,
+      "tolerance_m_s": 1e-08
+    }
+  },
+  "changed_discretization": "One shared world contact point: midpoint of surface endpoints for two finite dynamic bodies; finite-body surface endpoint against static/kinematic bodies. Full Jacobian, angular mobility, free-velocity and split RHS, warm angular-impulse transport, and boundary-work accounting use that same point.",
+  "hashes": {
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "traces.zip": "7e3263612db7a689aeac76440f29abafa4534cdd9d351f5d9b16d2bb9c71684a",
+    "execution-source.zip": "9faee52d09b0a52f6a0a3fd6c9e3bc83f3b050e87a332e3234e01df45ad3acf5"
+  }
+}
