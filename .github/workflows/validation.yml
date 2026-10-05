@@ -50,6 +50,8 @@ jobs:
           python -m research.audit_spatial_normal
           python -m research.audit_spatial_friction
           python -m research.audit_spatial_gyro
+          python -m research.audit_spatial_recovery
+          python -m research.audit_fast_shake_diagnostic
           python -m research.audit_elastic_patch
           python -m research.audit_elastic_patch --directory research/elastic-patch-refined
       - name: Exercise the explicitly synthetic comparison fixtures

@@ -1,0 +1,73 @@
+{
+  "execution_source_commit": "f6d03878e7d187b18be8d590c6e66f976232e020",
+  "plan_sha256": "0461cf9cad2f82338852edc82dcd0465d9b3511439ea79241d94275f79d30c0b",
+  "binary_sha256": "1c7c1c65410e860a30d3430314efe494f338b37db05fd9b9432d124a99a32313",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 6,
+  "history_count": 0,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "candidates": {},
+      "choice": null,
+      "diagnostics": {}
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "candidates": {},
+      "choice": null,
+      "diagnostics": {}
+    }
+  },
+  "hashes": {
+    "traces.zip": "da7aed466444a2b27d6b2cae21c63a0a5b9e63e8243bf92064f58ed7a1057f24",
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "execution-source.zip": "8e4210c4626143248dce09743d8b4102d224496c7324d36e21a7a314f461f72b"
+  },
+  "source_hashes": {
+    "spatial_engine.py": "a62264c74f06fc24b7310c050d0ee182f0d2fd8ee632f959260f6f2fcff8373c",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78",
+    "spatial_backend/runner.cpp": "6e03ca2a335ec92329a6277271c6c452e724f30f8c5f0f192e01392573221f80",
+    "spatial_backend/coulomb.h": "9f3f2aa7ce5783031b77c3a62e4f9ac2b4b34a74b78bc7d003decd7b055dea36",
+    "spatial_backend/coulomb_polish.h": "1ecc3ae53ffb95e2138f948f8da92e28c192e477b4dd254d4eed73f10b233ca6",
+    "spatial_backend/newton_linear.h": "aa737f59e3c92aee62808b92b137a362b50bc331c0fc8ff187f0706b51778738",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/CMakeLists.txt": "77991b14578c8a1b63e97ea4421c12d02e1d97eb3d0652d7a446aa0e0d9fd652",
+    "spatial_backend/friction_checks.cpp": "10353709c0e04131f5d2c5d7f476a119c17b48d4d515cb5ec99db6de1fba1620",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/run_spatial_recovery.py": "1a3857848de875cf0c676a663617d9a48370bed781178960f7a4338b7489d20d",
+    "research/spatial-friction-recovery/plan.json": "0461cf9cad2f82338852edc82dcd0465d9b3511439ea79241d94275f79d30c0b"
+  }
+}

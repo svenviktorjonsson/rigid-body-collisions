@@ -9,7 +9,7 @@ inertia in the correct frame before the first contact.
 | Configured contact model | Cheap method | Resolved method and gate |
 |---|---|---|
 | Inelastic, zero tangential force and no contact couple | Eliminate exactly zero tangent variables before normal matrix assembly | Normal complementarity; tested packed 3D rows/boxes; disclose unsupported fallback |
-| Inelastic circular Coulomb, one coefficient | Warm-started coupled block iterations; accept within eight sweeps when residual passes | Same equations with more sweeps and semismooth Newton; strict residual/passivity gate; reject rather than substitute friction pyramid |
+| Inelastic circular Coulomb, one coefficient | Warm-started coupled block iterations; accept within eight sweeps when residual passes | Same equations with more sweeps, semismooth Newton, bounded minimum-norm recovery, velocity-neutral pressure redistribution and cold restarts; strict residual/passivity gate; reject rather than substitute friction pyramid |
 | Matched linear elastic sphere/plane, no damping/history/yield, bounded declared deformation | Exact normal/tangent/twisting impulse and half-sine contact trajectory | Same configured material integrated with explicit energy stores; instantaneous shared force/couple capacity proves the fast branch |
 | Other supported sphere/plane elastic material | Adaptive resolved material integration | Entry/lift-off events, stored normal/shear/twist energy, plastic/damping/separation loss, full energy/yield gates and bounded rejection |
 | Arbitrary many-body elastic wrenches, separate static/dynamic coefficients, measured rubber material | Not verified yet | Integrate persistent histories with the full contact graph; verify before promoting a production preset |
@@ -65,3 +65,11 @@ Material calibration needs independent measured normal/tangential/rotational
 trajectories and must be separated from numerical speed/accuracy selection.
 The Vektor target is `vektor-flow/bootstrap`, paired with spec. This research is
 public Python/C++ evidence, not a completed native/WASM/GPU language port.
+
+The native recovery operates only after iterative exhaustion and is optional.
+It searches neighboring friction faces through a certified mechanical null
+direction, checks the resulting velocity change, and accepts only the unchanged
+full contact residual and finite passivity bound. Its work is capped at 256
+rows and 256 numerical SVD calls. Two captured random-hull systems recover;
+the separate six-attempt whole-trajectory follow-up still rejects. Preserve
+that distinction when choosing or porting this method.
