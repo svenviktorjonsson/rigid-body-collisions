@@ -2,7 +2,8 @@
 import json
 from pathlib import Path
 import numpy as np
-from research.rapid-friction.audit import physical,errors
+from importlib import import_module
+_audit=import_module('research.rapid-friction.audit');physical=_audit.physical;errors=_audit.errors
 H=Path(__file__).resolve().parent;ROOT=H.parents[1];D=H/'world-results'
 load=lambda p:json.loads(p.read_text())
 assert load(D/'final.json')['complete'] and load(D/'final.json')['source_unchanged']
