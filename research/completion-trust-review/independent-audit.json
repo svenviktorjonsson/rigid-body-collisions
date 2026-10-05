@@ -1,0 +1,79 @@
+{
+  "schema": "second-independent-native-coulomb-trust-audit-v1",
+  "results_sha256": "b9b4d7cdee36907c8aaebdcad186527a8dbe50d0354102531a40ce1944026c6d",
+  "cases": [
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+      "rows": 48,
+      "independent_original_residual_m_s": 1.0739980279815729e-12,
+      "passive_change_bound_J": -6.8790048381344935,
+      "maximum_cap_excess_N_s": 4.440892098500626e-14,
+      "maximum_normal_negative": 8.881784197001252e-16,
+      "original_equations_accepted": true,
+      "svd_calls": 17,
+      "normal_pivot_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+      "rows": 51,
+      "independent_original_residual_m_s": 3.5801609131798587e-16,
+      "passive_change_bound_J": -3.7797870810640286,
+      "maximum_cap_excess_N_s": 6.938893903907228e-18,
+      "maximum_normal_negative": 1.214306433183765e-16,
+      "original_equations_accepted": true,
+      "svd_calls": 21,
+      "normal_pivot_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+      "rows": 30,
+      "independent_original_residual_m_s": 6.703094720000649e-11,
+      "passive_change_bound_J": -0.6351133500425787,
+      "maximum_cap_excess_N_s": 1.4737169817813367e-12,
+      "maximum_normal_negative": 1.6653345369377348e-16,
+      "original_equations_accepted": true,
+      "svd_calls": 18,
+      "normal_pivot_calls": 1
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+      "rows": 216,
+      "independent_original_residual_m_s": 5.926908695682529e-15,
+      "passive_change_bound_J": -0.4408359278235729,
+      "maximum_cap_excess_N_s": 7.762887554996212e-17,
+      "maximum_normal_negative": 6.938893903907228e-17,
+      "original_equations_accepted": true,
+      "svd_calls": 12,
+      "normal_pivot_calls": 1
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "capture_sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+      "rows": 192,
+      "independent_original_residual_m_s": 9.085243599890047e-14,
+      "passive_change_bound_J": -0.9002257220852314,
+      "maximum_cap_excess_N_s": 4.5536491244391186e-17,
+      "maximum_normal_negative": 5.551115123125783e-17,
+      "original_equations_accepted": true,
+      "svd_calls": 12,
+      "normal_pivot_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "capture_sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+      "rows": 123,
+      "independent_original_residual_m_s": 4.865836809703761e-15,
+      "passive_change_bound_J": -11.256526120225601,
+      "maximum_cap_excess_N_s": 4.163336342344337e-17,
+      "maximum_normal_negative": 3.885780586188048e-16,
+      "original_equations_accepted": true,
+      "svd_calls": 19,
+      "normal_pivot_calls": 0
+    }
+  ],
+  "interpretation": "All six fixed captures satisfy their original normal complementarity, circular tangential law and passive-energy bound. This is not acceptance of later full trajectories or a material calibration."
+}

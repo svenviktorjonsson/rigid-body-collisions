@@ -16,10 +16,13 @@
   },
   "outputs_sha256": {
     "spin-energy.png": "62ddef8e8b7600dc22f0ca9868394fb81eda24f0e399d3da2a34c294850a3a1c",
-    "spin-energy.pdf": "78e95daab5aee692246a58f8abf2d7934372da90ff81e62ea51c89af6a9695e2",
-    "spin-and-bounces.pdf": "2c842cc13426ae101c44560bc9a27cd46d8280af2dc34aa450f4b7678713841c",
-    "demo.html": "3d7921f233b6b689f1f8cd0e0612dcf34bff5cd35d48a10c57586b388c617bf6",
-    "spin-and-bounces.png": "26575b29207a888d1829b846d444977ad0cffbdc25bae7f2f19ec8ee50eab74a"
+    "spin-energy.pdf": "20fe393c002b9bd94467d849a4d4546d98dfa3a659a27994093ebcad0f023188",
+    "spin-and-bounces.pdf": "bc082282020a71e4326c02a40ffb5235581fb136cc4c96f4bbefd31686c2a345",
+    "demo.html": "ed22a4d67373d7ba19f14007e21524657ff5fda5744ba7a3f1b2e0b00efd2bd5",
+    "spin-and-bounces.png": "26575b29207a888d1829b846d444977ad0cffbdc25bae7f2f19ec8ee50eab74a",
+    "viewer-preview.png": "d26e7f728968e8adcbac68ba77a84f2268c6b595a7339dfea0ea237c61a6d972",
+    "browser-validation.json": "97f2cf16767b7492ebff7f5ab4f534788ee365e6c5a30622ffc7428b1ff85a64"
   },
-  "scope": "Recorded synthetic sphere/fixed-plane prototype; numerical validation is separate from native arbitrary-body Coulomb and from experimental rubber authentication."
+  "scope": "Recorded synthetic sphere/fixed-plane prototype; numerical validation is separate from native arbitrary-body Coulomb and from experimental rubber authentication.",
+  "renderer_source_sha256": "56ec55fe6f78f97495e66570df133dbb4455280748a593c6417d94870eeb119c"
 }

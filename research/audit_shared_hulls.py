@@ -100,9 +100,12 @@ def audit(study=DIRECTORY,source=SOURCE):
     assert result==json.loads((directory/'checkpoints'/key).read_text())
     if 'rejected' in result:
      eligible[lane]=False;assert result['exit_code']==1 and result['elapsed_s']>0
-     assert result['rejected'].startswith('Coulomb residual gate failed') and 'no friction-law fallback' in result['rejected']
      diagnostic=summary['rejection_diagnostics'][key];dump=directory/diagnostic['path'];assert sha(dump.read_bytes())==diagnostic['sha256']
      snapshot=json.loads(dump.read_text());assert snapshot['tolerance_m_s']==plan['common']['contact_tolerance_m_s'] and snapshot['residual_m_s']>snapshot['tolerance_m_s']
+     if snapshot['phase']=='position':
+      assert result['rejected'].startswith('Normal-only position projection residual failed')
+     else:
+      assert snapshot['phase']=='velocity' and result['rejected'].startswith('Coulomb residual gate failed') and 'no friction-law fallback' in result['rejected']
      assert snapshot['phase']==diagnostic['phase'] and len(snapshot['b'])==diagnostic['rows']
      A=np.asarray(snapshot['A']);assert A.shape==(len(snapshot['b']),)*2 and np.isfinite(A).all() and np.allclose(A,A.T,rtol=1e-12,atol=1e-12)
      rejections.append(dict(scene=name,lane=lane,fraction=fraction,rows=len(snapshot['b']),residual_m_s=snapshot['residual_m_s'],reason=result['rejected']))
