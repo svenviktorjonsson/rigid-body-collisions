@@ -1,0 +1,36 @@
+{
+  "purpose": "Prospective correction of fixed1.25us controls after adapter validation rejected primary_steps8000",
+  "original_extension_plan_sha256": "4837772fa9ac45121faeefec151e9b3405d8869d67442b7693b4c467acefc8d1",
+  "runs": {
+    "fixed_1_25us_corrected": {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  },
+  "references": {
+    "fixed": [
+      "fixed_5us",
+      "fixed_2_5us",
+      "fixed_1_25us_corrected"
+    ],
+    "travel": [
+      "half_travel",
+      "quarter_travel",
+      "eighth_travel"
+    ]
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "rule": "Both adjacent edges of each three-level reference must meet one quarter trajectory budgets and all physical gates. Retain every preceding guard ladder edge, including failed .00375 baseline; no rejected level may be skipped. Exploratory reference qualification does not establish material authenticity or general engine accuracy.",
+  "scope": "Equivalent1.25us fixed internal step using valid adapter controls. Original invalid8000-primary request and validation rejection are retained. No physics or gate change."
+}
