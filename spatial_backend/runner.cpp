@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 using json=nlohmann::json;
-#include "normal_qp.h"
+#include "coulomb.h"
 btVector3 vec(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>()};}
 btQuaternion quat(const json& j){return {j[0].get<double>(),j[1].get<double>(),j[2].get<double>(),j[3].get<double>()};}
 json array(const btVector3& v){return {v.x(),v.y(),v.z()};}
@@ -29,8 +29,10 @@ int main(){try{
  bool normal_solver=in.at("solver")=="normal_coupled";
  bool compact=in.value("preassembly_elimination",true);
  RecordedMLCP regular_mlcp(&dantzig),post_normal_mlcp(&normal);NormalMLCP normal_mlcp(&normal);
- btMLCPSolver& mlcp=normal_solver?(compact?static_cast<btMLCPSolver&>(normal_mlcp):static_cast<btMLCPSolver&>(post_normal_mlcp)):static_cast<btMLCPSolver&>(regular_mlcp); btSequentialImpulseConstraintSolver sequential;
- bool adaptive=in.at("solver")=="adaptive",coupled=in.at("solver")=="coupled"||normal_solver;
+ bool coulomb_solver=in.at("solver")=="coulomb";CoulombMLCP coulomb_mlcp(&dantzig);
+ coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
+ btMLCPSolver& mlcp=normal_solver?(compact?static_cast<btMLCPSolver&>(normal_mlcp):static_cast<btMLCPSolver&>(post_normal_mlcp)):(coulomb_solver?static_cast<btMLCPSolver&>(coulomb_mlcp):static_cast<btMLCPSolver&>(regular_mlcp)); btSequentialImpulseConstraintSolver sequential;
+ bool adaptive=in.at("solver")=="adaptive",coupled=in.at("solver")=="coupled"||normal_solver||coulomb_solver;
  int dense_steps=0,fast_steps=0,dwell=0,contacts_previous=0;double residual_previous=0;
  PrescribedWorld world(&dispatch,&broad,coupled?static_cast<btConstraintSolver*>(&mlcp):static_cast<btConstraintSolver*>(&sequential),&config);
  world.start_phase=in.value("kinematic_contact_phase",std::string("end"))=="start";
@@ -133,7 +135,8 @@ int main(){try{
  }
  double seconds=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
  json out={{"states",states},{"times",times},{"updates",updates},{"step_s",seconds},{"collision_updates",total},{"boundary_work_J",work},{"max_contact_penetration_m",maxpenetration},{"max_closing_contact_speed_m_s",maxresidual},{"coupled_fallbacks",mlcp.getNumFallbacks()},{"coupled_updates",dense_steps},{"sequential_updates",fast_steps},{"scalar_precision","float64"},{"normal_qp_solves",normal.normal_solves},{"normal_qp_rejections",normal.normal_rejections},{"normal_matrix_rows_max",normal_mlcp.rows_max},{"eliminated_tangent_rows_max",normal_mlcp.removed_rows_max}};
- int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):regular_mlcp.rows_max;
+ int matrix_rows=normal_solver?(compact?normal_mlcp.rows_max:post_normal_mlcp.rows_max):(coulomb_solver?coulomb_mlcp.rows_max:regular_mlcp.rows_max);
+ out["coulomb_newton_steps"]=coulomb_mlcp.stats.newton_steps;out["position_iterative_solves"]=coulomb_mlcp.position_stats.solves;out["coulomb_solves"]=coulomb_mlcp.stats.solves;out["coulomb_fast_solves"]=coulomb_mlcp.stats.fast_solves;out["coulomb_sweeps_max"]=coulomb_mlcp.stats.sweeps_max;out["coulomb_residual_max_m_s"]=coulomb_mlcp.stats.residual_max;out["coulomb_passive_change_max_J"]=coulomb_mlcp.stats.passive_change_max;
  out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());

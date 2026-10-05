@@ -98,3 +98,46 @@ projection. Geometric violations must be monitored independently in either mode.
 The analytic packed fixtures disclose initial overlaps around 1e-10m to make
 floating-point touching-contact discovery reliable, and require them to stay
 below 1e-8m. They are not measured material experiments.
+
+## Circular 3D friction and residual-driven work
+
+`solver='coulomb'`, `kinematic_contact_phase='start'`, zero restitution and
+`iterations=4096` enable the project circular Coulomb lane. Both tangent
+coordinates share the disk radius mu times the normal impulse. Normal
+complementarity is enforced separately; this is **not** an associated cone QP
+that adds artificial normal dilation. Off-centre and inter-contact couplings
+remain in the full mobility matrix. Sparse column updates propagate impulses;
+block Gauss-Seidel uses exact two-variable disk solves. Semismooth Newton with a
+merit line search accelerates smaller stalled islands (at most 512 rows), without
+adding diagonal compliance. Matrix assembly remains dense/quadratic.
+
+The solver checks a velocity-scaled projection residual every eight sweeps and
+stops as soon as `contact_tolerance_m_s` (default 1e-8 m/s) is satisfied. Eight
+sweeps are therefore the cheap path; the iteration argument is a maximum budget,
+not fixed work on every island. A contact-energy upper bound checks passivity.
+Separate normal-only position projection first tries the active-set QP, then
+residual-gated iterations of the same normal equations. It applies no tangential
+position impulse. Failed gates reject the run with a reason; **this lane never
+falls back to Bullet's friction pyramid**. Convergence is not universal.
+
+`contact_slop_m=1e-9` treats gaps within one nanometre as touching in this lane,
+removing inconsistent gap/time targets at almost redundant face points. This is
+an explicit geometry tolerance, not physical compliance. It is limited to 1e-5
+of the minimum feature; setting zero disables it. Position correction ignores
+penetrations within the same tolerance. Earlier modes and archived evidence are
+unchanged. Prescribed velocity reversals now reach contact discovery immediately.
+
+Output includes Coulomb solve counts, islands accepted within eight sweeps,
+maximum sweeps, Newton steps, projection residual and passive-energy bound.
+The velocity residual certifies a frozen contact solve; containment, boundary
+work and whole-trajectory refinement are independent gates. `spatial_fidelity`
+provides an **offline** refinement ladder and refuses to recommend a candidate
+when the three finest consecutive levels fail quarter-budget comparisons. The
+travel guard changes timestep with current motion; this is not a certified online
+local-error controller or a cache-preserving timestep rollback.
+
+This lane uses one coefficient for sticking and sliding, no contact elasticity,
+normal restitution, rolling or twisting couple. Independent elastic torque and
+stored tangential energy are studied separately in `research/elastic-patch`.
+Body coefficients are multiplied and upstream Bullet clamps the pair coefficient
+at 10. Parameters remain synthetic until measured material data support them.
