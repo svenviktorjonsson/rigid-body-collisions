@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "seeds": [42, 7301],
+  "trajectory_cases": ["convex_drop", "concave_drop", "oblique_pair", "mixed36_shake"],
+  "reference_modes": [[4, 64], [8, 64], [16, 16], [16, 32], [16, 64]],
+  "reference_edges": [[[4, 64], [8, 64]], [[8, 64], [16, 64]], [[16, 16], [16, 32]], [[16, 32], [16, 64]]],
+  "reference_budget": {"rms_position_m": 0.005, "rms_velocity_m_s": 0.0125, "rms_spin_rad_s": 0.0125},
+  "budget": {"rms_position_m": 0.02, "rms_velocity_m_s": 0.05, "rms_spin_rad_s": 0.05},
+  "candidates": [["block", 1, 1], ["block", 1, 8], ["block", 4, 16], ["block", 8, 32], ["temporal", 4, 16]],
+  "repeats": 3,
+  "warmups": 1,
+  "contact_counts": [8, 32, 128],
+  "friction": 0.2,
+  "contact_tolerance": 1e-8,
+  "scope": "Synthetic polygon-core geometry, unit masses, e=0; concave compounds use disjoint triangle interiors. Frozen real support contacts are independent of native collision discovery. Native full trajectories use 0.01m skins; timing excludes Python/process startup. Reference must qualify on all four edges before accuracy claims. Report all rejected solves and failed references. No scanned geometry, material validation, deformable continuum convergence or universal novelty claimed."
+}
