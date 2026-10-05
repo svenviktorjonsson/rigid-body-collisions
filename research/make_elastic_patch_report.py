@@ -46,8 +46,9 @@ def main():
     ax.axhline(0,color='.5',lw=.7); ax.set(xlabel='time (ms)',title='Offset point force couples spin and translation'); ax.legend()
     ax=axes[1,1]
     ax.plot(weighted['times']*1000,weighted['states'][:,8],label='normal-axis spin (rad/s)')
-    ax.plot(weighted['times']*1000,weighted['twist_stored_J'][:,0],label='twisting store (J)')
-    ax.axhline(0,color='.5',lw=.7); ax.set(xlabel='time (ms)',title='Compression-weighted contact, μ=1'); ax.legend()
+    ax2=ax.twinx();ax2.plot(weighted['times']*1000,weighted['twist_stored_J'][:,0],color='#c05621',label='twisting store')
+    ax2.set_ylabel('twisting store (J)',color='#c05621')
+    ax.axhline(0,color='.5',lw=.7); ax.set(xlabel='time (ms)',ylabel='normal-axis spin (rad/s)',title='Compression-weighted contact, μ=1'); ax.legend(loc='lower left')
     fig.savefig(DIR/'spin-energy.png',dpi=180); plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(11,4),constrained_layout=True)
     ax=axes[0]
@@ -78,6 +79,8 @@ def main():
             'Slow and rapid tests use the **same** stiffness, mass, radius and friction parameters, with speeds 0.01 and 100 m/s. This verifies the integration strategy over a broad rate range for this ideal elastic law; it does not demonstrate rate-independent real rubber. The high-spin low-friction weighted case has a frozen RHS evaluation budget; exhaustion is retained as rejection, with no accepted state fabricated.','',
             'Timings were collected while native friction research ran concurrently. They describe these executions and are not an engine speed ranking. Reference refinement uses three DOP853 settings with frozen state, energy and yield budgets. Stored ZIP traces and source files permit independent energy, momentum and impulse bookkeeping. The reported internal-step yield peak is numerical, rather than a continuous mathematical supremum.','',
             '[Typeset mechanics and evidence](report.pdf). [Independent mechanics and literature review](../elastic-patch/review.md).']
+    if DIR.name=='elastic-patch-refined':
+        lines[4:4]=['This follow-up changes numerical tolerances only and targets the six original failures. The original [4/10 study and two rejected attempts](../elastic-patch/report.md) remain unchanged. Five additional cases now qualify, making **9/10 distinct examples verified across both studies**; weighted high-spin/low-friction remains rejected. Tangential and oblique figures reuse the previously qualified original traces; other figures use refined traces.','']
     (DIR/'report.md').write_text('\n'.join(lines)+'\n')
     rows=[]
     for row in summary['cases']:
@@ -151,6 +154,9 @@ The weighted contact can transfer energy between normal and rotational channels,
 \end{document}
 '''
     tex=tex.replace('SOURCE',summary['execution_source_commit'][:12]).replace('QUALIFIED',str(summary['qualified_cases'])).replace('TOTAL',str(len(summary['cases']))).replace('HIST',str(summary['completed_histories'])).replace('REJECT',str(summary['rejected_attempts'])).replace('ROWS','\n'.join(rows))
+    if DIR.name=='elastic-patch-refined':
+        text=r'This follow-up tightens integration tolerances only, with unchanged physics and gate budgets. The original four qualified cases, all six failures and two rejected attempts remain archived. Five additional cases now qualify, making nine of ten distinct examples verified across the studies. Weighted high-spin/low-friction remains rejected. Figures retain previously qualified original tangential/oblique traces and use refined traces otherwise.'
+        tex=tex.replace(r'\section*{A point-like wrench includes a couple}',text+'\n'+r'\section*{A point-like wrench includes a couple}')
     (DIR/'report.tex').write_text(tex)
 
 

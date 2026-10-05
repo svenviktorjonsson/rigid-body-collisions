@@ -34,10 +34,18 @@ stored tangential energy and an independent twisting couple at a computational
 contact point, bounded by normal load and an effective contact length. It tests
 spin reversal and floor/ceiling rebounds with energy accounting. The initial
 28-history archive qualifies four of ten cases and retains two integration-budget
-rejections; coarse transient errors require further refinement. These are
+rejections. The [refinement follow-up](research/elastic-patch-refined/report.pdf)
+keeps those failures and the same physics/gates, adds 15 histories and three
+rejections, and verifies five of six remaining cases. Together nine of ten
+distinct scenarios qualify, including one material at 0.01 and 100 m/s. These are
 synthetic sphere/plane material hypotheses, not calibrated rubber parameters or
 a completed elastic many-body engine. [Research review](research/elastic-patch/review.md)
 includes experimental support and measured no-reversal counterexamples.
+A [conditional exact elastic path](research/elastic-patch-refined/fast-path.md)
+returns both force and independent couple impulses and their full contact energy
+history; its dispatcher uses resolved integration of the same material when the
+exact assumptions fail. The [computational strategy](research/CONTACT_STRATEGY.md)
+records supported branches and the remaining many-body elastic integration work.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
