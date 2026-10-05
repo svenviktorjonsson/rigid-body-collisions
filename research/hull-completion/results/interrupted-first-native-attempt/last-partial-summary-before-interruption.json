@@ -1,0 +1,90 @@
+{
+  "execution_source_commit": "f2097b00e7e539f05b5c48daced46f2e58e122bf",
+  "plan_sha256": "cdd4215bb91d9fc2423949e86ab8863ddf343206524f167f3e1ff370334a4f04",
+  "binary_sha256": "9030d603bdd74c38165d507477648ce79377acacf2b0f61e88731cbead8468df",
+  "source_hashes": {
+    "research/hull-completion/plan.json": "cdd4215bb91d9fc2423949e86ab8863ddf343206524f167f3e1ff370334a4f04",
+    "research/hull-completion/runner.py": "8572e2d3f2ca752e635e23c83c5282388214d0a71d5b9cc9178e0f69a11098ab",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "spatial_backend/CMakeLists.txt": "810b4b7142b84e8e45dfd0cb687f958d228ea94e90ce85954ebca5d9f1192bc5",
+    "spatial_backend/coulomb.h": "fe4b544306bd10466cca52926debf491ef2c21483b45ff81aa70de310ba6acb2",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/runner.cpp": "cfd94ec3c5ac6978bbe6bc24edde075271886005d398ad453614c2789e61282f",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983",
+    "spatial_engine.py": "3761a3f4419fa9c2252c91f1c1e28334de2ee2fdf95ea9e34c78e5eebed4a34a",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78"
+  },
+  "workload_note": "Parallel collaborative workload; descriptive timings only",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 3,
+  "planned_attempt_count": 6,
+  "complete": false,
+  "history_count": 0,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "diagnostics": {},
+      "candidates": {},
+      "choice": null
+    }
+  },
+  "rejection_diagnostics": {
+    "fast_shake8_hulls42/reference_0.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+      "phase": "position",
+      "rows": 54,
+      "residual_m_s": 1.142718539465209e-07,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+      "phase": "velocity",
+      "rows": 45,
+      "residual_m_s": 1.4094452680643237e-08,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_2.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+      "phase": "velocity",
+      "rows": 48,
+      "residual_m_s": 1.9191630933657606e-08,
+      "tolerance_m_s": 1e-08
+    }
+  },
+  "changed_discretization": "One shared world contact point: midpoint of surface endpoints for two finite dynamic bodies; finite-body surface endpoint against static/kinematic bodies. Full Jacobian, angular mobility, free-velocity and split RHS, warm angular-impulse transport, and boundary-work accounting use that same point.",
+  "hashes": {
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "traces.zip": "959b46e1f290cb19d76d46e731809c81be544a08a1b4b28325dff691ae324850",
+    "execution-source.zip": "786779f0405e45994b9e838825209ca1db605a8bb7a61528abda06901653f3bc"
+  }
+}

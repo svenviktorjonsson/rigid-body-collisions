@@ -75,6 +75,7 @@ jobs:
           python -m research.audit_elastic_patch --directory research/elastic-patch-refined
           python -m research.audit_elastic_completion
           python -m research.audit_contact_completion
+          python -m research.audit_interrupted_hulls
           python -m research.audit_coulomb_trust_recovery
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
