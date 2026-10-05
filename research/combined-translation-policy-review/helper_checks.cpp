@@ -67,16 +67,20 @@ int main(){try{
  static_assert(sizeof(btScalar)==8,"Double precision is mandatory");
  btRigidBody A(2,nullptr,nullptr,btVector3(1.2,2.3,4.1));
  btRigidBody B(3,nullptr,nullptr,btVector3(2.1,1.8,3.7));
+ btRigidBody K(0,nullptr,nullptr);K.setCollisionFlags(K.getCollisionFlags()|btCollisionObject::CF_KINEMATIC_OBJECT);
  A.setWorldTransform(btTransform(btQuaternion(btVector3(.2,.6,.3).normalized(),.7),btVector3(.1,-.2,.3)));A.updateInertiaTensor();
  B.setWorldTransform(btTransform(btQuaternion(btVector3(.5,-.2,.4).normalized(),-.4),btVector3(-.5,.1,-.4)));B.updateInertiaTensor();
  const auto originalAV=A.getLinearVelocity(),originalAO=A.getAngularVelocity();
- btAlignedObjectArray<btSolverBody> pool;pool.push_back(solverBody(&A));pool.push_back(solverBody(&B));pool.push_back(solverBody(nullptr));
+ btAlignedObjectArray<btSolverBody> pool;pool.push_back(solverBody(&A));pool.push_back(solverBody(&B));pool.push_back(solverBody(nullptr));pool.push_back(solverBody(&K));
+ pool[3].m_linearVelocity=btVector3(.8,.9,-.2);pool[3].m_angularVelocity=btVector3(.3,-.6,1.4);
+ pool[3].m_externalForceImpulse.setZero();pool[3].m_externalTorqueImpulse.setZero();
  const btVector3 n=btVector3(1,2,-1).normalized(),t=n.cross(btVector3(.2,-.1,.8)).normalized(),s=n.cross(t);
- btAlignedObjectArray<btSolverConstraint> storage;storage.resize(4);
+ btAlignedObjectArray<btSolverConstraint> storage;storage.resize(5);
  storage[0]=row(0,1,n,btVector3(.4,.1,.2),pool,.4);
  storage[1]=row(0,1,t,btVector3(.4,.1,.2),pool,.02);
  storage[2]=row(0,1,s,btVector3(.4,.1,.2),pool,.03);
  storage[3]=row(0,2,btVector3(0,1,0),btVector3(.7,.2,-.1),pool,.1);
+ storage[4]=row(0,3,btVector3(0,0,1),btVector3(.3,.6,.1),pool,.02);
  btAlignedObjectArray<btSolverConstraint*> rows;for(int i=0;i<storage.size();i++)rows.push_back(&storage[i]);
  // Construct a consistent nonzero existing warm delta. Actual oracle retains it.
  for(int i=0;i<rows.size();i++){
@@ -84,14 +88,15 @@ int main(){try{
   a.internalApplyImpulse(c.m_contactNormal1*a.internalGetInvMass(),c.m_angularComponentA,c.m_appliedImpulse);
   b.internalApplyImpulse(c.m_contactNormal2*b.internalGetInvMass(),c.m_angularComponentB,c.m_appliedImpulse);
  }
- const auto before=pool;btVectorXu pressure(4);pressure[0]=1.2;pressure[1]=.05;pressure[2]=-.07;pressure[3]=.3;
+ const auto before=pool;btVectorXu pressure(5);pressure[0]=1.2;pressure[1]=.05;pressure[2]=-.07;pressure[3]=.3;pressure[4]=.06;
  btAlignedObjectArray<btSolverBody> predicted;require(ctr::acceptedPhysicalBodies(rows,pool,pressure,predicted),"predictor rejected fixture");
  UpstreamOracle oracle;const auto expected=oracle.apply(rows,pool,pressure);
  require(equalBodies(predicted,expected),"copied predictor differs from actual upstream accepted-delta writeback");
  require(equalBodies(pool,before),"original pool mutated");
  require(equal(A.getLinearVelocity(),originalAV)&&equal(A.getAngularVelocity(),originalAO),"original rigid body mutated");
- const double warm[4]={.4,.02,.03,.1};for(int i=0;i<4;i++)require(rows[i]->m_appliedImpulse==warm[i],"original row cache mutated");
- std::cout<<"PASS actual upstream parity: warm normal/two tangents/fixed slot/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged\n";
+ const double warm[5]={.4,.02,.03,.1,.02};for(int i=0;i<5;i++)require(rows[i]->m_appliedImpulse==warm[i],"original row cache mutated");
+ require(equalBody(predicted[3],before[3]),"accepted impulses changed prescribed zero-mass kinematic motion");
+ std::cout<<"PASS actual upstream parity: warm normal/two tangents/fixed and rotating kinematic slots/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged\n";
  double u=0;require(ctr::normalRate(*rows[0],predicted,u),"normal rate rejected");
  const auto va=predicted[0].m_linearVelocity+predicted[0].m_deltaLinearVelocity+predicted[0].m_externalForceImpulse;
  const auto vb=predicted[1].m_linearVelocity+predicted[1].m_deltaLinearVelocity+predicted[1].m_externalForceImpulse;
@@ -104,7 +109,7 @@ int main(){try{
  const auto savedRow=storage[0];storage[0].m_solverBodyIdA=-1;
  require(!ctr::acceptedPhysicalBodies(rows,pool,pressure,predicted)&&equalBodies(predicted,savedOutput),"invalid body id mutated output");storage[0]=savedRow;
  require(!ctr::acceptedPhysicalBodies(rows,pool,pressure,pool)&&equalBodies(pool,before),"aliased original pool accepted");
- btVectorXu legacy(4);legacy.setZero();legacy[0]=.2;legacy[3]=.1;
+ btVectorXu legacy(5);legacy.setZero();legacy[0]=.2;legacy[3]=.1;
  btVectorXu targets(1),rates(1),desired(1);targets[0]=123;rates[0]=456;desired[0]=789;
  require(ctr::targets(rows,{0,3},{.01,-.0005},predicted,legacy,.001,1e-9,targets,&rates,&desired),"all-row target builder rejected");
  close(targets[0],-(.01-1e-9)/.001-u);close(targets[1],.1-rates[1]);

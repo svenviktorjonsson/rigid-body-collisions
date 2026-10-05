@@ -1,0 +1,13 @@
+{
+  "schema": "prospective-combined-translation-source-v1",
+  "reviewed_production_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "controls_executed": false,
+  "production_guarded_files_edited": false,
+  "files": {
+    "research/combined-translation-policy-review/plan.json": "62f1053bf68566194d1c59603b0462e9cafedcd50cc9c76df9e3dcdb3e6182cc",
+    "research/combined-translation-policy-review/combined_translation.h": "3a581d68dd008ce424c76588ff45cbc7a5169c32b8b669ec1df6ea42104cae7b",
+    "research/combined-translation-policy-review/helper_checks.cpp": "e3f9c7f7555f980444d56bd911f59077d63b73e8026a8c6d570f9a9993754884",
+    "research/combined-translation-policy-review/run_controls.py": "fb492fef6ec97e95e03e4a65ac2c9394d8b4eb0306f5ce4acd93aa1529201be8",
+    "research/combined-translation-policy-review/README.md": "f87291c08926fe110e2cc26439484026715f9cd96d53e4327bbb5ad1849d9364"
+  }
+}
