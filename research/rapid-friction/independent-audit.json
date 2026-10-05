@@ -1,0 +1,32 @@
+{
+  "record_count": 60,
+  "qualified_benchmarks": {
+    "3d_sphere": {
+      "median_s": {
+        "reference": 13.280505561,
+        "candidate": 1.752767971
+      },
+      "ratio": 7.576875993131666,
+      "record_directory": "results-spatial"
+    }
+  },
+  "directories": {
+    "results": {
+      "records": 10,
+      "qualified_references": 0
+    },
+    "results-spatial": {
+      "records": 26,
+      "qualified_references": 1
+    },
+    "results-planar-resolution": {
+      "records": 12,
+      "qualified_references": 0
+    },
+    "results-planar-shake": {
+      "records": 12,
+      "qualified_references": 0
+    }
+  },
+  "passed": true
+}
