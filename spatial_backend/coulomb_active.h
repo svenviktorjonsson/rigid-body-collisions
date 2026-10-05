@@ -7,6 +7,8 @@ inline bool solve(const btMatrixXu&A,const btVectorXu&b,btVectorXu&x,const btVec
  const int n=b.rows();if(n<=0||n>4096||A.rows()!=n||A.cols()!=n||x.rows()!=n||hi.rows()!=n||dep.size()!=n||!(tol>0)||!std::isfinite(tol))return false;
  std::vector<int>normals;std::vector<bool>active(n,false);
  for(int k=0;k<n;k++){if(!std::isfinite(x[k])||!std::isfinite(b[k])||!(A(k,k)>0))return false;if(dep[k]<0){normals.push_back(k);active[k]=x[k]>0;}}
+ if(normals.size()*3!=static_cast<size_t>(n))return false;
+ for(int k=0;k<n;k++)if(dep[k]>=0&&(dep[k]>=n||dep[dep[k]]>=0))return false;
  std::vector<double>seed(n);for(int i=0;i<n;i++)seed[i]=x[i];
  // When normal complementarity already passes but a nominally sticking
  // disk does not, choose a numerical sliding-boundary starting point. This

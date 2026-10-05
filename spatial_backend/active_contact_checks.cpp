@@ -13,6 +13,11 @@ int main(){
   b[0]=1;p[0]=1;b[3]=.25;circular_active::Stats s;require(circular_active::solve(A,b,p,hi,dep,1e-8,s),"large sparse pressure support failed");require(std::abs(p[0]-1)<=1e-8&&std::abs(p[3]-.25)<=1e-8&&s.expanded_contacts==1&&s.passes==2,"omitted compressing contact escaped full-system gate");for(int r=6;r<n;r++)require(p[r]==0,"inactive large-system row changed");}
  {btMatrixXu A(4,4);A.setZero();btVectorXu b(4),p(4),hi(4);btAlignedObjectArray<int>d;d.resize(4);
   for(int i=0;i<4;i++){A.setElem(i,i,1);b[i]=0;p[i]=7;hi[i]=1e30;d[i]=i?0:-1;}
-  circular_active::Stats s;require(!circular_active::solve(A,b,p,hi,d,1e-8,s),"orphan contact row falsely accepted");for(int i=0;i<4;i++)require(p[i]==7,"unsupported contact structure changed output");}
+ circular_active::Stats s;require(!circular_active::solve(A,b,p,hi,d,1e-8,s),"orphan contact row falsely accepted");for(int i=0;i<4;i++)require(p[i]==7,"unsupported contact structure changed output");}
+ // A self-dependent orphan can otherwise escape an empty active subsystem:
+ // its closing velocity must never be ignored or its stored impulse overwritten.
+ {btMatrixXu A(4,4);A.setZero();btVectorXu b(4),p(4),hi(4);btAlignedObjectArray<int>d;d.resize(4);
+  for(int i=0;i<4;i++){A.setElem(i,i,1);b[i]=0;p[i]=0;hi[i]=i?.4:1e30;d[i]=i?0:-1;}d[3]=3;b[3]=1;p[3]=7;
+  circular_active::Stats s;require(!circular_active::solve(A,b,p,hi,d,1e-8,s),"self-dependent orphan escaped empty active gate");require(p[0]==0&&p[1]==0&&p[2]==0&&p[3]==7,"failed orphan validation changed output");}
  std::cout<<"PASS pressure release/redundancy/infeasibility/failed-output; full450-row inactive-contact expansion\n";
 }

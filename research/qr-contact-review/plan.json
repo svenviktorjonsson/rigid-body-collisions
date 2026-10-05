@@ -1,0 +1,136 @@
+{
+  "schema": "prospective-qr-contact-cost-plan-v1",
+  "baseline_source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "scope": "Captured original contact systems only; neither full-trajectory accuracy nor general performance superiority.",
+  "experiment": "Column-pivoted Householder QR Newton direction before existing trust-region SVD; identical physical A, law, material, stage budget and final gates. Pressure/nullspace extraction remains original SVD.",
+  "controls": {
+    "compiler_flags": [
+      "-std=c++17",
+      "-O3",
+      "-DNDEBUG",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-ffp-contract=off"
+    ],
+    "threads": 1,
+    "affinity_cpu": 4,
+    "solver_iteration_budget": "captured original iteration_budget",
+    "normal_rank_relative_cutoff": 1e-12,
+    "qr_call_limit_per_captured_solve": 1024,
+    "trust_search_step_limits": "original unchanged",
+    "qr_linear_candidate_acceptance": "Finite direction and original J*d+F squared norm no larger than old F squared norm within 1e-10 relative rounding; unchanged Armijo line search then original full-law/finite/passivity gate.",
+    "qr_fallback": "Existing minimumNormNewton SVD on failed factorization, model check, or line search. No full nullspace requested from QR."
+  },
+  "timing": {
+    "primary": "Native solve only, steady_clock around the solver call; excludes JSON parsing and process startup.",
+    "untimed_validation_repetitions": 1,
+    "untimed_warmup_pairs": 1,
+    "timed_pairs_per_capture": 5,
+    "pair_order": "Fixed random seed730142; shuffle baseline/QR order within every pair and shuffle capture order each repetition.",
+    "statistic": "Per-capture median and range; median paired baseline/QR solve-time ratio for captures accepted by both. Failed attempts are retained and excluded only from successful-cost ratios.",
+    "workload": "Freeze source and executable hashes. Record load average and process observations. If other CPU work remains, mark times descriptive under contention; no controlled speed-ranking claim."
+  },
+  "acceptance": "Every accepted receipt must independently meet all original projection, nonnegative-normal, finite and passivity gates. Report regressions whenever baseline accepts and QR rejects. Do not discard slower or failed captures; no claim of universal improvement.",
+  "execution_rule": "Root commits plan before any timing experiment. Diagnostic code and binaries remain research-only; frozen production source and binary untouched.",
+  "cases": [
+    {
+      "path": "research/coulomb-diagnostics/hull42-rejected.json",
+      "sha256": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+      "rows": 18
+    },
+    {
+      "path": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "sha256": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f",
+      "rows": 108
+    },
+    {
+      "path": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "sha256": "ccd10a635622b90b61d39f3676d827dc3fdbee989eca616dd79fabe6b4430765",
+      "rows": 267
+    },
+    {
+      "path": "research/coulomb-followup/hull42-second-rejected.json",
+      "sha256": "c263492b847ec70be8c0ce25b59cc36f1074b3383945007da488903869bfb031",
+      "rows": 45
+    },
+    {
+      "path": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "7e52bea9db4c4965995924d2c945081f53a55847a31adc4fc3ea67e9077fe1ab",
+      "rows": 48
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+      "rows": 216
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+      "rows": 192
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+      "rows": 123
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+      "rows": 48
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+      "rows": 51
+    },
+    {
+      "path": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+      "rows": 30
+    },
+    {
+      "path": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "a8f6601cc02e4d3b266250ece2d49440228ff8da867a8c9d62e5c1b0b7b08cdd",
+      "rows": 321
+    },
+    {
+      "path": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "b50ea9a0f145e4878ba1f8e6683ab125b4fb9418cc138de61d29c2f76abfbefd",
+      "rows": 231
+    },
+    {
+      "path": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+      "rows": 54
+    },
+    {
+      "path": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+      "rows": 45
+    },
+    {
+      "path": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+      "rows": 48
+    },
+    {
+      "path": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+      "rows": 60
+    },
+    {
+      "path": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "ba80bbe35cb56243259ed1cc60ad85d85a404c342834adfb2bf51be037d66fce",
+      "rows": 39
+    },
+    {
+      "path": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+      "rows": 51
+    },
+    {
+      "path": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+      "rows": 291
+    }
+  ]
+}
