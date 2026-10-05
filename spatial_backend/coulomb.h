@@ -8,6 +8,9 @@
 #include "coulomb_trust.h"
 #include "translation_split.h"
 #include "translation_combined.h"
+#ifdef SPATIAL_LAPACK_RECOVERY
+#include "projection_more.h"
+#endif
 #include "pressure_release.h"
 #include "normal_null.h"
 #include "coulomb_active.h"
@@ -32,6 +35,8 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
+ int projection_attempts=0,projection_solves=0,projection_declines=0;
+ int projection_svd_calls=0,projection_iteration_steps=0,projection_newton_steps=0;
  // Optional schedule receipts; these aggregate across calls, never set caps.
  int early_component_attempts=0,early_component_solves=0,early_component_declines=0;
  int early_component_helper_calls=0,early_component_skipped_components=0;
@@ -204,6 +209,28 @@ inline bool coulombIterate(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x
  return false;
 }
 
+inline double coulombResidual(const btMatrixXu& A,const btVectorXu& b,const btVectorXu& x,
+ const btVectorXu& hi,const btAlignedObjectArray<int>& dep){
+ const int n=b.rows();std::vector<double>w(n);
+ for(int i=0;i<n;i++){
+  w[i]=-b[i];for(int j=0;j<n;j++)w[i]+=A(i,j)*x[j];
+  if(!std::isfinite(w[i])||!std::isfinite(x[i]))return std::numeric_limits<double>::infinity();
+ }
+ double maximum=0;
+ for(int k=0;k<n;k++)if(dep[k]<0){
+  std::vector<int> tangents;for(int i=0;i<n;i++)if(dep[i]==k)tangents.push_back(i);
+  if(tangents.size()!=2||!(A(k,k)>0))return std::numeric_limits<double>::infinity();
+  const int t=tangents[0],s=tangents[1];
+  const double eigen=.5*(A(t,t)+A(s,s)+std::hypot(A(t,t)-A(s,s),2*A(t,s)));
+  if(!(eigen>0&&std::isfinite(eigen)))return std::numeric_limits<double>::infinity();
+  maximum=std::max(maximum,std::abs(x[k]-std::max(0.,static_cast<double>(x[k])-w[k]/A(k,k)))*A(k,k));
+  const double zt=x[t]-w[t]/eigen,zs=x[s]-w[s]/eigen,length=std::hypot(zt,zs),cap=hi[t]*x[k];
+  const double factor=length>cap&&length>0?cap/length:1.;
+  maximum=std::max(maximum,std::hypot(x[t]-zt*factor,x[s]-zs*factor)*eigen);
+ }
+ return maximum;
+}
+
 inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
  const btVectorXu& lo,const btVectorXu& hi,const btAlignedObjectArray<int>& dep,
  int budget,double tolerance,CoulombStats& stats,std::vector<double>* rejected_impulses=nullptr,bool allow_recovery=true,bool early_component_recovery=false){
@@ -333,6 +360,33 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    stats.passive_change_max=std::max(stats.passive_change_max,change);return true;
   }
  }
+
+ if(recover&&b.rows()<=64){
+  // A fresh, bounded search only after ALL prior original-law lanes decline.
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  projection_recovery_v2::Stats projection;
+  stats.projection_attempts++;
+  const bool found=projection_recovery_v2::solve(A,b,candidate,hi,dep,tolerance,projection);
+  stats.projection_svd_calls+=projection.svd_calls;
+  stats.projection_iteration_steps+=projection.iteration_steps;
+  stats.projection_newton_steps+=projection.newton_steps;
+  const double original_residual=found?coulombResidual(A,b,candidate,hi,dep):std::numeric_limits<double>::infinity();
+  if(found&&std::isfinite(original_residual)&&original_residual<=tolerance){
+   double change=0,scale=1;bool bounds=true;
+   for(int i=0;i<b.rows();i++){
+    double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*candidate[j];
+    change+=.5*candidate[i]*(w-b[i]);scale+=std::abs(candidate[i]*b[i]);
+    if(dep[i]<0)bounds&=std::isfinite(candidate[i])&&candidate[i]>=lo[i]&&candidate[i]<=hi[i];
+   }
+   if(bounds&&std::isfinite(change)&&std::isfinite(scale)&&change<=tolerance*scale){
+    x=candidate;stats.solves++;stats.projection_solves++;
+    stats.last_residual=original_residual;stats.residual_max=std::max(stats.residual_max,original_residual);
+    stats.passive_change_max=std::max(stats.passive_change_max,change);return true;
+   }
+  }
+  stats.projection_declines++;
+ }
+
 #endif
  if(rejected_impulses)*rejected_impulses=rejected;
  return false;

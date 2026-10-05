@@ -100,6 +100,10 @@ int main(int argc,char** argv){
                          {"polish_solves",stats.polish_solves},{"polish_steps",stats.polish_steps},{"gauge_restarts",stats.gauge_restarts},
                          {"continuation_solves",stats.continuation_solves},{"continuation_svd_calls",stats.continuation.svd_calls},{"continuation_stages",stats.continuation.stages},{"continuation_budget_rejections",stats.continuation.budget_rejections},{"rank_restarts",stats.rank_restarts},{"opposing_restarts",stats.opposing_restarts},{"cold_restarts",stats.cold_restarts},{"polish_svd_calls",stats.polish_svd_calls},
                          {"polish_budget_rejections",stats.polish_budget_rejections},{"polish_svd_rejections",stats.polish_svd_rejections},{"residual_m_s",stats.last_residual}}}};
+  output["projection_tail_policy"]={{"stage","after_all_existing_pipeline_failure"},
+   {"compiled",coulombLapackRecoveryEnabled()},{"max_rows",64},{"max_svd_calls",2048},{"max_iteration_steps",2048},
+   {"attempts",stats.projection_attempts},{"solves",stats.projection_solves},{"declines",stats.projection_declines},
+   {"svd_calls",stats.projection_svd_calls},{"iteration_steps",stats.projection_iteration_steps},{"newton_steps",stats.projection_newton_steps}};
   std::cout<<output.dump(2)<<'\n';return solver_ok&&law_ok&&energy_ok?0:2;
  }catch(const std::exception& error){std::cerr<<json({{"accepted",false},{"error",error.what()}}).dump()<<'\n';return 3;}
 }

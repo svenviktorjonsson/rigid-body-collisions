@@ -45,6 +45,15 @@ int main(){try{
  coulomb_mlcp.translation_split=position_policy=="split_translation"||coulomb_mlcp.translation_clearance||coulomb_mlcp.translation_combined;
  if(coulomb_mlcp.translation_split&&!coulomb_solver)throw std::runtime_error("Translation-only split requires coulomb solver");
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
+
+ auto projection_policy=[&](){const auto& p=coulomb_mlcp.stats;return json{
+  {"compiled",coulombLapackRecoveryEnabled()},
+  {"enabled",coulomb_solver&&coulomb_mlcp.recovery_enabled&&coulombLapackRecoveryEnabled()},
+  {"stage","after_all_existing_pipeline_failure"},
+  {"max_rows",64},{"max_svd_calls",2048},{"max_iteration_steps",2048},
+  {"attempts",p.projection_attempts},{"solves",p.projection_solves},{"declines",p.projection_declines},
+  {"svd_calls",p.projection_svd_calls},{"iteration_steps",p.projection_iteration_steps},{"newton_steps",p.projection_newton_steps},
+  {"claim","bounded original-law numerical search; no trajectory qualification"}};};
  json position_geometry_snapshot;
  if(in.contains("rejected_contact_path")){
   std::string path=in.at("rejected_contact_path");
@@ -130,6 +139,7 @@ int main(){try{
     {"max_container_surface_excess_m",surface_excess}};
   progress["translation_split_solves"]=coulomb_mlcp.translation_split_solves;
   progress["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
+  progress["projection_tail_policy"]=projection_policy();
   progress["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
   progress["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
   progress["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;
@@ -219,6 +229,7 @@ int main(){try{
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
  out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;
  out["lapack_contact_recovery_compiled"]=coulombLapackRecoveryEnabled();
+ out["projection_tail_policy"]=projection_policy();
  out["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
  out["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
  out["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;
