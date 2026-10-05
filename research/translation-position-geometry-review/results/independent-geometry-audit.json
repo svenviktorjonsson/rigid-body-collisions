@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "execution_source_commit": "c38c2abde624282f82235f5e35c5424957309021",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "all74_translation_Gram_reconstructed_max_error": 8.881784197001252e-16,
+  "original_capture_byte_identical": true,
+  "original_translation_rejection_retained": true,
+  "support_rows": [
+    {
+      "normal_row_index": 11,
+      "body_id_a": 0,
+      "body_id_b": 20,
+      "normal_world_on_b": [
+        0.25283280790262813,
+        -0.9675099850895973,
+        -3.7348322820763354e-14
+      ],
+      "signed_distance_m": 0.0007431545386611608,
+      "split_target_m_s": 0.0
+    },
+    {
+      "normal_row_index": 54,
+      "body_id_a": 0,
+      "body_id_b": 20,
+      "normal_world_on_b": [
+        0.966833981842583,
+        0.25540566077206683,
+        1.8228120375645956e-12
+      ],
+      "signed_distance_m": -1.9104429983783045e-09,
+      "split_target_m_s": 0.00011346807605171858
+    },
+    {
+      "normal_row_index": 55,
+      "body_id_a": 0,
+      "body_id_b": 20,
+      "normal_world_on_b": [
+        -0.9999999999999986,
+        -4.294236120612848e-08,
+        3.220677090459636e-08
+      ],
+      "signed_distance_m": 1.2926896220122343e-09,
+      "split_target_m_s": 0.0
+    }
+  ],
+  "scope": "Geometry/provenance audit only; no changed-policy or full-trajectory qualification"
+}

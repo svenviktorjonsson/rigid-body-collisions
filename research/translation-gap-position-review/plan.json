@@ -1,0 +1,33 @@
+{
+  "schema": "prospective-signed-gap-position-trial-v1",
+  "geometry_observer_source": "c38c2abde624282f82235f5e35c5424957309021",
+  "capture": "research/translation-position-geometry-review/results/rejected-normal-system.json",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry": "research/translation-position-geometry-review/results/rejected-normal-system.json.geometry.json",
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "original_policy": "split_translation; original74 remains certified rejected",
+  "candidate_policy": "split_translation_gap",
+  "declared_change": "Only separated normal POSITION rows get target -max(distance-contact_slop,0)/h. Penetrating original bSplit targets and within-slop zero remain unchanged.",
+  "contact_slop_m": 1e-09,
+  "tolerance_m_s": 1e-08,
+  "gravity_m_s2": [
+    0,
+    0,
+    -9.81
+  ],
+  "trials": [
+    {
+      "method": "pressure-QP-cold",
+      "max_iterations": 2000
+    },
+    {
+      "method": "normal-FB-cold",
+      "max_evaluations": 2000
+    }
+  ],
+  "pose_bound_m": 0.0001,
+  "nonlinear_geometry_gate": "No contact body-pair minimum distance worsens below min(previous_min_distance,0) minus original1e-9m contact slop; no new penetrating pair exceeds slop.",
+  "mechanical_gate": "All unchanged74 A/new declared b finite projection, normal inward velocity, nonnegative finite bounds and passive correction energy <= original tolerance scale.",
+  "ledger": "Record COM, linear and total angular momentum, kinetic and gravity potential change. Do not apply changes to production or claim true-physics energy conservation from numerical pose repair.",
+  "execution_rule": "Freeze this plan, solver runner and pinned independent geometry requery source before execution. Mandatory committed SHA and source guard; archive binary/libraries/source and both failures/successes. Exploratory earlier probe retained separately; it does not qualify this prospective trial."
+}

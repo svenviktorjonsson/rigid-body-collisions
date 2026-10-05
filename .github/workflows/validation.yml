@@ -40,6 +40,8 @@ jobs:
           build/spatial/normal_null_checks
           build/spatial/coulomb_restart_checks
           build/spatial/support_restart_checks
+          python research/component-recovery-integration/audit.py
+          python research/component-recovery-integration/checks.py
           python -m research.verify_native_contact_replays
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend

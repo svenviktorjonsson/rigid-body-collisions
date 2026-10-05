@@ -1,0 +1,21 @@
+{
+  "schema": "frozen-independent-production-component-audit-v1",
+  "execution_source": "9e97be07b833503c15d9a96f1f92afc59c11a292",
+  "files": {
+    "audit.py": "2a2bdb0f2f57b645211c8bee75cc81fc2dbfcf4a328d7f64effaef50d6430218",
+    "checks.py": "fc51029179b1fb4719fad99560121c1ef6610409df43073b8d7ab22692559c6b",
+    "initial-auditor-source.py": "b14d256ac1fefeef852bcb7f40e794319a6c09ce5fa8663b4ee53f1abede69dc",
+    "initial-checks-source.py": "829a18fea289bff72134a28d7b4861abb872e61762f42bc1da52642c71ab0392",
+    "independent-audit.json": "9baad57b1e78ada45c41152c5d99c25bfa4e4670bb2005821317e1c085dcdece",
+    "final-independent-audit.json": "5985a7da386d70d84cf30f425906a0543d2ad775b7a17d3028527f32132acf14",
+    "final-current-runtime-audit.json": "fb093197ceb6b2db705e4ccafc87623cee87e6b8f5beb890597444beee03e2d6",
+    "audit-controls.txt": "826ade7b0660a97370d704da05deab26fddf0ad379f8af7f12bd6c847af32460",
+    "audit-controls-attempt1.txt": "2013ad29a58ff03c6e926db80b95785b2e9b5d1b64285aa091c5966c9d1a8f2d",
+    "AUDIT.md": "25f5aaf3a32a1be52411979a89b776e00bac0573f2f77fba5c575c23ad0efc13",
+    "plan.json": "8ed254d37e4261977f3ec1f71b8c54e2ee3129b3ecc2b7ab2cd2c4f9118a3dfb",
+    "twenty-two-replays.json": "39818a715db358aef094745a01e338b62519c88cf4dfa08fdd5de8167acf08ba",
+    "execution-source.zip": "e519e608c363dad090958de47f9236b3c171dd9a44613dc002f21a2c0a8a982d",
+    "validation-summary.json": "70ddbf9b0a46372e2f226da17239db8be84160338868205419b94ff31185500c"
+  },
+  "scope": "Saved captured-system evidence, provenance, recorded budgets and previous20 preservation. No full-world or material qualification."
+}
