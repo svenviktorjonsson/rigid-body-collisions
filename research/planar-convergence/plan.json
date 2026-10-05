@@ -1,0 +1,38 @@
+{
+  "purpose": "Original rotating9 mixed polygons: combine supported1um slop with2048 velocity and128 position iterations. Earlier high iterations used5mm slop, and earlier1um studies used128/12; this is a distinct original-law numerical convergence control. Geometry/material/motion/gates fixed. No adoption or speed claim until qualification.",
+  "cases": [
+    "2d_mixed_polygons"
+  ],
+  "reference_levels": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.005,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000
+    }
+  ],
+  "phases": {
+    "2d_mixed_polygons": [
+      false
+    ]
+  },
+  "binary": "build/rigid_double_tight/rigid_runner",
+  "substeps": 2048,
+  "position_iterations": 128,
+  "linear_slop_m": 1e-06,
+  "rule": "Execute all five10..0.625us levels. Full physical gates and both final adjacent quarter-budget edges mandatory; retain all declines. Concurrent isolated research allowed so elapsed descriptive only."
+}
