@@ -1,6 +1,6 @@
 """Independent checks of archived support solves; never reruns production."""
 from pathlib import Path
-import json,hashlib,sys
+import json,hashlib,sys,zipfile
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
 from research.coulomb_diagnostics import System
@@ -19,6 +19,13 @@ def audit(base=BASE):
    if sha(source)!=expected:raise AssertionError('Frozen numerical source changed: '+name)
   for name,expected in plan.get('captures',{plan['capture']:plan['capture_sha256']}).items():
    if sha(ROOT/name)!=expected:raise AssertionError('Captured physical system changed: '+name)
+ extension=json.loads((base/'v3/combined22-plan.json').read_text())
+ if sha(base/'v3/combined_replay.cpp')!=extension['combined_driver_sha256'] or sha(base/'v3/checks.cpp')!=extension['control_source_sha256']:raise AssertionError('Frozen validation driver changed')
+ primary=ROOT/'research/hull-translation-completion/results/execution-source.zip'
+ if sha(primary)!=extension['production_source_zip_sha256']:raise AssertionError('Frozen primary source archive changed')
+ with zipfile.ZipFile(primary) as archive:
+  for name in archive.namelist():
+   if name.startswith('spatial_backend/') and name.endswith('.h') and archive.read(name)!=(base/'production52'/Path(name).name).read_bytes():raise AssertionError('Copied primary numerical source changed')
  rows=[json.loads(line) for line in (base/'v3/combined22-native.jsonl').read_text().splitlines()]
  corpus=json.loads((base/'v3/combined22-plan.json').read_text())['corpus']
  if len(rows)!=22 or [r['capture'] for r in rows]!=corpus:raise AssertionError('Original22 capture corpus incomplete or reordered')

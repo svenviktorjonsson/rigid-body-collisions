@@ -1,0 +1,32 @@
+{
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "validation": "PASS using exact Fractions of stored IEEE floats",
+  "nonnegative_weights": true,
+  "weighted_target_m_s": 4.9386342780041355e-05,
+  "weighted_tolerance_m_s": 1e-08,
+  "positive_mobility_columns": [
+    {
+      "column": 53,
+      "value": 4.833131949718643e-16,
+      "exact_numerator": "156844098996302601",
+      "exact_denominator": "324518553658426726783156020576256"
+    },
+    {
+      "column": 54,
+      "value": 5.809101037614736e-16,
+      "exact_numerator": "48260123309629443549",
+      "exact_denominator": "83076749736557242056487941267521536"
+    },
+    {
+      "column": 55,
+      "value": 4.967731772245044e-16,
+      "exact_numerator": "322424225938394929",
+      "exact_denominator": "649037107316853453566312041152512"
+    }
+  ],
+  "maximum_response": 5.809101037614736e-16,
+  "minimum_pressure_1_norm_Ns": 84998250951.95053,
+  "bound_exact_numerator": "1075321522629892111418631639775590883",
+  "bound_exact_denominator": "12651101764879500849709056",
+  "interpretation": "For all p>=0 and w=A p-b>=-tolerance, sum(p)>=bound. This is NOT an infeasibility certificate because the configured upper bounds allow that pressure."
+}

@@ -1,0 +1,27 @@
+{
+  "observer_source_commit": "23751e6a29b0c5f8241e16581dd54ac172a80bdf",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "protocol": "Original normal-only projection/passivity/bounds; unresolved feasibility, validated necessary pressure bound",
+  "source_sha256": {
+    "research/translation-position-review/normal_active.py": "4abe068d9552cf86668700c4671efdeade0f0f1cc971a2ba9994347477556d15",
+    "research/translation-position-review/validate_bound.py": "9043a99516b09f2dde8e9ef7f8ac75bf80c5db6360f0a07b0ba6e4536440bd80",
+    "research/translation-position-review/refine_certificate.py": "77ebfdd2a64783d4502cd500cc54e4a6e8b15a3909d839e24808c9bba9ecf28d",
+    "research/translation-position-review/probe.py": "cc4ea4240f4f20f2183c4fb38897a78c933f6a9bea635a41ac09a28e0f1c9328",
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84"
+  },
+  "source_archive_sha256": "1be1d3d0066e3ca0be50aa0ac2d20ea9b73497cffb15e4a0ff76bcd830712ebe",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "limits": {
+    "QP_max_iterations": 3000,
+    "FB_max_evaluations": 3000,
+    "normal_active_max_states": 512,
+    "Farkas_local_correction_limits": [
+      1,
+      10,
+      100,
+      1000
+    ]
+  }
+}

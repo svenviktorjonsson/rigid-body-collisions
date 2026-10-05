@@ -1,0 +1,17 @@
+{
+  "capture": "research/translation-position-diagnostic/results/rejected-normal-system.json",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "pairs": [],
+  "certificate": {
+    "success": false,
+    "message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Infeasible)",
+    "weights": null,
+    "target": null,
+    "mobility_row": null
+  },
+  "primal": {
+    "success": false,
+    "message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Infeasible)",
+    "impulse": null
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "correction_limit": 1.0,
+    "lp_success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  },
+  {
+    "correction_limit": 10.0,
+    "lp_success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  },
+  {
+    "correction_limit": 100.0,
+    "lp_success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  },
+  {
+    "correction_limit": 1000.0,
+    "lp_success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  }
+]
