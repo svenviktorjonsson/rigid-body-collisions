@@ -1,0 +1,50 @@
+{
+  "scope": "Isolated original-law reduced active face search for remaining 21-row velocity component. Inactive normals0/82 fixed exactly zero, active normals1/15/83/84/85 retain unchanged original normal w=0. Enumerate all subsets of active sliding contacts including zero; remaining contacts satisfy exact sticking w_t=0. Linear least-squares elimination affects search only; every full original cone/bounds/passivity/sticking/support gate and native budget-zero gate restored. Rank cutoff1e-13 does not alter original A/b or final acceptance. Retain failures; no trajectory/performance claim.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87"
+  },
+  "component_rows": [
+    0,
+    1,
+    15,
+    99,
+    100,
+    101,
+    102,
+    129,
+    130,
+    82,
+    83,
+    84,
+    85,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270
+  ],
+  "active_normal_rows": [
+    1,
+    15,
+    83,
+    84,
+    85
+  ],
+  "limits": {
+    "raw_evaluations_per_start_method": 2048,
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "angle_offsets": [
+      0,
+      3.141592653589793,
+      1.5707963267948966,
+      -1.5707963267948966
+    ]
+  },
+  "execution": "Single-thread discovery; may run concurrently with untimed world diagnostic."
+}
