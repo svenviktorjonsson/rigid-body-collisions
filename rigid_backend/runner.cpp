@@ -114,7 +114,7 @@ struct BoundaryFilter {
 #ifdef RIGID_BLOCK_BACKEND
 struct BoundaryListener : b2ContactListener {
     BoundaryFilter* filter;
-    double boundaryWork=0,absoluteBoundaryWork=0;
+    double boundaryWork=0,absoluteBoundaryWork=0,frictionImpulseAbs=0;
     long long boundaryImpulsePoints=0;
     explicit BoundaryListener(BoundaryFilter* f):filter(f){}
     void PreSolve(b2Contact* contact,const b2Manifold*) override {
@@ -131,6 +131,7 @@ struct BoundaryListener : b2ContactListener {
         m->pointCount=kept;
     }
     void PostSolve(b2Contact* contact,const b2ContactImpulse* impulses) override {
+        for(int i=0;i<impulses->count;i++)frictionImpulseAbs+=std::abs(double(impulses->tangentImpulses[i]));
         auto* a=contact->GetFixtureA()->GetBody();auto* b=contact->GetFixtureB()->GetBody();
         const bool aBoundary=a->GetType()==b2_kinematicBody&&b->GetType()==b2_dynamicBody;
         const bool bBoundary=b->GetType()==b2_kinematicBody&&a->GetType()==b2_dynamicBody;
@@ -420,6 +421,7 @@ int main() {
 #ifdef RIGID_BLOCK_BACKEND
     std::cout << ",\"boundary_work_J\":" << listener.boundaryWork
               << ",\"absolute_boundary_work_J\":" << listener.absoluteBoundaryWork
+              << ",\"friction_impulse_abs_kg_m_s\":" << listener.frictionImpulseAbs
               << ",\"boundary_impulse_points\":" << listener.boundaryImpulsePoints;
 #endif
     std::cout << ",\"step_s\":" << stepSeconds << ",\"controller_s\":" << controllerSeconds

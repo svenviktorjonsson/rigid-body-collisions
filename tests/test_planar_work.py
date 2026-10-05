@@ -23,6 +23,8 @@ class PlanarBoundaryWork(unittest.TestCase):
                     impulse=result['mass'][0]*(states[-1,0,3:5]-states[0,0,3:5])
                     self.assertGreater(impulse[0],.5)
                     if friction:self.assertGreater(impulse[1],.01)
+                    if friction:self.assertGreater(result['friction_impulse_abs_kg_m_s'],.01)
+                    else:self.assertEqual(result['friction_impulse_abs_kg_m_s'],0.)
                     expected=float(velocity@impulse)
                     self.assertAlmostEqual(result['boundary_work_J'],expected,delta=2e-6)
                     self.assertGreaterEqual(result['absolute_boundary_work_J'],abs(result['boundary_work_J'])-1e-9)
