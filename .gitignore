@@ -35,3 +35,12 @@ research/live-integration-review/run-*/runner
 research/live-integration-review/run-*/translation_combined_checks
 research/live-integration-review/run-*/coulomb_early_checks
 research/live-integration-review/run-*/cmake-no-lapack/
+
+research/new-combined-projection-review/results/replay
+research/new-combined-projection-review/results/controls
+research/new-combined-projection-review/results-v2/replay_v2
+research/new-combined-projection-review/results-v2/controls_v2
+research/new-combined-contact-review/run-*/replay_baseline
+research/new-combined-contact-review/run-*/replay_candidate
+research/new-combined-contact-review/run-*/relation_direct_replay
+research/new-combined-contact-review/run-*/relation_candidate_replay

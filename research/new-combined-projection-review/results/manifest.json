@@ -1,0 +1,26 @@
+{
+  "schema": "bounded-projection-recovery-evidence-manifest-v1",
+  "excluded_local_executables": true,
+  "files_sha256": {
+    "research/new-combined-projection-review/results/FB-jac-scaled.json": "72c63b6b3d682be205430b2938f965ca0923d38d4a7c01b9bb0fec0252a6637c",
+    "research/new-combined-projection-review/results/FB-jac-scaled.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results/FB-jac-scaled.stdout.json": "4dabad979ac950fd14352b5dcff7272b09b9177a6a163cb35ae8ea3fea82d1f1",
+    "research/new-combined-projection-review/results/FB-unscaled.json": "f80345853b6f39e51a58bf19dc73622ceb7ed2d14835b32f4067277c39a39a10",
+    "research/new-combined-projection-review/results/FB-unscaled.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results/FB-unscaled.stdout.json": "41b195431f00ab9c2b965c04fb37494123c9b1ead484985475c25549bd5ee8eb",
+    "research/new-combined-projection-review/results/controls-compile.json": "c3991ae83a52ee88a04ef2104e4b934ce67826c88fd8a8baed6fdf4bcf1ed48f",
+    "research/new-combined-projection-review/results/controls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results/controls.stdout.json": "c7578c162d86c79cee925ff33d263f13a196119bc21b00df04cf457f4218e8ae",
+    "research/new-combined-projection-review/results/independent-audit.json": "1bae53cc63a77765a806cca77ea12922b755f68c66ddb1f16aed2bcc8b8b547a",
+    "research/new-combined-projection-review/results/projection-jac-scaled.json": "3e3ebe289145851f74fcbaca6f004fb1143ac34e9d2bdfc18d69584034c7f95d",
+    "research/new-combined-projection-review/results/projection-jac-scaled.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results/projection-jac-scaled.stdout.json": "bc895917cabdd536d24be9b3aeb9ba76cda6187fdbbbb07c1ac989b191af1a9c",
+    "research/new-combined-projection-review/results/projection-unscaled.json": "e882afadfdc9875bfda7c3b02b43f35917b8b9a2e25214819956bbb769bd77ff",
+    "research/new-combined-projection-review/results/projection-unscaled.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results/projection-unscaled.stdout.json": "b4bf72be56bf7139303ce63d422a198e3bec706eb6e0c046624c85e92ffa7e97",
+    "research/new-combined-projection-review/results/provenance.json": "058c84e721f69b5fa67741c9704a099319c21be515827230f3848e40d17a208e",
+    "research/new-combined-projection-review/results/replay-compile.json": "3a126b9ea8673ee43352c0a0050c7062c849cea2ebb0aa67fd3e444db4666b2c",
+    "research/new-combined-projection-review/results/source.zip": "91e6f49a4d38ec8df0d5422860156bf7b2154c230f9c90fdbba396fa0e0f7e6a",
+    "research/new-combined-projection-review/results/summary.json": "505039101e4e529d7b514cdc4a6a20d04e77c9324b85aaa8091b78212240573c"
+  }
+}
