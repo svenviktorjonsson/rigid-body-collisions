@@ -10,6 +10,7 @@
 #include "translation_combined.h"
 #ifdef SPATIAL_LAPACK_RECOVERY
 #include "projection_more.h"
+#include "null_traction_seed.h"
 #endif
 #include "pressure_release.h"
 #include "normal_null.h"
@@ -44,6 +45,9 @@ struct CoulombStats {
  int early_component_expanded_contacts=0,early_component_svd_calls=0;
  int early_component_iteration_steps=0,early_component_pressure_svd_calls=0;
  int early_component_pressure_attempts=0,early_component_pivot_calls=0;
+#ifdef SPATIAL_LAPACK_RECOVERY
+ int null_seed_attempts=0,null_seed_solves=0,null_seed_declines=0;null_traction_seed::Stats null_seed;
+#endif
  int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,rank_restarts=0,opposing_restarts=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
  normal_pressure::Stats pressure;int pressure_solves=0;
@@ -385,6 +389,19 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    }
   }
   stats.projection_declines++;
+ }
+ // Preserve every previously accepted lane. New bounded search starts only on failure.
+ if(recover&&b.rows()<=4096){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  null_traction_seed::Stats trial_stats;stats.null_seed_attempts++;
+  const bool found=null_traction_seed::solve(A,b,candidate,hi,dep,candidate,tolerance,trial_stats);
+  stats.null_seed.components+=trial_stats.components;stats.null_seed.largest_rows=std::max(stats.null_seed.largest_rows,trial_stats.largest_rows);stats.null_seed.cap_rejections+=trial_stats.cap_rejections;stats.null_seed.seed_attempts+=trial_stats.seed_attempts;stats.null_seed.null_svd_calls+=trial_stats.null_svd_calls;stats.null_seed.seed_svd_calls+=trial_stats.seed_svd_calls;stats.null_seed.iteration_steps+=trial_stats.iteration_steps;stats.null_seed.svd_calls+=trial_stats.svd_calls;stats.null_seed.newton_steps+=trial_stats.newton_steps;stats.null_seed.seed_response_change_max=std::max(stats.null_seed.seed_response_change_max,trial_stats.seed_response_change_max);
+  CoulombStats gate_stats;
+  // This original production gate includes eager cone projection and full passivity.
+  if(found&&coulombIterate(A,b,candidate,lo,hi,dep,0,tolerance,gate_stats)){
+   x=candidate;stats.solves++;stats.null_seed_solves++;stats.last_residual=gate_stats.last_residual;stats.residual_max=std::max(stats.residual_max,gate_stats.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate_stats.passive_change_max);return true;
+  }
+  stats.null_seed_declines++;
  }
 
 #endif

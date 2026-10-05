@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "variant": "results-native-seeds",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "seed": "drop_1",
+      "budget_per_component": 2048,
+      "original_input_sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "candidate_sha256": "196d3046ddf5a444fe04ba11e350bc1ca2c7812b2f3b553cfcb384a1218f6b5e",
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.986491175311192e-09,
+        "circle_violation_scaled_m_s": 2.541052597888914e-09,
+        "sticking_m_s": 9.98649125025095e-09,
+        "support_gap_J": 3.4570121941855354e-09,
+        "passive_bound_J": -2.1732043945655697,
+        "passivity_scale": 4.326346003946549,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "production_budget_zero_accepted": false,
+      "production_residual_m_s": 1.0096363253421043e-08
+    },
+    {
+      "variant": "results-right-cone",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "seed": "drop_36",
+      "budget_per_component": 128,
+      "original_input_sha256": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+      "candidate_sha256": "5ed4dc5e779f81de9de6c754473fe46c2c1feedbb34e8b7f075d163a730e6ea1",
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 7.80507917930423e-09,
+        "circle_violation_scaled_m_s": 1.4511328500557931e-09,
+        "sticking_m_s": 6.369625984500258e-12,
+        "support_gap_J": 1.104697508589507e-12,
+        "passive_bound_J": -0.08098558447831805,
+        "passivity_scale": 1.0811424181111415,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.7763568394002505e-15
+      },
+      "production_budget_zero_accepted": true,
+      "production_residual_m_s": 7.882796066027345e-09
+    },
+    {
+      "variant": "results-right-cone",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "seed": "drop_1",
+      "budget_per_component": 2048,
+      "original_input_sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "candidate_sha256": "9ba762f312f0441690e61c14c17c0d2c86c8c7b4f575577391cc9216981a7da8",
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.971680845221832e-09,
+        "circle_violation_scaled_m_s": 1.508215892822103e-09,
+        "sticking_m_s": 9.971680839026217e-09,
+        "support_gap_J": 1.910310738492538e-09,
+        "passive_bound_J": -2.1732043888969583,
+        "passivity_scale": 4.272469489801487,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "production_budget_zero_accepted": true,
+      "production_residual_m_s": 9.955591113733839e-09
+    }
+  ],
+  "production_replay_sha256": "6650baf9f8513fe7b3b652f8adc245e7c17ff94d668c262c00714dbd7bb4c52f",
+  "scope": "Original full-law instantaneous roots verified, not full trajectory or performance qualification."
+}

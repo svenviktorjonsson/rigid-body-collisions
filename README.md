@@ -270,11 +270,18 @@ Median native gains versus qualified fine references are23.07x,15.65x and7.58x.
 Experimental Float64 planar settings explicitly use1um penetration slop; authored
 geometry and materials remain unchanged. Rotating groups, polygons, boxes and
 hulls remain unqualified. Exact settings, all failures and an independent audit
-of144 retained records accompany the report. Current tests:163 engine tests,
+of189 retained baseline records accompany the report. Current tests:163 engine tests,
 35 subtests, ten contact-model tests and eleven native checks pass.
 
 The [larger position recovery fix](research/large-position-recovery/README.md)
 clears the retained390-row125-hull position system with the original absolute
 gate, exposing512-row position-only numerical search metadata. Velocity search
-defaults and all earlier22 contact response bytes/counters remain unchanged.
+defaults remain384; all earlier22 contact response bytes/counters remain exact.
 Full rotating and irregular-shape trajectory qualification remains open.
+
+The [larger velocity fallback](research/large-contact-recovery/README.md) uses
+bounded native mobility-null seeds after all existing lanes decline. Actual
+162/297-row failures now pass the original production gate;423 rows still
+decline. The repaired125-hull finest history completes0.12s and passes physical
+gates, while its reference refinement remains pending. The separate13-case
+working-baseline and per-case2x performance gate is still open.

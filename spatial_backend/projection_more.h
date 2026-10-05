@@ -14,7 +14,7 @@ struct Budget {int steps=2048,svds=2048;};
 struct Stats {int iteration_steps=0,newton_steps=0,svd_calls=0,budget_rejections=0;std::vector<double>failed_candidate;double residual=0;};
 struct Contact {int k,t,s;double mu,rn,rt;};
 inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const btVectorXu& hi,
- const btAlignedObjectArray<int>& dep,double tolerance,Stats& stats,int step_limit=2048,int svd_limit=2048,bool scale_columns=true,bool projection_merit=true){
+ const btAlignedObjectArray<int>& dep,double tolerance,Stats& stats,int step_limit=2048,int svd_limit=2048,bool scale_columns=true,bool projection_merit=true,bool right_cone_derivative=false){
  Budget budget;budget.steps=std::min(step_limit,2048);budget.svds=std::min(svd_limit,2048);
  const int n=b.rows();if(stats.svd_calls||stats.iteration_steps||stats.newton_steps||stats.budget_rejections||!stats.failed_candidate.empty())return false;if(!restart_validation::valid(A,b,x,hi,dep,tolerance,64)||svd_limit<=0||step_limit<=0)return false;
  std::vector<Contact> contacts;
@@ -53,7 +53,7 @@ inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const bt
        const double D=length>0?cap/length*((u==h?1.:0.)-direction[u]*direction[h]):0;
        value-=D*((j==rows[h]?1.:0.)-c.rt*A(rows[h],j));
       }
-      if(j==c.k&&p[c.k]>0)value-=mu*direction[u];
+      if(j==c.k&&(p[c.k]>0||(right_cone_derivative&&p[c.k]==0)))value-=mu*direction[u];
       (*J)[r*n+j]=value/c.rt;
      }
     }

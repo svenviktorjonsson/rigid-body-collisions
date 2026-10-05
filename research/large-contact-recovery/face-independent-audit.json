@@ -21,6 +21,13 @@
       "accepted": false,
       "native_exit": 2,
       "all_original_trial_laws_recomputed": true
+    },
+    {
+      "directory": "results-reduced-supports",
+      "attempts": 750,
+      "accepted": false,
+      "native_exit": 2,
+      "all_original_trial_laws_recomputed": true
     }
   ],
   "scope": "Candidate archive verification; no full-world or performance qualification."

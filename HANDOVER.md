@@ -4,6 +4,27 @@
 
 Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders from published6b63cb2 are COMPLETE:20 full histories/10 genuine rejections (nine velocity, one translation-only position), no qualified references. Independent state/provenance/rejection audits pass. Preserve outputs; never restart over existing files. Isolated exact-component recovery pilots and rotating planar discovery trials are declared under research/large-contact-recovery and research/rapid-friction/planar-discovery-plan.json. Solver/accuracy remediation precedes performance claims.
 
+## Native larger velocity fallback — October6
+
+Bounded mobility-null traction seeds now integrate after ALL existing lanes
+including the projection tail decline. Full4096/component64 rows, exact graph,
+warm plus six seeds, fresh2048 iteration/SVD caps PER search. Right derivative
+at zero cone radius is isolated to this helper; old projection default unchanged.
+Original eager-cone production gate accepts actual162/297-row saved failures.
+423-row125-hull velocity capture still declines. All23 original replays bypass
+the helper, all prior22 bytes/counters exact;163engine+10contact+11native checks,
+two actual-failure regressions,390-row position and no-LAPACK control pass.
+Read research/large-contact-recovery/README.md and validation/receipt.json.
+Source/binary guards for the earlier completed125-hull run are now historical;
+a preserved88438b8 runner and frozen Git blobs recheck that provenance.
+
+Five finer original9-polygon histories through39.0625ns also fail every original
+refinement edge. Rounded-union seam prototype retains default state bytes but
+fails refinement and one energy gate; neither prototype is adopted. Archives
+and independent audits remain in research/planar-refinement and rounded-boundary.
+Fresh trajectories and all13-case reference qualification remain necessary
+before the requested2x per-case performance gate.
+
 ## Latest larger-case remediation — October6
 
 All30 larger reference attempts are sealed at e945742:20 histories/9 velocity

@@ -5,7 +5,7 @@ import numpy as np
 H=Path(__file__).resolve().parent;ROOT=H.parents[1]
 fn=next(n for n in ast.parse((ROOT/'research/new-combined-contact-review/run-20261005T194211Z/run23.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='external');ns={'np':np};exec(compile(ast.Module(body=[fn],type_ignores=[]),'original-law-audit','exec'),ns)
 report=[]
-for folder,planname in [('results-sliding','sliding-plan.json'),('results-sliding-many','sliding-many-plan.json'),('results-reduced-faces','reduced-face-plan.json')]:
+for folder,planname in [('results-sliding','sliding-plan.json'),('results-sliding-many','sliding-many-plan.json'),('results-reduced-faces','reduced-face-plan.json'),('results-reduced-supports','reduced-support-plan.json')]:
  D=H/folder
  if not (D/'summary.json').exists():continue
  plan=json.loads((H/planname).read_text());path,sha=next(iter(plan['inputs'].items()));assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==sha;d=json.loads((ROOT/path).read_text());A=np.array(d['A']);b=np.array(d['b']);dep=np.array(d['dependencies']);hi=np.array(d['hi']);s=json.loads((D/'summary.json').read_text());assert s['complete']

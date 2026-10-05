@@ -1,0 +1,28 @@
+{
+  "command": [
+    "c++",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-DSPATIAL_LAPACK_RECOVERY=1",
+    "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src",
+    "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/json-src/include",
+    "-I/home/viktor/.cache/vkf-physics-continuation/research/large-contact-recovery/prototype-right-cone",
+    "/home/viktor/.cache/vkf-physics-continuation/research/large-contact-recovery/generated_seed_replay.cpp",
+    "-o",
+    "/home/viktor/.cache/physics-large-generated-seed-20261006/components",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+    "/usr/lib/x86_64-linux-gnu/liblapack.so.3",
+    "/usr/lib/x86_64-linux-gnu/libblas.so.3"
+  ],
+  "exit": 0,
+  "libraries": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "ee9693aadd9792e3a91f28b8dae5202f5a427a724f49245d995046fef57f5386",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "e309079bf5cb52994d47972f879bb1517a2c186ab65be4605a1b5e0fddae1b64",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "c910fdbc39ceabba4863b93715f55c3aae309c4456302d117f0d5cd3c6e8a240",
+    "/usr/lib/x86_64-linux-gnu/liblapack.so.3": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libblas.so.3": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340"
+  }
+}
