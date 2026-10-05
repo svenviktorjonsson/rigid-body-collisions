@@ -1,0 +1,24 @@
+{
+  "command": [
+    "c++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-ffp-contract=off",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+    "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+    "/workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+    "/lib/x86_64-linux-gnu/liblapack.so.3",
+    "/lib/x86_64-linux-gnu/libblas.so.3",
+    "-o",
+    "/workspace/rigid-body-collisions/research/new-combined-projection-review/results/controls"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "In file included from /workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp:2:\n/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h: In member function \u2018virtual bool btDantzigSolver::solveMLCP(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, bool)\u2019:\n/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:187: warning: unused parameter \u2018numIterations\u2019 [-Wunused-parameter]\n   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)\n      |                                                                                                                                                                                       ~~~~^~~~~~~~~~~~~\n/workspace/rigid-body-collisions/build/bullet-inspect/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:207: warning: unused parameter \u2018useSparsity\u2019 [-Wunused-parameter]\n   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)\n      |                                                                                                                                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~\nIn file included from /workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp:4:\n/workspace/rigid-body-collisions/research/new-combined-projection-review/projection_more.h: In lambda function:\n/workspace/rigid-body-collisions/research/new-combined-projection-review/projection_more.h:88:4: warning: this \u2018if\u2019 clause does not guard... [-Wmisleading-indentation]\n   88 |    if(!(radius>0&&std::isfinite(radius)))return false;alphaParameter*=oldRadius/radius;if(!std::isfinite(alphaParameter))return false;\n      |    ^~\n/workspace/rigid-body-collisions/research/new-combined-projection-review/projection_more.h:88:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the \u2018if\u2019\n   88 |    if(!(radius>0&&std::isfinite(radius)))return false;alphaParameter*=oldRadius/radius;if(!std::isfinite(alphaParameter))return false;\n      |                                                       ^~~~~~~~~~~~~~\n/workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp: In lambda function:\n/workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp:10:2: warning: this \u2018if\u2019 clause does not guard... [-Wmisleading-indentation]\n   10 |  if(mode==1)b[0]=-1;if(mode==2)hi[1]=-1;if(mode==3)A.setElem(0,0,std::numeric_limits<double>::quiet_NaN());if(mode==4)dep[1]=n;if(mode==5){A.setElem(0,3,-1);A.setElem(3,0,-1);b[3]=1;for(int i:{1,2,4,5})hi[i]=0;b[1]=0;}\n      |  ^~\n/workspace/rigid-body-collisions/research/new-combined-projection-review/controls.cpp:10:21: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the \u2018if\u2019\n   10 |  if(mode==1)b[0]=-1;if(mode==2)hi[1]=-1;if(mode==3)A.setElem(0,0,std::numeric_limits<double>::quiet_NaN());if(mode==4)dep[1]=n;if(mode==5){A.setElem(0,3,-1);A.setElem(3,0,-1);b[3]=1;for(int i:{1,2,4,5})hi[i]=0;b[1]=0;}\n      |                     ^~\n"
+}

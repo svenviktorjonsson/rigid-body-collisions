@@ -1,0 +1,13 @@
+{
+  "schema": "post-trial-prospective-merit-analysis-v1",
+  "inputs_sha256": {
+    "research/new-combined-projection-review/results/projection-jac-scaled.json": "3e3ebe289145851f74fcbaca6f004fb1143ac34e9d2bdfc18d69584034c7f95d",
+    "research/new-combined-projection-review/results/FB-jac-scaled.json": "72c63b6b3d682be205430b2938f965ca0923d38d4a7c01b9bb0fec0252a6637c",
+    "research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c"
+  },
+  "calculations": [
+    "Compare projection-normal min(Akk*pn,wn) with Fischer-Burmeister frominitialandtwostalledwarmcandidates.",
+    "AnalyticJ singularvalues/rank, gradients and percontactmode residuals; no new solverexecution."
+  ],
+  "physical_parameters_unchanged": true
+}

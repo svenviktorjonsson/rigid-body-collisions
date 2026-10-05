@@ -1,0 +1,20 @@
+{
+  "schema": "bounded-projection-recovery-evidence-manifest-v1",
+  "excluded_local_executables": true,
+  "files_sha256": {
+    "research/new-combined-projection-review/results-v2/controls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results-v2/controls.stdout.json": "c7578c162d86c79cee925ff33d263f13a196119bc21b00df04cf457f4218e8ae",
+    "research/new-combined-projection-review/results-v2/controls_v2-compile.json": "a170832a29bca97fba8805cfaaf653c90aa24ea6aefbc82ef532cbe5bf43ba83",
+    "research/new-combined-projection-review/results-v2/exact-components-global-1024.json": "2f3b8c4c8ea902f0578f284f35c3a271b784f60299c866b800200440898a6b2a",
+    "research/new-combined-projection-review/results-v2/exact-components-global-1024.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results-v2/exact-components-global-1024.stdout.json": "f5b7de71e5ac159873555061d0ef8bbc59549b972f1c05f39524b6e48fa9feee",
+    "research/new-combined-projection-review/results-v2/independent-audit.json": "2bb5ec7c14a26cbd7fe5d5b55208952da00e2dd49b9221121bea183d7f3382c4",
+    "research/new-combined-projection-review/results-v2/projection-jac-scaled-2048.json": "c139432f882d0c97caa8eef977cbdf10391f891f9a46c4dd89d7a68ecfc5cc05",
+    "research/new-combined-projection-review/results-v2/projection-jac-scaled-2048.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/new-combined-projection-review/results-v2/projection-jac-scaled-2048.stdout.json": "b551babfb0ff8f66f384fa9609acf547a24e9b02812c8cfd13efeffb50d1c687",
+    "research/new-combined-projection-review/results-v2/provenance.json": "37868b242da968ab5d33243f44e1034dfd04c01cc2f381c3828b7c848006aafb",
+    "research/new-combined-projection-review/results-v2/replay_v2-compile.json": "0d507ce3222fe2f5f326328078d02b277804a57366dccc7b8c32a4e1183c9e14",
+    "research/new-combined-projection-review/results-v2/source.zip": "44c1729e985b66c6a9e6550b6732263a4dffdb9a590522da197e9a0941246ced",
+    "research/new-combined-projection-review/results-v2/summary.json": "d90f79626a519d7f5bea2d4ddc3f213f06780da32aa2aa3b7c0bfe356fb15cab"
+  }
+}

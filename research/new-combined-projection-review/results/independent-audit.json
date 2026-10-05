@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "source_commit": "877023f2341c682a325481c4c7b9e58f9ef09ed3",
+  "controls_passed": 9,
+  "rejected_trials_verified": 4,
+  "strict_new_capture_accepted": false,
+  "records": [
+    {
+      "label": "projection-jac-scaled",
+      "recomputed_residual_m_s": 1.4976114064780914e-06,
+      "svd_calls": 1024,
+      "decline_preserves_input": true
+    },
+    {
+      "label": "projection-unscaled",
+      "recomputed_residual_m_s": 1.51833574603948e-06,
+      "svd_calls": 1024,
+      "decline_preserves_input": true
+    },
+    {
+      "label": "FB-jac-scaled",
+      "recomputed_residual_m_s": 1.4976275708336572e-06,
+      "svd_calls": 1024,
+      "decline_preserves_input": true
+    },
+    {
+      "label": "FB-unscaled",
+      "recomputed_residual_m_s": 1.5183526999934934e-06,
+      "svd_calls": 1024,
+      "decline_preserves_input": true
+    }
+  ],
+  "no_physical_law_change": true,
+  "no_trajectory_qualification": true
+}
