@@ -1,0 +1,40 @@
+{
+  "execution_source_commit": "23751e6a29b0c5f8241e16581dd54ac172a80bdf",
+  "source_hashes": {
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "research/translation-position-diagnostic/plan.json": "f16c09c66c2e9f847de529ab7dd8e8885fe790b5e3963a5b411f9085b08da02f",
+    "research/translation-position-diagnostic/runner.py": "a49ebfb76d96130825e991062e9e4eee24cd51f1fcd720a16e24a72a55215264",
+    "spatial_backend/CMakeLists.txt": "849c2d3462885467ae98228f64ae80ecec8880d7df4d818946fa006d319d4d66",
+    "spatial_backend/coulomb.h": "c6d298c141495e925be57d9f1c28b0f6b593b8c2ef25d5725e6b5a6edd0026f3",
+    "spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "spatial_backend/runner.cpp": "4655d0cb123bfc618c0bc96d812df02c82e8920f8d896e134cf7eb2842ac02f7",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "spatial_backend/translation_split.h": "669b060f2c0ce95d866f9712c1351ba65eb81712fdd9d057355cb076dcfb2886",
+    "spatial_engine.py": "d7d0c9b6cd59e0a7697024b372874446a7fb1582873f63edf80e8c1ec9492245"
+  },
+  "binary_sha256": "757a4fa334b300e6db81d90718d1f5289b2e6941b5e0eaf68ef34c8da5004c4c",
+  "runtime_library_hashes": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127"
+  },
+  "plan_sha256": "f16c09c66c2e9f847de529ab7dd8e8885fe790b5e3963a5b411f9085b08da02f"
+}

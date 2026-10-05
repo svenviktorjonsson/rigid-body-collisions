@@ -1,0 +1,19 @@
+{
+  "production_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "capture_sha256": "87c8637e8df9bbcbe085c184b27e012808afcc897d26547bdf53ae5312c49d7b",
+  "protocol": "Captured-system diagnostics; original all-row circular/finite-passivity gates, no completed trajectory claim",
+  "source_sha256": {
+    "research/translation-contact243-review/component.py": "24f1093abe2de823abacd5976aa54bd06aaef58672406b27c68a674b7d9ad90c",
+    "research/translation-contact243-review/ranked_release.py": "cb87424112c302535663a562f1ce58e6896f863794ac27ce54fe8d7e0bf3170c",
+    "research/translation-contact243-review/audit.py": "f2538291d6d5ff6ecf8d51e3a9cc9308ddeef1803ddc36ddc6fb65ed5467f0fa",
+    "research/translation-contact243-review/native_seed_ranked_release.py": "d34a80f57aca446df8547993bc6464af173863c50bf5d7c92a57b92ac7ed6e48",
+    "research/translation-contact243-review/release.py": "fc7ece36f64109124810d49cdaf867948fba07d3fb094a462b51480ca3463a83",
+    "research/translation-contact243-review/probe.py": "8c205c2546610e4595af041f6e373fbd6b2da13bb9b55baaf30b7858dc4925c6",
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84"
+  },
+  "archive_sha256": "f95d6991c666ed2cdd632740598a6ecf60fb057a0a6eaa0a56c633beaf2ab4ae",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "maximum_nfev_per_trial": 1000
+}
