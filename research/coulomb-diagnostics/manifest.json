@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "scope": "Frozen contact systems only; not whole-world hull trajectory accuracy qualification.",
+  "native_capture_source_commit": "0f17e758c731da1cf7d32f4e5f7ba6233d539951",
+  "acceptance_tolerance_m_s": 1e-08,
+  "physical_change": "none; no compliance, restitution or friction change",
+  "sha256": {
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84",
+    "tests/test_coulomb_diagnostics.py": "9d02ed6f7aabe0e709e4f99d7a0c1383dac06716d450b5ff9da13e82afc0af6e",
+    "research/coulomb-diagnostics/hull42-rejected.json": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+    "research/coulomb-diagnostics/hull7301-rejected.json": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f",
+    "research/coulomb-diagnostics/hull42-recovery.json": "77f29465f46983826ccee8a46096638234af4f14aef6ab69cd68493f220e85d4",
+    "research/coulomb-diagnostics/hull7301-recovery.json": "7d66db1718b15b50569c8adfd1e454c851f7b32fe0ec8e36eb98bfe9bb7ec579"
+  }
+}
