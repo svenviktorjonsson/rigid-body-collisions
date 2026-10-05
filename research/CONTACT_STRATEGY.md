@@ -151,3 +151,19 @@ proves the captured74-row translation-only pose-repair equations inconsistent.
 That rejection cannot be fixed by more iterations under the same bounded repair
 model. A revised geometric or rollback/refinement protocol must explicitly
 account for pose-induced energy/momentum effects and qualify fresh trajectories.
+
+`split_translation_gap` explicitly replaces the zero-closing position constraint
+on separated cached contacts with their signed available clearance divided by the
+internal timestep. Within-slop and penetrating targets remain unchanged; physical
+velocity rows and material coefficients retain their original law. The actual
+74-row saved system passes the existing native repair at 1.79e-12 m/s, with
+independently reconstructed translations and a geometry re-query. Its old bounded
+infeasibility certificate remains valid for the old targets.
+
+The numerical pose ledger uses the final physical velocity, including applied
+velocity and external-force increments, to record displacement cross momentum.
+It separately reports signed and absolute gravity-potential and orbital-momentum
+changes. These corrections are disclosed, not subtracted from the original energy
+gate. The prospective six-run hull study keeps the original bodies, wall schedules,
+friction, tolerances and both refinement edges. Accepted partial frames cannot
+qualify a trajectory. Source freeze: 108a9bb4c7899f75d760b27b179cc56557904a08.

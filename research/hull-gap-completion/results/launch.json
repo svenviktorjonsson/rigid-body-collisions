@@ -1,0 +1,20 @@
+{
+  "schema": "native-gap-six-study-launch-v1",
+  "pid": 72620,
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "started_utc": "2026-10-05T18:49:25Z",
+  "command": [
+    "python",
+    "/workspace/rigid-body-collisions/research/hull-gap-completion/runner.py",
+    "--source-commit",
+    "108a9bb4c7899f75d760b27b179cc56557904a08"
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "binary_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+  "detached_orchestrator_count": 1
+}

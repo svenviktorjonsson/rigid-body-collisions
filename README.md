@@ -129,6 +129,19 @@ This is a numerical pose-repair defect, not a proof that the physical geometry o
 Coulomb velocity law is infeasible. A revised repair/refinement protocol requires
 fresh complete trajectories and energy/momentum accounting.
 
+The opt-in `position_stabilization="split_translation_gap"` permits position
+repair to consume the available clearance at separated cached contacts. Physical
+normal/tangent impulse equations and penetrating repair targets stay unchanged.
+The existing native solver passes the revised saved 74-row problem at
+**1.79e-12 m/s**, with no angular correction and no worsening contact pair in an
+independent geometry re-query. This is a declared change to the numerical repair,
+not a solution of the old inconsistent equations. Native output and atomic
+progress disclose numerical gravitational-energy and orbital-momentum changes.
+The [six full-trajectory protocol](research/hull-gap-completion) is frozen at
+`108a9bb4c7899f75d760b27b179cc56557904a08`; its results require independent physical
+and refinement checks before qualification. The integration passes 160 Python
+regressions and native translation checks.
+
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
 contact chains and continuous collision detection through two pinned Box2D
