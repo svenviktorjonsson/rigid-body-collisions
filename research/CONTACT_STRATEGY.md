@@ -69,7 +69,7 @@ public Python/C++ evidence, not a completed native/WASM/GPU language port.
 The native recovery operates only after iterative exhaustion and is optional.
 It searches neighboring friction faces through a certified mechanical null
 direction, checks the resulting velocity change, and accepts only the unchanged
-full contact residual and finite passivity bound. Its work is capped at 256
+full contact residual and finite passivity bound. Its work is capped at 384
 rows and 256 numerical SVD calls. Two captured random-hull systems recover;
 the separate six-attempt whole-trajectory follow-up still rejects. Preserve
 that distinction when choosing or porting this method.

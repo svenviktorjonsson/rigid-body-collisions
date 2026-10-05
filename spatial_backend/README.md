@@ -153,7 +153,7 @@ law. A snapshot describes one failed contact solve, not a completed trajectory.
 Circular-contact recovery now keeps the same isotropic law and residual/passivity
 gates while trying minimum-norm semismooth Newton steps, mechanically neutral
 pressure redistribution to adjacent friction faces, then a cold Newton restart.
-The usual block iteration runs first. Recovery is limited to 256 rows, 64 Newton
+The usual block iteration runs first. Recovery is limited to 384 rows, 64 Newton
 steps per attempt, four null directions for each of two starting faces, and both
 signs, with a global ceiling of 256 SVD calls (each at most 64 Jacobi sweeps); it requires an iteration budget of at least 64. It adds a bounded numerical
 budget after the ordinary iteration budget. `contact_recovery=False` disables it.

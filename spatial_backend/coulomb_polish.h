@@ -5,7 +5,7 @@
 namespace circular_polish {
 struct Contact {int k,t,s;double mu,rn,rt;};
 inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const btVectorXu& hi,const btAlignedObjectArray<int>& dep,double tolerance,CoulombStats& stats){
- const int n=b.rows();if(n>256)return false;
+ const int n=b.rows();if(n>384)return false;
  int remaining_svd_calls=256;
  std::vector<Contact> contacts;
  for(int k=0;k<n;k++)if(dep[k]<0){std::vector<int> ts;for(int j=0;j<n;j++)if(dep[j]==k)ts.push_back(j);int t=ts[0],s=ts[1];double a=A(t,t),d=A(s,s),off=A(t,s);contacts.push_back({k,t,s,static_cast<double>(hi[t]),1/A(k,k),2/(a+d+std::hypot(a-d,2*off))});}

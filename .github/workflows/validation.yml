@@ -32,6 +32,7 @@ jobs:
           build/spatial/spatial_friction_checks
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull42-rejected.json > /tmp/replayed-hull42.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-rejected.json > /tmp/replayed-hull7301.json
+          build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-later-rejected.json > /tmp/replayed-hull7301-later.json
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend
       - name: Engine and benchmark-tool regressions
