@@ -51,6 +51,11 @@ jobs:
         run: python -m unittest discover -s research -p 'test_*.py' -v
       - name: Verify public source integrity and provenance
         run: |
+          python research/translation-gap-position-review/audit.py
+          python research/translation-gap-position-review/audit_native.py
+          python research/translation-first256-review/audit_v2.py
+          python -m research.audit_hull_gap_completion --plan-only
+          python -m research.hull-gap-completion.auditor_checks
           python research/translation-position-certificate/verify.py
           python -m unittest discover -s research/translation-position-certificate -p 'test_*.py' -v
           python -m research.benchmark_tools audit

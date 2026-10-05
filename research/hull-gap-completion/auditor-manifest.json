@@ -1,0 +1,14 @@
+{
+  "schema": "prospective-gap-auditor-source-and-controls-v1",
+  "native_execution": false,
+  "physics_or_trajectory_qualification": false,
+  "files": {
+    "research/audit_hull_gap_completion.py": "d8a9884e7f2101c60853ba3d7863bd90c63631f9244ae0434465b3cd9a5f6a18",
+    "research/audit_shared_hulls.py": "614e531c0717a883f95df15b46c580816b53f4af0680588f621759bd417ff9e9",
+    "research/audit_hull_active_completion.py": "cf352db58c186589baef9e8aabf9f586d919d24a2e4b178024cf26beac03adfb",
+    "research/hull-gap-completion/auditor_checks.py": "2f09edba989fbfe3e057cc5baf98e73449b7388ad6adc39a26d6317b3576f102",
+    "research/hull-gap-completion/auditor-checks.log": "963d61225d7408be48e01ae1a91f2880e177344b554fd3c836c4ed6f3dbd55e7",
+    "research/hull-gap-completion/auditor-checks-initial-failure.json": "27f21b092fe6f2cf7f45eceb601931bbace2e972c92b9ad2faba0efb1a88da15",
+    "research/hull-gap-completion/AUDIT.md": "aff089c503042e7f22674726061c414b7e159cf24e9c2a3d150055fee9257353"
+  }
+}

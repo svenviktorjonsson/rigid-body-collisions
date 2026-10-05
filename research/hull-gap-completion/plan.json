@@ -1,0 +1,97 @@
+{
+  "purpose": "Prospective six full hull trajectories with signed-gap translation-only position repair",
+  "dt_s": 0.01,
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split_translation_gap",
+    "primary_steps": 4,
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "candidate_repetitions": 0,
+  "candidates": {},
+  "scenes": [
+    {
+      "id": "fast_shake8_hulls42",
+      "side": 2,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 0,
+      "seed": 42,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    },
+    {
+      "id": "fast_rotate_shake27_hulls7301",
+      "side": 3,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 10,
+      "seed": 7301,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    }
+  ],
+  "scope": "Same original authored bodies, geometry, material, gravity, wall schedules, full inertia and original physical/refinement gates. Signed-gap translation-only numerical repair replaces the baseline zero-closing constraint on separated position rows. Numerical gravity-potential and orbital-angular-momentum repair effects remain disclosed and cannot be interpreted as physical restitution or local passivity. Original74-row translation-only certified rejection remains unchanged; a changed position-target solve is a different declared numerical protocol.",
+  "baseline_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "baseline_plan": "research/hull-translation-completion/plan.json",
+  "baseline_scenes": "research/hull-translation-completion/results/scenes.json",
+  "changed_discretization": "Separated normal POSITION rows permit consuming their available signed clearance; unchanged penetrating split targets, physical velocity contact rows and shared contact points. No angular pose correction.",
+  "execution_rule": "Root must commit and publish numerical integration, this plan and runner, and declare the native build ready before execution. Mandatory exact40-character source SHA; guard committed source bytes, executable and runtime libraries before/after each attempt; preserve every outcome, accepted prefix, actual rejection and observed interruption. No undeclared retry or skipped refinement level.",
+  "performance_scope": "Costs are descriptive under recorded concurrent workload, not a controlled speed-ranking experiment.",
+  "contact_point_policy": "shared",
+  "paired_shared_plan": "research/shared-hull-followup/plan.json",
+  "declared_numerical_change": {
+    "position_stabilization": {
+      "baseline": "split_translation",
+      "candidate": "split_translation_gap"
+    }
+  },
+  "gap_rule": "Only separated normal POSITION rows use target -max(distance-contact_slop,0)/internal_timestep. Penetrating original bSplit targets and within-slop zero remain unchanged. Physical normal/tangent impulse rows retain their original equations.",
+  "native_ledger_fields": [
+    "translation_pose_ledger_updates",
+    "translation_pose_displacement_max_m",
+    "translation_pose_potential_change_J",
+    "translation_pose_absolute_potential_change_J",
+    "translation_pose_orbital_change_kg_m2_s",
+    "translation_pose_absolute_orbital_change_kg_m2_s"
+  ],
+  "ledger_scope": "Native pose ledger uses final physical linear velocity, including delta velocity and external force impulse, for displacement cross momentum. Preserve signed and accumulated absolute gravitational potential/orbital changes in final results and every available native prefix; these are descriptive numerical repair effects, not additional permissive physics gates.",
+  "baseline_artifact_hashes": {
+    "research/hull-translation-completion/plan.json": "2d921b75a62190f84e02c2e3caaaebd511660e012819ad97bdbc4cac81c595c3",
+    "research/hull-translation-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-translation-completion/results/traces.zip": "576bbb9112854614f75e4c7070a08f062d3d964bd0f6c8841a4513c61fb6ce7f",
+    "research/hull-translation-completion/results/execution-source.zip": "2b2de09cc434c8a4c97c6a5a12ddf07cba96267f3320d436d9a86cb8a35ab4c9"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  }
+}

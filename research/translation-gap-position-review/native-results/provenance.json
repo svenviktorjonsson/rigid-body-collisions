@@ -1,0 +1,82 @@
+{
+  "execution_source_commit": "984ee6d0c9bfb356646ee042f897769ed34607cb",
+  "source_sha256": {
+    "research/translation-gap-position-review/native_replay.cpp": "dbd910c8a2756c86790f698cfc0e0c89f8cdbbe0358f03b6afedcbe209ce1315",
+    "research/translation-gap-position-review/frozen-c465/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "research/translation-gap-position-review/frozen-c465/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "research/translation-gap-position-review/frozen-c465/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "research/translation-gap-position-review/frozen-c465/translation_split.h": "669b060f2c0ce95d866f9712c1351ba65eb81712fdd9d057355cb076dcfb2886",
+    "research/translation-position-geometry-review/requery.cpp": "9c011710747592f26f55a6df326db930dabcf9d9897d5006039384648ffa4147",
+    "research/translation-gap-position-review/native_runner.py": "77795e942f65dc6657c87fa74d0751556b3e9aca2dcf64ba6ced13e19b62b384",
+    "research/translation-gap-position-review/native-plan.json": "86b498007edc80d1ab5fb1a021a4fa1ea4c84671418166ce6c76ef54c5c9b03d",
+    "research/translation-gap-position-review/plan.json": "67edba700970e468a6efaad1fc7187f5011a9b580186883ab457bced0f0c05ff"
+  },
+  "frozen_header_origin": {
+    "research/translation-gap-position-review/frozen-c465/translation_split.h": {
+      "original_path": "spatial_backend/translation_split.h",
+      "source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+      "sha256": "669b060f2c0ce95d866f9712c1351ba65eb81712fdd9d057355cb076dcfb2886"
+    },
+    "research/translation-gap-position-review/frozen-c465/normal_qp.h": {
+      "original_path": "spatial_backend/normal_qp.h",
+      "source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+      "sha256": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63"
+    },
+    "research/translation-gap-position-review/frozen-c465/normal_null.h": {
+      "original_path": "spatial_backend/normal_null.h",
+      "source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+      "sha256": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa"
+    },
+    "research/translation-gap-position-review/frozen-c465/newton_linear.h": {
+      "original_path": "spatial_backend/newton_linear.h",
+      "source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+      "sha256": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2"
+    }
+  },
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "compiler_commands": [
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "/workspace/rigid-body-collisions/research/translation-gap-position-review/native_replay.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "-o",
+      "/workspace/rigid-body-collisions/research/translation-gap-position-review/native-results/native_replay"
+    ],
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "/workspace/rigid-body-collisions/research/translation-position-geometry-review/requery.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "-o",
+      "/workspace/rigid-body-collisions/research/translation-gap-position-review/native-results/geometry_requery"
+    ]
+  ],
+  "compiler_version": "c++ (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "binary_hashes": {
+    "/workspace/rigid-body-collisions/research/translation-gap-position-review/native-results/native_replay": "5f0b067dfecb58665f18f49152a73aaf0f911abfddcf123bed4ef3aed3dc655a",
+    "/workspace/rigid-body-collisions/research/translation-gap-position-review/native-results/geometry_requery": "d3578a493243e037260878c53240d3ed58780acb4b5ee22aa3920c324e0c29a0"
+  },
+  "dependency_hashes": {
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+  }
+}

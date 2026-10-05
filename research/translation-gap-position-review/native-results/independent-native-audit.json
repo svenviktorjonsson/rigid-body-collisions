@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "native_exit_code": 0,
+  "native_stderr": "",
+  "geometry_exit_code": 0,
+  "geometry_stderr": "",
+  "original_native_declined": true,
+  "original_residual_m_s": 0.00010607115809007689,
+  "independent_prospective_residual_m_s": 1.7882564550329217e-12,
+  "independent_passive_bound_J": -0.0036815545432973803,
+  "bounds_passed": true,
+  "all74_independent_gates_passed": true,
+  "largest_pair_gap_worsening_m": 0.0,
+  "max_penetration_before_m": 3.49406323281252e-08,
+  "max_penetration_after_m": 2.7952505826800037e-08,
+  "scope": "Prospective signed-gap position policy only. Original translation policy remains certified rejected; no full trajectory qualification."
+}

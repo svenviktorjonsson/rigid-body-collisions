@@ -1,0 +1,9 @@
+{
+  "event": "actual_signal_resume",
+  "utc": "2026-10-05T18:13:54Z",
+  "publication_checkpoint": "c05ce01074a932c0e9f357f5064a8fdf29a84f36",
+  "runner_pid": 68031,
+  "native_pid": 68052,
+  "completed_rows_at_pause": 108,
+  "timing_ranking_qualified": false
+}

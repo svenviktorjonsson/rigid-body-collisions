@@ -111,6 +111,32 @@ class Coulomb3D(unittest.TestCase):
             self.assertEqual(path.read_bytes(),original)
             with self.assertRaises(ValueError):run(scene,solver='sequential',rejected_contact_path=Path(directory)/'other.json')
 
+    def test_gap_pose_policy_preserves_spin_and_accounts_gravity_repair(self):
+        scene=floor_ball([0,0,0],duration=1e-4,gravity=9.81)
+        scene['bodies'][1]['position'][2]=.1-5e-5
+        scene['bodies'][1]['omega']=[0,0,10]
+        with tempfile.TemporaryDirectory() as directory:
+            checkpoint=Path(directory)/'progress.json'
+            result=self.simulate(scene,dt=1e-4,primary_steps=1,travel_fraction=0,
+                                 position_stabilization='split_translation_gap',
+                                 progress_checkpoint_path=checkpoint)
+            prefix=json.loads(checkpoint.read_text())
+        before,after=np.asarray(result['states'])[:,1]
+        np.testing.assert_allclose(after[10:13],[0,0,10],atol=1e-12)
+        np.testing.assert_allclose(after[7:10],0,atol=1e-12)
+        self.assertAlmostEqual(energy(result)[1],energy(result)[0],delta=1e-12)
+        delta_z=after[2]-before[2]
+        self.assertGreater(delta_z,0)
+        expected=result['mass'][1]*9.81*delta_z
+        self.assertAlmostEqual(result['translation_pose_potential_change_J'],expected,delta=1e-12)
+        self.assertLess(result['translation_split_residual_max_m_s'],1e-8)
+        np.testing.assert_allclose(result['translation_pose_orbital_change_kg_m2_s'],0,atol=1e-12)
+        self.assertTrue(prefix['complete'])
+        for key in result:
+            if key.startswith('translation_pose_'):
+                self.assertEqual(prefix[key],result[key])
+        self.assertEqual(result['numerical_model']['position_stabilization'],'split_translation_gap')
+
     def test_profile_rejects_unsupported_material_and_phase(self):
         scene=floor_ball([1,0,-2]);scene['bodies'][1]['restitution']=.5
         with self.assertRaises(ValueError):self.simulate(scene)

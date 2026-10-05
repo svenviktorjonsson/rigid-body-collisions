@@ -92,10 +92,11 @@ def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None,output_path=
   assert plan['common']==baseline['common']
  else:
   # Explicit prospective repair variant; historical callers retain exact controls.
-  assert position_stabilization=='split_translation' and baseline['common']['position_stabilization']=='split'
+  previous={'split_translation':'split','split_translation_gap':'split_translation'}
+  assert position_stabilization in previous and baseline['common']['position_stabilization']==previous[position_stabilization]
   expected_common=dict(baseline['common']);expected_common['position_stabilization']=position_stabilization
   assert plan['common']==expected_common
-  assert plan['declared_numerical_change']=={'position_stabilization':{'baseline':'split','candidate':'split_translation'}}
+  assert plan['declared_numerical_change']=={'position_stabilization':{'baseline':previous[position_stabilization],'candidate':position_stabilization}}
  for key in ['dt_s','trajectory_budget','physical_gates','reference_rule','scenes']:assert plan[key]==baseline[key]
  assert scenes==oldscenes and plan['contact_point_policy']=='shared'
  expected={f'{c["id"]}/reference_{i}.json' for c in plan['scenes'] for i in range(3)};histories=0;rejections=[];receipts={}
@@ -121,13 +122,29 @@ def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None,output_path=
       continue
      diagnostic=summary['rejection_diagnostics'][key];dump=directory/diagnostic['path'];assert sha(dump.read_bytes())==diagnostic['sha256']
      snapshot=json.loads(dump.read_text());assert snapshot['tolerance_m_s']==plan['common']['contact_tolerance_m_s'] and snapshot['residual_m_s']>snapshot['tolerance_m_s']
-     if snapshot['phase']=='position':
+     if snapshot['phase']=='position_translation':
+      # Pure normal rows are emitted only by the explicitly declared new
+      # translation-gap study, never inferred for historical callers.
+      assert position_stabilization=='split_translation_gap'
+      assert snapshot['schema']=='normal-only-position-rejection-v1'
+      assert result['rejected']=='Translation-only position projection failed; repair initial overlap or refine timestep'
+      n=len(snapshot['b']);assert n>0
+      for vector in ('b','p','lo','hi'):
+       values=np.asarray(snapshot[vector],dtype=float);assert values.shape==(n,) and np.isfinite(values).all()
+      assert snapshot['dependencies']==[-1]*n and snapshot['lo']==[0]*n
+      assert np.all(np.asarray(snapshot['hi'])>0)
+      assert np.isfinite(snapshot['internal_dt_s']) and snapshot['internal_dt_s']>0
+      assert snapshot['iteration_budget']==plan['common']['iterations']
+     elif snapshot['phase']=='position':
       assert result['rejected'].startswith('Normal-only position projection residual failed')
      else:
       assert snapshot['phase']=='velocity' and result['rejected'].startswith('Coulomb residual gate failed') and 'no friction-law fallback' in result['rejected']
      assert snapshot['phase']==diagnostic['phase'] and len(snapshot['b'])==diagnostic['rows']
      A=np.asarray(snapshot['A']);assert A.shape==(len(snapshot['b']),)*2 and np.isfinite(A).all() and np.allclose(A,A.T,rtol=1e-12,atol=1e-12)
-     rejections.append(dict(scene=name,lane=lane,fraction=fraction,rows=len(snapshot['b']),residual_m_s=snapshot['residual_m_s'],reason=result['rejected']))
+     if snapshot['phase']=='position_translation':assert np.all(np.diag(A)>0)
+     rejection=dict(scene=name,lane=lane,fraction=fraction,rows=len(snapshot['b']),residual_m_s=snapshot['residual_m_s'],reason=result['rejected'])
+     if position_stabilization=='split_translation_gap':rejection['phase']=snapshot['phase']
+     rejections.append(rejection)
     else:
      histories+=1;model=result['numerical_model'];assert model['contact_point_policy']==result['contact_point_policy']=='shared'
      for key2,value in plan['common'].items():

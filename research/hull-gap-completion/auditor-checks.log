@@ -1,0 +1,15 @@
+Shared hull audit PASS: 2 histories; 4 retained rejections; 0 qualified references
+Shared hull audit PASS: 3 histories; 3 retained rejections; 0 qualified references
+{
+  "schema": "gap-auditor-controls-v1",
+  "controls": [
+    "finite/count/vector/triangle/zero-update ledger controls PASS",
+    "finite/nonnegative unchanged strict position projection residual controls PASS",
+    "original energy/contact/refinement/declaration controls PASS",
+    "partial accounting never qualifies and final accounting requires all snapshots/checkpoints PASS",
+    "hull-active-completion original physical gates and both refinement edges unchanged PASS",
+    "hull-translation-completion original physical gates and both refinement edges unchanged PASS"
+  ],
+  "native_execution": false,
+  "historical_evidence_mutated": false
+}

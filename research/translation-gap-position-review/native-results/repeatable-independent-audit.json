@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "execution_source_commit": "984ee6d0c9bfb356646ee042f897769ed34607cb",
+  "existing_solver_header_source": "c465f8556ae905f69908eb3fb1427db50737d244",
+  "original_declined": true,
+  "all74_residual_m_s": 1.7882564550329217e-12,
+  "passive_correction_bound_J": -0.0036815545432973803,
+  "pose_reconstruction_error_m": 0.0,
+  "pair_worsening_m": 0.0,
+  "duplicate_archive_entries": {
+    "research/translation-gap-position-review/native_runner.py": 2
+  },
+  "duplicates_byte_verified": true,
+  "trajectory_qualified": false
+}

@@ -296,7 +296,18 @@ protected:
   int constraint_count,const btContactSolverInfo& info,btIDebugDraw* debug) override {
   auto result=RecordedMLCP::solveGroupCacheFriendlyIterations(bodies,count,manifolds,
       manifold_count,constraints,constraint_count,info,debug);
-  if(translation_split&&info.m_splitImpulse)clearPositionTurns(m_tmpSolverBodyPool);
+  if(translation_split&&info.m_splitImpulse){
+   translation_pose_ledger_updates++;
+   for(int i=0;i<m_tmpSolverBodyPool.size();i++){
+    auto change=translationPoseChange(m_tmpSolverBodyPool[i],info.m_timeStep);
+    translation_pose_displacement_max_m=std::max(translation_pose_displacement_max_m,static_cast<double>(change.displacement.length()));
+    translation_pose_potential_change_J+=change.potential_energy;
+    translation_pose_absolute_potential_change_J+=std::abs(change.potential_energy);
+    translation_pose_orbital_change+=change.orbital_momentum;
+    translation_pose_absolute_orbital_change+=change.orbital_momentum.length();
+   }
+   clearPositionTurns(m_tmpSolverBodyPool);
+  }
   return result;
  }
  void transportContactRows(){
@@ -324,6 +335,7 @@ protected:
    auto* cp=static_cast<btManifoldPoint*>(m_allConstraintPtrArray[i]->m_originalContactPoint);
    if(cp&&cp->getDistance()>0&&cp->getDistance()<=contact_slop_m)m_b[i]+=cp->getDistance()/info.m_timeStep;
    if(cp&&std::abs(cp->getDistance())<=contact_slop_m)m_bSplit[i]=0;
+   if(translation_clearance&&cp)m_bSplit[i]=translationGapTarget(cp->getDistance(),info.m_timeStep,contact_slop_m,m_bSplit[i]);
   }
   std::vector<double> rejected;
   if(!coulombSolve(m_A,m_b,m_x,m_lo,m_hi,m_limitDependencies,info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr,recovery_enabled))
@@ -367,6 +379,10 @@ public:
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
  bool recovery_enabled=true,shared_contact_point=true;
+ bool translation_clearance=false;
+ unsigned long long translation_pose_ledger_updates=0;
+ double translation_pose_displacement_max_m=0,translation_pose_potential_change_J=0,translation_pose_absolute_potential_change_J=0,translation_pose_absolute_orbital_change=0;
+ btVector3 translation_pose_orbital_change{0,0,0};
  bool translation_split=false;int translation_split_solves=0;double translation_split_residual_max=0;
  unsigned long long shared_point_rows=0;double shared_point_transport_max_m=0;
  double tolerance=1e-8,contact_slop_m=1e-9,gyro_correction_max=0;CoulombStats stats,position_stats;

@@ -1,0 +1,30 @@
+{
+  "schema": "first256-paired-captured-manifest-v1",
+  "files": {
+    "README.md": "20fd72f1fb85802ea83a0f6d0837efedf9e14204034301c055a9bc0573f2d958",
+    "audit-erratum-plan.json": "c39883b6c3f2c7ca67aa8a103cd90b2092bcab0f4b827025ebab870d952c5763",
+    "audit-initial-failure.json": "21ba2915e4f29a7b3875dab8ed4901c1dd590f979ccded5932e3adf7221ca221",
+    "audit.py": "a340fff9289913cb54c7376721f99bb2f6ed0e4ce9c324b2189509e938e28b70",
+    "audit_v2.py": "5fd748351cbe185d6f3d3c21e4f7d5f4d5f5117665e24004f6c0bc2bf71620c2",
+    "checkpoint-notes.md": "d09cc20c6a54643e8a3fc3619e06a5c06c59ec984efccdfc52fe7c3b836f5a3e",
+    "compare_outputs.py": "0feca019f201586800a5e991146e369e408c39eacd1569198949b08ccb9cfbda",
+    "completion.json": "a33d40b94e349a0690dbef87877e169ae7f9da7f2239163e00c2cad429f8649e",
+    "execution-source.zip": "cb4adb34be0a857ec0be289d04d5d535fea4215c7253346c6240bf6f0da55d0e",
+    "execution.log": "aeb11f6599c34862078f86bf84c093c82d1266b73ed0c4dced11f78117cafb54",
+    "independent-audit.json": "6b1ac7db11b2715f4c5dd33970c2bf5512e3200147685daa83b804c951027f16",
+    "launch.json": "a5151fb1d5caf6f1165dfab2c116f1264c2b655b7ee93d77d822d7c96b33ec32",
+    "output-comparison.json": "e6480c655323bbb2a168a44a4a35fddacdbc916e6980e0955d9c84fd85f42998",
+    "paired-native.jsonl": "3b3e8748b2a0798ff88a0818874e4b5e3cc3f1b975e5c223d2f7978b44406359",
+    "pause-event.json": "8a0212e8b7ae9e0da0ebcc5d1ac8c0f9207b4877f1fb8e5e245d59c2955a79ab",
+    "paused-prefix.jsonl": "29a4cb5504f49a2748a72f5a71f63acee40934dc32b0eec544dd0a0fd87ee8da",
+    "plan-initial-unexecuted.json": "ca0c9a9289cbddd42b871ed1f35cfdfb671c412942165434b524752fac10ca14",
+    "plan.json": "9d8c33e9301bd2aaa421f483acea6b18fe3a738eac16142132319dc7e2f900cc",
+    "provenance.json": "4c3d220b4bc2ee82d2154947272c31dac6f997e62dd3307897e59f3121c3af6b",
+    "replay-initial-unexecuted.cpp.txt": "83d3e2ed94d2c5824418b23e0d1c7c63bd091dbd67af2855bef4dfdb762ada15",
+    "replay.cpp": "6e4b53f2fd50c6e289388bf2800120c63fea8062a17474331135d1fc5d753d41",
+    "resume-event.json": "013e6614c05b2a7a7fe3b6d40c0ad751aca38c0dcb483bfd36a35707e0908995",
+    "runner.py": "7d8e3a605b7fff442959e9df44fb93448200c6d8c7ee9577dd288eaf253556dd",
+    "source.zip": "4a48525772597e3cc91706172c4443b3b4c65d46253886ad7f4679ae68e53dca",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

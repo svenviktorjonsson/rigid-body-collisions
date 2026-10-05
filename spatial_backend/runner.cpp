@@ -37,7 +37,9 @@ int main(){try{
  if((point_policy!="shared"&&point_policy!="separate")||(point_policy=="shared"&&!coulomb_solver))throw std::runtime_error("Invalid contact point policy for solver");
  coulomb_mlcp.shared_contact_point=point_policy=="shared";
  coulomb_mlcp.recovery_enabled=in.value("contact_recovery",true);
- coulomb_mlcp.translation_split=in.value("position_stabilization",std::string("split"))=="split_translation";
+ const std::string position_policy=in.value("position_stabilization",std::string("split"));
+ coulomb_mlcp.translation_clearance=position_policy=="split_translation_gap";
+ coulomb_mlcp.translation_split=position_policy=="split_translation"||coulomb_mlcp.translation_clearance;
  if(coulomb_mlcp.translation_split&&!coulomb_solver)throw std::runtime_error("Translation-only split requires coulomb solver");
  coulomb_mlcp.tolerance=in.value("contact_tolerance_m_s",1e-8);coulomb_mlcp.contact_slop_m=in.value("contact_slop_m",1e-9);
  json position_geometry_snapshot;
@@ -108,6 +110,14 @@ int main(){try{
     {"complete",states.size()==static_cast<size_t>(frames+1)},{"collision_updates",total},
     {"coulomb_residual_max_m_s",coulomb_mlcp.stats.residual_max},
     {"max_container_surface_excess_m",surface_excess}};
+  progress["translation_split_solves"]=coulomb_mlcp.translation_split_solves;
+  progress["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
+  progress["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
+  progress["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
+  progress["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;
+  progress["translation_pose_absolute_potential_change_J"]=coulomb_mlcp.translation_pose_absolute_potential_change_J;
+  progress["translation_pose_orbital_change_kg_m2_s"]=array(coulomb_mlcp.translation_pose_orbital_change);
+  progress["translation_pose_absolute_orbital_change_kg_m2_s"]=coulomb_mlcp.translation_pose_absolute_orbital_change;
   std::ofstream file(temporary);if(!file)throw std::runtime_error("Cannot write progress checkpoint");
   file<<progress.dump()<<"\n";file.close();if(!file||std::rename(temporary.c_str(),path.c_str())!=0)
    throw std::runtime_error("Cannot publish progress checkpoint");
@@ -191,6 +201,12 @@ int main(){try{
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
  out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;
  out["lapack_contact_recovery_compiled"]=coulombLapackRecoveryEnabled();
+ out["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
+ out["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
+ out["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;
+ out["translation_pose_absolute_potential_change_J"]=coulomb_mlcp.translation_pose_absolute_potential_change_J;
+ out["translation_pose_orbital_change_kg_m2_s"]=array(coulomb_mlcp.translation_pose_orbital_change);
+ out["translation_pose_absolute_orbital_change_kg_m2_s"]=coulomb_mlcp.translation_pose_absolute_orbital_change;
  out["coulomb_support_solves"]=coulomb_mlcp.stats.support_solves;
  out["coulomb_support_helper_calls"]=coulomb_mlcp.stats.support_helper_calls;
  out["coulomb_support_skipped_components"]=coulomb_mlcp.stats.support_skipped_components;

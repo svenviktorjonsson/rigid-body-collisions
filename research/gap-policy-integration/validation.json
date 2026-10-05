@@ -1,0 +1,17 @@
+{
+  "schema": "signed-gap-integration-validation-v1",
+  "python_regressions": {
+    "count": 160,
+    "passed": true,
+    "log_sha256": "5aa0ff83027ece8f7b2228d523d4b00de29669689ecd831dcf4e0acb61ee721e"
+  },
+  "final_progress_metadata_regression": {
+    "passed": true,
+    "log_sha256": "e76b8da211c5c15140d96fe6f6e95b335c2c4d173e3d1fdc26e67c10e91d68c7"
+  },
+  "native_translation_checks": "PASS",
+  "all74_independent_native_residual_m_s": 1.7882564550329217e-12,
+  "tolerance_m_s": 1e-08,
+  "full_trajectory_qualification": false,
+  "scope": "Explicit opt-in signed-gap numerical position policy. Physical contact impulse equations and material law unchanged. Final physical velocity is used in numerical gravity/orbital pose accounting. Six original full trajectories remain prospectively declared, not yet executed. Wrong unittest class invocation was corrected without changing code."
+}
