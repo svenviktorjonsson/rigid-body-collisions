@@ -1,0 +1,69 @@
+{
+  "purpose": "Predeclared six-attempt same-shared-geometry hull ladder after one bounded truncated-Jacobian numerical retry",
+  "dt_s": 0.01,
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "primary_steps": 4,
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "candidate_repetitions": 0,
+  "candidates": {},
+  "scenes": [
+    {
+      "id": "fast_shake8_hulls42",
+      "side": 2,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 0,
+      "seed": 42,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    },
+    {
+      "id": "fast_rotate_shake27_hulls7301",
+      "side": 3,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 10,
+      "seed": 7301,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    }
+  ],
+  "scope": "Same authored shared-contact geometry, material, controls and gates as38f407d. Only numerical recovery changes: one alternate relative Jacobian singular cutoff1e-10 after default1e-12 warm Newton stalls. Physical mobility is never regularized; all attempts retained and original strict contact/passivity gates unchanged. No claim of feasibility or trajectory qualification from a captured solve.",
+  "baseline_source_commit": "38f407d12208654075c07315e96b9fc213612b91",
+  "baseline_plan": "research/spatial-friction-recovery/plan.json",
+  "baseline_scenes": "research/spatial-friction-recovery/results/scenes.json",
+  "changed_discretization": "One shared world contact point: midpoint of surface endpoints for two finite dynamic bodies; finite-body surface endpoint against static/kinematic bodies. Full Jacobian, angular mobility, free-velocity and split RHS, warm angular-impulse transport, and boundary-work accounting use that same point.",
+  "execution_rule": "Commit numerical integration, plan and runner before executing; mandatory exact source SHA, all attempts/rejections retained.",
+  "performance_scope": "Costs are descriptive under recorded concurrent workload, not a controlled speed-ranking experiment.",
+  "contact_point_policy": "shared",
+  "paired_shared_plan": "research/shared-hull-followup/plan.json"
+}

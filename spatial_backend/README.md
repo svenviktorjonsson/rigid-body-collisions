@@ -179,3 +179,11 @@ CFM, contact stiffness/damping and friction anchors reject in this shared lane.
 This corrects the internal moment produced by separated equal/opposite forces;
 full-tensor orientation integration has a separate finite-step momentum error.
 Old trajectory/performance archives qualify their frozen geometry only.
+
+One bounded retry after warm Newton stalls drops Jacobian singular directions
+below 1e-10 of its maximum singular value, versus the ordinary 1e-12 search cutoff.
+This changes only the numerical Newton increment; it does not regularize physical
+mobility, add compliance or waive any contact/energy condition. Weak numerical
+modes can require huge increments for tiny residuals and stall line search. The
+48-row shared-hull fixture now passes the exact gate; all retries still share
+256 SVD calls. Counters and numerical metadata disclose the alternate rank retry.

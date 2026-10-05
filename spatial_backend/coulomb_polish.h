@@ -39,13 +39,13 @@ inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const bt
   for(int i=0;i<n;i++)x[i]=p[i];
   stats.last_residual=error;stats.residual_max=std::max(stats.residual_max,error);stats.passive_change_max=std::max(stats.passive_change_max,change);stats.solves++;stats.polish_solves++;return true;
  };
- auto newton=[&](std::vector<double>& p){
+ auto newton=[&](std::vector<double>& p,double rank_cutoff=1e-12){
   for(int iteration=0;iteration<64;iteration++){
    if(gate(p))return true;
    std::vector<double>F,J;equations(p,F,&J);std::vector<double>rhs=F;double merit=0;for(double& value:rhs){merit+=value*value;value=-value;}
    if(remaining_svd_calls<=0)return false;
    remaining_svd_calls--;stats.polish_svd_calls++;
-   auto linear=minimumNormNewton(J,rhs,n);if(!linear.converged){stats.polish_svd_rejections++;return false;}bool accepted=false;
+   auto linear=minimumNormNewton(J,rhs,n,rank_cutoff);if(!linear.converged){stats.polish_svd_rejections++;return false;}bool accepted=false;
    for(int line=0;line<30;line++){
     double alpha=std::ldexp(1.,-line);std::vector<double>trial=p;for(int i=0;i<n;i++)trial[i]+=alpha*linear.step[i];std::vector<double>next;equations(trial,next,nullptr);double value=0;for(double f:next)value+=f*f;
     if(std::isfinite(value)&&value<=(1-1e-4*alpha)*merit){p=std::move(trial);stats.polish_steps++;accepted=true;break;}
@@ -91,6 +91,11 @@ inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const bt
  std::vector<double>original(n);for(int i=0;i<n;i++)original[i]=x[i];auto p=original;
  if(newton(p))return true;
  auto stagnated=p;
+ // A weak numerical Jacobian mode can demand an enormous Newton increment
+ // from a tiny residual. One truncated-J retry changes only the search step,
+ // never physical mobility or the exact final equations/capacity/energy gate.
+ auto truncated=original;stats.rank_restarts++;
+ if(newton(truncated,1e-10))return true;
  // A feasible opposing-slip guess may cross a merit basin that neutral pressure
  // relocation cannot escape. This trial is never applied to bodies. The SAME
  // final contact/energy gate alone accepts its converged result.

@@ -4,7 +4,7 @@
 #include <cmath>
 #include <algorithm>
 struct NewtonLinearSolution {std::vector<double> step;std::vector<std::vector<double>> nullspace;int rank=0;bool converged=false;double column_correlation=0;};
-inline NewtonLinearSolution minimumNormNewton(const std::vector<double>& matrix,const std::vector<double>& rhs,int n,double relative_rank_cutoff=1e-12){
+inline NewtonLinearSolution minimumNormNewton(const std::vector<double>& matrix,const std::vector<double>& rhs,int n){
  auto C=matrix;std::vector<double> V(n*n,0);for(int i=0;i<n;i++)V[i*n+i]=1;
  double frobenius=0;for(double value:C)frobenius+=value*value;
  // One-sided Jacobi orthogonalizes columns without squaring the condition
@@ -21,17 +21,16 @@ inline NewtonLinearSolution minimumNormNewton(const std::vector<double>& matrix,
   }
   if(!changed)break;
  }
- const double rank_square=relative_rank_cutoff*relative_rank_cutoff;
  std::vector<double> square(n,0);double largest=0;for(int j=0;j<n;j++){for(int i=0;i<n;i++)square[j]+=C[i*n+j]*C[i*n+j];largest=std::max(largest,square[j]);}
  NewtonLinearSolution result;result.step.assign(n,0);
  for(int j=0;j<n;j++){
-  if(square[j]>rank_square*largest){
+  if(square[j]>1e-24*largest){
    double product=0;for(int i=0;i<n;i++)product+=C[i*n+j]*rhs[i];
    for(int i=0;i<n;i++)result.step[i]+=V[i*n+j]*product/square[j];
    result.rank++;
   }else{std::vector<double> direction(n);for(int i=0;i<n;i++)direction[i]=V[i*n+j];result.nullspace.push_back(direction);}
  }
- for(int p=0;p<n;p++)for(int q=p+1;q<n;q++)if(std::min(square[p],square[q])>rank_square*largest){
+ for(int p=0;p<n;p++)for(int q=p+1;q<n;q++)if(std::min(square[p],square[q])>1e-24*largest){
   double g=0;for(int i=0;i<n;i++)g+=C[i*n+p]*C[i*n+q];result.column_correlation=std::max(result.column_correlation,std::abs(g)/std::sqrt(square[p]*square[q]));
  }
  result.converged=std::isfinite(result.column_correlation)&&result.column_correlation<=1e-10;

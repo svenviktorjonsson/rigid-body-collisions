@@ -2,7 +2,7 @@
 import hashlib,json,subprocess,zipfile
 from pathlib import Path
 import numpy as np
-from research.audit_fast_shake_diagnostic import errors,physical
+from research.audit_fast_shake_diagnostic import errors,physical,verify_trial
 ROOT=Path(__file__).parents[1];D=ROOT/'research/shared-shake-study'
 def sha(x):return hashlib.sha256(x).hexdigest()
 def audit(directory=D,check_git=True):
@@ -23,6 +23,7 @@ def audit(directory=D,check_git=True):
             r=json.loads(z.read(n+'.json'));runs[n]=r
             if 'rejected' in r:physical_pass[n]=False;continue
             controls=plan['reference_levels'][n] if n in plan['reference_levels'] else plan['settings'][n.rsplit('_',1)[0]]
+            verify_trial(scene,r,controls,{k:v for k,v in plan['common'].items() if k!='contact_recovery'})
             states=np.asarray(r['states']);times=np.asarray(r['times']);assert states.shape==(round(scene['duration']/controls['dt'])+1,len(scene['bodies']),13) and np.isfinite(states).all()
             assert r['physical_setup_id']==sha(json.dumps(scene,sort_keys=True,separators=(',',':')).encode())
             np.testing.assert_allclose(states[0,:,:3],[b['position'] for b in scene['bodies']],rtol=0,atol=1e-14)

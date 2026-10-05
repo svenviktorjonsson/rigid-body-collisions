@@ -15,7 +15,7 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
- int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,opposing_restarts=0;
+ int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0,polish_solves=0,polish_steps=0,gauge_restarts=0,cold_restarts=0,polish_svd_calls=0,polish_budget_rejections=0,polish_svd_rejections=0,rank_restarts=0,opposing_restarts=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
 };
 

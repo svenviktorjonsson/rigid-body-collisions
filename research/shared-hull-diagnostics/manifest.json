@@ -1,0 +1,62 @@
+{
+  "input_source_commit": "38f407d12208654075c07315e96b9fc213612b91",
+  "scope": "Frozen contact numerical-J increment diagnosis, not a trajectory qualification",
+  "files": {
+    "research/shared_hull_diagnostics.py": {
+      "sha256": "717b56cb551391dd8f6937f2b54043110d4e71cd2258834e435562d1e8daf16b",
+      "bytes": 3178
+    },
+    "research/coulomb_diagnostics.py": {
+      "sha256": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84",
+      "bytes": 15157
+    },
+    "research/hull_recovery_followup.py": {
+      "sha256": "110f15680ffa4c4a54a9d2e2822088a90710c85f052950ee906843d1ef61cfea",
+      "bytes": 10949
+    },
+    "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json": {
+      "sha256": "7e52bea9db4c4965995924d2c945081f53a55847a31adc4fc3ea67e9077fe1ab",
+      "bytes": 21248
+    },
+    "research/shared-hull-diagnostics/README.md": {
+      "sha256": "ff5126a241cf57e5a1964d1c1bd0b4ad093fa9a0eea2ea0f145ca3175a44eea2",
+      "bytes": 3374
+    },
+    "research/shared-hull-diagnostics/bounded-experiments.json": {
+      "sha256": "e9b4a61b294487f477a1891357fdbcf33a889cd8f044a0cdd3f4b73ceebbc746",
+      "bytes": 39647
+    },
+    "research/shared-hull-diagnostics/native_linear.cpp": {
+      "sha256": "6485293adfafa5c68fe1e3d70a970e86d244fb8812a80106122aaf4bddea48bc",
+      "bytes": 719
+    },
+    "research/shared-hull-diagnostics/newton_linear_source.h": {
+      "sha256": "aa737f59e3c92aee62808b92b137a362b50bc331c0fc8ff187f0706b51778738",
+      "bytes": 2307
+    },
+    "research/shared-hull-diagnostics/seed42-48row-damped-newton.json": {
+      "sha256": "6fbeefc7cb9a0005275e49d52ee064e4b04a62603e7dd4b05b347fd8b81a4e06",
+      "bytes": 12229
+    },
+    "research/shared-hull-diagnostics/seed42-48row-linear-input.json": {
+      "sha256": "4ebf1a74bbc2b46300d5493e8ca8d2bae43e824901fe40a3a22885bab7f57c5e",
+      "bytes": 25484
+    },
+    "research/shared-hull-diagnostics/seed42-48row-native-linear.json": {
+      "sha256": "69c58ea650b85d1be0ef064df72afafe60f5ef9651ccbff64dad04a0c42ac747",
+      "bytes": 671
+    },
+    "research/shared-hull-diagnostics/seed42-48row-native.json": {
+      "sha256": "a46221b81f97e4a8d8e756575c7050a1e49290f3dde05bce338c351fa42851bf",
+      "bytes": 7889
+    },
+    "research/shared-hull-diagnostics/seed42-48row-newton-cutoffs.json": {
+      "sha256": "0b10d30b83eaa78fa32219533895eb0c1526a22033f8db6c375dbcd3d83a5e50",
+      "bytes": 17473
+    },
+    "research/shared-hull-diagnostics/seed42-48row.json": {
+      "sha256": "ec5059a79dd95df7eb0882f84cb4f30c0d9167c78da678068316faca3ae848eb",
+      "bytes": 17237
+    }
+  }
+}

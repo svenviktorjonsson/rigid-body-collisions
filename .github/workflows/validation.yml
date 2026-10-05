@@ -37,6 +37,7 @@ jobs:
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-rejected.json > /tmp/replayed-hull7301.json
           build/spatial/spatial_coulomb_replay research/coulomb-diagnostics/hull7301-later-rejected.json > /tmp/replayed-hull7301-later.json
           build/spatial/spatial_coulomb_replay research/coulomb-followup/hull42-second-rejected.json > /tmp/replayed-hull42-second.json
+          build/spatial/spatial_coulomb_replay research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json > /tmp/replayed-shared-hull42.json
       - name: Build the explicitly experimental Float64 precision diagnostic
         run: python -m research.build_precision_backend
       - name: Engine and benchmark-tool regressions

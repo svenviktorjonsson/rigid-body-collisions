@@ -75,18 +75,18 @@ def trajectory_error(left,right):
  vec=qa[:,:,3,None]*qb[:,:,:3]-qb[:,:,3,None]*qa[:,:,:3]-np.cross(qa[:,:,:3],qb[:,:,:3]);scalar=np.abs(np.sum(qa*qb,axis=-1));angle=2*np.arctan2(np.linalg.norm(vec,axis=-1),scalar)
  return dict(position_m=rms(a[:,:,:3]-b[:,:,:3]),velocity_m_s=rms(a[:,:,7:10]-b[:,:,7:10]),omega_rad_s=rms(a[:,:,10:13]-b[:,:,10:13]),orientation_rad=float(np.sqrt(np.mean(angle*angle))))
 
-def audit():
- directory=DIRECTORY/'results';summary=json.loads((directory/'summary.json').read_text());plan=json.loads((DIRECTORY/'plan.json').read_text())
- assert summary['execution_source_commit']==SOURCE and summary['plan_sha256']==sha((DIRECTORY/'plan.json').read_bytes())
+def audit(study=DIRECTORY,source=SOURCE):
+ study=Path(study);directory=study/'results';summary=json.loads((directory/'summary.json').read_text());plan=json.loads((study/'plan.json').read_text())
+ assert summary['execution_source_commit']==source and summary['plan_sha256']==sha((study/'plan.json').read_bytes())
  assert summary['attempt_count']==summary['planned_attempt_count']==6 and summary['complete']
  for name,digest in summary['hashes'].items():assert sha((directory/name).read_bytes())==digest
  with zipfile.ZipFile(directory/'execution-source.zip') as archive:
   assert set(archive.namelist())==set(summary['source_hashes'])
   for name,digest in summary['source_hashes'].items():
    data=archive.read(name);assert sha(data)==digest
-   assert data==subprocess.check_output(['git','show',f'{SOURCE}:{name}'],cwd=ROOT)
+   assert data==subprocess.check_output(['git','show',f'{source}:{name}'],cwd=ROOT)
   assert 'shared_contact.h' in archive.read('spatial_backend/coulomb.h').decode()
-  assert archive.read('research/shared-hull-followup/plan.json')==(DIRECTORY/'plan.json').read_bytes()
+  assert archive.read(str((study/'plan.json').relative_to(ROOT)))==(study/'plan.json').read_bytes()
  baseline=json.loads((ROOT/plan['baseline_plan']).read_text());oldscenes=json.loads((ROOT/plan['baseline_scenes']).read_text());scenes=json.loads((directory/'scenes.json').read_text())
  for key in ['common','dt_s','trajectory_budget','physical_gates','reference_rule','scenes']:assert plan[key]==baseline[key]
  assert scenes==oldscenes and plan['contact_point_policy']=='shared'
@@ -126,8 +126,12 @@ def audit():
     if a['error']:assert all(np.isclose(a['error'][k],b['error'][k],rtol=1e-9,atol=1e-10) for k in a['error'])
    receipts[name]=dict(reference_qualified=all(e['passed'] for e in edges),physical_eligible=eligible,edges=edges,diagnostics=physical)
  assert histories==summary['history_count']
- out=dict(execution_source_commit=SOURCE,attempt_count=6,history_count=histories,rejection_count=len(rejections),rejections=rejections,scenes=receipts)
- (DIRECTORY/'independent-audit.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
+ out=dict(execution_source_commit=source,attempt_count=6,history_count=histories,rejection_count=len(rejections),rejections=rejections,scenes=receipts)
+ (study/'independent-audit.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
  print('Shared hull audit PASS:',histories,'histories;',len(rejections),'retained rejections;',sum(r['reference_qualified'] for r in receipts.values()),'qualified references')
  return out
-if __name__=='__main__':audit()
+if __name__=='__main__':
+ import argparse
+ parser=argparse.ArgumentParser();parser.add_argument('--directory',default=str(DIRECTORY));parser.add_argument('--source-commit',default=SOURCE);args=parser.parse_args();study=Path(args.directory)
+ if not study.is_absolute():study=ROOT/study
+ audit(study.resolve(),args.source_commit)
