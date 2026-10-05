@@ -1,0 +1,98 @@
+[
+  {
+    "seed": "captured",
+    "method": "lm",
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 1221,
+    "njev": 1202,
+    "projection_max": 9.185530720891066e-16,
+    "seconds_descriptive": 1.7562406829965767,
+    "cost": 5.517465749037686e-31,
+    "optimality": 4.366403182473115e-15
+  },
+  {
+    "seed": "captured",
+    "method": "trf",
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 1293,
+    "njev": 1230,
+    "projection_max": 1.837106144178213e-15,
+    "seconds_descriptive": 2.2266896340006497,
+    "cost": 3.668079578295348e-30,
+    "optimality": 9.29605677770608e-15
+  },
+  {
+    "seed": "zero",
+    "method": "lm",
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 1535,
+    "njev": 1512,
+    "projection_max": 1.260603996921704e-15,
+    "seconds_descriptive": 2.5267459390015574,
+    "cost": 2.021842576786536e-30,
+    "optimality": 1.2273514087015005e-14
+  },
+  {
+    "seed": "zero",
+    "method": "trf",
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 33,
+    "njev": 9,
+    "projection_max": 0.00015393322154144684,
+    "seconds_descriptive": 0.034617547993548214,
+    "cost": 2.369543669349335e-08,
+    "optimality": 4.2271152412385836e-14
+  },
+  {
+    "seed": "pinv",
+    "method": "lm",
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 22,
+    "njev": 8,
+    "projection_max": 0.00015393322154010332,
+    "seconds_descriptive": 0.02351489600550849,
+    "cost": 2.3695436693374465e-08,
+    "optimality": 3.041247148159526e-14
+  },
+  {
+    "seed": "pinv",
+    "method": "trf",
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 41,
+    "njev": 13,
+    "projection_max": 0.00015393322224910172,
+    "seconds_descriptive": 0.05173405399546027,
+    "cost": 2.3695436693580145e-08,
+    "optimality": 1.7537430255953783e-09
+  },
+  {
+    "seed": "small_contacts_open",
+    "method": "lm",
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 1242,
+    "njev": 1219,
+    "projection_max": 9.583966702047232e-16,
+    "seconds_descriptive": 1.8725853170035407,
+    "cost": 9.532139393015454e-31,
+    "optimality": 6.85034072749532e-15
+  },
+  {
+    "seed": "small_contacts_open",
+    "method": "trf",
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 1311,
+    "njev": 1242,
+    "projection_max": 1.3901929249281145e-15,
+    "seconds_descriptive": 2.173858381996979,
+    "cost": 2.630810236569678e-30,
+    "optimality": 8.921237202798105e-15
+  }
+]

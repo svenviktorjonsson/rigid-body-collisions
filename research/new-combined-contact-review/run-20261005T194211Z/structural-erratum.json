@@ -1,0 +1,5 @@
+{
+  "created_utc": "2026-10-05T19:45:47.998924+00:00",
+  "failure": "First launcher omitted __file__ in exec namespace; NameError before any numerical seed/native call. stderr and failed original launcher retained.",
+  "correction": "New launcher v2 supplies exact existing search source path; plan/equations/seed/native budgets unchanged."
+}

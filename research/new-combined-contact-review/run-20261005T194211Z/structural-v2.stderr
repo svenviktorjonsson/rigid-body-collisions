@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/structural_seed_v2.py", line 15, in <module>
+    if len(seeds)!=1:raise RuntimeError('Unexpected number of equalities; preserve plan cap')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Unexpected number of equalities; preserve plan cap
