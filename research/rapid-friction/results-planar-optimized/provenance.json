@@ -1,0 +1,31 @@
+{
+  "source": "7c66fa58d45e8fb20509f1e2a8589586a6b13e92",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/rigid_runner": "a46eaa4ee3e2da99e5f7f8c66abc17e5edb848bb4b8fa56339c1703e17c66306",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/precision-source.json": "bc58ef33dbc3708e577e364abbeb088d48a8cbd66f86dac2ba6ba8ab30111169",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar_optimized.py": "7881a46f452259764c95f3e4583fec87b106ad0625b63653ba0974ea1b51b23e",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar-optimized-plan.json": "480a99a5fb45213d363cd5c6834d0aeba20032a071e38239074cec1586e946f1",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/summary.json": "11b7c57292167762fa6bd9cade67051ae8fe5bddccfdb7f522b828006f62f842",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/scenes.json": "52073c6119f74166ddc31f03a92a3709c21260297fa6caa8e06a0fbb5ae47b3c",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/timing_1_reference.json": "299eed050c6ae1b60674d53dd098dbf739179f3f75f0d7537c990143705f1784",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/timing_2_reference.json": "3b43b84f1309ee002d6589942c21e8b4aa8aeeeafee2052a0580394550d9fe60",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/tight_velocity128_reference_1.json": "10077c534a83e489317453785aab641e831eb17182d21990b3f3cf979d3907ed",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/tight_velocity128_reference_3.json": "9b6846507021a7f785de890d7d1f12da398d301a6022d38e30a8095f146ef685",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/tight_velocity128_reference_2.json": "a492cdbdbbb814f0584f883bb45ee4fbf03cc35355a4b26c506018151db13a08",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/tight_velocity128_reference_0.json": "04ad6781235ae1ea14f45ce196dcde76d3da7c34f1a0b8bbd09bcfe405bd655e",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/tight_velocity128_reference_4.json": "9d21afeba5220df8f17df958914c2d581a8e8414fa0c4dd60cf772601894ea26",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/timing_0_reference.json": "a97c6fa5e5e5bdc35a91bda5c14954ba46377f095541e6358b01ccbf639b562a",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake25/warmup_reference.json": "60be1d66664fc359706a60186edba8f00d08fff5f4afd27a08890ea2e0e92584",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/timing_1_reference.json": "e8c9379aa42899308360dd9a1f768a81bc618faca0cd4fec6784dc134d7b2e55",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/timing_2_reference.json": "9341038231b5eec36a63ea892e3f70f2fb518cb784bc072e3553220f32b4dc60",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/tight_velocity128_reference_1.json": "92faf66a6cc1cd1ff07f2b1942780277042569449473ca50b19e07131d449128",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/tight_velocity128_reference_3.json": "1afb70a146ee60a0c6b57e436c72a5551d9c64aafbedcefa633f7f44aa7be497",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/tight_velocity128_reference_2.json": "29a99ec6a2072aab02b8a77d9c15df1297cee7337eef1996c12755443875b6b9",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/tight_velocity128_reference_0.json": "ac306e12c2eedaac2646e020d37a65b676e1ca766d1f00db3fabcd04c5fc70c1",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/tight_velocity128_reference_4.json": "52ebc848de500f7d27c8be96021665729a1f982b9992ef189567c0d77dae6c0a",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/timing_0_reference.json": "ec370c731f98c29b9ccaf43b6809cf8e1c2dec968cd0b41c3f4c7901c883f7dd",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/2d_shake9/warmup_reference.json": "2b92daa506aba109e59a7a2d54957041495331a757d615f813315e4b72abf10b"
+  }
+}

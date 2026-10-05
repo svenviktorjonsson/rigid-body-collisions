@@ -73,7 +73,7 @@ def errors(dimension,a,b):
 
 def audit():
     gates=load(HERE/'plan.json');report={'record_count':0,'qualified_benchmarks':{},'directories':{}}
-    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight']:
+    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight','results-planar-optimized']:
         directory=HERE/dirname
         if not (directory/'summary.json').exists():continue
         scenes=load(directory/'scenes.json') if (directory/'scenes.json').exists() else load(HERE/'results/scenes.json')
@@ -84,11 +84,22 @@ def audit():
             count+=1
             if record['complete']:
                 entry=scenes[path.parent.name];passed=physical(entry,record['result'])
-                if dirname in ('results-planar-shake','results-planar-tight'):passed &= record['result']['friction_impulse_abs_kg_m_s']>0
+                if dirname in ('results-planar-shake','results-planar-tight','results-planar-optimized'):passed &= record['result']['friction_impulse_abs_kg_m_s']>0
                 assert passed==record['physical']['passed'],str(path)
         for name,item in summary.items():
             entry=scenes[name];budget=gates['trajectory_budgets'][str(entry['dimension'])];folder=directory/name
-            if 'phases' in item:
+            if 'reference_archive' in item:
+                prior=load(HERE/item['reference_archive']/'summary.json')[name]
+                assert prior['reference_qualified'] and all(e['passed'] for e in prior['phases'][0]['edges'][-2:])
+                reference=load(HERE/item['reference_archive']/item['reference_record'])['result']
+                assert item['reference_qualified']
+                for candidate in item['candidates']:
+                    setting=candidate['setting'];record=load(folder/f"candidate_{setting['primary_steps']}_{setting['substeps']}.json")
+                    error=errors(2,reference,record['result'])
+                    passed=record['physical']['passed'] and all(error[k]<=v for k,v in budget.items())
+                    assert bool(passed)==candidate['passed']
+                    for k in error:assert np.isclose(error[k],candidate['errors'][k],rtol=1e-10,atol=1e-12)
+            elif 'phases' in item:
                 for phase in item['phases']:
                     refs=[load(folder/(phase['phase']['id']+f'_reference_{i}.json')) for i in range(len(phase['edges'])+1)]
                     for i,edge in enumerate(phase['edges']):
@@ -129,6 +140,13 @@ def audit():
                 medians={k:statistics.median(v) for k,v in timings.items()};ratio=medians['reference']/medians['candidate']
                 assert medians==bench['median_s'] and ratio==bench['reference_over_candidate']
                 report['qualified_benchmarks'][name]={'median_s':medians,'ratio':ratio,'record_directory':dirname}
+                if 'adapter_process_samples_s' in bench:
+                    process={k:[load(folder/f'timing_{i}_{k}.json')['result']['wall_time_s'] for i in range(3)] for k in timings}
+                    assert process==bench['adapter_process_samples_s']
+                    process_medians={k:statistics.median(v) for k,v in process.items()}
+                    assert process_medians==bench['adapter_process_median_s']
+                    assert process_medians['reference']/process_medians['candidate']==bench['adapter_process_ratio']
+                    report['qualified_benchmarks'][name]['adapter_process_median_s']=process_medians
         report['directories'][dirname]={'records':count,'qualified_references':sum(i['reference_qualified'] for i in summary.values())};report['record_count']+=count
     report['passed']=True
     (HERE/'independent-audit.json').write_text(json.dumps(report,indent=2)+'\n')

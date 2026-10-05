@@ -160,7 +160,7 @@ with zero qualified references. Every completed lane passes its individual gates
 the eight-body middle rejection blocks both accuracy edges, and the27-body edges
 fail unchanged trajectory budgets. Independent exact-system searches find roots
 for the new42-row capture which the unchanged native final gate accepts; a bounded
-search correction now passes23 captured inputs, preserves all22 prior impulse/response Float64bytes and counters, and passes122 strict audit checks. It remains an unapplied production proposal; read [HANDOVER.md](HANDOVER.md) for continuation. All three numerical changes were
+search correction now passes23 captured inputs, preserves all22 prior impulse/response Float64bytes and counters, and passes122 strict audit checks. The bounded tail is now integrated and live23 preservation passes; read [HANDOVER.md](HANDOVER.md) for current continuation. All three numerical changes were
 declared together, so these timings do not establish causal speed gains.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
@@ -263,3 +263,12 @@ Simultaneous contacts are processed sequentially and can depend on contact order
 Initial overlaps are rejected, and exceeding the event limit raises an error.
 `test_v1.py`, `test_v2.py` and `test.py` are historical experiments, rather than
 automated tests. The polygon engine is a separate implementation.
+
+The [rapid-motion friction benchmarks](research/rapid-friction/README.md) qualify
+2D nine/25 disks and 3D27 spheres under +/-20m/s container reversals with friction0.4.
+Median native gains versus qualified fine references are23.07x,15.65x and7.58x.
+Experimental Float64 planar settings explicitly use1um penetration slop; authored
+geometry and materials remain unchanged. Rotating groups, polygons, boxes and
+hulls remain unqualified. Exact settings, all failures and an independent audit
+of144 retained records accompany the report. Current tests:163 engine tests,
+35 subtests, ten contact-model tests and eleven native checks pass.

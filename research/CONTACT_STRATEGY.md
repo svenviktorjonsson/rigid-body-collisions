@@ -185,3 +185,12 @@ The42-row rejected system has independently found exact-law roots accepted by
 unchanged native verification, so this is another capped numerical-search failure.
 A bounded projection-merit fallback is being investigated; preserve the old failure
 and require23-capture/default-preservation proof plus fresh full trajectories.
+
+## October 5 integrated continuation
+
+The bounded original-projection tail is integrated at8c7065e and preserves all
+prior22 responses/counters while accepting all23 captures. Six unchanged adaptive
+hull lanes retain3 histories/3 later rejections/0 qualified references.
+[Rapid-friction results](rapid-friction/README.md) qualify translational disk/sphere
+groups only; rotating and irregular-shape trajectory accuracy remains open.
+Keep original law and accuracy gates, failed histories and numerical metadata.
