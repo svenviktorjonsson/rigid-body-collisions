@@ -1,0 +1,17 @@
+{
+  "purpose": "Isolate underconverged velocity/position iterations in the SAME two rapid rotating/shaking planar scenes; no material/initial-state/wall-motion changes. Original 32-iteration failures remain.",
+  "phases": [
+    {"id": "velocity512", "substeps": 512, "position_iterations": 12},
+    {"id": "velocity2048", "substeps": 2048, "position_iterations": 32}
+  ],
+  "reference_levels": [
+    {"dt": 0.01, "primary_steps": 1000},
+    {"dt": 0.01, "primary_steps": 2000},
+    {"dt": 0.01, "primary_steps": 4000}
+  ],
+  "candidate_primary_steps": [8, 32, 128, 512],
+  "candidate_substeps": [32, 128, 512],
+  "timing_repetitions": 3,
+  "rule": "Same immutable scenes and unchanged trajectory/physical gates from plan.json. Each phase executes all three fixed references once; BOTH quarter-budget edges must pass. Higher phase is tried only if the preceding phase fails. Record all failures. Once qualified, compare candidate settings under full gates, select cheapest observed passing setting, then interleave three fine-reference/candidate timing repetitions after one warmup each. No speed ranking for any unqualified reference.",
+  "scope": "Box2D iteration parameters change numerical effort only. All friction remains .4, restitution remains zero, gravity and rapid group command times remain exact. Both translational and rotational prescribed motion remain. Float64 transformed comparator remains experimental. Native stepping/state recording is timed; process times also disclosed. Sequential native launches; external host load remains uncontrolled. Publish exact plan/code before execution."
+}
