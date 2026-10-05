@@ -92,7 +92,6 @@ def physical(entry,result,plan):
 
 def execute(entry,setting,output,plan):
     assert not output.exists(),output
-    output.parent.mkdir(parents=True,exist_ok=True)
     begun=time.perf_counter()
     try:
         if entry['dimension']==3:
@@ -106,9 +105,9 @@ def execute(entry,setting,output,plan):
     atomic(output,record);return record
 
 def main():
-    plan=json.loads((HERE/'plan.json').read_text());out=HERE/'results-spatial';out.mkdir(exist_ok=False)
+    plan=json.loads((HERE/'plan.json').read_text());out=HERE/'results';out.mkdir(exist_ok=False)
     assert os.environ.get('OMP_NUM_THREADS')=='1' and os.environ.get('OPENBLAS_NUM_THREADS')=='1'
-    authored={name:entry for name,entry in scenes().items() if entry['dimension']==3};atomic(out/'scenes.json',authored)
+    authored=scenes();atomic(out/'scenes.json',authored)
     paths=[ROOT/'build/spatial/spatial_runner',ROOT/'build/rigid_double_ledger/rigid_runner',ROOT/'build/rigid_double_ledger/precision-source.json',HERE/'run.py',HERE/'plan.json',ROOT/'spatial_engine.py',ROOT/'rigid_engine.py']
     for folder in ['spatial_backend','rigid_backend']:
         paths += [p for p in (ROOT/folder).glob('*') if p.is_file()]

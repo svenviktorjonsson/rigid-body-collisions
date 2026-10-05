@@ -1,0 +1,15 @@
+{
+  "kind": "harness_exception_before_first_3d_native_attempt",
+  "error": "Rejection snapshot parent must exist",
+  "completed_scenes": [
+    "2d_disks",
+    "2d_mixed_polygons"
+  ],
+  "unexecuted_scenes": [
+    "3d_sphere",
+    "3d_box",
+    "3d_hull"
+  ],
+  "retained_log": "preexecution/first-run.log",
+  "source_sha256": "55d629017959921536dc35556b9c49d8c607d4649e89b2304ad8eb2ab2cd4e4d"
+}

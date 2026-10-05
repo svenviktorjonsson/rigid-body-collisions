@@ -1,0 +1,30 @@
+2d_disks reference 0 complete True
+2d_disks reference 1 complete True
+EDGE 2d_disks {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.028759458246140557, 'velocity_m_s': 1.3823253921442893, 'omega_rad_s': 23.136789422414445, 'orientation_rad': 0.5338275800305305}}
+2d_disks reference 2 complete True
+EDGE 2d_disks {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 0.029944194918822928, 'velocity_m_s': 1.457584911596153, 'omega_rad_s': 27.37642110842788, 'orientation_rad': 0.5321482543984732}}
+2d_disks reference 3 complete True
+EDGE 2d_disks {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.043202530497128924, 'velocity_m_s': 2.023079944479046, 'omega_rad_s': 24.749923237387847, 'orientation_rad': 0.580274151176362}}
+2d_disks reference 4 complete True
+EDGE 2d_disks {'left': 3, 'right': 4, 'passed': False, 'errors': {'position_m': 0.02431792291047796, 'velocity_m_s': 1.5330386485434542, 'omega_rad_s': 20.467510504167453, 'orientation_rad': 0.42580060244458784}}
+2d_mixed_polygons reference 0 complete True
+2d_mixed_polygons reference 1 complete True
+EDGE 2d_mixed_polygons {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.07571056420910749, 'velocity_m_s': 7.661299851491215, 'omega_rad_s': 61.091854704576356, 'orientation_rad': 0.6769166789700501}}
+2d_mixed_polygons reference 2 complete True
+EDGE 2d_mixed_polygons {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 0.04219409376504189, 'velocity_m_s': 6.562187906306999, 'omega_rad_s': 30.20102440748935, 'orientation_rad': 0.44927203263761567}}
+2d_mixed_polygons reference 3 complete True
+EDGE 2d_mixed_polygons {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.029310920585750546, 'velocity_m_s': 3.603168633014571, 'omega_rad_s': 42.90607367718083, 'orientation_rad': 0.48063668674989213}}
+2d_mixed_polygons reference 4 complete True
+EDGE 2d_mixed_polygons {'left': 3, 'right': 4, 'passed': False, 'errors': {'position_m': 0.014088437627852985, 'velocity_m_s': 1.2445266487126476, 'omega_rad_s': 19.019481777914073, 'orientation_rad': 0.20025578897436874}}
+Traceback (most recent call last):
+  File "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py", line 168, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py", line 125, in main
+    record=execute(entry,setting,out/name/f'reference_{i}.json',plan);refs.append(record)
+  File "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py", line 98, in execute
+    result=spatial_run(entry['scene'],solver='coulomb',iterations=4096,kinematic_contact_phase='start',position_stabilization='split_translation_combined',contact_point_policy='shared',contact_tolerance_m_s=1e-8,contact_slop_m=1e-9,contact_recovery=True,early_component_recovery=True,rejected_contact_path=str(output.with_suffix('.rejection.json')),**setting)
+  File "/home/viktor/.cache/vkf-physics-continuation/spatial_engine.py", line 173, in run
+    if not path.parent.is_dir():raise ValueError('Rejection snapshot parent must exist')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Rejection snapshot parent must exist
