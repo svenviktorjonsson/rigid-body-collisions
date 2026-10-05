@@ -1,0 +1,16 @@
+{
+  "schema": "independent-frozen-qr-experiment-audit-v1",
+  "phase": "timing",
+  "accepted": true,
+  "attempts": 240,
+  "accepted_attempts": 204,
+  "functional_regressions": 0,
+  "successful_paired_cases": 17,
+  "maximum_accepted_original_residual_m_s": 5.74020778461482e-09,
+  "plan_commit": "f1aadaccc37d286163b301b9056c5622375cb4af",
+  "source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "receipt_sha256": "0801afcf5a957b44fce710ad7183226f51e576c9c14ae3563b1aa1383334b4d1",
+  "summary_sha256": "b77efbbea1cce0fa30b3de60e0a389a1b26f6c99631d17947ede27d81c64c4df",
+  "auditor_sha256": "954983ebff05637e291fe1896e31b1dbfb32d470add1f7d54539bedbbf0a0039",
+  "scope": "Frozen captured systems and descriptive native cost only; no full-world qualification or isolated-machine performance claim."
+}
