@@ -87,7 +87,7 @@ class ElasticImpulseTests(unittest.TestCase):
         for initial_sign in [-1.,1.]:
             r=simulate(m,position=[0,0,.1001],velocity=[.2*initial_sign,0,-1.],
                        omega=[0,-5.*initial_sign,10.*initial_sign],gravity=[0,0,-9.81],
-                       duration=.46,sample_dt=.0005,max_step=.000002,rtol=1e-11,atol=1e-13)
+                       duration=.46,sample_dt=.0005,max_step=.000002,rtol=1e-12,atol=1e-16)
             lifts=[e for e in r['events'] if e['kind']=='lift_off']
             self.assertGreaterEqual(len(lifts),3)
             for i,e in enumerate(lifts):
@@ -102,6 +102,7 @@ class ElasticImpulseTests(unittest.TestCase):
             self.assertGreaterEqual(r['dissipated_J'][-1],0.)
             self.assertLess(r['dissipated_J'][-1],1e-5)
             self.assertTrue(any(e['kind']=='yield' for e in r['material_events']))
+            self.assertLessEqual(r['max_yield_excess_N'],1e-5+1e-8*np.max(r['normal_force_N']))
 
     def test_same_material_slow_rapid_with_compression_budget(self):
         m=self.material(normal_stiffness=1e8,tangent_stiffness=1e8*2/7,twist_stiffness=4e5)
