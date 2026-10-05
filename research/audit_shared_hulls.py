@@ -75,7 +75,7 @@ def trajectory_error(left,right):
  vec=qa[:,:,3,None]*qb[:,:,:3]-qb[:,:,3,None]*qa[:,:,:3]-np.cross(qa[:,:,:3],qb[:,:,:3]);scalar=np.abs(np.sum(qa*qb,axis=-1));angle=2*np.arctan2(np.linalg.norm(vec,axis=-1),scalar)
  return dict(position_m=rms(a[:,:,:3]-b[:,:,:3]),velocity_m_s=rms(a[:,:,7:10]-b[:,:,7:10]),omega_rad_s=rms(a[:,:,10:13]-b[:,:,10:13]),orientation_rad=float(np.sqrt(np.mean(angle*angle))))
 
-def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None):
+def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None,output_path=None):
  study=Path(study);directory=study/'results';summary=json.loads((directory/'summary.json').read_text());plan=json.loads((study/'plan.json').read_text())
  assert summary['execution_source_commit']==source and summary['plan_sha256']==sha((study/'plan.json').read_bytes())
  assert summary['attempt_count']==summary['planned_attempt_count']==6 and summary['complete']
@@ -108,6 +108,17 @@ def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None):
     assert result==json.loads((directory/'checkpoints'/key).read_text())
     if 'rejected' in result:
      eligible[lane]=False;assert result['exit_code']==1 and result['elapsed_s']>0
+     if key not in summary['rejection_diagnostics']:
+      # The prospective translation-only projector currently rejects before
+      # producing a matrix dump. Retain that explicit limitation; historical
+      # callers still require their original captured-system evidence.
+      assert position_stabilization=='split_translation'
+      assert result['rejected']=='Translation-only position projection failed; repair initial overlap or refine timestep'
+      assert result['rejection_dump'] is None
+      assert result['rejection_dump_status']=='engine rejected without matrix snapshot; retained as-is'
+      assert not (directory/'rejections'/name/(lane+'.json')).exists()
+      rejections.append(dict(scene=name,lane=lane,fraction=fraction,rows=None,residual_m_s=None,phase='position',matrix_snapshot_available=False,reason=result['rejected']))
+      continue
      diagnostic=summary['rejection_diagnostics'][key];dump=directory/diagnostic['path'];assert sha(dump.read_bytes())==diagnostic['sha256']
      snapshot=json.loads(dump.read_text());assert snapshot['tolerance_m_s']==plan['common']['contact_tolerance_m_s'] and snapshot['residual_m_s']>snapshot['tolerance_m_s']
      if snapshot['phase']=='position':
@@ -138,7 +149,7 @@ def audit(study=DIRECTORY,source=SOURCE,position_stabilization=None):
    receipts[name]=dict(reference_qualified=all(e['passed'] for e in edges),physical_eligible=eligible,edges=edges,diagnostics=physical)
  assert histories==summary['history_count']
  out=dict(execution_source_commit=source,attempt_count=6,history_count=histories,rejection_count=len(rejections),rejections=rejections,scenes=receipts)
- (study/'independent-audit.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
+ (Path(output_path) if output_path is not None else study/'independent-audit.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
  print('Shared hull audit PASS:',histories,'histories;',len(rejections),'retained rejections;',sum(r['reference_qualified'] for r in receipts.values()),'qualified references')
  return out
 if __name__=='__main__':

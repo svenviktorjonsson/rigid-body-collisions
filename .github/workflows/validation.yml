@@ -75,6 +75,7 @@ jobs:
           python -m research.audit_large_contact_completion --final-native
           python -m research.audit_new_hull_contacts
           python -m research.audit_hull_active_completion --source-commit 95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb
+          python -m research.audit_hull_translation_completion --source-commit 52f7e6d244e92a8405134e0222ce14fc3eda0ef6 --receipt-prefix ci-independent
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json

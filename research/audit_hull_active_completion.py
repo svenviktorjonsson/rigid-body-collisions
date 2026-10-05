@@ -69,7 +69,7 @@ def authored_progress(scene,progress,dt):
     return result,metrics,certificates
 
 
-def audit_progress(study,source,require_all=False):
+def audit_progress(study,source,require_all=False,output_path=None):
     directory=study/'results';plan=json.loads((study/'plan.json').read_text());scenes=json.loads((directory/'scenes.json').read_text())
     provenance=json.loads((directory/'checkpoints/provenance.json').read_text());assert provenance['execution_source_commit']==source
     assert provenance['plan_sha256']==sha((study/'plan.json').read_bytes())
@@ -110,7 +110,7 @@ def audit_progress(study,source,require_all=False):
             records.append(record)
     output=dict(schema='independent-native-hull-progress-audit-v1',execution_source_commit=source,plan_sha256=provenance['plan_sha256'],snapshot_count=len(records),
                 all_observed_snapshots_integrity_passed=True,cases=records,scope='Snapshots of output-frame prefixes. Only completed final histories and both prescribed refinement edges can qualify a trajectory; partial progress cannot.')
-    (study/'independent-progress-audit.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
+    (Path(output_path) if output_path is not None else study/'independent-progress-audit.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
     print('Native principal/authored-frame progress audit PASS:',len(records),'snapshots;',sum(r['complete'] for r in records),'complete;',sum(not r['physical_gates_passed'] for r in records),'physical-gate failures retained')
     return output
 

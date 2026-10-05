@@ -1,0 +1,16 @@
+{
+  "schema": "frozen-independent-translation-six-audit-v1",
+  "execution_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "files": {
+    "research/hull-translation-completion/final-independent-audit.json": "4691a3d5666fc50d8b7243b739bf7458da66f8723a120ba16f512a85169d2878",
+    "research/hull-translation-completion/final-independent-progress-audit.json": "d9b102c71df18474dfea09a8a0bd315def7afbb3aea9c29aff4a59f0ea944e83",
+    "research/hull-translation-completion/final-independent-runtime-metadata-audit.json": "7c812562a594956dd46174e8a4d3ca47f0e7cf478a07bfcbc8d88c8cb823e0cb",
+    "research/hull-translation-completion/final-independent-current-runtime-audit.json": "2ac4ca07728ab738821460c0cc85c8183088b26fe5f201d17f1eae475e70e5a9",
+    "research/hull-translation-completion/independent-runtime-audit.json": "8164d401a8751b4370f82c54ef8fe35913070cb3bcd7305493c0e809216d2998",
+    "research/hull-translation-completion/independent-runtime-audit-source.py": "0fa25f35691f1e155bb9e647a895c709e9097986d35b6e5617eee5348c078cc3",
+    "research/audit_hull_translation_completion.py": "1c42e52ba33bd77302f0ae73ce4184ad1dccd7a9d3cde3bf5d3b94da5778031a",
+    "research/audit_hull_active_completion.py": "cf352db58c186589baef9e8aabf9f586d919d24a2e4b178024cf26beac03adfb",
+    "research/audit_shared_hulls.py": "fa61eaf2af3a912a9d9fb4773b91ac7328bedd6c09c6cde49d6b92429faa693a"
+  },
+  "scope": "Final six-attempt archive and all principal-frame snapshots; portable metadata plus current local runtime attestation. Three completed histories, three retained rejections, zero qualified references. Earlier five-snapshot receipt remains unchanged."
+}

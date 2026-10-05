@@ -1,0 +1,21 @@
+{
+  "schema": "detached-six-attempt-launch-v1",
+  "pid": 61314,
+  "utc_started": "2026-10-05T17:19:49.269394+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "research/hull-translation-completion/runner.py",
+    "--source-commit",
+    "52f7e6d244e92a8405134e0222ce14fc3eda0ef6"
+  ],
+  "source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "execution_log": "execution.log",
+  "one_orchestrator": true,
+  "performance_scope": "Descriptive cost only; concurrent collaborative workload"
+}

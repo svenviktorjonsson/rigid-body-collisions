@@ -1,0 +1,27 @@
+{
+  "schema": "independent-translation-portable-runtime-metadata-audit-v1",
+  "execution_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "plan_sha256": "2d921b75a62190f84e02c2e3caaaebd511660e012819ad97bdbc4cac81c595c3",
+  "binary_sha256": "ed6be2145182dfb7fdca42a47ab06d4532414e355f0a567d8f41b7879b736a29",
+  "runtime_library_hashes": {
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00"
+  },
+  "local_attestation_sha256": "8164d401a8751b4370f82c54ef8fe35913070cb3bcd7305493c0e809216d2998",
+  "local_attestation_source_sha256": "0fa25f35691f1e155bb9e647a895c709e9097986d35b6e5617eee5348c078cc3",
+  "portable_metadata_integrity_passed": true,
+  "current_host_runtime_checked": false,
+  "declared_numerical_change": {
+    "position_stabilization": {
+      "baseline": "split",
+      "candidate": "split_translation"
+    }
+  },
+  "trajectory_qualified": false,
+  "scope": "Portable archive/schema/source/provenance checks and saved local attestation integrity. Current host binary/library equality is not required; no trajectory qualification."
+}

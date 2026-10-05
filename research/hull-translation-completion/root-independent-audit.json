@@ -1,0 +1,111 @@
+{
+  "execution_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "attempt_count": 6,
+  "history_count": 3,
+  "rejection_count": 3,
+  "rejections": [
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_0",
+      "fraction": 0.06,
+      "rows": 261,
+      "residual_m_s": 2.8277399576699853e-05,
+      "reason": "Coulomb residual gate failed (2.82774e-05 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_1",
+      "fraction": 0.03,
+      "rows": 243,
+      "residual_m_s": 0.0005336505880083456,
+      "reason": "Coulomb residual gate failed (0.000533651 m/s): increase iterations or refine timestep; no friction-law fallback"
+    },
+    {
+      "scene": "fast_rotate_shake27_hulls7301",
+      "lane": "reference_2",
+      "fraction": 0.015,
+      "rows": null,
+      "residual_m_s": null,
+      "phase": "position",
+      "matrix_snapshot_available": false,
+      "reason": "Translation-only position projection failed; repair initial overlap or refine timestep"
+    }
+  ],
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": {
+            "position_m": 0.07250980115683694,
+            "velocity_m_s": 5.545339317382749,
+            "omega_rad_s": 80.60369955761158,
+            "orientation_rad": 1.2997640089962061
+          },
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": {
+            "position_m": 0.08914931148337583,
+            "velocity_m_s": 5.381175272313081,
+            "omega_rad_s": 78.21231001927829,
+            "orientation_rad": 1.062990432521003
+          },
+          "passed": false
+        }
+      ],
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8173.472176435781,
+          "container_surface_excess_m": 0.0006381643675526516,
+          "sampled_container_surface_excess_m": 5.518502423362825e-07
+        },
+        "reference_1": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8112.622940291065,
+          "container_surface_excess_m": 0.00019624511728977279,
+          "sampled_container_surface_excess_m": 5.15810725132404e-07
+        },
+        "reference_2": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8081.685983860234,
+          "container_surface_excess_m": 2.0564928597532894e-05,
+          "sampled_container_surface_excess_m": 1.5639113167820184e-06
+        }
+      }
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": null,
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": null,
+          "passed": false
+        }
+      ],
+      "diagnostics": {}
+    }
+  }
+}
