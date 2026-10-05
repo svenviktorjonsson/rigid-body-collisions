@@ -61,6 +61,7 @@ jobs:
           python -m research.audit_predictive_contact_review
           python -m research.audit_shake_performance
           python -m research.audit_shared_shake
+          python -m research.audit_shared_hulls
           python -m research.audit_elastic_patch
           python -m research.audit_elastic_patch --directory research/elastic-patch-refined
       - name: Exercise the explicitly synthetic comparison fixtures
