@@ -135,7 +135,7 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
     frames = int(round(scene["duration"] / dt))
     if frames < 1 or not np.isclose(frames * dt, scene["duration"], rtol=1e-9, atol=1e-12):
         raise ValueError("Duration must be an integer number of output frames")
-    _positive_integer(primary_steps, "primary_steps", 64)
+    _positive_integer(primary_steps, "primary_steps", 4096)
     _positive_integer(substeps, "substeps")
     p = dict(DEFAULT_POLICY)
     if policy is not None:

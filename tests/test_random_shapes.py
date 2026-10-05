@@ -1,7 +1,8 @@
 import unittest
+import copy
 import numpy as np
 
-from rigid_engine import validate_scene
+from rigid_engine import validate_scene, run, BINARIES
 from research.random_shapes import generate, moments, scenes, contact_chain
 from research.sparse_contact import assemble_sparse
 
@@ -45,6 +46,26 @@ class RandomGeometryTests(unittest.TestCase):
             system = assemble_sparse(data['centers'], data['mass'], data['inertia'], data['contacts'])
             _, K = system.mobility((0, 1))
             self.assertGreater(K[::2, 1::2].nnz, 0)
+
+    @unittest.skipUnless(BINARIES['temporal'].is_file(), 'Build the temporal comparator')
+    def test_shallow_corners_survive_native_construction_without_mass_change(self):
+        for scene in scenes():
+            if 'mixed36' not in scene['id']: continue
+            short = copy.deepcopy(scene); short['duration'] = 1/120
+            short['bodies'][0]['velocity_schedule'] = short['bodies'][0]['velocity_schedule'][:1]
+            result = run(short, backend='temporal', primary_steps=4, substeps=16)
+            np.testing.assert_allclose(result['mass'], 1., atol=2e-6)
+            np.testing.assert_allclose(result['inertia'],
+                [g['inertia_kg_m2'] for g in scene['generated_geometry']], rtol=2e-5, atol=1e-7)
+
+    @unittest.skipUnless(BINARIES['temporal'].is_file(), 'Build the temporal comparator')
+    def test_clockwise_fixture_has_same_native_moments(self):
+        shape, info = generate(np.random.default_rng(81))
+        for fixture in shape: fixture['vertices'].reverse()
+        scene = {'duration': 1/120, 'gravity': [0,0], 'bodies': [{'polygons': shape}]}
+        result = run(scene, backend='temporal', primary_steps=1, substeps=1)
+        self.assertAlmostEqual(result['mass'][0], 1., places=6)
+        self.assertAlmostEqual(result['inertia'][0], info['inertia_kg_m2'], places=6)
 
 
 if __name__ == '__main__': unittest.main()

@@ -30,6 +30,45 @@ template<class T> static T read() {
     if (!(std::cin >> value)) throw std::runtime_error("Truncated scene input");
     return value;
 }
+#ifndef RIGID_BLOCK_BACKEND
+// Hull authoring welds at a fixed metre-scale slop. Already ordered strictly
+// convex input can contain legitimate corners below that slop. Construct with
+// the public helper at a larger authoring scale, then restore the exact core;
+// normals are dimensionless. This changes neither world units nor solver slop.
+static b2Polygon orderedPolygon(const b2Vec2* input, int count, float radius) {
+    b2Vec2 origin{0,0};
+    for(int i=0;i<count;++i) origin=b2Add(origin,input[i]);
+    origin=b2MulSV(1.f/count,origin);
+    double area=0, minimum=1e30;
+    for(int i=0;i<count;++i) {
+        const auto& a=input[i]; const auto& b=input[(i+1)%count];
+        area+=double(a.x)*b.y-double(a.y)*b.x;
+    }
+    float winding=area>0 ? 1.f : -1.f;
+    for(int i=0;i<count;++i) {
+        const auto& a=input[i]; const auto& b=input[(i+1)%count];
+        double dx=double(b.x)-a.x, dy=double(b.y)-a.y, length=std::hypot(dx,dy);
+        if(length<.009999) throw std::runtime_error("Polygon edge below supported scale");
+        minimum=std::min(minimum,length*.5);
+        for(int j=0;j<count;++j) if(j!=i && j!=(i+1)%count) {
+            double distance=winding*(dx*(double(input[j].y)-a.y)-dy*(double(input[j].x)-a.x))/length;
+            if(!(distance>1e-9)) throw std::runtime_error("Strict ordered convex polygon required after Float32 conversion");
+            minimum=std::min(minimum,distance);
+        }
+    }
+    float scale=float(std::max(1.,.04/minimum));
+    if(!std::isfinite(scale) || scale>1e6f) throw std::runtime_error("Polygon construction is ill-conditioned");
+    b2Vec2 vertices[B2_MAX_POLYGON_VERTICES];
+    for(int i=0;i<count;++i) vertices[i]=b2MulSV(scale,b2Sub(input[i],origin));
+    auto hull=b2ComputeHull(vertices,count);
+    if(hull.count!=count || !b2ValidateHull(&hull)) throw std::runtime_error("Convex ordered polygon construction failed");
+    auto polygon=b2MakePolygon(&hull,0);
+    for(int i=0;i<count;++i) polygon.vertices[i]=b2Add(origin,b2MulSV(1.f/scale,polygon.vertices[i]));
+    polygon.centroid=b2Add(origin,b2MulSV(1.f/scale,polygon.centroid));
+    polygon.radius=radius;
+    return polygon;
+}
+#endif
 struct Body {
     b2BodyId id;
     bool dynamic;
@@ -163,13 +202,21 @@ int main() {
                 lo = b2Min(lo, vertices[k]); hi = b2Max(hi, vertices[k]);
                 body.radius = std::max(body.radius, b2Length(vertices[k]));
             }
+#ifdef RIGID_BLOCK_BACKEND
             b2Hull hull = b2ComputeHull(vertices, count);
             if (hull.count != count || !b2ValidateHull(&hull)) throw std::runtime_error("Convex ordered polygon required");
             b2Polygon core = b2MakePolygon(&hull, 0.f);
+#else
+            b2Polygon core = orderedPolygon(vertices,count,0.f);
+#endif
             RigidMassData md = b2ComputePolygonMass(&core, sd.density);
             mass += md.mass; moment = b2Add(moment, b2MulSV(md.mass, md.center));
             inertiaOrigin += md.rotationalInertia;
+#ifdef RIGID_BLOCK_BACKEND
             b2Polygon polygon = b2MakePolygon(&hull, skin);
+#else
+            b2Polygon polygon=core; polygon.radius=skin;
+#endif
             b2CreatePolygonShape(body.id, &sd, &polygon);
             body.extent = std::min(body.extent, std::min(hi.x - lo.x, hi.y - lo.y));
         }
