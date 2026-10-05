@@ -316,8 +316,14 @@ protected:
    m_xSplit.setZero();
    if(translation_split){
     double residual=0;
-    if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual,&position_stats.null_pressure,recovery_enabled))
+    if(!translationSplitSolve(A,b,upper,x,tolerance,info.m_numIterations,&residual,&position_stats.null_pressure,recovery_enabled)){
+     if(rejection_observer){
+      btVectorXu lower(k);btAlignedObjectArray<int> independent;independent.resize(k);std::vector<double> rejected_position(k);
+      for(int i=0;i<k;i++){lower[i]=0;independent[i]=-1;rejected_position[i]=x[i];}
+      rejection_observer(A,b,rejected_position,lower,upper,independent,"position_translation",residual,info.m_timeStep);
+     }
      throw std::runtime_error("Translation-only position projection failed; repair initial overlap or refine timestep");
+    }
     translation_split_solves++;translation_split_residual_max=std::max(translation_split_residual_max,residual);
     for(int i=0;i<k;i++)m_xSplit[normals[i]]=x[i];
    }

@@ -1,0 +1,10 @@
+{
+  "schema": "retained-translation-subset-negative-v1",
+  "files": {
+    "README.md": "48919e66f47e2c0e62c781c894d6ccf68fe938b70ebd6367f77a0ba79b65ca3e",
+    "independent-failed-subset-audit.json": "50723cfefc70039ba3f9747fe370953e770c7f9a897163623b38c6d7e352d14e",
+    "reference_0-fb-trf-normal-qp-10-subset.json": "3d13b48b34af56d2259963c21cb6c9b4f0eee8a102359b4869cc8b9060c39c52",
+    "subset36-normalqp-continuation10.log": "9a547eb2d0864c573c31344e3c0e31e3ed890135743a0d6326c1d3b236dcfef5",
+    "subset_replay.py": "346621db3c7f033c465bcef307590f765a3d15ffdb367fe834dc0fd9e89fc7ff"
+  }
+}

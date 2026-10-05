@@ -44,7 +44,8 @@ int main(){try{
   coulomb_mlcp.rejection_observer=[&,path](const auto& A,const auto& b,const auto& p,const auto& lo,const auto& hi,const auto& dep,const char* phase,double residual,double h){
    json matrix=json::array(),rhs=json::array(),lower=json::array(),upper=json::array(),dependencies=json::array();
    for(int i=0;i<b.rows();i++){json row=json::array();for(int j=0;j<b.rows();j++)row.push_back(A(i,j));matrix.push_back(row);rhs.push_back(b[i]);lower.push_back(lo[i]);upper.push_back(hi[i]);dependencies.push_back(dep[i]);}
-   json snapshot={{"schema","circular-coulomb-rejection-v1"},{"phase",phase},{"A",matrix},{"b",rhs},{"p",p},{"lo",lower},{"hi",upper},{"dependencies",dependencies},{"residual_m_s",residual},{"tolerance_m_s",coulomb_mlcp.tolerance},{"internal_dt_s",h},{"iteration_budget",in.at("iterations")}};
+   const bool normal_only=std::string(phase)=="position_translation";
+   json snapshot={{"schema",normal_only?"normal-only-position-rejection-v1":"circular-coulomb-rejection-v1"},{"phase",phase},{"A",matrix},{"b",rhs},{"p",p},{"lo",lower},{"hi",upper},{"dependencies",dependencies},{"residual_m_s",residual},{"tolerance_m_s",coulomb_mlcp.tolerance},{"internal_dt_s",h},{"iteration_budget",in.at("iterations")}};
    std::ofstream file(path);if(!file)throw std::runtime_error("Cannot write rejected contact diagnostic");file<<snapshot.dump()<<"\n";file.close();if(!file)throw std::runtime_error("Failed writing rejected contact diagnostic");
   };
  }

@@ -1,0 +1,81 @@
+{
+  "capture_sha256": "7b7a7649645426d21030a51310cdc235a417cbc830f0a13cfa951d4581c018d6",
+  "status": "PASS",
+  "trials": [
+    {
+      "receipt": "normal-release.json",
+      "label": "31",
+      "accepted": false,
+      "original_projection_gate": false,
+      "independent_physical_gate": false,
+      "residual_m_s": 1.5321323742822912e-05,
+      "passive_change_bound_J": -102.22431558779026,
+      "passivity_scale": 192.921763033836,
+      "normal_negative_m_s": 1.5321323742822912e-05,
+      "cone_violation_m_s": 3.9715084475445584e-15,
+      "support_gap_J": 1.040515072125666e-14,
+      "normal_complementarity_work_J": 2.3560097491571606e-14,
+      "positive_friction_work_J": 0.0
+    },
+    {
+      "receipt": "normal-release.json",
+      "label": "29",
+      "accepted": true,
+      "original_projection_gate": true,
+      "independent_physical_gate": true,
+      "residual_m_s": 1.3531044339174585e-14,
+      "passive_change_bound_J": -100.95255655719507,
+      "passivity_scale": 190.2996597466716,
+      "normal_negative_m_s": 1.4210854715202004e-14,
+      "cone_violation_m_s": 3.9715084475445584e-15,
+      "support_gap_J": 4.8498490277202944e-15,
+      "normal_complementarity_work_J": 9.395216495740906e-14,
+      "positive_friction_work_J": 0.0
+    },
+    {
+      "receipt": "ranked-release.json",
+      "label": "positive-support-bootstrap",
+      "accepted": false,
+      "original_projection_gate": false,
+      "independent_physical_gate": false,
+      "residual_m_s": 9.730242205520175e-06,
+      "passive_change_bound_J": -102.21447672961148,
+      "passivity_scale": 192.9013527747836,
+      "normal_negative_m_s": 9.73024220551899e-06,
+      "cone_violation_m_s": 2.9797214680441443e-12,
+      "support_gap_J": 6.544699612638047e-11,
+      "normal_complementarity_work_J": 5.250388520968839e-06,
+      "positive_friction_work_J": 0.0
+    },
+    {
+      "receipt": "ranked-release.json",
+      "label": "release-ranked-outgoing-normal-29",
+      "accepted": true,
+      "original_projection_gate": true,
+      "independent_physical_gate": true,
+      "residual_m_s": 1.3531044339174585e-14,
+      "passive_change_bound_J": -100.95255655719507,
+      "passivity_scale": 190.2996597466716,
+      "normal_negative_m_s": 1.4210854715202004e-14,
+      "cone_violation_m_s": 3.9715084475445584e-15,
+      "support_gap_J": 4.8498490277202944e-15,
+      "normal_complementarity_work_J": 9.395216495740906e-14,
+      "positive_friction_work_J": 0.0
+    },
+    {
+      "receipt": "native-seed-ranked-release.json",
+      "label": "release-ranked-outgoing-normal-29",
+      "accepted": true,
+      "original_projection_gate": true,
+      "independent_physical_gate": true,
+      "residual_m_s": 3.9715084475445584e-15,
+      "passive_change_bound_J": -100.95255655719511,
+      "passivity_scale": 190.2996597466717,
+      "normal_negative_m_s": 1.734723475976807e-18,
+      "cone_violation_m_s": 9.990722406891275e-16,
+      "support_gap_J": 9.834056630506801e-15,
+      "normal_complementarity_work_J": 1.1506585204818565e-14,
+      "positive_friction_work_J": 0.0
+    }
+  ]
+}
