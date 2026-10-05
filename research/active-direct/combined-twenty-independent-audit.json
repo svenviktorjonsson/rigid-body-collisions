@@ -1,0 +1,276 @@
+{
+  "count": 18,
+  "all_accepted": true,
+  "results": [
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.370204850999851e-11,
+        "passive_change_bound_J": -0.44083592810798444,
+        "passivity_scale": 1.4420760090466276,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "capture_sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.084930058658002e-14,
+        "passive_change_bound_J": -0.9002257220852357,
+        "passivity_scale": 1.9116166104591445,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "capture_sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.9576812368827155e-10,
+        "passive_change_bound_J": -11.256526120695039,
+        "passivity_scale": 14.013371501030372,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.0742877117184982e-12,
+        "passive_change_bound_J": -6.8790048381344935,
+        "passivity_scale": 9.553944930327017,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "7e52bea9db4c4965995924d2c945081f53a55847a31adc4fc3ea67e9077fe1ab",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 5.553458871593134e-09,
+        "passive_change_bound_J": -0.04173723843740848,
+        "passivity_scale": 1.0419149140106096,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 6.70309604484867e-11,
+        "passive_change_bound_J": -0.6351133500425815,
+        "passivity_scale": 1.693018511526232,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.149265754414005e-13,
+        "passive_change_bound_J": -3.7797870810654226,
+        "passivity_scale": 5.393161276169741,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "a8f6601cc02e4d3b266250ece2d49440228ff8da867a8c9d62e5c1b0b7b08cdd",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.314784762054179e-12,
+        "passive_change_bound_J": -1.2604320828491247,
+        "passivity_scale": 2.6591504430509247,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "capture_sha256": "b50ea9a0f145e4878ba1f8e6683ab125b4fb9418cc138de61d29c2f76abfbefd",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 8.868568375544756e-14,
+        "passive_change_bound_J": -0.7733431971857939,
+        "passivity_scale": 1.9269183789446078,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.0735088488216964e-17,
+        "passive_change_bound_J": -0.000232510043832646,
+        "passivity_scale": 1.0004650200876652,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.7519491156017373e-09,
+        "passive_change_bound_J": -1.20486001604026,
+        "passivity_scale": 3.2384431735631525,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.387480415632887e-15,
+        "passive_change_bound_J": -0.2820460179724541,
+        "passivity_scale": 1.2928383076010543,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 7.382119881991728e-17,
+        "passive_change_bound_J": -0.00640215725843664,
+        "passivity_scale": 1.0128043145168732,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 2.346795284085842e-09,
+        "passive_change_bound_J": -16.946597373852224,
+        "passivity_scale": 35.06777480167072,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "direct_fb",
+      "supplement_svd_calls": 78
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "ba80bbe35cb56243259ed1cc60ad85d85a404c342834adfb2bf51be037d66fce",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 9.968269488224403e-09,
+        "passive_change_bound_J": -0.4899048985853248,
+        "passivity_scale": 1.7369087325921502,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "neutral",
+      "supplement_svd_calls": 483
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.5803835980078558e-09,
+        "passive_change_bound_J": -0.07953588167001702,
+        "passivity_scale": 1.134582505509326,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "direct_fb",
+      "supplement_svd_calls": 39
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "capture_sha256": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 2.240820607608982e-11,
+        "passive_change_bound_J": -1.7702098387916876,
+        "passivity_scale": 4.260025245227085,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "capture_sha256": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f",
+      "native_accepted": true,
+      "independent_gate": {
+        "accepted": true,
+        "residual_m_s": 1.5318363176651745e-10,
+        "passive_change_bound_J": -44.18475471821508,
+        "passivity_scale": 82.42658361664014,
+        "upper_bounds_ok": true,
+        "normal_min": 0.0
+      },
+      "lane": "baseline",
+      "supplement_svd_calls": 0
+    }
+  ]
+}

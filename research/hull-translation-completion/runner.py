@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import platform
+import re
 import subprocess
 import sys
 import time
@@ -46,11 +47,18 @@ def validate_plan(plan):
         authored[config['id']]=entry
     return authored
 
-def guard(source,paths,binary_hash):
+def runtime_libraries():
+    linked=subprocess.check_output(['ldd',str(ROOT/'build/spatial/spatial_runner')],text=True)
+    return {str(Path(path).resolve()):sha(Path(path).resolve().read_bytes())
+            for path in re.findall(r'^\s*\S+\s+=>\s+(/\S+)',linked,re.M)}
+
+def guard(source,paths,binary_hash,library_hashes):
     for path in paths:
         committed=subprocess.check_output(['git','show',f'{source}:{path}'],cwd=ROOT)
         if committed!=(ROOT/path).read_bytes():raise RuntimeError('Source changed from frozen integration SHA: '+path)
     if sha((ROOT/'build/spatial/spatial_runner').read_bytes())!=binary_hash:raise RuntimeError('Native binary changed during study')
+    for path,expected in library_hashes.items():
+        if sha(Path(path).read_bytes())!=expected:raise RuntimeError('Native runtime library changed during study: '+path)
 
 def qualify(plan,scene,runs):
     """Recompute all gates and both refinement edges without receipt reuse."""
@@ -78,10 +86,10 @@ def main():
     if args.check_plan:print('Plan valid: six paired scenes, explicit translation-only numerical repair; no native execution');return
     if not args.source_commit:parser.error('--source-commit is mandatory; wait for the supplied frozen integration SHA')
     source=subprocess.check_output(['git','rev-parse',args.source_commit],cwd=ROOT,text=True).strip();paths=source_paths()
-    binary_hash=sha((ROOT/'build/spatial/spatial_runner').read_bytes());guard(source,paths,binary_hash)
+    binary_hash=sha((ROOT/'build/spatial/spatial_runner').read_bytes());library_hashes=runtime_libraries();guard(source,paths,binary_hash,library_hashes)
     directory=DIRECTORY/'results';checkpoint=directory/'checkpoints'
     provenance=dict(execution_source_commit=source,plan_sha256=sha(PLAN.read_bytes()),binary_sha256=binary_hash,
-                    source_hashes={path:sha((ROOT/path).read_bytes()) for path in paths},workload_note=args.workload_note)
+                    source_hashes={path:sha((ROOT/path).read_bytes()) for path in paths},runtime_library_hashes=library_hashes,workload_note=args.workload_note)
     p=checkpoint/'provenance.json'
     if p.exists() and json.loads(p.read_text())!=provenance:raise RuntimeError('Checkpoint provenance changed; never overwrite an earlier study')
     atomic(p,canonical(provenance));atomic(directory/'scenes.json',canonical(authored))
@@ -108,7 +116,7 @@ def main():
             lane=f'reference_{i}';key=f'{name}/{lane}.json';path=checkpoint/key
             dump=directory/'rejections'/name/(lane+'.json')
             progress=directory/'progress'/name/(lane+'.json')
-            guard(source,paths,binary_hash)
+            guard(source,paths,binary_hash,library_hashes)
             if path.exists():result=json.loads(path.read_text())
             else:
                 dump.parent.mkdir(parents=True,exist_ok=True);progress.parent.mkdir(parents=True,exist_ok=True);start=time.perf_counter()
@@ -128,6 +136,6 @@ def main():
             print(name,lane,'REJECT '+result['rejected'] if 'rejected' in result else f"{result['step_s']:.4f}s residual={result['coulomb_residual_max_m_s']:.3g}",flush=True)
         receipts[name]=qualify(plan,scene,runs);archive_progress()
         print('REFERENCE',name,receipts[name]['reference_qualified'],flush=True)
-    guard(source,paths,binary_hash);archive_progress()
+    guard(source,paths,binary_hash,library_hashes);archive_progress()
     print('DONE',source,len(all_runs),sum('rejected' not in r for r in all_runs.values()),flush=True)
 if __name__=='__main__':main()

@@ -178,6 +178,17 @@ int main(){try{
  out["translation_split_solves"]=coulomb_mlcp.translation_split_solves;out["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
  out["coulomb_continuation_solves"]=coulomb_mlcp.stats.continuation_solves;
  out["coulomb_iteration_sweeps_total"]=coulomb_mlcp.stats.iteration_sweeps_total;
+ out["lapack_contact_recovery_compiled"]=coulombLapackRecoveryEnabled();
+ out["coulomb_supplemental_solves"]=coulomb_mlcp.stats.supplemental_solves;
+ out["coulomb_supplemental_svd_calls"]=coulomb_mlcp.stats.supplemental_svd_calls;
+ out["coulomb_supplemental_iteration_steps"]=coulomb_mlcp.stats.supplemental_iteration_steps;
+ out["coulomb_supplemental_damped_steps"]=coulomb_mlcp.stats.supplemental_damped_steps;
+ out["coulomb_supplemental_pressure_svd_calls"]=coulomb_mlcp.stats.supplemental_pressure_svd_calls;
+ out["coulomb_supplemental_pressure_attempts"]=coulomb_mlcp.stats.supplemental_pressure_attempts;
+ out["coulomb_supplemental_pivot_calls"]=coulomb_mlcp.stats.supplemental_pivot_calls;
+ out["coulomb_supplemental_projector_calls"]=coulomb_mlcp.stats.supplemental_projector_calls;
+ out["coulomb_supplemental_restarts"]=coulomb_mlcp.stats.supplemental_restarts;
+ out["coulomb_supplemental_null_response_max_m_s"]=coulomb_mlcp.stats.supplemental_null_response_max;
  const auto& active=coulomb_mlcp.stats.active;out["coulomb_active_solves"]=coulomb_mlcp.stats.active_solves;
  out["coulomb_active_subset_passes"]=active.passes;out["coulomb_active_mode_guesses"]=active.mode_guesses;
  out["coulomb_active_expanded_contacts"]=active.expanded_contacts;

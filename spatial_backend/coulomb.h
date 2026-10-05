@@ -10,6 +10,17 @@
 #include "pressure_release.h"
 #include "normal_null.h"
 #include "coulomb_active.h"
+#ifdef SPATIAL_LAPACK_RECOVERY
+#include "coulomb_restart.h"
+#endif
+
+inline bool coulombLapackRecoveryEnabled(){
+#ifdef SPATIAL_LAPACK_RECOVERY
+ return true;
+#else
+ return false;
+#endif
+}
 
 // Upstream friction RHS omits this angular free-velocity increment, although
 // normal RHS and final body writeback include it. Preserve the signed B row.
@@ -24,6 +35,8 @@ struct CoulombStats {
  double residual_max=0,passive_change_max=0,last_residual=0;
  normal_pressure::Stats pressure;int pressure_solves=0;
  normal_null::Stats null_pressure;
+ int supplemental_solves=0,supplemental_svd_calls=0,supplemental_iteration_steps=0,supplemental_damped_steps=0,supplemental_pressure_svd_calls=0,supplemental_pressure_attempts=0,supplemental_pivot_calls=0,supplemental_projector_calls=0,supplemental_restarts=0;
+ double supplemental_null_response_max=0;
  circular_active::Stats active;int active_solves=0;
  int continuation_solves=0;unsigned long long iteration_sweeps_total=0;
  circular_trust::Stats continuation;
@@ -228,6 +241,28 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
   for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
   if(coulombIterate(A,b,candidate,lo,hi,dep,budget-first_budget,tolerance,stats,&rejected)){x=candidate;return true;}
  }
+#ifdef SPATIAL_LAPACK_RECOVERY
+ if(recover&&b.rows()<=64){
+  // Fresh per-call work counters: prior contacts must not consume this budget.
+  candidate=x;circular_restart::Stats supplemental;
+  const bool accepted=circular_restart::solve(A,b,candidate,hi,dep,tolerance,supplemental);
+  stats.supplemental_svd_calls+=supplemental.svd_calls;
+  stats.supplemental_iteration_steps+=supplemental.iteration_steps;
+  stats.supplemental_damped_steps+=supplemental.direct.damped_steps+supplemental.neutral.damped_steps;
+  stats.supplemental_pressure_svd_calls+=supplemental.neutral.pressure_svd_calls;
+  stats.supplemental_pressure_attempts+=supplemental.neutral.pressure_attempts;
+  stats.supplemental_pivot_calls+=supplemental.neutral.normal_pivot_attempts;
+  stats.supplemental_projector_calls+=supplemental.neutral.projector_calls;
+  stats.supplemental_restarts+=supplemental.neutral.restarts;
+  stats.supplemental_null_response_max=std::max(stats.supplemental_null_response_max,supplemental.neutral.maximum_neutral_velocity);
+  if(accepted){
+   x=candidate;stats.solves++;stats.supplemental_solves++;
+   stats.last_residual=supplemental.residual;stats.residual_max=std::max(stats.residual_max,stats.last_residual);
+   double change=0;for(int i=0;i<b.rows();i++){double w=-b[i];for(int j=0;j<b.rows();j++)w+=A(i,j)*x[j];change+=.5*x[i]*(w-b[i]);}
+   stats.passive_change_max=std::max(stats.passive_change_max,change);return true;
+  }
+ }
+#endif
  if(rejected_impulses)*rejected_impulses=rejected;
  return false;
 }

@@ -158,9 +158,8 @@ and a warm active-contact search run next, followed by full continuation and the
 earlier minimum-norm polisher. If none passes, the solver spends the remainder
 of its original block-iteration budget. `contact_recovery=False` disables these
 searches. The physical mobility and material are never regularized or replaced.
-All sixteen earlier captured systems and the new 291-row position capture pass;
-three later frictional velocity captures still fail in this checkpoint. Passing
-a capture does not establish trajectory accuracy.
+All 20 retained captured systems pass when the native LAPACK recovery option is
+enabled. Passing a capture does not establish trajectory accuracy.
 
 The pressure-null search also supports translation-only position repair. It
 permits at most 384 normal rows and 128 active-face states/SVD calls per attempt.
@@ -172,6 +171,28 @@ Recovery requires a budget of at least 64 and honors `contact_recovery=False`.
 Nine native controls include singular redundancy, infeasibility, unchanged output
 on failure, and explicit enable/disable behavior. Frozen replay evidence is in
 `research/normal-null-integration`; it retains all 20 successes and failures.
+
+The additional difficult-friction fallback runs only after all earlier stages
+and the remaining original sweep budget reject, and initially supports at most
+64 rows. Warm/cold Fischer–Burmeister searches are followed, when needed, by a
+numerical continuation guide, mobility-null pressure relocation and Moré trust
+search using LAPACK DGESDD. No archived answer is used as an initial guess. Only
+the original circular law, normal bounds and finite passivity gate can accept.
+Each call has fresh counters and at most 1024 nonlinear/projector SVD calls and
+2048 outer search steps. Pressure initialization has a separate 128-SVD limit
+and at most one upstream pivot-guide call, whose internal pivot count is not
+exposed. Engine counters disclose actual work. These limits are additional to
+the earlier solver stages and do not certify a wall-clock deadline.
+
+`SPATIAL_LAPACK_RECOVERY=ON` is the default native CMake setting and requires
+32-bit-integer LAPACK/BLAS; Linux versioned runtime libraries are supported when
+development symlinks are absent. Configure `-DSPATIAL_LAPACK_RECOVERY=OFF` for the
+previous dependency-free solver. Its three later friction captures remain
+unresolved; no WebAssembly portability claim follows from the native fallback.
+`research/native-recovery-integration` records exact source, executable and linked
+library hashes and all 20 independently checked outputs. Independent review adds
+16 analytic and rejection controls. No new trajectory accuracy or speed claim
+follows from these captured systems.
 
 Active search supports up to 4096 original rows and 384 reduced rows. Each
 candidate must pass the original all-row contact and finite energy gates;

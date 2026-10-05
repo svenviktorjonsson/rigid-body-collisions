@@ -1,0 +1,9 @@
+{
+  "schema": "rejected-numerical-probe-manifest-v1",
+  "files": {
+    "README.md": "ff846d4e11d45ed9a617bdf886f8a37fdfb218a2b4f4577e9bd37054ad17e31d",
+    "normal_active.h": "e5265c6ac0d9a9bc87d3dd4391c54145d64552a9946d0df0250c2910a73a6b3f",
+    "position291-first.jsonl": "6e8afb01073210b789eec7801b2be07896bde0b910ef39042dfb5c56d30750d3",
+    "replay.cpp": "2726b2de8ddc8a000ae216c6122e47ee0fe963b751ac52256e3bd09a07b0b321"
+  }
+}
