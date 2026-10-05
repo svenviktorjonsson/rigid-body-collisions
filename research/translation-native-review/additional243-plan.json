@@ -1,0 +1,8 @@
+{
+  "schema": "additional-capture-same-wrapper-v1",
+  "base_plan": "plan.json",
+  "base_plan_sha256": "a4779a322a160fbe60fa2821de3af81da3d810a7a4546105c010c09bfa7815c8",
+  "capture": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+  "capture_sha256": "87c8637e8df9bbcbe085c184b27e012808afcc897d26547bdf53ae5312c49d7b",
+  "unchanged_source_cap_and_physics": true
+}

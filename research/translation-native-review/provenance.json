@@ -1,0 +1,53 @@
+{
+  "schema": "exact-component-recovery-provenance-v1",
+  "frozen_primary_source": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "primary_source_zip": "research/hull-translation-completion/results/execution-source.zip",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off",
+    "-Werror=misleading-indentation",
+    "-Wall",
+    "-Wextra"
+  ],
+  "combined_extra_define": "SPATIAL_LAPACK_RECOVERY=1",
+  "thread_environment": "Explicit OPENBLAS_NUM_THREADS=1 and OMP_NUM_THREADS=1 for native replays and Python gates. MKL/NUMEXPR environment was not separately recorded for these standalone experiments. Linked reference LAPACK/BLAS libraries are hashed below.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "cost_scope": "descriptive concurrent collaborative workload; not a controlled benchmark",
+  "library_versions": "libblas3:amd64\t3.12.1-6\nliblapack3:amd64\t3.12.1-6",
+  "libraries": {
+    "/lib/x86_64-linux-gnu/liblapack.so.3": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1",
+      "sha256": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1"
+    },
+    "/lib/x86_64-linux-gnu/libblas.so.3": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1",
+      "sha256": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895"
+    },
+    "build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": {
+      "resolved_path": "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "sha256": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50"
+    },
+    "build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": {
+      "resolved_path": "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "sha256": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e"
+    },
+    "build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": {
+      "resolved_path": "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "sha256": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+    }
+  },
+  "binaries": {
+    "/tmp/translation-support-replay": "ffdac75200ea5b8a2fb31571185b5fa18170725cb7ba1da81176ff905f8d87b5",
+    "/tmp/translation-support-v2-replay": "8620a6f20663cbc5b425ebd4ebe64bed3770afec32d660677002cb1f3c7a4747",
+    "/tmp/translation-support-v3-replay": "ea3b8c52fd3661bfac9b4c348956006e69a43c6f9280dc36b47c4c07ed700cb8",
+    "/tmp/translation-support-v3-checks": "49fc63a7ba40110324e9a51653838a625c626f5b5eb77e57f657b8dfc90026db",
+    "/tmp/translation-v3-combined-replay": "b8fbdd5e377671e81f669f141b2ffafaf848358e9c0a9619704d8ac9cc46988a"
+  }
+}
