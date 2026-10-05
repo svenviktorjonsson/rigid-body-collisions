@@ -1,3 +1,7 @@
+# Integrated production status — October 5, 2026
+
+Published source 8c7065eb8219cb0735aa3e742aa82b99521a26c1 integrates the proposal with a missing independent residual helper repaired. Live23 original-law checks and prior22 Float64 byte/counter preservation pass; eleven native check executables and engine regressions pass. Receipts/raw logs are in live-validation/. The original uncompiled proposal below is retained as historical source evidence. The subsequent six-lane hull study remains unqualified.
+
 # Pending projection-tail production integration
 
 These are **unapplied, uncompiled production proposals**, prepared from live source bca35c3103a78c731b37ea8a467e5fc71d13e8aa. Production remains unchanged. The helper is a path/comment adapter of frozen170d798b113863dc4bee3df515bb8ab63175ea21 `projection_more_v2.h`; isolated42-row strict acceptance is proven, and the23-input preservation summary passes (122 strict checks pass; guard released). No production acceptance or trajectory accuracy is claimed.

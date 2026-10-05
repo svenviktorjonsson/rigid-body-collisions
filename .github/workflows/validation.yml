@@ -31,7 +31,7 @@ jobs:
       - name: Build pinned Float64 3D contact backend
         run: |
           cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
-          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks coulomb_restart_checks support_restart_checks translation_combined_checks coulomb_early_checks -j 2
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks coulomb_restart_checks support_restart_checks translation_combined_checks coulomb_early_checks projection_tail_checks -j 2
           build/spatial/spatial_qp_checks
           build/spatial/spatial_friction_checks
           build/spatial/shared_contact_checks
@@ -42,6 +42,7 @@ jobs:
           build/spatial/support_restart_checks
           build/spatial/translation_combined_checks
           build/spatial/coulomb_early_checks
+          build/spatial/projection_tail_checks
           python research/component-recovery-integration/audit.py
           python research/component-recovery-integration/checks.py
           python -m research.verify_native_contact_replays

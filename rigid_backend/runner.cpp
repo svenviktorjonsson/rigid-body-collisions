@@ -114,8 +114,11 @@ struct BoundaryFilter {
 #ifdef RIGID_BLOCK_BACKEND
 struct BoundaryListener : b2ContactListener {
     BoundaryFilter* filter;
+    double boundaryWork=0,absoluteBoundaryWork=0;
+    long long boundaryImpulsePoints=0;
     explicit BoundaryListener(BoundaryFilter* f):filter(f){}
     void PreSolve(b2Contact* contact,const b2Manifold*) override {
+        if(!filter)return;
         auto* m=contact->GetManifold(); b2WorldManifold world;
         contact->GetWorldManifold(&world);
         int kept=0;
@@ -126,6 +129,20 @@ struct BoundaryListener : b2ContactListener {
             if(hide) ++filter->removed; else m->points[kept++]=m->points[i];
         }
         m->pointCount=kept;
+    }
+    void PostSolve(b2Contact* contact,const b2ContactImpulse* impulses) override {
+        auto* a=contact->GetFixtureA()->GetBody();auto* b=contact->GetFixtureB()->GetBody();
+        const bool aBoundary=a->GetType()==b2_kinematicBody&&b->GetType()==b2_dynamicBody;
+        const bool bBoundary=b->GetType()==b2_kinematicBody&&a->GetType()==b2_dynamicBody;
+        if(!aBoundary&&!bBoundary)return;
+        b2WorldManifold world;contact->GetWorldManifold(&world);
+        const auto tangent=b2Cross(world.normal,1.f);
+        for(int i=0;i<impulses->count;i++){
+            auto impulse=impulses->normalImpulses[i]*world.normal+impulses->tangentImpulses[i]*tangent;
+            const auto velocity=(aBoundary?a:b)->GetLinearVelocityFromWorldPoint(world.points[i]);
+            const double work=(aBoundary?1.:-1.)*(double(impulse.x)*velocity.x+double(impulse.y)*velocity.y);
+            boundaryWork+=work;absoluteBoundaryWork+=std::abs(work);boundaryImpulsePoints++;
+        }
     }
 };
 #else
@@ -323,8 +340,8 @@ int main() {
     if(!(std::cin>>analyticKinematics)) std::cin.clear();
 #ifdef RIGID_BLOCK_BACKEND
     rigidPositionIterations=positionIterations;
-    BoundaryListener listener(&boundary);
-    if(suppressInternal) world->SetContactListener(&listener);
+    BoundaryListener listener(suppressInternal?&boundary:nullptr);
+    world->SetContactListener(&listener);
 #else
     if(suppressInternal) {
         b2World_SetPreSolveCallback(world,filterBoundary,&boundary);
@@ -399,7 +416,13 @@ int main() {
     for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.mass; }
     std::cout << "],\"inertia\":["; comma = false;
     for (auto body : bodies) if (body.dynamic) { if (comma) std::cout << ','; comma = true; std::cout << body.inertia; }
-    std::cout << "],\"step_s\":" << stepSeconds << ",\"controller_s\":" << controllerSeconds
+    std::cout << "]";
+#ifdef RIGID_BLOCK_BACKEND
+    std::cout << ",\"boundary_work_J\":" << listener.boundaryWork
+              << ",\"absolute_boundary_work_J\":" << listener.absoluteBoundaryWork
+              << ",\"boundary_impulse_points\":" << listener.boundaryImpulsePoints;
+#endif
+    std::cout << ",\"step_s\":" << stepSeconds << ",\"controller_s\":" << controllerSeconds
               << ",\"reported_max_penetration_fraction\":" << maximumPenetration
               << ",\"internal_contact_points_removed\":" << boundary.removed
               << ",\"solver_work_total\":" << work << ",\"switches\":" << switches << ",\"level_frames\":[";

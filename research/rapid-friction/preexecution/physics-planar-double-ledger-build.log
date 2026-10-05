@@ -1,0 +1,72 @@
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at box2d-2.4.1/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/viktor/.cache/vkf-physics-continuation/build/rigid_double_ledger
+[1/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_circle_shape.cpp.o
+[2/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_collide_circle.cpp.o
+[3/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_broad_phase.cpp.o
+[4/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_chain_shape.cpp.o
+[5/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_collide_polygon.cpp.o
+[6/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_collision.cpp.o
+[7/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_collide_edge.cpp.o
+[8/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_edge_shape.cpp.o
+[9/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_distance.cpp.o
+[10/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_block_allocator.cpp.o
+[11/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_draw.cpp.o
+[12/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_dynamic_tree.cpp.o
+[13/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_settings.cpp.o
+[14/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_math.cpp.o
+[15/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_time_of_impact.cpp.o
+[16/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_timer.cpp.o
+[17/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/collision/b2_polygon_shape.cpp.o
+[18/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/common/b2_stack_allocator.cpp.o
+[19/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_chain_circle_contact.cpp.o
+[20/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_chain_polygon_contact.cpp.o
+[21/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_circle_contact.cpp.o
+[22/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_body.cpp.o
+[23/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_contact.cpp.o
+[24/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_contact_manager.cpp.o
+[25/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_edge_circle_contact.cpp.o
+[26/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_edge_polygon_contact.cpp.o
+[27/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_distance_joint.cpp.o
+[28/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_contact_solver.cpp.o
+[29/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_fixture.cpp.o
+[30/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_friction_joint.cpp.o
+[31/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_gear_joint.cpp.o
+[32/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_joint.cpp.o
+[33/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_motor_joint.cpp.o
+[34/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_island.cpp.o
+[35/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_circle_contact.cpp.o
+[36/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_mouse_joint.cpp.o
+[37/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_contact.cpp.o
+[38/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_pulley_joint.cpp.o
+[39/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_revolute_joint.cpp.o
+[40/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_prismatic_joint.cpp.o
+[41/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_weld_joint.cpp.o
+[42/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_world_callbacks.cpp.o
+[43/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_wheel_joint.cpp.o
+[44/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/rope/b2_rope.cpp.o
+[45/48] Building CXX object box2d-2.4.1/src/CMakeFiles/box2d.dir/dynamics/b2_world.cpp.o
+[46/48] Linking CXX static library box2d-2.4.1/bin/libbox2d.a
+[47/48] Building CXX object CMakeFiles/rigid_runner.dir/runner.cpp.o
+[48/48] Linking CXX executable rigid_runner

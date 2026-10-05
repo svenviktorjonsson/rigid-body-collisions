@@ -1,5 +1,13 @@
 # Physics-engine continuation
 
+## Current Ubuntu continuation — October 5, 2026
+
+New remote pushes through a799038 are merged with the independent local relation study. Production projection tail is integrated and published at 8c7065eb8219cb0735aa3e742aa82b99521a26c1. Live23 checks pass and preserve every prior22 Float64 response byte and original counter. Native controls and 160 regressions pass, with two optional tests skipped; six precision checks separately pass. Evidence: research/projection-tail-integration/live-validation/.
+
+All six original adaptive hull lanes have now executed: three full histories, three later original-law solver rejections, zero qualified references. Outputs are under research/hull-search-completion/results; retain every rejected matrix and prefix. Older five-history bca evidence remains intact. No speed claim for this study.
+
+The next prospective rapid-friction study includes 2D disks/mixed convex-concave polygons and 3D spheres/boxes/hulls under +/-20m/s group motion. It uses predeclared fixed refinement levels and interleaved timings only for qualified references. The 2D block observer records moving-boundary work without changing solver state; its signed normal/tangent tests and eight exact history comparisons pass. Float64 2D remains an explicitly transformed diagnostic. Current benchmark plan/source: research/rapid-friction/. Full model qualification remains open pending execution. Historical instructions below retain original pins; this paragraph supersedes claims that the tail is unintegrated or that the six-lane study is unexecuted.
+
 User requested a push and handover on October5,2026 to continue in another chat. Continue on `svenviktorjonsson/rigid-body-collisions`, branch `research/adaptive-benchmark-validation`. Root coordinates commits/publication; do not merge main or force-push. User authorizes frequent pushes and parallel research/review. Keep original material and physical/accuracy gates; preserve actual failures and source provenance.
 
 ## Verified production and rubber-like examples
