@@ -73,7 +73,7 @@ def errors(dimension,a,b):
 
 def audit():
     gates=load(HERE/'plan.json');report={'record_count':0,'qualified_benchmarks':{},'directories':{}}
-    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight','results-planar-optimized']:
+    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight','results-planar-optimized','results-large-irregular']:
         directory=HERE/dirname
         if not (directory/'summary.json').exists():continue
         scenes=load(directory/'scenes.json') if (directory/'scenes.json').exists() else load(HERE/'results/scenes.json')
