@@ -1,6 +1,5 @@
 """Execute the committed random-shape plan; retain failures and full trajectories."""
 import hashlib
-import io
 import json
 from pathlib import Path
 import platform
@@ -37,12 +36,20 @@ def execute():
 
     def trajectory(scene, backend, p, s):
         key = f'{scene["id"]}__{backend}_p{p}_s{s}'
-        for _ in range(plan['warmups']): run(scene, backend=backend, primary_steps=p, substeps=s)
+        try:
+            for _ in range(plan['warmups']): run(scene, backend=backend, primary_steps=p, substeps=s)
+        except RuntimeError as error:
+            record = {'trace': key, 'scene': scene['id'], 'backend': backend,
+                'primary': p, 'solver': s, 'accepted': False, 'failure': str(error)}
+            records.append(record)
+            (checkpoint/(key+'.json')).write_text(json.dumps(record))
+            print(key, 'REJECTED', flush=True)
+            return None, record
         samples = [run(scene, backend=backend, primary_steps=p, substeps=s) for _ in range(plan['repeats'])]
         result = samples[-1]
         (checkpoint/(key+'.json')).write_text(json.dumps(result, separators=(',', ':')))
         timings = [r['engine_and_controller_s'] for r in samples]
-        records.append({'trace': key, 'scene': scene['id'], 'backend': backend, 'primary': p, 'solver': s,
+        records.append({'trace': key, 'scene': scene['id'], 'backend': backend, 'primary': p, 'solver': s, 'accepted': True,
             'samples_s': timings, 'median_s': statistics.median(timings), 'diagnostics': diagnostics(scene, result)})
         print(key, flush=True)
         return result, records[-1]
@@ -56,6 +63,10 @@ def execute():
         qualifications[scene['id']] = {'qualified': qualified, 'edges': edges}
         for backend, p, s in plan['candidates']:
             candidate, record = trajectory(scene, backend, p, s)
+            if candidate is None:
+                comparisons.append({'trace': record['trace'], 'scene': scene['id'],
+                    'reference_qualified': qualified, 'passed': False, 'failure': record['failure']})
+                continue
             error = errors(reference, candidate)
             comparisons.append({'trace': record['trace'], 'scene': scene['id'], 'errors': error,
                 'reference_qualified': qualified,
