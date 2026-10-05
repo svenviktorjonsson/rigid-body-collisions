@@ -1,5 +1,5 @@
 {
-  "record_count": 60,
+  "record_count": 110,
   "qualified_benchmarks": {
     "3d_sphere": {
       "median_s": {
@@ -8,6 +8,22 @@
       },
       "ratio": 7.576875993131666,
       "record_directory": "results-spatial"
+    },
+    "2d_shake9": {
+      "median_s": {
+        "reference": 4.8996222629999995,
+        "candidate": 1.233964267
+      },
+      "ratio": 3.970635450337558,
+      "record_directory": "results-planar-tight"
+    },
+    "2d_shake25": {
+      "median_s": {
+        "reference": 13.026660374999995,
+        "candidate": 3.253299496999999
+      },
+      "ratio": 4.0041380718290505,
+      "record_directory": "results-planar-tight"
     }
   },
   "directories": {
@@ -26,6 +42,10 @@
     "results-planar-shake": {
       "records": 12,
       "qualified_references": 0
+    },
+    "results-planar-tight": {
+      "records": 50,
+      "qualified_references": 2
     }
   },
   "passed": true

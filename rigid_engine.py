@@ -231,6 +231,8 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
         if not manifest.is_file():
             raise RuntimeError('Float64 diagnostic requires its precision-source.json manifest')
         numerical_model['precision_source_sha256'] = hashlib.sha256(manifest.read_bytes()).hexdigest()
+        precision = json.loads(manifest.read_text())
+        numerical_model['linear_slop_m'] = precision.get('linear_slop_m', precision.get('numerical_change', {}).get('linear_slop_m', .005))
         numerical_model['implementation_note'] = 'Locally transformed Float64 Box2D diagnostic; not an upstream Float64 release'
     states = np.asarray(result["states"])
     if states.ndim != 3 or states.shape[1] == 0:

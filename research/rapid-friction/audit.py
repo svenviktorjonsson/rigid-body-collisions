@@ -73,7 +73,7 @@ def errors(dimension,a,b):
 
 def audit():
     gates=load(HERE/'plan.json');report={'record_count':0,'qualified_benchmarks':{},'directories':{}}
-    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake']:
+    for dirname in ['results','results-spatial','results-planar-resolution','results-planar-shake','results-planar-tight']:
         directory=HERE/dirname
         if not (directory/'summary.json').exists():continue
         scenes=load(directory/'scenes.json') if (directory/'scenes.json').exists() else load(HERE/'results/scenes.json')
@@ -84,21 +84,21 @@ def audit():
             count+=1
             if record['complete']:
                 entry=scenes[path.parent.name];passed=physical(entry,record['result'])
-                if dirname=='results-planar-shake':passed &= record['result']['friction_impulse_abs_kg_m_s']>0
+                if dirname in ('results-planar-shake','results-planar-tight'):passed &= record['result']['friction_impulse_abs_kg_m_s']>0
                 assert passed==record['physical']['passed'],str(path)
         for name,item in summary.items():
             entry=scenes[name];budget=gates['trajectory_budgets'][str(entry['dimension'])];folder=directory/name
             if 'phases' in item:
                 for phase in item['phases']:
-                    refs=[load(folder/(phase['phase']['id']+f'_reference_{i}.json')) for i in range(3)]
+                    refs=[load(folder/(phase['phase']['id']+f'_reference_{i}.json')) for i in range(len(phase['edges'])+1)]
                     for i,edge in enumerate(phase['edges']):
                         a,b=refs[i:i+2];error=errors(entry['dimension'],a['result'],b['result']) if a['complete'] and b['complete'] else None
                         passed=error is not None and a['physical']['passed'] and b['physical']['passed'] and all(error[k]<=v/4 for k,v in budget.items())
                         assert passed==edge['passed']
-                    assert phase['qualified']==all(e['passed'] for e in phase['edges'])
+                    assert phase['qualified']==all(e['passed'] for e in phase['edges'][-2:])
                 assert item['reference_qualified']==any(p['qualified'] for p in item['phases'])
                 qualified_phase=next((p for p in item['phases'] if p['qualified']),None)
-                reference=load(folder/(qualified_phase['phase']['id']+'_reference_2.json'))['result'] if qualified_phase else None
+                reference=load(folder/(qualified_phase['phase']['id']+f"_reference_{len(qualified_phase['edges'])}.json"))['result'] if qualified_phase else None
             else:
                 for edge in item['edges']:
                     a=load(folder/f"reference_{edge['left']}.json");b=load(folder/f"reference_{edge['right']}.json")
@@ -113,6 +113,10 @@ def audit():
             if bench is None:assert not item['reference_qualified'];continue
             assert item['reference_qualified']
             sampled_states={k:[] for k in ('reference','candidate')};timings={k:[] for k in sampled_states};allpass=True
+            for warmup_path in folder.glob('warmup_*.json'):
+                warmup=load(warmup_path);allpass &= warmup['complete'] and warmup['physical']['passed']
+                if warmup['complete']:
+                    error=errors(entry['dimension'],reference,warmup['result']);allpass &= all(error[k]<=v for k,v in budget.items())
             for recordpath in sorted(folder.glob('timing_*.json')):
                 label=recordpath.stem.split('_')[-1];record=load(recordpath);allpass &= record['complete'] and record['physical']['passed']
                 if record['complete']:

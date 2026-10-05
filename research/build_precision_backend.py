@@ -33,8 +33,12 @@ def convert(text):
     return ''.join(part if index%2 else _convert_code(part) for index, part in enumerate(parts))
 
 
-def build(output, archive):
+def build(output, archive, linear_slop_m=.005):
+    if linear_slop_m not in (.005, .000001):
+        raise ValueError('Supported numerical slop: baseline .005 m or qualified .000001 m')
     output = output.resolve(); output.mkdir(parents=True, exist_ok=True)
+    if (output/'precision-source.json').exists():
+        raise ValueError('Preserve earlier precision builds; choose a new output directory')
     if not archive.is_file():
         urllib.request.urlretrieve('https://codeload.github.com/erincatto/box2d/tar.gz/v2.4.1', archive)
     if hashlib.sha256(archive.read_bytes()).hexdigest() != PIN:
@@ -55,6 +59,13 @@ def build(output, archive):
         if name == 'runner.cpp': code = code.replace('std::setprecision(10)', 'std::setprecision(17)')
         (source/name).write_text(code)
         transformed[name] = hashlib.sha256((source/name).read_bytes()).hexdigest()
+    if linear_slop_m != .005:
+        header=source/'box2d-2.4.1/include/box2d/b2_common.h'
+        text=header.read_text()
+        if text.count('(0.005 * b2_lengthUnitsPerMeter)') != 1:
+            raise ValueError('Pinned numerical slop definition changed')
+        header.write_text(text.replace('(0.005 * b2_lengthUnitsPerMeter)', '(0.000001 * b2_lengthUnitsPerMeter)'))
+        transformed[str(header.relative_to(source))] = hashlib.sha256(header.read_bytes()).hexdigest()
     (source/'CMakeLists.txt').write_text('''cmake_minimum_required(VERSION 3.22)
 project(rigid_precision_probe LANGUAGES C CXX)
 set(CMAKE_POLICY_VERSION_MINIMUM 3.8)
@@ -69,6 +80,8 @@ target_compile_options(box2d PRIVATE -ffp-contract=off)
 target_link_libraries(rigid_runner PRIVATE box2d)
 ''')
     provenance = {'upstream_archive_sha256': PIN, 'upstream_commit': '9ebbbcd960ad424e03e5de6e66a40764c16f51bc',
+        'linear_slop_m': linear_slop_m,
+        'collision_skin_scope': 'Numerical penetration slop; adapter installs authored polygon/circle radii explicitly',
         'scope': 'Experimental transformed Float64 polygon/circle comparator, not upstream-supported all-feature Box2D',
         'transform_script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'inputs': inputs, 'transformed': transformed}
@@ -81,4 +94,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'build/rigid_double')
     parser.add_argument('--archive', type=Path, default=Path('/tmp/box2d-block.tar.gz'))
-    args = parser.parse_args(); build(args.output, args.archive)
+    parser.add_argument('--linear-slop-m', type=float, choices=[.005, .000001], default=.005)
+    args = parser.parse_args(); build(args.output, args.archive, args.linear_slop_m)
