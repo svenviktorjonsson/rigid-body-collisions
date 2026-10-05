@@ -5,7 +5,7 @@ and reproducible speed/accuracy benchmarks.
 
 The [Float64 3D backend](spatial_backend/README.md) supports arbitrary convex
 hulls, boxes, spheres and compounds, full inertia tensors, quaternion rotation
-and prescribed moving walls. Fifteen mechanics tests include 100 m/s walls driving
+and prescribed moving walls. Mechanics tests include 100 m/s walls driving
 64 bodies and 20 m/s containers with 64 spheres or 27 random rotating hulls.
 The [3D evidence report](research/spatial-validation/report.pdf) retains
 102 histories. Only the frictionless row qualifies its frozen trajectory gate;
@@ -18,6 +18,26 @@ cases pass with no fallback. Removing fixed-zero tangent variables before assemb
 gives 1.46–7.22x measured native gain with bitwise-identical trajectories and nine
 times less mobility matrix storage. This optimized profile requires zero friction
 and restitution; it does not qualify the failed frictional scenes.
+
+The [circular 3D friction study](research/spatial-friction/report.pdf) adds
+residual-driven sticking/sliding solves, immediate prescribed-wall reversals and
+correct first-collision world inertia. Three of six new references qualify:
+slow shaking with 27 spheres, 20 m/s translation with 27 spheres and 20 m/s
+shaking with eight boxes. The archive retains 76 attempts, 52 complete histories
+and 24 solver rejections. Fast 27-sphere shaking still fails trajectory refinement.
+A separately verified [gyroscopic RHS correction](research/spatial-friction-gyro/report.pdf)
+restores free angular velocity to tangent equations; all six paired hull attempts
+remain rejected. No fallback to a different friction law is accepted in this lane.
+
+The [elastic wrench study](research/elastic-patch/report.pdf) separately models
+stored tangential energy and an independent twisting couple at a computational
+contact point, bounded by normal load and an effective contact length. It tests
+spin reversal and floor/ceiling rebounds with energy accounting. The initial
+28-history archive qualifies four of ten cases and retains two integration-budget
+rejections; coarse transient errors require further refinement. These are
+synthetic sphere/plane material hypotheses, not calibrated rubber parameters or
+a completed elastic many-body engine. [Research review](research/elastic-patch/review.md)
+includes experimental support and measured no-reversal counterexamples.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
