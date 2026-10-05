@@ -79,3 +79,16 @@ interruption and actual execution adapters remain preserved. Current checks:
 163 engine tests plus 35 subtests, ten contact-model tests and all eleven native
 check executables pass. These are external Python/C++ experiments, separate
 from Vektor compiler/Section 0, WASM/GPU or calibrated-material acceptance.
+
+The [larger irregular-case results](LARGE-IRREGULAR-RESULTS.md) add36/100 mixed
+convex-concave2D polygons,64/125 asymmetric3D hulls,100 disks and125 spheres.
+All30 prospective attempts are retained:20 complete histories and10 genuine
+rejections (nine velocity, one translation-only position). None qualifies both
+required edges; the finest sphere125 edge passes but its preceding edge fails.
+Frozen source/runtime and independent rejection residual audits pass.
+
+The active [all-case performance gate](performance-gate-plan.json) requires
+every one of13 rapid-friction examples to qualify before sealing a working
+baseline, then>=2x median end-to-end improvement on EACH case. Earlier gains
+against fine references do not establish this new gate. Numerical recovery and
+trajectory/discovery remediation precede optimization claims.

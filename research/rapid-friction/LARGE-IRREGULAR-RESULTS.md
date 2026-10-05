@@ -15,6 +15,7 @@ Five predeclared reference levels are10,5,2.5,1.25,0.625us. Qualification requir
 | 2d_disks_100 | 100 | 5/5 | 1.639, 3.181, 6.037, 11.938, 23.167 | 1.672, 3.220, 6.076, 11.996, 23.260 | False | unqualified |
 | 3d_hull_64 | 64 | 0/5 | rejected, rejected, rejected, rejected, rejected | 7.653, 44.390, 85.466, 96.349, 30.273 | False | unqualified |
 | 3d_hull_125 | 125 | 0/5 | rejected, rejected, rejected, rejected, rejected | 35.607, 176.079, 243.384, 258.714, 657.058 | False | unqualified |
+| 3d_sphere_125 | 125 | 5/5 | 12.543, 22.806, 48.557, 102.418, 204.117 | 12.736, 22.993, 48.732, 102.646, 204.448 | False | unqualified |
 
 Single reference costs are descriptive, not repeated benchmark medians. Rejected runs cover only their accepted prefix: their process elapsed is time to failure, not a full-horizon timing. No speed ratio is assigned to an unqualified reference. Native2D times physics/observer excluding frame output/diagnostics; native3D includes state recording. Compare within a case. Process elapsed and exact numerical settings are saved in each record. External host load is uncontrolled.
 

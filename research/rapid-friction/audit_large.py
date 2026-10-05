@@ -21,7 +21,13 @@ for p in sorted(D.rglob('*.rejection.json')):
     d=load(p);A=np.array(d['A']);b=np.array(d['b']);impulse=np.array(d['p'])
     assert A.shape==(len(b),len(b)) and impulse.shape==b.shape
     assert np.isfinite(A).all() and np.isfinite(b).all()
-    check=namespace['external'](d,{'p':d['p'],'w':(A@impulse-b).tolist()})
+    if d['phase']=='position_translation':
+        response=A@impulse-b;diagonal=np.diag(A)
+        projected=np.clip(impulse-response/diagonal,d['lo'],d['hi'])
+        residual=float(np.max(np.abs(impulse-projected)*diagonal))
+        check={'accepted':bool(np.isfinite(response).all() and residual<=d['tolerance_m_s']), 'projection_m_s':residual,'phase':'position_translation'}
+    else:
+        check=namespace['external'](d,{'p':d['p'],'w':(A@impulse-b).tolist()})
     assert not check['accepted'],str(p)
     assert np.isclose(check['projection_m_s'],d['residual_m_s'],rtol=1e-5,atol=1e-12),str(p)
     rejections.append({'record':str(p.relative_to(H)),'sha256':digest(p),'rows':len(b),'independent':check})
