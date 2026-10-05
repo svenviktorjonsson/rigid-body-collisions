@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "execution_source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "qualified_prospective_trials": 1,
+  "retained_failed_trials": 1,
+  "trials": [
+    {
+      "method": "pressure-QP-cold",
+      "passed": false,
+      "mechanical_passed": false,
+      "residual_m_s": 0.013381343314211286,
+      "bounds_passed": true,
+      "passive_bound_J": -0.0036227528428905004,
+      "pose_reconstruction_error_m": 2.6469779601696886e-23,
+      "pair_worsening_m": 4.405988733836131e-08,
+      "geometry_passed": false,
+      "gravity_potential_change_J": -5.67445900211377e-21
+    },
+    {
+      "method": "normal-FB-cold",
+      "passed": true,
+      "mechanical_passed": true,
+      "residual_m_s": 2.2810156558011373e-16,
+      "bounds_passed": true,
+      "passive_bound_J": -0.0036815545432267007,
+      "pose_reconstruction_error_m": 4.1359030627651384e-25,
+      "pair_worsening_m": 0.0,
+      "geometry_passed": true,
+      "gravity_potential_change_J": -2.2180394830633758e-17
+    }
+  ],
+  "original_policy_qualified": false,
+  "trajectory_qualified": false
+}

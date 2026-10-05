@@ -8,7 +8,8 @@
     "research/translation-gap-position-review/frozen-c465/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
     "research/translation-gap-position-review/frozen-c465/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
     "research/translation-gap-position-review/frozen-c465/translation_split.h": "669b060f2c0ce95d866f9712c1351ba65eb81712fdd9d057355cb076dcfb2886",
-    "research/translation-position-geometry-review/requery.cpp": "9c011710747592f26f55a6df326db930dabcf9d9897d5006039384648ffa4147"
+    "research/translation-position-geometry-review/requery.cpp": "9c011710747592f26f55a6df326db930dabcf9d9897d5006039384648ffa4147",
+    "research/translation-gap-position-review/native_runner.py": "77795e942f65dc6657c87fa74d0751556b3e9aca2dcf64ba6ced13e19b62b384"
   },
   "declared_change": "No native production edits. Replay existing translationSplitSolve on explicitly prospective separated-row targets using actual74capture/mobility/bounds/tolerance.",
   "execution_rule": "Require committed SHA for native extension/plan and physically extracted c465 headers before compile/execute. Verify each extracted header byte-identical to original c465 source. Production edits are independent and permitted; frozen helper inputs unchanged. Guard source/static/runtime hashes throughout, retain both original-target decline and prospective-target outcome.",

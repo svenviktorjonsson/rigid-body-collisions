@@ -10,39 +10,7 @@
 #include <algorithm>
 #include <cmath>
 #include <limits>
-#include <stdexcept>
 #include <vector>
-
-// A separated cached contact can consume its available clearance during pose
-// repair. This changes only the declared numerical position target.
-inline double translationGapTarget(double distance,double h,double slop,double penetrating_target){
- if(!std::isfinite(distance)||!std::isfinite(h)||!(h>0)||
-    !std::isfinite(slop)||slop<0||!std::isfinite(penetrating_target))
-  throw std::runtime_error("Invalid translation clearance target");
- if(std::abs(distance)<=slop)return 0.;
- const double target=distance>slop?-(distance-slop)/h:penetrating_target;
- if(!std::isfinite(target))throw std::runtime_error("Nonfinite translation clearance target");
- return target;
-}
-
-struct TranslationPoseChange {
- btVector3 displacement{0,0,0},orbital_momentum{0,0,0};double potential_energy=0.;
-};
-// Evaluate at the velocity that Bullet will actually write back, including the
-// accepted contact increment and external force velocity. No state is mutated.
-inline TranslationPoseChange translationPoseChange(const btSolverBody& body,double h){
- TranslationPoseChange out;
- if(!body.m_originalBody||!(body.m_originalBody->getInvMass()>0))return out;
- const double mass=1./body.m_originalBody->getInvMass();
- out.displacement=body.m_pushVelocity*h;
- const auto physical_velocity=body.m_linearVelocity+body.m_deltaLinearVelocity+body.m_externalForceImpulse;
- out.orbital_momentum=out.displacement.cross(physical_velocity*mass);
- out.potential_energy=-mass*body.m_originalBody->getGravity().dot(out.displacement);
- if(!std::isfinite(out.potential_energy))throw std::runtime_error("Nonfinite translation pose ledger");
- for(int axis=0;axis<3;axis++)if(!std::isfinite(out.displacement[axis])||!std::isfinite(out.orbital_momentum[axis]))
-  throw std::runtime_error("Nonfinite translation pose ledger");
- return out;
-}
 
 inline btScalar translationRowMobility(const btSolverConstraint& a,
  const btSolverConstraint& b,const btAlignedObjectArray<btSolverBody>& bodies){

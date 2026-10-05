@@ -43,5 +43,25 @@ int main(){try{
  redundant.setElem(0,1,-.5);redundant.setElem(1,0,-.5);
  require(!translationSplitSolve(redundant,rhs,upper,impulse,1e-10,64,&residual),"Contradictory opposed position targets were accepted");
  require(residual>1e-10,"Contradictory target residual was not retained");
+ // An open contact must permit displacement toward it while correcting the
+ // opposed penetration. The old zero target makes this physical clearance
+ // artificially unusable.
+ redundant.setElem(0,0,1);redundant.setElem(1,1,1);redundant.setElem(0,1,-1);redundant.setElem(1,0,-1);
+ rhs[0]=0;rhs[1]=.1;upper[0]=upper[1]=1e10;
+ require(!translationSplitSolve(redundant,rhs,upper,impulse,1e-8,64,&residual,nullptr,false),"Opposed zero-clearance target should reject");
+ rhs[0]=translationGapTarget(.01,.01,1e-9,0.);
+ require(translationSplitSolve(redundant,rhs,upper,impulse,1e-8,64,&residual),"Available physical clearance must permit repair");
+ const double dx=.01*(impulse[0]-impulse[1]);
+ require(.01+dx>=1e-9&&-.005-dx>-.005,"Gap repair must preserve clearance and reduce penetration");
+ require(translationGapTarget(-.005,.01,1e-9,.1)==.1,"Penetration target unchanged");
+ require(translationGapTarget(5e-10,.01,1e-9,.1)==0,"Within-slop target is zero");
+ bool invalid=false;try{translationGapTarget(.01,0,1e-9,0.);}catch(const std::runtime_error&){invalid=true;}require(invalid,"Invalid timestep rejected");
+ bodies[0].m_linearVelocity=btVector3(1,2,3);bodies[0].m_deltaLinearVelocity=btVector3(4,5,6);
+ bodies[0].m_externalForceImpulse=btVector3(.5,.5,.5);a.setGravity(btVector3(0,0,-9.81));
+ auto ledger=translationPoseChange(bodies[0],.01);
+ require((ledger.displacement-btVector3(.07,.08,.09)).length()<1e-14,"Actual split displacement ledger");
+ require((ledger.orbital_momentum-btVector3(.17,-.34,.17)).length()<1e-13,"Ledger must use final accepted physical velocity");
+ require(std::abs(ledger.potential_energy-1.7658)<1e-12,"Gravity potential ledger sign and mass");
+ require(bodies[0].m_deltaLinearVelocity==btVector3(4,5,6)&&bodies[0].m_turnVelocity.length2()==0,"Ledger observes without mutation");
  std::cout<<"Translation split checks PASS (Gram, isolated pushes, redundant and infeasible constraints)\n";return 0;
 }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}
