@@ -98,9 +98,17 @@ elastic many-contact integration remain open.
 
 A supplementary [original-law continuation search](research/coulomb-trust/README.md)
 recovers all six latest captured hull failures. The combined primary, polishing
-and continuation solver passes eleven captured systems with independent circular
-friction and passivity checks. Full trajectory qualification is evaluated separately
-in `research/hull-completion`; individual captured solutions do not qualify a scene.
+and continuation solver initially passed eleven captured systems. The
+[active-contact follow-up](research/coulomb-normal/README.md) passes all **16**
+retained captures with independent circular-friction and passivity checks,
+including the 231- and 321-row systems. It checks every original contact after
+searching a smaller active system and expands that system when omitted contacts
+remain violated. Numerical trial friction and damping do not change the accepted
+material law. Full trajectory qualification is evaluated separately in
+`research/hull-active-completion`: its fresh seed-42 runs have reached later
+failures, which remain retained. Captured solutions do not qualify a scene.
+Optional atomic output-frame checkpoints preserve accepted partial trajectories
+if a later solve or the execution environment fails.
 The opt-in `position_stabilization="split_translation"` removes angular pose
 correction, which otherwise can add kinetic energy to a spinning anisotropic body.
 It preserves the physical velocity solve; positional translation still requires

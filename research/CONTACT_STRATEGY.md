@@ -51,8 +51,10 @@ Current evidence includes independently qualified slow shaking, rapid translatio
 and fast eight-box shaking. The corrected shared-point 27-sphere fast-shaking
 study qualifies both adjacent reference edges and verifies 7.17x native gain
 for its declared scene and budgets. Complete random-hull trajectories require
-separate qualification. Eleven captured hull systems now pass the combined
-primary/polish/continuation solver, including all six latest rejected systems.
+separate qualification. Sixteen captured hull systems now pass the combined
+primary/active-contact/continuation/polishing solver. Fresh full trajectories
+have reached later failures; they remain unqualified until all physical and
+refinement gates pass.
 
 The elastic completion study qualifies all ten original scenarios without
 changing their material, simulation budgets or gates, plus eight additional
@@ -74,13 +76,19 @@ trajectories and must be separated from numerical speed/accuracy selection.
 The Vektor target is `vektor-flow/bootstrap`, paired with spec. This research is
 public Python/C++ evidence, not a completed native/WASM/GPU language port.
 
-The native recovery operates only after iterative exhaustion and is optional.
-It searches neighboring friction faces through a certified mechanical null
-direction, checks the resulting velocity change, and accepts only the unchanged
-full contact residual and finite passivity bound. Its work is capped at 384
-rows and 256 numerical SVD calls. Bounded opposing-slip guesses run before gauges/cold restarts and never reach bodies unless the original gates pass. Five captured random-hull systems recover;
-the separate six-attempt whole-trajectory follow-up still rejects. Preserve
-that distinction when choosing or porting this method.
+Native recovery is optional and begins after at most 256 primary sweeps when
+the iteration budget permits it. Normal-only systems can try bounded pressure
+face release. General circular friction tries a warm active-contact subsystem,
+then full continuation and the earlier polisher, before spending any remaining
+primary iteration budget. Active search supports at most 4096 original rows and
+384 reduced rows. Every original equation and finite passivity condition must
+pass, including inactive contacts; violated inactive normals expand the search.
+At most eight subset passes share 512 search steps, 256 SVD calls, 512 damped
+factorizations and 96 continuation attempts. Pressure-guide search has a separate
+128-attempt/SVD budget. The subsequent continuation and polishing stages have
+their own disclosed limits; 256 SVD calls is not a combined solver-wide bound.
+Upstream pivot calls have no exposed internal pivot limit, so these caps are not
+a hard wall-clock guarantee. Failed trial impulses never reach bodies.
 
 
 The Coulomb default uses a shared world contact point, with both complete signed
@@ -119,3 +127,10 @@ physical angular velocity and orientation repair unchanged. Clearing numerical
 turn velocities prevents fake pose correction from rotating world inertia and
 injecting kinetic energy. Translation can still change orbital momentum and
 gravity potential; it is a geometric repair, not a physical force impulse.
+
+`progress_checkpoint_path` atomically records every accepted output frame,
+boundary work and native containment/residual monitors. Quaternion coordinates
+in this diagnostic are the backend principal-inertia axes, unlike the ordinary
+authored-axis result. An incomplete checkpoint is a retained prefix, not a
+completed reference or a resumable contact-cache snapshot. The six prospective
+full runs at source `95d224f` keep the original material, scene and gates.

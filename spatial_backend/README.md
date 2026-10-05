@@ -150,16 +150,25 @@ requires a new destination in an existing directory, and keeps the original
 exception. It never applies the rejected iterate or substitutes another friction
 law. A snapshot describes one failed contact solve, not a completed trajectory.
 
-Circular-contact recovery now keeps the same isotropic law and residual/passivity
-gates while trying minimum-norm semismooth Newton steps, mechanically neutral
-pressure redistribution to adjacent friction faces, and a cold Newton restart.
-The usual block iteration runs first. Recovery is limited to 384 rows, 64 Newton
-steps per attempt, four null directions for each of two starting faces, and both
-signs, with a global ceiling of 256 SVD calls (each at most 64 Jacobi sweeps); it requires an iteration budget of at least 64. It adds a bounded numerical
-budget after the ordinary iteration budget. `contact_recovery=False` disables it.
-Counters disclose recovered solves, polishing steps, gauge and cold restarts.
-Unconverged SVD steps and nonfinite energy scales reject. The physical mobility is never regularized. An unresolved system still rejects.
-Passing a captured system does not establish full-trajectory accuracy.
+Circular-contact recovery keeps the same isotropic law and residual/passivity
+gates. With recovery enabled and an iteration budget of at least 64, the first
+block-iteration phase uses at most 256 sweeps. A normal-only pressure-face search
+and a warm active-contact search run next, followed by full continuation and the
+earlier minimum-norm polisher. If none passes, the solver spends the remainder
+of its original block-iteration budget. `contact_recovery=False` disables these
+searches. The physical mobility and material are never regularized or replaced.
+All sixteen retained captured systems pass; fresh full trajectories still expose
+later failures. Passing a capture does not establish trajectory accuracy.
+
+Active search supports up to 4096 original rows and 384 reduced rows. Each
+candidate must pass the original all-row contact and finite energy gates;
+violated inactive contacts expand the search. Up to eight subset passes share
+512 search steps, 256 SVD calls, 512 damped factorizations and 96 continuation
+attempts. Pressure guides separately permit 128 face attempts/SVD calls and up
+to eight upstream normal-only pivot calls. Full continuation and polishing have
+separate limits; there is no single global 256-SVD ceiling across all stages.
+An upstream pivot call exposes no internal iteration cap, so bounded call counts
+are not a hard wall-clock guarantee. Counters disclose actual search work.
 
 Before the gauge and cold restarts, a bounded fallback tries up to eight positive-pressure contacts per
 starting face with tangential traction opposing the current slip. This is a
@@ -167,6 +176,14 @@ feasible numerical initialization, which can change trial velocity; it is not a
 mechanical-null pressure move or a physical impulse. The unchanged full contact
 and finite energy gates still accept only the final result. All restarts share
 the same global SVD work budget, and counters disclose their use.
+
+For long runs, `progress_checkpoint_path=Path(...)` optionally preserves accepted
+output frames through atomic replacement. Its schema is
+`native-spatial-progress-v1`: world COM/velocity/spin, **principal-inertia-axis**
+quaternions, wire geometry, times, boundary work, output-frame counts and native
+residual/containment monitors. Ordinary Python results instead use authored body
+axes. A partial checkpoint is explicitly incomplete and cannot resume persistent
+contact caches. The destination must be new and have an existing parent directory.
 
 The circular solver defaults to `contact_point_policy="shared"`. Both finite
 bodies use the midpoint of their surface contact endpoints; against a fixed or
