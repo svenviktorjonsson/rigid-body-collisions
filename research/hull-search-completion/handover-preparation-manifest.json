@@ -1,0 +1,21 @@
+{
+  "status": "PENDING_LIVE_INTEGRATION_BUILD_AND_PUBLISHED_SOURCE_NO_TRAJECTORY_EXECUTION",
+  "critical_preservation_proof": "research/new-combined-contact-review/run-20261005T194211Z/23-completion-manifest.json",
+  "proof_complete": true,
+  "production_integrated": false,
+  "build_ready": false,
+  "source_frozen_for_trajectory_execution": false,
+  "control_groups": 13,
+  "files": {
+    "research/hull-search-completion/AUDIT.md": "61565f245e29668540f4f55195b2037d43560f8cee21aec68253abbe504be0e5",
+    "research/hull-search-completion/README.md": "b13e3e97efe0c9640fc0f4a47c044cfbebd860944d36f9adfbd4f952520a4e84",
+    "research/hull-search-completion/auditor_checks.py": "8d5b392cdb184182bd5dd811cb706f8222e3b02124b27690e3f34bc43387e0a4",
+    "research/hull-search-completion/handover-preparation-controls.log": "3e9b25f3c846667178ea4e759ffd7db12e61a641449820a547c7dea7c89a7682",
+    "research/hull-search-completion/plan.json": "9fa66ab5c33964a60e8e91c603d31dd7568b66d4cc718046b233fd4601c01dba",
+    "research/hull-search-completion/preparation-receipts/prep-20261005T195713Z-9e6c3ab6/cheap-controls.log": "2af362dfd273eedbf21a151525477655fe176a4bff7d5730bc388ce52c907f7d",
+    "research/hull-search-completion/preparation-receipts/prep-20261005T195713Z-9e6c3ab6/independent-plan-only.log": "5abd81825669bffa5b56ea144a4cae4a5bf5326d1a66a95670e1d68d001e5087",
+    "research/hull-search-completion/preparation-receipts/prep-20261005T195713Z-9e6c3ab6/manifest.json": "503fbcd9bb30efb9d4143ead5a95c1d6f5e3f0ff9b5c19c8e82eeb2531ac3d82",
+    "research/hull-search-completion/preparation-receipts/prep-20261005T195713Z-9e6c3ab6/producer-plan-only.log": "47aef98ff0b58b1f69980b92d4516c1357d4a06a2be6234bab6a5be91f4450b6",
+    "research/hull-search-completion/runner.py": "a58ff96f47ac69422485bcf6295be3904b79c4e4725d2b3e46960b07c6fa073d"
+  }
+}

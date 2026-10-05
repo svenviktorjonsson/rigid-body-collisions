@@ -1,0 +1,13 @@
+# Prospective independent bounded-search audit
+
+New self-contained auditor: `research/audit_hull_search_completion.py`. Historical combined/gap/translation auditors remain untouched. Geometry/full-tensor energy/authored-principal frame/containment/error primitives are copied from the reviewed independent audit and import no production metrics.
+
+Plan-only independently validates exact original52 scenes, six complete lanes, prior bca numerical policies,14 immutable original/gap/bca artifact hashes and the explicit new recovery-tail declaration. The selected helper/caps are concrete; integration/build/default-preservation approval remains PENDING. A synthetic readiness fixture cannot become execution evidence.
+
+The future full audit inherits strict six terminal outcomes, all accepted prefixes, native/frame/inertia/material consistency, finite physical and position residuals≤1e-8, mandatory pure-normal captured position rejections and six finite final/prefix pose ledgers. Only complete physical-eligible lanes and BOTH original quarter-budget edges can qualify. A recovered frozen42-row system, satisfying the equations, never grants trajectory accuracy. Boundary work and pose ledgers retain the previous limitations: per-contact/per-update impulses are not independently reconstructed.
+
+Portable source/archive metadata is default; explicit local runtime checks verify executable and ALL recorded linked libraries including loader. Future provenance must contain BUILD READY attestation and the exact approved helper/config/caps. Sources are independently enumerated from the published integration tree; all native headers/C++ sources plus the helper, adapter and auditor/controls are frozen.
+
+Cheap controls use old read-only records and synthetic metadata/array corruptions only; they execute no native trajectory. They check pending approval, unchanged law/gates/settings, malformed source/hash/library manifests, original quarter edges, invalid residuals/counts/frame/ledger data, strict new position captures and prior receipt byte identity. Synthetic readiness and native counter records are fixture data; they approve no build, endpoint proof or trajectory. Root must complete the three approvals before source freeze or launch.
+
+Native `projection_tail_policy` must report compiled/enabled true, exact64/2048/2048caps and stage `after_all_existing_pipeline_failure`. Nonnegative integer attempts/solves/declines must balance; aggregate SVD and iteration work cannot exceed attempts times fresh per-call budgets, and accepted Newton steps cannot exceed iterations. Missing/disabled policy, malformed counters or earlier stage is rejected. Common settings remain exactly equal to bca; no new API wire flag is permitted.

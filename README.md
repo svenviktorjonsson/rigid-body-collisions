@@ -160,7 +160,7 @@ with zero qualified references. Every completed lane passes its individual gates
 the eight-body middle rejection blocks both accuracy edges, and the27-body edges
 fail unchanged trajectory budgets. Independent exact-system searches find roots
 for the new42-row capture which the unchanged native final gate accepts; a bounded
-search correction remains under investigation. All three numerical changes were
+search correction now passes23 captured inputs, preserves all22 prior impulse/response Float64bytes and counters, and passes122 strict audit checks. It remains an unapplied production proposal; read [HANDOVER.md](HANDOVER.md) for continuation. All three numerical changes were
 declared together, so these timings do not establish causal speed gains.
 
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
