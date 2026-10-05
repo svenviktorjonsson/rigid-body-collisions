@@ -4,6 +4,14 @@
 #include <stdexcept>
 #include <sstream>
 
+// Upstream friction RHS omits this angular free-velocity increment, although
+// normal RHS and final body writeback include it. Preserve the signed B row.
+inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
+ const btSolverBody& a,const btSolverBody& b){
+ return rhs-c.m_relpos1CrossNormal.dot(a.m_externalTorqueImpulse)
+           -c.m_relpos2CrossNormal.dot(b.m_externalTorqueImpulse);
+}
+
 struct CoulombStats {
  int solves=0,sweeps_max=0,fast_solves=0,newton_steps=0;
  double residual_max=0,passive_change_max=0,last_residual=0;
@@ -163,6 +171,11 @@ class CoulombMLCP : public RecordedMLCP {
 protected:
  bool solveMLCP(const btContactSolverInfo& info) override {
   if(!m_A.rows())return true;
+  for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]>=0){
+   const auto& c=*m_allConstraintPtrArray[i];
+   double corrected=consistentTangentRHS(m_b[i],c,m_tmpSolverBodyPool[c.m_solverBodyIdA],m_tmpSolverBodyPool[c.m_solverBodyIdB]);
+   gyro_correction_max=std::max(gyro_correction_max,std::abs(corrected-m_b[i]));m_b[i]=corrected;
+  }
   // Touching within the declared geometric tolerance is treated as touching,
   // avoiding inconsistent gap/h targets on nearly redundant face points.
   for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]<0){
@@ -187,6 +200,6 @@ protected:
   return true;
  }
 public:
- double tolerance=1e-8,contact_slop_m=1e-9;CoulombStats stats,position_stats;
+ double tolerance=1e-8,contact_slop_m=1e-9,gyro_correction_max=0;CoulombStats stats,position_stats;
  explicit CoulombMLCP(btMLCPSolverInterface* solver):RecordedMLCP(solver){}
 };

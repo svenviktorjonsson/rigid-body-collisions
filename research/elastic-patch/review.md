@@ -31,8 +31,8 @@ strategy, rather than claiming these ingredients themselves as new.
 
 ## Wrench and work
 
-For contact impulses on body A, use linear impulse p and independent angular
-impulse L; body B receives their negatives. With each r measured from its
+For contact impulses on body A, use linear impulse $p$ and independent angular
+impulse $L$; body B receives their negatives. With each $r$ measured from its
 own center of mass to the contact location,
 
 $$
@@ -78,10 +78,15 @@ this quadratic can create energy. Accepted isolated collisions must satisfy
 kinetic plus elastic energy after, plus accumulated dissipation, equals
 initial kinetic plus elastic energy, within numerical tolerance. Prescribed
 walls add their measured external work to the right-hand side.
+For a model with elastic coupling between normal compression and twist,
+energy can transfer between those channels. A measured spin rebound ratio
+greater than one can therefore be passive if normal kinetic energy decreases;
+likewise a normal rebound ratio greater than one can use initial spin energy.
+Bounds on one channel must not replace the total energy balance.
 
 ## Normal-force-dependent torsion and shared friction capacity
 
-Let N be compressive normal force and a the effective circular patch radius.
+Let $N$ be compressive normal force and $a$ the effective circular patch radius.
 For a normal-axis torsional moment, the elementary bound is
 
 $$
@@ -89,22 +94,22 @@ $$
 $$
 
 The coefficient and radius are physical parameters. For a specified
-nonnegative pressure p(r), local Coulomb traction gives the sharper fully
+nonnegative pressure $p(r)$, local Coulomb traction gives the sharper fully
 sliding pure-torsion capacity
 
 $$
 |\tau_n|_{\max}=\mu\int_{\rm patch}r\,p(r)\,dA.
 $$
 
-Direct integration gives 2 mu a N / 3 for uniform circular pressure, and
-3 pi mu a N / 16 for circular Hertz pressure. These two factors are derived
+Direct integration gives $2\mu aN/3$ for uniform circular pressure, and
+$3\pi\mu aN/16$ for circular Hertz pressure. These two factors are derived
 here from their respective pressure distributions, not fitted data. They
 are maximum pure-torsion capacities, not a claim that partial-slip response
 is linear up to the bound.
 
-If a is fixed during contact, the corresponding integrated angular-impulse
-bound is absolute L_n at most mu_spin a P_n. A time-varying patch requires
-integration of mu_spin a(t) N(t), rather than substituting the final radius.
+If $a$ is fixed during contact, the corresponding integrated angular-impulse
+bound is $|L_n|\leq\mu_{\rm spin}aP_n$. A time-varying patch requires
+integration of $\mu_{\rm spin}a(t)N(t)$, rather than substituting the final radius.
 Meeting an endpoint impulse bound is necessary; it does not prove that the
 instantaneous force/moment limits were respected throughout an impact.
 
@@ -136,9 +141,9 @@ the full 3D twisting-versus-rolling distinction cannot be tested in 2D.
 
 ### Spin about the surface normal
 
-Take a spherical body of mass m and normal-axis inertia I_n, contacting a
-fixed horizontal plane with approach speed V, spin Omega_0, a linear normal
-spring k_n, a torsion spring k_theta, and zero damping. For this aligned
+Take a spherical body of mass $m$ and normal-axis inertia $I_n$, contacting a
+fixed horizontal plane with approach speed $V$, spin $\Omega_0$, a linear normal
+spring $k_n$, a torsion spring $k_\theta$, and zero damping. For this aligned
 spherical case the normal and torsion channels decouple. Choose
 
 $$
@@ -153,9 +158,9 @@ $$
 \theta(t)=\frac{\Omega_0}{\nu}\sin(\nu t).
 $$
 
-Both springs return to zero energy at separation T. Normal velocity becomes
-+V and spin becomes -Omega_0. Throughout the contact the torque-to-normal-
-force ratio is I_n absolute Omega_0 divided by m V. Therefore an exact
+Both springs return to zero energy at separation $T$. Normal velocity becomes
+$+V$ and spin becomes $-\Omega_0$. Throughout the contact the torque-to-normal-
+force ratio is $I_n|\Omega_0|/(mV)$. Therefore an exact
 no-yield sufficient condition in this isolated pure-torsion example is
 
 $$
@@ -163,7 +168,7 @@ $$
 \qquad |\tau_n|\leq\kappa_{\rm static}N.
 $$
 
-For a uniform solid sphere, I_n = 2 m R squared / 5. This is an analytically
+For a uniform solid sphere, $I_n=2mR^2/5$. This is an analytically
 verified synthetic example, not a measured rubber constitutive law. A small
 patch and ordinary friction may fail this capacity condition at high spin.
 It would be misleading to raise friction or patch radius silently to make a
@@ -172,21 +177,21 @@ particular observed ball reverse.
 ### Spin about an axis parallel to the surface
 
 Tangential traction can change this spin through r cross p even without an
-independent torque. Define alpha = I / (m R squared), take initial horizontal
+independent torque. Define $\alpha=I/(mR^2)$, take initial horizontal
 center-of-mass velocity zero, and select signs such that the contact slip is
-u_t = v_t - R Omega. If an elastic tangential response gives
-u_t after = -e_t u_t before, its exact isolated endpoint is
+$u_t=v_t-R\Omega$. If an elastic tangential response gives
+$u_t^+=-e_tu_t^-$, its exact isolated endpoint is
 
 $$
 \Omega^+=\frac{\alpha-e_t}{1+\alpha}\Omega^-,\qquad
 v_t^+=\frac{(1+e_t)\alpha}{1+\alpha}R\Omega^-.
 $$
 
-For a solid sphere alpha = 2/5 and e_t = 1, spin becomes -3 Omega / 7 while
-horizontal center-of-mass velocity becomes 4 R Omega / 7. This exchanges
-rotational and translational energy. Final inelastic sticking e_t = 0 leaves
-spin +2 Omega / 7 and does not reverse it. Reversal here requires e_t greater
-than alpha and sufficient friction capacity during the elastic episode.
+For a solid sphere $\alpha=2/5$ and $e_t=1$, spin becomes $-3\Omega/7$ while
+horizontal center-of-mass velocity becomes $4R\Omega/7$. This exchanges
+rotational and translational energy. Final inelastic sticking $e_t=0$ leaves
+spin $+2\Omega/7$ and does not reverse it. Reversal here requires $e_t>\alpha$
+and sufficient friction capacity during the elastic episode.
 
 ### Floor, ceiling and backward bounces
 
@@ -273,7 +278,7 @@ engine fit.
   Section IV cites sliding friction 0.4 ± 0.1 for smooth wood and
   0.85 ± 0.05 for P800. Despite greater friction, the tennis ball still did
   not reverse its spin. The paper uses radius 33 mm and inertia ratio
-  alpha = 0.55 for the tennis ball. These are tangential-axis spinning
+  $\alpha=0.55$ for the tennis ball. These are tangential-axis spinning
   impacts, not normal-axis torsional-spin measurements. Averaged outcomes
   cannot reconstruct individual trials; an eventual material-validation
   comparison needs compatible initial-condition ranges and uncertainty.

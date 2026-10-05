@@ -1,0 +1,3546 @@
+{
+  "schema": 1,
+  "execution_source_commit": "9b0d2d80e20cea99b6bda4bf0a4cc304807b8676",
+  "source_sha256": {
+    "research/elastic_patch.py": "fb3390f632bd869d7404290bd9d7faf2b24a6d3916912ade4250e0313a24b142",
+    "research/run_elastic_patch.py": "f5b34f7f289dad6a887dc3aa20b4eb6b9324c9765907f51edbc16d04d09bffac",
+    "tests/test_elastic_patch.py": "6db564f3cdbcb5da6e27ed67302836c6551d4ec94739d16cee6d19373249f2c8",
+    "research/elastic-patch/plan.json": "8a6c6e4a395e9f500ea17169ac4429c192ebeda06c5e81519cf8fa2a7772880a"
+  },
+  "scipy_version": "1.17.0",
+  "numpy_version": "2.3.5",
+  "scope": "Synthetic sphere/fixed-plane elastic wrench prototype, not calibrated rubber, arbitrary body engine, or guaranteed finite-patch traction limit surface.",
+  "cases": [
+    {
+      "name": "elastic-normal-axis-spin",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000001647236
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.000000025671971
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.000000000164724
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.08000000010268789
+            ],
+            "max_energy_residual_J": 5.2841816478022e-09,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 4.092579237793134e-09,
+            "max_history_stored_J": 0.1999787572173357,
+            "max_yield_excess_N": 0.012262177606046571,
+            "separation_loss_J": 7.518050012742443e-11,
+            "bounces": 1,
+            "rhs_evaluations": 1866,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 7.518050012742443e-11,
+                "time_s": 0.019934588265797644,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000001647236
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000025671971
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000164724
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000010268789
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.15643373699276708
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000000000298
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.000000000004098
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.0000000000000298
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.08000000000001639
+            ],
+            "max_energy_residual_J": 5.474509734426647e-13,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 3.5369564588808236e-13,
+            "max_history_stored_J": 0.19997860916821003,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.3917237972050272e-18,
+            "bounces": 1,
+            "rhs_evaluations": 3558,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.3917237972050272e-18,
+                "time_s": 0.01993458826579581,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000000298
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000000004098
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000000298
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000001639
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.2591608420043485
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.9999999999999792
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.000000000000004
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              1.999999999999979
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.0800000000000001
+            ],
+            "max_energy_residual_J": 2.1760371282653068e-14,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 1.0869600416690028e-17,
+            "max_history_stored_J": 0.1999786073080354,
+            "max_yield_excess_N": 9.069966020723969e-07,
+            "separation_loss_J": 2.1044492899735844e-20,
+            "bounces": 1,
+            "rhs_evaluations": 6798,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.1044492899735844e-20,
+                "time_s": 0.019934588265795805,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9999999999999792
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000000000004
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.999999999999979
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.0800000000000001
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.4760807999991812
+        }
+      ],
+      "qualified": false,
+      "refinement_edges": [
+        {
+          "position_m": 3.3026498202914922e-12,
+          "velocity_m_s": 1.646938141419696e-10,
+          "omega_rad_s": 0.0003578721181320965
+        },
+        {
+          "position_m": 2.914335439641036e-16,
+          "velocity_m_s": 5.051514762044462e-14,
+          "omega_rad_s": 4.496513071466923e-06
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": false,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "elastic-tangent-axis-spin",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.571428571427981,
+              0.0,
+              1.0000000000004594
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.285714285699518,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              0.571428571427981,
+              0.0,
+              2.000000000000459
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 1.2257084236466653e-11,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 1.2388361003315373e-11,
+            "max_history_stored_J": 0.14284188903696188,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.2388361003315373e-11,
+            "bounces": 1,
+            "rhs_evaluations": 2022,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  10.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.2388361003315373e-11,
+                "time_s": 0.019934588265796204,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.571428571427981,
+                  0.0,
+                  1.0000000000004594
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.285714285699518,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.571428571427981,
+                  0.0,
+                  2.000000000000459
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.1841325300047174
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.5714285714285745,
+              0.0,
+              1.0000000000000075
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.285714285714353,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              0.5714285714285745,
+              0.0,
+              2.000000000000008
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 1.1213252548714081e-14,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 8.477304441974069e-16,
+            "max_history_stored_J": 0.142841862628167,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 8.477304441974069e-16,
+            "bounces": 1,
+            "rhs_evaluations": 3708,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  10.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 8.477304441974069e-16,
+                "time_s": 0.019934588265795836,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.5714285714285745,
+                  0.0,
+                  1.0000000000000075
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.285714285714353,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.5714285714285745,
+                  0.0,
+                  2.000000000000008
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.36835785600123927
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.5714285714285718,
+              0.0,
+              0.9999999999999967
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.2857142857142865,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              0.5714285714285718,
+              0.0,
+              1.9999999999999964
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 6.661338147750939e-15,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 2.832084600782719e-19,
+            "max_history_stored_J": 0.14284186235141438,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.832084600782719e-19,
+            "bounces": 1,
+            "rhs_evaluations": 6897,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  10.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.832084600782719e-19,
+                "time_s": 0.019934588265795826,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.5714285714285718,
+                  0.0,
+                  0.9999999999999967
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.2857142857142865,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.5714285714285718,
+                  0.0,
+                  1.9999999999999964
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.4799288749927655
+        }
+      ],
+      "qualified": true,
+      "refinement_edges": [
+        {
+          "position_m": 1.615042919366121e-08,
+          "velocity_m_s": 2.5534686126649245e-06,
+          "omega_rad_s": 6.383671531962065e-05
+        },
+        {
+          "position_m": 1.6924947164251303e-10,
+          "velocity_m_s": 2.6759259585951202e-08,
+          "omega_rad_s": 6.689814857629983e-07
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": true,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "oblique-floor-retrace",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.19999999999024162,
+              0.0,
+              1.0000000000084923
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              4.9999999997560405,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.39999999999024166,
+              0.0,
+              2.0000000000084928
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 2.217304118090624e-11,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 2.0511592576583645e-11,
+            "max_history_stored_J": 0.06999253072866468,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.0511592576583645e-11,
+            "bounces": 1,
+            "rhs_evaluations": 1935,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.0511592576583645e-11,
+                "time_s": 0.019934588265796197,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.19999999999024162,
+                  0.0,
+                  1.0000000000084923
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  4.9999999997560405,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.39999999999024166,
+                  0.0,
+                  2.0000000000084928
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.16415104999032337
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.19999999999999996,
+              0.0,
+              0.9999999999999937
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              5.0,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.39999999999999986,
+              0.0,
+              1.9999999999999938
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 6.439293542825908e-15,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 1.2271605405432062e-15,
+            "max_history_stored_J": 0.06999251274179608,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.2271605405432062e-15,
+            "bounces": 1,
+            "rhs_evaluations": 3669,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.2271605405432062e-15,
+                "time_s": 0.019934588265795836,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.19999999999999996,
+                  0.0,
+                  0.9999999999999937
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.39999999999999986,
+                  0.0,
+                  1.9999999999999938
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.2910711699951207
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.19999999999999982,
+              0.0,
+              0.9999999999999946
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              4.999999999999996,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.39999999999999974,
+              0.0,
+              1.9999999999999938
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 5.662137425588298e-15,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 1.7236439556623452e-19,
+            "max_history_stored_J": 0.06999251255275074,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.7236439556623452e-19,
+            "bounces": 1,
+            "rhs_evaluations": 6861,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.7236439556623452e-19,
+                "time_s": 0.019934588265795812,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.19999999999999982,
+                  0.0,
+                  0.9999999999999946
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  4.999999999999996,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.39999999999999974,
+                  0.0,
+                  1.9999999999999938
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.5528848710091552
+        }
+      ],
+      "qualified": true,
+      "refinement_edges": [
+        {
+          "position_m": 1.571441304692124e-08,
+          "velocity_m_s": 2.4845030232346935e-06,
+          "omega_rad_s": 6.211257558402794e-05
+        },
+        {
+          "position_m": 1.651593226335239e-10,
+          "velocity_m_s": 2.611258517661737e-08,
+          "omega_rad_s": 6.528146284101588e-07
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": true,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "oblique-ceiling-retrace",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.19999999999026097,
+              0.0,
+              -1.000000000008502
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.999999999756522,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.3999999999902609,
+              0.0,
+              -2.0000000000085016
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 2.218103478668354e-11,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 2.0496227179253396e-11,
+            "max_history_stored_J": 0.06999253072866446,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.0496227179253396e-11,
+            "bounces": 1,
+            "rhs_evaluations": 1920,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.00999999999999955,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.0496227179253396e-11,
+                "time_s": 0.019934588265795826,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.19999999999026097,
+                  0.0,
+                  -1.000000000008502
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.999999999756522,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.3999999999902609,
+                  0.0,
+                  -2.0000000000085016
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.1972083750006277
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.19999999999999996,
+              0.0,
+              -1.00000000000001
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.999999999999997,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.39999999999999986,
+              0.0,
+              -2.0000000000000093
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 1.1657341758564144e-14,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 1.2926921081185448e-15,
+            "max_history_stored_J": 0.06999251274179608,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.2926921081185448e-15,
+            "bounces": 1,
+            "rhs_evaluations": 3639,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.2926921081185448e-15,
+                "time_s": 0.019934588265795777,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.19999999999999996,
+                  0.0,
+                  -1.00000000000001
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.999999999999997,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.39999999999999986,
+                  0.0,
+                  -2.0000000000000093
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.583918411997729
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              -0.1999999999999999,
+              0.0,
+              -1.0000000000000198
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              -4.999999999999998,
+              0.0
+            ],
+            "final_linear_impulse_N_s": [
+              -0.40000000000000013,
+              0.0,
+              -2.00000000000002
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_energy_residual_J": 2.7644553313166398e-14,
+            "initial_energy_J": 0.5700000000000001,
+            "dissipated_J": 1.9446525554241213e-19,
+            "max_history_stored_J": 0.06999251255275152,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.9446525554241213e-19,
+            "bounces": 1,
+            "rhs_evaluations": 6813,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.010000000000001077,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.2,
+                  0.0,
+                  1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  5.0,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.9446525554241213e-19,
+                "time_s": 0.019934588265797203,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  -0.1999999999999999,
+                  0.0,
+                  -1.0000000000000198
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  -4.999999999999998,
+                  0.0
+                ],
+                "linear_impulse_N_s": [
+                  -0.40000000000000013,
+                  0.0,
+                  -2.00000000000002
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.5318635869916761
+        }
+      ],
+      "qualified": true,
+      "refinement_edges": [
+        {
+          "position_m": 1.5714412480956282e-08,
+          "velocity_m_s": 2.4845029948684927e-06,
+          "omega_rad_s": 6.21125748734852e-05
+        },
+        {
+          "position_m": 1.6515870855445925e-10,
+          "velocity_m_s": 2.6112488386323855e-08,
+          "omega_rad_s": 6.528122071802755e-07
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": true,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "vertical-floor-ceiling",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.000000000770772
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.000000041373367
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.000000000770773
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.08000000016549351
+            ],
+            "max_energy_residual_J": 1.3607363458234545e-08,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 1.118165687997091e-08,
+            "max_history_stored_J": 0.19998342284735787,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 6.067311104013832e-11,
+            "bounces": 5,
+            "rhs_evaluations": 8509,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 7.879518302627068e-12,
+                "time_s": 0.019934588265796315,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000034821
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000002477481
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000348215
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000990994
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.04993458826475149,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000034821
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000002477481
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000348215
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000990994
+                ]
+              },
+              {
+                "separation_loss_J": 5.209992976532112e-12,
+                "time_s": 0.05986917653054778,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.000000000319035
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000020022974
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -3.1903465791068194e-10
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  8.009188911707819e-11
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.08986917652097644,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.000000000319035
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000020022974
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -3.1903465791068194e-10
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  8.009188911707819e-11
+                ]
+              },
+              {
+                "separation_loss_J": 7.880500625376967e-12,
+                "time_s": 0.09980376478677275,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000003538472
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000022500766
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000003538476
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000009000308
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.12980376477615732,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000003538472
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000022500766
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000003538476
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000009000308
+                ]
+              },
+              {
+                "separation_loss_J": 5.2099511842122466e-12,
+                "time_s": 0.1397383530419536,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000006380598
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000040046238
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -6.380588388325938e-10
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  1.6018494861836486e-10
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.1697383530228118,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000006380598
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000040046238
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -6.380588388325938e-10
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  1.6018494861836486e-10
+                ]
+              },
+              {
+                "separation_loss_J": 3.4493147951389927e-11,
+                "time_s": 0.17967294128860786,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000770772
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000041373367
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000770773
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000016549351
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.9283292070031166
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000000001144
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.000000000009967
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.0000000000001132
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.08000000000003997
+            ],
+            "max_energy_residual_J": 2.1467272404152027e-12,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 1.6337436646178311e-12,
+            "max_history_stored_J": 0.1999832506311537,
+            "max_yield_excess_N": 6.011796197314908e-05,
+            "separation_loss_J": 1.9405638181138537e-14,
+            "bounces": 5,
+            "rhs_evaluations": 16555,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.4006758574306825e-14,
+                "time_s": 0.019934588265795843,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000000178
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000000003668
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000000178
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000001468
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.049934588265794805,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000000178
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000000003668
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000000178
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000001468
+                ]
+              },
+              {
+                "separation_loss_J": 1.6999718733078795e-15,
+                "time_s": 0.0598691765315909,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.000000000000074
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000000009166
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -7.447149549649436e-14
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  3.665619505725098e-14
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.08986917653158875,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.000000000000074
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000000009166
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -7.447149549649436e-14
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  3.665619505725098e-14
+                ]
+              },
+              {
+                "separation_loss_J": 1.6295936389102443e-15,
+                "time_s": 0.09980376479738486,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000000073
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.00000000000708
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000000073
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000002835
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.12980376479738243,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000000073
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.00000000000708
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000000073
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000002835
+                ]
+              },
+              {
+                "separation_loss_J": 1.6998057762791962e-15,
+                "time_s": 0.13973835306317847,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000001115
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000000012582
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -1.1220354897131356e-13
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  5.029556748367894e-14
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.1697383530631743,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000001115
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.000000000012582
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -1.1220354897131356e-13
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  5.029556748367894e-14
+                ]
+              },
+              {
+                "separation_loss_J": 3.695083183343906e-16,
+                "time_s": 0.17967294132897038,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000001144
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.000000000009967
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000001132
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08000000000003997
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 1.5069031899911352
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000000000282
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -10.0
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.0000000000000266
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.08
+            ],
+            "max_energy_residual_J": 3.774758283725532e-14,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 2.0351500242145067e-16,
+            "max_history_stored_J": 0.19998324875737084,
+            "max_yield_excess_N": 8.96305965416629e-06,
+            "separation_loss_J": 4.1455412029334054e-17,
+            "bounces": 5,
+            "rhs_evaluations": 30451,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.6219877962931044e-19,
+                "time_s": 0.01993458826579583,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9999999999999832
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -9.999999999999995
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9999999999999831
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.07999999999999997
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.0499345882657963,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9999999999999832
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -9.999999999999995
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9999999999999831
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.07999999999999997
+                ]
+              },
+              {
+                "separation_loss_J": 5.139908624953206e-19,
+                "time_s": 0.05986917653159242,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000000007
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  9.999999999999995
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -7.488185920539749e-16
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -4.747319777106067e-18
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.08986917653159174,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000000007
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  9.999999999999995
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -7.488185920539749e-16
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -4.747319777106067e-18
+                ]
+              },
+              {
+                "separation_loss_J": 3.9994190549360375e-17,
+                "time_s": 0.09980376479738788,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9999999999999813
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9999999999999802
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.12980376479738806,
+                "plane": "ceiling",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9999999999999813
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9999999999999802
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08
+                ]
+              },
+              {
+                "separation_loss_J": 7.268350665855709e-19,
+                "time_s": 0.13973835306318402,
+                "plane": "ceiling",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000000309
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -3.258503197890574e-14
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  1.919120455763306e-18
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.16973835306318402,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0000000000000309
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  -3.258503197890574e-14
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  1.919120455763306e-18
+                ]
+              },
+              {
+                "separation_loss_J": 5.819677126347588e-20,
+                "time_s": 0.17967294132898007,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000000282
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000000266
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.08
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 2.370551088999491
+        }
+      ],
+      "qualified": false,
+      "refinement_edges": [
+        {
+          "position_m": 4.0614636653835134e-11,
+          "velocity_m_s": 1.2777080969639254e-08,
+          "omega_rad_s": 0.00046798316994056677
+        },
+        {
+          "position_m": 9.742207041085749e-15,
+          "velocity_m_s": 3.0732118239118478e-12,
+          "omega_rad_s": 5.3363595060029745e-06
+        }
+      ],
+      "checks": {
+        "energy": false,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": false,
+        "bounces": true,
+        "alternating_bounce_velocities": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "low-friction-no-spin-reversal",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000004405452
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              8.999040663161118
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.000000000440545
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.004003837347355543
+            ],
+            "max_energy_residual_J": 9.818081903034681e-09,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 0.03803454366308221,
+            "max_history_stored_J": 0.0005005574740908902,
+            "max_yield_excess_N": 0.01931525516870325,
+            "separation_loss_J": 3.5539016057171057e-10,
+            "bounces": 1,
+            "rhs_evaluations": 1845,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 3.5539016057171057e-10,
+                "time_s": 0.019934588265468567,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000004405452
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  8.999040663161118
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000440545
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.004003837347355543
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.1546036960062338
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0000000000018308
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              8.999982446924912
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.000000000001831
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.004000070212300376
+            ],
+            "max_energy_residual_J": 5.0384141303538854e-12,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 0.03800063191329464,
+            "max_history_stored_J": 0.000499957692302766,
+            "max_yield_excess_N": 0.0003533724536151084,
+            "separation_loss_J": 6.300433785610749e-14,
+            "bounces": 1,
+            "rhs_evaluations": 3570,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 6.300433785610749e-14,
+                "time_s": 0.019934588265795816,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0000000000018308
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  8.999982446924912
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.000000000001831
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.004000070212300376
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.2717836579977302
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.000000000000013
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              8.999999824643565
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.0000000000000124
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.004000000701425755
+            ],
+            "max_energy_residual_J": 1.4432899320127035e-14,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 0.038000006312832034,
+            "max_history_stored_J": 0.0004999466298492572,
+            "max_yield_excess_N": 3.530220910707982e-06,
+            "separation_loss_J": 6.454575578697982e-18,
+            "bounces": 1,
+            "rhs_evaluations": 6792,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 6.454575578697982e-18,
+                "time_s": 0.01993458826579582,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.000000000000013
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  8.999999824643565
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0000000000000124
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.004000000701425755
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.4568921220052289
+        }
+      ],
+      "qualified": false,
+      "refinement_edges": [
+        {
+          "position_m": 9.130085576458669e-12,
+          "velocity_m_s": 4.387143981432473e-10,
+          "omega_rad_s": 0.0009417837637943904
+        },
+        {
+          "position_m": 3.649858193455202e-14,
+          "velocity_m_s": 1.8176571359163063e-12,
+          "omega_rad_s": 1.7377718652511476e-05
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": false,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "analytic_dissipation": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "compression-weighted-reversal",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.9984796020414354
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -1.3265071868970688
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              1.9984796020414355
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.009306028747588279
+            ],
+            "max_energy_residual_J": 4.801907760310087e-10,
+            "initial_energy_J": 0.502,
+            "dissipated_J": 0.0,
+            "max_history_stored_J": 0.004406294536440092,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 0.0,
+            "bounces": 1,
+            "rhs_evaluations": 1872,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.019908489055905504,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9984796020414354
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -1.3265071868970688
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9984796020414355
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.009306028747588279
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.1455006149917608
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.9984779807192699
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -1.3268121588622679
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              1.9984779807192692
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.009307248635449072
+            ],
+            "max_energy_residual_J": 4.247713292215849e-13,
+            "initial_energy_J": 0.502,
+            "dissipated_J": 0.0,
+            "max_history_stored_J": 0.004408282573082956,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 0.0,
+            "bounces": 1,
+            "rhs_evaluations": 3504,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999551,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.019908475164738884,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9984779807192699
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -1.3268121588622679
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9984779807192692
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.009307248635449072
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.24000896999496035
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.9984779649542465
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -1.3268151247284585
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              1.9984779649542475
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.00930726049891384
+            ],
+            "max_energy_residual_J": 5.551115123125783e-15,
+            "initial_energy_J": 0.502,
+            "dissipated_J": 0.0,
+            "max_history_stored_J": 0.004408301908653989,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 0.0,
+            "bounces": 1,
+            "rhs_evaluations": 6717,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999546,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.019908475029608057,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.9984779649542465
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -1.3268151247284585
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  1.9984779649542475
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.00930726049891384
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.4497959059954155
+        }
+      ],
+      "qualified": false,
+      "refinement_edges": [
+        {
+          "position_m": 1.8704787232981523e-08,
+          "velocity_m_s": 4.1032920449560195e-06,
+          "omega_rad_s": 0.0006395130235938851
+        },
+        {
+          "position_m": 1.818186018409662e-10,
+          "velocity_m_s": 3.9912955315801746e-08,
+          "omega_rad_s": 6.2191617078433126e-06
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": false,
+        "spin_reversal": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "slow-same-material",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 4.000000000000001e-06,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.009999999136371573
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -0.09999998838048842
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              0.01999999913637157
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.0007999999535219541
+            ],
+            "max_energy_residual_J": 1.3173330536218192e-11,
+            "initial_energy_J": 7.000000000000001e-05,
+            "dissipated_J": 1.1075772971457998e-13,
+            "max_history_stored_J": 1.9991282647901217e-05,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.1075772971457998e-13,
+            "bounces": 1,
+            "rhs_evaluations": 2835,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 9.99999999833467e-05,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -0.01
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  0.1
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.1075772971457998e-13,
+                "time_s": 0.0004141592658757393,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.009999999136371573
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -0.09999998838048842
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.01999999913637157
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.0007999999535219541
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.2500919270096347
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 2.0000000000000003e-06,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.010000000017886843
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -0.10000000013875142
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              0.020000000017886845
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.0008000000005550053
+            ],
+            "max_energy_residual_J": 2.7986381929360343e-13,
+            "initial_energy_J": 7.000000000000001e-05,
+            "dissipated_J": 4.549482986562634e-14,
+            "max_history_stored_J": 1.9991344407733458e-05,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 4.549482986562634e-14,
+            "bounces": 1,
+            "rhs_evaluations": 5514,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 9.999999998334658e-05,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -0.01
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  0.1
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 4.549482986562634e-14,
+                "time_s": 0.00041415926533771663,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.010000000017886843
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -0.10000000013875142
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.020000000017886845
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.0008000000005550053
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.49770667401026003
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 1.0000000000000002e-06,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              0.010000000000191318
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -0.10000000000009056
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              0.020000000000191323
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.000800000000000363
+            ],
+            "max_energy_residual_J": 6.000584686256805e-15,
+            "initial_energy_J": 7.000000000000001e-05,
+            "dissipated_J": 2.510191503054718e-17,
+            "max_history_stored_J": 1.9991350792225277e-05,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.510191503054718e-17,
+            "bounces": 1,
+            "rhs_evaluations": 10875,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.00010000000005273542,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -0.01
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  0.1
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.510191503054718e-17,
+                "time_s": 0.00041415926541068127,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  0.010000000000191318
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -0.10000000000009056
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.020000000000191323
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.000800000000000363
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.9238284029997885
+        }
+      ],
+      "qualified": true,
+      "refinement_edges": [
+        {
+          "position_m": 2.562949852347174e-13,
+          "velocity_m_s": 8.815152705010654e-10,
+          "omega_rad_s": 7.42491011435217e-06
+        },
+        {
+          "position_m": 6.689093723366568e-15,
+          "velocity_m_s": 1.769552560038079e-11,
+          "omega_rad_s": 7.675577490540153e-07
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": true,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "rapid-same-material",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 4.000000000000001e-06,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              100.00000000032433
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -999.9999999767895
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              200.00000000032426
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -7.999999999907161
+            ],
+            "max_energy_residual_J": 1.6316244000336155e-07,
+            "initial_energy_J": 7000.0,
+            "dissipated_J": 2.2357138668313467e-07,
+            "max_history_stored_J": 1999.134812115557,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 2.2357138668313467e-07,
+            "bounces": 1,
+            "rhs_evaluations": 3024,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.00010000000000000005,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -100.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1000.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 2.2357138668313467e-07,
+                "time_s": 0.0004141592653589796,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  100.00000000032433
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -999.9999999767895
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  200.00000000032426
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -7.999999999907161
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.27775264500814956
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 2.0000000000000003e-06,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              99.99999999999987
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -1000.0000000000064
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              199.99999999999991
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -8.00000000000003
+            ],
+            "max_energy_residual_J": 5.3660187404602766e-11,
+            "initial_energy_J": 7000.0,
+            "dissipated_J": 4.1302853231194733e-11,
+            "max_history_stored_J": 1999.1351502732805,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.7195821384581335e-11,
+            "bounces": 1,
+            "rhs_evaluations": 5553,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 9.999999999999992e-05,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -100.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1000.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.7195821384581335e-11,
+                "time_s": 0.00041415926535897567,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  99.99999999999987
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -1000.0000000000064
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  199.99999999999991
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -8.00000000000003
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.4891150059993379
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 1.0000000000000002e-06,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              99.99999999999972
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              -999.9999999999991
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              199.99999999999977
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -7.99999999999999
+            ],
+            "max_energy_residual_J": 6.548361852765083e-11,
+            "initial_energy_J": 7000.0,
+            "dissipated_J": 1.4011572836309265e-15,
+            "max_history_stored_J": 1999.1351502732778,
+            "max_yield_excess_N": 0.0,
+            "separation_loss_J": 1.4011572836309265e-15,
+            "bounces": 1,
+            "rhs_evaluations": 10887,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 9.999999999999983e-05,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -100.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  1000.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 1.4011572836309265e-15,
+                "time_s": 0.00041415926535897626,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  99.99999999999972
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  -999.9999999999991
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  199.99999999999977
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -7.99999999999999
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 1.213785503001418
+        }
+      ],
+      "qualified": false,
+      "refinement_edges": [
+        {
+          "position_m": 9.228728892196614e-14,
+          "velocity_m_s": 3.2446223485749215e-10,
+          "omega_rad_s": 0.004065406789568016
+        },
+        {
+          "position_m": 7.494005416219807e-16,
+          "velocity_m_s": 7.531752999057062e-13,
+          "omega_rad_s": 7.275957614183426e-12
+        }
+      ],
+      "checks": {
+        "energy": true,
+        "yield": true,
+        "nonnegative_dissipation": true,
+        "refinement": false,
+        "analytic_velocity": true,
+        "analytic_omega": true,
+        "separation_loss": true
+      }
+    },
+    {
+      "name": "weighted-high-spin-low-friction-budget",
+      "runs": [
+        {
+          "level": "coarse",
+          "settings": {
+            "max_step": 0.0004,
+            "rtol": 1e-07,
+            "atol": 1e-09
+          },
+          "status": "completed",
+          "metrics": {
+            "final_velocity_m_s": [
+              0.0,
+              0.0,
+              1.0037212480595885
+            ],
+            "final_omega_rad_s": [
+              0.0,
+              0.0,
+              5.204286148937587
+            ],
+            "final_linear_impulse_N_s": [
+              0.0,
+              0.0,
+              2.0037212480595885
+            ],
+            "final_couple_impulse_N_m_s": [
+              0.0,
+              0.0,
+              -0.019182855404249657
+            ],
+            "max_energy_residual_J": 1.0007505601983269e-08,
+            "initial_energy_J": 0.7000000000000001,
+            "dissipated_J": 0.1421026494643094,
+            "max_history_stored_J": 0.005000016542085831,
+            "max_yield_excess_N": 0.021476965764932743,
+            "separation_loss_J": 0.0,
+            "bounces": 1,
+            "rhs_evaluations": 6267,
+            "events": [
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.009999999999999998,
+                "plane": "floor",
+                "kind": "entry",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  10.0
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "separation_loss_J": 0.0,
+                "time_s": 0.0198486789488494,
+                "plane": "floor",
+                "kind": "lift_off",
+                "velocity_m_s": [
+                  0.0,
+                  0.0,
+                  1.0037212480595885
+                ],
+                "omega_rad_s": [
+                  0.0,
+                  0.0,
+                  5.204286148937587
+                ],
+                "linear_impulse_N_s": [
+                  0.0,
+                  0.0,
+                  2.0037212480595885
+                ],
+                "couple_impulse_N_m_s": [
+                  0.0,
+                  0.0,
+                  -0.019182855404249657
+                ]
+              }
+            ]
+          },
+          "elapsed_s": 0.9877300999942236
+        },
+        {
+          "level": "medium",
+          "settings": {
+            "max_step": 0.0002,
+            "rtol": 1e-09,
+            "atol": 1e-11
+          },
+          "status": "rejected",
+          "reason": "elastic prototype exceeded RHS evaluation budget; no accepted result",
+          "elapsed_s": 3.2497082259942545
+        },
+        {
+          "level": "fine",
+          "settings": {
+            "max_step": 0.0001,
+            "rtol": 1e-11,
+            "atol": 1e-13
+          },
+          "status": "rejected",
+          "reason": "elastic prototype exceeded RHS evaluation budget; no accepted result",
+          "elapsed_s": 3.4234272619942203
+        }
+      ],
+      "qualified": false,
+      "checks": {}
+    }
+  ],
+  "qualified_cases": 4,
+  "completed_histories": 28,
+  "rejected_attempts": 2
+}
