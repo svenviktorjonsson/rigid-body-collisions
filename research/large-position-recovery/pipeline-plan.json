@@ -1,0 +1,14 @@
+{
+  "scope": "Full unchanged translationSplitSolve pipeline,384 vs512 normal-null cap, original390-row target/mobility/bounds/absolute tolerance/4096 projected sweeps unchanged. Fresh original normalQP seed; no use of the successful standalone final-rejection warm point.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_4.rejection.json": "8ce3890f4787cdda31c6d455ca0a8f7e314636ae1f7836d9514b61897d3a5f18",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_4.rejection.json.geometry.json": "9bb1dd3d4e345b1e7ffc8a01d8694799ca940624fa49c3e8d5961e2ec009794a"
+  },
+  "native_variants": [
+    384,
+    512
+  ],
+  "state_budget": 128,
+  "subfactorization": "Existing one-sided Jacobi64sweep numerical normal active-face helper unchanged; only full-row validation cap changes.",
+  "primal_certificate": "SciPy HiGHS free translational-velocity feasibility, original linearJ from geometry, independent mass Gram equality required. Not a simulation or permission to apply arbitrary feasible displacement."
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "cap": 384,
+    "native_exit": 2,
+    "accepted": false,
+    "independent_residual_m_s": 3.354290072891282e-07,
+    "elapsed_s_descriptive": 0.016411545002483763,
+    "stats": {
+      "budget_rejections": 0,
+      "null_steps": 0,
+      "range_steps": 0,
+      "states": 0,
+      "svd_calls": 0,
+      "svd_rejections": 0
+    }
+  },
+  {
+    "cap": 512,
+    "native_exit": 0,
+    "accepted": true,
+    "independent_residual_m_s": 1.1514618103231868e-11,
+    "elapsed_s_descriptive": 0.017889139002363663,
+    "stats": {
+      "budget_rejections": 0,
+      "null_steps": 0,
+      "range_steps": 1,
+      "states": 2,
+      "svd_calls": 1,
+      "svd_rejections": 0
+    }
+  }
+]
