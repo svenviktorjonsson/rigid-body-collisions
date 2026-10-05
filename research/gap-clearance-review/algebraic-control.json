@@ -1,0 +1,65 @@
+{
+  "schema": "opposing-face-clearance-algebraic-control-v1",
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "native_execution": false,
+  "actual_study_containment_failure": false,
+  "h_s": 0.001,
+  "declared_slop_m": 1e-09,
+  "start_right_distance_m": 0.001000001,
+  "start_left_distance_m": -0.0005,
+  "split_erp": 0.2,
+  "mass_kg": 1.0,
+  "prescribed_final_physical_x_velocity_m_s": 0.95,
+  "physical_normal_targets_m_s": [
+    0.0,
+    -1.000001
+  ],
+  "physical_pressure_kg_m_s": [
+    0.0,
+    0.0
+  ],
+  "physical_slack_m_s": [
+    0.95,
+    0.05000099999999996
+  ],
+  "position_mobility_per_kg": [
+    [
+      1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "position_targets_m_s": [
+    0.1,
+    -1.0
+  ],
+  "position_pressure_kg_m_s": [
+    0.1,
+    0.0
+  ],
+  "position_normal_velocity_m_s": [
+    0.1,
+    -0.1
+  ],
+  "position_slack_m_s": [
+    0.0,
+    0.9
+  ],
+  "position_projection_residual_m_s": 0.0,
+  "combined_right_distance_m": -4.9999000000000224e-05,
+  "right_remaining_clearance_after_physical_m": 5.000000000000002e-05,
+  "proposed_right_remaining_clearance_pose_bound_m_s": -0.050000000000000024,
+  "unchanged_left_required_x_push_m_s": 0.1,
+  "remaining_right_maximum_x_push_m_s": 0.050000000000000024,
+  "unchanged_penetrating_target_with_tightened_right_bound_feasible": false,
+  "optional_all_rows_combined_pose_targets_m_s": [
+    -0.85,
+    -0.050000000000000044
+  ],
+  "optional_all_rows_combined_zero_push_feasible": true,
+  "scope": "Closed-form admissible independent physical/pose rows can violate their combined clearance. No captured actual final physical contact velocity is inferred.",
+  "producer_sha256": "7c68578d7f1e8203c2f37c8b2949be9067113234796bf248c0fd4c5e51742d2c"
+}

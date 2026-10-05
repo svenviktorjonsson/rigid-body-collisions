@@ -1,0 +1,12 @@
+{
+  "schema": "independent-gap-clearance-review-v1",
+  "reviewed_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "actual_study_containment_failure_claimed": false,
+  "new_native_execution": false,
+  "files": {
+    "research/gap-clearance-review/REVIEW.md": "d33f1014598f14282d20a8934105e1977b15b906a088bfb0675a688d79ae8e7c",
+    "research/gap-clearance-review/algebraic-control.json": "a98133afabb4b39801e4c307f3ca74a1f11207580ff5c9f1d9198a17c9fd1033",
+    "research/gap-clearance-review/algebraic_control.py": "7c68578d7f1e8203c2f37c8b2949be9067113234796bf248c0fd4c5e51742d2c",
+    "research/gap-clearance-review/source-pointers.json": "b03fd15619ecaa0f67ff468513ade38556c11217efde491c42fa6eb9e79cd98e"
+  }
+}
