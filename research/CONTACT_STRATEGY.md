@@ -134,3 +134,20 @@ in this diagnostic are the backend principal-inertia axes, unlike the ordinary
 authored-axis result. An incomplete checkpoint is a retained prefix, not a
 completed reference or a resumable contact-cache snapshot. The six prospective
 full runs at source `95d224f` keep the original material, scene and gates.
+
+
+The final exact-component tail recovery passes22 retained captured contact
+systems at source9e97be0, with the prior20 accepted impulses exactly preserved.
+It uses the actual final rejected PGS seed, exact nonzero mobility components,
+complete normal/tangent triples and every original contact in final acceptance.
+All numerical-guide budgets and finite-metric validation are disclosed in
+research/component-recovery-integration. It runs only after existing stages
+reject; early recovery performance remains a separate prospective experiment.
+
+The source52f7 six-run translation-only hull study retains3 histories/3 actual
+rejections and0 qualified references; completed8-body refinement edges fail
+all original trajectory budgets. An exact rational finite-bound certificate
+proves the captured74-row translation-only pose-repair equations inconsistent.
+That rejection cannot be fixed by more iterations under the same bounded repair
+model. A revised geometric or rollback/refinement protocol must explicitly
+account for pose-induced energy/momentum effects and qualify fresh trajectories.

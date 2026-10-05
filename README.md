@@ -114,6 +114,21 @@ correction, which otherwise can add kinetic energy to a spinning anisotropic bod
 It preserves the physical velocity solve; positional translation still requires
 separate gravitational-energy and orbital-momentum accounting.
 
+The [latest completed shared-hull study](research/hull-translation-completion)
+retains six uninterrupted attempts: three eight-body histories and three
+27-body solver rejections, with **zero qualified references**. Both completed
+refinement edges exceed every unchanged trajectory budget. The two new velocity
+captures have strict original-law roots in the
+[exact-component recovery review](research/translation-native-review); its
+frozen combined strategy passes all 22 retained contact systems. Production
+integration and its final-seed replay are recorded separately in
+[the integration receipt](research/component-recovery-integration).
+The remaining 74-row translation-only position-repair system is
+[provably inconsistent within its recorded finite bounds](research/translation-position-certificate).
+This is a numerical pose-repair defect, not a proof that the physical geometry or
+Coulomb velocity law is infeasible. A revised repair/refinement protocol requires
+fresh complete trajectories and energy/momentum accounting.
+
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
 contact chains and continuous collision detection through two pinned Box2D

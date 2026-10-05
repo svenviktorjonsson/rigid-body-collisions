@@ -1,0 +1,33 @@
+{
+  "schema": "final-rejected-tail-seed-plan-v1",
+  "primary_source": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "prior_receipts": "research/translation-native-review/v3/combined22-native.jsonl",
+  "seed_change": "On frozen52 decline, V3 uses rerun FINAL rejected PGS vector. Prior combined proof reset to input originally captured final-rejection seed. This prospective variant changes only numerical initialization; all physical equations/gates and V3 caps unchanged.",
+  "caps_plan_sha256": "62bc715ed83cc05428dcd9a4f99381abe9f714a48b43a23ad9336d73a9955e8c",
+  "driver_sha256": "234a7e6f85f69386111ced27f01f139c294ae2e95a8796ac8175a784d0adc6a6",
+  "v3_header_sha256": "46f19ae878f44fa0225bea7f63efc5d64cac1a448ea798945c7a10de85c984db",
+  "corpus": {
+    "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+    "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+    "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+    "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+    "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json": "7e52bea9db4c4965995924d2c945081f53a55847a31adc4fc3ea67e9077fe1ab",
+    "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+    "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+    "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json": "a8f6601cc02e4d3b266250ece2d49440228ff8da867a8c9d62e5c1b0b7b08cdd",
+    "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json": "b50ea9a0f145e4878ba1f8e6683ab125b4fb9418cc138de61d29c2f76abfbefd",
+    "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+    "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+    "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+    "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+    "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+    "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json": "ba80bbe35cb56243259ed1cc60ad85d85a404c342834adfb2bf51be037d66fce",
+    "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+    "research/coulomb-diagnostics/hull42-rejected.json": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+    "research/coulomb-diagnostics/hull7301-rejected.json": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f",
+    "research/coulomb-diagnostics/hull7301-later-rejected.json": "ccd10a635622b90b61d39f3676d827dc3fdbee989eca616dd79fabe6b4430765",
+    "research/coulomb-followup/hull42-second-rejected.json": "c263492b847ec70be8c0ce25b59cc36f1074b3383945007da488903869bfb031",
+    "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json": "7b7a7649645426d21030a51310cdc235a417cbc830f0a13cfa951d4581c018d6",
+    "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json": "87c8637e8df9bbcbe085c184b27e012808afcc897d26547bdf53ae5312c49d7b"
+  }
+}

@@ -1,0 +1,7 @@
+# Tail recovery from the final rejected iteration state
+
+This prospectively declared variant addresses the production seed explicitly. It reruns the unmodified source52 solver on each of22 archived systems. When that solver declines, the V3 exact support/component wrapper receives its newly returned FINAL rejected PGS vector. The earlier combined proof instead restored the input vector, which was the originally captured final-rejection state. Those two proofs remain separate and neither receipt is overwritten.
+
+All22 systems pass independently recomputed original projection/Coulomb/normal-bound/passivity gates. The two added velocity systems have full residuals about1.44e-10 and7.66e-11 m/s. Existing source/algorithm/caps, physical matrices/targets and material coefficients remain unchanged. The frozen wrapper succeeds without modifying the caller on failure. Production integration should initialize its candidate from the `rejected` vector, and assign the physical output only on full original acceptance.
+
+The actual seed selection is specified by the hashed native driver and exact baseline source, rather than an archived accepted answer. Final output arrays are retained; this driver does not separately retain the intermediate final-rejected vector. This is a correctness check of the intended tail stage. It is not a test of early recovery from the FIRST256 failed state, nor a full-hull trajectory qualification. Timings include the unchanged previous pipeline and are descriptive, not a controlled speed ranking.

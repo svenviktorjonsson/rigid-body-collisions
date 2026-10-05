@@ -27,3 +27,18 @@ receipt destination. Captured contact roots do not qualify dense trajectories.
 The separately certified 74-row translation-only pose-repair failure requires
 a revised explicit repair protocol; increasing solver work cannot fix its
 original bounded equations.
+
+Final production replay at source9e97be07b833503c15d9a96f1f92afc59c11a292:
+**22/22 accepted** by native independent-law bookkeeping and the independent
+Python original-row projection/bounds/passivity audit. All20 earlier impulse
+arrays remain exactly identical. New261/243 residuals are1.4374e-10 and7.6613e-11
+m/s, using5 and103 supplemental nonlinear/projector SVD calls respectively.
+The full previous failed pipeline still runs first, so this is a correctness
+improvement rather than a controlled performance gain.
+
+The receipt records every actual compiled native source hash, binary and linked
+library hash. Its broad header fingerprint also includes the then-unused
+position_geometry.h serializer before integration; that file was untracked at
+execution and is not part of the9e commit or compiled model. The source archive
+retains it explicitly rather than claiming a false committed-source identity.
+The plan's changed production sources all match the9e commit.
