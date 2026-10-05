@@ -1,0 +1,25 @@
+{
+  "archive": "research/elastic-completion",
+  "source_commit": "7c3a47c46d7c13481f22fbb0dcf694b201581cd2",
+  "selected_cases": [
+    "elastic-normal-axis-spin",
+    "vertical-floor-ceiling",
+    "same-floor-oblique-mixed-positive",
+    "same-floor-oblique-mixed-negative",
+    "low-friction-no-spin-reversal",
+    "weighted-high-spin-low-friction-budget"
+  ],
+  "archive_sha256": {
+    "summary.json": "475c2b6cfbe7960e4eceb9fd10e8ae77c1f2c284560ac7c3f877a05e95cb5cf6",
+    "plan.json": "f7e9aed23722e29e67cd07dbb4bb947989fbf83541d8b789258b88c178e4fc51",
+    "traces.zip": "60848c6d992fb2155c6f4d402c4e35282ad1ee8d95b868a11b0f9aedaa832fc1"
+  },
+  "outputs_sha256": {
+    "spin-energy.png": "62ddef8e8b7600dc22f0ca9868394fb81eda24f0e399d3da2a34c294850a3a1c",
+    "spin-energy.pdf": "78e95daab5aee692246a58f8abf2d7934372da90ff81e62ea51c89af6a9695e2",
+    "spin-and-bounces.pdf": "2c842cc13426ae101c44560bc9a27cd46d8280af2dc34aa450f4b7678713841c",
+    "demo.html": "3d7921f233b6b689f1f8cd0e0612dcf34bff5cd35d48a10c57586b388c617bf6",
+    "spin-and-bounces.png": "26575b29207a888d1829b846d444977ad0cffbdc25bae7f2f19ec8ee50eab74a"
+  },
+  "scope": "Recorded synthetic sphere/fixed-plane prototype; numerical validation is separate from native arbitrary-body Coulomb and from experimental rubber authentication."
+}

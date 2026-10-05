@@ -73,6 +73,7 @@ jobs:
           python -m research.audit_shared_hulls --directory research/shared-hull-rank-followup --source-commit 0862e30736af34b3736e53154f0679a790113f9f
           python -m research.audit_elastic_patch
           python -m research.audit_elastic_patch --directory research/elastic-patch-refined
+          python -m research.audit_elastic_completion
       - name: Exercise the explicitly synthetic comparison fixtures
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json

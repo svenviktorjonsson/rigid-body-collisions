@@ -11,7 +11,7 @@ inertia in the correct frame before the first contact.
 | Inelastic, zero tangential force and no contact couple | Eliminate exactly zero tangent variables before normal matrix assembly | Normal complementarity; tested packed 3D rows/boxes; disclose unsupported fallback |
 | Inelastic circular Coulomb, one coefficient | Warm-started coupled block iterations; accept within eight sweeps when residual passes | Same equations with more sweeps, semismooth Newton, bounded minimum-norm recovery, velocity-neutral pressure redistribution and cold restarts; strict residual/passivity gate; reject rather than substitute friction pyramid |
 | Matched linear elastic sphere/plane, no damping/history/yield, bounded declared deformation | Exact normal/tangent/twisting impulse and half-sine contact trajectory | Same configured material integrated with explicit energy stores; instantaneous shared force/couple capacity proves the fast branch |
-| Other supported sphere/plane elastic material | Adaptive resolved material integration | Entry/lift-off events, stored normal/shear/twist energy, plastic/damping/separation loss, full energy/yield gates and bounded rejection |
+| Other supported sphere/plane elastic material | Adaptive resolved material integration | Exact ballistic free flight and explicit entry/lift-off/yield/release events, stored normal/shear/twist energy, plastic/damping/separation loss, full energy/yield gates and bounded rejection |
 | Arbitrary many-body elastic wrenches, separate static/dynamic coefficients, measured rubber material | Not verified yet | Integrate persistent histories with the full contact graph; verify before promoting a production preset |
 
 The rigid graph includes all simultaneous contacts and retains normal/tangent,
@@ -47,15 +47,23 @@ three while failing the last. Preserve failures and return no verified choice
 against an unqualified reference. `spatial_fidelity` chooses effort against a
 qualified reference; it does not claim a certified online truncation-error bound.
 
-Current evidence: the circular native study qualifies three of six cases,
-including slow 27-sphere shaking, rapid 27-sphere translation and rapid eight-box
-shaking. Fast 27-sphere shaking remains unqualified; random-hull attempts still
-reject after a verified gyroscopic RHS correction. The elastic original and
-refined studies together verify nine of ten synthetic scenarios, including spin
-reversal, vertical floor/ceiling alternation and a fixed material at 0.01 and
-100 m/s. One high-spin/low-friction weighted case remains budget-rejected.
-A separate same-floor gravity regression shows approximate horizontal back/forth
-motion with spin reversal and accounts for its small separation loss.
+Current evidence includes independently qualified slow shaking, rapid translation
+and fast eight-box shaking. The corrected shared-point 27-sphere fast-shaking
+study qualifies both adjacent reference edges and verifies 7.17x native gain
+for its declared scene and budgets. Complete random-hull trajectories require
+separate qualification. Eleven captured hull systems now pass the combined
+primary/polish/continuation solver, including all six latest rejected systems.
+
+The elastic completion study qualifies all ten original scenarios without
+changing their material, simulation budgets or gates, plus eight additional
+signed/chained cases: 54 histories, zero rejections. Both normal-axis spin signs
+reverse with sufficient configured capacity. Three oblique same-floor gravity
+bounces alternate horizontal motion and spin; five vertical floor/ceiling bounces
+alternate surfaces. Insufficient capacity does not imply reversal. Plastic flow
+in the short gravity release tail is retained in the loss ledger, and strict
+force/couple capacity is checked separately from energy. Historical budget
+rejections remain archived. These sphere/plane tests use an undeformed-radius
+contact lever; large-compression physical fidelity requires additional evidence.
 
 Synthetic parameters establish mechanics and numerical checks. They do not
 identify authentic rubber coefficients, convergence order or a novel contact
@@ -94,3 +102,20 @@ Both six-attempt shared hull follow-ups retain every rejection and qualify no
 reference. The corrected-geometry27-sphere study independently qualifies a7.17x
 native gain with fixed budgets; this does not establish general hull accuracy or
 authentic material coefficients.
+
+
+Supplementary continuation uses a Fischer–Burmeister normal search merit and
+internal trial friction continuation, accepting only the final original circular
+projection/complementarity/passivity gate. Per call: 384 rows, 512 outer search
+steps, 256 SVD calls, 512 damped factorizations and 96 stage attempts. These limits
+are separate from the preceding polishing budget. A frictionless normal QP and
+at most one normal-only Dantzig call provide initial guesses; Bullet exposes no
+internal pivot cap, so this is not a hard wall-clock guarantee. Trial friction
+and Jacobian damping are numerical search devices; physical mobility and material
+remain unchanged. Cost counters disclose actual recovery use.
+
+Opt-in translation-only split repair uses a linear normal Gram matrix and leaves
+physical angular velocity and orientation repair unchanged. Clearing numerical
+turn velocities prevents fake pose correction from rotating world inertia and
+injecting kinetic energy. Translation can still change orbital momentum and
+gravity potential; it is a geometric repair, not a physical force impulse.

@@ -81,6 +81,31 @@ history; its dispatcher uses resolved integration of the same material when the
 exact assumptions fail. The [computational strategy](research/CONTACT_STRATEGY.md)
 records supported branches and the remaining many-body elastic integration work.
 
+The [elastic completion study](research/elastic-completion/summary.json) corrects
+friction-limit event chatter and zero-time grazing loops, and uses exact ballistic
+free flight between impacts. It preserves the original material and accuracy
+gates: all **10 original cases** and eight additional signed/chained-bounce cases
+qualify, with **54 complete histories and zero rejections**. Independent auditing
+checks energy stores, plastic work, force and independent couple impulses, yield
+capacity and both refinement edges. With enough configured elastic capacity,
+normal-axis spin reverses; three oblique floor bounces under gravity alternate
+horizontal motion and spin, while five vertical floor/ceiling bounces alternate
+surfaces. The low-friction control retains its spin sign, as the material law
+requires. The [interactive playback](research/elastic-completion-visuals/demo.html)
+and [figures](research/elastic-completion-visuals/spin-and-bounces.pdf) show these separate
+sphere/plane prototype results. Measured rubber calibration and native arbitrary-body
+elastic many-contact integration remain open.
+
+A supplementary [original-law continuation search](research/coulomb-trust/README.md)
+recovers all six latest captured hull failures. The combined primary, polishing
+and continuation solver passes eleven captured systems with independent circular
+friction and passivity checks. Full trajectory qualification is evaluated separately
+in `research/hull-completion`; individual captured solutions do not qualify a scene.
+The opt-in `position_stabilization="split_translation"` removes angular pose
+correction, which otherwise can add kinetic energy to a spinning anisotropic body.
+It preserves the physical velocity solve; positional translation still requires
+separate gravitational-energy and orbital-momentum accounting.
+
 The [polygon engine](rigid_backend/README.md) supports rotating convex polygons,
 compound concave bodies, persistent multiple contacts, dry friction, many-body
 contact chains and continuous collision detection through two pinned Box2D

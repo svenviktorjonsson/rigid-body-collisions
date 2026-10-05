@@ -1,0 +1,903 @@
+{
+  "execution_source_commit": "7c3a47c46d7c13481f22fbb0dcf694b201581cd2",
+  "qualified_original_cases": 10,
+  "qualified_cases": 18,
+  "completed_histories": 54,
+  "rejected_attempts": 0,
+  "cases": [
+    {
+      "name": "elastic-normal-axis-spin",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 6.994405055138486e-15,
+          "max_internal_energy_residual_J": 6.217248937900877e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 2.7755575615628914e-17,
+          "rhs_evaluations": 1460
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 8.548717289613705e-15,
+          "max_internal_energy_residual_J": 9.658940314238862e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 5.551115123125783e-17,
+          "rhs_evaluations": 2396
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 2.853273173286652e-14,
+          "max_internal_energy_residual_J": 2.8976820942716586e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.1102230246251565e-15,
+          "angular_momentum_error_N_m_s": 1.1102230246251565e-16,
+          "rhs_evaluations": 3995
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.5265566588595902e-16,
+          "velocity_m_s": 9.658940314238862e-15,
+          "omega_rad_s": 4.610177160579987e-07
+        },
+        {
+          "position_m": 6.661338147750939e-16,
+          "velocity_m_s": 3.3861802251067274e-14,
+          "omega_rad_s": 4.174751946917077e-09
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 2.7755575615628914e-14,
+        "omega_error_rad_s": 8.881784197001252e-15,
+        "dissipation_error_J": 4.459009244149617e-22
+      }
+    },
+    {
+      "name": "elastic-tangent-axis-spin",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 4.551914400963142e-15,
+          "max_internal_energy_residual_J": 4.884981308350689e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 4.163336342344337e-17,
+          "rhs_evaluations": 1511
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 8.992806499463768e-15,
+          "max_internal_energy_residual_J": 1.0547118733938987e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 2.7755575615628914e-17,
+          "rhs_evaluations": 2444
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.432187701766452e-14,
+          "max_internal_energy_residual_J": 1.6431300764452317e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.7763568394002505e-15,
+          "angular_momentum_error_N_m_s": 4.163336342344337e-17,
+          "rhs_evaluations": 4214
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.7001101481682507e-11,
+          "velocity_m_s": 2.6879666826281367e-09,
+          "omega_rad_s": 6.719917200470604e-08
+        },
+        {
+          "position_m": 1.510233070357339e-13,
+          "velocity_m_s": 2.387682217288237e-11,
+          "omega_rad_s": 5.969202909739124e-10
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 1.021465519080908e-14,
+        "omega_error_rad_s": 1.7763568394002505e-15,
+        "dissipation_error_J": 2.0147143716405144e-23
+      }
+    },
+    {
+      "name": "oblique-floor-retrace",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 5.995204332975845e-15,
+          "max_internal_energy_residual_J": 5.10702591327572e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 6.661338147750939e-16,
+          "angular_momentum_error_N_m_s": 6.938893903907228e-18,
+          "rhs_evaluations": 1484
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 8.104628079763643e-15,
+          "max_internal_energy_residual_J": 8.881784197001252e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 6.753223014464259e-16,
+          "angular_momentum_error_N_m_s": 1.3877787807814457e-17,
+          "rhs_evaluations": 2570
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.27675647831893e-14,
+          "max_internal_energy_residual_J": 1.4210854715202004e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.5553031891404223e-15,
+          "angular_momentum_error_N_m_s": 2.7755575615628914e-17,
+          "rhs_evaluations": 3875
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.6637560253252396e-11,
+          "velocity_m_s": 2.6304885908894344e-09,
+          "omega_rad_s": 6.576221753262779e-08
+        },
+        {
+          "position_m": 1.4790643710662146e-13,
+          "velocity_m_s": 2.338438633295797e-11,
+          "omega_rad_s": 5.846049200286529e-10
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 8.66085152291715e-15,
+        "omega_error_rad_s": 1.7763568394002505e-15,
+        "dissipation_error_J": 4.2532495209304396e-23
+      }
+    },
+    {
+      "name": "oblique-ceiling-retrace",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 2.4202861936828413e-14,
+          "max_internal_energy_residual_J": 2.298161660974074e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.1102230246251565e-15,
+          "angular_momentum_error_N_m_s": 1.3877787807814457e-17,
+          "rhs_evaluations": 1544
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 8.43769498715119e-15,
+          "max_internal_energy_residual_J": 9.43689570931383e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.742874840267547e-16,
+          "angular_momentum_error_N_m_s": 2.0816681711721685e-17,
+          "rhs_evaluations": 2492
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 2.531308496145357e-14,
+          "max_internal_energy_residual_J": 2.3647750424515834e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 6.866350197783356e-16,
+          "angular_momentum_error_N_m_s": 2.0816681711721685e-17,
+          "rhs_evaluations": 4151
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.663755960295682e-11,
+          "velocity_m_s": 2.630488572641947e-09,
+          "omega_rad_s": 6.576221855958408e-08
+        },
+        {
+          "position_m": 1.479044692328216e-13,
+          "velocity_m_s": 2.3384334597818107e-11,
+          "omega_rad_s": 5.846052877900298e-10
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 1.9318060081796895e-14,
+        "omega_error_rad_s": 0.0,
+        "dissipation_error_J": 1.6308708051339394e-23
+      }
+    },
+    {
+      "name": "vertical-floor-ceiling",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 1.4876988529977098e-14,
+          "max_internal_energy_residual_J": 1.0880185641326534e-14,
+          "max_yield_excess_N": 4.282086973417601e-13,
+          "linear_momentum_error_N_s": 1.5543122344752192e-15,
+          "angular_momentum_error_N_m_s": 6.938893903907228e-17,
+          "rhs_evaluations": 8236
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.951594689828198e-14,
+          "max_internal_energy_residual_J": 4.9404924595819466e-14,
+          "max_yield_excess_N": 2.40219705636257e-08,
+          "linear_momentum_error_N_s": 2.220446049250313e-15,
+          "angular_momentum_error_N_m_s": 1.1102230246251565e-16,
+          "rhs_evaluations": 12514
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 3.519406988061746e-14,
+          "max_internal_energy_residual_J": 3.452793606584237e-14,
+          "max_yield_excess_N": 1.9462177665640523e-12,
+          "linear_momentum_error_N_s": 7.105427357601002e-15,
+          "angular_momentum_error_N_m_s": 1.209969624493823e-16,
+          "rhs_evaluations": 20294
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 3.1502578323738817e-15,
+          "velocity_m_s": 1.0020144436406753e-12,
+          "omega_rad_s": 5.072587527799044e-07
+        },
+        {
+          "position_m": 6.938893903907228e-16,
+          "velocity_m_s": 2.0500268149703516e-13,
+          "omega_rad_s": 4.479269122281693e-09
+        }
+      ],
+      "qualified": true
+    },
+    {
+      "name": "low-friction-no-spin-reversal",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 1.8496315590255108e-13,
+          "max_internal_energy_residual_J": 1.8496315590255108e-13,
+          "max_yield_excess_N": 7.500924293543307e-06,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 1.6046192152785466e-17,
+          "rhs_evaluations": 1666
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 1.7208456881689926e-14,
+          "max_internal_energy_residual_J": 1.709743457922741e-14,
+          "max_yield_excess_N": 7.966546533566543e-08,
+          "linear_momentum_error_N_s": 6.661338147750939e-16,
+          "angular_momentum_error_N_m_s": 4.85722573273506e-17,
+          "rhs_evaluations": 2629
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.1546319456101628e-14,
+          "max_internal_energy_residual_J": 1.2101430968414206e-14,
+          "max_yield_excess_N": 7.966917792145978e-09,
+          "linear_momentum_error_N_s": 1.1102230246251565e-15,
+          "angular_momentum_error_N_m_s": 1.3877787807814457e-17,
+          "rhs_evaluations": 4210
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 3.5388358909926865e-15,
+          "velocity_m_s": 1.773026170326375e-13,
+          "omega_rad_s": 3.6863650798579783e-07
+        },
+        {
+          "position_m": 3.885780586188048e-16,
+          "velocity_m_s": 2.020605904817785e-14,
+          "omega_rad_s": 3.561462236234547e-09
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "resolved-compliant",
+        "velocity_error_m_s": 9.992007221626409e-15,
+        "omega_error_rad_s": 1.8118839761882555e-13,
+        "dissipation_error_J": 6.473988012345444e-15
+      }
+    },
+    {
+      "name": "compression-weighted-reversal",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 5.040412531798211e-14,
+          "max_internal_energy_residual_J": 5.040412531798211e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 3.469446951953614e-18,
+          "rhs_evaluations": 1382
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 1.2212453270876722e-14,
+          "max_internal_energy_residual_J": 1.1435297153639112e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 6.938893903907228e-18,
+          "rhs_evaluations": 2390
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.4988010832439613e-14,
+          "max_internal_energy_residual_J": 1.63202784619898e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3322676295501878e-15,
+          "angular_momentum_error_N_m_s": 1.5612511283791264e-17,
+          "rhs_evaluations": 3917
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.8285400971151944e-11,
+          "velocity_m_s": 4.014417895326083e-09,
+          "omega_rad_s": 6.255192810389332e-07
+        },
+        {
+          "position_m": 1.7891244041834398e-13,
+          "velocity_m_s": 3.925424568729241e-11,
+          "omega_rad_s": 6.1159279862721405e-09
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "resolved-compliant",
+        "velocity_error_m_s": 6.217248937900877e-15,
+        "omega_error_rad_s": 1.4099832412739488e-13,
+        "dissipation_error_J": 0.0
+      }
+    },
+    {
+      "name": "slow-same-material",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 3.333811904922962e-14,
+          "max_internal_energy_residual_J": 3.3443449290286587e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3877787807814457e-17,
+          "angular_momentum_error_N_m_s": 2.710505431213761e-19,
+          "rhs_evaluations": 2669
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 6.541669332962852e-15,
+          "max_internal_energy_residual_J": 6.3365789395100625e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3877787807814457e-17,
+          "angular_momentum_error_N_m_s": 4.336808689942018e-19,
+          "rhs_evaluations": 5162
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 5.274047257947112e-15,
+          "max_internal_energy_residual_J": 5.415657614200875e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.0408340855860843e-17,
+          "angular_momentum_error_N_m_s": 1.1926223897340549e-18,
+          "rhs_evaluations": 9974
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 8.881784197001252e-16,
+          "velocity_m_s": 2.4485344307656476e-12,
+          "omega_rad_s": 2.3459313020163589e-07
+        },
+        {
+          "position_m": 1.942890293094024e-16,
+          "velocity_m_s": 1.0459146569663513e-12,
+          "omega_rad_s": 1.7617526184426913e-08
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 4.360435623684822e-13,
+        "omega_error_rad_s": 4.690692279041286e-15,
+        "dissipation_error_J": 1.0726369862944464e-19
+      }
+    },
+    {
+      "name": "rapid-same-material",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 5.002220859751105e-11,
+          "max_internal_energy_residual_J": 5.093170329928398e-11,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 5.684341886080802e-14,
+          "angular_momentum_error_N_m_s": 2.6645352591003757e-15,
+          "rhs_evaluations": 3370
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 1.0550138540565968e-10,
+          "max_internal_energy_residual_J": 1.064108801074326e-10,
+          "max_yield_excess_N": 1.288815170146125e-09,
+          "linear_momentum_error_N_s": 1.4210854715202004e-13,
+          "angular_momentum_error_N_m_s": 3.552713678800501e-15,
+          "rhs_evaluations": 5908
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 3.456079866737127e-11,
+          "max_internal_energy_residual_J": 3.637978807091713e-11,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.547473508864641e-13,
+          "angular_momentum_error_N_m_s": 6.217248937900877e-15,
+          "rhs_evaluations": 10756
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 4.718447854656915e-16,
+          "velocity_m_s": 1.5205614545266144e-12,
+          "omega_rad_s": 1.4866559915560629e-05
+        },
+        {
+          "position_m": 4.440892098500626e-16,
+          "velocity_m_s": 1.2931877790833823e-12,
+          "omega_rad_s": 1.2986587449859144e-07
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 9.947598300641403e-14,
+        "omega_error_rad_s": 1.1368683772161603e-13,
+        "dissipation_error_J": 1.893731233814905e-18
+      }
+    },
+    {
+      "name": "weighted-high-spin-low-friction-budget",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 4.1389114358025836e-13,
+          "max_internal_energy_residual_J": 1.191269305422793e-13,
+          "max_yield_excess_N": 1.2099263813070138e-09,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 2.42861286636753e-17,
+          "rhs_evaluations": 1617
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.6629367034256575e-15,
+          "max_internal_energy_residual_J": 4.773959005888173e-15,
+          "max_yield_excess_N": 3.6422420635062736e-11,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 1.0408340855860843e-17,
+          "rhs_evaluations": 2592
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.587618925213974e-14,
+          "max_internal_energy_residual_J": 1.4765966227514582e-14,
+          "max_yield_excess_N": 6.59667875879677e-11,
+          "linear_momentum_error_N_s": 1.3322676295501878e-15,
+          "angular_momentum_error_N_m_s": 2.0816681711721685e-17,
+          "rhs_evaluations": 4233
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.9273485585280525e-11,
+          "velocity_m_s": 1.0285589047143162e-09,
+          "omega_rad_s": 1.284182005178991e-08
+        },
+        {
+          "position_m": 1.6428525206890754e-13,
+          "velocity_m_s": 8.859246669601362e-12,
+          "omega_rad_s": 1.1057998960950499e-10
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "resolved-compliant",
+        "velocity_error_m_s": 1.3100631690576847e-14,
+        "omega_error_rad_s": 2.7622348852673895e-13,
+        "dissipation_error_J": 1.099120794378905e-14
+      }
+    },
+    {
+      "name": "elastic-normal-axis-spin-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 6.994405055138486e-15,
+          "max_internal_energy_residual_J": 6.217248937900877e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 2.7755575615628914e-17,
+          "rhs_evaluations": 1460
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 8.548717289613705e-15,
+          "max_internal_energy_residual_J": 9.658940314238862e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 5.551115123125783e-17,
+          "rhs_evaluations": 2396
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 2.853273173286652e-14,
+          "max_internal_energy_residual_J": 2.8976820942716586e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.1102230246251565e-15,
+          "angular_momentum_error_N_m_s": 1.1102230246251565e-16,
+          "rhs_evaluations": 3995
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.5265566588595902e-16,
+          "velocity_m_s": 9.658940314238862e-15,
+          "omega_rad_s": 4.610177160579987e-07
+        },
+        {
+          "position_m": 6.661338147750939e-16,
+          "velocity_m_s": 3.3861802251067274e-14,
+          "omega_rad_s": 4.174751946917077e-09
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 2.7755575615628914e-14,
+        "omega_error_rad_s": 8.881784197001252e-15,
+        "dissipation_error_J": 4.459009244149617e-22
+      }
+    },
+    {
+      "name": "vertical-floor-ceiling-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 1.4876988529977098e-14,
+          "max_internal_energy_residual_J": 1.0880185641326534e-14,
+          "max_yield_excess_N": 4.282086973417601e-13,
+          "linear_momentum_error_N_s": 1.5543122344752192e-15,
+          "angular_momentum_error_N_m_s": 6.938893903907228e-17,
+          "rhs_evaluations": 8236
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.951594689828198e-14,
+          "max_internal_energy_residual_J": 4.9404924595819466e-14,
+          "max_yield_excess_N": 2.40219705636257e-08,
+          "linear_momentum_error_N_s": 2.220446049250313e-15,
+          "angular_momentum_error_N_m_s": 1.1102230246251565e-16,
+          "rhs_evaluations": 12514
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 3.519406988061746e-14,
+          "max_internal_energy_residual_J": 3.452793606584237e-14,
+          "max_yield_excess_N": 1.9462177665640523e-12,
+          "linear_momentum_error_N_s": 7.105427357601002e-15,
+          "angular_momentum_error_N_m_s": 1.209969624493823e-16,
+          "rhs_evaluations": 20294
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 3.1502578323738817e-15,
+          "velocity_m_s": 1.0020144436406753e-12,
+          "omega_rad_s": 5.072587527799044e-07
+        },
+        {
+          "position_m": 6.938893903907228e-16,
+          "velocity_m_s": 2.0500268149703516e-13,
+          "omega_rad_s": 4.479269122281693e-09
+        }
+      ],
+      "qualified": true
+    },
+    {
+      "name": "compression-weighted-reversal-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 5.040412531798211e-14,
+          "max_internal_energy_residual_J": 5.040412531798211e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 3.469446951953614e-18,
+          "rhs_evaluations": 1382
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 1.2212453270876722e-14,
+          "max_internal_energy_residual_J": 1.1435297153639112e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 6.938893903907228e-18,
+          "rhs_evaluations": 2390
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.4988010832439613e-14,
+          "max_internal_energy_residual_J": 1.63202784619898e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3322676295501878e-15,
+          "angular_momentum_error_N_m_s": 1.5612511283791264e-17,
+          "rhs_evaluations": 3917
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.8285400971151944e-11,
+          "velocity_m_s": 4.014417895326083e-09,
+          "omega_rad_s": 6.255192810389332e-07
+        },
+        {
+          "position_m": 1.7891244041834398e-13,
+          "velocity_m_s": 3.925424568729241e-11,
+          "omega_rad_s": 6.1159279862721405e-09
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "resolved-compliant",
+        "velocity_error_m_s": 6.217248937900877e-15,
+        "omega_error_rad_s": 1.4099832412739488e-13,
+        "dissipation_error_J": 0.0
+      }
+    },
+    {
+      "name": "slow-same-material-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 3.333811904922962e-14,
+          "max_internal_energy_residual_J": 3.3443449290286587e-14,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3877787807814457e-17,
+          "angular_momentum_error_N_m_s": 2.710505431213761e-19,
+          "rhs_evaluations": 2669
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 6.541669332962852e-15,
+          "max_internal_energy_residual_J": 6.3365789395100625e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.3877787807814457e-17,
+          "angular_momentum_error_N_m_s": 4.336808689942018e-19,
+          "rhs_evaluations": 5162
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 5.274047257947112e-15,
+          "max_internal_energy_residual_J": 5.415657614200875e-15,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 1.0408340855860843e-17,
+          "angular_momentum_error_N_m_s": 1.1926223897340549e-18,
+          "rhs_evaluations": 9974
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 8.881784197001252e-16,
+          "velocity_m_s": 2.4485344307656476e-12,
+          "omega_rad_s": 2.3459313020163589e-07
+        },
+        {
+          "position_m": 1.942890293094024e-16,
+          "velocity_m_s": 1.0459146569663513e-12,
+          "omega_rad_s": 1.7617526184426913e-08
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 4.360435623684822e-13,
+        "omega_error_rad_s": 4.690692279041286e-15,
+        "dissipation_error_J": 1.0726369862944464e-19
+      }
+    },
+    {
+      "name": "rapid-same-material-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 5.002220859751105e-11,
+          "max_internal_energy_residual_J": 5.093170329928398e-11,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 5.684341886080802e-14,
+          "angular_momentum_error_N_m_s": 2.6645352591003757e-15,
+          "rhs_evaluations": 3370
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 1.0550138540565968e-10,
+          "max_internal_energy_residual_J": 1.064108801074326e-10,
+          "max_yield_excess_N": 1.288815170146125e-09,
+          "linear_momentum_error_N_s": 1.4210854715202004e-13,
+          "angular_momentum_error_N_m_s": 3.552713678800501e-15,
+          "rhs_evaluations": 5908
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 3.456079866737127e-11,
+          "max_internal_energy_residual_J": 3.637978807091713e-11,
+          "max_yield_excess_N": 0.0,
+          "linear_momentum_error_N_s": 4.547473508864641e-13,
+          "angular_momentum_error_N_m_s": 6.217248937900877e-15,
+          "rhs_evaluations": 10756
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 4.718447854656915e-16,
+          "velocity_m_s": 1.5205614545266144e-12,
+          "omega_rad_s": 1.4866559915560629e-05
+        },
+        {
+          "position_m": 4.440892098500626e-16,
+          "velocity_m_s": 1.2931877790833823e-12,
+          "omega_rad_s": 1.2986587449859144e-07
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "exact-matched-elastic",
+        "velocity_error_m_s": 9.947598300641403e-14,
+        "omega_error_rad_s": 1.1368683772161603e-13,
+        "dissipation_error_J": 1.893731233814905e-18
+      }
+    },
+    {
+      "name": "weighted-high-spin-low-friction-budget-negative-twist",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 4.1389114358025836e-13,
+          "max_internal_energy_residual_J": 1.191269305422793e-13,
+          "max_yield_excess_N": 1.2099263813070138e-09,
+          "linear_momentum_error_N_s": 4.440892098500626e-16,
+          "angular_momentum_error_N_m_s": 2.42861286636753e-17,
+          "rhs_evaluations": 1617
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.6629367034256575e-15,
+          "max_internal_energy_residual_J": 4.773959005888173e-15,
+          "max_yield_excess_N": 3.6422420635062736e-11,
+          "linear_momentum_error_N_s": 8.881784197001252e-16,
+          "angular_momentum_error_N_m_s": 1.0408340855860843e-17,
+          "rhs_evaluations": 2592
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.587618925213974e-14,
+          "max_internal_energy_residual_J": 1.4765966227514582e-14,
+          "max_yield_excess_N": 6.59667875879677e-11,
+          "linear_momentum_error_N_s": 1.3322676295501878e-15,
+          "angular_momentum_error_N_m_s": 2.0816681711721685e-17,
+          "rhs_evaluations": 4233
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 1.9273485585280525e-11,
+          "velocity_m_s": 1.0285589047143162e-09,
+          "omega_rad_s": 1.284182005178991e-08
+        },
+        {
+          "position_m": 1.6428525206890754e-13,
+          "velocity_m_s": 8.859246669601362e-12,
+          "omega_rad_s": 1.1057998960950499e-10
+        }
+      ],
+      "qualified": true,
+      "dispatcher": {
+        "method": "resolved-compliant",
+        "velocity_error_m_s": 1.3100631690576847e-14,
+        "omega_error_rad_s": 2.7622348852673895e-13,
+        "dissipation_error_J": 1.099120794378905e-14
+      }
+    },
+    {
+      "name": "same-floor-oblique-mixed-positive",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 2.0450308113595383e-12,
+          "max_internal_energy_residual_J": 1.0440981412784822e-11,
+          "max_yield_excess_N": 0.02559432365941553,
+          "linear_momentum_error_N_s": 8.88334531093441e-15,
+          "angular_momentum_error_N_m_s": 9.441918547567428e-17,
+          "rhs_evaluations": 10548
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.845013279464183e-13,
+          "max_internal_energy_residual_J": 1.0105249970138175e-12,
+          "max_yield_excess_N": 0.00011388838151163151,
+          "linear_momentum_error_N_s": 1.2434993501203062e-14,
+          "angular_momentum_error_N_m_s": 1.6022099749202845e-16,
+          "rhs_evaluations": 20313
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.1737277816337155e-12,
+          "max_internal_energy_residual_J": 1.5840662115351734e-12,
+          "max_yield_excess_N": 1.0461271905138935e-05,
+          "linear_momentum_error_N_s": 1.599501590535003e-14,
+          "angular_momentum_error_N_m_s": 1.249000902703301e-16,
+          "rhs_evaluations": 35196
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 2.912320074254564e-11,
+          "velocity_m_s": 1.0245227482521415e-08,
+          "omega_rad_s": 5.706013632321203e-07
+        },
+        {
+          "position_m": 7.133827756333707e-13,
+          "velocity_m_s": 4.963002361615958e-09,
+          "omega_rad_s": 9.48057297998863e-08
+        }
+      ],
+      "qualified": true
+    },
+    {
+      "name": "same-floor-oblique-mixed-negative",
+      "runs": [
+        {
+          "level": "coarse",
+          "max_energy_residual_J": 2.0450308113595383e-12,
+          "max_internal_energy_residual_J": 1.0440981412784822e-11,
+          "max_yield_excess_N": 0.02559432365941553,
+          "linear_momentum_error_N_s": 8.88334531093441e-15,
+          "angular_momentum_error_N_m_s": 9.441918547567428e-17,
+          "rhs_evaluations": 10548
+        },
+        {
+          "level": "medium",
+          "max_energy_residual_J": 4.845013279464183e-13,
+          "max_internal_energy_residual_J": 1.0105249970138175e-12,
+          "max_yield_excess_N": 0.00011388838151163151,
+          "linear_momentum_error_N_s": 1.2434993501203062e-14,
+          "angular_momentum_error_N_m_s": 1.6022099749202845e-16,
+          "rhs_evaluations": 20313
+        },
+        {
+          "level": "fine",
+          "max_energy_residual_J": 1.1737277816337155e-12,
+          "max_internal_energy_residual_J": 1.5840662115351734e-12,
+          "max_yield_excess_N": 1.0461271905138935e-05,
+          "linear_momentum_error_N_s": 1.599501590535003e-14,
+          "angular_momentum_error_N_m_s": 1.249000902703301e-16,
+          "rhs_evaluations": 35196
+        }
+      ],
+      "refinement_edges": [
+        {
+          "position_m": 2.912320074254564e-11,
+          "velocity_m_s": 1.0245227482521415e-08,
+          "omega_rad_s": 5.706013632321203e-07
+        },
+        {
+          "position_m": 7.133827756333707e-13,
+          "velocity_m_s": 4.963002361615958e-09,
+          "omega_rad_s": 9.48057297998863e-08
+        }
+      ],
+      "qualified": true
+    }
+  ]
+}
