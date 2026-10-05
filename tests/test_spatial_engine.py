@@ -3,7 +3,8 @@ import unittest
 import numpy as np
 from scipy.spatial.transform import Rotation
 from spatial_engine import BINARY, run, moments, prepare, energy, errors
-from research.spatial_scenes import wall_impact, driven_row
+from research.spatial_scenes import wall_impact, driven_row, container
+from research.spatial_metrics import diagnostics
 
 
 class Geometry3D(unittest.TestCase):
@@ -59,7 +60,37 @@ class Mechanics3D(unittest.TestCase):
             expected=np.tile(np.eye(3)[axis]*20,(16,1))
             np.testing.assert_allclose(velocity,expected,atol=.015)
             # Upstream MLCP can fall back on degenerate friction/split rows.
-            self.assertGreaterEqual(r['coupled_fallbacks'],0)
+            self.assertEqual(r['coupled_updates'],r['collision_updates'])
+
+    def test_100_m_s_wall_drives_64_bodies(self):
+        r=run(driven_row(64,speed=100),dt=.01)
+        np.testing.assert_allclose(np.asarray(r['states'])[-1,1:,7:10],np.tile([100,0,0],(64,1)),atol=.015)
+        self.assertAlmostEqual(r['boundary_work_J'],64*100**2,delta=1.)
+        self.assertLess(energy(r)[-1]-r['boundary_work_J'],0)
+
+    def test_fast_container_64_objects_and_random_rotating_shapes(self):
+        for side,shape,shake,spin in ((4,'sphere',False,0),(3,'hull',True,10)):
+            scene,half=container(side=side,shape=shape,shake=shake,spin=spin)
+            r=run(scene,dt=.01,solver='adaptive')
+            d=diagnostics(scene,r,half)
+            self.assertLess(d['container_surface_excess_m'],.002)
+            self.assertLess(d['quaternion_norm_error'],1e-12)
+            self.assertLess(d['energy_change_minus_boundary_work_J'],1.)
+            self.assertGreater(r['coupled_updates'],0)
+            self.assertGreater(r['sequential_updates'],0)
+            # Prescribed wall path, including reversals, is independent of contents.
+            expected=.8 if shake else 2.4
+            self.assertAlmostEqual(r['states'][-1][0][0],expected,places=10)
+            if not shake:
+                self.assertAlmostEqual(np.mean(np.asarray(r['states'])[-1,1:,7]),20,delta=.02)
+
+    def test_all_predictive_hull_impulses_count_in_wall_work(self):
+        scene,half=container(shape='hull')
+        r=run(scene,dt=.01,solver='sequential')
+        s=np.asarray(r['states']);mass=np.asarray(r['mass'])
+        # Every wall translates at the same U; gravity has no x component.
+        momentum_change=np.sum(mass*(s[-1,:,7]-s[0,:,7]))
+        self.assertAlmostEqual(r['boundary_work_J'],20*momentum_change,delta=1e-7)
 
     def test_angular_collision_against_analytic_impulse(self):
         # Corner sphere hits translating plane, creating an off-center torque.

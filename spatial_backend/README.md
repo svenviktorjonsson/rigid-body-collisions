@@ -26,13 +26,23 @@ The travel guard accounts for both bodies' translation, angular tip speed and
 gravity, and limits updates to 15% of the smallest fixture half-width/radius by
 default. It prevents the tested fast-wall tunneling example; it is a conservative
 timestep heuristic, **not an exact swept CCD proof for every concave feature**.
+When the scene specifies `container_interior_half_extents_m`, a native monitor
+checks every fixture support against every container plane at **each internal
+update**, retaining maximum surface excess. The offline audit independently
+reconstructs sampled surface supports.
+
 Setting `travel_fraction=0` is an explicit negative-control diagnostic.
 
 `solver='sequential'` selects projected sequential impulses; `'coupled'` selects
-Bullet's Dantzig MLCP solver. Bullet may fall back to sequential iterations when
+Bullet's Dantzig MLCP solver. The adapter configures Dantzig's impulse sanity bound to 1e30 N·s rather than
+its default 1000, which is too small for some 100 m/s rows. Bullet may fall back to sequential iterations when
 an MLCP fails; `coupled_fallbacks` exposes those events. No run with fallbacks may
 be described as a pure direct coupled solve. Worlds/contact caches persist across
-updates. No invented compliance or material changes distinguish the two modes.
+updates. `solver='adaptive'` uses 8 sequential iterations until at least 12
+positive-impulse contacts or a closing residual above .01 m/s triggers 64
+iterations of MLCP (or the requested iteration count), with 24-update dwell.
+This is an observable heuristic, not a certified online error estimator.
+No invented compliance or material changes distinguish the two modes.
 
 Friction uses two independent bounded tangent directions, a pyramid approximation
 to the isotropic Coulomb cone. Body friction and restitution coefficients multiply
@@ -41,7 +51,8 @@ body coefficient to sqrt(mu); a wall coefficient one retains the object's value.
 One friction coefficient supports sticking and sliding; separate static/dynamic,
 rolling/twisting and elastic tangential history are **not implemented here**.
 Restitution is a normal velocity rule with zero velocity threshold. Prescribed-wall
-work is summed from normal and tangential impulses at wall point velocities;
+work is summed from normal and tangential impulses, including positive-gap predictive contacts,
+at wall point velocities;
 split position corrections do not count as physical impulses.
 
 The full engine is 3D; analytic regression tests and held-out scenes must establish

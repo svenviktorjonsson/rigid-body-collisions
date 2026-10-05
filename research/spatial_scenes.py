@@ -18,7 +18,7 @@ def driven_row(count=16,speed=20.,axis=0):
     return dict(duration=.04,gravity=[0,0,0],bodies=bodies)
 
 
-def container(side=3,speed=20.,shake=False,shape='sphere',seed=42):
+def container(side=3,speed=20.,shake=False,shape='sphere',seed=42,spin=0.,duration=.12):
     """A six-wall 3D container; driven walls, independently integrated contents."""
     radius=.1;spacing=.205;half=side*spacing/2+.045
     walls=[]
@@ -28,8 +28,8 @@ def container(side=3,speed=20.,shake=False,shape='sphere',seed=42):
             ext=np.full(3,half+.05);ext[axis]=.025
             walls.append(dict(kind='box',half_extents=ext.tolist(),center=center.tolist()))
     commands=[]
-    if shake: commands=[dict(time_s=.04,velocity=[-speed,0,0]),dict(time_s=.08,velocity=[speed,0,0])]
-    box=dict(type='kinematic',position=[0,0,0],velocity=[speed,0,0],velocity_schedule=commands,friction=math.sqrt(.4),shapes=walls)
+    if shake: commands=[dict(time_s=.04,velocity=[-speed,0,0],omega=[0,0,-spin]),dict(time_s=.08,velocity=[speed,0,0],omega=[0,0,spin])]
+    box=dict(type='kinematic',position=[0,0,0],velocity=[speed,0,0],omega=[0,0,spin],velocity_schedule=commands,friction=math.sqrt(.4),shapes=walls)
     rng=np.random.default_rng(seed);bodies=[box]
     for x in range(side):
         for y in range(side):
@@ -42,4 +42,4 @@ def container(side=3,speed=20.,shake=False,shape='sphere',seed=42):
                     points=rng.normal(size=(12,3));points/=np.linalg.norm(points,axis=1)[:,None];points*=rng.uniform(.075,.1,size=(12,1))
                     body=dict(position=position,friction=math.sqrt(.4),shapes=[dict(kind='hull',vertices=points.tolist(),density=500.)])
                 bodies.append(body)
-    return dict(duration=.12,gravity=[0,0,-9.81],bodies=bodies),half
+    return dict(duration=duration,gravity=[0,0,-9.81],bodies=bodies,container_interior_half_extents_m=[half]*3),half

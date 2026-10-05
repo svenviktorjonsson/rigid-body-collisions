@@ -136,13 +136,17 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
     if frames<1 or not np.isclose(frames*dt,duration,rtol=1e-10,atol=1e-12):raise ValueError('Duration must match output frames')
     for value,label in ((primary_steps,'primary_steps'),(iterations,'iterations')):
         if type(value)!=int or not 1<=value<=4096:raise ValueError(f'Invalid {label}')
-    if solver not in ('coupled','sequential'):raise ValueError('Invalid solver')
+    if solver not in ('coupled','sequential','adaptive'):raise ValueError('Invalid solver')
     travel_fraction=positive(travel_fraction,'travel fraction',zero=True)
     if travel_fraction> .25:raise ValueError('Travel fraction maximum is .25')
     bodies,mass,inertia,axes,feature=prepare(scene)
     margin=positive(scene.get('margin_m',0),'margin',zero=True)
     if margin>feature*.1:raise ValueError('Margin exceeds 10% of feature')
     wire=dict(bodies=bodies,gravity=vector(scene.get('gravity',[0,0,-9.81]),3,'gravity').tolist(),frames=frames,dt=dt,primary_steps=primary_steps,iterations=iterations,solver=solver,travel_fraction=travel_fraction,minimum_feature_m=feature,margin_m=margin)
+    if 'container_interior_half_extents_m' in scene:
+        half=vector(scene['container_interior_half_extents_m'],3,'container half extents')
+        if np.min(half)<=0 or bodies[0]['type']!='kinematic':raise ValueError('Container monitor requires positive extents and first kinematic body')
+        wire.update(container_half=half.tolist(),container_frame_rotation=Rotation.from_matrix(axes[0].T).as_quat().tolist())
     start=time.perf_counter()
     process=subprocess.run([str(binary)],input=json.dumps(wire),text=True,capture_output=True,check=True)
     out=json.loads(process.stdout);out['wall_time_s']=time.perf_counter()-start
@@ -150,7 +154,7 @@ def run(scene, *, dt=1/120, primary_steps=4, iterations=64, solver='coupled', tr
     for i,Q in enumerate(axes):
         states[:,i,3:7]=(Rotation.from_quat(states[:,i,3:7])*Rotation.from_matrix(Q.T)).as_quat()
     if not np.isfinite(states).all():raise RuntimeError('Nonfinite 3D state')
-    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,friction='two-direction pyramid; product mixing',restitution='product mixing; zero velocity threshold'))
+    out.update(states=states.tolist(),mass=mass,inertia_body_kg_m2=inertia,body_types=[b['type'] for b in bodies],physical_setup_id=hashlib.sha256(json.dumps(scene,sort_keys=True,separators=(',',':')).encode()).hexdigest(),numerical_model=dict(bullet_commit=BULLET_COMMIT,solver=solver,primary_steps=primary_steps,iterations=iterations,travel_fraction=travel_fraction,margin_m=margin,dantzig_impulse_sanity_limit=1e30,adaptive_policy={'contact_threshold':12,'closing_speed_threshold_m_s':.01,'dwell_updates':24,'fast_iterations':8},friction='two-direction pyramid; product mixing',restitution='product mixing; zero velocity threshold'))
     return out
 
 
@@ -166,6 +170,7 @@ def energy(result):
 
 def errors(reference,candidate):
     if reference['physical_setup_id']!=candidate['physical_setup_id']:raise ValueError('Different physical scenes')
+    if reference['mass']!=candidate['mass'] or reference['inertia_body_kg_m2']!=candidate['inertia_body_kg_m2']:raise ValueError('Different mass or inertia')
     if not np.allclose(reference['times'],candidate['times'],atol=1e-12,rtol=0):raise ValueError('Different sample times')
     a=np.asarray(reference['states']);b=np.asarray(candidate['states']);ids=np.flatnonzero(np.asarray(reference['mass'])>0)
     a=a[:,ids];b=b[:,ids]
