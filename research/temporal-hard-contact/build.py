@@ -3,7 +3,7 @@ import hashlib,json,subprocess,tarfile
 from pathlib import Path
 from research.build_precision_backend import convert
 H=Path(__file__).resolve().parent;ROOT=H.parents[1]
-plan=json.loads((H/'plan.json').read_text());D=ROOT/'build/rigid_temporal_double_hard'
+plan=json.loads((H/'plan.json').read_text());D=ROOT/'build/rigid_temporal_double_hard_v2'
 D.mkdir(exist_ok=False);source=D/'source';source.mkdir()
 archive=ROOT/'build/rigid_backend/_deps/box2d-subbuild/box2d-populate-prefix/src/archive.tar'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -18,6 +18,10 @@ def replace(p,a,b):
 replace(box/'src/constants.h','( 0.005 * b2_lengthUnitsPerMeter )','( 0.000001 * b2_lengthUnitsPerMeter )')
 replace(box/'src/constraint_graph.c','#define B2_FORCE_OVERFLOW 0','#define B2_FORCE_OVERFLOW 1')
 replace(box/'src/solver.h','.massScale = 0.0,','.massScale = 1.0,')
+# Preserve the original authored core-only polygon mass/inertia convention.
+p=box/'src/geometry.c';s=p.read_text();start=s.index('b2MassData b2ComputePolygonMass(');end=s.index('b2AABB b2ComputeCircleAABB(',start)
+chunk=s[start:end];assert chunk.count('double radius = shape->radius;')==1
+p.write_text(s[:start]+chunk.replace('double radius = shape->radius;','double radius = 0.0;')+s[end:])
 p=box/'src/contact_solver.c';s=p.read_text();marker='void b2WarmStartOverflowContacts('
 at=s.index(marker)
 observer='''
@@ -96,7 +100,7 @@ target_compile_options(rigid_runner PRIVATE -ffp-contract=off)
 target_compile_options(box2d PRIVATE -ffp-contract=off)
 target_link_libraries(rigid_runner PRIVATE box2d)
 ''')
-receipt={'archive_sha256':sha(archive),'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'inputs':inputs,'transformed':{str(p.relative_to(source)):sha(p) for p in sorted(source.rglob('*')) if p.is_file() and p.suffix in ('.h','.c','.cpp')},'plan_sha256':sha(H/'plan.json'),'builder_sha256':sha(Path(__file__))}
+receipt={'linear_slop_m':1e-6,'polygon_mass_policy':'authored_core_only_skin_massless','archive_sha256':sha(archive),'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'inputs':inputs,'transformed':{str(p.relative_to(source)):sha(p) for p in sorted(source.rglob('*')) if p.is_file() and p.suffix in ('.h','.c','.cpp')},'plan_sha256':sha(H/'plan.json'),'builder_sha256':sha(Path(__file__))}
 (D/'precision-source.json').write_text(json.dumps(receipt,indent=2)+'\n')
 subprocess.run(['cmake','-S',str(source),'-B',str(D),'-G','Ninja','-DCMAKE_BUILD_TYPE=Release'],check=True)
 subprocess.run(['cmake','--build',str(D),'-j','4'],check=True)
