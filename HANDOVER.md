@@ -243,3 +243,19 @@ first outputs. Fresh cone-cleaned candidates are rechecked with unchanged
 original equations, bounds, passivity and zero-budget native gate. All four
 full systems still decline. Never apply intermediate altered-friction roots
 to bodies. Evidence:research/friction-continuation/results and results-v2.
+
+## Mobility search breakthrough — October6
+
+Python and bounded native diagonal-regularization continuation recover original
+393/276/423 saved systems with moderate impulses; latest396 still declines.
+Numerical intermediate matrices NEVER become physical body mobility. Native
+17 stages,2048 iteration/SVD limits EACH, exact192-row components; only final
+original zero-budget gate plus independent original gates accepts. Python final
+max residuals2.21e-9/1.84e-17/1.42e-15; native4.41e-9/9.95e-9/1.88e-9.
+Native remains ISOLATED. Hosted comparator declared in required CI diagnostics;
+production required393 null-seed test remains unchanged and currentlyfails.
+Local Clang19 and GCC15 accept all earlier portability controls, so compiler
+alone has not explained hosted GCC13/LAPACK behavior. All records preserved.
+Do not edit native helper/portable driver or spatial sources while hosted run
+is collecting diagnostics; snapshot nativebinary and original192source exist.
+All-case accuracy/baseline/2x task remains OPEN; do not claimworldcompletion.

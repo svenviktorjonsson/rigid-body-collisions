@@ -1,0 +1,123 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "records": [
+    {
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "accepted": true,
+      "exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 4.406567288053445e-09,
+        "circle_violation_scaled_m_s": 4.211754429987889e-17,
+        "sticking_m_s": 7.824273804316497e-10,
+        "support_gap_J": 1.0520970946981284e-12,
+        "passive_bound_J": -0.11142260791714745,
+        "passivity_scale": 1.1183722856237108,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 5.684341886080802e-14
+      },
+      "policy": {
+        "component_cap": 192,
+        "final_gate": "original zero-budget projection, bounds and passivity",
+        "iteration_cap_per_stage": 2048,
+        "iterations": 51,
+        "stage_accepts": 17,
+        "stage_attempts": 17,
+        "stage_cap": 17,
+        "svd_cap_per_stage": 2048,
+        "svds": 51
+      },
+      "elapsed_s_descriptive": 0.22298491700348677
+    },
+    {
+      "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+      "accepted": false,
+      "exit": 2,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.2320806822837637e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.8920086012591364e-08,
+        "support_gap_J": 1.6418948721054571e-09,
+        "passive_bound_J": -0.1541385057434588,
+        "passivity_scale": 1.2219553436749169,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.2737367544323206e-13
+      },
+      "policy": {
+        "component_cap": 192,
+        "final_gate": "original zero-budget projection, bounds and passivity",
+        "iteration_cap_per_stage": 2048,
+        "iterations": 14360,
+        "stage_accepts": 10,
+        "stage_attempts": 17,
+        "stage_cap": 17,
+        "svd_cap_per_stage": 2048,
+        "svds": 14360
+      },
+      "elapsed_s_descriptive": 1.3072938719997182
+    },
+    {
+      "input": "research/large-velocity-world/results/trial_0/rejection.json",
+      "accepted": true,
+      "exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.950293147710327e-09,
+        "circle_violation_scaled_m_s": 2.872312227412108e-20,
+        "sticking_m_s": 9.950293148217202e-09,
+        "support_gap_J": 4.029447740002587e-12,
+        "passive_bound_J": -0.03449912669263677,
+        "passivity_scale": 1.0345837042440083,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "component_cap": 192,
+        "final_gate": "original zero-budget projection, bounds and passivity",
+        "iteration_cap_per_stage": 2048,
+        "iterations": 1572,
+        "stage_accepts": 17,
+        "stage_attempts": 17,
+        "stage_cap": 17,
+        "svd_cap_per_stage": 2048,
+        "svds": 1572
+      },
+      "elapsed_s_descriptive": 0.20246466999378754
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "accepted": true,
+      "exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 1.876831824025351e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 6.643282931684315e-10,
+        "support_gap_J": 2.0536276802396115e-10,
+        "passive_bound_J": -14.642739552484375,
+        "passivity_scale": 32.049615535268416,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "policy": {
+        "component_cap": 192,
+        "final_gate": "original zero-budget projection, bounds and passivity",
+        "iteration_cap_per_stage": 2048,
+        "iterations": 69,
+        "stage_accepts": 17,
+        "stage_attempts": 17,
+        "stage_cap": 17,
+        "svd_cap_per_stage": 2048,
+        "svds": 69
+      },
+      "elapsed_s_descriptive": 0.03743286799726775
+    }
+  ],
+  "scope": "Instantaneous native research comparator only; all original gates, no world/performance qualification."
+}

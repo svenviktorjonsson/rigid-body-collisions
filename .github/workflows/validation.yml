@@ -118,6 +118,12 @@ jobs:
           OMP_NUM_THREADS: '1'
           OPENBLAS_NUM_THREADS: '1'
         run: python -m research.ci-contact-portability.run build/ci-contact-portability
+      - name: Isolated hosted mobility continuation control
+        if: always() && matrix.python-version == '3.12'
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.mobility-continuation.portable_native_run build/ci-contact-portability/mobility-continuation
       - name: Retain hosted contact portability artifacts
         if: always() && matrix.python-version == '3.12'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

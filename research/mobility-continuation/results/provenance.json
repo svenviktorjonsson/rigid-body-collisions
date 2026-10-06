@@ -1,0 +1,8 @@
+{
+  "source": "b4bb586eadf0d8066217af7dd27645077842cdbe",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/mobility-continuation/run.py": "3a92601e08b7f329c81988a63382d6b3644e75c9ee9edb6307bff2b3fca778a4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/mobility-continuation/plan.json": "a077d52d6daeea03cfe5888938a01f78a04eff2693b7786488407c62321d01a9",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_coulomb_replay": "0f6d3e76baadebfcdf2592351750ae00973cc6667c81fb693240a74dec5a1c79"
+  }
+}

@@ -1,0 +1,14 @@
+"""Independent frozen matrices, intermediate search gates and actual final roots."""
+import ast,hashlib,json,subprocess
+from pathlib import Path
+import numpy as np
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];load=lambda p:json.loads(p.read_text());plan=load(H/'plan.json');D=H/'results';summary=load(D/'summary.json');provenance=load(D/'provenance.json');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+for path,digest in provenance['guards'].items():assert sha(path)==digest
+fn=next(n for n in ast.parse((ROOT/'research/new-combined-contact-review/run-20261005T194211Z/run23.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='external');ns={'np':np};exec(compile(ast.Module(body=[fn],type_ignores=[]),'independent','exec'),ns);records=[]
+for i,(path,digest) in enumerate(plan['inputs'].items()):
+ assert sha(ROOT/path)==digest;original=load(ROOT/path);A=np.array(original['A']);b=np.array(original['b']);dep=np.array(original['dependencies']);hi=np.array(original['hi']);stored=summary['records'][i];assert stored['input']==path
+ for attempt in stored['attempts']:
+  if 'relative_search_diagonal' not in attempt:continue
+  ids=attempt['component_rows'];inv={k:j for j,k in enumerate(ids)};M=A[np.ix_(ids,ids)];alpha=attempt['relative_search_diagonal'];assert alpha in plan['relative_diagonal_search_levels'];M=M+alpha*np.diag(np.diag(M));p=np.array(attempt['candidate_p']);local=dict(A=M.tolist(),b=b[ids].tolist(),hi=hi[ids].tolist(),dependencies=[inv[k] if k>=0 else -1 for k in dep[ids]],tolerance_m_s=original['tolerance_m_s']);gate=ns['external'](local,dict(p=p.tolist(),w=(M@p-b[ids]).tolist()));assert gate==attempt['independent'];assert gate['accepted']==attempt['accepted_intermediate'];assert attempt['raw_evaluations']<=plan['limits']['raw_evaluations_per_stage']
+ candidate=load(D/f'{i}-candidate.json');p=np.array(candidate['p']);assert all(candidate[k]==v for k,v in original.items() if k!='p');gate=ns['external'](original,dict(p=p.tolist(),w=(A@p-b).tolist()));assert gate==stored['independent'];native=load(D/f'{i}-native.stdout.json');assert stored['accepted']==bool(gate['accepted'] and native['accepted'] and stored['native_exit']==0);records.append({'input':path,'original_gates_passed':stored['accepted'],'original_residual_m_s':gate['projection_m_s'],'max_abs_impulse':float(np.max(abs(p))),'search_stages_audited':len(stored['attempts']),'world_qualified':False,'performance_qualified':False})
+(H/'independent-audit.json').write_text(json.dumps({'passed':True,'records':records,'scope':'Independent exact original-matrix final gates and retained search-only intermediate matrices. Actual native zero-budget outputs verified. No integrated recovery/world/performance claim.'},indent=2,allow_nan=False)+'\n');print('Mobility continuation independent stage/final audit PASS')
