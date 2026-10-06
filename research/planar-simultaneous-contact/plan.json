@@ -1,0 +1,35 @@
+{
+  "source": "pending validated checkpoint",
+  "scope": "Isolated experimental Float64 Box2D2.4.1/1um full-island velocity contact solve, preserving authored geometry/core mass/material/gravity/motion and original position12/seamsfalse. Embed each scalar2D tangent in existing circular solver with an exactly zero virtual tangent, unit virtual diagonal and no physical body DOF. Original same1D Coulomb normal complementarity, interval bounds, sticking/sliding maximum dissipation; no dilatancy or material change. Zero virtual impulses before final original gate. Same bounded existing4096-iteration full native recovery pipeline, component192 and declared caps. Absolute native1e-10m/s gate plus independently rebuilt actual candidate body velocities, scalar projected gate1e-10 and kinetic-minus-wall-work passivity1e-10 times physical-energy scale required before any body/impulse write. Throw/capture genuine rejection if enabled solver fails; no approximate fallback. After full original-law gate passes, skip redundant outer velocity iterations for this contact-solver instance. Optional disabled bypass must reproduce original states. Analytic moving-wall disk/square controls precede unchanged full original rotating reference ladders. No production adoption or performance acceptance until complete qualification. All original full physical and BOTH adjacent quarter-budget edges remain mandatory. Joint isolated temporal diagnostic: disable serial continuous TOI only when global adapter enabled; retain both prepared manifold points despite ill-conditioned local two-point normal block; internal search tolerance2.5e-11, final native and actual-body gates remain1e-10. Disabled bypass preserves original CCD and point dropping. Same numerical slop1um, authored model and ALL physics/quarter accuracy gates. No causal attribution to an individual change and no adoption without full qualification.",
+  "binary": "build/rigid_double_simultaneous_v1/rigid_runner",
+  "cases": [
+    "2d_disks",
+    "2d_mixed_polygons"
+  ],
+  "reference_levels": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.005,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000
+    }
+  ],
+  "velocity_iterations": 128,
+  "position_iterations": 12,
+  "full_row_cap": 4096,
+  "contact_gate_m_s": 1e-10
+}

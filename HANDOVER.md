@@ -315,3 +315,19 @@ production integration. Raw failure artifact37402546398 retained; portable
 comparator now builds separately renamed frozen prototype source, preserving
 canonical archived header bytes; local controls393/276/423 pass,396declines.
 Keep all13 reference/baseline/2x gates OPEN.
+
+## Terminal rejected-seed component polisher — October6
+
+Final bounded tail after every existing lane declines: full4096 exact components,
+nonlinear search192, original256 PGS then ONE unchanged256SVD-cap existing
+polisher per failed component. Original eager-cone/bounds/residual/passivity
+component/global gates mandatory before atomic writes. Existing23 saved endpoints
+and counters remain byte-exact, helper bypassed.163engine/11native checks pass;
+optional no-LAPACK build/replay passes without BLAS/LAPACK runtime dependencies.
+Validation research/mobility-continuation/integration-v3; actual8 replays retain
+latest396 decline. New prospective original125-sphere tight1pm numerical slop
+ladder retains strict1e-11 search and ALL original physics/quarter-budget gates.
+New isolated planar simultaneous-contact experiment: CCDoff only enabled,
+retain both prepared points, internal2.5e-11 search/final1e-10 gates unchanged.
+Eight analytical controls and disabled original state parity pass. Both studies
+require published source freeze before full worlds. All13 baseline/2x gates OPEN.

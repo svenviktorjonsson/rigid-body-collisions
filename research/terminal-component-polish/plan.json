@@ -1,0 +1,4 @@
+{
+  "parent_source": "faf8e95e4ec77c4a9849eaf59e8da30a3466309f",
+  "rule": "Final bounded tail after ALL previous lanes decline. Original exact nonzero components/full4096; accepted components pass original gate without search cap, failed nonlinear search192. Restart original256 PGS sweeps from actual terminal rejected seed, then at most ONE unchanged existing polisher capped256SVD per failed component. No recursion. Original full component/global eager cone/bounds/residual/passivity acceptance before atomic candidate/body writes. Original23 Float64 impulse/response bytes plus old counters preserved and helper bypassed. Latest396 retained as decline. Instantaneous saved recovery is not full world/reference/performance qualification."
+}

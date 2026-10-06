@@ -3,6 +3,7 @@
 #include "normal_qp.h"
 #include "mobility_continuation.h"
 #include "reduced_mobility_continuation.h"
+#include "terminal_component_polish.h"
 #include <stdexcept>
 #include <sstream>
 #include <functional>
@@ -38,6 +39,7 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
+ int terminal_polish_attempts=0,terminal_polish_solves=0,terminal_polish_declines=0;terminal_component_polish::Stats terminal_polish;
  int reduced_mobility_attempts=0,reduced_mobility_solves=0,reduced_mobility_declines=0;reduced_mobility_continuation::Stats reduced_mobility;
  int mobility_attempts=0,mobility_solves=0,mobility_declines=0;mobility_continuation::Stats mobility;
  int projection_attempts=0,projection_solves=0,projection_declines=0;
@@ -433,6 +435,22 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    x=candidate;stats.solves++;stats.reduced_mobility_solves++;stats.last_residual=gate.last_residual;stats.residual_max=std::max(stats.residual_max,gate.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate.passive_change_max);return true;
   }
   stats.reduced_mobility_declines++;
+ }
+
+ // One bounded restart from the terminal rejected seed; all old lanes unchanged.
+ if(recover&&b.rows()<=4096){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  terminal_component_polish::Stats trial;stats.terminal_polish_attempts++;
+  auto gate=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&lower,const btVectorXu&upper,const btAlignedObjectArray<int>&d,double tol){CoulombStats s;return coulombIterate(M,rhs,q,lower,upper,d,0,tol,s);};
+  auto iteration=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&lower,const btVectorXu&upper,const btAlignedObjectArray<int>&d,double tol,std::vector<double>&last,int&sweeps){CoulombStats s;bool ok=coulombIterate(M,rhs,q,lower,upper,d,256,tol,s,&last);sweeps=s.iteration_sweeps_total;return ok;};
+  auto polish=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&upper,const btAlignedObjectArray<int>&d,double tol,int&svds,int&steps){CoulombStats s;bool ok=circular_polish::solve(M,rhs,q,upper,d,tol,s);svds=s.polish_svd_calls;steps=s.polish_steps;return ok;};
+  bool found=terminal_component_polish::solve(A,b,candidate,lo,hi,dep,tolerance,trial,gate,iteration,polish);
+  auto&s=stats.terminal_polish;s.components+=trial.components;s.largest_rows=std::max(s.largest_rows,trial.largest_rows);s.iteration_steps+=trial.iteration_steps;s.svd_calls+=trial.svd_calls;s.polish_steps+=trial.polish_steps;
+  CoulombStats final;
+  if(found&&coulombIterate(A,b,candidate,lo,hi,dep,0,tolerance,final)){
+   x=candidate;stats.solves++;stats.terminal_polish_solves++;stats.last_residual=final.last_residual;stats.residual_max=std::max(stats.residual_max,final.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,final.passive_change_max);return true;
+  }
+  stats.terminal_polish_declines++;
  }
 
 #endif

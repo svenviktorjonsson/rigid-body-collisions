@@ -55,6 +55,9 @@ jobs:
           build/spatial/spatial_coulomb_replay research/large-velocity-cap128-world/results/trial_0/rejection.json
           build/spatial/spatial_coulomb_replay research/large-velocity-world/results/trial_0/rejection.json
           build/spatial/spatial_coulomb_replay research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull125_h10us/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull125_h5us/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull64_h10us/rejection.json
           python research/component-recovery-integration/audit.py
           python research/component-recovery-integration/checks.py
           python -m research.verify_native_contact_replays
