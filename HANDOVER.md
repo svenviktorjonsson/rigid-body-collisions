@@ -1,3 +1,11 @@
+# Single body index and relative sums — October 6, 2026
+
+User rejects paired or stacked subscripts. Active article uses one body index k; relative contact quantities are unindexed sums with signed body contributions. Contact velocity u_k and combined contact motion U_k replace double c,k subscripts. Body pairs are represented by a sum, not k,j labels. Planar component display suppresses body indexing. Plain symbols (no bold vectors) are retained.
+
+# Plain symbols and body indices — October 6, 2026
+
+User requests k for body indexing instead of a/A and plain vector symbols instead of bold. Active article uses k and j for body pairs, plain vector/matrix symbols throughout, and W_d for component mobility instead of A. Admissibility is calligraphic C; distributed traction uses sigma as index. Baseline wedge, symmetric spacing, transpose-only rule, double-struck inertia I and omitted numerical results remain unchanged. This is a presentation change, not new physics implementation.
+
 # Symmetric wedge spacing — October 6, 2026
 
 User requests equal vector/wedge spacing on either side. Active article macros now group each entire matrix symbol as one math atom and use the same fixed 2mu internal gap in r-wedge and wedge-r. This prevents TeX binary-operator spacing from making the two symbols asymmetric. Transpose-only semantics and double-struck inertia I remain unchanged.
