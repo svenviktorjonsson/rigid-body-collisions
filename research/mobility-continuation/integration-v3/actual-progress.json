@@ -229,5 +229,38 @@
       "support_passes": 1,
       "svd_calls": 1277
     }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull64_h10us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 1.2372016395733368e-12,
+      "circle_violation_scaled_m_s": 1.207813480863616e-12,
+      "sticking_m_s": 2.32144148871843e-18,
+      "support_gap_J": 1.0842021724855044e-19,
+      "passive_bound_J": -0.03208239787939164,
+      "passivity_scale": 1.03215821862592,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.4210854715202004e-14
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
   }
 ]
