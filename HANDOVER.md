@@ -271,3 +271,22 @@ with authoritative original zero-budget gate before any body writes. Required
 known nonportable, so validate actual combined production pipeline. Preserve
 original bare failure evidence. Local and hosted saved roots are instantaneous
 proofs, not full histories or reference/performance qualification.
+
+## Production numerical-mobility tail integrated — October6
+
+After ALL old lanes including null-traction seeds decline, a new bounded
+search-only diagonal continuation tail supports full4096/exact192 components,
+17 fixed numerical diagonal levels,2048 iteration/SVD caps PER stage. Original
+Coulomb coefficient, physical mobility, original absolute tolerance/bounds/
+passivity remain unchanged; authoritative original zero-budget eager-cone
+gates are mandatory before atomic candidate/body application. Existing23
+replays are ALL byte/counter exact and bypass newhelper;163 engine tests and
+11 native checks pass; no-LAPACK direct build/replay passes without BLAS links.
+Full production replays accept393 (newtail4.41e-9),276 (existinglane6.10e-9),
+423 (newtail1.88e-9) and earlier396 (existinglane9.91e-9); latest396 still
+rejects1.23e-7. Required CI393/earlier396 now exercise COMPLETE production
+pipeline and same original physical acceptance, with276/423 added mandatory.
+Bare null-only393 portability failure stays archived, not hidden or relabeled.
+These are saved systems, not full-world qualification or2x gate completion.
+Validation:research/mobility-continuation/integration/. No active world runs
+currently; declare source/plan before fresh64/125-hull histories.

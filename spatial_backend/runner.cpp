@@ -54,6 +54,7 @@ int main(){try{
   {"attempts",p.projection_attempts},{"solves",p.projection_solves},{"declines",p.projection_declines},
   {"svd_calls",p.projection_svd_calls},{"iteration_steps",p.projection_iteration_steps},{"newton_steps",p.projection_newton_steps},
   {"claim","bounded original-law numerical search; no trajectory qualification"}};};
+ auto mobility_policy=[&](){const auto&s=coulomb_mlcp.stats;return json{{"compiled",coulombLapackRecoveryEnabled()},{"enabled",coulomb_solver&&coulomb_mlcp.recovery_enabled&&coulombLapackRecoveryEnabled()},{"stage","after ALL existing lanes including null-traction seeds decline"},{"max_full_rows",4096},{"max_component_rows",192},{"max_stages_per_failed_component",17},{"max_iteration_steps_per_stage",2048},{"max_svd_calls_per_stage",2048},{"search_diagonal_levels",json::array({.1,.03,.01,.003,.001,.0003,.0001,.00003,.00001,1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12,0.})},{"attempts",s.mobility_attempts},{"solves",s.mobility_solves},{"declines",s.mobility_declines},{"components",s.mobility.components},{"largest_component_rows",s.mobility.largest_rows},{"stage_attempts",s.mobility.stage_attempts},{"stage_accepts",s.mobility.stage_accepts},{"iteration_steps",s.mobility.iteration_steps},{"svd_calls",s.mobility.svd_calls},{"physical_mobility_changed",false},{"final_gate","original production zero-budget eager cone projection, bounds, residual and finite passivity"},{"claim","bounded numerical search; no reference or performance qualification"}};};
  auto null_seed_policy=[&](){json result={{"compiled",coulombLapackRecoveryEnabled()},{"enabled",coulomb_solver&&coulomb_mlcp.recovery_enabled&&coulombLapackRecoveryEnabled()},{"stage","after existing projection tail decline"},{"max_full_rows",4096},{"max_component_rows",192},{"max_seeds_per_component",6},{"max_searches_per_component",7},{"max_iteration_steps_per_search",2048},{"max_svd_calls_per_search",2048},{"null_jacobi_sweeps_per_factorization",64},{"seed_svd_calls_per_component",7},{"graph_coupling_threshold",0},{"final_gate","original production eager cone projection, bounds, residual and passivity"},{"claim","bounded numerical search; no trajectory or performance qualification"}};
 #ifdef SPATIAL_LAPACK_RECOVERY
  const auto& s=coulomb_mlcp.stats;const auto& t=s.null_seed;result.update({{"attempts",s.null_seed_attempts},{"solves",s.null_seed_solves},{"declines",s.null_seed_declines},{"components",t.components},{"largest_component_rows",t.largest_rows},{"component_cap_rejections",t.cap_rejections},{"seed_attempts",t.seed_attempts},{"null_svd_calls",t.null_svd_calls},{"seed_svd_calls",t.seed_svd_calls},{"svd_calls",t.svd_calls},{"iteration_steps",t.iteration_steps},{"newton_steps",t.newton_steps},{"seed_response_change_max_m_s",t.seed_response_change_max}});
@@ -146,6 +147,7 @@ int main(){try{
   progress["translation_split_residual_max_m_s"]=coulomb_mlcp.translation_split_residual_max;
   progress["projection_tail_policy"]=projection_policy();
   progress["null_traction_seed_policy"]=null_seed_policy();
+  progress["mobility_continuation_policy"]=mobility_policy();
   progress["position_normal_search_policy"]={{"enabled",coulomb_mlcp.translation_split},{"max_normal_rows",512},{"max_active_states",128},{"stage","before projected position fallback"},{"final_gate","unchanged absolute original normal projection and bounds"}};
   progress["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
   progress["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
@@ -239,6 +241,7 @@ int main(){try{
  out["lapack_contact_recovery_compiled"]=coulombLapackRecoveryEnabled();
  out["projection_tail_policy"]=projection_policy();
  out["null_traction_seed_policy"]=null_seed_policy();
+ out["mobility_continuation_policy"]=mobility_policy();
  out["translation_pose_ledger_updates"]=coulomb_mlcp.translation_pose_ledger_updates;
  out["translation_pose_displacement_max_m"]=coulomb_mlcp.translation_pose_displacement_max_m;
  out["translation_pose_potential_change_J"]=coulomb_mlcp.translation_pose_potential_change_J;

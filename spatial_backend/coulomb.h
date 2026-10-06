@@ -1,6 +1,7 @@
 // Project adapter: circular, non-associated Coulomb friction. Bullet is unmodified.
 #pragma once
 #include "normal_qp.h"
+#include "mobility_continuation.h"
 #include <stdexcept>
 #include <sstream>
 #include <functional>
@@ -36,6 +37,7 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
+ int mobility_attempts=0,mobility_solves=0,mobility_declines=0;mobility_continuation::Stats mobility;
  int projection_attempts=0,projection_solves=0,projection_declines=0;
  int projection_svd_calls=0,projection_iteration_steps=0,projection_newton_steps=0;
  // Optional schedule receipts; these aggregate across calls, never set caps.
@@ -402,6 +404,20 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    x=candidate;stats.solves++;stats.null_seed_solves++;stats.last_residual=gate_stats.last_residual;stats.residual_max=std::max(stats.residual_max,gate_stats.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate_stats.passive_change_max);return true;
   }
   stats.null_seed_declines++;
+ }
+
+ // Search-only matrices are discarded; the authoritative original gate accepts.
+ if(recover&&b.rows()<=4096){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  mobility_continuation::Stats trial;stats.mobility_attempts++;
+  auto original_gate=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&lower,const btVectorXu&upper,const btAlignedObjectArray<int>&dependencies,double tol){CoulombStats gate;return coulombIterate(M,rhs,q,lower,upper,dependencies,0,tol,gate);};
+  bool found=mobility_continuation::solve(A,b,candidate,lo,hi,dep,tolerance,trial,original_gate);
+  stats.mobility.components+=trial.components;stats.mobility.largest_rows=std::max(stats.mobility.largest_rows,trial.largest_rows);stats.mobility.stage_attempts+=trial.stage_attempts;stats.mobility.stage_accepts+=trial.stage_accepts;stats.mobility.iteration_steps+=trial.iteration_steps;stats.mobility.svd_calls+=trial.svd_calls;
+  CoulombStats gate;
+  if(found&&coulombIterate(A,b,candidate,lo,hi,dep,0,tolerance,gate)){
+   x=candidate;stats.solves++;stats.mobility_solves++;stats.last_residual=gate.last_residual;stats.residual_max=std::max(stats.residual_max,gate.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate.passive_change_max);return true;
+  }
+  stats.mobility_declines++;
  }
 
 #endif
