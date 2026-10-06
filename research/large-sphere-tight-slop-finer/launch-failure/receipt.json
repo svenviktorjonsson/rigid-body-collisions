@@ -1,0 +1,6 @@
+{
+  "failed_before_any_simulation": true,
+  "exit": 1,
+  "original_driver_sha256": "23033541a2a52ccdbd980bbb2d229d1fa3845959373c5ac782e4711fb6669367",
+  "reason": "Anchor files were prepended to guard list, so old paths[0] ldd expression accidentally selected JSON. Fixed explicit runner path; retain launch failure."
+}

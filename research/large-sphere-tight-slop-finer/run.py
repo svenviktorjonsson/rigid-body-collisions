@@ -15,7 +15,7 @@ assert hashlib.sha256(json.dumps(entry['scene'],sort_keys=True,separators=(',','
 assert os.environ['OPENBLAS_NUM_THREADS']=='1' and os.environ['OMP_NUM_THREADS']=='1'
 paths=[*[ROOT/a['path'] for a in plan['anchors']],ROOT/'build/spatial/spatial_runner',ROOT/'spatial_engine.py',H/'run.py',H/'plan.json',*[p for p in (ROOT/'spatial_backend').glob('*') if p.is_file()]];guards={str(p):digest(p) for p in paths}
 import re
-libs=re.findall(r'(/\S+)\s+\(',subprocess.check_output(['ldd',str(paths[0])],text=True))
+libs=re.findall(r'(/\S+)\s+\(',subprocess.check_output(['ldd',str(ROOT/'build/spatial/spatial_runner')],text=True))
 save(D/'provenance.json',{'integrated_source':plan['source'],'execution_source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards,'runtime':{str(Path(p).resolve()):digest(Path(p).resolve()) for p in libs}})
 save(D/'scene.json',entry);records=[]
 for index,setting in enumerate(plan['settings']):
