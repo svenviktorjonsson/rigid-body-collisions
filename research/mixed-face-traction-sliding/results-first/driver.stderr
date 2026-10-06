@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/mixed-face-traction-sliding/run.py", line 64, in <module>
+    record={'input':path,'accepted':bool(verified),'lp_calls':lp_calls,'parts':parts,'original_full_gate':gate,'elapsed_s_descriptive':time.perf_counter()-start};records.append(record);save(D/'progress.json',records);print(path,'accepted',verified,'LPs',lp_calls,'parts',parts,flush=True)
+                                                                                                                                                                                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/.cache/vkf-physics-continuation/research/mixed-face-traction-sliding/run.py", line 7, in <lambda>
+    save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+when serializing list item 0
+when serializing dict item 'dropped_contacts'
+when serializing list item 0
+when serializing dict item 'parts'
+when serializing list item 0

@@ -49,7 +49,7 @@ for index,(path,digest) in enumerate(plan['inputs'].items()):
      if length>cap:trial[t]*=cap/length
     response=M@trial-rhs;gate=external(local,{'p':trial.tolist(),'w':response.tolist()})
     if gate['accepted']:
-     candidate[ids]=trial;ok=True;part.update(accepted=True,lp_calls=lp_calls,dropped_contacts=sorted(dropped),original_gate=gate);break
+     candidate[ids]=trial;ok=True;part.update(accepted=True,lp_calls=lp_calls,dropped_contacts=[int(k) for k in sorted(dropped)],original_gate=gate);break
     invalid=False
     for k in sliders:
      v=response[np.flatnonzero(d==k)];length=np.linalg.norm(v)
