@@ -1,0 +1,171 @@
+{
+  "source": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+  "table": "I",
+  "case_count": 8,
+  "rows": [
+    {
+      "ball": "Superball",
+      "radius_m": 0.029,
+      "mass_kg": 0.103,
+      "surface": "granite",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "observed_spin_factor_rad_m": 14.9,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 15.509882019547838,
+      "point_law_range": [
+        14.826852998822275,
+        16.19597832964572
+      ],
+      "overlap": true,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": -0.0007180750898156257,
+      "inferred_normal_force_offset_m": 0.0004451169653143649,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "Superball",
+      "radius_m": 0.029,
+      "mass_kg": 0.103,
+      "surface": "rubber",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.41,
+      "observed_spin_factor_rad_m": 14.5,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 14.677136676216408,
+      "point_law_range": [
+        14.02540148537242,
+        15.33219281873128
+      ],
+      "overlap": true,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": -0.00020856072257720293,
+      "inferred_normal_force_offset_m": 0.00012928162699693693,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "Superball",
+      "radius_m": 0.029,
+      "mass_kg": 0.103,
+      "surface": "Superball pad",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.57,
+      "observed_spin_factor_rad_m": 18.2,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 16.342627362879263,
+      "point_law_range": [
+        15.628304512272125,
+        17.059763840560155
+      ],
+      "overlap": false,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": 0.0021868705429459526,
+      "inferred_normal_force_offset_m": -0.0013555868925371234,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "Superball",
+      "radius_m": 0.029,
+      "mass_kg": 0.103,
+      "surface": "tennis strings",
+      "normal_restitution": 0.91,
+      "tangential_restitution": -0.1,
+      "observed_spin_factor_rad_m": 9.0,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 9.36838511247856,
+      "point_law_range": [
+        8.916148087129612,
+        9.825560186651735
+      ],
+      "overlap": true,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": -0.000433736631432256,
+      "inferred_normal_force_offset_m": 0.000250563048045824,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "golf",
+      "radius_m": 0.0214,
+      "mass_kg": 0.045,
+      "surface": "granite",
+      "normal_restitution": 0.87,
+      "tangential_restitution": 0.03,
+      "observed_spin_factor_rad_m": 14.8,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 14.529266007774382,
+      "point_law_range": [
+        13.847509210190797,
+        15.21715596330576
+      ],
+      "overlap": true,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": 0.0001735794747115011,
+      "inferred_normal_force_offset_m": -0.00010241912277100457,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "golf",
+      "radius_m": 0.0214,
+      "mass_kg": 0.045,
+      "surface": "rubber",
+      "normal_restitution": 0.59,
+      "tangential_restitution": 0.51,
+      "observed_spin_factor_rad_m": 20.5,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 21.300186089067296,
+      "point_law_range": [
+        20.363984132633526,
+        22.240458715600727
+      ],
+      "overlap": true,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": -0.0005130345098889634,
+      "inferred_normal_force_offset_m": 0.0003560194653315889,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "golf",
+      "radius_m": 0.0214,
+      "mass_kg": 0.045,
+      "surface": "Superball pad",
+      "normal_restitution": 0.81,
+      "tangential_restitution": 0.55,
+      "observed_spin_factor_rad_m": 23.6,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 21.86442942917504,
+      "point_law_range": [
+        20.90702370950375,
+        22.82573394495864
+      ],
+      "overlap": false,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": 0.001112750658060999,
+      "inferred_normal_force_offset_m": -0.000678333980892535,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    },
+    {
+      "ball": "golf",
+      "radius_m": 0.0214,
+      "mass_kg": 0.045,
+      "surface": "tennis strings",
+      "normal_restitution": 0.91,
+      "tangential_restitution": -0.01,
+      "observed_spin_factor_rad_m": 15.0,
+      "observed_error": 0.1,
+      "point_law_spin_factor_rad_m": 13.96502266766664,
+      "point_law_range": [
+        13.304469633320569,
+        14.631880733947845
+      ],
+      "overlap": false,
+      "inferred_extra_horizontal_moment_per_mass_speed_m": 0.00066356950676154,
+      "inferred_normal_force_offset_m": -0.00038333400076309693,
+      "offset_independently_measured": false,
+      "homogeneous_sphere_inertia_assumed": true
+    }
+  ],
+  "central_values_are_conditional_predictions": true,
+  "no_forward_offset_correction_applied": true,
+  "same_pair_independent_friction_validated": false,
+  "interpretation": "Both ball types on the Superball pad underpredict spin outside propagated angle/tangent-rest uncertainty under homogeneous sphere inertia. Required additional moment is an inferred diagnostic. Golf inertia is not measured; cannot attribute discrepancy uniquely to patch deformation."
+}
