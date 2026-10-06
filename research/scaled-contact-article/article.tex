@@ -233,15 +233,24 @@ Chant Sura & 82 reconstruction CSV files; 41 with finite gyro and rotational-ene
 The latter two inventories identify useful future evidence, not additional completed validation. Their primary landing pages are \url{https://www.envidat.ch/metadata/tschamut2014} and \url{https://doi.org/10.16904/envidat.174}. Scalar angular speed ratios must not be substituted for signed contact tangential restitution. Source and licensing details are retained with the corresponding repository inventories.
 
 
+\section{One diagram for prediction deviations}
+For each measured comparison, collect a magnitude signature
+\begin{equation}
+\mathbf q=\begin{bmatrix}|v_n|\\|v_t|\\\ell|\omega|\end{bmatrix},\qquad
+\phi=\arccos\frac{\mathbf q_{\rm measured}^T\mathbf q_{\rm predicted}}
+{\|\mathbf q_{\rm measured}\|\,\|\mathbf q_{\rm predicted}\|},\qquad
+\varepsilon=\frac{\|\mathbf q_{\rm predicted}\|}{\|\mathbf q_{\rm measured}\|}-1.
+\end{equation}
+Each case becomes one point $(\phi,\varepsilon)$: exact agreement is at the origin. The horizontal axis shows an incorrect mix of translation and rotation; the vertical axis shows too much or too little combined motion. It is the angle between observable signatures, not a spatial heading error. Colours identify collision types. Inputs need not be artificially separated, and different impacts can naturally share the same error coordinates.
+
+The plotting policy takes $\ell$ equal to the reported radius for every case, without fitting it to the errors. This converts spin into peripheral-speed units. Unlike physical predictions, numerical angles and norms of coordinate signatures do depend on the chosen plotting metric; the scale policy must therefore be declared. The map retains 25 held-out limestone impacts under the fixed-coefficient model and eight ball--surface summary observations. Only reported magnitudes are used; unavailable angular-vector signs and orientation are not invented.
+
+For the ball rows, the tangential speed is reconstructed from the published relation $v_t=R\omega-e_t v_{{\rm in},t}$, and the normal speed uses the target-supplied $e_n$. Those are conditional signatures, not independent full-state measurements. Incoming speed cancels from both map coordinates. The thin ball error lines summarize variation over reported incidence, restitution and spin uncertainty; they are not confidence intervals. Rock uncertainty is not available. Synthetic implementation checks are excluded from this reality diagram.
+
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{figures/experimental-errors.png}
-\caption{Experimental prediction errors across collision types. Components with different physical units are shown separately or explicitly normalized; a small error in one component does not compensate for a larger error in another. These are conditional or held-out reality comparisons, not proofs of independently known material parameters.}
-\end{figure}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{figures/verification-errors.png}
-\caption{Implementation and synthetic-contact verification. Analytic-to-native discrepancies test equations and numerical realization. They are distinct from disagreement with measured impacts and cannot establish experimental accuracy by themselves.}
+\includegraphics[width=\linewidth]{figures/deviation-map.png}
+\caption{A single deviation map instead of bar charts. A dot near the origin agrees in combined magnitude and the relative mix of translation and spin. The map is a two-coordinate summary, not a full signed state comparison. The accompanying standalone \texttt{deviation-map.html} supports point inspection; \texttt{deviation-map.json} retains the observable vectors and mapping assumptions.}
 \end{figure}
 
 \section{What would establish a stronger model?}
