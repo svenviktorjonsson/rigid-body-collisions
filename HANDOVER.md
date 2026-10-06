@@ -1,3 +1,7 @@
+# Impulse delta versus state-change Delta — October 6, 2026
+
+Latest user reserves lowercase delta for impulses only. Active article uses uppercase Delta for body/stacked momentum increments, body/world angular-momentum changes and kinetic-energy changes. Contact impulses retain delta p, delta L, delta P_c and their directional components. Explicit before/after change definitions and global momentum balances included. Bold vector preference and single indices remain active.
+
 # Bold vectors restored — October 6, 2026
 
 User changed preference: vectors are bold again. Active article restores bold linear/angular/combined vectors and directions, retaining plain scalar components, planar angular scalars, single body index k, relative sums, symmetric baseline wedge, transpose-only reversal and double-struck inertia I. This supersedes the earlier plain-vector instruction. Numerical results remain omitted.

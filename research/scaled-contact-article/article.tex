@@ -16,7 +16,7 @@ We combine linear velocity and length-scaled angular velocity in a single vector
 \end{abstract}
 
 \section{Notation and scope}
-Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ denotes an impulse, and component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
+Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ denotes an impulse; uppercase $\Delta$ denotes a change in a state or global quantity. Component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
 
 The direction $\mathbf{t}$ follows relative velocity at the collision point, and $\mathbf{s}$ follows relative angular velocity. They are motion-defined directions, not two axes chosen to complete a tangent basis. The contact normal is $\mathbf{n}$. The allowed directional impulse components must be respected; a linear spin component $\delta \mathbf{p}_s$ is not introduced.
 
@@ -71,6 +71,14 @@ where $\boldsymbol{\tau}$ is the torque about the centre of mass for this body-l
 =\mathbf{v}^{\mathsf T}\mathbf{f}+\boldsymbol{\omega}^{\mathsf T}\boldsymbol{\tau},\qquad
 E=\tfrac12\mathbf{V}^{\mathsf T}M\mathbf{V}.
 \end{equation}
+For a state quantity the change uses uppercase $\Delta$:
+\begin{equation}
+\Delta\mathbf{P}=\mathbf{P}^+-\mathbf{P}^-,\qquad
+\Delta\mathbf{V}=\mathbf{V}^+-\mathbf{V}^-,\qquad
+\Delta E=E^+-E^-.
+\end{equation}
+An integrated impulse and a resulting momentum change may be equal in an isolated balance, but their notation distinguishes the transferred impulse from the state change.
+
 In planar motion the vectors have three components, the angular quantities are scalars, and $M=\operatorname{diag}(m,m,\inertia/\ell^2)$.
 
 A change of fixed representation length must leave the physical velocity, impulse and energy unchanged. Changing $\ell$ during motion would require coordinate-derivative terms and is outside this presentation. For simplicity we use one common fixed length throughout the contact assembly.
@@ -99,18 +107,18 @@ At the declared contact reference, define the linear impulse $\delta \mathbf{p}$
 \end{equation}
 The subscript $c$ distinguishes this contact impulse from the body momentum increment. The independent contact angular impulse excludes the lever-arm moment, which the transpose map supplies:
 \begin{equation}
-\boxed{\delta \mathbf{P}_k=B_k^{\mathsf T}\delta \mathbf{P}_c}
+\boxed{\Delta \mathbf{P}_k=B_k^{\mathsf T}\delta \mathbf{P}_c}
 =\begin{bmatrix}\delta \mathbf{p}\\
 \rw{\mathbf{r}_k}\delta \mathbf{p}/\ell+\delta \mathbf{L}/\ell\end{bmatrix}.
 \end{equation}
 Equivalently,
 \begin{equation}
-\delta \mathbf{p}_k=\delta \mathbf{p},\qquad
-\boxed{\delta \mathbf{L}_k=\rw{\mathbf{r}_k}\delta \mathbf{p}+\delta \mathbf{L}}.
+\Delta \mathbf{p}_k=\delta \mathbf{p},\qquad
+\boxed{\Delta \mathbf{L}_k=\rw{\mathbf{r}_k}\delta \mathbf{p}+\delta \mathbf{L}}.
 \end{equation}
-Here $\delta \mathbf{L}_k$ is the total body angular impulse. This distinction prevents counting the force moment twice. The associated work is
+Here $\Delta \mathbf{L}_k$ is the body angular-momentum change caused by the total angular impulse. This distinction prevents counting the force moment twice. The associated work is
 \begin{equation}
-\mathbf{V}_k^{\mathsf T}\delta \mathbf{P}_k
+\mathbf{V}_k^{\mathsf T}\Delta \mathbf{P}_k
 =\mathbf{U}_k^{\mathsf T}\delta \mathbf{P}_c
 =\mathbf{u}_k^{\mathsf T}\delta \mathbf{p}
 +\boldsymbol{\omega}_k^{\mathsf T}\delta \mathbf{L}.
@@ -125,7 +133,7 @@ A reference shift $\mathbf{x}_c'=\mathbf{x}_c+\mathbf{a}$ gives
 \mathbf{r}_k'=\mathbf{r}_k+\mathbf{a},\qquad
 \delta \mathbf{L}'=\delta \mathbf{L}-\rw{\mathbf{a}}\delta \mathbf{p},
 \end{equation}
-leaving the total body angular impulse unchanged. This is reference bookkeeping, not a way to fit a collision outcome by moving the force point.
+leaving the body angular-momentum change unchanged. This is reference bookkeeping, not a way to fit a collision outcome by moving the force point.
 
 \section{Two-body relative motion and contact mobility}
 Choose an orientation for the shared contact impulse. Let $\mathcal B$ contain the participating bodies and let $\sigma_k$ be $+1$ or $-1$ according to that orientation. The opposite signs give equal and opposite transfers. The relative motion is a sum:
@@ -143,7 +151,7 @@ M=\operatorname{diag}_{k\in\mathcal B} M_k,\qquad
 \end{equation}
 The impulse and motion updates are
 \begin{align}
-\delta \mathbf{P}&=G^{\mathsf T}\delta \mathbf{P}_c,\\
+\Delta \mathbf{P}&=G^{\mathsf T}\delta \mathbf{P}_c,\\
 \mathbf{V}^+&=\mathbf{V}^-+M^{-1}G^{\mathsf T}\delta \mathbf{P}_c,\\
 \boxed{\mathbf{U}^+=\mathbf{U}^-+W\delta \mathbf{P}_c},\qquad
 W&=GM^{-1}G^{\mathsf T}.
@@ -235,7 +243,7 @@ No numerical material value is substituted into the symbolic derivation. Missing
 \section{Energy, angular momentum and moving boundaries}
 For two dynamic bodies with no external impulsive work, the frozen-configuration kinetic-energy change is
 \begin{equation}
-\boxed{\delta E=\delta \mathbf{P}_c^{\mathsf T}\mathbf{U}^-
+\boxed{\Delta E=\delta \mathbf{P}_c^{\mathsf T}\mathbf{U}^-
 +\tfrac12\delta \mathbf{P}_c^{\mathsf T}W\delta \mathbf{P}_c}.
 \end{equation}
 Its linear term contains \emph{both} impulse works:
@@ -246,23 +254,23 @@ Its linear term contains \emph{both} impulse works:
 \end{equation}
 In the allowed component representation,
 \begin{equation}
-\boxed{\delta E=\boldsymbol{\lambda}^{\mathsf T}\mathbf{z}^-
+\boxed{\Delta E=\boldsymbol{\lambda}^{\mathsf T}\mathbf{z}^-
 +\tfrac12\boldsymbol{\lambda}^{\mathsf T}W_d\boldsymbol{\lambda}}.
 \end{equation}
-For an initially unstrained passive impact require $\delta E\le0$. If stored elastic energy is present, include it in the ledger instead of imposing a kinetic-energy inequality in isolation. Translation alone need not conserve energy, because rotation, deformation, dissipation and support work exchange energy.
+For an initially unstrained passive impact require $\Delta E\le0$. If stored elastic energy is present, include it in the ledger instead of imposing a kinetic-energy inequality in isolation. Translation alone need not conserve energy, because rotation, deformation, dissipation and support work exchange energy.
 
 For a prescribed moving boundary the work supplied through its contact motion is
 \begin{equation}
 W_b=\delta \mathbf{p}^{\mathsf T}\mathbf{u}_b
 +\delta \mathbf{L}^{\mathsf T}\boldsymbol{\omega}_b,
 \end{equation}
-and the corresponding relative-motion identity concerns $\delta E-W_b$.
+and the corresponding relative-motion identity concerns $\Delta E-W_b$.
 
 Equal and opposite impulses at the shared reference conserve total linear momentum. About a world origin the angular balance uses the orbital contribution as well as central angular momentum:
 \begin{equation}
-\delta \mathbf{J}_k=\rw{\mathbf{x}_k}\delta \mathbf{p}_k+\delta \mathbf{L}_k.
+\Delta \mathbf{J}_k=\rw{\mathbf{x}_k}\Delta \mathbf{p}_k+\Delta \mathbf{L}_k.
 \end{equation}
-The pair contributions sum to zero, including the independent opposite angular impulses. Checking only the force lever-arm moment misses this mechanism.
+The global changes are $\sum_k\Delta\mathbf{p}_k=0$ and $\sum_k\Delta\mathbf{J}_k=0$, including the independent opposite angular impulses. Checking only the force lever-arm moment misses this mechanism.
 
 \section{Symbolic three-dimensional examples}
 \subsection{Central normal impact with axial spin}
@@ -278,8 +286,8 @@ Then
 \end{equation}
 The complete angular update is therefore
 \begin{equation}
-\boxed{\delta \mathbf{L}_k=\delta \mathbf{L}_s+\delta \mathbf{L}_n},\qquad
-\boldsymbol{\omega}^+=\boldsymbol{\omega}^-+\inertia^{-1}\delta \mathbf{L}_k.
+\boxed{\Delta \mathbf{L}_k=\delta \mathbf{L}_s+\delta \mathbf{L}_n},\qquad
+\boldsymbol{\omega}^+=\boldsymbol{\omega}^-+\inertia^{-1}\Delta \mathbf{L}_k.
 \end{equation}
 A force-only model sets these independent angular impulses to zero and cannot change this axial spin. Here $\mathbf{s}$ is parallel or antiparallel to $\mathbf{n}$: the component map is dependent, yet the physical total angular impulse is well defined. The contact law must determine that total. No arbitrary inversion of two collinear angular directions is required.
 
@@ -312,8 +320,8 @@ B=\begin{bmatrix}1&0&-r_y/\ell\\0&1&r_x/\ell\\0&0&1\end{bmatrix}.
 The contact and body impulses are
 \begin{equation}
 \delta \mathbf{P}_c=\begin{bmatrix}\delta p_x\\\delta p_y\\\delta L/\ell\end{bmatrix},\qquad
-\delta \mathbf{P}_{\rm body}=B^{\mathsf T}\delta \mathbf{P}_c,\qquad
-\delta L_{\rm body}=\rw{\mathbf{r}}\delta \mathbf{p}+\delta L.
+\Delta \mathbf{P}_{\rm body}=B^{\mathsf T}\delta \mathbf{P}_c,\qquad
+\Delta L_{\rm body}=\rw{\mathbf{r}}\delta \mathbf{p}+\delta L.
 \end{equation}
 The pair map, mobility and energy identities retain the same matrix forms with these planar block dimensions. Planar angular velocity and angular impulse are signed scalars. A three-dimensional normal-angular channel is restricted to the permitted planar rotation axis; it must not be inserted as an extra independent planar degree of freedom. Any component unavailable under that geometric restriction is omitted rather than independently solved.
 
