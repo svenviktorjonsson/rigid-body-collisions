@@ -1,0 +1,17 @@
+{
+  "scope": "Bounded scaled minimax linearized original-projection search, percomponent<=128. Epigraph LP minimizes componentwise residual then selects minimum-L1 impulse direction; original circular norm/bounds/sticking/support/passivity plus production eager-cone gate mandatory. Scale residuals by unchanged1e-8 tolerance for numerical LP accuracy. No physical regularization or changed target/material; LP status is not a feasibility certificate. Declines retained.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+    "research/large-velocity-world/results/trial_1/rejection.json": "a2f393e8e8c5a3edc4678817651fa3bf1b4f15c06c170deb74bcddc2cdd8b619",
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734"
+  },
+  "limits": {
+    "outer_iterations": 128,
+    "residual_calls": 4096,
+    "line_trials": 24,
+    "max_components_rows": 128
+  },
+  "execution": "Sequential single-thread isolated discovery; no production/world/refinement/performance claim."
+}
