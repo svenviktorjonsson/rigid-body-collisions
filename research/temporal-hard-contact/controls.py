@@ -5,7 +5,7 @@ import numpy as np
 from rigid_engine import run
 from research.container_scenes import ball
 from research.rigid_scenes import rectangle
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls-v2';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 records=[]
 for omega in [0.,.5,-.5]:
@@ -22,7 +22,7 @@ for omega in [0.,.5,-.5]:
    a=np.asarray(observed['states']);b=np.asarray(disabled['states']);assert a.tobytes()==b.tobytes();assert np.asarray(observed['kinematic_states']).tobytes()==np.asarray(disabled['kinematic_states']).tobytes()
    first,last=a[0,0],a[-1,0];mass=observed['mass'][0];inertia=observed['inertia'][0]
    momentum=mass*(last[3:5]-first[3:5]);r0=first[:2]-np.array(wall['position']);r1=last[:2]-np.array(wall['position'])
-   angular=inertia*(last[5]-first[5])+mass*(np.cross(r1,last[3:5])-np.cross(r0,first[3:5]))
+   angular=inertia*(last[5]-first[5])+mass*(r1[0]*last[4]-r1[1]*last[3]-r0[0]*first[4]+r0[1]*first[3])
    expected=float(np.dot(velocity,momentum)+omega*angular);work=observed['boundary_work_J'];error=abs(expected-work)
    # Angular momentum includes discrete drift; bound its independently measured defect.
    assert error<2e-5,(scene['id'],expected,work,error)
