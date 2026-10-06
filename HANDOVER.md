@@ -1,3 +1,7 @@
+# Bold vectors restored — October 6, 2026
+
+User changed preference: vectors are bold again. Active article restores bold linear/angular/combined vectors and directions, retaining plain scalar components, planar angular scalars, single body index k, relative sums, symmetric baseline wedge, transpose-only reversal and double-struck inertia I. This supersedes the earlier plain-vector instruction. Numerical results remain omitted.
+
 # Single body index and relative sums — October 6, 2026
 
 User rejects paired or stacked subscripts. Active article uses one body index k; relative contact quantities are unindexed sums with signed body contributions. Contact velocity u_k and combined contact motion U_k replace double c,k subscripts. Body pairs are represented by a sum, not k,j labels. Planar component display suppresses body indexing. Plain symbols (no bold vectors) are retained.
