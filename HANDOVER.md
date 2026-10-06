@@ -481,3 +481,7 @@ as intrinsiccontact restitution>1. Rawpubliczipandpaperexternalcache;download
 hashes/sourceattributionandallcomparisonrecordsretained. InitialguessedPDF404,
 actualpublisherzipdownloadPASS,repeated workbookheader importererrorcorrected
 andretained. Independentrockfullstatevalidation remains OPEN.
+
+## Full restitution comparison report — October 6, 2026
+
+Full standalone HTML/PDF and plots: research/restitution-validation-report/report.html and report.pdf. Rebuild script and report-audit.json retain checks and input hashes. Rock fitting uses 50 training/25 held-out impacts; fixed e_n=.492986, e_t=-.191582, mu=.811484 are effective sphere-fit coefficients, not measured material properties. Height-holdout angle-law improvement9.7% reverses to9.1% worse under angle-group CV; do not promote variable material coefficients. Native75/75, synthetic fixed-rest geometry96/96, rubber native36/36 pass. Three of four rubber surface spin intervals overlap; Superball pad remains16.34 predicted vs18.2+/-0.1 measured. No independent friction or actual rock mesh/inertia validation. Hosted restoration run37415426120 succeeded; newer report runs still pending/in progress. All13 working baseline and per-case2x gate remain OPEN. Initial48 planar reporting errors retained separately; scalar cross-product reporter fix yields final96 passes without solver changes.
