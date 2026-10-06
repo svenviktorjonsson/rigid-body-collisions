@@ -4,7 +4,7 @@ from importlib import import_module
 from pathlib import Path
 import numpy as np
 from rigid_engine import run
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results-v2';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 assert json.loads((H/'controls-v2/summary.json').read_text())['passed']
@@ -19,7 +19,7 @@ for name in plan['cases']:
   start=time.perf_counter();result=run(entry['scene'],backend='temporal',binary=exe,substeps=plan['temporal_substeps'],**setting)
   result['numerical_model'].update(contact_hertz=0,softness={'biasRate':0,'massScale':1,'impulseScale':0},linear_slop_m=1e-6,position_policy='hard_no_bias_with_positive_gap_speculation',graph_policy='serial_overflow',polygon_mass_policy='authored_core_only_skin_massless',observer='actual_applied_impulse_signed_boundary_work')
   if i==0:
-   old=run(entry['scene'],backend='block',binary=ROOT/'build/rigid_double_tight/rigid_runner',dt=.12,primary_steps=1,substeps=1)
+   old=json.loads((ROOT/'research/rapid-friction/results-planar-discovery'/name/'seams_off_reference_0.json').read_text())['result']
    parity={'mass_max_error':float(np.max(abs(np.asarray(old['mass'])-result['mass']))),'inertia_max_error':float(np.max(abs(np.asarray(old['inertia'])-result['inertia']))),'initial_state_max_error':float(np.max(abs(np.asarray(old['states'][0])-result['states'][0])))}
    save(target/'authored-model-parity.json',parity);assert all(v<=1e-10 for v in parity.values()),parity
   record={'complete':True,'result':result,'physical':base.physical(entry,result,gates),'setting':setting,'elapsed_s_descriptive':time.perf_counter()-start}

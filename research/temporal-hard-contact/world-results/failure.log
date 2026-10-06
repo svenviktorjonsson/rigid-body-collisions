@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py", line 22, in <module>
+    old=run(entry['scene'],backend='block',binary=ROOT/'build/rigid_double_tight/rigid_runner',dt=.12,primary_steps=1,substeps=1)
+  File "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py", line 170, in run
+    raise ValueError("Initial speed would be clipped by the block backend's translation cap")
+ValueError: Initial speed would be clipped by the block backend's translation cap
