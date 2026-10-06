@@ -1,0 +1,46 @@
+{
+  "objective": "Complete fixed-coefficient restitution comparison and assess evidence for condition-dependent coefficients without substituting missing geometry.",
+  "model_source": "d9992565e8864c7dce237acd1abdf1462e5deda0",
+  "experimental_source": "https://doi.org/10.5194/nhess-18-3045-2018",
+  "input_xlsx_sha256": "328d727800aba8a00f1ec6c6ef46b85f440f0bad9335c395d88727ca1963e77f",
+  "holdout": "All release-height4.5m observations; no parameters selected from these outcomes. Training uses2.5/3.5m.",
+  "extra_validation": "Leave one complete landing-plate-angle group out, four folds; train and holdout separation by experimental condition.",
+  "candidate_models": [
+    "fixed en/et/mu",
+    "separate fixed coefficients per diameter",
+    "linear impact-angle dependence with physical bounds"
+  ],
+  "assumptions": [
+    "homogeneous sphere inertia rather than unavailable actual facet meshes",
+    "zero incoming spin approximation; reported norm<=3rad/s",
+    "coplanar signed velocity reconstruction from published magnitudes",
+    "fixed support plane",
+    "no independent same-pair friction measurement"
+  ],
+  "fit_residuals": "normal and tangential outgoing velocities and R*angular speed, normalized by incoming total speed",
+  "constraints": {
+    "normal": [
+      0,
+      1
+    ],
+    "tangential": [
+      -1,
+      1
+    ],
+    "friction": [
+      0,
+      2
+    ]
+  },
+  "native_verification": "Run held-out fixed-coefficient cases through actual3D native solver and independently verify analytic endpoints and energy/work. Retain invalid cases/errors.",
+  "geometry_study": "Fixed coefficients for non-spherical2D rectangles and3D boxes/hulls; vary attitude, velocity direction and incidence without fitting any material coefficient.",
+  "interpretation": "Model fit improvements identify predictive condition dependence only under sphere assumptions; unavailable actual contact points prevent material-location/direction identification. No full actual-shape or independent material proof claim.",
+  "deliverables": [
+    "full HTML report",
+    "standalone PDF report",
+    "plots",
+    "machine-readable fit/native/geometry evidence",
+    "provenance and rejection history"
+  ],
+  "existing_13_case_benchmark": "Unchanged; baseline/performance gate remain open."
+}
