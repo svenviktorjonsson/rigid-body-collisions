@@ -25,6 +25,17 @@ class Body:
 def skew(r):
     x,y,z=r;return np.array([[0.,-z,y],[z,0.,-x],[-y,x,0.]])
 def contact_map(body,r):return np.column_stack((np.eye(3),-skew(np.asarray(r))/body.ell))
+def contact_wrench_map(body,r,contact_ell):
+    """Map body motion to (contact velocity, contact_ell*angular velocity).
+
+    The dual impulse is (j, k/contact_ell), where k is a free torque impulse
+    about the declared contact reference point, excluding r cross j.
+    This is an algebraic operator, not a constitutive contact-moment law.
+    """
+    if not np.isfinite(contact_ell) or contact_ell<=0:
+        raise ValueError('positive finite contact reference length required')
+    return np.vstack((contact_map(body,r),
+                      np.column_stack((np.zeros((3,3)),contact_ell/body.ell*np.eye(3)))))
 @dataclass
 class Contact:
     """impulse on a, opposite impulse on b; r is world COM-to-point."""

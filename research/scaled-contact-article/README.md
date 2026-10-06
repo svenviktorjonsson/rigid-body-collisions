@@ -21,3 +21,9 @@ The active article now uses figures/deviation-map.png/pdf in place of the bar ch
 ## Expanded literature review
 
 The targeted review in `../literature-novelty-review/report.pdf` and `review.json` identifies an explicit planar velocity/torque dual-scaling precedent in Vose et al. RSS2011 (appendix footnote1, PDFp7) and spatial deformation/moment scaling in Zhang et al.2014 (section3.3 eq21). Momentum follows by dual impulse integration; exact symbol arrangement was not found, which does not establish priority. Prior art also covers two restitution parameters, coupled Delassus operators, matrix-free contact evaluation and dissipation issues. No completed new research contribution is claimed. The suggested research direction is independently specified material-pair prediction on held-out full-motion data, with model comparisons and uncertainty.
+
+## Independent torque impulse correction
+
+The complete contact update is `delta L = r cross j + k`, where `k` is the independent torque impulse about the declared contact reference point. The article now derives the full scaled wrench, its 2D/3D dual map, coupled effective mass and energy/work identity. A central normal impact with axial spin explicitly demonstrates why a force-only point contact cannot resist that spin. The prescribed torque example is an algebra control, not a measured material prediction.
+
+`wrench_impulse_audit.py` checks 100 random two-body 3D controls and 100 planar controls, including scaling invariance, reference-point shifts, angular momentum, duality and moving-boundary work. Latest evidence is `wrench-impulse-v2/`; v1 preserves the preceding audit before the central-spin example was added. Rerun with a fresh `--output` directory. The production solver remains force-only: no independently characterized predictive rolling/torsional moment law has been implemented, and existing experimental comparisons have not been relabeled as full-wrench validation.

@@ -68,14 +68,38 @@ The physical velocity at the contact is
 \end{equation}
 The plus sign is obtained by reversing the cross-product order, since $\boldsymbol\omega\times\mathbf r=(-\mathbf r)\times\boldsymbol\omega$. It does \emph{not} mean ordinary matrix factors commute. Associativity allows $\mathbf R\Lref\boldsymbol\omega$ to be written without redundant parentheses, but does not allow $\mathbf A\mathbf B$ to be replaced by $\mathbf B\mathbf A$.
 
-A contact impulse $\mathbf j$ changes momentum by
+A general contact transfers both a force impulse $\mathbf j=\int\mathbf f_c\,dt$ and a torque impulse $\mathbf k=\int\boldsymbol\tau_c\,dt$. Here $\boldsymbol\tau_c$ is the free contact moment about the declared contact reference point, excluding the lever-arm moment already represented by $\mathbf r\times\mathbf f_c$. The complete momentum update is
 \begin{equation}
-\Delta\mathbf P=\mathbf C^T\mathbf j
-=\begin{bmatrix}\mathbf j\\\mathbf R^T\mathbf j\end{bmatrix}
-=\begin{bmatrix}\mathbf j\\\boldsymbol\rho\times\mathbf j\end{bmatrix}.
+\Delta\mathbf p=\mathbf j,\qquad
+\boxed{\Delta\mathbf L=\mathbf r\times\mathbf j+\mathbf k},\qquad
+\Delta\mathbf P=\mathbf C^T\mathbf j+
+\begin{bmatrix}0\\\mathbf k/\ell\end{bmatrix}.
 \end{equation}
-Thus $\Delta\mathbf L=\mathbf r\times\mathbf j$ with the correct sign. The transpose follows directly from work duality:
-$\mathbf V^T\mathbf C^T\mathbf j=\mathbf v_c^T\mathbf j$.
+For a frozen contact lever arm, a distributed traction impulse over a contact patch $\mathcal A$ produces
+\begin{equation}
+\mathbf j=\int\!\int_{\mathcal A}\mathbf t(\mathbf x,t)\,dA\,dt,\qquad
+\mathbf k=\int\!\int_{\mathcal A}(\mathbf x-\mathbf x_c)\times\mathbf t(\mathbf x,t)\,dA\,dt.
+\end{equation}
+An independently applied couple is included in $\mathbf k$ as well. This decomposition accounts for the same physical wrench exactly once. If the reference point shifts by $\mathbf a$, then $\mathbf r'=\mathbf r+\mathbf a$ and $\mathbf k'=\mathbf k-\mathbf a\times\mathbf j$, so $\mathbf r'\times\mathbf j+\mathbf k'=\mathbf r\times\mathbf j+\mathbf k$.
+
+Choose a fixed contact length $\ell_c>0$ and define the scaled contact wrench impulse and conjugate contact motion
+\begin{equation}
+\boldsymbol\eta=\begin{bmatrix}\mathbf j\\\mathbf k/\ell_c\end{bmatrix},\qquad
+\mathbf U_c=\begin{bmatrix}\mathbf v_c\\\ell_c\boldsymbol\omega\end{bmatrix},\qquad
+\mathbf K=\begin{bmatrix}\mathbf1&\mathbf R\\0&(\ell_c/\ell)\mathbf1\end{bmatrix}.
+\end{equation}
+Then the additive form carries the independent torque impulse without a separate update rule:
+\begin{equation}
+\mathbf U_c=\mathbf K\mathbf V,\qquad
+\Delta\mathbf P=\mathbf K^T\boldsymbol\eta
+=\begin{bmatrix}\mathbf j\\\boldsymbol\rho\times\mathbf j+\mathbf k/\ell\end{bmatrix}.
+\end{equation}
+Work duality gives
+\begin{equation}
+\mathbf V^T\Delta\mathbf P=\mathbf v_c^T\mathbf j+\boldsymbol\omega^T\mathbf k
+=\mathbf U_c^T\boldsymbol\eta.
+\end{equation}
+Taking $\ell_c=\ell$ makes the lower-right block of $\mathbf K$ an identity. The ideal force-only point-contact specialization sets $\mathbf k=0$ and retains just the three rows $\mathbf C$; it cannot represent a finite-patch free torque impulse. Contact wrench/moment models and torsional/rolling friction have established precedents\cite{drakewrench,mujocowrench}.
 
 For planar motion, $\omega$, $L$, and $I$ are scalars, while translation is two-dimensional. The same construction becomes
 \begin{equation}
@@ -85,39 +109,59 @@ For planar motion, $\omega$, $L$, and $I$ are scalars, while translation is two-
 \mathbf R=\frac1\ell\begin{bmatrix}-r_y\\r_x\end{bmatrix},\quad
 \mathbf C=[\mathbf1_2\ \mathbf R].
 \end{equation}
-Thus $\mathbf C\mathbf V=\mathbf v+\omega(-r_y,r_x)^T$ and the final component of $\mathbf C^T\mathbf j$ is $(r_xj_y-r_yj_x)/\ell$. The three-dimensional transpose derivation therefore carries over without inventing a planar angular vector.
+Thus $\mathbf C\mathbf V=\mathbf v+\omega(-r_y,r_x)^T$. Include the scalar free torque impulse $k$ through
+\begin{equation}
+\boldsymbol\eta=\begin{bmatrix}j_x\\j_y\\k/\ell_c\end{bmatrix},\quad
+\mathbf K=\begin{bmatrix}1&0&-r_y/\ell\\0&1&r_x/\ell\\0&0&\ell_c/\ell\end{bmatrix},\quad
+\Delta L=r_xj_y-r_yj_x+k.
+\end{equation}
+The same transpose and duality construction therefore carries over without inventing a planar angular vector.
 
 \section{Two bodies and simultaneous contact}
-Orient a contact normal from body B towards body A. Apply $+\mathbf j$ to A and $-\mathbf j$ to B at the same world point. The relative contact velocity and its stacked Jacobian are
+Orient a contact normal from body B towards body A. Transfer $+\mathbf j,+\mathbf k$ to A and $-\mathbf j,-\mathbf k$ to B, with the force impulse applied at the same world reference point. Use the same contact scale $\ell_c$ for the two contact maps, even if their body scales differ. The relative contact motion and stacked Jacobian are
 \begin{equation}
-\mathbf u=\mathbf C_A\mathbf V_A-\mathbf C_B\mathbf V_B
-=\mathbf G\mathbf V,\qquad
-\mathbf G=[\mathbf C_A\ {-\mathbf C_B}],\qquad
-\mathbf M=\operatorname{diag}(\mathbf M_A,\mathbf M_B).
+\mathbf U=\begin{bmatrix}\mathbf u\\\ell_c\boldsymbol\Omega\end{bmatrix}
+=\mathbf K_A\mathbf V_A-\mathbf K_B\mathbf V_B
+=\mathbf G_w\mathbf V,\qquad
+\mathbf G_w=[\mathbf K_A\ {-\mathbf K_B}],
 \end{equation}
-A genuine relative velocity requires subtraction; hiding it by declaring unrelated vectors positive would obscure conservation. Signed blocks retain a clean sum of impulse effects:
+where $\mathbf u=\mathbf v_{c,A}-\mathbf v_{c,B}$ and $\boldsymbol\Omega=\boldsymbol\omega_A-\boldsymbol\omega_B$. For $\mathbf M=\operatorname{diag}(\mathbf M_A,\mathbf M_B)$,
 \begin{equation}
-\Delta\mathbf P=\mathbf G^T\mathbf j,\qquad
-\mathbf V^+=\mathbf V^-+\mathbf M^{-1}\mathbf G^T\mathbf j,\qquad
-\mathbf u^+=\mathbf u^-+\mathbf W\mathbf j,
+\Delta\mathbf P=\mathbf G_w^T\boldsymbol\eta,\qquad
+\mathbf V^+=\mathbf V^-+\mathbf M^{-1}\mathbf G_w^T\boldsymbol\eta,\qquad
+\mathbf U^+=\mathbf U^-+\mathbf W_w\boldsymbol\eta,
 \end{equation}
-where the contact inverse effective mass (Delassus operator) is
+with the full contact-wrench inverse effective mass
 \begin{equation}
-\mathbf W=\mathbf G\mathbf M^{-1}\mathbf G^T
-=\mathbf C_A\mathbf M_A^{-1}\mathbf C_A^T
-+\mathbf C_B\mathbf M_B^{-1}\mathbf C_B^T.
+\mathbf W_w=\mathbf G_w\mathbf M^{-1}\mathbf G_w^T
+=\mathbf K_A\mathbf M_A^{-1}\mathbf K_A^T
++\mathbf K_B\mathbf M_B^{-1}\mathbf K_B^T.
 \end{equation}
-It is symmetric positive semidefinite; the reference length cancels from its physical predictions. Stack Jacobian rows for every contact to obtain one simultaneous system. Off-diagonal blocks couple contacts sharing a body and must not be discarded in rapid group motion. A fixed boundary contributes its prescribed contact velocity but no finite inverse mass.
+This symmetric positive-semidefinite operator couples force and torque impulses, translation and relative spin, and all contacts sharing a body. A fixed boundary contributes its prescribed contact velocity and angular velocity but no finite inverse mass. Stack every contact's active force and moment components; do not discard off-diagonal coupling in rapid group motion.
 
-For a frozen configuration during an impulse, the exact kinetic-energy increment is
+For the force-only specialization $\mathbf k=0$, the first three rows of each $\mathbf K$ are $\mathbf C$, giving $\mathbf G=[\mathbf C_A\ {-\mathbf C_B}]$ and $\mathbf W=\mathbf G\mathbf M^{-1}\mathbf G^T$. The physical predictions are independent of the chosen body and contact coordinate lengths when impulses are transformed consistently.
+
+For a frozen configuration during an impulse, the exact kinetic-energy increment for two dynamic bodies, or one body and a stationary boundary, is
 \begin{equation}
-\Delta T=\mathbf j^T\mathbf u^-+\tfrac12\mathbf j^T\mathbf W\mathbf j.
+\boxed{\Delta T=\boldsymbol\eta^T\mathbf U^-+\tfrac12\boldsymbol\eta^T\mathbf W_w\boldsymbol\eta}.
 \end{equation}
-For multiple contacts, use the stacked vectors and the full operator. The displayed $\Delta T$ identity applies when both bodies are dynamic (or a boundary is stationary). For a moving prescribed boundary with velocity $\mathbf v_b$, $W_{\rm actuator}=\mathbf j^T\mathbf v_b$ is work delivered to the dynamic system, so
+The linear work term is explicitly $\mathbf j^T\mathbf u^-+\mathbf k^T\boldsymbol\Omega^-$. This retains torque-impulse work, including pure relative spin. For a moving prescribed boundary,
 \begin{equation}
-\Delta T-W_{\rm actuator}=\mathbf j^T\mathbf u_{\rm relative}^-+\tfrac12\mathbf j^T\mathbf W\mathbf j.
+W_{\rm actuator}=\mathbf j^T\mathbf v_b(\mathbf x_c)+\mathbf k^T\boldsymbol\omega_b,\qquad
+\Delta T-W_{\rm actuator}
+=\boldsymbol\eta^T\mathbf U_{\rm relative}^-+\tfrac12\boldsymbol\eta^T\mathbf W_w\boldsymbol\eta.
 \end{equation}
-Use this work-corrected quantity when judging dissipation. Free flight uses the actual rigid-body evolution, including changing world inertia and gyroscopic dynamics; the impulsive relation does not replace that evolution.
+For multiple contacts, use stacked vectors and the full operator. Free flight still uses the actual rigid-body evolution, changing world inertia and gyroscopic dynamics; the impulsive relation does not replace that evolution.
+
+\subsection{Pure spin with a central normal impact}
+For a sphere on a plane with $\mathbf r=-R\mathbf n$, a central normal force impulse $\mathbf j=j_n\mathbf n$ has $\mathbf r\times\mathbf j=0$. If the sphere spins about $\mathbf n$, then $\boldsymbol\omega\times\mathbf r=0$ as well. An ideal force-only point contact consequently cannot change this spin. A nonzero torsional contact impulse gives
+\begin{equation}
+\Delta\mathbf L=\mathbf k,\qquad
+\boldsymbol\omega^+=\boldsymbol\omega^-+\mathbf I^{-1}\mathbf k.
+\end{equation}
+For spin perpendicular to $\mathbf n$, $\boldsymbol\omega\times\mathbf r$ generally produces contact slip, so a tangential force impulse can also change spin through $\mathbf r\times\mathbf j_t$. For a non-spherical off-centre contact even a normal impulse may have a nonzero lever-arm moment. The complete wrench formulation includes each mechanism.
+
+\input{wrench-impulse-v2/spin-example.tex}
 
 \section{Normal and tangential restitution}
 Choose an orthonormal basis $\mathbf Q=[\mathbf n\ \mathbf t_1\ \mathbf t_2]$ and write $\widehat{\mathbf u}=\mathbf Q^T\mathbf u$, $\widehat{\mathbf j}=\mathbf Q^T\mathbf j$. For an approaching geometrically active impact, the endpoint targets are
@@ -128,12 +172,20 @@ u_n^+=-e_nu_n^-,\qquad
 \end{equation}
 The signed tangential convention matters: $e_t=-1$ preserves tangential contact velocity, $e_t=0$ targets sticking, and $e_t>0$ targets slip reversal. For $-1<e_t<0$, tangential contact motion continues in its original direction with reduced magnitude. For example, $e_t=-.2$ gives $\mathbf u_t^+=.2\mathbf u_t^-$: this sign describes the direction of a velocity ratio, not negative elastic stiffness or energy creation. Normal and tangential restitution describe different responses and need not be equal. These are \emph{contact-point} velocities; a centre-of-mass tangential speed ratio is not generally $e_t$. In coupled geometries, actual total energy must still be checked.
 
-Set $\mathbf E=\operatorname{diag}(e_n,e_t,e_t)$. If the isolated full-rank contact can realize all targets, its impulse solves
+Set $\mathbf E=\operatorname{diag}(e_n,e_t,e_t)$. In the force-only specialization $\mathbf k=0$, if the isolated full-rank contact can realize all targets, its impulse solves
 \begin{equation}
 \widehat{\mathbf W}\widehat{\mathbf j}
 +(\mathbf1+\mathbf E)\widehat{\mathbf u}^-=0,
 \qquad \widehat{\mathbf W}=\mathbf Q^T\mathbf W\mathbf Q.
 \end{equation}
+With an independent torque impulse the translational endpoint instead reads
+\begin{equation}
+\widehat{\mathbf W}_{ff}\widehat{\mathbf j}
++\widehat{\mathbf W}_{fk}\widehat{\mathbf k}/\ell_c
++(\mathbf1+\mathbf E)\widehat{\mathbf u}^-=0.
+\end{equation}
+Here the blocks are taken from $\mathbf W_w$ after rotating both its force and moment components into the contact basis. Thus the three translational restitution targets do not determine a six-component contact wrench. Its moment components require a separately specified physical contact law or measured torque impulse. Any rotational restitution targets must likewise be independently justified, with actual coupled energy and friction limits checked.
+
 This residual form keeps addition visible without concealing physical signs. In a contact network, unilateral conditions, friction capacity, and coupled energy constraints may prevent all endpoint targets being realized simultaneously. Bounds on individual coefficients alone do not establish passivity of the coupled system; this issue has prior analysis, including the Moreau-law discussion by Acary and Collins-Craft\cite{acary}. Test the actual energy increment using physical incoming velocities, not a restitution-shifted solver residual.
 
 \section{Friction and the distinction between capacity and compliance}
@@ -148,29 +200,39 @@ For a sphere with radius $R$, inertia $I=\alpha mR^2$, zero initial spin, and fi
 \frac{j_t}{m}=-\frac{\alpha}{1+\alpha}(1+e_t)u_t^-,\qquad
 |\omega^+|=\frac{(1+e_t)|u_t^-|}{(1+\alpha)R}.
 \end{equation}
-When required capacity is exceeded, clamp this scalar impulse to $[-\mu j_n,\mu j_n]$; normal and tangential targets are uncoupled only in this special spherical geometry. Actual non-spherical inertia and lever arms produce coupling through $\mathbf W$.
+These sphere formulas assume $\mathbf k=0$. When required capacity is exceeded, clamp this scalar impulse to $[-\mu j_n,\mu j_n]$; normal and tangential targets are uncoupled only in this special spherical geometry. Actual non-spherical inertia and lever arms produce coupling through $\mathbf W$.
 
 A physically motivated extension would evolve normal indentation and tangential elastic displacement over a finite contact patch, integrate its force and moment, and account for elastic energy storage plus nonnegative dissipation. Restitution would then be an output or a constrained calibration target; adding endpoint restitution on top of an already dissipative compliant rebound risks double counting. A measured distributed moment is distinct from arbitrarily shifting a contact point until one outcome matches.
 
 
+\subsection{Moment capacity is part of the contact law}
+The translational Coulomb inequality alone does not specify $\mathbf k$. A finite patch can supply torsional and rolling moments, or moments from a distributed normal load. For example, simplified necessary capacity bounds may be written
+\begin{equation}
+|k_n|\le b_{\rm twist}j_n,\qquad
+\|\mathbf k_t\|\le b_{\rm roll}j_n,
+\end{equation}
+where $k_n=\mathbf n^T\mathbf k$ and $\mathbf k_t=\mathbf k-k_n\mathbf n$. The physical coefficients $b_{\rm twist},b_{\rm roll}$ have units of length; they are distinct from the freely chosen coordinate lengths $\ell,\ell_c$. Their values and applicability must come from a measured or derived patch law. Separate force/moment bounds are generally not a complete jointly admissible patch-wrench law; integrating common tractions can couple the capacities. No new moment coefficient is fitted to the existing comparison outcomes.
+
+The native comparisons retained here use force-only contacts. Their contact forces can change spin through lever-arm torque, but a separate free contact moment is absent. They therefore do not validate pure torsional spin resistance or a complete contact-wrench law. The corrected derivation identifies that missing mechanism explicitly; it does not silently change the historical comparison numbers.
+
 \section{Efficient practical matrix calculations}
 The scaled notation does not require constructing a dense global inverse. Store each body's mass, shape-frame inertia, attitude, and fixed reference length. For attitude matrix $\mathbf A$, rotate inertia once per pose: $\mathbf I_{\rm world}=\mathbf A\mathbf I_{\rm shape}\mathbf A^T$. Apply the inverse scaled mass to a vector by dividing its translation block by $m$ and solving a three-by-three inertia system for its rotation block, multiplied by $\ell^2$. In 2D the latter is scalar division by $I/\ell^2$. Use factorizations or the rotated inverse of a fixed shape inertia; avoid numerical inversion of a dense many-body matrix.
 
-For a trial stacked contact impulse $\mathbf q$, the matrix-free action $\mathbf W\mathbf q$ has three steps:
+For a trial stacked wrench impulse $\boldsymbol\eta$, the matrix-free action $\mathbf W_w\boldsymbol\eta$ has three steps:
 \begin{enumerate}
-\item Accumulate each incident signed impulse through $\mathbf C_i^T\mathbf q_i$ into each body's scaled momentum increment.
+\item Accumulate each incident signed force and torque impulse through $\mathbf K_i^T\boldsymbol\eta_i$ into each body's scaled momentum increment.
 \item Apply the body's inverse mass block once to its accumulated increment.
-\item Gather the resulting signed contact velocity increments through each $\mathbf C_i$.
+\item Gather the resulting signed contact velocity and scaled relative-spin increments through each $\mathbf K_i$.
 \end{enumerate}
 Shared bodies automatically generate the off-diagonal contact coupling. Coupled matrix-free contact evaluation is already taught in the SIGGRAPH 2022 contact tutorial\cite{siggraph}. This operation scales with bodies and contacts rather than the square of the global contact count. Assemble small island matrices when useful for factorization or diagnostics; preserve the full coupled law and acceptance gates. Independent pairwise impulses are not an equivalent substitute.
 
 A practical prediction requires incoming translation and spin, mass and inertia, contact geometry and normal, and explicit $e_n,e_t,\mu$. For each active approaching contact, construct the restitution target and solve the simultaneous system with nonnegative normal impulse and the exact circular tangential capacity. Report whether each tangential target was realized or capacity-limited, outgoing velocities and spin, momentum balance, and work-corrected energy. Use the physical incoming contact velocity in the energy check. The native implementation has validated coefficient bounds, but not every large-scene trajectory refinement is qualified.
 
-The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the 3D illustrative pair assigns the square root of the pair coefficient to each body because Bullet multiplies body friction, while the 2D wrapper uses the Box2D square-root mixing convention. These checks do not establish a speedup or replace native simultaneous-solver verification. Native material/contact inputs here are $e_n,e_t,\mu$. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
+The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the 3D illustrative pair assigns the square root of the pair coefficient to each body because Bullet multiplies body friction, while the 2D wrapper uses the Box2D square-root mixing convention. These checks do not establish a speedup or replace native simultaneous-solver verification. The demonstrated native force-only material/contact inputs are $e_n,e_t,\mu$. The full wrench matrices derived above are evaluated separately by \texttt{wrench\_impulse\_audit.py}: 100 random dynamic 3D pairs and 100 planar controls check direct force-plus-couple updates, reference-point shifts, coordinate scaling, angular balance and torque-inclusive energy/boundary work. These controls prescribe $\mathbf k$; they do not implement or validate a predictive native moment law. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
 
 \section{Worked three-dimensional corner impact}
 \label{sec:worked3d}
-A rotated cuboid striking a stationary plane makes the full 3D coupling visible: its world inertia is non-diagonal, its contact is off centre, and both incoming translation and spin are three-component vectors. The frozen one-contact calculation below evaluates exactly the matrix equations above.
+A rotated cuboid striking a stationary plane makes the full 3D coupling visible: its world inertia is non-diagonal, its contact is off centre, and both incoming translation and spin are three-component vectors. The frozen one-contact calculation below evaluates the force-only specialization $\mathbf k=0$ of the matrix equations above.
 \input{worked-3d-v1/example.tex}
 
 \section{Mapping prediction deviations}
@@ -329,7 +391,7 @@ For the ball rows, the tangential speed is reconstructed from the published rela
 \caption{Historical conditional and fit-based deviation map. A dot near the origin agrees in combined magnitude and the relative mix of translation and spin. The map is a two-coordinate summary, not a full signed state comparison. The accompanying standalone \texttt{deviation-map.html} supports point inspection; \texttt{deviation-map.json} retains the observable vectors and mapping assumptions.}
 \end{figure}
 
-\begin{thebibliography}{12}
+\begin{thebibliography}{20}
 \bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
 \bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
 \bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
@@ -341,5 +403,7 @@ For the ball rows, the tangential speed is reconstructed from the published rela
 \bibitem{zhang} Y. Zhang, H.-J. Su and Q. Liao, \emph{Mobility criteria of compliant mechanisms based on decomposition of compliance matrices}, Mechanism and Machine Theory 79 (2014), 80--93. Section 3.3, equation 21. \url{https://doi.org/10.1016/j.mechmachtheory.2014.04.010}.
 \bibitem{siggraph} \emph{Contact and Friction Simulation for Computer Graphics}, SIGGRAPH 2022 course notes. Matrix-free tutorial, PDF pp163--164. \url{https://siggraphcontact.github.io/assets/files/SIGGRAPH22_friction_contact_notes.pdf}.
 \bibitem{acary} V. Acary and N. A. Collins-Craft, \emph{On the Moreau--Jean scheme with the Fr\'emond impact law: energy conservation and dissipation properties for elastodynamics with contact, impact and friction}, JTCAM (2025). Section 2.5. \url{https://doi.org/10.46298/jtcam.13480}.
+\bibitem{drakewrench} Drake documentation, \emph{Hydroelastic Contact User Guide}. Distributed contact force and torque. \url{https://drake.mit.edu/doxygen_cxx/group__hydroelastic__user__guide.html}.
+\bibitem{mujocowrench} MuJoCo documentation, \emph{Computation: Contact}. Torsional and rolling friction and higher-dimensional contact wrenches. \url{https://mujoco.readthedocs.io/en/stable/computation.html}.
 \end{thebibliography}
 \end{document}
