@@ -1,0 +1,20 @@
+{
+  "source": "3a2e7d6d18792943788a3340cdb466b756c7f62e",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py": "eb166becc3ae279768a4df1fcb6131228bb0d55e4a521c35cd851c787f39e866",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/plan.json": "0badf39ebd527f05703e4a839a956569e4df2c34601d3bf55c8a39eabab653a3",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/build-receipt.json": "ebdc93eac6ba73d404918a705708e41683bac3d7c98fc781832bcc10232c7edf",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/controls-v3/summary.json": "1e7d764c26463590fb3401aea6adc44fbde89e04e53cb49904410452c7003d53",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_temporal_double_hard_v3/rigid_runner": "a35e5a66430a71ce0fcfd24f6bb9e5c91268f9dd24f893f846d6228835317cc4",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_temporal_double_hard_v3/precision-source.json": "67e750592c9f3ed54d217b7e126ecb20df49ad95ab50d3609e6cc2194e8f14cb",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4"
+  },
+  "runtime": {
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  }
+}

@@ -4,6 +4,30 @@
 
 Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders from published6b63cb2 are COMPLETE:20 full histories/10 genuine rejections (nine velocity, one translation-only position), no qualified references. Independent state/provenance/rejection audits pass. Preserve outputs; never restart over existing files. Isolated exact-component recovery pilots and rotating planar discovery trials are declared under research/large-contact-recovery and research/rapid-friction/planar-discovery-plan.json. Solver/accuracy remediation precedes performance claims.
 
+## Further original-scene evidence — October6
+
+Component128 fresh64-hull1.25us retry clears393 rows but rejects later396 rows
+at the same0.02s output prefix; the failing component has135 rows. Independent
+prefix geometry/inertia/pose/energy and actual rejection checks pass. Isolated
+component192 accepts this exact396 system at9.745044e-9m/s;162/297/393 controls
+still accept,423/276 still decline. Production128 remains unchanged until the
+active125-sphere refinement source/binary guard releases. Keep six seeds.
+
+Isolated temporal hard-contact Float64 Box2D study completes10 rotating planar
+histories and passes all physical gates, but fails every refinement edge. It
+preserves polygon-core mass and exact libm authored rotations; upstream rounded
+mass and Bhaskara approximation would change the original authored model.
+Independent signed per-impulse boundary-work controls, both body orders,
+angular momentum identities and observer state parity pass. Archives/audit:
+research/temporal-hard-contact/. Never adopt or claim qualified/performance.
+
+The276-row exact30-component face-angle search and diverse null-seed control
+still decline; their outputs remain retained. The423 Python root is accepted
+again by the original zero-budget gate, but its large null-pressure search is
+not a robust integrated solver. The first two fresh125-sphere histories complete
+and pass physical gates; their first refinement edge passes. The finest third
+history remains running. No all13 working baseline or requested2x acceptance.
+
 ## Component128 recovery checkpoint — October6
 
 The null-traction helper now supports exact components up to128 rows, retaining
