@@ -331,3 +331,25 @@ New isolated planar simultaneous-contact experiment: CCDoff only enabled,
 retain both prepared points, internal2.5e-11 search/final1e-10 gates unchanged.
 Eight analytical controls and disabled original state parity pass. Both studies
 require published source freeze before full worlds. All13 baseline/2x gates OPEN.
+
+## Hosted checkpoint passes; further numerical studies retained — October6
+
+Run37405326424 forfaf8e95 passes BOTH Python3.11/3.12 including renamed frozen
+research portability comparator; artifact11386722895 archived with file hashes,
+research binaries excluded. New checkpoints retain running hosted jobs instead
+of canceling evidence collection. Current production terminal restart source6414
+passes23 exact replays/163engine/11native/optional no-LAPACK; complete actual8
+original gates pass except latest396, intentionally retained as decline.
+Fresh125-h10us passes earlier759 then fails792rows at accepted prefix.03s;
+failing492 component selected60 support rows, caps not exceeded, searchdeclines.
+Fresh125-h5us clears earlier693 repeatedly then stops906rows at prefix.06s.
+Full original prefix/geometry/rejection audits retained.64-h10us ongoing: terminal
+restart actually clears earlier279; guardedsource/binary still FROZEN.
+Sphere tight1pm slop full first2 levels passphysics, firstspin edge.03628rad/s
+FAILS original.025. Finest level ongoing. Pure100000-sweep PGS withoutNewton
+also declines latest396/later792; no adoption. Two complete planar studies
+(simultaneousCCDoff/bothpoints and follow-up1pm slop) each10 full physicsPASS,
+ALL8 accuracy edgesFAIL; independent archive auditsPASS. New isolated zero-position
+projection test declared, all original geometry/energy/quarter gates unchanged,
+8 analytical controls and disabled-original state parityPASS. All13 working
+baseline/2x gates OPEN; no performance ranking from these descriptive timings.
