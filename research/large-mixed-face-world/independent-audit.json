@@ -3,7 +3,18 @@
   "records": [
     {
       "case": "hull64_h10us",
-      "pending": true,
+      "full_history": true,
+      "physical_passed": true,
+      "metrics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -59362.92989046738,
+        "container_surface_excess_m": 0.0003692758228360793,
+        "sampled_container_surface_excess_m": 7.523862078917531e-07,
+        "contact_residual_m_s": 9.995983645365269e-09,
+        "position_residual_m_s": 7.77824027409224e-09
+      },
+      "source_binary_runtime_verified": true,
+      "current_live_unchanged": true,
       "reference_qualified": false,
       "performance_qualified": false
     },

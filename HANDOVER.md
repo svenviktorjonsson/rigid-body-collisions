@@ -412,3 +412,12 @@ independent archive auditPASS. New integrated mixed-face production worlds:
 completed outcomes. Strong-contact release search also genuinely declines these
 later/finer captures; no adoption. Hosted df3fbc5 both jobsPASS; new integration
 checkpoint ec9e2dc still running. ALL13 baseline/2x gates remain OPEN.
+
+Final5c75fa9 original64-h10us world now COMPLETE .12s/physicsPASS;939.744s
+concurrent descriptive time, not performance measurement. Final independent audit
+covers full64-h10 plus genuine393/294/792 rejects and accepted prefixes, PASS.
+Spatial source/binary/runtime guard remains authenticated; no world is active now.
+All13 accuracy-baseline/2x gates remain OPEN. Public Chant inventory inspects82
+CSV files,41 valid gyro/energy files; mixed resultant/component angular units and
+energy-implied masses recorded. Inferred energy-formula inertia is not measured
+inertia; full coordinate/contact inputs still unverified, no friction fit claimed.
