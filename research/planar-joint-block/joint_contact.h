@@ -62,7 +62,7 @@ static bool physicsJointContact(b2ContactVelocityConstraint* vc,b2Vec2& vA,doubl
     for(int i=0;i<n;i++)for(int j=0;j<k;j++)q[i]+=C[i][j]*(seed[j]+delta[j]);
     // The same cone cleanup as an actual accumulated impulse, then recheck.
     for(int point=0;point<points;point++) {
-      int a=2*point;q[a]=std::max(0.,q[a]);q[a+1]=std::clamp(q[a+1],-mu*q[a],mu*q[a]);
+      int a=2*point;q[a]=std::max(0.,q[a]);q[a+1]=std::max(-mu*q[a],std::min(q[a+1],mu*q[a]));
     }
     double w[4]{};bool accepted=true;
     for(int i=0;i<n;i++){w[i]=-rhs[i];for(int j=0;j<n;j++)w[i]+=M[i][j]*q[j];if(!std::isfinite(q[i]) || !std::isfinite(w[i]))accepted=false;}

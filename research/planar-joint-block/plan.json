@@ -1,7 +1,7 @@
 {
   "source": "af52471d612eabde856846e3d5491fcdcdfaa37d",
   "scope": "Isolated Float64 Box2D2.4.1/1um numerical contact solve change only. Joint normal/tangent solve on existing1/2-point constraint block; enumerate at most16 off/stick/slip-sign faces, solve at most4 unknowns, warm nearest root. Same normal restitution bias, friction coefficient, contact geometry, core mass, rotation, position12, seamsfalse. Original solver fallback if no independently checked local root; no failed candidate applied. Strict local1e-10m/s normal/friction/support/finite gate. Disabled prototype must preserve original tight states. Analytic moving-wall one-step circle/square controls and unchanged world full physics plus BOTH quarter-budget refinement edges required. No adoption or speedup claim before qualification.",
-  "binary": "build/rigid_double_joint/rigid_runner",
+  "binary": "build/rigid_double_joint_v2/rigid_runner",
   "cases": [
     "2d_disks",
     "2d_mixed_polygons"
