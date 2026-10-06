@@ -59,3 +59,23 @@ use and restricts redistribution of articles.
 This calibration study does not change authored materials or acceptance gates in
 the existing 13-case benchmark. Its all-case working baseline and ≥2× performance
 gate remain open.
+
+## Synthetic size/spin controls completed
+
+`size_spin_controls.py` runs 24 one-impact cases: diameters46/58/100mm in2D/3D,
+peripheral incoming spin−2/0/1/2m/s, contact friction0.4 and zero restitution.
+Declared uniform areal/volume densities give the appropriate disk/sphere inertia;
+these are synthetic masses, not the experimental Superball masses above.
+Independent clipped tangential impulse and normal impulse predict outgoing
+velocity/spin. All24 pass with the isolated planar simultaneous rounded-union
+binary and current production3D binary; max velocity/spin error1.0502e−9,
+kinetic passivity holds. BinarySHA256 values and every complete scene/state record
+are retained. Neither a compliant-rubber fit nor all-world qualification follows.
+
+The first receipt write failed on NumPy boolean JSON serialization; its stderr
+and attempted output remain in `synthetic-size-spin-controls-initial-error`.
+The completed original-planar comparator run is retained separately:15/24 pass,
+9/12 planar cases miss tangential response in this one-step impact. All12 spatial
+cases pass. The subsequent isolated planar solver run retains all24 passes.
+Do not overwrite the original-planar failures or characterize the whole production
+2D solver as qualified from the isolated research solver's result.

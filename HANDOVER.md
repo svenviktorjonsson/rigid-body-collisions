@@ -421,3 +421,11 @@ All13 accuracy-baseline/2x gates remain OPEN. Public Chant inventory inspects82
 CSV files,41 valid gyro/energy files; mixed resultant/component angular units and
 energy-implied masses recorded. Inferred energy-formula inertia is not measured
 inertia; full coordinate/contact inputs still unverified, no friction fit claimed.
+
+Rubber size/spin synthetic controls COMPLETE:24 cases,46/58/100mm diameters,
+2D/3D,peripheral spin−2/0/1/2m/s,declared uniform masses/disk-vs-sphere inertia,
+independent normal/tangential impulse+energy checks. Current production3D and
+isolated planar rounded-union joint solver ALL24PASS,maxstateerror1.0502e−9.
+Original planar comparator9cases miss tangential response at first contact;
+all failures and initial NumPybool serialization error retained. This is not a
+rubber calibration, production2D/global-world acceptance or performance claim.

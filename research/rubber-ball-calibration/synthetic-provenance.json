@@ -1,0 +1,18 @@
+{
+  "head_at_run": "e4555e0accab07ee08f5b0e0a23df50335fa0193",
+  "source_changed": false,
+  "source_receipts": [
+    "research/planar-global-rounded-union/build-receipt.json",
+    "research/large-mixed-face-world/binary-snapshot.json"
+  ],
+  "passed_cases": 24,
+  "max_velocity_spin_error": 1.0501963743081433e-09,
+  "production_planar_comparator_passed": false,
+  "experimental_fit_performed": false,
+  "all_case_baseline_qualified": false,
+  "performance_qualified": false,
+  "source_receipt_sha256": {
+    "research/planar-global-rounded-union/build-receipt.json": "83ec49bf0446c043f9e0c0020c5b4e704760da540b7f2dea494189f4be862db1",
+    "research/large-mixed-face-world/binary-snapshot.json": "1a634b8e6a8caa1e48ff9804b022e623fb9c83cda6d3bc8d76e16cd23d221a4c"
+  }
+}

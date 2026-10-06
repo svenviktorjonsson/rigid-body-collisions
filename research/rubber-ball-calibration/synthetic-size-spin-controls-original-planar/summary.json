@@ -1,0 +1,539 @@
+{
+  "passed": false,
+  "case_count": 24,
+  "records": [
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.019942830164988004,
+      "inertia_kg_m2": 5.274878578639327e-06,
+      "expected_velocity_spin": [
+        0.6,
+        0.0,
+        52.173913043478265
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        86.95652173913044
+      ],
+      "max_velocity_spin_error": 34.78260869565217,
+      "kinetic_change_J": -0.009971415082494002,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.019942830164988004,
+      "inertia_kg_m2": 5.274878578639327e-06,
+      "expected_velocity_spin": [
+        0.6666666666666666,
+        0.0,
+        -28.985507246376812
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "max_velocity_spin_error": 28.985507246376812,
+      "kinetic_change_J": -0.009971415082494002,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.019942830164988004,
+      "inertia_kg_m2": 5.274878578639327e-06,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        -43.47826086956522
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -43.47826086956522
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.009971415082494002,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.019942830164988004,
+      "inertia_kg_m2": 5.274878578639327e-06,
+      "expected_velocity_spin": [
+        1.3333333333333335,
+        0.0,
+        -57.971014492753625
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -86.95652173913044
+      ],
+      "max_velocity_spin_error": 28.985507246376812,
+      "kinetic_change_J": -0.009971415082494002,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.03170495306002819,
+      "inertia_kg_m2": 1.3331932761741855e-05,
+      "expected_velocity_spin": [
+        0.6,
+        0.0,
+        41.37931034482758
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        68.9655172413793
+      ],
+      "max_velocity_spin_error": 27.586206896551722,
+      "kinetic_change_J": -0.015852476530014092,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.03170495306002819,
+      "inertia_kg_m2": 1.3331932761741855e-05,
+      "expected_velocity_spin": [
+        0.6666666666666667,
+        0.0,
+        -22.988505747126435
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "max_velocity_spin_error": 22.988505747126435,
+      "kinetic_change_J": -0.015852476530014096,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.03170495306002819,
+      "inertia_kg_m2": 1.3331932761741855e-05,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        -34.48275862068965
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -34.48275862068965
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.015852476530014096,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.03170495306002819,
+      "inertia_kg_m2": 1.3331932761741855e-05,
+      "expected_velocity_spin": [
+        1.3333333333333333,
+        0.0,
+        -45.977011494252864
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -68.9655172413793
+      ],
+      "max_velocity_spin_error": 22.98850574712644,
+      "kinetic_change_J": -0.015852476530014092,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.09424777960769382,
+      "inertia_kg_m2": 0.0001178097245096173,
+      "expected_velocity_spin": [
+        0.5999999999999999,
+        0.0,
+        24.0
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        40.0
+      ],
+      "max_velocity_spin_error": 16.0,
+      "kinetic_change_J": -0.04712388980384691,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.09424777960769382,
+      "inertia_kg_m2": 0.0001178097245096173,
+      "expected_velocity_spin": [
+        0.6666666666666666,
+        0.0,
+        -13.333333333333332
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "max_velocity_spin_error": 13.333333333333332,
+      "kinetic_change_J": -0.04712388980384691,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.09424777960769382,
+      "inertia_kg_m2": 0.0001178097245096173,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        -20.0
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -20.0
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.04712388980384691,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.09424777960769382,
+      "inertia_kg_m2": 0.0001178097245096173,
+      "expected_velocity_spin": [
+        1.3333333333333335,
+        0.0,
+        -26.666666666666668
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        -40.0
+      ],
+      "max_velocity_spin_error": 13.333333333333332,
+      "kinetic_change_J": -0.04712388980384691,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": false
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.06115801250596322,
+      "inertia_kg_m2": 1.2941035446261817e-05,
+      "expected_velocity_spin": [
+        0.6,
+        0.0,
+        -43.47826086956521
+      ],
+      "measured_velocity_spin": [
+        0.6000000000000008,
+        0.0,
+        -43.47826086956531
+      ],
+      "max_velocity_spin_error": 9.947598300641403e-14,
+      "kinetic_change_J": -0.0868443777584677,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.06115801250596322,
+      "inertia_kg_m2": 1.2941035446261817e-05,
+      "expected_velocity_spin": [
+        0.7142857142857142,
+        0.0,
+        31.055900621118017
+      ],
+      "measured_velocity_spin": [
+        0.7142857142857143,
+        0.0,
+        31.055900621118013
+      ],
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.03931586518240493,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.06115801250596322,
+      "inertia_kg_m2": 1.2941035446261817e-05,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        43.47826086956522
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        43.47826086956522
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.030579006252981614,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.06115801250596322,
+      "inertia_kg_m2": 1.2941035446261817e-05,
+      "expected_velocity_spin": [
+        1.2857142857142858,
+        0.0,
+        55.900621118012424
+      ],
+      "measured_velocity_spin": [
+        1.2857142857142856,
+        0.0,
+        55.900621118012424
+      ],
+      "max_velocity_spin_error": 2.220446049250313e-16,
+      "kinetic_change_J": -0.039315865182404944,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.12259248516544236,
+      "inertia_kg_m2": 4.124011200965481e-05,
+      "expected_velocity_spin": [
+        0.6,
+        0.0,
+        -34.482758620689644
+      ],
+      "measured_velocity_spin": [
+        0.6000000000000008,
+        0.0,
+        -34.48275862068971
+      ],
+      "max_velocity_spin_error": 6.394884621840902e-14,
+      "kinetic_change_J": -0.174081328934928,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.12259248516544236,
+      "inertia_kg_m2": 4.124011200965481e-05,
+      "expected_velocity_spin": [
+        0.7142857142857143,
+        0.0,
+        24.63054187192118
+      ],
+      "measured_velocity_spin": [
+        0.7142857142857143,
+        0.0,
+        24.630541871921185
+      ],
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.07880945474921294,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.12259248516544236,
+      "inertia_kg_m2": 4.124011200965481e-05,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        34.48275862068965
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        34.48275862068965
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.06129624258272118,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.12259248516544236,
+      "inertia_kg_m2": 4.124011200965481e-05,
+      "expected_velocity_spin": [
+        1.2857142857142856,
+        0.0,
+        44.33497536945812
+      ],
+      "measured_velocity_spin": [
+        1.2857142857142856,
+        0.0,
+        44.33497536945812
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.07880945474921297,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": -2.0,
+      "mass_kg": 0.6283185307179587,
+      "inertia_kg_m2": 0.0006283185307179589,
+      "expected_velocity_spin": [
+        0.5999999999999999,
+        0.0,
+        -20.000000000000004
+      ],
+      "measured_velocity_spin": [
+        0.6000000000000006,
+        0.0,
+        -20.000000000000036
+      ],
+      "max_velocity_spin_error": 3.197442310920451e-14,
+      "kinetic_change_J": -0.8922123136195007,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 0.0,
+      "mass_kg": 0.6283185307179587,
+      "inertia_kg_m2": 0.0006283185307179589,
+      "expected_velocity_spin": [
+        0.7142857142857143,
+        0.0,
+        14.28571428571428
+      ],
+      "measured_velocity_spin": [
+        0.7142857142857143,
+        0.0,
+        14.285714285714283
+      ],
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.4039190554615449,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 1.0,
+      "mass_kg": 0.6283185307179587,
+      "inertia_kg_m2": 0.0006283185307179589,
+      "expected_velocity_spin": [
+        1.0,
+        0.0,
+        20.0
+      ],
+      "measured_velocity_spin": [
+        1.0,
+        0.0,
+        20.0
+      ],
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.31415926535897937,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "peripheral_spin_m_s": 2.0,
+      "mass_kg": 0.6283185307179587,
+      "inertia_kg_m2": 0.0006283185307179589,
+      "expected_velocity_spin": [
+        1.2857142857142856,
+        0.0,
+        25.714285714285722
+      ],
+      "measured_velocity_spin": [
+        1.2857142857142856,
+        0.0,
+        25.714285714285715
+      ],
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.40391905546154505,
+      "synthetic_only": true,
+      "experimental_calibration": false,
+      "passed": true
+    }
+  ],
+  "binaries": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/rigid_runner": "a46eaa4ee3e2da99e5f7f8c66abc17e5edb848bb4b8fa56339c1703e17c66306",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner": "e7c27f7a69267324795bd9e028bddc629e9f85f2f8783c60d0a888f34c922607"
+  },
+  "scope": "Synthetic uniform disk/sphere radius and initial-spin controls. Inelastic rigid Coulomb model, no rubber compliance or measured friction fit. No global refinement/performance qualification."
+}
