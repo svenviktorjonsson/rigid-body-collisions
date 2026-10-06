@@ -4,7 +4,12 @@
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue,pdftitle={Rigid-body contact in combined velocity and momentum notation},pdfauthor={Viktor: notation and model}}
 \newcommand{\rw}[1]{\mathord{#1\mkern2mu\wedge}}
 \newcommand{\lwedge}[1]{\mathord{\wedge\mkern2mu#1}}
-\newcommand{\id}{1}
+\DeclareFontFamily{U}{articlebb}{}
+\DeclareFontShape{U}{articlebb}{m}{n}{<-6> bbold5 <6-9> bbold7 <9-> bbold10}{}
+\DeclareMathAlphabet{\matrixdigit}{U}{articlebb}{m}{n}
+\pdfmapfile{+fonts/blackboard/bbold.map}
+\newcommand{\id}{\matrixdigit{1}}
+\newcommand{\zmat}{\matrixdigit{0}}
 \newcommand{\inertia}{\mathbb I}
 \title{Rigid-body contact in combined velocity and momentum notation\\\large Symbolic mechanics, directional impulses and coupled matrix calculations}
 \author{Viktor's notation: $\rw{\mathbf{r}}$, $\ell\boldsymbol{\omega}$ and $\mathbf{L}/\ell$}
@@ -18,9 +23,9 @@ We combine linear velocity and length-scaled angular velocity in a single vector
 \section{Notation and scope}
 Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ denotes an impulse; uppercase $\Delta$ denotes a change in a state or global quantity. Component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
 
-The direction $\mathbf{t}$ follows relative velocity at the collision point, and $\mathbf{s}$ follows relative angular velocity. They are motion-defined directions, not two axes chosen to complete a tangent basis. The contact normal is $\mathbf{n}$. The allowed directional impulse components must be respected; a linear spin component $\delta \mathbf{p}_s$ is not introduced.
+The direction $\hat{\mathbf{t}}$ follows relative velocity at the collision point, and $\hat{\mathbf{s}}$ follows relative angular velocity. They are motion-defined directions, not two axes chosen to complete a tangent basis. The unit contact normal is $\hat{\mathbf{n}}$. Hats denote unit directions. Identity and zero matrix blocks use double-struck $\id$ and $\zmat$; their dimensions follow from the surrounding blocks. Ordinary numeric entries in explicit component matrices remain scalars. The allowed directional impulse components must be respected; a linear spin component $\delta p_s$ is not introduced.
 
-The directional impulse labels are $\delta \mathbf{p}_n$, $\delta \mathbf{p}_t$, $\delta \mathbf{L}_s$ and $\delta \mathbf{L}_n$. The normal and sliding linear impulses are distinct from the spin and normal angular impulses.
+The scalar directional impulse labels are $\delta p_n$, $\delta p_t$, $\delta L_s$ and $\delta L_n$. The normal and sliding linear impulses are distinct from the spin and normal angular impulses.
 
 The mechanics derived here is exact for a configuration frozen during an instantaneous impulse. It maps an allowed contact impulse to motion; it does not, by itself, determine the impulse. The original directional restitution and friction equations must close that calculation. Where those equations have not been recovered, they remain symbolic rather than being replaced by a conventional force-only law.
 
@@ -57,7 +62,7 @@ Let $m$ be mass, $\inertia$ the world-frame central inertia, $\mathbf{v}$ the ce
 \begin{equation}
 \mathbf{V}=\begin{bmatrix}\mathbf{v}\\\ell\boldsymbol{\omega}\end{bmatrix},\quad
 \mathbf{P}=\begin{bmatrix}\mathbf{p}\\\mathbf{L}/\ell\end{bmatrix},\quad
-M=\begin{bmatrix}m\id&0\\0&\inertia/\ell^2\end{bmatrix},\quad
+M=\begin{bmatrix}m\id&\zmat\\\zmat&\inertia/\ell^2\end{bmatrix},\quad
 \boxed{\mathbf{P}=M\mathbf{V}}.
 \end{equation}
 The combined force and its impulse are
@@ -92,7 +97,7 @@ Let the contact reference point be $\mathbf{x}_c$ and the body centre be $\mathb
 Set
 \begin{equation}
 C_k=\begin{bmatrix}\id&\lwedge{\mathbf{r}_k}/\ell\end{bmatrix},\qquad
-B_k=\begin{bmatrix}\id&\lwedge{\mathbf{r}_k}/\ell\\0&\id\end{bmatrix}.
+B_k=\begin{bmatrix}\id&\lwedge{\mathbf{r}_k}/\ell\\\zmat&\id\end{bmatrix}.
 \end{equation}
 Then the full contact motion is
 \begin{equation}
@@ -170,28 +175,24 @@ All products retain their order and the off-diagonal blocks couple linear and an
 \section{Sliding and spin directions}
 For nonzero relative motions the definitions supplied by the model are
 \begin{equation}
-\boxed{\mathbf{t}=\mathbf{u}/\|\mathbf{u}\|},\qquad
-\boxed{\mathbf{s}=\boldsymbol{\Omega}/\|\boldsymbol{\Omega}\|}.
+\boxed{\hat{\mathbf{t}}=\mathbf{u}/\|\mathbf{u}\|},\qquad
+\boxed{\hat{\mathbf{s}}=\boldsymbol{\Omega}/\|\boldsymbol{\Omega}\|}.
 \end{equation}
-These definitions use relative velocity \emph{at the collision point}, not centre-of-mass velocity. No projection onto a geometric tangent plane has been inserted. Consequently $\mathbf{t}$ need not be perpendicular to $\mathbf{n}$, and $\mathbf{s}$ need not be perpendicular to either. If the original law specifies a projected sliding velocity, that projection must be recovered explicitly rather than assumed.
+These definitions use relative velocity \emph{at the collision point}, not centre-of-mass velocity. No projection onto a geometric tangent plane has been inserted. Consequently $\hat{\mathbf{t}}$ need not be perpendicular to $\hat{\mathbf{n}}$, and $\hat{\mathbf{s}}$ need not be perpendicular to either. If the original law specifies a projected sliding velocity, that projection must be recovered explicitly rather than assumed.
 
-Write the allowed normal/sliding linear and spin/normal angular components as
+The directional components are scalars. They multiply the corresponding unit vectors to form the complete impulses:
 \begin{align}
-\delta \mathbf{p}_n=q_n \mathbf{n},\qquad
-\delta \mathbf{p}_t=q_t \mathbf{t},\qquad
-\delta \mathbf{p}&=\delta \mathbf{p}_n+\delta \mathbf{p}_t,\\
-\delta \mathbf{L}_s=a_s \mathbf{s},\qquad
-\delta \mathbf{L}_n=a_n \mathbf{n},\qquad
-\delta \mathbf{L}&=\delta \mathbf{L}_s+\delta \mathbf{L}_n.
+\delta\mathbf{p}&=\delta p_n\hat{\mathbf{n}}+\delta p_t\hat{\mathbf{t}},\\
+\delta\mathbf{L}&=\delta L_s\hat{\mathbf{s}}+\delta L_n\hat{\mathbf{n}}.
 \end{align}
-The scalars $q_n,q_t$ specify linear impulse amplitudes and $a_s,a_n$ specify angular impulse amplitudes. Introduce the component map
+No separate amplitude symbols are needed. The component map acts directly on the scaled scalar impulses:
 \begin{equation}
 D=\begin{bmatrix}
-\mathbf{n}&\mathbf{t}&0&0\\
-0&0&\mathbf{s}&\mathbf{n}
+\hat{\mathbf{n}}&\hat{\mathbf{t}}&\zmat&\zmat\\
+\zmat&\zmat&\hat{\mathbf{s}}&\hat{\mathbf{n}}
 \end{bmatrix},\qquad
-\boldsymbol{\lambda}=\begin{bmatrix}q_n\\q_t\\a_s/\ell\\a_n/\ell\end{bmatrix},\qquad
-\boxed{\delta \mathbf{P}_c=D\boldsymbol{\lambda}}.
+\boldsymbol{\lambda}=\begin{bmatrix}\delta p_n\\\delta p_t\\\delta L_s/\ell\\\delta L_n/\ell\end{bmatrix},\qquad
+\boxed{\delta\mathbf{P}_c=D\boldsymbol{\lambda}}.
 \end{equation}
 This map is not assumed orthogonal, square or invertible. Its dual gives the component-conjugate motions and coupled mobility:
 \begin{equation}
@@ -201,7 +202,7 @@ W_d=D^{\mathsf T}WD,\qquad
 \end{equation}
 The transpose is a work projection, not an assertion that nonorthogonal directions are independent coordinate axes.
 
-If a relative motion vanishes, its unit direction is undefined. Its subsequent static, sticking or onset branch must come from the contact law. Choosing an arbitrary direction and calling it sliding or spin changes the model. If $\mathbf{s}$ aligns with $\mathbf{n}$, the two angular columns become dependent. The law must then determine their physical sum without demanding a nonsingular four-component inverse. The same issue can occur for the linear directions.
+If a relative motion vanishes, its unit direction is undefined. Its subsequent static, sticking or onset branch must come from the contact law. Choosing an arbitrary direction and calling it sliding or spin changes the model. If $\hat{\mathbf{s}}$ aligns with $\hat{\mathbf{n}}$, the two angular columns become dependent. The law must then determine their physical sum without demanding a nonsingular four-component inverse. The same issue can occur for the linear directions.
 
 Directions evaluated before a frozen impulse give a finite matrix calculation. Directions evolving during a finite collision require state updates and force integration. Those are distinct algorithms and must not be conflated.
 
@@ -226,7 +227,7 @@ with $E$ containing the corresponding restitution symbols. This is a conditional
 
 Normal restitution and the historical geometric-tangent restitution must not be silently applied to a different motion-defined direction. A usual signed restitution convention means $e_i=-1$ preserves the channel velocity, $e_i=0$ targets arrest, and $e_i>0$ targets reversal. That convention alone establishes neither a material property nor passive coupled motion.
 
-Sliding and angular resistance must follow the model's specified $\mathbf{t}$, $\mathbf{s}$ and normal angular component. A translational Coulomb cone by itself supplies no independent angular impulse. Conversely, adding independent guessed moment limits or replacing the direction map by two arbitrary tangent axes changes the constitutive model. We therefore do not retain the earlier force-only endpoint solver as a definition of this law.
+Sliding and angular resistance must follow the model's specified $\hat{\mathbf{t}}$, $\hat{\mathbf{s}}$ and normal angular component. A translational Coulomb cone by itself supplies no independent angular impulse. Conversely, adding independent guessed moment limits or replacing the direction map by two arbitrary tangent axes changes the constitutive model. We therefore do not retain the earlier force-only endpoint solver as a definition of this law.
 
 \begin{center}\small
 \begin{tabular}{p{40mm}p{93mm}}\hline
@@ -234,7 +235,7 @@ Separate input field & Required specification\\\hline
 Normal restitution & Documented material-pair value and velocity convention\\
 Sliding restitution & Documented value and the exact relative-motion channel\\
 Sliding friction & Original static/dynamic or endpoint rule, if present\\
-Angular contact response & Original $\mathbf{s}$ and $\mathbf{n}$ component laws and their parameters\\
+Angular contact response & Original $\hat{\mathbf{s}}$ and $\hat{\mathbf{n}}$ component laws and their parameters\\
 Geometry and state & Contact reference, normal, inertia, pose, incoming motion\\
 Validity & Surface condition, speed/size range, uncertainties and source\\\hline
 \end{tabular}\end{center}
@@ -274,10 +275,10 @@ The global changes are $\sum_k\Delta\mathbf{p}_k=0$ and $\sum_k\Delta\mathbf{J}_
 
 \section{Symbolic three-dimensional examples}
 \subsection{Central normal impact with axial spin}
-Consider a homogeneous sphere of radius $R$ and central inertia $\inertia\id$, with $\mathbf{r}=-R\mathbf{n}$. Prescribe a central linear impulse and axial incoming spin:
+Consider a homogeneous sphere of radius $R$ and central inertia $\inertia\id$, with $\mathbf{r}=-R\hat{\mathbf{n}}$. Prescribe a central linear impulse and axial incoming spin:
 \begin{equation}
-\delta \mathbf{p}=q\mathbf{n},\qquad
-\boldsymbol{\omega}^- =\omega^-\mathbf{n}.
+\delta \mathbf{p}=\delta p_n\hat{\mathbf{n}},\qquad
+\boldsymbol{\omega}^- =\omega^-\hat{\mathbf{n}}.
 \end{equation}
 Then
 \begin{equation}
@@ -286,10 +287,10 @@ Then
 \end{equation}
 The complete angular update is therefore
 \begin{equation}
-\boxed{\Delta \mathbf{L}_k=\delta \mathbf{L}_s+\delta \mathbf{L}_n},\qquad
+\boxed{\Delta \mathbf{L}_k=\delta L_s\hat{\mathbf{s}}+\delta L_n\hat{\mathbf{n}}},\qquad
 \boldsymbol{\omega}^+=\boldsymbol{\omega}^-+\inertia^{-1}\Delta \mathbf{L}_k.
 \end{equation}
-A force-only model sets these independent angular impulses to zero and cannot change this axial spin. Here $\mathbf{s}$ is parallel or antiparallel to $\mathbf{n}$: the component map is dependent, yet the physical total angular impulse is well defined. The contact law must determine that total. No arbitrary inversion of two collinear angular directions is required.
+A force-only model sets these independent angular impulses to zero and cannot change this axial spin. Here $\hat{\mathbf{s}}$ is parallel or antiparallel to $\hat{\mathbf{n}}$: the component map is dependent, yet the physical total angular impulse is well defined. The contact law must determine that total. No arbitrary inversion of two collinear angular directions is required.
 
 \subsection{Rotated non-spherical body}
 Let a homogeneous cuboid have half-extents $a,b,c$, mass $m$, and attitude matrix $Q$. Its shape-frame and world inertia are
@@ -302,7 +303,7 @@ For a supporting vertex $\mathbf{r}_0$, use $\mathbf{r}=Q\mathbf{r}_0$. A fixed 
 \mathbf{u}^- =\mathbf{v}^-+\lwedge{\mathbf{r}}\,\boldsymbol{\omega}^-,\qquad
 \boldsymbol{\Omega}^- =\boldsymbol{\omega}^-.
 \end{equation}
-Construct $\mathbf{t}$, $\mathbf{s}$, the direction map and the full mobility from these physical states. Once the directional law supplies $\delta \mathbf{p}$ and $\delta \mathbf{L}$, predict
+Construct $\hat{\mathbf{t}}$, $\hat{\mathbf{s}}$, the direction map and the full mobility from these physical states. Once the directional law supplies $\delta \mathbf{p}$ and $\delta \mathbf{L}$, predict
 \begin{equation}
 \boxed{\mathbf{v}^+=\mathbf{v}^-+\delta \mathbf{p}/m},\qquad
 \boxed{\boldsymbol{\omega}^+=\boldsymbol{\omega}^-

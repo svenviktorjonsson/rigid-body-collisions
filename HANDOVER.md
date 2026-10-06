@@ -1,3 +1,7 @@
+# Scalar impulses and unit-direction hats — October 6, 2026
+
+User correctly clarified that delta p_n, delta p_t, delta L_s, delta L_n are scalars, not vectors. Active article reconstructs full bold impulses as scalar times unit direction; extra q_n/q_t/a_s/a_n amplitude symbols are removed. Hats mark normalized n, t, s. Unknown component vector contains these scalar impulses directly (angular entries divided by ell). Identity and zero matrix blocks now use true double-struck digits; ordinary scalar entries remain numeric. A small locally bundled, permissively licensed BBOLD Type 1 font supplies these glyphs, with build.sh local search paths; AMS mathbb I remains the inertia font. Named matrices remain in their prior style pending any broader preference.
+
 # Wedge product spacing — October 6, 2026
 
 User requests more separation after a wedge matrix before the following operand. Active article inserts LaTeX thin space (backslash comma) at wedge-matrix products, without printing commas. Internal r/wedge spacing remains the same on both sides; transpose superscripts stay attached to the matrix.
