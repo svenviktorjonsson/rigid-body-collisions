@@ -67,8 +67,10 @@ static bool physicsGlobalContact(b2ContactVelocityConstraint*constraints,int cou
   throw std::runtime_error("Planar global original contact-law gate declined");
  }
  for(size_t at=0;at<points.size();at++)p[3*at+2]=0;
- double residual=0;
- if(!coulombIterate(A,b,p,hi,dep,0,tol,residual)) {
+ CoulombStats gateStats;
+ bool gated=coulombIterate(A,b,p,lo,hi,dep,0,tol,gateStats);
+ double residual=gateStats.last_residual;
+ if(!gated) {
   physicsGlobalDeclines++;physicsGlobalCapture(A,b,p,lo,hi,dep,residual,"zero_virtual_original_gate_decline");
   throw std::runtime_error("Planar zero-virtual original contact-law gate declined");
  }

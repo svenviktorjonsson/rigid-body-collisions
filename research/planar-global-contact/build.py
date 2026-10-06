@@ -2,7 +2,7 @@
 import hashlib,json,shutil,subprocess
 from pathlib import Path
 from research.build_precision_backend import build
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];D=ROOT/'build/rigid_double_global'
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];D=ROOT/'build/rigid_double_global_v2'
 build(D,Path('/tmp/box2d-block.tar.gz'),1e-6);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();manifest=D/'precision-source.json';shutil.copy2(manifest,D/'initial-precision-source.json');inventory=json.loads(manifest.read_text());folder=D/'source/box2d-2.4.1/src/dynamics'
 p=folder/'b2_contact_solver.h';s=p.read_text();needle='\tb2TimeStep m_step;';assert s.count(needle)==1;s=s.replace(needle,'\tbool m_physicsGlobalSolved=false;\n'+needle);p.write_text(s)
 p=folder/'b2_contact_solver.cpp';s=p.read_text();needle='#include "b2_contact_solver.h"';assert s.count(needle)==1;s=s.replace(needle,needle+'\n#include "global_contact.h"');needle='void b2ContactSolver::SolveVelocityConstraints()\n{';assert s.count(needle)==1;s=s.replace(needle,needle+'''
