@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "case": "circle_-1_False",
+      "analytic_velocity_spin_error_max": 3.5999647707285476e-11,
+      "independent_wall_work_error_J": 2.7755575615628914e-17,
+      "kinetic_change_minus_wall_work_J": -0.750600000001296,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "circle_-1_True",
+      "analytic_velocity_spin_error_max": 3.5999647707285476e-11,
+      "independent_wall_work_error_J": 2.7755575615628914e-17,
+      "kinetic_change_minus_wall_work_J": -0.750600000001296,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "circle_1_False",
+      "analytic_velocity_spin_error_max": 5.555556015224283e-12,
+      "independent_wall_work_error_J": 1.3877787807814457e-17,
+      "kinetic_change_minus_wall_work_J": -0.6466666666669444,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "circle_1_True",
+      "analytic_velocity_spin_error_max": 5.555556015224283e-12,
+      "independent_wall_work_error_J": 1.3877787807814457e-17,
+      "kinetic_change_minus_wall_work_J": -0.6466666666669444,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "square_-1_False",
+      "analytic_velocity_spin_error_max": 1.1102230246251565e-16,
+      "independent_wall_work_error_J": 2.7755575615628914e-17,
+      "kinetic_change_minus_wall_work_J": -0.8802000000000001,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "square_-1_True",
+      "analytic_velocity_spin_error_max": 1.3877787807814457e-16,
+      "independent_wall_work_error_J": 1.3877787807814457e-17,
+      "kinetic_change_minus_wall_work_J": -0.8802000000000003,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "square_1_False",
+      "analytic_velocity_spin_error_max": 1.1102230246251565e-16,
+      "independent_wall_work_error_J": 5.551115123125783e-17,
+      "kinetic_change_minus_wall_work_J": -0.7282000000000002,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "case": "square_1_True",
+      "analytic_velocity_spin_error_max": 1.7763568394002505e-15,
+      "independent_wall_work_error_J": 0.0,
+      "kinetic_change_minus_wall_work_J": -0.7282000000000002,
+      "disabled_original_state_bytes_exact": true
+    }
+  ],
+  "scope": "Analytic single-point disk and two-point flat square friction impacts, signed translating walls, both body orders, original-solver bypass parity. Does not qualify global trajectories."
+}
