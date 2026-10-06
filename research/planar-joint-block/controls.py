@@ -5,7 +5,7 @@ import numpy as np
 from rigid_engine import run
 from research.container_scenes import ball
 from research.rigid_scenes import rectangle,body
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls-v2';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 records=[]
 for shape in ['circle','square']:
@@ -13,7 +13,7 @@ for shape in ['circle','square']:
   for wall_first in [False,True]:
    vx,vy=sign*.5,sign*.1
    wall={'type':'kinematic','position':[0,-.1],'velocity':[vx,vy],'polygons':[rectangle(2,.1,friction=.4,restitution=0)]}
-   dynamic=ball((0,.11),velocity=(1,-1),friction=.4) if shape=='circle' else body(rectangle(.2,.1,density=12.5,friction=.4,restitution=0),(0,.12),(1,-1))
+   dynamic=ball((0,.11-1e-12),velocity=(1,-1),friction=.4) if shape=='circle' else body(rectangle(.2,.1,density=12.5,friction=.4,restitution=0),(0,.12-1e-12),(1,-1))
    scene={'id':f'{shape}_{sign}_{wall_first}','duration':1e-6,'gravity':[0,0],'collision_skin_m':.01,'analytic_kinematics':True,'bodies':[wall,dynamic] if wall_first else [dynamic,wall]}
    settings={'dt':1e-6,'primary_steps':1,'substeps':1,'backend':'block','position_iterations':12}
    result=run(scene,binary=ROOT/plan['binary'],**settings)
