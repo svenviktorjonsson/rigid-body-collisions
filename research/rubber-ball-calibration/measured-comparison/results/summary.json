@@ -1,0 +1,159 @@
+{
+  "observed": {
+    "source": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+    "table": "I",
+    "diameter_m": 0.058,
+    "mass_kg": 0.103,
+    "incident_speed_m_s_approximate": 4.0,
+    "incident_angle_deg_to_vertical": 25,
+    "incident_angle_uncertainty_deg": 1,
+    "normal_restitution": 0.78,
+    "tangential_restitution": 0.49,
+    "normal_and_tangential_restitution_error": 0.01,
+    "spin_factor_rad_per_m": 14.9,
+    "spin_factor_error_rad_per_m": 0.1,
+    "independently_measured_pair_friction": null,
+    "inertia_status": "homogeneous solid-sphere assumption; independent measurement absent",
+    "rigid_wall_status": "fixed-plane approximation to reported14kg granite block"
+  },
+  "records": [
+    {
+      "pair_friction_hypothesis": 0.0,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -1.0,
+        "spin_factor_rad_per_m": 0.0
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -1.49,
+        "spin_factor_rad_per_m": -14.9
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 0.05,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.3319860942612723,
+        "spin_factor_rad_per_m": 6.953568366057058
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.8219860942612722,
+        "spin_factor_rad_per_m": -7.946431633942942
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 0.1,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.0,
+        "spin_factor_rad_per_m": 10.409316791642842
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.49,
+        "spin_factor_rad_per_m": -4.490683208357158
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 0.2,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.0,
+        "spin_factor_rad_per_m": 10.409316791642842
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.49,
+        "spin_factor_rad_per_m": -4.490683208357158
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 0.4,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.0,
+        "spin_factor_rad_per_m": 10.409316791642842
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.49,
+        "spin_factor_rad_per_m": -4.490683208357158
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 0.9,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.0,
+        "spin_factor_rad_per_m": 10.409316791642842
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.49,
+        "spin_factor_rad_per_m": -4.490683208357158
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    },
+    {
+      "pair_friction_hypothesis": 1.5,
+      "friction_source": "diagnostic sweep; no independent same-pair measurement",
+      "normal_restitution_source": "imposed from this same impact; not an independent prediction",
+      "predicted": {
+        "normal_restitution": 0.7800000000000002,
+        "tangential_restitution": -0.0,
+        "spin_factor_rad_per_m": 10.409316791642842
+      },
+      "errors": {
+        "normal_restitution": 2.220446049250313e-16,
+        "tangential_restitution": -0.49,
+        "spin_factor_rad_per_m": -4.490683208357158
+      },
+      "spin_within_reported_error": false,
+      "independent_material_validation_passed": false
+    }
+  ],
+  "native_runs_completed": 7,
+  "rigid_point_contact_max_spin_factor_rad_per_m": 10.409316791642844,
+  "max_spin_factor_over_angle_uncertainty_rad_per_m": 10.797318886430478,
+  "measured_min_spin_factor_rad_per_m": 14.8,
+  "model_reproduces_measured_spin": false,
+  "independent_material_validation_passed": false,
+  "parameter_fit_performed": false,
+  "provenance": {
+    "head": "ddabce57ec421f7486182d912fb4405f55833606",
+    "binary": "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner",
+    "binary_sha256": "e7c27f7a69267324795bd9e028bddc629e9f85f2f8783c60d0a888f34c922607",
+    "script_sha256": "58423c94170da4b53d5879ed7182dbb0c72d658ebeef2f37d17927f2057afefe"
+  },
+  "limitations": [
+    "Missing independently measured rubber/granite friction.",
+    "Normal restitution supplied from the comparison experiment.",
+    "No tangential compliance, finite-area traction or contact-duration model.",
+    "Fixed support approximation, homogeneous sphere inertia and approximate incident speed."
+  ]
+}

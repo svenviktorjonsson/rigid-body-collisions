@@ -429,3 +429,18 @@ isolated planar rounded-union joint solver ALL24PASS,maxstateerror1.0502e−9.
 Original planar comparator9cases miss tangential response at first contact;
 all failures and initial NumPybool serialization error retained. This is not a
 rubber calibration, production2D/global-world acceptance or performance claim.
+
+## Independent material prediction requirement — October6
+
+User clarified material/contact data must predict measured motion; no fitting to
+same validation endpoint. Native rubber adequacy comparison now COMPLETE7runs,
+58mm103gSuperball/granite,Cross2010TableI. μsweep0/.05/.1/.2/.4/.9/1.5 with
+measured normalrestitution.78 prescribed. Native rigid-law independent impulse
+and energy auditPASS; experimental spin FAIL:predicted maxspin factor10.4093
+vs14.9±.1,even26deg uncertaintymax10.7973<14.8. Tangentialrestitution0vs.49±.01.
+Normal.78 matches by construction,NOTindependentmaterialprediction. Same-pair
+friction/measuredinertia absent,fixed14kggranite approximation explicit. No fittedμ.
+Retain initial KeyError reporting failure and all outcomes. Concrete gap requires
+rubber tangential elasticity/dissipation and nonzero restitution+isotropicfriction;
+current Coulomb lane still e0 only. No completeexperimentalvalidation/all13baseline
+or2x claim. All prior authored cases/gates unchanged, continuous branchpushes.

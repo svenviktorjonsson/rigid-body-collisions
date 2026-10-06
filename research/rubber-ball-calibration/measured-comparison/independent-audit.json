@@ -1,0 +1,50 @@
+{
+  "native_rigid_law_checks_passed": true,
+  "records": [
+    {
+      "mu": 0.0,
+      "independent_velocity_spin_error": 4.440892098500626e-16,
+      "ball_kinetic_change_J": -0.26504603871673826,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 0.05,
+      "independent_velocity_spin_error": 3.552713678800501e-15,
+      "ball_kinetic_change_J": -0.30246061921088807,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 0.1,
+      "independent_velocity_spin_error": 7.105427357601002e-15,
+      "ball_kinetic_change_J": -0.3070950400907799,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 0.2,
+      "independent_velocity_spin_error": 7.105427357601002e-15,
+      "ball_kinetic_change_J": -0.3070950400907799,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 0.4,
+      "independent_velocity_spin_error": 7.105427357601002e-15,
+      "ball_kinetic_change_J": -0.3070950400907799,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 0.9,
+      "independent_velocity_spin_error": 7.105427357601002e-15,
+      "ball_kinetic_change_J": -0.3070950400907799,
+      "rigid_law_check_passed": true
+    },
+    {
+      "mu": 1.5,
+      "independent_velocity_spin_error": 7.105427357601002e-15,
+      "ball_kinetic_change_J": -0.3070950400907799,
+      "rigid_law_check_passed": true
+    }
+  ],
+  "experimental_spin_match": false,
+  "independent_material_validation_passed": false,
+  "conclusion": "Native solver matches its rigid impulse law; that law fails the published rubber spin result under the stated geometry/inertia/support assumptions, even allowing reported angle uncertainty."
+}

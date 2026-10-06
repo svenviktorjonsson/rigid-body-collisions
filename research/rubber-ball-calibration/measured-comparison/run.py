@@ -26,7 +26,7 @@ observed={'source':source,'table':'I','diameter_m':2*radius,'mass_kg':mass,
  'incident_speed_m_s_approximate':speed,'incident_angle_deg_to_vertical':25,
  'incident_angle_uncertainty_deg':1,'normal_restitution':e_n,
  'tangential_restitution':e_t,'normal_and_tangential_restitution_error':.01,
- 'outgoing_spin_factor_rad_per_m':spin_factor,'spin_factor_error_rad_per_m':.1,
+ 'spin_factor_rad_per_m':spin_factor,'spin_factor_error_rad_per_m':.1,
  'independently_measured_pair_friction':None,
  'inertia_status':'homogeneous solid-sphere assumption; independent measurement absent',
  'rigid_wall_status':'fixed-plane approximation to reported14kg granite block'}
