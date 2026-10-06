@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "name": "spatial_qp_checks",
+      "exit": 0,
+      "stdout": "Normal QP analytic checks PASS\n",
+      "stderr": ""
+    },
+    {
+      "name": "spatial_friction_checks",
+      "exit": 0,
+      "stdout": "Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks + energy overflow rejection)\n",
+      "stderr": ""
+    },
+    {
+      "name": "shared_contact_checks",
+      "exit": 0,
+      "stdout": "Shared contact checks PASS (full inertia, rotated/swapped rows, normal/tangent targets, split RHS, warm start, gyro, P/L/energy, endpoint selection, unsupported flags)\n",
+      "stderr": ""
+    },
+    {
+      "name": "translation_split_checks",
+      "exit": 0,
+      "stdout": "Translation split checks PASS (Gram, isolated pushes, redundant and infeasible constraints)\n",
+      "stderr": ""
+    },
+    {
+      "name": "active_contact_checks",
+      "exit": 0,
+      "stdout": "PASS pressure release/redundancy/infeasibility/failed-output; full450-row inactive-contact expansion\n",
+      "stderr": ""
+    },
+    {
+      "name": "normal_null_checks",
+      "exit": 0,
+      "stdout": "9 normal-null controls passed (including translation recovery enable/disable)\n",
+      "stderr": ""
+    },
+    {
+      "name": "coulomb_restart_checks",
+      "exit": 0,
+      "stdout": "PASS: rank-deficient and weak-direction TRF; invalid shape/radius/nonfinite; analytical contact; budget/dependency/output preservation\n",
+      "stderr": ""
+    },
+    {
+      "name": "support_restart_checks",
+      "exit": 0,
+      "stdout": "PASS exact component triples, independent support66, untouched tiny couplings, no-work cap rejection, invalid dependency/nonfinite and failure-output preservation\n",
+      "stderr": ""
+    },
+    {
+      "name": "translation_combined_checks",
+      "exit": 0,
+      "stdout": "PASS actual upstream parity: warm normal/two tangents/fixed and rotating kinematic slots/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged\nPASS full angular physical normal rate; fake push/turn excluded\nPASS finite/dimension/index/alias rejection and output preservation; normal-order target bookkeeping\nPASS all 15 distance/rate branches, signed remaining clearance and opposing-face zero-push control\n",
+      "stderr": ""
+    },
+    {
+      "name": "coulomb_early_checks",
+      "exit": 0,
+      "stdout": "Optional scheduling local checks passed; captured/trajectory checks remain separate.\n",
+      "stderr": ""
+    },
+    {
+      "name": "projection_tail_checks",
+      "exit": 0,
+      "stdout": "{\"controls\":[{\"accepted\":true,\"name\":\"diagonal-stick\",\"passed\":true,\"svd_calls\":2,\"unchanged_on_decline\":true},{\"accepted\":true,\"name\":\"separating\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"zero-budget\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"negative-budget\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"cap-66\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"negative-friction\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"nan-matrix\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"invalid-dependency\",\"passed\":true,\"svd_calls\":0,\"unchanged_on_decline\":true},{\"accepted\":false,\"name\":\"inconsistent-PSD-normal-targets\",\"passed\":true,\"svd_calls\":64,\"unchanged_on_decline\":true}],\"passed\":true}\n",
+      "stderr": ""
+    }
+  ]
+}

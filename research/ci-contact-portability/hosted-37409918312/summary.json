@@ -1,0 +1,211 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "records": [
+    {
+      "variant": "seed16",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 7.18717523685474e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.9846185940551e-11,
+        "support_gap_J": 1.641465777935559e-14,
+        "passive_bound_J": -0.0809855867626306,
+        "passivity_scale": 1.081142420404093,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 16,
+        "declines": 0,
+        "iteration_steps": 4103,
+        "largest_component_rows": 21,
+        "newton_steps": 16,
+        "null_svd_calls": 1,
+        "seed_attempts": 2,
+        "seed_response_change_max_m_s": 0.010340132960466871,
+        "seed_svd_calls": 2,
+        "solves": 1,
+        "svd_calls": 4103
+      },
+      "elapsed_s_descriptive": 0.16537463899999238
+    },
+    {
+      "variant": "seed16",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.95561570301506e-09,
+        "circle_violation_scaled_m_s": 3.702639845324505e-16,
+        "sticking_m_s": 9.955615707568027e-09,
+        "support_gap_J": 1.894881818444107e-09,
+        "passive_bound_J": -2.17320438889695,
+        "passivity_scale": 4.272469489604029,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 17,
+        "declines": 0,
+        "iteration_steps": 10154,
+        "largest_component_rows": 27,
+        "newton_steps": 5034,
+        "null_svd_calls": 1,
+        "seed_attempts": 4,
+        "seed_response_change_max_m_s": 15.904606224534685,
+        "seed_svd_calls": 4,
+        "solves": 1,
+        "svd_calls": 10154
+      },
+      "elapsed_s_descriptive": 0.6997330369999872
+    },
+    {
+      "variant": "seed16",
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "accepted": false,
+      "native_exit": 2,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 4.167612771737442e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 4.167612771736979e-06,
+        "support_gap_J": 2.1223760407237534e-08,
+        "passive_bound_J": -0.11142296781605715,
+        "passivity_scale": 1.1183723026540882,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 2,
+        "declines": 1,
+        "iteration_steps": 34816,
+        "largest_component_rows": 126,
+        "newton_steps": 291,
+        "null_svd_calls": 1,
+        "seed_attempts": 16,
+        "seed_response_change_max_m_s": 54430564634.68648,
+        "seed_svd_calls": 16,
+        "solves": 0,
+        "svd_calls": 34816
+      },
+      "elapsed_s_descriptive": 211.88810040299995
+    },
+    {
+      "variant": "tight6",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 4.414610888476117e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.9846185940551e-11,
+        "support_gap_J": 1.641465777935559e-14,
+        "passive_bound_J": -0.08098558680218454,
+        "passivity_scale": 1.0811424082677463,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 16,
+        "declines": 0,
+        "iteration_steps": 6151,
+        "largest_component_rows": 21,
+        "newton_steps": 21,
+        "null_svd_calls": 2,
+        "seed_attempts": 3,
+        "seed_response_change_max_m_s": 0.010340132960466871,
+        "seed_svd_calls": 3,
+        "solves": 1,
+        "svd_calls": 6151
+      },
+      "elapsed_s_descriptive": 0.2046591130001616
+    },
+    {
+      "variant": "tight6",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 4.901526401611944e-09,
+        "circle_violation_scaled_m_s": 1.3149514734573038e-31,
+        "sticking_m_s": 4.9015263931947365e-09,
+        "support_gap_J": 9.247759441664992e-10,
+        "passive_bound_J": -2.173204390782329,
+        "passivity_scale": 4.272495327667725,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 17,
+        "declines": 0,
+        "iteration_steps": 10206,
+        "largest_component_rows": 27,
+        "newton_steps": 5086,
+        "null_svd_calls": 1,
+        "seed_attempts": 4,
+        "seed_response_change_max_m_s": 15.904606224534685,
+        "seed_svd_calls": 4,
+        "solves": 1,
+        "svd_calls": 10206
+      },
+      "elapsed_s_descriptive": 0.7004817219999495
+    },
+    {
+      "variant": "tight6",
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "accepted": false,
+      "native_exit": 2,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 4.167612771737442e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 4.167612771736979e-06,
+        "support_gap_J": 2.1223760407237534e-08,
+        "passive_bound_J": -0.11142296781605715,
+        "passivity_scale": 1.1183723026540882,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "attempts": 1,
+        "component_cap_rejections": 0,
+        "components": 2,
+        "declines": 1,
+        "iteration_steps": 14336,
+        "largest_component_rows": 126,
+        "newton_steps": 90,
+        "null_svd_calls": 1,
+        "seed_attempts": 6,
+        "seed_response_change_max_m_s": 0.145959238821966,
+        "seed_svd_calls": 6,
+        "solves": 0,
+        "svd_calls": 14336
+      },
+      "elapsed_s_descriptive": 86.72278632300004
+    }
+  ],
+  "scope": "Instantaneous hosted/local search-control evidence only; retaining declines does not relax required production test or qualify model/world/performance."
+}

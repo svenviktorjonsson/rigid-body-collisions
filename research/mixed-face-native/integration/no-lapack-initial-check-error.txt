@@ -1,0 +1,1 @@
+Initial test incorrectly expected a LAPACK-only policy key in optional output; absent by existing preprocessor convention. Rechecked absence plus accepted original gate and no LAPACK/BLAS dependency.

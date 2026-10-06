@@ -353,3 +353,39 @@ ALL8 accuracy edgesFAIL; independent archive auditsPASS. New isolated zero-posit
 projection test declared, all original geometry/energy/quarter gates unchanged,
 8 analytical controls and disabled-original state parityPASS. All13 working
 baseline/2x gates OPEN; no performance ranking from these descriptive timings.
+
+## Mixed sliding/sticking guide integration and latest full worlds — October6
+
+New FINAL recovery tail after every old lane including terminal component polish:
+exact full components4096, selected physical192, weak12, LPvariables384,
+constraints4096,4096 LPcalls and100000 SHARED pivots PER full solve;128 direction
+iterations/face,32 INNER cone facets guide only. Original EXACT Coulomb circle,
+eager cone, bounds, absolute residual and finite passivity component/global gates
+mandatory before atomic application. Search allowance .5*originaltol never changes
+physical gate. Cumulative LP counters unsigned64. No added library dependency;
+standard two-phase simplex attribution/license included. All23 old endpoint bytes
+and original counters EXACT, helper bypassed;163engine/11native pass; original22
+replays pass, optional no-LAPACK original gate passes with no BLAS/LAPACK dependency.
+Complete actual8 captures now ALL accept, latest396 through new tail at7.7827e-9
+(34LP/1130pivots, moderate maximpulse.18995). Later792/906 remain genuine declines;
+906 exhausts shared pivot cap. Integration proofs:research/mixed-face-native/integration.
+Hosted prior2fbe checkpoint37409918312 BOTH jobsPASS, artifact11389126819 archived;
+new integration needs its own hosted latest396 required replay. Main fetch has no
+unincluded commits. Keep PR1 draft and all13 working-baseline/2x gates OPEN.
+
+Frozen6414 production64-h10us full .12s completes and passes ALL physics. Finer
+64-h5/h2.5 histories stop with393/294-row genuine rejects; independent outcome
+audit authenticates reused10us anchor and both accepted prefixes/rejections.
+New native mixed-face helper also declines both finer captures; retain them.
+125-h10/h5 still stop later792/906. Tight1pm125sphere first ladder edgesFAIL/PASS;
+next finer full physicsPASS but newest edgeFAIL. BOTH original edges remain required.
+Small current8box/hull and analytic-clock studies each6 full physicsPASS/all4
+accuracy edgesFAIL. Planar simultaneous/tight-slop/no-position/cold-start and
+rounded-union studies each10 full physicsPASS/all8 accuracy edgesFAIL, independently
+audited, no adoption. Rounded-union analytical8/disabled-original bytesPASS.
+All authored scenes/material/horizons and original gates preserved. These elapsed
+times are descriptive, not accepted performance. New isolated bounded strong-contact
+release search declared; no root/world claim before native original-gate proof.
+Next:published final-source full hull histories, all-case accuracy qualification,
+then freeze baseline and pursue >=2x EVERY case with five alternating end-to-end
+repetitions, original gates per repeat, and continuous ordinary pushes.

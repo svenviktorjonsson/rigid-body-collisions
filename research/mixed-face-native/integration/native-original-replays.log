@@ -1,0 +1,23 @@
+research/coulomb-diagnostics/hull42-rejected.json PASS
+research/coulomb-diagnostics/hull7301-rejected.json PASS
+research/coulomb-diagnostics/hull7301-later-rejected.json PASS
+research/coulomb-followup/hull42-second-rejected.json PASS
+research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json PASS
+research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json PASS
+research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json PASS
+research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json PASS
+research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json PASS
+research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json PASS
+research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json PASS
+research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json PASS
+research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json PASS
+research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json PASS
+research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json PASS
+research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json PASS
+research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json PASS
+Independent original contact/passivity gates: 22 / 22

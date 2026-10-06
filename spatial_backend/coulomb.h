@@ -4,6 +4,7 @@
 #include "mobility_continuation.h"
 #include "reduced_mobility_continuation.h"
 #include "terminal_component_polish.h"
+#include "mixed_face_traction.h"
 #include <stdexcept>
 #include <sstream>
 #include <functional>
@@ -39,6 +40,7 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
+ int mixed_face_attempts=0,mixed_face_solves=0,mixed_face_declines=0;mixed_face_traction::Stats mixed_face;
  int terminal_polish_attempts=0,terminal_polish_solves=0,terminal_polish_declines=0;terminal_component_polish::Stats terminal_polish;
  int reduced_mobility_attempts=0,reduced_mobility_solves=0,reduced_mobility_declines=0;reduced_mobility_continuation::Stats reduced_mobility;
  int mobility_attempts=0,mobility_solves=0,mobility_declines=0;mobility_continuation::Stats mobility;
@@ -451,6 +453,21 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    x=candidate;stats.solves++;stats.terminal_polish_solves++;stats.last_residual=final.last_residual;stats.residual_max=std::max(stats.residual_max,final.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,final.passive_change_max);return true;
   }
   stats.terminal_polish_declines++;
+ }
+
+ // Bounded mixed sliding/sticking face guides only after every old lane declines.
+ if(recover&&b.rows()<=4096){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  mixed_face_traction::Stats trial;stats.mixed_face_attempts++;
+  auto gate=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&lower,const btVectorXu&upper,const btAlignedObjectArray<int>&d,double tol){CoulombStats s;return coulombIterate(M,rhs,q,lower,upper,d,0,tol,s);};
+  auto residual=[](const btMatrixXu&M,const btVectorXu&rhs,const btVectorXu&q,const btVectorXu&upper,const btAlignedObjectArray<int>&d){return coulombResidual(M,rhs,q,upper,d);};
+  bool found=mixed_face_traction::solve(A,b,candidate,lo,hi,dep,tolerance,trial,gate,residual);
+  auto&s=stats.mixed_face;s.components+=trial.components;s.largest_rows=std::max(s.largest_rows,trial.largest_rows);s.search_rows_max=std::max(s.search_rows_max,trial.search_rows_max);s.weak_contacts_max=std::max(s.weak_contacts_max,trial.weak_contacts_max);s.mode_attempts+=trial.mode_attempts;s.lp_calls+=trial.lp_calls;s.pivots+=trial.pivots;s.direction_steps+=trial.direction_steps;s.accepted_residual=std::max(s.accepted_residual,trial.accepted_residual);
+  CoulombStats final;
+  if(found&&coulombIterate(A,b,candidate,lo,hi,dep,0,tolerance,final)){
+   x=candidate;stats.solves++;stats.mixed_face_solves++;stats.last_residual=final.last_residual;stats.residual_max=std::max(stats.residual_max,final.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,final.passive_change_max);return true;
+  }
+  stats.mixed_face_declines++;
  }
 
 #endif
