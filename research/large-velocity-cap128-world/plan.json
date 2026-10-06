@@ -1,0 +1,13 @@
+{
+  "source": "f62f6b3e0a30549042b5b08bd2ff09f9a665d8ce",
+  "case": "3d_hull_64",
+  "scene_sha256": "1d75ccc28fabbbc69554916bac2a51963896b7115b5aa7bc59c82b227d13a891",
+  "settings": [
+    {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Same original authored scene, friction, gravity, motion, horizon and all physical/accuracy gates. Keep every rejection/prefix. No tolerance relaxation. Hull single retry tests completion; sphere three adjacent levels must both pass original quarter-budget accuracy edges to qualify. Concurrent isolated studies allowed: elapsed descriptive only, no performance claim."
+}
