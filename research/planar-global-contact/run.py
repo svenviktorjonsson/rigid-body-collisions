@@ -7,10 +7,10 @@ from rigid_engine import run
 H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
-assert json.loads((H/'controls/summary.json').read_text())['passed']
+assert json.loads((H/'controls-v2/summary.json').read_text())['passed']
 assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'
 exe=ROOT/plan['binary'];receipt=json.loads((H/'build-receipt.json').read_text());assert sha(exe)==receipt['binary_sha256']
-paths=[Path(__file__),H/'plan.json',H/'build-receipt.json',H/'controls/summary.json',exe,exe.parent/'precision-source.json',ROOT/'rigid_engine.py',ROOT/'research/rapid-friction/run.py'];guards={str(p):sha(p) for p in paths}
+paths=[Path(__file__),H/'plan.json',H/'build-receipt.json',H/'controls-v2/summary.json',exe,exe.parent/'precision-source.json',ROOT/'rigid_engine.py',ROOT/'research/rapid-friction/run.py'];guards={str(p):sha(p) for p in paths}
 libs=re.findall(r'(/\S+)\s+\(',subprocess.check_output(['ldd',str(exe)],text=True));save(D/'provenance.json',{'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards,'runtime':{str(Path(p).resolve()):sha(Path(p).resolve()) for p in libs}})
 base=import_module('research.rapid-friction.run');gates=json.loads((ROOT/'research/rapid-friction/plan.json').read_text());scenes=base.scenes();save(D/'scenes.json',{k:scenes[k] for k in plan['cases']});summary={}
 for name in plan['cases']:
@@ -43,6 +43,6 @@ for name in plan['cases']:
   save(target/f'reference_{i}.json',record);refs.append(record)
   if len(refs)>1 and refs[-2]['setting']==plan['reference_levels'][i-1]:
    error=base.errors(2,refs[-2]['result'],result);passed=refs[-2]['physical']['passed'] and record['physical']['passed'] and all(error[k]<=v/4 for k,v in gates['trajectory_budgets']['2'].items());edges.append({'left':i-1,'right':i,'passed':bool(passed),'errors':error});print(name,i,'edge',passed,error,flush=True)
-  summary[name]={'full_histories':len(refs),'physical_passes':sum(r['physical']['passed'] for r in refs),'edges':edges,'reference_qualified':len(edges)>=2 and all(e['passed'] for e in edges[-2:]),'performance_qualified':False};save(D/'summary.json',summary)
+  summary[name]={'full_histories':len(refs),'physical_passes':sum(r['physical']['passed'] for r in refs),'edges':edges,'reference_qualified':i==len(plan['reference_levels'])-1 and len(edges)>=2 and [(e['left'],e['right']) for e in edges[-2:]]==[(i-2,i-1),(i-1,i)] and all(e['passed'] for e in edges[-2:]),'performance_qualified':False};save(D/'summary.json',summary)
   assert all(sha(p)==v for p,v in guards.items())
 save(D/'final.json',{'complete':True,'source_binary_unchanged':True,'summary':summary})
