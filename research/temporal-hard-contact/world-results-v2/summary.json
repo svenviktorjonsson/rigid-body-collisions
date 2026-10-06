@@ -1,0 +1,9 @@
+{
+  "2d_disks": {
+    "full_histories": 1,
+    "physical_passes": 1,
+    "edges": [],
+    "reference_qualified": false,
+    "performance_qualified": false
+  }
+}

@@ -4,9 +4,9 @@ from importlib import import_module
 from pathlib import Path
 import numpy as np
 from rigid_engine import run
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results-v2';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results-v3';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
-sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 assert json.loads((H/'controls-v2/summary.json').read_text())['passed']
 assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'
 exe=ROOT/plan['binary'];receipt=json.loads((H/'build-receipt.json').read_text());assert sha(exe)==receipt['binary_sha256']
