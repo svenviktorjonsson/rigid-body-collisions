@@ -34,5 +34,5 @@ int main(int argc,char**argv){try{
   if(actual>0){x=trial;F=next;status=jacobian();}
  }
  nfev=c.calls;
- const bool found=!c.solution.empty();std::cout<<json({{"accepted",found},{"raw_evaluations",c.calls},{"minpack_status",status},{"minpack_nfev",nfev},{"p",found?c.solution:c.best},{"best_original_projection_m_s",c.best_score}}).dump(2)<<'\n';return found?0:2;
+ const bool found=!c.solution.empty();std::cout<<json({{"accepted",found},{"raw_evaluations",c.calls},{"trust_status",status},{"reported_residual_calls",nfev},{"p",found?c.solution:c.best},{"best_original_projection_m_s",c.best_score}}).dump(2)<<'\n';return found?0:2;
  }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 3;}}
