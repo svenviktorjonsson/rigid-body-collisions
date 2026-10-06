@@ -389,3 +389,26 @@ release search declared; no root/world claim before native original-gate proof.
 Next:published final-source full hull histories, all-case accuracy qualification,
 then freeze baseline and pursue >=2x EVERY case with five alternating end-to-end
 repetitions, original gates per repeat, and continuous ordinary pushes.
+
+## Rubber/rock calibration and completed guarded studies — October6
+
+User added public real-impact calibration for natural rocks and different-sized
+rubber balls, including incoming/outgoing linear/angular motion and energy.
+Public Chant Sura and Tschamut archives downloaded to external cache; provenance
+and extraction inventories retained, raw data not redistributed. Chant includes
+3D linear and gyro components, but coordinate alignment/attitude/contact normals
+need verification; ideal concrete shapes are not natural-rock specimens. Tschamut
+has natural scans/masses and scalar rotational speed, not verified full angular
+vectors. No exact real-impact replay or fitted friction claimed.
+Rubber primary manuscripts verify 46mm/46.4g and 58mm/103g Superball experiments;
+no clean matched-compound diameter sweep verified. Derived 2002 energy ledger
+and prospective calibration protocol recorded in research/rubber-ball-calibration.
+Grip/deformation may require compliant tangential physics beyond rigid Coulomb.
+
+Planar analytic clock:10 full histories physicsPASS, all8 refinement edgesFAIL;
+independent archive auditPASS. New integrated mixed-face production worlds:
+64-h5/h2.5 reject393/294rows,125-h10 rejects792rows; prefix/rejection auditsPASS.
+64-h10 still running, guarded spatial source/binary/runtime FROZEN; publish only
+completed outcomes. Strong-contact release search also genuinely declines these
+later/finer captures; no adoption. Hosted df3fbc5 both jobsPASS; new integration
+checkpoint ec9e2dc still running. ALL13 baseline/2x gates remain OPEN.

@@ -1,0 +1,25 @@
+{
+  "source": "ec9e2dc9662056389e8cbcb5f4b59143ad1d52a2",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/run.py": "3c87562714a51d8280c73af97fdbd2433e6d4c61071389d721859e013bf623f8",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/plan.json": "5364f578161eee9de1c76f35e9c04cbec1dc6f4ab4bbcd148660aebcbd446021",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/build-receipt.json": "43c8d2dfee8980649259fe9333838fa6311a80ad2d24a52ec7a6231eaa382d19",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/controls-v2/summary.json": "d39b4c29cf54b94a43521c0eeb38e07d8aa9cf3f7972ab5522a9c54fdd0b739d",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/pose-controls/summary.json": "ab73618d5a154da5cd4dec1b2e1eac40551c0f2e1a2b052bef1b95139603356d",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_planar_clock_v1/rigid_runner": "32aa5a99f6fd52bcc4bc12fa1266390025552bb2b79dbca025429a43fbcc67c3",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_planar_clock_v1/precision-source.json": "8c2db689fb9d044eca75ced1dc5bb32014d3cbb9bbe7e4b4f02a76aec0e14e0a",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4"
+  },
+  "runtime": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "67faab0feef3cc4b20d98daffda4de59f6816ab565b044da096487f4075fccdf",
+    "/usr/lib/x86_64-linux-gnu/libmvec.so.1": "2f2e7f4ad88e1b13f2f8345c826b25f85ba61c93527d91e59dd0d2943eac6e80",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  }
+}

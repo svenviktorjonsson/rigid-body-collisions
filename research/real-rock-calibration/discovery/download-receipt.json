@@ -1,0 +1,68 @@
+[
+  {
+    "dataset": "induced-rockfall-dataset-chant-sura",
+    "resource": "Output Archive",
+    "url": "https://www.envidat.ch/dataset/71e65311-b0dd-48df-acfc-791c99cb0662/resource/a2e218f8-cffe-4c6a-8515-01a0ff704524/download/output.7z",
+    "advertised_description": "Data under embargo: Trajectory reconstruction tables",
+    "status": 200,
+    "content_type": "binary/octet-stream",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-output.7z",
+    "bytes": 4736837,
+    "sha256": "7a64811741bc52bb4e242917714cc4d74682ce169252a671a81720a22d1929bc"
+  },
+  {
+    "dataset": "induced-rockfall-dataset-chant-sura",
+    "resource": "EOTA",
+    "url": "https://www.envidat.ch/dataset/71e65311-b0dd-48df-acfc-791c99cb0662/resource/eaa94cfe-a85f-4c26-ad2a-2f53b9e4af56/download/eota.7z",
+    "advertised_description": "Cubic EOTA(111) and platy EOTA(221) point cloud.",
+    "status": 200,
+    "content_type": "application/x-7z-compressed",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-eota.7z",
+    "bytes": 419,
+    "sha256": "5ce95a6afbfe5e91c2016d2d60f4cb9c5e7ac2d6525cf4022db81bc0d2cfa58e"
+  },
+  {
+    "dataset": "tschamut2014",
+    "resource": "Tschamut2014_Slope+BlockScans",
+    "url": "https://www.envidat.ch/dataset/6a7664a6-77a9-49c9-9498-4b63c018fa09/resource/8cf275ca-06d0-47cf-b67f-48780b019ae6/download/geosciences-08-00088-s001.zip",
+    "advertised_description": "These data contain the point clouds obtained from laser scanning the test slope and the six test blocks used for the experiments. The coordinates of the slope are given in CH-1903 format. The coordinates of the block point clouds are kept in a lokal x/y/z coordinate system.",
+    "status": 200,
+    "content_type": "application/zip",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-geosciences-08-00088-s001.zip",
+    "bytes": 1779331,
+    "sha256": "c6fb965374c61b9e4909fe1a14330fed2b1593e7276299af6ec933aa64e991b5"
+  },
+  {
+    "dataset": "tschamut2014",
+    "resource": "Overview of all tests",
+    "url": "https://www.envidat.ch/dataset/6a7664a6-77a9-49c9-9498-4b63c018fa09/resource/467dc8f8-9069-4c87-8856-3d12817633be/download/overviewalltests.zip",
+    "advertised_description": "This table gives an overview on all tests performed including\r\n- block used\r\n- start & end position\r\n- number of jumps\r\n- etc.\r\n- ",
+    "status": 200,
+    "content_type": "binary/octet-stream",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-overviewalltests.zip",
+    "bytes": 44962,
+    "sha256": "f4f20348b91fa23caa506c1ce29d3f987ec47f606a41ece67f59f8b683e2ff20"
+  },
+  {
+    "dataset": "tschamut2014",
+    "resource": "Block trajectories recorded from local positioning system",
+    "url": "https://www.envidat.ch/dataset/6a7664a6-77a9-49c9-9498-4b63c018fa09/resource/b6dc0f14-5b86-4353-a2a6-ef06c0ddf0ad/download/trajectoriesfromlps.zip",
+    "advertised_description": "This file contains more than 80 rockfall trajectories projected onto the terrain, i.e. the positions of the single blocks over time during the single tests that were recorded by the local positioning system with about 10Hz. It contains the detected positions as well as a smoothened path (see Volkwein et al., Geosciences, 2018). The table also contains the derived velocities and accelerations along the slope (attention: these accelerations are the once that occur during an impact).",
+    "status": 200,
+    "content_type": "binary/octet-stream",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-trajectoriesfromlps.zip",
+    "bytes": 6430962,
+    "sha256": "63619cbe5bb4ff9f869bbf665e5e79218e189affeb55d08b3f024046f17c98b8"
+  },
+  {
+    "dataset": "tschamut2014",
+    "resource": "Jumps and impacts",
+    "url": "https://www.envidat.ch/dataset/6a7664a6-77a9-49c9-9498-4b63c018fa09/resource/e2f0958e-2b51-49ce-ba25-40c4ffd331a7/download/jumpsandimpacts.zip",
+    "advertised_description": "This table contains data of more than 2200 of each jumps and impacts of the test blocks on a grassy slope. It gives there durations in combination with acting accerlartions and the rotational speed of the blocks. The data were retrieved using the block internal accelerometer and rotation sensors. The combination of these data with the measurement from the local positioning system allows the deduction of jump lengths, slope gradient etc.",
+    "status": 200,
+    "content_type": "binary/octet-stream",
+    "path": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-jumpsandimpacts.zip",
+    "bytes": 1051503,
+    "sha256": "0145993e4b9331ee63345eb5eeb5810860d9e611d6bc1e7a3dc37cad98d385a6"
+  }
+]

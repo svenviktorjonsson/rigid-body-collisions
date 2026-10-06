@@ -1,0 +1,528 @@
+[
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-output.7z",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-output",
+    "files": [
+      {
+        "path": "Output/txt/RF20e2670r4.txt",
+        "bytes": 214120,
+        "sha256": "5d2a14bcce069279d04480a0e8c1bf329f2990210e47a8cdbc10a6401c1c81b4"
+      },
+      {
+        "path": "Output/txt/RF25e2670r8.txt",
+        "bytes": 300095,
+        "sha256": "2ad2768868a55d343331489b50c81fc37e51d48eace3c0634f1758ea73c7d6a4"
+      },
+      {
+        "path": "Output/txt/RF20e800r9.txt",
+        "bytes": 183535,
+        "sha256": "038682ec3ec98aed7a842f58638b83dfb7f55f74fd0a83a6331e5d1e9188d107"
+      },
+      {
+        "path": "Output/txt/RF20e2670r3.txt",
+        "bytes": 214262,
+        "sha256": "69177e58e4f676f7e277df48ad73395191b2165bda8cb0c69ad83e7625a59c53"
+      },
+      {
+        "path": "Output/txt/RF18W800r15.txt",
+        "bytes": 212240,
+        "sha256": "7c759d08b3f0d1ae92281953505fb90f23590502f5d43854260bc3d4371adf01"
+      },
+      {
+        "path": "Output/txt/RF20w2670r3.txt",
+        "bytes": 199315,
+        "sha256": "b90a7233c3765ee4d26b29a28f96190145b6bf95bfb161e8b7e0adb037687768"
+      },
+      {
+        "path": "Output/txt/RF16W800r4.txt",
+        "bytes": 408221,
+        "sha256": "2e749a117ce558aa134e2636efd2e2e09c462be8f6b39cab1da157bfea40e406"
+      },
+      {
+        "path": "Output/txt/RF18W200r8.txt",
+        "bytes": 421852,
+        "sha256": "860d9a8bdeb04c2df9776d452ac0d1abc61c1a30249113b2f2805e2c817c494c"
+      },
+      {
+        "path": "Output/txt/RF20e2670r6.txt",
+        "bytes": 258479,
+        "sha256": "2b489c1928d61084eae843056786b8549c867ac30a17e01bf104de0e4136bbba"
+      },
+      {
+        "path": "Output/txt/RF18W800r10.txt",
+        "bytes": 316682,
+        "sha256": "db7f962e49b7d33b48dceb689fe533bdf3c8e0a32f86978936420011b01510c1"
+      },
+      {
+        "path": "Output/txt/RF20e200r3.txt",
+        "bytes": 257390,
+        "sha256": "fde6e0cdaadd61519a6aaab2b55afc04fe8465691b51e353e18572244a1b77ae"
+      },
+      {
+        "path": "Output/txt/RF20e200r8.txt",
+        "bytes": 264282,
+        "sha256": "f5129ce6fea8991d49b8c2cf50e9170293cd2f818dc60f1faa81d9f50110bf6d"
+      },
+      {
+        "path": "Output/txt/RF20w2670r5.txt",
+        "bytes": 200087,
+        "sha256": "ae4135f87dd557f020da2e6b63dd01fe5f7cb29a0419de921549b1474f0e45c7"
+      },
+      {
+        "path": "Output/txt/RF20e800r10.txt",
+        "bytes": 228590,
+        "sha256": "c93d482086dcd89473272dcd57d2565a2cf62974d9d5582de11d8edcb6f16ec8"
+      },
+      {
+        "path": "Output/txt/RF25e2670r2.txt",
+        "bytes": 303162,
+        "sha256": "e7d27deee27a05478b49b8c4c3dc874caf6e104389a49bbf20e07db80a1e75a0"
+      },
+      {
+        "path": "Output/txt/RF20e800r6.txt",
+        "bytes": 227982,
+        "sha256": "d92ccac3be9638578a405533edcf41cf29923b73b7c7bc3fa518a806452f02ce"
+      },
+      {
+        "path": "Output/txt/RF25w2670r6.txt",
+        "bytes": 313352,
+        "sha256": "fabb79ea9e0d62489436ed372301450c7737f56879e8b1c548bb35f5ba6ea445"
+      },
+      {
+        "path": "Output/txt/RF18W800r4.txt",
+        "bytes": 333191,
+        "sha256": "6d2b1bd1709ca07aab8ce0192e45141b3f8ab42619fc041bbfaec0448d0856b8"
+      },
+      {
+        "path": "Output/txt/RF18W200r7.txt",
+        "bytes": 351882,
+        "sha256": "8a5cfa04efc848d33a1c7ff9a9dee19498524d58e059a77a3f1b603fd4849301"
+      },
+      {
+        "path": "Output/txt/RF18W800r14.txt",
+        "bytes": 354172,
+        "sha256": "c42f3043640c05cc9d33d481a75351810a25ff4a577ee6308d6fd5d977b17df4"
+      },
+      {
+        "path": "Output/txt/RF25e2670r6.txt",
+        "bytes": 253418,
+        "sha256": "2b1bbf0d2cf1a0e2e41def7488d9beaae0bdb3fb300c197068edd43c5538c0e3"
+      },
+      {
+        "path": "Output/txt/RF25e2670r5.txt",
+        "bytes": 284092,
+        "sha256": "70cfca6c3c83ef6f2eb71c3008db5f5b831135241802db20cdfed3d81d6e5125"
+      },
+      {
+        "path": "Output/txt/RF18W800r7.txt",
+        "bytes": 282038,
+        "sha256": "798c15919877140c9413fac4dd936b5a84811b22780a7ebc91b3b9f530c94e08"
+      },
+      {
+        "path": "Output/txt/RF16W200r1.txt",
+        "bytes": 367770,
+        "sha256": "391ab5393a2e9507e9b0935f12bbf1961a68d8044deeb4f76862c00c703985c9"
+      },
+      {
+        "path": "Output/txt/RF20e200r6.txt",
+        "bytes": 282719,
+        "sha256": "eacf109a6f8a2478432ca9cf74ea32408404d0ca4ec3954fceb0ece8b286f84e"
+      },
+      {
+        "path": "Output/txt/RF18W800r2.txt",
+        "bytes": 389264,
+        "sha256": "592d4c9614f3fcdf28b17d638763b8a2314203d199c7718155755cdd8d82cd26"
+      },
+      {
+        "path": "Output/txt/RF20e800r7.txt",
+        "bytes": 191843,
+        "sha256": "e9b37d16ebab8b798e66767b5c0f8ae7376c1013564e7eaddb74f3a67e1caeb4"
+      },
+      {
+        "path": "Output/txt/RF20e200r2.txt",
+        "bytes": 228228,
+        "sha256": "d9c5857f4815c22f91e512701acb47232ead1d2028f5a562a280877b9af41f63"
+      },
+      {
+        "path": "Output/txt/RF18W200r1.txt",
+        "bytes": 457934,
+        "sha256": "f998dca9cdc1930db05406029deb2a70b28552bfff9ca60e884aba863c5b24b4"
+      },
+      {
+        "path": "Output/txt/RF18W800r3.txt",
+        "bytes": 371954,
+        "sha256": "f941e8be04af97eb8bed8c1f51efc222908da1e2874b92607520539b792a97d0"
+      },
+      {
+        "path": "Output/txt/RF20e800r4.txt",
+        "bytes": 228214,
+        "sha256": "585ddce058fc90574948051fbd9e21acb652fcb33857bbaf818ae223752c7e6b"
+      },
+      {
+        "path": "Output/txt/RF18W200r6.txt",
+        "bytes": 423872,
+        "sha256": "a1f23341458ac1c1771c6440cfe35819defcaba8984639b59089d7dbf67f8c63"
+      },
+      {
+        "path": "Output/txt/RF20e800r1.txt",
+        "bytes": 214394,
+        "sha256": "87fb227bfa8528bec0895e4c25cb2b00987d93b0fb60266b293fdb5653696733"
+      },
+      {
+        "path": "Output/txt/RF20e2670r7.txt",
+        "bytes": 186242,
+        "sha256": "1e7a5e7923cd17e8900e250e3dc7f3cf2bd8240086c6930f4cc50a6752bc72ae"
+      },
+      {
+        "path": "Output/txt/RF20e200r10.txt",
+        "bytes": 319035,
+        "sha256": "1e05e14e75bfb679b31389199e65f1e2a7e1b0756c1fdd50d117464863ad534b"
+      },
+      {
+        "path": "Output/txt/RF18W200r2.txt",
+        "bytes": 369994,
+        "sha256": "afb9fd26c61e22d48d2bdb2092baaa510def9c250efae7002bdf2f7211efa436"
+      },
+      {
+        "path": "Output/txt/RF20e800r5.txt",
+        "bytes": 271299,
+        "sha256": "ab21dc35bbe8c85c3a54f21bcef0e4ce2af139ca5ba0bcb2ce602baa065b5a6a"
+      },
+      {
+        "path": "Output/txt/RF20w2670r1.txt",
+        "bytes": 243179,
+        "sha256": "75424a64f6299d67e535235d264b8ee0b7ac986e447507c9a6ae0d6cf902cc2f"
+      },
+      {
+        "path": "Output/txt/RF25w2670r3.txt",
+        "bytes": 256525,
+        "sha256": "9bace1dd17fbfc4a6094f6cc76606151b01afbeb84696c0a611657deb518c1c4"
+      },
+      {
+        "path": "Output/txt/RF18W200r3.txt",
+        "bytes": 406078,
+        "sha256": "e5596083af5b2e6812572bb3bfc4101ac240338e2fe8090fae8b41f286203857"
+      },
+      {
+        "path": "Output/txt/RF18W800r11.txt",
+        "bytes": 356449,
+        "sha256": "0aff647fcdc8385ec80be8eff81040490dd78ea8ff237cd88d5291f37cfc2d28"
+      },
+      {
+        "path": "Output/txt/RF29w2670r2.txt",
+        "bytes": 356124,
+        "sha256": "9d984c289ba58352f925b85f0c347eb80637c4378a065b620fa9837d1c7b0a22"
+      },
+      {
+        "path": "Output/txt/RF20e200r9.txt",
+        "bytes": 353385,
+        "sha256": "2e0cd4225c9aa29ad3332026ec488a1e5f80cbc4b6f4aa8462ee4b5a89c46cfa"
+      },
+      {
+        "path": "Output/txt/RF20e800r2.txt",
+        "bytes": 171263,
+        "sha256": "bcc54bc3cb9b445013c4ea51168d612801f234818dc5f117a87f386db9979f97"
+      },
+      {
+        "path": "Output/txt/RF25e2670r3.txt",
+        "bytes": 370729,
+        "sha256": "a7095a91dafb2839f95e10b2ea83a95bdc19e15479efb5247bf44a705614cffe"
+      },
+      {
+        "path": "Output/txt/RF20e200r4.txt",
+        "bytes": 311783,
+        "sha256": "82979884d1571aa7273e78116bdc746cd1750e7538824188fb3de5b6fb944704"
+      },
+      {
+        "path": "Output/txt/RF20e2670r8.txt",
+        "bytes": 220175,
+        "sha256": "81de07d293aa315334d8b525dfe5466b1b4cfe8ce815b3d646740ec6d6da6240"
+      },
+      {
+        "path": "Output/txt/RF20w2670r7.txt",
+        "bytes": 227401,
+        "sha256": "bad80b6965bd8a282cebe68a1d81c67f8e6ffad21ae0548e4056e33e5a9fab61"
+      },
+      {
+        "path": "Output/txt/RF20w2670r4.txt",
+        "bytes": 199959,
+        "sha256": "18e378151885f3100ce8c81644f4b3d2e3f1ccabfe09e9a4d50b68a7e7182df1"
+      },
+      {
+        "path": "Output/txt/RF20e800r3.txt",
+        "bytes": 171550,
+        "sha256": "718588eaf129a764801e04ec21564ddb9f8ddf7ccba7e78c2ca4ca305c6b57de"
+      },
+      {
+        "path": "Output/txt/RF16W800r5.txt",
+        "bytes": 352575,
+        "sha256": "b9a0c2680999125b7838901aaf138849572c2906c64c8bf895ab643dc8c4c0f0"
+      },
+      {
+        "path": "Output/txt/RF18W800r5.txt",
+        "bytes": 281110,
+        "sha256": "e70f875bacfd16b77d4cea3a5d651540303c8ffab3a5daa296b36478fa8d820d"
+      },
+      {
+        "path": "Output/txt/RF25e2670r1.txt",
+        "bytes": 302909,
+        "sha256": "d389eb527e96b07c83a3ffe5784704d369bb498d1b6156e4806a57163b32c33d"
+      },
+      {
+        "path": "Output/txt/RF20w2670r9.txt",
+        "bytes": 172899,
+        "sha256": "a86faa52f32655b9b0547a446c2bc414d1a6de1e74d646f12c9aad22110bf641"
+      },
+      {
+        "path": "Output/txt/RF18W800r6.txt",
+        "bytes": 353672,
+        "sha256": "3c313dd0509c8c8405c71afc8e2abcfdf28e88ec37760391ef4170a6ee1115e4"
+      },
+      {
+        "path": "Output/txt/RF25w2670r5.txt",
+        "bytes": 314461,
+        "sha256": "f2418db81899eab424fa14186441b9b687b4fd00312463d7e710487204702376"
+      },
+      {
+        "path": "Output/txt/RF25w2670r2.txt",
+        "bytes": 373039,
+        "sha256": "43f597bb106af055cf86211469d225645b014a6446714ff433401b4aa01e7a57"
+      },
+      {
+        "path": "Output/txt/RF16W800r1.txt",
+        "bytes": 280980,
+        "sha256": "adeeecbcf90c0480f45881f6ee4fa13790a20a1f8afe7b08a14d8971eb2b08e2"
+      },
+      {
+        "path": "Output/txt/RF20w2670r2.txt",
+        "bytes": 227331,
+        "sha256": "986db10fd7ee7949ec05cf3d01d1568feb12b4c0e17acaf6695defb36cf8245d"
+      },
+      {
+        "path": "Output/txt/RF25e2670r7.txt",
+        "bytes": 313793,
+        "sha256": "ecb9dd8c9a3827b4bf65d1a9585d5b2cf087fcfba6102f6889cf6891e506d80d"
+      },
+      {
+        "path": "Output/txt/RF25w2670r1.txt",
+        "bytes": 314770,
+        "sha256": "49d2bd673cf3b7b0dffac2e8cd9bf1d25a8e21117a6d4563051454788aaeeb44"
+      },
+      {
+        "path": "Output/txt/RF25w2670r7.txt",
+        "bytes": 327311,
+        "sha256": "39dd16c9c926522de24cfb86f589c390263cbb4b775344810c2f81308d291351"
+      },
+      {
+        "path": "Output/txt/RF16W800r6.txt",
+        "bytes": 317742,
+        "sha256": "71fb5f45863f513c21ef881a1b24cb86494906a014cf0f5226c122b40c1c237d"
+      },
+      {
+        "path": "Output/txt/RF20e2670r5.txt",
+        "bytes": 186133,
+        "sha256": "13b404340e08aaa14741492bf770530e57388eeaab4d360528fdf2b2b7c501f4"
+      },
+      {
+        "path": "Output/txt/RF20e800r8.txt",
+        "bytes": 227112,
+        "sha256": "21b32c21c119c676077501fdff00c5eec90f19c2c9aff12785e2e06c6cf4839b"
+      },
+      {
+        "path": "Output/txt/RF20e200r7.txt",
+        "bytes": 283363,
+        "sha256": "bd75d7f858b11ae740264c093be1a0b00acc8ac306132ec484470cfc9349c0fd"
+      },
+      {
+        "path": "Output/txt/RF20e2670r1.txt",
+        "bytes": 199845,
+        "sha256": "e1b168f79c381e204359b9e122e8ca358ed10025f204eda147fe1aecf2b968a1"
+      },
+      {
+        "path": "Output/txt/RF16W800r2.txt",
+        "bytes": 371913,
+        "sha256": "529b398ee188fbb6f8d47dd2c7373d81398e9b9c56e9d0810ad49e0f760473dd"
+      },
+      {
+        "path": "Output/txt/RF25w2670r8.txt",
+        "bytes": 343791,
+        "sha256": "46a985fcd594b6c422fadbf31f85e45c0dd17fa54115249cb57aab7c24d38177"
+      },
+      {
+        "path": "Output/txt/RF16W200r4.txt",
+        "bytes": 333946,
+        "sha256": "c2397fe8769be6c5d48e2765e4620eacfa8c3ce2c19b126bd88f28293d35d866"
+      },
+      {
+        "path": "Output/txt/RF29w2670r1.txt",
+        "bytes": 390911,
+        "sha256": "65d6c242590339b8746f5bd74d32c07392bf7b5fd80312cf7a9386f96a28634b"
+      },
+      {
+        "path": "Output/txt/RF20w2670r8.txt",
+        "bytes": 215595,
+        "sha256": "79dce30acebd661987a25f7149c4597e5f94278c622310a8bbde8c2f755f5524"
+      },
+      {
+        "path": "Output/txt/RF18W800r12.txt",
+        "bytes": 335829,
+        "sha256": "5bf566c3d8168a3c6feadb7b525f04ab0862f9847036867d92cabba309c1c441"
+      },
+      {
+        "path": "Output/txt/RF20e200r1.txt",
+        "bytes": 213473,
+        "sha256": "c2e6a0e578e9d5c4cc4e54466c898f01986360350094cf8c05ffb99500a7c239"
+      },
+      {
+        "path": "Output/txt/RF16W200r3.txt",
+        "bytes": 370139,
+        "sha256": "6e9743ce95ff88f90fef04b26c6d5a5a7b82765cf61b923f2d57e9bae3d6856e"
+      },
+      {
+        "path": "Output/txt/RF20e200r5.txt",
+        "bytes": 258045,
+        "sha256": "ffe604841bd86afc4c17602eaf9fdbf9c4f63f0f6ef205eda15d6f86bfc9b957"
+      },
+      {
+        "path": "Output/txt/RF18W800r1.txt",
+        "bytes": 336664,
+        "sha256": "9c831f56b119e8a876bf69d38de07f9cbb27a5db875fb6beff302699b09e5dcc"
+      },
+      {
+        "path": "Output/txt/RF20e2670r2.txt",
+        "bytes": 225169,
+        "sha256": "7f8d35c94e5ad010f2e8bad42dd9c019342ed4cb19adfdee7954bfd73184027c"
+      },
+      {
+        "path": "Output/txt/RF25e2670r4.txt",
+        "bytes": 303490,
+        "sha256": "9f26918f2e7341c61948ec86a3da82b8b16ce42ff155d6f7ff6bcdfab90fe43c"
+      },
+      {
+        "path": "Output/txt/RF20w2670r6.txt",
+        "bytes": 199965,
+        "sha256": "a1be0b233166de7bbe1d180a7165741110e39daf38932c48832868495cdf12fb"
+      },
+      {
+        "path": "Output/txt/RF18W200r4.txt",
+        "bytes": 389697,
+        "sha256": "a85395ee54978ed9ee1f252ca55864c341284dbac4ef13934d9ab619b5b18e97"
+      },
+      {
+        "path": "Output/txt/RF16W200r2.txt",
+        "bytes": 264037,
+        "sha256": "7b10e3a0e726545cc8fe6a2a7e368540212d8d3fa13d6c9a03fa17dc3ab55126"
+      }
+    ]
+  },
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-eota.7z",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/induced-rockfall-dataset-chant-sura-eota",
+    "files": [
+      {
+        "path": "EOTA/1m3_EOTA_221_plate.pts",
+        "bytes": 768,
+        "sha256": "974bd0cb0c54f71ef50094d2d5112459ed5878d0545861d1d5ed41eea1557cc6"
+      },
+      {
+        "path": "EOTA/1m3_EOTA_111_cube.pts",
+        "bytes": 456,
+        "sha256": "a20f81bc5871dfe9a6ba832b66c8766280c8fc99534ae9e014afc72f980eba88"
+      }
+    ]
+  },
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-geosciences-08-00088-s001.zip",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-geosciences-08-00088-s001",
+    "files": [
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_3.pts",
+        "bytes": 712152,
+        "sha256": "0c2537da29c09302f9cdfc7de76918fa4bb59967b81fe5663f6fb0f261c3ac8c"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_2.pts",
+        "bytes": 1815576,
+        "sha256": "8bf3d3fb30eb0bac30795c9cf6df29837399f4ef126f891c80edcb3160258233"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_2..pts",
+        "bytes": 873916,
+        "sha256": "168670adec5679d8dd3959c08400b29aef6fa3172445ee782843f13f4b11f1a2"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/DEM_Tschamut.xyz",
+        "bytes": 1753233,
+        "sha256": "dee604ce08bcf29365b65b87998eff7dd4b208d4ec2a99d406e2b98f8bf9e7c4"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_5.pts",
+        "bytes": 463663,
+        "sha256": "a8452230b73d66aa374eb9c6d11a7aedd4dac105a81f26f5ff90ac08a4933b45"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_6.pts",
+        "bytes": 854687,
+        "sha256": "5089345cb62b81eda12b1e914bc4234bd84acdfa9ec41a24e01a5bc8b26175f5"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_4.pts",
+        "bytes": 800004,
+        "sha256": "8302e3e6a4fc400f807ce54f2a003b2c5546dd2c0ea8f199e3b7e54015646034"
+      },
+      {
+        "path": "SupplData_VolkweinEtAl2018/Steine_GRL_31072014_Volumen_Stein_1.pts",
+        "bytes": 941710,
+        "sha256": "be8dff01f181d1530e5cb585a39d2fc28e34071177580c866d8730809d581426"
+      }
+    ]
+  },
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-overviewalltests.zip",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-overviewalltests",
+    "files": [
+      {
+        "path": "OverviewAllTests.xlsx",
+        "bytes": 43799,
+        "sha256": "7be11c641ad1303b4cfcfb339bb4a81bc0b80d021ebaff6f04b8cabc59290b14"
+      },
+      {
+        "path": "OverviewAllTests.txt",
+        "bytes": 13043,
+        "sha256": "800258d137ef36ebb7c51558fb36ad5985ceeb42ca971e1d5e5cf37533e534c9"
+      }
+    ]
+  },
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-trajectoriesfromlps.zip",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-trajectoriesfromlps",
+    "files": [
+      {
+        "path": "all_LPS_splined.txt",
+        "bytes": 3871858,
+        "sha256": "7290c10e4e02771e5b0c779cacb941e89524630a00409d021831e681e6649689"
+      },
+      {
+        "path": "all_LPS_splined.xlsx",
+        "bytes": 4861917,
+        "sha256": "99d35bad63e245a66d1cee84aa5f8217b550b505892b7c92aa8e85db8e086094"
+      }
+    ]
+  },
+  {
+    "archive": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-jumpsandimpacts.zip",
+    "extracted": "/home/viktor/.cache/physics-public-rock-data-20261006/tschamut2014-jumpsandimpacts",
+    "files": [
+      {
+        "path": "JumpsAndImpacts_commentedForEnvidat.txt",
+        "bytes": 356123,
+        "sha256": "631dd351934823f0cd3f2e0a6c0885e3aa0cae499923982cc277042ffbab4b40"
+      },
+      {
+        "path": "JumpsAndImpacts_commentedForEnvidat.xlsx",
+        "bytes": 928876,
+        "sha256": "f4da30346ad5f08b1eb8ed2bc2b52ec746f55588129ef3ea56405fa37158af46"
+      }
+    ]
+  }
+]

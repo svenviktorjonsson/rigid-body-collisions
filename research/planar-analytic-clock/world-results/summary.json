@@ -1,0 +1,106 @@
+{
+  "2d_disks": {
+    "full_histories": 5,
+    "physical_passes": 5,
+    "edges": [
+      {
+        "left": 0,
+        "right": 1,
+        "passed": false,
+        "errors": {
+          "position_m": 0.01862612367036,
+          "velocity_m_s": 1.8075600024957346,
+          "omega_rad_s": 14.02614194717977,
+          "orientation_rad": 0.2709406366795827
+        }
+      },
+      {
+        "left": 1,
+        "right": 2,
+        "passed": false,
+        "errors": {
+          "position_m": 0.013790608962251975,
+          "velocity_m_s": 1.2991968004359717,
+          "omega_rad_s": 18.61380699002194,
+          "orientation_rad": 0.3250779932365403
+        }
+      },
+      {
+        "left": 2,
+        "right": 3,
+        "passed": false,
+        "errors": {
+          "position_m": 0.009431511535672673,
+          "velocity_m_s": 1.1991614947423568,
+          "omega_rad_s": 15.704992633844833,
+          "orientation_rad": 0.2955306328859762
+        }
+      },
+      {
+        "left": 3,
+        "right": 4,
+        "passed": false,
+        "errors": {
+          "position_m": 0.007132590519790824,
+          "velocity_m_s": 0.4791694054421314,
+          "omega_rad_s": 9.261376659282018,
+          "orientation_rad": 0.15522990406613166
+        }
+      }
+    ],
+    "reference_qualified": false,
+    "performance_qualified": false
+  },
+  "2d_mixed_polygons": {
+    "full_histories": 5,
+    "physical_passes": 5,
+    "edges": [
+      {
+        "left": 0,
+        "right": 1,
+        "passed": false,
+        "errors": {
+          "position_m": 0.037066917898352245,
+          "velocity_m_s": 3.0158033094843057,
+          "omega_rad_s": 28.326653568539683,
+          "orientation_rad": 0.40024623864262093
+        }
+      },
+      {
+        "left": 1,
+        "right": 2,
+        "passed": false,
+        "errors": {
+          "position_m": 0.028791697506095087,
+          "velocity_m_s": 2.7068055355548744,
+          "omega_rad_s": 25.552363597104918,
+          "orientation_rad": 0.3335417773997014
+        }
+      },
+      {
+        "left": 2,
+        "right": 3,
+        "passed": false,
+        "errors": {
+          "position_m": 0.024465532158859698,
+          "velocity_m_s": 3.0317275579246314,
+          "omega_rad_s": 40.29182235930267,
+          "orientation_rad": 0.25553664724575487
+        }
+      },
+      {
+        "left": 3,
+        "right": 4,
+        "passed": false,
+        "errors": {
+          "position_m": 0.03227698840683783,
+          "velocity_m_s": 3.608169634066904,
+          "omega_rad_s": 48.22581390965767,
+          "orientation_rad": 0.4541114362553151
+        }
+      }
+    ],
+    "reference_qualified": false,
+    "performance_qualified": false
+  }
+}
