@@ -1,0 +1,256 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,array,graphicx,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\newcommand{\Lref}{\ell}
+\newcommand{\crossmat}[1]{[#1]_{\times}}
+\title{Rigid-body contact with length-scaled velocity and momentum\\Normal and tangential restitution, friction, and experimental comparisons}
+\author{Viktor's notation: $\ell\boldsymbol\omega$ and $\mathbf L/\ell$}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A fixed reference length places linear and angular motion in one dimensionally consistent vector. Its dual places linear and angular momentum in one vector without changing power, kinetic energy, contact response, or physical predictions. We derive shared-point contact, simultaneous impulses, normal and tangential restitution, and a Coulomb capacity constraint. Public rubber-ball and limestone experiments provide partial agreement, not independent validation of all material parameters. Geometric uncertainty and a remaining rubber spin discrepancy are retained explicitly.
+\end{abstract}
+
+\section{The reference length and the dual variables}
+Let $\Lref>0$ be a fixed reference length, $\mathbf v$ the centre-of-mass velocity, $\boldsymbol\omega$ the angular velocity, $\mathbf p=m\mathbf v$ the linear momentum, and $\mathbf L=\mathbf I\boldsymbol\omega$ the angular momentum about the centre of mass. All spatial vectors and the inertia tensor use the same world frame. Define
+\begin{equation}
+\mathbf V=\begin{bmatrix}\mathbf v\\ \Lref\boldsymbol\omega\end{bmatrix},\qquad
+\mathbf P=\begin{bmatrix}\mathbf p\\\mathbf L/\Lref\end{bmatrix},\qquad
+\mathbf M=\begin{bmatrix}m\mathbf1&0\\0&\mathbf I/\Lref^2\end{bmatrix}.
+\end{equation}
+Then $\mathbf P=\mathbf M\mathbf V$. Every component of $\mathbf V$ has units m/s, every component of $\mathbf P$ has units kg m/s, and every block of $\mathbf M$ has units kg. The dual pairing is unchanged:
+\begin{equation}
+\mathbf V^T\mathbf P=\mathbf v^T\mathbf p+\boldsymbol\omega^T\mathbf L,
+\qquad T=\tfrac12\mathbf V^T\mathbf M\mathbf V.
+\end{equation}
+For force $\mathbf f$ and centre-of-mass torque $\boldsymbol\tau$, the corresponding scaled wrench is $\mathbf F=[\mathbf f^T,\boldsymbol\tau^T/\Lref]^T$ and power is $\mathbf V^T\mathbf F$. This is a coordinate choice, \emph{not} a friction, restitution, or material-fit parameter. A different fixed length per body is allowed; use that body's length in each block. Changing the length during an integration step requires additional coordinate-derivative terms and is excluded here.
+
+\section{Contact velocity with plus signs}
+Write $\crossmat{\mathbf a}\mathbf b=\mathbf a\times\mathbf b$. The skew matrix obeys $\crossmat{\mathbf a}^T=-\crossmat{\mathbf a}$. For the physical contact lever arm $\mathbf r=\mathbf x_c-\mathbf x_{\rm COM}$, set $\boldsymbol\rho=\mathbf r/\Lref$ and define the \emph{signed lever operator}
+\begin{equation}
+\mathbf R=\crossmat{-\boldsymbol\rho}.
+\end{equation}
+The physical velocity at the contact is
+\begin{equation}
+\mathbf v_c=\mathbf v+\boldsymbol\omega\times\mathbf r
+=\mathbf v+\mathbf R\Lref\boldsymbol\omega
+=\mathbf C\mathbf V,
+\qquad \mathbf C=[\mathbf1\ \mathbf R].
+\end{equation}
+The plus sign is obtained by reversing the cross-product order, since $\boldsymbol\omega\times\mathbf r=(-\mathbf r)\times\boldsymbol\omega$. It does \emph{not} mean ordinary matrix factors commute. Associativity allows $\mathbf R\Lref\boldsymbol\omega$ to be written without redundant parentheses, but does not allow $\mathbf A\mathbf B$ to be replaced by $\mathbf B\mathbf A$.
+
+A contact impulse $\mathbf j$ changes momentum by
+\begin{equation}
+\Delta\mathbf P=\mathbf C^T\mathbf j
+=\begin{bmatrix}\mathbf j\\\mathbf R^T\mathbf j\end{bmatrix}
+=\begin{bmatrix}\mathbf j\\\boldsymbol\rho\times\mathbf j\end{bmatrix}.
+\end{equation}
+Thus $\Delta\mathbf L=\mathbf r\times\mathbf j$ with the correct sign. The transpose follows directly from work duality:
+$\mathbf V^T\mathbf C^T\mathbf j=\mathbf v_c^T\mathbf j$.
+
+For planar motion, $\omega$, $L$, and $I$ are scalars, while translation is two-dimensional. The same construction becomes
+\begin{equation}
+\mathbf V=\begin{bmatrix}v_x\\v_y\\\ell\omega\end{bmatrix},\quad
+\mathbf P=\begin{bmatrix}p_x\\p_y\\L/\ell\end{bmatrix},\quad
+\mathbf M=\operatorname{diag}(m,m,I/\ell^2),\quad
+\mathbf R=\frac1\ell\begin{bmatrix}-r_y\\r_x\end{bmatrix},\quad
+\mathbf C=[\mathbf1_2\ \mathbf R].
+\end{equation}
+Thus $\mathbf C\mathbf V=\mathbf v+\omega(-r_y,r_x)^T$ and the final component of $\mathbf C^T\mathbf j$ is $(r_xj_y-r_yj_x)/\ell$. The three-dimensional transpose derivation therefore carries over without inventing a planar angular vector.
+
+\section{Two bodies and simultaneous contact}
+Orient a contact normal from body B towards body A. Apply $+\mathbf j$ to A and $-\mathbf j$ to B at the same world point. The relative contact velocity and its stacked Jacobian are
+\begin{equation}
+\mathbf u=\mathbf C_A\mathbf V_A-\mathbf C_B\mathbf V_B
+=\mathbf G\mathbf V,\qquad
+\mathbf G=[\mathbf C_A\ {-\mathbf C_B}],\qquad
+\mathbf M=\operatorname{diag}(\mathbf M_A,\mathbf M_B).
+\end{equation}
+A genuine relative velocity requires subtraction; hiding it by declaring unrelated vectors positive would obscure conservation. Signed blocks retain a clean sum of impulse effects:
+\begin{equation}
+\Delta\mathbf P=\mathbf G^T\mathbf j,\qquad
+\mathbf V^+=\mathbf V^-+\mathbf M^{-1}\mathbf G^T\mathbf j,\qquad
+\mathbf u^+=\mathbf u^-+\mathbf W\mathbf j,
+\end{equation}
+where the contact inverse effective mass (Delassus operator) is
+\begin{equation}
+\mathbf W=\mathbf G\mathbf M^{-1}\mathbf G^T
+=\mathbf C_A\mathbf M_A^{-1}\mathbf C_A^T
++\mathbf C_B\mathbf M_B^{-1}\mathbf C_B^T.
+\end{equation}
+It is symmetric positive semidefinite; the reference length cancels from its physical predictions. Stack Jacobian rows for every contact to obtain one simultaneous system. Off-diagonal blocks couple contacts sharing a body and must not be discarded in rapid group motion. A fixed boundary contributes its prescribed contact velocity but no finite inverse mass.
+
+For a frozen configuration during an impulse, the exact kinetic-energy increment is
+\begin{equation}
+\Delta T=\mathbf j^T\mathbf u^-+\tfrac12\mathbf j^T\mathbf W\mathbf j.
+\end{equation}
+For multiple contacts, use the stacked vectors and the full operator. The displayed $\Delta T$ identity applies when both bodies are dynamic (or a boundary is stationary). For a moving prescribed boundary with velocity $\mathbf v_b$, $W_{\rm actuator}=\mathbf j^T\mathbf v_b$ is work delivered to the dynamic system, so
+\begin{equation}
+\Delta T-W_{\rm actuator}=\mathbf j^T\mathbf u_{\rm relative}^-+\tfrac12\mathbf j^T\mathbf W\mathbf j.
+\end{equation}
+Use this work-corrected quantity when judging dissipation. Free flight uses the actual rigid-body evolution, including changing world inertia and gyroscopic dynamics; the impulsive relation does not replace that evolution.
+
+\section{Normal and tangential restitution}
+Choose an orthonormal basis $\mathbf Q=[\mathbf n\ \mathbf t_1\ \mathbf t_2]$ and write $\widehat{\mathbf u}=\mathbf Q^T\mathbf u$, $\widehat{\mathbf j}=\mathbf Q^T\mathbf j$. For an approaching geometrically active impact, the endpoint targets are
+\begin{equation}
+u_n^+=-e_nu_n^-,\qquad
+\mathbf u_t^+=-e_t\mathbf u_t^-,\qquad
+0\le e_n\le1,\quad -1\le e_t\le1.
+\end{equation}
+The signed tangential convention matters: $e_t=-1$ preserves tangential contact velocity, $e_t=0$ targets sticking, and $e_t>0$ targets slip reversal. These are \emph{contact-point} velocities; a centre-of-mass tangential speed ratio is not generally $e_t$.
+
+Set $\mathbf E=\operatorname{diag}(e_n,e_t,e_t)$. If the isolated full-rank contact can realize all targets, its impulse solves
+\begin{equation}
+\widehat{\mathbf W}\widehat{\mathbf j}
++(\mathbf1+\mathbf E)\widehat{\mathbf u}^-=0,
+\qquad \widehat{\mathbf W}=\mathbf Q^T\mathbf W\mathbf Q.
+\end{equation}
+This residual form keeps addition visible without concealing physical signs. In a contact network, unilateral conditions, friction capacity, and coupled energy constraints may prevent all endpoint targets being realized simultaneously. Bounds on individual coefficients alone do not establish passivity of the coupled system; test the actual energy increment using physical incoming velocities, not a restitution-shifted solver residual.
+
+\section{Friction and the distinction between capacity and compliance}
+The circular Coulomb impulse capacity is
+\begin{equation}
+j_n\ge0,\qquad \|\mathbf j_t\|\le\mu j_n.
+\end{equation}
+The current endpoint model seeks its tangential restitution target when capacity permits and limits the impulse when it does not. This capacity condition is not by itself a complete time-resolved friction law. In particular, a positive $e_t$ can represent stored shear energy returning during impact; a rigid, purely dissipative sliding law alone does not explain that return.
+
+For a sphere with radius $R$, inertia $I=\alpha mR^2$, zero initial spin, and fixed plane, the uncapped tangential impulse is
+\begin{equation}
+\frac{j_t}{m}=-\frac{\alpha}{1+\alpha}(1+e_t)u_t^-,\qquad
+|\omega^+|=\frac{(1+e_t)|u_t^-|}{(1+\alpha)R}.
+\end{equation}
+When required capacity is exceeded, clamp this scalar impulse to $[-\mu j_n,\mu j_n]$; normal and tangential targets are uncoupled only in this special spherical geometry. Actual non-spherical inertia and lever arms produce coupling through $\mathbf W$.
+
+A physically motivated extension would evolve normal indentation and tangential elastic displacement over a finite contact patch, integrate its force and moment, and account for elastic energy storage plus nonnegative dissipation. Restitution would then be an output or a constrained calibration target; adding endpoint restitution on top of an already dissipative compliant rebound risks double counting. A measured distributed moment is distinct from arbitrarily shifting a contact point until one outcome matches.
+
+
+\section{Efficient practical matrix calculations}
+The scaled notation does not require constructing a dense global inverse. Store each body's mass, shape-frame inertia, attitude, and fixed reference length. For attitude matrix $\mathbf A$, rotate inertia once per pose: $\mathbf I_{\rm world}=\mathbf A\mathbf I_{\rm shape}\mathbf A^T$. Apply the inverse scaled mass to a vector by dividing its translation block by $m$ and solving a three-by-three inertia system for its rotation block, multiplied by $\ell^2$. In 2D the latter is scalar division by $I/\ell^2$. Use factorizations or the rotated inverse of a fixed shape inertia; avoid numerical inversion of a dense many-body matrix.
+
+For a trial stacked contact impulse $\mathbf q$, the matrix-free action $\mathbf W\mathbf q$ has three steps:
+\begin{enumerate}
+\item Accumulate each incident signed impulse through $\mathbf C_i^T\mathbf q_i$ into each body's scaled momentum increment.
+\item Apply the body's inverse mass block once to its accumulated increment.
+\item Gather the resulting signed contact velocity increments through each $\mathbf C_i$.
+\end{enumerate}
+Shared bodies automatically generate the off-diagonal contact coupling. This operation scales with bodies and contacts rather than the square of the global contact count. Assemble small island matrices when useful for factorization or diagnostics; preserve the full coupled law and acceptance gates. Independent pairwise impulses are not an equivalent substitute.
+
+A practical prediction requires incoming translation and spin, mass and inertia, contact geometry and normal, and explicit $e_n,e_t,\mu$. For each active approaching contact, construct the restitution target and solve the simultaneous system with nonnegative normal impulse and the exact circular tangential capacity. Report whether each tangential target was realized or capacity-limited, outgoing velocities and spin, momentum balance, and work-corrected energy. Use the physical incoming contact velocity in the energy check. The native implementation has validated coefficient bounds, but not every large-scene trajectory refinement is qualified.
+
+The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the illustrative homogeneous pair assigns the same friction value on both sides. These checks do not establish a speedup or replace native simultaneous-solver verification. Native material/contact inputs here are $e_n,e_t,\mu$. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
+
+\section{Comparisons against public experimental data}
+\begin{center}\small
+\begin{tabular}{llrr}
+\hline
+Ball & Surface & $e_n$ & $e_t$\\
+\hline
+Superball & granite & 0.78 & 0.49\\
+Superball & rubber & 0.78 & 0.41\\
+Superball & Superball pad & 0.78 & 0.57\\
+Superball & tennis strings & 0.91 & -0.10\\
+golf & granite & 0.87 & 0.03\\
+golf & rubber & 0.59 & 0.51\\
+golf & Superball pad & 0.81 & 0.55\\
+golf & tennis strings & 0.91 & -0.01\\
+\hline
+\end{tabular}\end{center}
+These surface restitution inputs are supplied from the target experiments; the table is separate from the prediction-error tables.
+
+The following numbers describe the frozen point-contact model, not a newly validated compliant model. The public rubber experiments report the same 58 mm, 103 g Superball on four surfaces \cite{cross}. The incoming angle is approximately $25\pm1$ degrees to the vertical. The evaluation uses the separate assumption table below; capacity is inactive. All derivations retain symbolic material inputs. Both restitution coefficients come from the target experiment. The remaining comparison is spin factor $S=|\omega^+|/v_{\rm in}$ in rad/m.
+\begin{center}\small
+\begin{tabular}{lrrl}
+\hline
+Surface & Measured $S$ & Model $S$ & Overlap?\\
+\hline
+Granite & $14.9\pm.1$ & 15.510 & Yes\\
+Rubber sheet & $14.5\pm.1$ & 14.677 & Yes\\
+Superball pad & $18.2\pm.1$ & 16.343 & No\\
+Tennis strings & $9.0\pm.1$ & 9.368 & Yes\\
+\hline
+\end{tabular}\end{center}
+``Overlap'' includes input-angle and reported $e_t\pm.01$ uncertainty; it does not mean each central estimate lies in the narrow measured-spin interval. The respective prediction ranges are $[14.827,16.196]$, $[14.025,15.332]$, $[15.628,17.060]$, and $[8.916,9.826]$. No single adjusted sphere inertia factor explains all four within these intervals. These checks do not independently validate friction, because $\mu$ is a hypothesis and the supplied restitution values were measured in the very impacts being compared.
+
+The same publication also gives a 42.8 mm, 45 g golf ball. This is a different material and construction, not a controlled change of Superball size. Under the same conditional homogeneous-inertia calculation, the additional rows are:
+\begin{center}\small
+\begin{tabular}{lrrl}
+\hline
+Golf-ball surface & Measured $S$ & Model $S$ & Overlap?\\
+\hline
+granite & $14.8\pm.1$ & 14.529 & Yes\\
+rubber & $20.5\pm.1$ & 21.300 & Yes\\
+Superball pad & $23.6\pm.1$ & 21.864 & No\\
+tennis strings & $15.0\pm.1$ & 13.965 & No\\
+\hline
+\end{tabular}\end{center}
+These golf-ball predictions are analytic conditional comparisons, not additional native runs. Their inertia is assumed rather than independently measured; neither inferred contact-force offsets nor extra moments are applied to the predictions.
+
+
+\begin{center}\small
+\begin{tabular}{p{27mm}p{15mm}p{15mm}p{17mm}rp{52mm}}
+\hline
+Input set & $e_n$ & $e_t$ & $\mu$ & $\alpha$ & Status\\
+\hline
+Rubber/golf & Surface rows & Surface rows & .9 & .4 & Restitution supplied from target experiments; friction and homogeneous inertia assumed.\\
+Limestone fixed fit & .492986 & $-.191582$ & .811484 & .4 & Fitted restitution/friction; approximate sphere inertia.\\
+Synthetic geometry & .6 & .6 & .2 or 2 & -- & Prescribed controls; actual shape inertia used.\\
+\hline
+\end{tabular}\end{center}
+This input table is kept separate from the symbolic calculation. Numerical evaluation draws its inputs from the table; no experimental material value is substituted into the derivation. The homogeneous inertia assumption for the golf ball is particularly conditional because its construction differs from the Superball.
+
+The limestone dataset contains 75 impacts of approximately 10 and 20 cm faceted rocks on concrete \cite{wang}. We train on 50 impacts at release heights 2.5 and 3.5 m and withhold all 25 at 4.5 m. Actual meshes, individual inertia tensors, contact attitudes, and signed initial-spin vectors are unavailable. The comparison therefore uses ideal spheres and zero incoming spin; the paper bounds initial spin magnitude by approximately 3 rad/s. The fitted coefficients are listed in the separate input table above; they are effective fitted values, not independently measured material properties.
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\hline
+Model & Joint error & $v_n$ RMSE & $v_t$ RMSE & $\omega$ RMSE\\
+ & dimensionless & m/s & m/s & rad/s\\
+\hline
+Fixed coefficients & .121084 & 1.0044 & 1.3047 & 12.8765\\
+Separate per size & .119360 & .9958 & 1.2755 & 11.2461\\
+Angle-dependent & .109303 & .7008 & 1.2673 & 12.7285\\
+\hline
+\end{tabular}\end{center}
+Joint error is the root mean square over all three residual components, with angular residual multiplied by radius and each impact normalized by incoming speed. The angle-dependent candidate improves this split by 9.7\%, but reverses its advantage when one entire plate-angle group is withheld: pooled joint errors are .119679 for fixed, .120366 for size-dependent, and .130625 for angle-dependent coefficients. Thus increased parameter freedom does not establish a transferable contact-location or direction-dependent material law.
+
+Native implementation checks are separate from experimental accuracy: all 75 held-out analytic-to-native predictions (25 impacts times three models) agree within $3.13\times10^{-13}$ in their checked endpoint components and pass the energy check. Ninety-six synthetic non-spherical geometry cases also pass with the separate control parameters above and two prescribed friction levels. A separate 200-case seeded two- and three-dimensional coordinate audit (retained in \texttt{notation-audit.json}) confirms kinetic energy, impulse duality, torque, and Delassus invariance over reference lengths from $10^{-5}$ to $10^3$ m. Those checks verify signs, geometry, capacity, and implementation; they do not prove the faceted experimental rocks were replayed exactly.
+
+A separate recent finite-contact candidate was rejected: fourfold held-out spin RMSE worsened from 0.998608 to 1.235076 despite passing its 36 analytic and 40 differential-equation checks. It was not promoted into the production model. Passing mathematical controls is necessary but insufficient evidence of improved reality prediction.
+
+
+\begin{center}\small
+\begin{tabular}{p{23mm}p{34mm}p{85mm}}
+\hline
+Public dataset & Retained evidence & Present comparison limits\\
+\hline
+Cross rubber/golf & Eight ball--surface rows & Conditional spin predictions; target-supplied restitution and assumed inertia.\\
+Wang limestone & 75 impacts; 25 held out & Approximate spheres; actual facets, tensor and contact attitude missing.\\
+Tschamut 2014 & 2219 before/after scalar rotation records across 74 tests & Rock masses joined; scalar spin cannot recover signed angular vectors, contact normals or exact forward replay.\\
+Chant Sura & 82 reconstruction CSV files; 41 with finite gyro and rotational-energy data & Manufactured concrete shapes; vector motion available, but attitude/frame and angular-unit interpretation require verification.\\
+\hline
+\end{tabular}\end{center}
+The latter two inventories identify useful future evidence, not additional completed validation. Their primary landing pages are \url{https://www.envidat.ch/metadata/tschamut2014} and \url{https://doi.org/10.16904/envidat.174}. Scalar angular speed ratios must not be substituted for signed contact tangential restitution. Source and licensing details are retained with the corresponding repository inventories.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/experimental-errors.png}
+\caption{Experimental prediction errors across collision types. Components with different physical units are shown separately or explicitly normalized; a small error in one component does not compensate for a larger error in another. These are conditional or held-out reality comparisons, not proofs of independently known material parameters.}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/verification-errors.png}
+\caption{Implementation and synthetic-contact verification. Analytic-to-native discrepancies test equations and numerical realization. They are distinct from disagreement with measured impacts and cannot establish experimental accuracy by themselves.}
+\end{figure}
+
+\section{What would establish a stronger model?}
+First replace approximate shapes, inertias, and initial states with independently measured quantities wherever available. For rubber, compare a time-resolved compliant patch against the point model with shared parameters, frozen before held-out impacts. Evaluate outgoing translation and rotation together, contact duration where measured, and a complete energy ledger. Translational energy alone need not be conserved: rotation, deformation, support motion, and dissipation exchange energy. Do not fit a separate force offset for every target outcome and call that an independent prediction.
+
+For non-spherical rocks, contact location already changes the Jacobian and effective mass without changing restitution. Introduce a material map only if repeated experiments with measured geometry and state show a reproducible residual dependence that transfers to unseen contacts. The reference length $\Lref$ must never serve as an adjustable mechanism for improving agreement: it changes notation, not physics.
+
+\begin{thebibliography}{9}
+\bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
+\bibitem{wang} Wang et al., \emph{Effects of the impact angle on the coefficient of restitution in rockfall}, Natural Hazards and Earth System Sciences 18 (2018), 3045--3060. \url{https://doi.org/10.5194/nhess-18-3045-2018}. Publisher supplementary spreadsheet provides the impact observations.
+\end{thebibliography}
+\end{document}
