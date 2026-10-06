@@ -1,3 +1,7 @@
+# Rolling resistance and estimation policy — October 6, 2026
+
+Latest user permits a small fit for missing coefficients, superseding the prior prohibition on project fitting. Documented parameters remain fixed; estimated parameters must be identifiable, physically bounded and separate from held-out validation. Article adds mu_r with physical moment length a_r and coordinate-normalized capacity mu_r a_r/ell, plus sustained no-slip rolling/static-reaction derivation. Do not transfer microsphere coefficients to macroscopic rubber/rocks. General mixed angular closure and source-slip convention remain unqualified; production adapter still rejects nonzero rolling/twisting. Full experimental evidence report is now requested; include source readiness and genuine mismatches rather than hiding them.
+
 # Combined P uses uppercase Delta — October 6, 2026
 
 User explicitly prohibits lowercase delta on combined uppercase P. Active article now writes Delta P_c = [delta p; delta L/ell] for combined contact impulse and Delta P for body/global changes. Lowercase delta remains only on linear/angular impulses and scalar directional components; never on combined P. This is the latest convention and supersedes the broad earlier statement that all impulses use lowercase delta. Static/dynamic friction section is being added in the same checkpoint.

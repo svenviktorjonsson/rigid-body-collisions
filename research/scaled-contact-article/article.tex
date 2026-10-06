@@ -263,6 +263,28 @@ This is an accumulated vector contribution; $\delta p_t$ remains a scalar. If di
 
 The coefficients also enter a finite-patch traction model before its angular impulse is integrated. Translational capacity alone does not determine $\delta L_s$ or $\delta L_n$: patch geometry and the original angular law must establish those moments. The coordinate length $\ell$ cannot substitute for a physical contact-patch size.
 
+\subsection{Rolling resistance and its physical length}
+Zero tangential contact slip does not imply zero angular velocity. A rolling sphere can therefore need an independent angular impulse even while its sliding dissipation vanishes. Static friction may still supply the reaction that maintains rolling. For a declared rolling mode use dimensionless $\mu_r$ and a physical moment length $a_r$:
+\begin{equation}
+ |\delta L_s|\le\mu_r a_r\delta p_n,\qquad
+ |\delta L_s/\ell|\le\mu_r\frac{a_r}{\ell}\delta p_n.
+\end{equation}
+The second expression normalizes the angular impulse into the combined momentum units. Changing the representation length $\ell$ must not change the physical moment length $a_r$. Some sources instead report the dimensional product $\mu_r a_r$; its units and convention must be recorded. Published microsphere experiments explicitly distinguish radius-based and contact-radius-based rolling coefficients\cite{fuchsrolling}.
+
+For a fixed rolling direction $\hat{\mathbf s}$ perpendicular to $\hat{\mathbf n}$, a saturated dissipative branch has $\delta L_s\le0$ when $\hat{\mathbf s}$ follows the incoming rotation. Integrate only until rolling stops; continuing a saturated resistance through zero would spuriously reverse the motion. This is a declared resistance law, not an angular restitution law. Rotation around the normal is torsion and requires its separately specified normal moment response. A rolling coefficient does not supply that response. General mixed rolling and torsion still requires the original component closure.
+
+For sustained rolling on a fixed horizontal plane, let the sphere have radius $R$, central scalar inertia $\inertia=\alpha mR^2$, $a_r=R$, and no normal contact velocity. Use $v=R\omega$ along the rolling translation direction, with positive $\omega$ along $\hat{\mathbf s}$. The independent torque is $\tau_s=-\mu_r R f_n$ while moving. The static reaction $f_t$ and angular acceleration obey
+\begin{align}
+ m\dot v&=f_t,&\inertia\dot\omega&=\tau_s-Rf_t,&\dot v&=R\dot\omega,\\
+ \dot\omega&=\frac{\tau_s}{\inertia+mR^2},&
+ f_t&=\frac{mR\tau_s}{\inertia+mR^2}.&&
+\end{align}
+Thus the no-slip branch is feasible only if
+\begin{equation}
+ \frac{|f_t|}{f_n}=\frac{\mu_r}{1+\alpha}\le\mu_s.
+\end{equation}
+With $f_n=mg$, speed decreases at $\mu_r g/(1+\alpha)$ until rest. Without the independent rolling torque this ideal rolling branch has no such deceleration. Static friction has zero contact power; the dissipated power is $\tau_s\omega$. At zero slip $\hat{\mathbf t}$ is undefined, so its reaction direction comes from this constraint. This sustained-contact example does not resolve how the supplied full-contact-velocity direction is to represent friction during an approaching bounce.
+
 \begin{center}\small
 \begin{tabular}{p{40mm}p{93mm}}\hline
 Separate input field & Required specification\\\hline
@@ -270,11 +292,12 @@ Normal restitution & Documented material-pair value and velocity convention\\
 Sliding restitution & Documented value and the exact relative-motion channel\\
 Static friction $\mu_s$ & Documented material-pair static capacity and branch convention\\
 Dynamic friction $\mu_d$ & Documented material-pair sliding coefficient and branch convention\\
+Rolling friction $\mu_r$, $a_r$ & Dimensionless resistance and physical moment length, or their dimensional product\\
 Angular contact response & Original $\hat{\mathbf{s}}$ and $\hat{\mathbf{n}}$ component laws and their parameters\\
 Geometry and state & Contact reference, normal, inertia, pose, incoming motion\\
 Validity & Surface condition, speed/size range, uncertainties and source\\\hline
 \end{tabular}\end{center}
-No numerical material value is substituted into the symbolic derivation. Missing public inputs remain missing. No coefficients are fitted to the target collision to manufacture agreement.
+No numerical material value is substituted into the symbolic derivation. Documented inputs remain fixed. At the user's latest request, missing coefficients may be estimated with a small fit when the measurements constrain them. Each estimate must retain its conditions, uncertainty and calibration data; validation data must be identified separately. An unconstrained coefficient is an explicit simulation assumption, not a measured material property.
 
 \section{Energy, angular momentum and moving boundaries}
 For two dynamic bodies with no external impulsive work, the frozen-configuration kinetic-energy change is
@@ -388,7 +411,7 @@ Numerical outputs, material-value tables and prediction-error diagrams are inten
 
 Before new predictions, recover the exact original restitution/friction closure, its zero-motion branches, and whether directions evolve during impact. Then verify pure spin, pure sliding, mixed motion, off-centre non-spherical impacts and coupled contact groups in both dimensions. Checks must include equal/opposite impulse, total angular momentum, dual work, energy and reference-length invariance.
 
-Select independently documented material-pair parameters without project fitting. Missing angular response data cannot be inferred from desired output and called an independent material prediction. Public ball and rock records can then be compared using the same measured input states, with actual shape, inertia and uncertainty wherever available. Source reconstruction and held-out prediction must remain distinguishable.
+Select documented material-pair parameters and keep them fixed. Estimate missing parameters only with identifiable, small calibration models; do not silently alter documented restitution or friction. Missing angular response data inferred from a calibration output cannot be called an independent material prediction. Public ball and rock records can then be compared using the same measured input states, with actual shape, inertia and uncertainty wherever available. Source reconstruction, calibration and held-out prediction must remain distinguishable. The separate rolling-estimation report records the first limited calculation under this policy.
 
 For the eventual visualization, compare measured and predicted outgoing motion using the previously requested two-coordinate deviation map. Define the observation signature and its metric before inspecting agreement; state which components were independently measured. Distinct collision types can share the same error point. No dots are supplied here until the corrected model has actually been evaluated.
 
@@ -400,6 +423,7 @@ Contact force-and-moment models and matrix-free coupled contact calculations als
 \begingroup
 \raggedright
 \begin{thebibliography}{20}
+\bibitem{fuchsrolling} R. Fuchs et al., \emph{Rolling, sliding \& torsion of micron-sized silica particles: Experimental, numerical and theoretical analysis}, 2014 manuscript, angular friction laws and length conventions. \url{https://www2.msm.ctw.utwente.nl/sluding/PAPERS/2014_WeinhartFuchs_GMr.pdf}.
 \bibitem{drakefriction} Drake documentation, \emph{Modeling of Dry Friction} and \emph{CoulombFriction}. Static and dynamic coefficients and slip-opposing friction. \url{https://drake.mit.edu/doxygen_cxx/group__friction__model.html}; \url{https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_coulomb_friction.html}.
 \bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
 \bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
