@@ -1,5 +1,7 @@
 # Rigid body collisions
 
+**Model fidelity correction:** existing force-only comparisons do not validate the user’s requested motion-directed force-and-angular-impulse model. See the [audit](research/scaled-contact-article/MODEL-FIDELITY-AUDIT.md). Existing results remain historical comparator evidence.
+
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
