@@ -1,0 +1,17 @@
+{
+  "purpose": "Illustrative rotated-cuboid point impact; prescribed control inputs, not a measured material profile or fitted experiment.",
+  "mass_kg": 2.0,
+  "half_extents_m": [0.2, 0.15, 0.1],
+  "attitude_numerator": [[1, 4, 8], [4, 7, -4], [-8, 4, -1]],
+  "attitude_denominator": 9,
+  "incoming_velocity_m_s": [1.0, -0.6, -2.0],
+  "incoming_angular_velocity_rad_s": [2.0, -1.0, 3.0],
+  "normal_world": [0.0, 0.0, 1.0],
+  "tangent_1_world": [1.0, 0.0, 0.0],
+  "tangent_2_world": [0.0, 1.0, 0.0],
+  "reference_length_m": 0.2,
+  "normal_restitution": 0.6,
+  "tangential_restitution": 0.3,
+  "pair_friction": 0.6,
+  "boundary": "Stationary plane z=0; cuboid positioned with its unique lowest vertex at the origin."
+}

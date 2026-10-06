@@ -1,0 +1,37 @@
+{
+  "checked_on": "2026-10-06",
+  "question": "Are the length-scaled motion/momentum notation and additive contact matrices new?",
+  "assessment": "A consistent coordinate-scaled presentation of established mechanics. No claim of new physical law, spatial-vector mathematics or priority for the exact notation.",
+  "sources": [
+    {
+      "url": "https://royfeatherstone.org/spatial/v2/xforms.html",
+      "author": "Roy Featherstone",
+      "title": "General Comments on Coordinate Transforms",
+      "supports": "Spatial motion/force duality and dual inertia transforms."
+    },
+    {
+      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/",
+      "authors": "Kevin M. Lynch and Frank C. Park",
+      "title": "Modern Robotics, 3.4 Wrenches",
+      "supports": "Twist/wrench pairing is physical power."
+    },
+    {
+      "url": "https://cim.mcgill.ca/~rmsl/Index/Documents/MECH573/robotdes0312.pdf",
+      "author": "Jorge Angeles",
+      "title": "On the Optimum Dimensioning of Robotic Manipulators",
+      "supports": "Sections1-2 establish prior characteristic-length normalization for mixed-dimensional Jacobians. This is not a claim of the identical contact notation."
+    }
+  ],
+  "choices_in_this_article": [
+    "Translation-first ordering",
+    "V=(v,ell*omega), P=(p,L/ell)",
+    "Signed lever R=[-r/ell]_cross yielding additive contact velocity",
+    "Consistent 2D/3D dual impulse, mass, restitution, friction capacity and matrix-free coupling"
+  ],
+  "mathematical_status": "D=diag(I,ell*I) is invertible; momentum uses D^-T, mass uses D^-T M0 D^-1 and contact map uses C0 D^-1; physical Delassus response unchanged.",
+  "limitations": [
+    "Limited primary-source review, not an exhaustive priority search.",
+    "No evidence established that the exact symbol arrangement is first in the literature.",
+    "Notation scaling does not introduce or validate a new constitutive contact law."
+  ]
+}

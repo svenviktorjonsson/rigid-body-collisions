@@ -1,0 +1,6 @@
+{
+  "status": "Rendering failed after algebra calculation passed",
+  "reason": "Matplotlib mathtext requires braces around the argument to mathbf; initial unbraced velocity legend label was rejected.",
+  "physics_results_changed": false,
+  "resolved_in": "worked-3d-v1"
+}

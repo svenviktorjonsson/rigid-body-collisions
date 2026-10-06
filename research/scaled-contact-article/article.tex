@@ -27,6 +27,31 @@ Then $\mathbf P=\mathbf M\mathbf V$. Every component of $\mathbf V$ has units m/
 \end{equation}
 For force $\mathbf f$ and centre-of-mass torque $\boldsymbol\tau$, the corresponding scaled wrench is $\mathbf F=[\mathbf f^T,\boldsymbol\tau^T/\Lref]^T$ and power is $\mathbf V^T\mathbf F$. This is a coordinate choice, \emph{not} a friction, restitution, or material-fit parameter. A different fixed length per body is allowed; use that body's length in each block. Changing the length during an integration step requires additional coordinate-derivative terms and is excluded here.
 
+\section{Relation to established spatial notation}
+Six-component vectors combining translation and rotation, and their dual force/momentum vectors, are established spatial-vector and screw-theory constructions. Featherstone describes the different transformation rules for motion and force vectors; Modern Robotics derives their power pairing\cite{featherstone,modernrobotics}. Characteristic-length normalization also has prior use in robotics to make mixed translational/rotational Jacobians dimensionally homogeneous\cite{angeles}.
+
+Our choices are translation first, the fixed scale $\ell$, the dual angular momentum $\mathbf L/\ell$, and the signed lever operator that keeps the contact-velocity formula additive. To see precisely what is being changed, define the unscaled centre-of-mass vectors and scale matrix
+\begin{equation}
+\mathbf w=\begin{bmatrix}\mathbf v\\\boldsymbol\omega\end{bmatrix},\qquad
+\mathbf h=\begin{bmatrix}\mathbf p\\\mathbf L\end{bmatrix},\qquad
+\mathbf D=\operatorname{diag}(\mathbf1_3,\ell\mathbf1_3),\qquad
+\mathbf M_0=\operatorname{diag}(m\mathbf1_3,\mathbf I).
+\end{equation}
+Then the entire formulation follows from an invertible coordinate change and its dual:
+\begin{equation}
+\mathbf V=\mathbf D\mathbf w,\qquad
+\mathbf P=\mathbf D^{-T}\mathbf h,\qquad
+\mathbf M=\mathbf D^{-T}\mathbf M_0\mathbf D^{-1},\qquad
+\mathbf V^T\mathbf P=\mathbf w^T\mathbf h.
+\end{equation}
+For the unscaled contact map $\mathbf C_0=[\mathbf1_3\ {-\crossmat{\mathbf r}}]$, the scaled map is $\mathbf C=\mathbf C_0\mathbf D^{-1}$. Consequently,
+\begin{equation}
+\mathbf C\mathbf M^{-1}\mathbf C^T=\mathbf C_0\mathbf M_0^{-1}\mathbf C_0^T.
+\end{equation}
+The dual momentum scaling is therefore required by the chosen velocity scaling if work and energy are to be retained. The contact response is unchanged. Keeping plus signs follows from cross-product antisymmetry; omitting redundant parentheses follows from matrix associativity. Neither operation is a new algebraic rule.
+
+The contribution of this presentation is to carry these choices consistently through 2D/3D contact, restitution, friction capacity and efficient matrix evaluation. We do not claim a new physical law, new spatial-vector mathematics, or priority for this exact notation. The sources establish substantial prior art; the present review is not an exhaustive priority search.
+
 \section{Contact velocity with plus signs}
 Write $\crossmat{\mathbf a}\mathbf b=\mathbf a\times\mathbf b$. The skew matrix obeys $\crossmat{\mathbf a}^T=-\crossmat{\mathbf a}$. For the physical contact lever arm $\mathbf r=\mathbf x_c-\mathbf x_{\rm COM}$, set $\boldsymbol\rho=\mathbf r/\Lref$ and define the \emph{signed lever operator}
 \begin{equation}
@@ -99,7 +124,7 @@ u_n^+=-e_nu_n^-,\qquad
 \mathbf u_t^+=-e_t\mathbf u_t^-,\qquad
 0\le e_n\le1,\quad -1\le e_t\le1.
 \end{equation}
-The signed tangential convention matters: $e_t=-1$ preserves tangential contact velocity, $e_t=0$ targets sticking, and $e_t>0$ targets slip reversal. These are \emph{contact-point} velocities; a centre-of-mass tangential speed ratio is not generally $e_t$.
+The signed tangential convention matters: $e_t=-1$ preserves tangential contact velocity, $e_t=0$ targets sticking, and $e_t>0$ targets slip reversal. For $-1<e_t<0$, tangential contact motion continues in its original direction with reduced magnitude. For example, $e_t=-.2$ gives $\mathbf u_t^+=.2\mathbf u_t^-$: this sign describes the direction of a velocity ratio, not negative elastic stiffness or energy creation. Normal and tangential restitution describe different responses and need not be equal. These are \emph{contact-point} velocities; a centre-of-mass tangential speed ratio is not generally $e_t$. In coupled geometries, actual total energy must still be checked.
 
 Set $\mathbf E=\operatorname{diag}(e_n,e_t,e_t)$. If the isolated full-rank contact can realize all targets, its impulse solves
 \begin{equation}
@@ -141,6 +166,24 @@ A practical prediction requires incoming translation and spin, mass and inertia,
 
 The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the 3D illustrative pair assigns the square root of the pair coefficient to each body because Bullet multiplies body friction, while the 2D wrapper uses the Box2D square-root mixing convention. These checks do not establish a speedup or replace native simultaneous-solver verification. Native material/contact inputs here are $e_n,e_t,\mu$. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
 
+\section{Worked three-dimensional corner impact}
+\label{sec:worked3d}
+A rotated cuboid striking a stationary plane makes the full 3D coupling visible: its world inertia is non-diagonal, its contact is off centre, and both incoming translation and spin are three-component vectors. The frozen one-contact calculation below evaluates exactly the matrix equations above.
+\input{worked-3d-v1/example.tex}
+
+\section{Mapping prediction deviations}
+\label{sec:deviations}
+For each measured comparison, collect a magnitude signature
+\begin{equation}
+\mathbf q=\begin{bmatrix}|v_n|\\|v_t|\\\ell|\omega|\end{bmatrix},\qquad
+\phi=\arccos\frac{\mathbf q_{\rm measured}^T\mathbf q_{\rm predicted}}
+{\|\mathbf q_{\rm measured}\|\,\|\mathbf q_{\rm predicted}\|},\qquad
+\varepsilon=\frac{\|\mathbf q_{\rm predicted}\|}{\|\mathbf q_{\rm measured}\|}-1.
+\end{equation}
+Each case becomes one point $(\phi,\varepsilon)$: exact agreement is at the origin. The horizontal axis shows an incorrect mix of translation and rotation; the vertical axis shows too much or too little combined motion. It is the angle between observable signatures, not a spatial heading error. Colours identify collision types or declared contact regimes. Inputs need not be artificially separated, and different impacts can naturally share the same error coordinates.
+
+The plotting policy takes $\ell$ equal to the reported radius, without fitting it to the errors. This converts spin into peripheral-speed units. Unlike physical predictions, numerical angles and norms of coordinate signatures depend on the chosen plotting metric. Only reported or explicitly reconstructed observables are used; unavailable vector signs and orientation are not invented. The main comparison below uses documented inputs; the historical fit-based map is separated in the appendix.
+
 \section{Selecting documented material-pair inputs}
 The active modeling policy uses published experimental parameter profiles and performs no project fitting of material or extra contact parameters. Each profile identifies the material pair, specimen/surface condition, collision geometry and reported size. Missing coefficients remain unavailable rather than being supplied by a fit. Uncertainties and source validity conditions are retained; a generic material name does not define a universally exact collision constant.
 
@@ -170,7 +213,16 @@ For the original Cornell glass-binary worksheet, twenty-four source-reconstructe
 
 For limestone/concrete, a compatible complete contact restitution/friction profile has not been verified. The old fitted rock coefficients below are historical diagnostics and are excluded from material lookup. Likewise, the rubber comparison's assumed friction is not a documented pair value. Their dots cannot be relabeled as independently specified material predictions.
 
-\section{Historical diagnostic comparisons, not material lookup}
+\section{What would establish a stronger model?}
+First replace approximate shapes, inertias, and initial states with independently measured quantities wherever available. For rubber, compare a time-resolved compliant patch against the point model using independently characterized laws and parameters fixed before held-out impacts. Evaluate outgoing translation and rotation together, contact duration where measured, and a complete energy ledger. Translational energy alone need not be conserved: rotation, deformation, support motion, and dissipation exchange energy. Do not fit a separate force offset for every target outcome and call that an independent prediction.
+
+For non-spherical rocks, contact location already changes the Jacobian and effective mass without changing restitution. Introduce a material map only if repeated experiments with measured geometry and state show a reproducible residual dependence that transfers to unseen contacts. The reference length $\Lref$ must never serve as an adjustable mechanism for improving agreement: it changes notation, not physics.
+
+\clearpage
+\appendix
+\section{Archived conditional comparisons and superseded fits}
+\label{sec:archive}
+This appendix preserves earlier calculations for review. No new fitting is performed, and its rock coefficients are excluded from the material catalog and current prediction policy. Negative tangential restitution is permitted by the sign convention, but the sign alone does not justify interpreting an approximate-shape fit as a material property.
 \begin{center}\small
 \begin{tabular}{llrr}
 \hline
@@ -229,7 +281,7 @@ Synthetic geometry & .6 & .6 & .2 or 2 & -- & Prescribed controls; actual shape 
 \end{tabular}\end{center}
 This input table is kept separate from the symbolic calculation. Numerical evaluation draws its inputs from the table; no experimental material value is substituted into the derivation. The homogeneous inertia assumption for the golf ball is particularly conditional because its construction differs from the Superball.
 
-The limestone dataset contains 75 impacts of approximately 10 and 20 cm faceted rocks on concrete \cite{wang}. We train on 50 impacts at release heights 2.5 and 3.5 m and withhold all 25 at 4.5 m. Actual meshes, individual inertia tensors, contact attitudes, and signed initial-spin vectors are unavailable. The comparison therefore uses ideal spheres and zero incoming spin; the paper bounds initial spin magnitude by approximately 3 rad/s. The fitted coefficients are listed in the separate input table above; they are effective fitted values, not independently measured material properties.
+The limestone dataset contains 75 impacts of approximately 10 and 20 cm faceted rocks on concrete \cite{wang}. The earlier study trained on 50 impacts at release heights 2.5 and 3.5 m and withheld all 25 at 4.5 m. Actual meshes, individual inertia tensors, contact attitudes, and signed initial-spin vectors are unavailable. The comparison therefore uses ideal spheres and zero incoming spin; the paper bounds initial spin magnitude by approximately 3 rad/s. The fitted coefficients are listed in the separate input table above; they are effective fitted values, not independently measured material properties. In particular, the negative tangential coefficient could compensate for missing geometry, inertia or initial spin. It is not promoted to a limestone/concrete property.
 \begin{center}\small
 \begin{tabular}{lrrrr}
 \hline
@@ -262,35 +314,26 @@ Chant Sura & 82 reconstruction CSV files; 41 with finite gyro and rotational-ene
 The latter two inventories identify useful future evidence, not additional completed validation. Their primary landing pages are \url{https://www.envidat.ch/metadata/tschamut2014} and \url{https://doi.org/10.16904/envidat.174}. Scalar angular speed ratios must not be substituted for signed contact tangential restitution. Source and licensing details are retained with the corresponding repository inventories.
 
 
-\section{One diagram for prediction deviations}
-For each measured comparison, collect a magnitude signature
-\begin{equation}
-\mathbf q=\begin{bmatrix}|v_n|\\|v_t|\\\ell|\omega|\end{bmatrix},\qquad
-\phi=\arccos\frac{\mathbf q_{\rm measured}^T\mathbf q_{\rm predicted}}
-{\|\mathbf q_{\rm measured}\|\,\|\mathbf q_{\rm predicted}\|},\qquad
-\varepsilon=\frac{\|\mathbf q_{\rm predicted}\|}{\|\mathbf q_{\rm measured}\|}-1.
-\end{equation}
-Each case becomes one point $(\phi,\varepsilon)$: exact agreement is at the origin. The horizontal axis shows an incorrect mix of translation and rotation; the vertical axis shows too much or too little combined motion. It is the angle between observable signatures, not a spatial heading error. Colours identify collision types. Inputs need not be artificially separated, and different impacts can naturally share the same error coordinates.
+\section{Archived deviation map}
+This figure uses the metric in Section~\ref{sec:deviations}, with the original unfitted radius policy. It is retained as historical evidence and is not a comparison using a complete independently documented material-pair profile.
 
-The plotting policy takes $\ell$ equal to the reported radius for every case, without fitting it to the errors. This converts spin into peripheral-speed units. Unlike physical predictions, numerical angles and norms of coordinate signatures do depend on the chosen plotting metric; the scale policy must therefore be declared. The map retains 25 held-out limestone impacts under the fixed-coefficient model and eight ball--surface summary observations. Only reported magnitudes are used; unavailable angular-vector signs and orientation are not invented.
+The map retains 25 held-out limestone impacts under the fixed-coefficient model and eight ball--surface summary observations. Only reported magnitudes are used; unavailable angular-vector signs and orientation are not invented.
 
 For the ball rows, the tangential speed is reconstructed from the published relation $v_t=R\omega-e_t v_{{\rm in},t}$, and the normal speed uses the target-supplied $e_n$. Those are conditional signatures, not independent full-state measurements. Incoming speed cancels from both map coordinates. The thin ball error lines summarize variation over reported incidence, restitution and spin uncertainty; they are not confidence intervals. Rock uncertainty is not available. Synthetic implementation checks are excluded from this reality diagram.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/deviation-map.png}
-\caption{A single deviation map instead of bar charts. A dot near the origin agrees in combined magnitude and the relative mix of translation and spin. The map is a two-coordinate summary, not a full signed state comparison. The accompanying standalone \texttt{deviation-map.html} supports point inspection; \texttt{deviation-map.json} retains the observable vectors and mapping assumptions.}
+\caption{Historical conditional and fit-based deviation map. A dot near the origin agrees in combined magnitude and the relative mix of translation and spin. The map is a two-coordinate summary, not a full signed state comparison. The accompanying standalone \texttt{deviation-map.html} supports point inspection; \texttt{deviation-map.json} retains the observable vectors and mapping assumptions.}
 \end{figure}
 
-\section{What would establish a stronger model?}
-First replace approximate shapes, inertias, and initial states with independently measured quantities wherever available. For rubber, compare a time-resolved compliant patch against the point model with shared parameters, frozen before held-out impacts. Evaluate outgoing translation and rotation together, contact duration where measured, and a complete energy ledger. Translational energy alone need not be conserved: rotation, deformation, support motion, and dissipation exchange energy. Do not fit a separate force offset for every target outcome and call that an independent prediction.
-
-For non-spherical rocks, contact location already changes the Jacobian and effective mass without changing restitution. Introduce a material map only if repeated experiments with measured geometry and state show a reproducible residual dependence that transfers to unseen contacts. The reference length $\Lref$ must never serve as an adjustable mechanism for improving agreement: it changes notation, not physics.
-
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 \bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
 \bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
 \bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
 \bibitem{wang} Wang et al., \emph{Effects of the impact angle on the coefficient of restitution in rockfall}, Natural Hazards and Earth System Sciences 18 (2018), 3045--3060. \url{https://doi.org/10.5194/nhess-18-3045-2018}. Publisher supplementary spreadsheet provides the impact observations.
+\bibitem{featherstone} R. Featherstone, \emph{General Comments on Coordinate Transforms}, Spatial Vector and Rigid-Body Dynamics documentation. Motion/force duality and inertia transformation. \url{https://royfeatherstone.org/spatial/v2/xforms.html}.
+\bibitem{modernrobotics} K. M. Lynch and F. C. Park, \emph{Modern Robotics}, section 3.4, Wrenches. Twist--wrench power pairing. \url{https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/}.
+\bibitem{angeles} J. Angeles, \emph{On the Optimum Dimensioning of Robotic Manipulators}, author-hosted manuscript, sections 1--2. Characteristic-length normalization and homogeneous Jacobians. \url{https://cim.mcgill.ca/~rmsl/Index/Documents/MECH573/robotdes0312.pdf}.
 \end{thebibliography}
 \end{document}
