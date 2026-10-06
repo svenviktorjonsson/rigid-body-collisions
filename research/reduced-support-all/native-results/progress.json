@@ -1,0 +1,134 @@
+[
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": false,
+    "exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 1.2320806822837637e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.8920086012591364e-08,
+      "support_gap_J": 1.6418948721054571e-09,
+      "passive_bound_J": -0.1541385057434588,
+      "passivity_scale": 1.2219553436749169,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.2737367544323206e-13
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 14360,
+      "reduced_rows_max": 21,
+      "search_row_cap": 192,
+      "stage_accepts": 10,
+      "stage_attempts": 17,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 14360
+    },
+    "elapsed_s_descriptive": 0.8115561439990415
+  },
+  {
+    "input": "research/large-mobility-world/results/hull64_h10us/rejection.json",
+    "accepted": false,
+    "exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 9.821793044354046e-08,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 9.821793044413753e-08,
+      "support_gap_J": 2.5599886432912256e-11,
+      "passive_bound_J": -0.03208241713930778,
+      "passivity_scale": 1.0321582324800869,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.4210854715202004e-14
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 3579,
+      "reduced_rows_max": 18,
+      "search_row_cap": 192,
+      "stage_accepts": 16,
+      "stage_attempts": 17,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 3579
+    },
+    "elapsed_s_descriptive": 0.17757234599412186
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h5us/rejection.json",
+    "accepted": true,
+    "exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 6.861773232113748e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 9.213218712482937e-10,
+      "support_gap_J": 1.7088478990164546e-09,
+      "passive_bound_J": -74.65611857860726,
+      "passivity_scale": 148.01076363778645,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.1368683772161603e-13
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 1277,
+      "reduced_rows_max": 93,
+      "search_row_cap": 192,
+      "stage_accepts": 17,
+      "stage_attempts": 17,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 1277
+    },
+    "elapsed_s_descriptive": 1.3493895049978164
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h10us/rejection.json",
+    "accepted": true,
+    "exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.544393795560277e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.1595870844213426e-09,
+      "support_gap_J": 7.017907575694702e-11,
+      "passive_bound_J": -0.9497374349368585,
+      "passivity_scale": 2.2674903945423157,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 8.526512829121202e-14
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 54,
+      "reduced_rows_max": 24,
+      "search_row_cap": 192,
+      "stage_accepts": 17,
+      "stage_attempts": 17,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 54
+    },
+    "elapsed_s_descriptive": 0.10630421200039564
+  }
+]

@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_coulomb_replay": "e2f4302d022ccd1d578a401acd2c862d814d08b4df5faefbd37c0a56cd81f90e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_engine.py": "dc09e5b9cc6db307b7fd39f534973a58acc6d66f1aebeecac2532e16a7e6e90d",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/README.md": "e9c92de0a34b305eb0ad0d993b0f5dffda167cdb4465337741705ded892a4593",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/qp_checks.cpp": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/runner.cpp": "9194217c9eddd756341507518aacd37f9e57191f859d48c332072de775eafe62",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_more.h": "255592b9398edf7a4d53e392f0071a2a9239de3be9014e126a7828fdaa5cc55f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_tail_checks.cpp": "c6841481b13b5f6b4ed48cfef485c070926bea0b1bf0a311492785ec50b47012",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null.h": "978f1deb8dc40c1ec6ff4245e0830b32ff2d60ea277d9daa4d40fe50a21808ba",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_early_checks.cpp": "9345a07f94883101ca93a6b95e5988eaa1939cbb0d935686876e7b60b9f9a50f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_replay.cpp": "2820415d696adfaaf5af06547574b058c088132788e259f02ce68f75a7c6cc9f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h": "86595ffafaf236250d2ad6e2ce0d1e21424b5635b658f590aa2671a923f6bcce",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined.h": "42f1408561f156a5edd5ada01e68f95e19893281b97ecb825ec767c24f3c9fbd",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/CMakeLists.txt": "6770475f59afd2e89388802af5f5796adc032281891bc7482b92b0f4ea6146d5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_split_checks.cpp": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h": "e51c43ee4be83838c8a658fd2b4b9ce0738b231cf0ec12716b7ca6cf8bae8595",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_replay.cpp": "867464f5e0046a20f2dfc7fc2a8d8d31bb740abf09784aa36eb9824390664208",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_split.h": "4b9410c8a01ba5d4299d1f6778992e476924506155e348b9f4655d68b6fe73b9",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_restart_checks.cpp": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h": "66459a23dfcf5bfb836290bf8557e190850703563ea47557c6e2fee0caa615e8",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h": "d6b568b84a3f2a1eb11368d39bb4a20ae78ce797cb7dcd18673318edebee1e2e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/active_contact_checks.cpp": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/shared_contact_checks.cpp": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined_checks.cpp": "eb060fd993aff9c71e27427a5b6db9196a9f06669bfc915a319ff6165dcd875a",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/position_replay.cpp": "75120566eb5ebce2a8f8ce0f182e024fe5fb50582642e11e6f553b8ec060d44f"
+  },
+  "records": [
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/coulomb-diagnostics/hull42-rejected.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/coulomb-followup/hull42-second-rejected.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    },
+    {
+      "input": "research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "old_endpoint_bytes_and_counters_exact": true,
+      "original_physics_passed": true,
+      "new_helper_bypassed": true
+    }
+  ]
+}

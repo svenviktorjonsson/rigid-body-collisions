@@ -1,0 +1,12 @@
+{
+  "complete": false,
+  "error": "Command '['/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner']' returned non-zero exit status 1.",
+  "stderr": "Coulomb residual gate failed (1.15034e-05 m/s): increase iterations or refine timestep; no friction-law fallback\n",
+  "setting": {
+    "dt": 0.01,
+    "primary_steps": 2000,
+    "travel_fraction": 0
+  },
+  "elapsed_s_descriptive": 189.3176058639947,
+  "source_binary_unchanged": true
+}

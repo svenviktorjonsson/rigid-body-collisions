@@ -290,3 +290,28 @@ Bare null-only393 portability failure stays archived, not hidden or relabeled.
 These are saved systems, not full-world qualification or2x gate completion.
 Validation:research/mobility-continuation/integration/. No active world runs
 currently; declare source/plan before fresh64/125-hull histories.
+
+## Large-component cap/support correction — October6
+
+Three new full-horizon hull attempts stop later:64-h10us279rows,125-h10us
+759rows,125-h5us693rows. All accepted-prefix/rejection/geometry/pose audits
+pass; no full histories. Snapshot original3afb runner/replay before rebuilding.
+759 contains an ALREADY accepted249-row component, but the cap previously
+stopped before finding failed57 rows. Nonlinear search cap remains192;
+accepted larger components now pass ORIGINAL zero-budget gate without search.
+Production759 accepts4.54e-9.693 has failed645-row component but only93 active
+rows; new final large-only reduced-support tail uses full4096/reduced192,
+8 support passes,17 fixed diagonal stages/2048 iteration+SVD limits PER stage,
+retaining zero impulses outside selected triples as SEARCH ONLY. Every original
+full component/global eager-cone/bounds/passivity gate mandatory; production
+693 accepts6.86e-9. Existing23 bytes/counters EXACT, allnewtailsbypassed;
+163engine/11native tests pass. Latest396 stilldeclines. Saved279 surprisingly
+accepts full fresh old polisher at1.24e-12; initial contrary expectationreceipt
+remains retained beside corrected independent receipt. It is not a fullworld.
+
+Hosted facc054 production/engine/conformance checks pass on BOTH Python3.11/3.12;
+job3.12 fails ONLY later research comparator namespace redefinition after
+production integration. Raw failure artifact37402546398 retained; portable
+comparator now builds separately renamed frozen prototype source, preserving
+canonical archived header bytes; local controls393/276/423 pass,396declines.
+Keep all13 reference/baseline/2x gates OPEN.

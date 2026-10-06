@@ -1,0 +1,31 @@
+[
+  {
+    "input": "research/large-mobility-world/results/hull125_h10us/rejection.json",
+    "accepted": true,
+    "exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.544394522646183e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.159587508867176e-09,
+      "support_gap_J": 7.017906518820912e-11,
+      "passive_bound_J": -0.9497374349368595,
+      "passivity_scale": 2.2674903945423166,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 8.526512829121202e-14
+    },
+    "policy": {
+      "component_cap": 192,
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "iteration_cap_per_stage": 2048,
+      "iterations": 85,
+      "stage_accepts": 17,
+      "stage_attempts": 17,
+      "stage_cap": 17,
+      "svd_cap_per_stage": 2048,
+      "svds": 85
+    },
+    "elapsed_s_descriptive": 0.15485116699710488
+  }
+]

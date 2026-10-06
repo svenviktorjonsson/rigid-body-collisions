@@ -105,6 +105,7 @@ int main(int argc,char** argv){
    {"attempts",stats.projection_attempts},{"solves",stats.projection_solves},{"declines",stats.projection_declines},
    {"svd_calls",stats.projection_svd_calls},{"iteration_steps",stats.projection_iteration_steps},{"newton_steps",stats.projection_newton_steps}};
 #ifdef SPATIAL_LAPACK_RECOVERY
+  output["reduced_mobility_policy"]={{"attempts",stats.reduced_mobility_attempts},{"solves",stats.reduced_mobility_solves},{"declines",stats.reduced_mobility_declines},{"support_passes",stats.reduced_mobility.support_passes},{"reduced_rows_max",stats.reduced_mobility.reduced_rows_max},{"svd_calls",stats.reduced_mobility.svd_calls}};
   output["mobility_continuation_policy"]={{"attempts",stats.mobility_attempts},{"solves",stats.mobility_solves},{"declines",stats.mobility_declines},{"stage_attempts",stats.mobility.stage_attempts},{"iteration_steps",stats.mobility.iteration_steps},{"svd_calls",stats.mobility.svd_calls}};
   const auto& t=stats.null_seed;output["null_traction_seed_policy"]={{"attempts",stats.null_seed_attempts},{"solves",stats.null_seed_solves},{"declines",stats.null_seed_declines},{"components",t.components},{"largest_component_rows",t.largest_rows},{"component_cap_rejections",t.cap_rejections},{"seed_attempts",t.seed_attempts},{"null_svd_calls",t.null_svd_calls},{"seed_svd_calls",t.seed_svd_calls},{"iteration_steps",t.iteration_steps},{"svd_calls",t.svd_calls},{"newton_steps",t.newton_steps},{"seed_response_change_max_m_s",t.seed_response_change_max}};
 #endif

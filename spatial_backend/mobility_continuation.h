@@ -13,11 +13,12 @@ inline bool solve(const btMatrixXu&A,const btVectorXu&b,btVectorXu&p,const btVec
  for(int first=0;first<n;first++)if(!visited[first]){
   std::vector<int>ids{first};visited[first]=true;
   for(size_t at=0;at<ids.size();at++)for(int j=0;j<n;j++)if(!visited[j]&&(A(ids[at],j)!=0||A(j,ids[at])!=0||dep[j]==ids[at]||dep[ids[at]]==j)){visited[j]=true;ids.push_back(j);}
-  int m=ids.size();stats.components++;stats.largest_rows=std::max(stats.largest_rows,m);if(m>192)return false;
+  int m=ids.size();stats.components++;stats.largest_rows=std::max(stats.largest_rows,m);
   std::vector<int>inverse(n,-1);for(int i=0;i<m;i++)inverse[ids[i]]=i;
   btMatrixXu M(m,m);btVectorXu rhs(m),q(m),lower(m),upper(m);btAlignedObjectArray<int>d;d.resize(m);
   for(int i=0;i<m;i++){rhs[i]=b[ids[i]];q[i]=candidate[ids[i]];lower[i]=lo[ids[i]];upper[i]=hi[ids[i]];d[i]=dep[ids[i]]<0?-1:inverse[dep[ids[i]]];for(int j=0;j<m;j++)M.setElem(i,j,A(ids[i],ids[j]));}
   btVectorXu checked=q;if(original_gate(M,rhs,checked,lower,upper,d,tol)){for(int i=0;i<m;i++)candidate[ids[i]]=checked[i];continue;}
+  if(m>192)return false;
   for(double alpha:{.1,.03,.01,.003,.001,.0003,.0001,.00003,.00001,1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12,0.}){
    btMatrixXu search=M;for(int i=0;i<m;i++)search.setElem(i,i,M(i,i)*(1+alpha));
    projection_recovery_v2::Stats s;stats.stage_attempts++;bool found=projection_recovery_v2::solve(search,rhs,q,upper,d,tol,s,2048,2048,true,true,true,192);stats.stage_accepts+=found;stats.iteration_steps+=s.iteration_steps;stats.svd_calls+=s.svd_calls;

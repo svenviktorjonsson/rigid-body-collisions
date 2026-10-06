@@ -2,6 +2,7 @@
 #pragma once
 #include "normal_qp.h"
 #include "mobility_continuation.h"
+#include "reduced_mobility_continuation.h"
 #include <stdexcept>
 #include <sstream>
 #include <functional>
@@ -37,6 +38,7 @@ inline double consistentTangentRHS(double rhs,const btSolverConstraint& c,
 }
 
 struct CoulombStats {
+ int reduced_mobility_attempts=0,reduced_mobility_solves=0,reduced_mobility_declines=0;reduced_mobility_continuation::Stats reduced_mobility;
  int mobility_attempts=0,mobility_solves=0,mobility_declines=0;mobility_continuation::Stats mobility;
  int projection_attempts=0,projection_solves=0,projection_declines=0;
  int projection_svd_calls=0,projection_iteration_steps=0,projection_newton_steps=0;
@@ -418,6 +420,19 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
    x=candidate;stats.solves++;stats.mobility_solves++;stats.last_residual=gate.last_residual;stats.residual_max=std::max(stats.residual_max,gate.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate.passive_change_max);return true;
   }
   stats.mobility_declines++;
+ }
+
+ if(recover&&b.rows()<=4096){
+  for(int i=0;i<b.rows();i++)candidate[i]=rejected[i];
+  reduced_mobility_continuation::Stats trial;stats.reduced_mobility_attempts++;
+  auto original_gate=[](const btMatrixXu&M,const btVectorXu&rhs,btVectorXu&q,const btVectorXu&lower,const btVectorXu&upper,const btAlignedObjectArray<int>&dependencies,double tol){CoulombStats gate;return coulombIterate(M,rhs,q,lower,upper,dependencies,0,tol,gate);};
+  bool found=reduced_mobility_continuation::solve(A,b,candidate,lo,hi,dep,tolerance,trial,original_gate);
+  auto&s=stats.reduced_mobility;s.components+=trial.components;s.largest_rows=std::max(s.largest_rows,trial.largest_rows);s.stage_attempts+=trial.stage_attempts;s.stage_accepts+=trial.stage_accepts;s.iteration_steps+=trial.iteration_steps;s.svd_calls+=trial.svd_calls;s.support_passes+=trial.support_passes;s.reduced_rows_max=std::max(s.reduced_rows_max,trial.reduced_rows_max);
+  CoulombStats gate;
+  if(found&&coulombIterate(A,b,candidate,lo,hi,dep,0,tolerance,gate)){
+   x=candidate;stats.solves++;stats.reduced_mobility_solves++;stats.last_residual=gate.last_residual;stats.residual_max=std::max(stats.residual_max,gate.residual_max);stats.passive_change_max=std::max(stats.passive_change_max,gate.passive_change_max);return true;
+  }
+  stats.reduced_mobility_declines++;
  }
 
 #endif

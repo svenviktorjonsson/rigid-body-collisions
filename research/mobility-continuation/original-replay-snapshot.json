@@ -1,0 +1,7 @@
+{
+  "path": "/home/viktor/.cache/physics-cap192-reference-binaries-20261006/spatial_coulomb_replay",
+  "sha256": "0f6d3e76baadebfcdf2592351750ae00973cc6667c81fb693240a74dec5a1c79",
+  "source": "4147a42ef7533c0ceb02b2087279ae69a42d37e4",
+  "byte_identical_to_original_recorded_guard": true,
+  "method": "Frozen Git4147a42 sources rebuilt with same GCC15 flags/runtime/Bullet static libraries; ELF SHA256 exactly matches original recorded0f6d3e76 guard."
+}
