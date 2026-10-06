@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "original_gate": {
+    "accepted": true,
+    "projection_m_s": 9.745044023101525e-09,
+    "circle_violation_scaled_m_s": 0.0,
+    "sticking_m_s": 2.345469352834071e-09,
+    "support_gap_J": 1.6915208264129527e-11,
+    "passive_bound_J": -0.1461045992747333,
+    "passivity_scale": 1.1957610038779187,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 4.547473508864641e-13
+  },
+  "native_policy": {
+    "attempts": 1,
+    "component_cap_rejections": 0,
+    "components": 10,
+    "declines": 0,
+    "iteration_steps": 1571,
+    "largest_component_rows": 135,
+    "newton_steps": 1563,
+    "null_svd_calls": 0,
+    "seed_attempts": 0,
+    "seed_response_change_max_m_s": 0.0,
+    "seed_svd_calls": 0,
+    "solves": 1,
+    "svd_calls": 1571
+  }
+}

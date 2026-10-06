@@ -292,3 +292,7 @@ capture passes independently at5.60e-9m/s; other larger contact failures remain.
 See [current continuation status](HANDOVER.md) and
 [the component128 proof](research/component-cap128/production393-independent.json).
 The all-case working baseline and subsequent2x performance gate remain pending.
+
+The fallback now supports192-row exact components after an actual135-row
+component passed original native and independent gates. The completed125-sphere
+refinement still fails its second spin edge; all-case qualification remains open.

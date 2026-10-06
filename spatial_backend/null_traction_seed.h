@@ -3,7 +3,7 @@
 #include "projection_more.h"
 #include "newton_linear.h"
 namespace null_traction_seed {
-inline constexpr int maximum_component_rows=128;
+inline constexpr int maximum_component_rows=192;
 struct Stats {int components=0,largest_rows=0,cap_rejections=0,seed_attempts=0,null_svd_calls=0,seed_svd_calls=0,iteration_steps=0,svd_calls=0,newton_steps=0;double seed_response_change_max=0;};
 inline bool solve(const btMatrixXu&A,const btVectorXu&b,const btVectorXu&seed,const btVectorXu&hi,
  const btAlignedObjectArray<int>&dep,btVectorXu&out,double tolerance,Stats&stats){
