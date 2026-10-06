@@ -1,0 +1,25 @@
+{
+  "source": "6414ecfdf38b0296f5cb4811a39154e497b4ce77",
+  "cases": {
+    "3d_box": "c498580e5477ec8480336335a8501f7967e666d32aa68e95a2ee8e74c574e364",
+    "3d_hull": "ac2d37915065039e0142320fd2c43aabfdaee041e2663d1bdce4c96ddbd53843"
+  },
+  "settings": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Fresh original8-body spinning-box/asymmetric-hull3-level10/5/2.5us trajectories at published final terminal/large-support recovery model. ALL original authored geometry/friction/gravity/rapid reversals/horizon and full physical/BOTH quarter-budget edges preserved. Retain every real rejection. No performance baseline/ranking yet; frozen native sources and binary throughout."
+}

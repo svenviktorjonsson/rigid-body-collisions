@@ -1,0 +1,32 @@
+{
+  "source": "6414ecfdf38b0296f5cb4811a39154e497b4ce77",
+  "case": "3d_hull_64",
+  "scene_sha256": "1d75ccc28fabbbc69554916bac2a51963896b7115b5aa7bc59c82b227d13a891",
+  "settings": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Prospective original64 irregular-hull10/5/2.5us ladder, authenticated full physics-passing10us anchor at SAME source/binary and unchanged authored shapes/material/horizon/motion. Fresh5/2.5us worlds retain all later failures. Same1e-8 solve/1nm numerical slop, ALL original full physics and BOTH adjacent quarter-budget edges mandatory. No baseline/performance qualification from single completed anchor.",
+  "numerical_search_tolerance_m_s": 1e-08,
+  "physical_velocity_position_gates_m_s": 1e-08,
+  "contact_slop_m": 1e-09,
+  "anchors": [
+    {
+      "path": "research/large-terminal-world/results/hull64_h10us/final.json",
+      "sha256": "6c378614a379dbba36685bd24c9879acec99b9be7174aa50b89bc280744b254e"
+    }
+  ]
+}
