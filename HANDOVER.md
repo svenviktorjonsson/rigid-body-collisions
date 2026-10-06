@@ -1,3 +1,7 @@
+# Wedge notation correction — October 6, 2026
+
+User explicitly requests wedge on cross-product matrices, no redundant parentheses in associative matrix products, and lowercase delta for impulses. Active article uses r^wedge j and analogous matrix products, preserving factor order. This notation correction does not resolve the directional constitutive model mismatch documented below.
+
 # Directional model mismatch — October 6, 2026
 
 Latest user correction supersedes claims of model fidelity: t is the relative contact-velocity direction; s is the relative angular-velocity direction. No p_s component. Existing conventional force-only endpoint comparisons do not validate this model. Earlier research-assessment.tex already includes an independent free angular impulse. Latest full-wrench article still lacks the exact directional constitutive law. Read research/scaled-contact-article/MODEL-FIDELITY-AUDIT.md before further implementation. Preserve previous results as historical comparators. Recover original equations; do not guess remaining direction, projection, zero-state or capacity conventions. No corrected numerical validation yet.

@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb,array,graphicx,hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
 \newcommand{\Lref}{\ell}
-\newcommand{\crossmat}[1]{[#1]_{\times}}
+\newcommand{\crossmat}[1]{{#1}^{\wedge}}
 \title{Rigid-body contact with length-scaled velocity and momentum\\Normal and tangential restitution, friction, and experimental comparisons}
 \author{Viktor's notation: $\ell\boldsymbol\omega$ and $\mathbf L/\ell$}
 \date{6 October 2026}
@@ -58,7 +58,7 @@ The contribution of this presentation is to carry these choices consistently thr
 \section{Contact velocity with plus signs}
 Write $\crossmat{\mathbf a}\mathbf b=\mathbf a\times\mathbf b$. The skew matrix obeys $\crossmat{\mathbf a}^T=-\crossmat{\mathbf a}$. For the physical contact lever arm $\mathbf r=\mathbf x_c-\mathbf x_{\rm COM}$, set $\boldsymbol\rho=\mathbf r/\Lref$ and define the \emph{signed lever operator}
 \begin{equation}
-\mathbf R=\crossmat{-\boldsymbol\rho}.
+\mathbf R=-\crossmat{\boldsymbol\rho}.
 \end{equation}
 The physical velocity at the contact is
 \begin{equation}
@@ -69,11 +69,11 @@ The physical velocity at the contact is
 \end{equation}
 The plus sign is obtained by reversing the cross-product order, since $\boldsymbol\omega\times\mathbf r=(-\mathbf r)\times\boldsymbol\omega$. It does \emph{not} mean ordinary matrix factors commute. Associativity allows $\mathbf R\Lref\boldsymbol\omega$ to be written without redundant parentheses, but does not allow $\mathbf A\mathbf B$ to be replaced by $\mathbf B\mathbf A$.
 
-A general contact transfers both a force impulse $\mathbf j=\int\mathbf f_c\,dt$ and a torque impulse $\mathbf k=\int\boldsymbol\tau_c\,dt$. Here $\boldsymbol\tau_c$ is the free contact moment about the declared contact reference point, excluding the lever-arm moment already represented by $\mathbf r\times\mathbf f_c$. The complete momentum update is
+A general contact transfers both a force impulse $\mathbf j=\int\mathbf f_c\,dt$ and a torque impulse $\mathbf k=\int\boldsymbol\tau_c\,dt$. Here $\boldsymbol\tau_c$ is the free contact moment about the declared contact reference point, excluding the lever-arm moment already represented by $\crossmat{\mathbf r}\mathbf f_c$. The complete momentum update is
 \begin{equation}
-\Delta\mathbf p=\mathbf j,\qquad
-\boxed{\Delta\mathbf L=\mathbf r\times\mathbf j+\mathbf k},\qquad
-\Delta\mathbf P=\mathbf C^T\mathbf j+
+\delta\mathbf p=\mathbf j,\qquad
+\boxed{\delta\mathbf L=\crossmat{\mathbf r}\mathbf j+\mathbf k},\qquad
+\delta\mathbf P=\mathbf C^T\mathbf j+
 \begin{bmatrix}0\\\mathbf k/\ell\end{bmatrix}.
 \end{equation}
 For a frozen contact lever arm, a distributed traction impulse over a contact patch $\mathcal A$ produces
@@ -81,7 +81,7 @@ For a frozen contact lever arm, a distributed traction impulse over a contact pa
 \mathbf j=\int\!\int_{\mathcal A}\mathbf t(\mathbf x,t)\,dA\,dt,\qquad
 \mathbf k=\int\!\int_{\mathcal A}(\mathbf x-\mathbf x_c)\times\mathbf t(\mathbf x,t)\,dA\,dt.
 \end{equation}
-An independently applied couple is included in $\mathbf k$ as well. This decomposition accounts for the same physical wrench exactly once. If the reference point shifts by $\mathbf a$, then $\mathbf r'=\mathbf r+\mathbf a$ and $\mathbf k'=\mathbf k-\mathbf a\times\mathbf j$, so $\mathbf r'\times\mathbf j+\mathbf k'=\mathbf r\times\mathbf j+\mathbf k$.
+An independently applied couple is included in $\mathbf k$ as well. This decomposition accounts for the same physical wrench exactly once. If the reference point shifts by $\mathbf a$, then $\mathbf r'=\mathbf r+\mathbf a$ and $\mathbf k'=\mathbf k-\crossmat{\mathbf a}\mathbf j$, so $\crossmat{\mathbf r\prime}\mathbf j+\mathbf k'=\crossmat{\mathbf r}\mathbf j+\mathbf k$.
 
 Choose a fixed contact length $\ell_c>0$ and define the scaled contact wrench impulse and conjugate contact motion
 \begin{equation}
@@ -92,12 +92,12 @@ Choose a fixed contact length $\ell_c>0$ and define the scaled contact wrench im
 Then the additive form carries the independent torque impulse without a separate update rule:
 \begin{equation}
 \mathbf U_c=\mathbf K\mathbf V,\qquad
-\Delta\mathbf P=\mathbf K^T\boldsymbol\eta
-=\begin{bmatrix}\mathbf j\\\boldsymbol\rho\times\mathbf j+\mathbf k/\ell\end{bmatrix}.
+\delta\mathbf P=\mathbf K^T\boldsymbol\eta
+=\begin{bmatrix}\mathbf j\\\crossmat{\boldsymbol\rho}\mathbf j+\mathbf k/\ell\end{bmatrix}.
 \end{equation}
 Work duality gives
 \begin{equation}
-\mathbf V^T\Delta\mathbf P=\mathbf v_c^T\mathbf j+\boldsymbol\omega^T\mathbf k
+\mathbf V^T\delta\mathbf P=\mathbf v_c^T\mathbf j+\boldsymbol\omega^T\mathbf k
 =\mathbf U_c^T\boldsymbol\eta.
 \end{equation}
 Taking $\ell_c=\ell$ makes the lower-right block of $\mathbf K$ an identity. The ideal force-only point-contact specialization sets $\mathbf k=0$ and retains just the three rows $\mathbf C$; it cannot represent a finite-patch free torque impulse. Contact wrench/moment models and torsional/rolling friction have established precedents\cite{drakewrench,mujocowrench}.
@@ -128,7 +128,7 @@ Orient a contact normal from body B towards body A. Transfer $+\mathbf j,+\mathb
 \end{equation}
 where $\mathbf u=\mathbf v_{c,A}-\mathbf v_{c,B}$ and $\boldsymbol\Omega=\boldsymbol\omega_A-\boldsymbol\omega_B$. For $\mathbf M=\operatorname{diag}(\mathbf M_A,\mathbf M_B)$,
 \begin{equation}
-\Delta\mathbf P=\mathbf G_w^T\boldsymbol\eta,\qquad
+\delta\mathbf P=\mathbf G_w^T\boldsymbol\eta,\qquad
 \mathbf V^+=\mathbf V^-+\mathbf M^{-1}\mathbf G_w^T\boldsymbol\eta,\qquad
 \mathbf U^+=\mathbf U^-+\mathbf W_w\boldsymbol\eta,
 \end{equation}
@@ -155,12 +155,12 @@ W_{\rm actuator}=\mathbf j^T\mathbf v_b(\mathbf x_c)+\mathbf k^T\boldsymbol\omeg
 For multiple contacts, use stacked vectors and the full operator. Free flight still uses the actual rigid-body evolution, changing world inertia and gyroscopic dynamics; the impulsive relation does not replace that evolution.
 
 \subsection{Pure spin with a central normal impact}
-For a sphere on a plane with $\mathbf r=-R\mathbf n$, a central normal force impulse $\mathbf j=j_n\mathbf n$ has $\mathbf r\times\mathbf j=0$. If the sphere spins about $\mathbf n$, then $\boldsymbol\omega\times\mathbf r=0$ as well. An ideal force-only point contact consequently cannot change this spin. A nonzero torsional contact impulse gives
+For a sphere on a plane with $\mathbf r=-R\mathbf n$, a central normal force impulse $\mathbf j=j_n\mathbf n$ has $\crossmat{\mathbf r}\mathbf j=0$. If the sphere spins about $\mathbf n$, then $\boldsymbol\omega\times\mathbf r=0$ as well. An ideal force-only point contact consequently cannot change this spin. A nonzero torsional contact impulse gives
 \begin{equation}
-\Delta\mathbf L=\mathbf k,\qquad
+\delta\mathbf L=\mathbf k,\qquad
 \boldsymbol\omega^+=\boldsymbol\omega^-+\mathbf I^{-1}\mathbf k.
 \end{equation}
-For spin perpendicular to $\mathbf n$, $\boldsymbol\omega\times\mathbf r$ generally produces contact slip, so a tangential force impulse can also change spin through $\mathbf r\times\mathbf j_t$. For a non-spherical off-centre contact even a normal impulse may have a nonzero lever-arm moment. The complete wrench formulation includes each mechanism.
+For spin perpendicular to $\mathbf n$, $\boldsymbol\omega\times\mathbf r$ generally produces contact slip, so a tangential force impulse can also change spin through $\crossmat{\mathbf r}\mathbf j_t$. For a non-spherical off-centre contact even a normal impulse may have a nonzero lever-arm moment. The complete wrench formulation includes each mechanism.
 
 \input{wrench-impulse-v2/spin-example.tex}
 
