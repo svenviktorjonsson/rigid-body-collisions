@@ -1,0 +1,13 @@
+{
+  "source": "6414ecfdf38b0296f5cb4811a39154e497b4ce77",
+  "binaries": {
+    "spatial_runner": {
+      "path": "/home/viktor/.cache/physics-terminal-reference-binaries-20261006/spatial_runner",
+      "sha256": "7de90dcceedc9f191840518afa100b1d68babd9860cf307a4417ab5a01bb2846"
+    },
+    "spatial_coulomb_replay": {
+      "path": "/home/viktor/.cache/physics-terminal-reference-binaries-20261006/spatial_coulomb_replay",
+      "sha256": "6671beabb695b0f26d30f000f040b20da2e950ab508fd8b00c6162ad7d41ed8a"
+    }
+  }
+}
