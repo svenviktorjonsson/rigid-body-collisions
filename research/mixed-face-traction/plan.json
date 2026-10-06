@@ -1,0 +1,10 @@
+{
+  "source": "8572f61c1b5123a891c447d88d8ebb3b6a5e449c",
+  "inputs": {
+    "research/large-velocity-cap192-world/results/trial_0/rejection.json": "82fc85b766a262c65664a9a040efc46290f6ad3cf2d477ac77bbf083ec5f4285",
+    "research/large-terminal-world/results/hull125_h10us/rejection.json": "c819cb7e0752d55f4a84504a6aa43fd64938a2e1483ce044ebf845249d41b145",
+    "research/large-terminal-world/results/hull125_h5us/rejection.json": "2f870a93f60c25c484601fbf69a88ffac83dae61b4378f23d910f995fa32b7eb"
+  },
+  "near_sticking_speed_m_s": 1e-05,
+  "rule": "Prospective isolated mixed-face traction seed search. Exact full4096 components; selected complete triples192 and weak nearly-sticking contacts8 max. Enumerate weak inactive/sticking choices; strong sliding direction fixed-point128 steps per face/global4096 LP calls max.32-facet INNER circular cone only for seed construction, original exact circle/full equations/1e-8/bounds/passivity and native zero-budget gate mandatory. No weakened physical law or body application. Current396 has3 strongly sliding,4 near-sticking and2 inactive contacts; previous all-sticking-only faces omit those3 sliders. Retain every decline/cap/seed result; no world/reference/performance claim."
+}
