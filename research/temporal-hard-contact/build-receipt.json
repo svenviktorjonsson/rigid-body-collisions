@@ -1,6 +1,8 @@
 {
+  "linear_slop_m": 1e-06,
+  "polygon_mass_policy": "authored_core_only_skin_massless",
   "archive_sha256": "dee7bcf0f50b3dcccf67678ce14ffe3ce02583b51b8b03e447ab30a84c3436ef",
-  "source": "22e647c6e8c3c802ec9c34ece5221fdad54de2c1",
+  "source": "59e950b9121c2e7b94a33b983e7e7ace3c80cf6f",
   "inputs": {
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/benchmark/main.c": "4eb0451ad59226d9fd70e77a2ec23587c68c82ec4682247242ce0122928128c1",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/extern/glad/include/KHR/khrplatform.h": "7b1e01aaa7ad8f6fc34b5c7bdf79ebf5189bb09e2c4d2e79fc5d350623d11e83",
@@ -188,7 +190,7 @@
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/distance.c": "e319af5e10e288e14a7c90331f1cf63267eb0e23fd60e13de9cd8d7bf2f02995",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/distance_joint.c": "df00afcba04de3693cca532032913d11bd4cf418bbcd43cf22c0bff7a6bf3fe1",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/dynamic_tree.c": "a87abeb66b8a6bb7b3c6c151309243594687aa4e26d1a7e683e0da491e2e5f37",
-    "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/geometry.c": "6f06591a5c4ece1c14b4033e23bdd068c035ba3992269ec639df439be7244e08",
+    "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/geometry.c": "41af478a94024b25caec3e14f8738712688133f83213510fe1a28cf722725e75",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/hull.c": "9f3a6047d18dff05eae20cce55721a26f31bd1e031bf92c8430b5c53cd961740",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/id_pool.c": "384c1795268ceaf1c91f3d3179512406133864544a62a9e61cfaf0f7bfff0a4d",
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/src/id_pool.h": "e11d6cfb00ce3d6fb2086f3f69e8feac626901062c43ca7659693cfed9db012e",
@@ -232,7 +234,7 @@
     "box2d-8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3/test/test_world.c": "d8b98f99eb3c04cb16c9801f5674dec9def5787e185a709066292028c4e59822",
     "runner.cpp": "272b041eaa75395d07249645f7cdf4ab14b6ffc11d2c4ef6216bb1b5777c4119"
   },
-  "plan_sha256": "44eb6af1453d62f352675012c45fbc67e44faf83a5ec3b4ae8a445207c55ead6",
-  "builder_sha256": "2e13a7513ad2b3b9a001180bf2e0d2887d6aa4afe22fc2c5bf3bd56874551657",
-  "binary_sha256": "1abf54fcbc383f6477cc6b530b8719cb944dc13fb0ff592ce841bbcf9ff1febd"
+  "plan_sha256": "87a76f40d16a6ba5ad500a9346d59a7d1f1422317605861c748bd6eba01a9ef1",
+  "builder_sha256": "c871eb0175198554ba4a11ccbddb2a254c493372e62f1597d99112182c9b0849",
+  "binary_sha256": "5d8ed2f56ca7ba24d90b58aa89f6805151100c7899f26ad97d0f99b2717ec0b9"
 }
