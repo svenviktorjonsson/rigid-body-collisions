@@ -1,3 +1,11 @@
+# Combined P uses uppercase Delta — October 6, 2026
+
+User explicitly prohibits lowercase delta on combined uppercase P. Active article now writes Delta P_c = [delta p; delta L/ell] for combined contact impulse and Delta P for body/global changes. Lowercase delta remains only on linear/angular impulses and scalar directional components; never on combined P. This is the latest convention and supersedes the broad earlier statement that all impulses use lowercase delta. Static/dynamic friction section is being added in the same checkpoint.
+
+# Static and dynamic friction restored explicitly — October 6, 2026
+
+User requires mu_s (static) and mu_d (dynamic) in the article. Active symbolic derivation and separate input table now include both, scalar static capacity and slip-opposing dynamic force, conditional fixed-direction/single-branch impulse forms, and the dynamic component row [mu_d,1,0,0]. Integration over actual sliding intervals is distinguished from a whole-impact shortcut; slip arrest/reversal and positive tangential restitution require the stated original branch/history law. Static s is distinguished from spin-direction s. No coefficients invented, empirical results restored or production changes claimed. Primary reference: Drake dry-friction/CoulombFriction documentation. The source-slip convention versus full-relative-velocity direction compatibility remains explicit.
+
 # Scalar impulses and unit-direction hats — October 6, 2026
 
 User correctly clarified that delta p_n, delta p_t, delta L_s, delta L_n are scalars, not vectors. Active article reconstructs full bold impulses as scalar times unit direction; extra q_n/q_t/a_s/a_n amplitude symbols are removed. Hats mark normalized n, t, s. Unknown component vector contains these scalar impulses directly (angular entries divided by ell). Identity and zero matrix blocks now use true double-struck digits; ordinary scalar entries remain numeric. A small locally bundled, permissively licensed BBOLD Type 1 font supplies these glyphs, with build.sh local search paths; AMS mathbb I remains the inertia font. Named matrices remain in their prior style pending any broader preference.

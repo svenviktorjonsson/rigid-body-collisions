@@ -21,7 +21,7 @@ We combine linear velocity and length-scaled angular velocity in a single vector
 \end{abstract}
 
 \section{Notation and scope}
-Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ denotes an impulse; uppercase $\Delta$ denotes a change in a state or global quantity. Component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
+Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ is used on the linear and angular impulses and their scalar components. The combined impulse uses uppercase $\Delta\mathbf{P}$; changes in state or global quantities also use uppercase $\Delta$. Component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
 
 The direction $\hat{\mathbf{t}}$ follows relative velocity at the collision point, and $\hat{\mathbf{s}}$ follows relative angular velocity. They are motion-defined directions, not two axes chosen to complete a tangent basis. The unit contact normal is $\hat{\mathbf{n}}$. Hats denote unit directions. Identity and zero matrix blocks use double-struck $\id$ and $\zmat$; their dimensions follow from the surrounding blocks. Ordinary numeric entries in explicit component matrices remain scalars. The allowed directional impulse components must be respected; a linear spin component $\delta p_s$ is not introduced.
 
@@ -68,7 +68,7 @@ M=\begin{bmatrix}m\id&\zmat\\\zmat&\inertia/\ell^2\end{bmatrix},\quad
 The combined force and its impulse are
 \begin{equation}
 \mathbf{F}=\begin{bmatrix}\mathbf{f}\\\boldsymbol{\tau}/\ell\end{bmatrix},\qquad
-\delta \mathbf{P}=\int \mathbf{F}\,dt,
+\Delta\mathbf{P}=\int \mathbf{F}\,dt,
 \end{equation}
 where $\boldsymbol{\tau}$ is the torque about the centre of mass for this body-level expression. Work and kinetic energy retain their physical values:
 \begin{equation}
@@ -108,11 +108,11 @@ At the declared contact reference, define the linear impulse $\delta \mathbf{p}$
 \begin{equation}
 \delta \mathbf{p}=\int \mathbf{f}_c\,dt,\qquad
 \delta \mathbf{L}=\int\boldsymbol{\tau}_c\,dt,\qquad
-\delta \mathbf{P}_c=\begin{bmatrix}\delta \mathbf{p}\\\delta \mathbf{L}/\ell\end{bmatrix}.
+\Delta\mathbf{P}_c=\begin{bmatrix}\delta \mathbf{p}\\\delta \mathbf{L}/\ell\end{bmatrix}.
 \end{equation}
-The subscript $c$ distinguishes this contact impulse from the body momentum increment. The independent contact angular impulse excludes the lever-arm moment, which the transpose map supplies:
+The combined contact impulse is written $\Delta\mathbf{P}_c$, with lowercase $\delta$ retained on its linear and angular entries. The single subscript $c$ distinguishes this contact quantity from the body momentum increment. The independent contact angular impulse excludes the lever-arm moment, which the transpose map supplies:
 \begin{equation}
-\boxed{\Delta \mathbf{P}_k=B_k^{\mathsf T}\delta \mathbf{P}_c}
+\boxed{\Delta \mathbf{P}_k=B_k^{\mathsf T}\Delta\mathbf{P}_c}
 =\begin{bmatrix}\delta \mathbf{p}\\
 \rw{\mathbf{r}_k}\,\delta \mathbf{p}/\ell+\delta \mathbf{L}/\ell\end{bmatrix}.
 \end{equation}
@@ -124,7 +124,7 @@ Equivalently,
 Here $\Delta \mathbf{L}_k$ is the body angular-momentum change caused by the total angular impulse. This distinction prevents counting the force moment twice. The associated work is
 \begin{equation}
 \mathbf{V}_k^{\mathsf T}\Delta \mathbf{P}_k
-=\mathbf{U}_k^{\mathsf T}\delta \mathbf{P}_c
+=\mathbf{U}_k^{\mathsf T}\Delta\mathbf{P}_c
 =\mathbf{u}_k^{\mathsf T}\delta \mathbf{p}
 +\boldsymbol{\omega}_k^{\mathsf T}\delta \mathbf{L}.
 \end{equation}
@@ -156,9 +156,9 @@ M=\operatorname{diag}_{k\in\mathcal B} M_k,\qquad
 \end{equation}
 The impulse and motion updates are
 \begin{align}
-\Delta \mathbf{P}&=G^{\mathsf T}\delta \mathbf{P}_c,\\
-\mathbf{V}^+&=\mathbf{V}^-+M^{-1}G^{\mathsf T}\delta \mathbf{P}_c,\\
-\boxed{\mathbf{U}^+=\mathbf{U}^-+W\delta \mathbf{P}_c},\qquad
+\Delta \mathbf{P}&=G^{\mathsf T}\Delta\mathbf{P}_c,\\
+\mathbf{V}^+&=\mathbf{V}^-+M^{-1}G^{\mathsf T}\Delta\mathbf{P}_c,\\
+\boxed{\mathbf{U}^+=\mathbf{U}^-+W\Delta\mathbf{P}_c},\qquad
 W&=GM^{-1}G^{\mathsf T}.
 \end{align}
 The signs square to one in the mobility. The explicit two-body matrix is
@@ -192,7 +192,7 @@ D=\begin{bmatrix}
 \zmat&\zmat&\hat{\mathbf{s}}&\hat{\mathbf{n}}
 \end{bmatrix},\qquad
 \boldsymbol{\lambda}=\begin{bmatrix}\delta p_n\\\delta p_t\\\delta L_s/\ell\\\delta L_n/\ell\end{bmatrix},\qquad
-\boxed{\delta\mathbf{P}_c=D\boldsymbol{\lambda}}.
+\boxed{\Delta\mathbf{P}_c=D\boldsymbol{\lambda}}.
 \end{equation}
 This map is not assumed orthogonal, square or invertible. Its dual gives the component-conjugate motions and coupled mobility:
 \begin{equation}
@@ -229,12 +229,47 @@ Normal restitution and the historical geometric-tangent restitution must not be 
 
 Sliding and angular resistance must follow the model's specified $\hat{\mathbf{t}}$, $\hat{\mathbf{s}}$ and normal angular component. A translational Coulomb cone by itself supplies no independent angular impulse. Conversely, adding independent guessed moment limits or replacing the direction map by two arbitrary tangent axes changes the constitutive model. We therefore do not retain the earlier force-only endpoint solver as a definition of this law.
 
+\subsection{Static and dynamic friction coefficients}
+The material-pair profile includes both static friction $\mu_s$ and dynamic friction $\mu_d$. In the usual two-coefficient Coulomb model, $0\le\mu_d\le\mu_s$; these values and their validity conditions come from the source data, not from matching the desired rebound\cite{drakefriction}. The subscript $s$ on $\mu_s$ means \emph{static}; the subscript $s$ on $\delta L_s$ labels the \emph{spin direction}. They are distinct uses of a conventional index, not the same parameter.
+
+At force level let $f_n\ge0$ be compressive normal load and $f_t$ the scalar sliding force. Static friction supplies a reaction up to its capacity, while ongoing sliding uses the dynamic coefficient:
+\begin{align}
+\text{static branch:}\quad &|f_t|\le\mu_s f_n,\\
+\text{sliding branch:}\quad &f_t=-\mu_d f_n,\qquad
+\mathbf f_t=f_t\hat{\mathbf t}.
+\end{align}
+In the second branch $\hat{\mathbf t}$ points along current slip, so the force opposes it. At zero slip the direction is undefined and the reaction is determined by the static constraint; it is not automatically a saturated force. For conventional Coulomb material data, the source's surface-slip direction must be identified consistently with the model's $\hat{\mathbf t}$. A relative velocity containing normal approach is not automatically the tangential slip used to measure a friction coefficient. This compatibility is part of recovering the exact original directional law, not permission to replace the supplied direction definition.
+
+With frozen normal and sliding directions, constant coefficients and a single static or sliding branch throughout the interval, the corresponding impulse relations are
+\begin{align}
+\delta p_n&\ge0,\\
+\text{static capacity:}\quad &|\delta p_t|\le\mu_s\delta p_n,\\
+\text{continued sliding:}\quad &\delta p_t+\mu_d\delta p_n=0.
+\end{align}
+These equations use the scalar impulses directly. A sticking trial is computed from the coupled mobility and the required no-slip constraint, then checked against static capacity. A contact already sliding uses $\mu_d$ until slip arrests; only then is the static branch reassessed. Testing static capacity does not justify applying $\mu_s$ as the friction magnitude throughout a sliding collision.
+
+In the component matrix calculation, the static capacity and frozen continued-sliding equality become
+\begin{equation}
+|\lambda_2|\le\mu_s\lambda_1,\quad \lambda_1\ge0,\qquad
+\begin{bmatrix}\mu_d&1&0&0\end{bmatrix}\boldsymbol\lambda=0.
+\end{equation}
+The entries in this row are scalar coefficients, not identity or zero matrix blocks. Use the static inequality only for its declared branch and the dynamic equality only for its declared branch. Normal restitution and the original angular response remain coupled through $W_d$. Neither friction coefficient may be discarded from the input table because a particular impact happens to exercise only one branch.
+
+If slip arrests or reverses within an impact, the whole-impact dynamic equality need not hold. The sliding contribution integrates over the actual sliding intervals $\mathcal I$:
+\begin{equation}
+\int_{\mathcal I}f_t\hat{\mathbf t}\,dt=-\int_{\mathcal I}\mu_d f_n\hat{\mathbf t}\,dt.
+\end{equation}
+This is an accumulated vector contribution; $\delta p_t$ remains a scalar. If directions evolve, integrate the force vector before expressing its endpoint components. Elastic sticking and returned shear energy require their specified history law; a positive sliding restitution target is not produced by a purely dissipative dynamic-friction branch alone.
+
+The coefficients also enter a finite-patch traction model before its angular impulse is integrated. Translational capacity alone does not determine $\delta L_s$ or $\delta L_n$: patch geometry and the original angular law must establish those moments. The coordinate length $\ell$ cannot substitute for a physical contact-patch size.
+
 \begin{center}\small
 \begin{tabular}{p{40mm}p{93mm}}\hline
 Separate input field & Required specification\\\hline
 Normal restitution & Documented material-pair value and velocity convention\\
 Sliding restitution & Documented value and the exact relative-motion channel\\
-Sliding friction & Original static/dynamic or endpoint rule, if present\\
+Static friction $\mu_s$ & Documented material-pair static capacity and branch convention\\
+Dynamic friction $\mu_d$ & Documented material-pair sliding coefficient and branch convention\\
 Angular contact response & Original $\hat{\mathbf{s}}$ and $\hat{\mathbf{n}}$ component laws and their parameters\\
 Geometry and state & Contact reference, normal, inertia, pose, incoming motion\\
 Validity & Surface condition, speed/size range, uncertainties and source\\\hline
@@ -244,12 +279,12 @@ No numerical material value is substituted into the symbolic derivation. Missing
 \section{Energy, angular momentum and moving boundaries}
 For two dynamic bodies with no external impulsive work, the frozen-configuration kinetic-energy change is
 \begin{equation}
-\boxed{\Delta E=\delta \mathbf{P}_c^{\mathsf T}\mathbf{U}^-
-+\tfrac12\delta \mathbf{P}_c^{\mathsf T}W\delta \mathbf{P}_c}.
+\boxed{\Delta E=\Delta\mathbf{P}_c^{\mathsf T}\mathbf{U}^-
++\tfrac12\Delta\mathbf{P}_c^{\mathsf T}W\Delta\mathbf{P}_c}.
 \end{equation}
 Its linear term contains \emph{both} impulse works:
 \begin{equation}
-\delta \mathbf{P}_c^{\mathsf T}\mathbf{U}^-
+\Delta\mathbf{P}_c^{\mathsf T}\mathbf{U}^-
 =\delta \mathbf{p}^{\mathsf T}\mathbf{u}^-
 +\delta \mathbf{L}^{\mathsf T}\boldsymbol{\Omega}^-.
 \end{equation}
@@ -320,8 +355,8 @@ B=\begin{bmatrix}1&0&-r_y/\ell\\0&1&r_x/\ell\\0&0&1\end{bmatrix}.
 \end{equation}
 The contact and body impulses are
 \begin{equation}
-\delta \mathbf{P}_c=\begin{bmatrix}\delta p_x\\\delta p_y\\\delta L/\ell\end{bmatrix},\qquad
-\Delta \mathbf{P}_{\rm body}=B^{\mathsf T}\delta \mathbf{P}_c,\qquad
+\Delta\mathbf{P}_c=\begin{bmatrix}\delta p_x\\\delta p_y\\\delta L/\ell\end{bmatrix},\qquad
+\Delta \mathbf{P}_{\rm body}=B^{\mathsf T}\Delta\mathbf{P}_c,\qquad
 \Delta L_{\rm body}=\rw{\mathbf{r}}\,\delta \mathbf{p}+\delta L.
 \end{equation}
 The pair map, mobility and energy identities retain the same matrix forms with these planar block dimensions. Planar angular velocity and angular impulse are signed scalars. A three-dimensional normal-angular channel is restricted to the permitted planar rotation axis; it must not be inserted as an extra independent planar degree of freedom. Any component unavailable under that geometric restriction is omitted rather than independently solved.
@@ -365,6 +400,7 @@ Contact force-and-moment models and matrix-free coupled contact calculations als
 \begingroup
 \raggedright
 \begin{thebibliography}{20}
+\bibitem{drakefriction} Drake documentation, \emph{Modeling of Dry Friction} and \emph{CoulombFriction}. Static and dynamic coefficients and slip-opposing friction. \url{https://drake.mit.edu/doxygen_cxx/group__friction__model.html}; \url{https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_coulomb_friction.html}.
 \bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
 \bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
 \bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
