@@ -1,0 +1,11 @@
+2d_disks 1 edge False {'position_m': 0.036279976627150164, 'velocity_m_s': 3.5904904916183726, 'omega_rad_s': 46.5524336440712, 'orientation_rad': 0.8549374094674983}
+2d_disks 2 edge False {'position_m': 0.06022536578710017, 'velocity_m_s': 4.064725487680426, 'omega_rad_s': 44.347980294438464, 'orientation_rad': 0.8400433980308234}
+2d_disks 3 edge False {'position_m': 0.06317592537792893, 'velocity_m_s': 3.2532244594937505, 'omega_rad_s': 45.89067915510608, 'orientation_rad': 0.7930163228393713}
+2d_disks 4 edge False {'position_m': 0.07797433919649732, 'velocity_m_s': 3.420488687616627, 'omega_rad_s': 31.873383510453543, 'orientation_rad': 0.8725226929058442}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py", line 24, in <module>
+    save(target/'authored-model-parity.json',parity);assert all(v<=1e-10 for v in parity.values()),parity
+                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'mass_max_error': 4.440892098500626e-16, 'inertia_max_error': 5.204170427930421e-18, 'initial_state_max_error': 0.001599894430536486}

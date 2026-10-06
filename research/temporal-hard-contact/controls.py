@@ -5,7 +5,7 @@ import numpy as np
 from rigid_engine import run
 from research.container_scenes import ball
 from research.rigid_scenes import rectangle
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls-v2';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'controls-v3';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 records=[]
 for omega in [0.,.5,-.5]:

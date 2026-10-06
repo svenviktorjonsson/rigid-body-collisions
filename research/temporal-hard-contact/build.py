@@ -3,7 +3,7 @@ import hashlib,json,subprocess,tarfile
 from pathlib import Path
 from research.build_precision_backend import convert
 H=Path(__file__).resolve().parent;ROOT=H.parents[1]
-plan=json.loads((H/'plan.json').read_text());D=ROOT/'build/rigid_temporal_double_hard_v2'
+plan=json.loads((H/'plan.json').read_text());D=ROOT/'build/rigid_temporal_double_hard_v3'
 D.mkdir(exist_ok=False);source=D/'source';source.mkdir()
 archive=ROOT/'build/rigid_backend/_deps/box2d-subbuild/box2d-populate-prefix/src/archive.tar'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -22,6 +22,13 @@ replace(box/'src/solver.h','.massScale = 0.0,','.massScale = 1.0,')
 p=box/'src/geometry.c';s=p.read_text();start=s.index('b2MassData b2ComputePolygonMass(');end=s.index('b2AABB b2ComputeCircleAABB(',start)
 chunk=s[start:end];assert chunk.count('double radius = shape->radius;')==1
 p.write_text(s[:start]+chunk.replace('double radius = shape->radius;','double radius = 0.0;')+s[end:])
+# The upstream deterministic Bhaskara approximation shifts authored angles by1.6mrad.
+p=box/'src/math_functions.c';s=p.read_text();start=s.index('b2CosSin b2ComputeCosSin(');body=s.index('{',start);level=1;end=body+1
+while level:
+ if s[end]=='{':level+=1
+ elif s[end]=='}':level-=1
+ end+=1
+p.write_text(s[:start]+'b2CosSin b2ComputeCosSin(double radians) { return (b2CosSin){cos(radians),sin(radians)}; }'+s[end:])
 p=box/'src/contact_solver.c';s=p.read_text();marker='void b2WarmStartOverflowContacts('
 at=s.index(marker)
 observer='''

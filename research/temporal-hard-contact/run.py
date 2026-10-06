@@ -4,13 +4,13 @@ from importlib import import_module
 from pathlib import Path
 import numpy as np
 from rigid_engine import run
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results-v3';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'world-results-v4';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
-assert json.loads((H/'controls-v2/summary.json').read_text())['passed']
+assert json.loads((H/'controls-v3/summary.json').read_text())['passed']
 assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'
 exe=ROOT/plan['binary'];receipt=json.loads((H/'build-receipt.json').read_text());assert sha(exe)==receipt['binary_sha256']
-paths=[Path(__file__),H/'plan.json',H/'build-receipt.json',H/'controls-v2/summary.json',exe,exe.parent/'precision-source.json',ROOT/'rigid_engine.py',ROOT/'research/rapid-friction/run.py'];guards={str(p):sha(p) for p in paths}
+paths=[Path(__file__),H/'plan.json',H/'build-receipt.json',H/'controls-v3/summary.json',exe,exe.parent/'precision-source.json',ROOT/'rigid_engine.py',ROOT/'research/rapid-friction/run.py'];guards={str(p):sha(p) for p in paths}
 save(D/'provenance.json',{'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards})
 base=import_module('research.rapid-friction.run');gates=json.loads((ROOT/'research/rapid-friction/plan.json').read_text());scenes=base.scenes();save(D/'scenes.json',{k:scenes[k] for k in plan['cases']});summary={}
 for name in plan['cases']:
