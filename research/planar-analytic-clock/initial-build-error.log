@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/build.py", line 18, in <module>
+    r.check_returncode();assert all(sha(p)==digest for p,digest in guards.items())
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/subprocess.py", line 509, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+                             self.stderr)
+subprocess.CalledProcessError: Command '['c++', '-std=c++17', '-O3', '-DNDEBUG', '-Wall', '-Wextra', '-Wpedantic', '-ffp-contract=off', '-DRIGID_BLOCK_BACKEND', '-DRIGID_DOUBLE_PRECISION', '-I/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_global_union_v1/source/box2d-2.4.1/include', '/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/runner.cpp', '-o', '/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_planar_clock_v1/rigid_runner', '/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_global_union_v1/box2d-2.4.1/bin/libbox2d.a', '/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a', '/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a', '/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a', '-l:liblapack.so.3', '-l:libblas.so.3']' returned non-zero exit status 1.

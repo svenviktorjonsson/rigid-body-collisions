@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "scene": {
+    "id": "analytic_clock_pose",
+    "duration": 0.12,
+    "gravity": [
+      0,
+      0
+    ],
+    "collision_skin_m": 0.01,
+    "analytic_kinematics": true,
+    "bodies": [
+      {
+        "type": "kinematic",
+        "position": [
+          0,
+          -0.1
+        ],
+        "velocity": [
+          20,
+          0
+        ],
+        "omega": 5,
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -2,
+                -0.1
+              ],
+              [
+                2,
+                -0.1
+              ],
+              [
+                2,
+                0.1
+              ],
+              [
+                -2,
+                0.1
+              ]
+            ],
+            "friction": 0.4,
+            "restitution": 0
+          }
+        ],
+        "velocity_schedule": [
+          {
+            "time_s": 0.04,
+            "velocity": [
+              -20,
+              0
+            ],
+            "omega": -5
+          },
+          {
+            "time_s": 0.08,
+            "velocity": [
+              20,
+              0
+            ],
+            "omega": 5
+          }
+        ]
+      },
+      {
+        "circles": [
+          {
+            "radius": 0.1,
+            "density": 31.830988618379067,
+            "friction": 0.4,
+            "restitution": 0
+          }
+        ],
+        "position": [
+          10,
+          10
+        ],
+        "velocity": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "primary_steps": 1,
+      "common_kinematic_endpoint_bytes_exact": true,
+      "authored_pose_error_max": 2.7755575615628914e-17,
+      "disabled_old_state_bytes_exact": true
+    },
+    {
+      "primary_steps": 2,
+      "common_kinematic_endpoint_bytes_exact": true,
+      "authored_pose_error_max": 2.7755575615628914e-17,
+      "disabled_old_state_bytes_exact": true
+    },
+    {
+      "primary_steps": 4,
+      "common_kinematic_endpoint_bytes_exact": true,
+      "authored_pose_error_max": 2.7755575615628914e-17,
+      "disabled_old_state_bytes_exact": true
+    },
+    {
+      "primary_steps": 16,
+      "common_kinematic_endpoint_bytes_exact": true,
+      "authored_pose_error_max": 2.7755575615628914e-17,
+      "disabled_old_state_bytes_exact": true
+    }
+  ],
+  "scope": "Four no-contact prescribed-motion ladders with both reversals, common endpoint byte equality and old arithmetic parity. Full trajectory accuracy still required."
+}

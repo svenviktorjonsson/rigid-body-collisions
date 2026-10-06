@@ -1,0 +1,4 @@
+/home/viktor/.cache/vkf-physics-continuation/research/planar-analytic-clock/runner.cpp:3:10: fatal error: compat2.h: No such file or directory
+    3 | #include "compat2.h"
+      |          ^~~~~~~~~~~
+compilation terminated.
