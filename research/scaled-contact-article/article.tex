@@ -31,7 +31,7 @@ In three dimensions define
 \begin{bmatrix}
 0&-r_z&r_y\\r_z&0&-r_x\\-r_y&r_x&0
 \end{bmatrix},\qquad
-\rw{\mathbf{r}}\mathbf{a}=\mathbf{r}\times \mathbf{a}.
+\rw{\mathbf{r}}\,\mathbf{a}=\mathbf{r}\times \mathbf{a}.
 \end{equation}
 The wedge sits on the same baseline as the vector. The reversed notation denotes the transpose:
 \begin{equation}
@@ -41,7 +41,7 @@ Here the superscript $\mathsf T$ applies to the matrix represented by $\rw{\math
 
 Matrix associativity permits chains without redundant parentheses, for example
 \begin{equation}
-\lwedge{\mathbf{r}}\inertia^{-1}\rw{\mathbf{r}}\delta \mathbf{p}.
+\lwedge{\mathbf{r}}\,\inertia^{-1}\rw{\mathbf{r}}\,\delta \mathbf{p}.
 \end{equation}
 The factor order is retained. Transposition reverses a product's factor order; it does not make general matrices commute.
 
@@ -50,7 +50,7 @@ In two dimensions the moment map is a row and its transpose is a column:
 \rw{\mathbf{r}}=\begin{bmatrix}-r_y&r_x\end{bmatrix},\qquad
 \lwedge{\mathbf{r}}=\begin{bmatrix}-r_y\\r_x\end{bmatrix}.
 \end{equation}
-Thus $\rw{\mathbf{r}}\mathbf{a}=r_xa_y-r_ya_x$. The right-wedge map takes a planar linear vector to a scalar moment, while its left-wedge transpose takes a scalar angular velocity to a planar contact-velocity contribution. The same transpose notation therefore applies to rectangular planar maps and square spatial maps.
+Thus $\rw{\mathbf{r}}\,\mathbf{a}=r_xa_y-r_ya_x$. The right-wedge map takes a planar linear vector to a scalar moment, while its left-wedge transpose takes a scalar angular velocity to a planar contact-velocity contribution. The same transpose notation therefore applies to rectangular planar maps and square spatial maps.
 
 \section{Combined body velocity, momentum and force}
 Let $m$ be mass, $\inertia$ the world-frame central inertia, $\mathbf{v}$ the centre-of-mass velocity and $\boldsymbol{\omega}$ angular velocity. Define
@@ -87,7 +87,7 @@ A change of fixed representation length must leave the physical velocity, impuls
 Let the contact reference point be $\mathbf{x}_c$ and the body centre be $\mathbf{x}_k$. Its lever arm is $\mathbf{r}_k=\mathbf{x}_c-\mathbf{x}_k$. The contact velocity is additive:
 \begin{equation}
 \mathbf{u}_k=\mathbf{v}_k+\boldsymbol{\omega}_k\times \mathbf{r}_k
-=\mathbf{v}_k+\lwedge{\mathbf{r}_k}\boldsymbol{\omega}_k.
+=\mathbf{v}_k+\lwedge{\mathbf{r}_k}\,\boldsymbol{\omega}_k.
 \end{equation}
 Set
 \begin{equation}
@@ -109,12 +109,12 @@ The subscript $c$ distinguishes this contact impulse from the body momentum incr
 \begin{equation}
 \boxed{\Delta \mathbf{P}_k=B_k^{\mathsf T}\delta \mathbf{P}_c}
 =\begin{bmatrix}\delta \mathbf{p}\\
-\rw{\mathbf{r}_k}\delta \mathbf{p}/\ell+\delta \mathbf{L}/\ell\end{bmatrix}.
+\rw{\mathbf{r}_k}\,\delta \mathbf{p}/\ell+\delta \mathbf{L}/\ell\end{bmatrix}.
 \end{equation}
 Equivalently,
 \begin{equation}
 \Delta \mathbf{p}_k=\delta \mathbf{p},\qquad
-\boxed{\Delta \mathbf{L}_k=\rw{\mathbf{r}_k}\delta \mathbf{p}+\delta \mathbf{L}}.
+\boxed{\Delta \mathbf{L}_k=\rw{\mathbf{r}_k}\,\delta \mathbf{p}+\delta \mathbf{L}}.
 \end{equation}
 Here $\Delta \mathbf{L}_k$ is the body angular-momentum change caused by the total angular impulse. This distinction prevents counting the force moment twice. The associated work is
 \begin{equation}
@@ -126,12 +126,12 @@ Here $\Delta \mathbf{L}_k$ is the body angular-momentum change caused by the tot
 For distributed contact traction $\mathbf{f}_{\sigma}$ over a patch $\mathcal S$ the independent angular impulse is the traction moment about the chosen reference:
 \begin{equation}
 \delta \mathbf{p}=\int\!\int_{\mathcal S}\mathbf{f}_{\sigma}\,dA\,dt,\qquad
-\delta \mathbf{L}=\int\!\int_{\mathcal S}\rw{\mathbf{x}-\mathbf{x}_c}\mathbf{f}_{\sigma}\,dA\,dt.
+\delta \mathbf{L}=\int\!\int_{\mathcal S}\rw{\mathbf{x}-\mathbf{x}_c}\,\mathbf{f}_{\sigma}\,dA\,dt.
 \end{equation}
 A reference shift $\mathbf{x}_c'=\mathbf{x}_c+\mathbf{a}$ gives
 \begin{equation}
 \mathbf{r}_k'=\mathbf{r}_k+\mathbf{a},\qquad
-\delta \mathbf{L}'=\delta \mathbf{L}-\rw{\mathbf{a}}\delta \mathbf{p},
+\delta \mathbf{L}'=\delta \mathbf{L}-\rw{\mathbf{a}}\,\delta \mathbf{p},
 \end{equation}
 leaving the body angular-momentum change unchanged. This is reference bookkeeping, not a way to fit a collision outcome by moving the force point.
 
@@ -160,8 +160,8 @@ The signs square to one in the mobility. The explicit two-body matrix is
 \begin{equation}
 \boxed{W=\sum_{k\in\mathcal B}
 \begin{bmatrix}
-\id/m_k+\lwedge{\mathbf{r}_k}\inertia_k^{-1}\rw{\mathbf{r}_k}
-&\ell\lwedge{\mathbf{r}_k}\inertia_k^{-1}\\
+\id/m_k+\lwedge{\mathbf{r}_k}\,\inertia_k^{-1}\rw{\mathbf{r}_k}
+&\ell\lwedge{\mathbf{r}_k}\,\inertia_k^{-1}\\
 \ell\inertia_k^{-1}\rw{\mathbf{r}_k}&\ell^2\inertia_k^{-1}
 \end{bmatrix}}.
 \end{equation}
@@ -268,7 +268,7 @@ and the corresponding relative-motion identity concerns $\Delta E-W_b$.
 
 Equal and opposite impulses at the shared reference conserve total linear momentum. About a world origin the angular balance uses the orbital contribution as well as central angular momentum:
 \begin{equation}
-\Delta \mathbf{J}_k=\rw{\mathbf{x}_k}\Delta \mathbf{p}_k+\Delta \mathbf{L}_k.
+\Delta \mathbf{J}_k=\rw{\mathbf{x}_k}\,\Delta \mathbf{p}_k+\Delta \mathbf{L}_k.
 \end{equation}
 The global changes are $\sum_k\Delta\mathbf{p}_k=0$ and $\sum_k\Delta\mathbf{J}_k=0$, including the independent opposite angular impulses. Checking only the force lever-arm moment misses this mechanism.
 
@@ -281,8 +281,8 @@ Consider a homogeneous sphere of radius $R$ and central inertia $\inertia\id$, w
 \end{equation}
 Then
 \begin{equation}
-\rw{\mathbf{r}}\delta \mathbf{p}=0,\qquad
-\lwedge{\mathbf{r}}\boldsymbol{\omega}^-=0.
+\rw{\mathbf{r}}\,\delta \mathbf{p}=0,\qquad
+\lwedge{\mathbf{r}}\,\boldsymbol{\omega}^-=0.
 \end{equation}
 The complete angular update is therefore
 \begin{equation}
@@ -299,14 +299,14 @@ Let a homogeneous cuboid have half-extents $a,b,c$, mass $m$, and attitude matri
 \end{equation}
 For a supporting vertex $\mathbf{r}_0$, use $\mathbf{r}=Q\mathbf{r}_0$. A fixed plane gives
 \begin{equation}
-\mathbf{u}^- =\mathbf{v}^-+\lwedge{\mathbf{r}}\boldsymbol{\omega}^-,\qquad
+\mathbf{u}^- =\mathbf{v}^-+\lwedge{\mathbf{r}}\,\boldsymbol{\omega}^-,\qquad
 \boldsymbol{\Omega}^- =\boldsymbol{\omega}^-.
 \end{equation}
 Construct $\mathbf{t}$, $\mathbf{s}$, the direction map and the full mobility from these physical states. Once the directional law supplies $\delta \mathbf{p}$ and $\delta \mathbf{L}$, predict
 \begin{equation}
 \boxed{\mathbf{v}^+=\mathbf{v}^-+\delta \mathbf{p}/m},\qquad
 \boxed{\boldsymbol{\omega}^+=\boldsymbol{\omega}^-
-+\inertia^{-1}\rw{\mathbf{r}}\delta \mathbf{p}
++\inertia^{-1}\rw{\mathbf{r}}\,\delta \mathbf{p}
 +\inertia^{-1}\delta \mathbf{L}}.
 \end{equation}
 The same formula includes spin-generated sliding, an off-centre normal force moment, and the independent angular impulse. Non-diagonal inertia couples the angular directions without adding material parameters. This is a symbolic 3D example; the earlier force-only cuboid numbers have been removed from this reading version.
@@ -321,7 +321,7 @@ The contact and body impulses are
 \begin{equation}
 \delta \mathbf{P}_c=\begin{bmatrix}\delta p_x\\\delta p_y\\\delta L/\ell\end{bmatrix},\qquad
 \Delta \mathbf{P}_{\rm body}=B^{\mathsf T}\delta \mathbf{P}_c,\qquad
-\Delta L_{\rm body}=\rw{\mathbf{r}}\delta \mathbf{p}+\delta L.
+\Delta L_{\rm body}=\rw{\mathbf{r}}\,\delta \mathbf{p}+\delta L.
 \end{equation}
 The pair map, mobility and energy identities retain the same matrix forms with these planar block dimensions. Planar angular velocity and angular impulse are signed scalars. A three-dimensional normal-angular channel is restricted to the permitted planar rotation axis; it must not be inserted as an extra independent planar degree of freedom. Any component unavailable under that geometric restriction is omitted rather than independently solved.
 

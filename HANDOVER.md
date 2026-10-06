@@ -1,3 +1,7 @@
+# Wedge product spacing — October 6, 2026
+
+User requests more separation after a wedge matrix before the following operand. Active article inserts LaTeX thin space (backslash comma) at wedge-matrix products, without printing commas. Internal r/wedge spacing remains the same on both sides; transpose superscripts stay attached to the matrix.
+
 # Impulse delta versus state-change Delta — October 6, 2026
 
 Latest user reserves lowercase delta for impulses only. Active article uses uppercase Delta for body/stacked momentum increments, body/world angular-momentum changes and kinetic-energy changes. Contact impulses retain delta p, delta L, delta P_c and their directional components. Explicit before/after change definitions and global momentum balances included. Bold vector preference and single indices remain active.
