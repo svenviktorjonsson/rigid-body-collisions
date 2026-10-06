@@ -3,6 +3,7 @@
 #include "projection_more.h"
 #include "newton_linear.h"
 namespace null_traction_seed {
+inline constexpr int maximum_component_rows=128;
 struct Stats {int components=0,largest_rows=0,cap_rejections=0,seed_attempts=0,null_svd_calls=0,seed_svd_calls=0,iteration_steps=0,svd_calls=0,newton_steps=0;double seed_response_change_max=0;};
 inline bool solve(const btMatrixXu&A,const btVectorXu&b,const btVectorXu&seed,const btVectorXu&hi,
  const btAlignedObjectArray<int>&dep,btVectorXu&out,double tolerance,Stats&stats){
@@ -12,12 +13,12 @@ inline bool solve(const btMatrixXu&A,const btVectorXu&b,const btVectorXu&seed,co
   std::vector<int>ids{first};visited[first]=true;
   for(size_t at=0;at<ids.size();at++)for(int j=0;j<n;j++)if(!visited[j]&&(A(ids[at],j)!=0||A(j,ids[at])!=0||dep[j]==ids[at]||dep[ids[at]]==j)){visited[j]=true;ids.push_back(j);}
   const int m=ids.size();stats.components++;stats.largest_rows=std::max(stats.largest_rows,m);
-  if(m>64){stats.cap_rejections++;return false;}
+  if(m>maximum_component_rows){stats.cap_rejections++;return false;}
   std::vector<int>inverse(n,-1);for(int i=0;i<m;i++)inverse[ids[i]]=i;
   btMatrixXu M(m,m);btVectorXu rhs(m),p(m),upper(m);btAlignedObjectArray<int>d;d.resize(m);
   for(int i=0;i<m;i++){rhs[i]=b[ids[i]];p[i]=seed[ids[i]];upper[i]=hi[ids[i]];d[i]=dep[ids[i]]<0?-1:inverse[dep[ids[i]]];for(int j=0;j<m;j++)M.setElem(i,j,A(ids[i],ids[j]));}
-  if(!restart_validation::valid(M,rhs,p,upper,d,tolerance,64))return false;
-  auto search=[&](btVectorXu&q){projection_recovery_v2::Stats s;const bool found=projection_recovery_v2::solve(M,rhs,q,upper,d,tolerance,s,2048,2048,true,true,true);stats.iteration_steps+=s.iteration_steps;stats.svd_calls+=s.svd_calls;stats.newton_steps+=s.newton_steps;return found;};
+  if(!restart_validation::valid(M,rhs,p,upper,d,tolerance,maximum_component_rows))return false;
+  auto search=[&](btVectorXu&q){projection_recovery_v2::Stats s;const bool found=projection_recovery_v2::solve(M,rhs,q,upper,d,tolerance,s,2048,2048,true,true,true,maximum_component_rows);stats.iteration_steps+=s.iteration_steps;stats.svd_calls+=s.svd_calls;stats.newton_steps+=s.newton_steps;return found;};
   bool found=search(p);
   if(!found){
    std::vector<double>matrix(m*m),zero(m,0),warm(m);for(int i=0;i<m;i++){warm[i]=seed[ids[i]];for(int j=0;j<m;j++)matrix[i*m+j]=M(i,j);}

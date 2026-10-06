@@ -1,0 +1,12 @@
+{
+  "source": "bb63fe5bd34e0ee8f970365f11a970d328260df6",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-convergence/run.py": "9cf92bc0ab98f4956fe2864b63ec452179a4395548f863235aafd103c3794198",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-convergence/plan.json": "3981b77595e8b35e4f85ac5fb09f3b0e58559fc9768afc64e212a05d9ced6741",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/rigid_runner": "a46eaa4ee3e2da99e5f7f8c66abc17e5edb848bb4b8fa56339c1703e17c66306",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/precision-source.json": "bc58ef33dbc3708e577e364abbeb088d48a8cbd66f86dac2ba6ba8ab30111169"
+  },
+  "scope": "numerical discovery/slop experiment, no speed acceptance"
+}

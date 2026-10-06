@@ -46,6 +46,7 @@ jobs:
           build/spatial/spatial_position_replay research/rapid-friction/results-large-irregular/3d_hull_125/reference_4.rejection.json
           build/spatial/spatial_null_traction_replay research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json
           build/spatial/spatial_null_traction_replay research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json
+          build/spatial/spatial_null_traction_replay research/large-velocity-world/results/trial_1/rejection.json
           python research/component-recovery-integration/audit.py
           python research/component-recovery-integration/checks.py
           python -m research.verify_native_contact_replays

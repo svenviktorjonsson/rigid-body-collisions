@@ -4,6 +4,32 @@
 
 Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders from published6b63cb2 are COMPLETE:20 full histories/10 genuine rejections (nine velocity, one translation-only position), no qualified references. Independent state/provenance/rejection audits pass. Preserve outputs; never restart over existing files. Isolated exact-component recovery pilots and rotating planar discovery trials are declared under research/large-contact-recovery and research/rapid-friction/planar-discovery-plan.json. Solver/accuracy remediation precedes performance claims.
 
+## Component128 recovery checkpoint — October6
+
+The null-traction helper now supports exact components up to128 rows, retaining
+warm plus six seeds and2048 iteration/SVD limits per search. Default projection
+tail remains64 rows. Actual393-row finer64-hull rejection contains a126-row
+component: production and independent original-law gates accept it at
+5.5972095e-9m/s. All23 contact replays pass, prior22 bytes/counters exact,
+163 engine tests and11 native checks pass. CI includes this actual capture.
+See research/component-cap128/production393-independent.json and live23/receipt.json.
+
+The original six-seed cap128 pilot accepts162/297/393 but declines423/276.
+Sixteen seeds gives the same outcomes and is not adopted. Two fresh64-hull
+histories from source66d0f2a clear earlier failures but stop later: 10us at0.01s
+on276 rows,1.25us at0.02s on393 rows. Both accepted-prefix physical audits pass;
+neither is a full history. Their preserved source66 runner is recorded in
+research/large-velocity-world/binary-snapshot.json. Preserve its initial audit;
+its live guards are historical after the cap128 build.
+
+The joint1um/2048 velocity/128 position-iteration planar control completes all
+five original9-polygon histories but fails every original refinement edge.
+Finite-difference CMINPACK and native trust-region pilots retain their declines;
+one trust-region162 root passes instantaneous gates only. All13 references
+remain unqualified as a set, and the requested all-case2x gate remains pending.
+New scaled minimax contact search is isolated under research/minimax-contact;
+no adoption or performance claim is justified before its original-law checks.
+
 ## Native larger velocity fallback — October6
 
 Bounded mobility-null traction seeds now integrate after ALL existing lanes

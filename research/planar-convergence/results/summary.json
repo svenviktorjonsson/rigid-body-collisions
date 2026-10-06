@@ -1,0 +1,61 @@
+{
+  "2d_mixed_polygons": {
+    "reference_qualified": false,
+    "phases": [
+      {
+        "phase": {
+          "id": "seams_off",
+          "suppress_internal_edges": false
+        },
+        "edges": [
+          {
+            "left": 0,
+            "right": 1,
+            "passed": false,
+            "errors": {
+              "position_m": 0.05679855026364615,
+              "velocity_m_s": 6.564830585084513,
+              "omega_rad_s": 38.10683326840879,
+              "orientation_rad": 0.5721559977520615
+            }
+          },
+          {
+            "left": 1,
+            "right": 2,
+            "passed": false,
+            "errors": {
+              "position_m": 0.07153438317988689,
+              "velocity_m_s": 8.061376675345853,
+              "omega_rad_s": 79.15044154532713,
+              "orientation_rad": 0.9301098604851468
+            }
+          },
+          {
+            "left": 2,
+            "right": 3,
+            "passed": false,
+            "errors": {
+              "position_m": 0.0747519020169943,
+              "velocity_m_s": 7.667000221397953,
+              "omega_rad_s": 78.27621267716962,
+              "orientation_rad": 0.9357368982747438
+            }
+          },
+          {
+            "left": 3,
+            "right": 4,
+            "passed": false,
+            "errors": {
+              "position_m": 0.039599400283916016,
+              "velocity_m_s": 3.327424882949636,
+              "omega_rad_s": 58.745910403565205,
+              "orientation_rad": 0.45879291381590825
+            }
+          }
+        ],
+        "qualified": false
+      }
+    ],
+    "benchmark": null
+  }
+}

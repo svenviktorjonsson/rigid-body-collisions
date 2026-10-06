@@ -1,0 +1,17 @@
+{
+  "search_found": true,
+  "production_zero_accepted": true,
+  "independent": {
+    "accepted": true,
+    "projection_m_s": 7.18717523685474e-09,
+    "circle_violation_scaled_m_s": 0.0,
+    "sticking_m_s": 1.9328540495251967e-11,
+    "support_gap_J": 1.5986511238847026e-14,
+    "passive_bound_J": -0.08098558676319605,
+    "passivity_scale": 1.0811424204046605,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 0.0
+  },
+  "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json"
+}

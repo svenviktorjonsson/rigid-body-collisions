@@ -14,9 +14,9 @@ struct Budget {int steps=2048,svds=2048;};
 struct Stats {int iteration_steps=0,newton_steps=0,svd_calls=0,budget_rejections=0;std::vector<double>failed_candidate;double residual=0;};
 struct Contact {int k,t,s;double mu,rn,rt;};
 inline bool solve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const btVectorXu& hi,
- const btAlignedObjectArray<int>& dep,double tolerance,Stats& stats,int step_limit=2048,int svd_limit=2048,bool scale_columns=true,bool projection_merit=true,bool right_cone_derivative=false){
+ const btAlignedObjectArray<int>& dep,double tolerance,Stats& stats,int step_limit=2048,int svd_limit=2048,bool scale_columns=true,bool projection_merit=true,bool right_cone_derivative=false,int maximum_rows=64){
  Budget budget;budget.steps=std::min(step_limit,2048);budget.svds=std::min(svd_limit,2048);
- const int n=b.rows();if(stats.svd_calls||stats.iteration_steps||stats.newton_steps||stats.budget_rejections||!stats.failed_candidate.empty())return false;if(!restart_validation::valid(A,b,x,hi,dep,tolerance,64)||svd_limit<=0||step_limit<=0)return false;
+ const int n=b.rows();if(maximum_rows<=0||maximum_rows>128||stats.svd_calls||stats.iteration_steps||stats.newton_steps||stats.budget_rejections||!stats.failed_candidate.empty())return false;if(!restart_validation::valid(A,b,x,hi,dep,tolerance,maximum_rows)||svd_limit<=0||step_limit<=0)return false;
  std::vector<Contact> contacts;
  for(int k=0;k<n;k++)if(dep[k]<0){
   std::vector<int> t;for(int j=0;j<n;j++)if(dep[j]==k)t.push_back(j);

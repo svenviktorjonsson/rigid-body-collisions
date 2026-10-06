@@ -285,3 +285,10 @@ bounded native mobility-null seeds after all existing lanes decline. Actual
 decline. The repaired125-hull finest history completes0.12s and passes physical
 gates, while its reference refinement remains pending. The separate13-case
 working-baseline and per-case2x performance gate is still open.
+
+The larger-contact fallback now supports exact components up to128 rows while
+retaining six pressure seeds and the original physical gates. An actual393-row
+capture passes independently at5.60e-9m/s; other larger contact failures remain.
+See [current continuation status](HANDOVER.md) and
+[the component128 proof](research/component-cap128/production393-independent.json).
+The all-case working baseline and subsequent2x performance gate remain pending.
