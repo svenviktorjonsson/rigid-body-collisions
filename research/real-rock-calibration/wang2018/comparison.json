@@ -1,0 +1,1522 @@
+{
+  "source": "https://doi.org/10.5194/nhess-18-3045-2018",
+  "supplement": "https://nhess.copernicus.org/articles/18/3045/2018/nhess-18-3045-2018-supplement.zip",
+  "xlsx_sha256": "328d727800aba8a00f1ec6c6ef46b85f440f0bad9335c395d88727ca1963e77f",
+  "case_count": 75,
+  "inside_conditional_sphere_spin_range": 6,
+  "COM_normal_ratios_above_one": 12,
+  "max_published_energy_formula_reconstruction_error": 1.1102230246251565e-16,
+  "inertia": "Author sphere approximation; actual irregular polyhedron tensor absent",
+  "assumptions": [
+    "Homogeneous sphere rather than actual faceted limestone shape",
+    "Undeformed-radius point lever",
+    "Collinear incoming/outgoing tangential components",
+    "Reported incoming rotation norm bound3rad/s, not per-trial signed angular velocity",
+    "No independent pair-friction inference"
+  ],
+  "independent_material_validation_passed": false,
+  "records": [
+    {
+      "source_row": 18,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.4789414834140887,
+      "observed_tangent_COM_ratio": 0.793972602739726,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 48.4,
+      "sphere_induced_spin_rad_s": 37.59999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        34.59999999999998,
+        40.59999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.223140495867769,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.41185478664206693,
+      "published_energy_ratio": 0.41185478664206693,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 19,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.29793151399269946,
+      "observed_tangent_COM_ratio": 0.8320565704183853,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 43.2,
+      "sphere_induced_spin_rad_s": 28.500000000000007,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        25.500000000000007,
+        31.500000000000007
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3402777777777777,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.2864206075612145,
+      "published_energy_ratio": 0.2864206075612145,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 20,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.36403094923570484,
+      "observed_tangent_COM_ratio": 0.8209335219236209,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 41.5,
+      "sphere_induced_spin_rad_s": 31.649999999999995,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        28.649999999999995,
+        34.64999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.23734939759036155,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.3417050176872194,
+      "published_energy_ratio": 0.3417050176872194,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 21,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.5190082644628099,
+      "observed_tangent_COM_ratio": 0.7638089758342922,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 49.2,
+      "sphere_induced_spin_rad_s": 41.050000000000004,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        38.050000000000004,
+        44.050000000000004
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.165650406504065,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4183007333155829,
+      "published_energy_ratio": 0.4183007333155829,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 22,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.38699832137952084,
+      "observed_tangent_COM_ratio": 0.814923189465984,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 50.6,
+      "sphere_induced_spin_rad_s": 37.94999999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        34.94999999999999,
+        40.94999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.2500000000000002,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.33735971597059644,
+      "published_energy_ratio": 0.33735971597059644,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 23,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.42492872980677854,
+      "observed_tangent_COM_ratio": 0.9129840546697039,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 55.4,
+      "sphere_induced_spin_rad_s": 19.09999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        16.09999999999998,
+        22.09999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.6552346570397115,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4452535274027685,
+      "published_energy_ratio": 0.4452535274027685,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 24,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.3269461077844312,
+      "observed_tangent_COM_ratio": 1.016833373993657,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 44.8,
+      "sphere_induced_spin_rad_s": 3.4499999999999966,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        0.4499999999999966,
+        6.449999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.9229910714285715,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.39315318077967354,
+      "published_energy_ratio": 0.39315318077967354,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 25,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.39207844149142046,
+      "observed_tangent_COM_ratio": 0.8759431868619618,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 51.3,
+      "sphere_induced_spin_rad_s": 27.950000000000003,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        24.950000000000003,
+        30.950000000000003
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.45516569200779716,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.341444693669557,
+      "published_energy_ratio": 0.341444693669557,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 26,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.42604264449510526,
+      "observed_tangent_COM_ratio": 0.8278805120910383,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 65.8,
+      "sphere_induced_spin_rad_s": 42.350000000000016,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        39.350000000000016,
+        45.350000000000016
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.35638297872340396,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.38861493585377366,
+      "published_energy_ratio": 0.38861493585377366,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 27,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.3440070877104164,
+      "observed_tangent_COM_ratio": 0.9329631914456096,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 59.2,
+      "sphere_induced_spin_rad_s": 16.300000000000022,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        13.300000000000022,
+        19.300000000000022
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.7246621621621617,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.36568911119741865,
+      "published_energy_ratio": 0.36568911119741865,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 28,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.5363226452905812,
+      "observed_tangent_COM_ratio": 0.8239167374681393,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 42.6,
+      "sphere_induced_spin_rad_s": 41.45,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        38.45,
+        44.45
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.026995305164319215,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5628486755107328,
+      "published_energy_ratio": 0.5628486755107328,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 29,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.6051015588096362,
+      "observed_tangent_COM_ratio": 0.7510235913433418,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 53.7,
+      "sphere_induced_spin_rad_s": 63.84999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        60.84999999999997,
+        66.84999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.1890130353817499,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5490294584429046,
+      "published_energy_ratio": 0.5490294584429046,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 30,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.49466537342386036,
+      "observed_tangent_COM_ratio": 0.9579797143448561,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 39.8,
+      "sphere_induced_spin_rad_s": 10.150000000000013,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        7.150000000000013,
+        13.150000000000013
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.7449748743718589,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6732778073787206,
+      "published_energy_ratio": 0.6732778073787206,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 31,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.4987225344915687,
+      "observed_tangent_COM_ratio": 0.7291341653666146,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 46.4,
+      "sphere_induced_spin_rad_s": 69.45,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        66.45,
+        72.45
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.49676724137931044,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4792265097518297,
+      "published_energy_ratio": 0.4792265097518297,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 32,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.5501010101010101,
+      "observed_tangent_COM_ratio": 0.7560067681895093,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 58.0,
+      "sphere_induced_spin_rad_s": 72.1,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        69.1,
+        75.1
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.24310344827586197,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5172714561185652,
+      "published_energy_ratio": 0.5172714561185652,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 33,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.5025062656641605,
+      "observed_tangent_COM_ratio": 0.8869770580296896,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 53.2,
+      "sphere_induced_spin_rad_s": 33.49999999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        30.499999999999993,
+        36.49999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3703007518796994,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6245575733928738,
+      "published_energy_ratio": 0.6245575733928738,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 34,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.4942410530645825,
+      "observed_tangent_COM_ratio": 0.6910688140556369,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 51.6,
+      "sphere_induced_spin_rad_s": 94.94999999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        91.94999999999999,
+        97.94999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.8401162790697672,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4311375271423999,
+      "published_energy_ratio": 0.4311375271423999,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 35,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.48211731044349077,
+      "observed_tangent_COM_ratio": 0.703003003003003,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 67.6,
+      "sphere_induced_spin_rad_s": 98.89999999999996,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        95.89999999999996,
+        101.89999999999996
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.46301775147928953,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.446397686384948,
+      "published_energy_ratio": 0.446397686384948,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 36,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.6532116532116532,
+      "observed_tangent_COM_ratio": 0.6589215256466463,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 58.2,
+      "sphere_induced_spin_rad_s": 116.69999999999996,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        113.69999999999996,
+        119.69999999999996
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.005154639175257,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4738274604968434,
+      "published_energy_ratio": 0.4738274604968434,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 37,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.6051059206952744,
+      "observed_tangent_COM_ratio": 0.7990737974305349,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 54.1,
+      "sphere_induced_spin_rad_s": 67.24999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        64.24999999999997,
+        70.24999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.24306839186691256,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5670665281428553,
+      "published_energy_ratio": 0.5670665281428553,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 38,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.823015873015873,
+      "observed_tangent_COM_ratio": 0.6489802972692706,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 66.8,
+      "sphere_induced_spin_rad_s": 101.54999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        98.54999999999997,
+        104.54999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.5202095808383229,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5740591665261464,
+      "published_energy_ratio": 0.5740591665261464,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 39,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.7775453277545328,
+      "observed_tangent_COM_ratio": 0.7330206704881015,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 59.4,
+      "sphere_induced_spin_rad_s": 76.84999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        73.84999999999998,
+        79.84999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.29377104377104346,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.635983348962385,
+      "published_energy_ratio": 0.635983348962385,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 40,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.6746196403872753,
+      "observed_tangent_COM_ratio": 0.6880077998050049,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 61.7,
+      "sphere_induced_spin_rad_s": 95.99999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        92.99999999999997,
+        98.99999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.5559157212317661,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5523918479744301,
+      "published_energy_ratio": 0.55239184797443,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 41,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.8270254287403903,
+      "observed_tangent_COM_ratio": 0.8560790685079881,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 62.4,
+      "sphere_induced_spin_rad_s": 53.14999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        50.14999999999998,
+        56.14999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.14823717948717982,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.7834001708113784,
+      "published_energy_ratio": 0.7834001708113784,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 42,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.7831986143187067,
+      "observed_tangent_COM_ratio": 0.6750559284116331,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 81.3,
+      "sphere_induced_spin_rad_s": 116.19999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        113.19999999999997,
+        119.19999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.42927429274292717,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5903310667865921,
+      "published_energy_ratio": 0.5903310667865921,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 43,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 1.0340583858042358,
+      "observed_tangent_COM_ratio": 0.5570188133140377,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 75.4,
+      "sphere_induced_spin_rad_s": 153.04999999999995,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        150.04999999999995,
+        156.04999999999995
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.0298408488063653,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.559637965995674,
+      "published_energy_ratio": 0.559637965995674,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 44,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.45985401459854014,
+      "observed_tangent_COM_ratio": 0.7230592441266599,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 64.3,
+      "sphere_induced_spin_rad_s": 108.44999999999996,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        105.44999999999996,
+        111.44999999999996
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.6866251944012436,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4998569383592388,
+      "published_energy_ratio": 0.4998569383592388,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 45,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.7645669291338582,
+      "observed_tangent_COM_ratio": 0.6720020007502813,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 81.5,
+      "sphere_induced_spin_rad_s": 131.14999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        128.14999999999998,
+        134.14999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.6092024539877298,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5608354216870448,
+      "published_energy_ratio": 0.5608354216870448,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 46,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.3723012111637704,
+      "observed_tangent_COM_ratio": 0.7010657655315831,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 66.2,
+      "sphere_induced_spin_rad_s": 114.99999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        111.99999999999997,
+        117.99999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.737160120845921,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.48187851421387284,
+      "published_energy_ratio": 0.48187851421387284,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 47,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 1.1539022611232677,
+      "observed_tangent_COM_ratio": 0.48703082087274946,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 75.9,
+      "sphere_induced_spin_rad_s": 168.09999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        165.09999999999997,
+        171.09999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.2147562582345184,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4115664173954033,
+      "published_energy_ratio": 0.4115664173954033,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 48,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.9400726392251816,
+      "observed_tangent_COM_ratio": 0.5550443641143609,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 68.2,
+      "sphere_induced_spin_rad_s": 135.39999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        132.39999999999998,
+        138.39999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.9853372434017591,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4645368319147064,
+      "published_energy_ratio": 0.4645368319147064,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 49,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.916139240506329,
+      "observed_tangent_COM_ratio": 0.5350389321468298,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 73.1,
+      "sphere_induced_spin_rad_s": 146.29999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        143.29999999999998,
+        149.29999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.0013679890560874,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4374141267822254,
+      "published_energy_ratio": 0.4374141267822253,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 50,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 1.1467505241090146,
+      "observed_tangent_COM_ratio": 0.5760260586319219,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 91.2,
+      "sphere_induced_spin_rad_s": 162.69999999999996,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        159.69999999999996,
+        165.69999999999996
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.783991228070175,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5012939231956696,
+      "published_energy_ratio": 0.5012939231956696,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 51,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.7581967213114755,
+      "observed_tangent_COM_ratio": 0.9089399744572159,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 53.5,
+      "sphere_induced_spin_rad_s": 35.65,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        32.65,
+        38.65
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3336448598130841,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.8627918724830265,
+      "published_energy_ratio": 0.8627918724830265,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 52,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 1.4288,
+      "observed_tangent_COM_ratio": 0.4510351835386765,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 85.6,
+      "sphere_induced_spin_rad_s": 216.09999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        213.09999999999997,
+        219.09999999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.5245327102803736,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.36393365570973096,
+      "published_energy_ratio": 0.3639336557097309,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 53,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.2782475019215989,
+      "observed_tangent_COM_ratio": 0.6029915505823248,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 97.5,
+      "sphere_induced_spin_rad_s": 173.84999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        170.84999999999994,
+        176.84999999999994
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.7830769230769224,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5122864401140047,
+      "published_energy_ratio": 0.5122864401140046,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 54,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.9895765472312703,
+      "observed_tangent_COM_ratio": 0.4259198957994139,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 107.2,
+      "sphere_induced_spin_rad_s": 264.44999999999993,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        261.44999999999993,
+        267.44999999999993
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.4668843283582085,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4151577393970632,
+      "published_energy_ratio": 0.4151577393970632,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 55,
+      "diameter_m": 0.1,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.7576092971776427,
+      "observed_tangent_COM_ratio": 0.4469890994859026,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 93.2,
+      "sphere_induced_spin_rad_s": 248.27424378580395,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        245.27424378580395,
+        251.27424378580395
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.663886735899184,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.41581213707107423,
+      "published_energy_ratio": 0.41581213707107423,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 57,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.39496738117427777,
+      "observed_tangent_COM_ratio": 0.8368098159509204,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 20.6,
+      "sphere_induced_spin_rad_s": 13.299999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        10.299999999999986,
+        16.299999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3543689320388356,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.3458335368518675,
+      "published_energy_ratio": 0.3458335368518675,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 58,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.41304347826086957,
+      "observed_tangent_COM_ratio": 0.903804347826087,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 19.7,
+      "sphere_induced_spin_rad_s": 8.850000000000001,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        5.850000000000001,
+        11.850000000000001
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.5507614213197969,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.39679641238296326,
+      "published_energy_ratio": 0.39679641238296326,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 59,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.38603351955307263,
+      "observed_tangent_COM_ratio": 0.8818393480791618,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 24.8,
+      "sphere_induced_spin_rad_s": 10.150000000000002,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        7.150000000000002,
+        13.150000000000002
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.5907258064516129,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.39215585878560727,
+      "published_energy_ratio": 0.39215585878560727,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 60,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.3490925728229373,
+      "observed_tangent_COM_ratio": 0.7961659791312787,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 29.2,
+      "sphere_induced_spin_rad_s": 21.000000000000004,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        18.000000000000004,
+        24.000000000000004
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.280821917808219,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.3237087151401148,
+      "published_energy_ratio": 0.3237087151401148,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 61,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.2770034843205575,
+      "observed_tangent_COM_ratio": 1.037911122269646,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 23.0,
+      "sphere_induced_spin_rad_s": 3.7750000000000052,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        0.7750000000000052,
+        6.775000000000006
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.8358695652173911,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.36087254996471035,
+      "published_energy_ratio": 0.36087254996471035,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 62,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.2979884609387182,
+      "observed_tangent_COM_ratio": 0.8260767239350435,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 27.9,
+      "sphere_induced_spin_rad_s": 18.474999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        15.474999999999994,
+        21.474999999999994
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.33781362007168475,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.32249876944409284,
+      "published_energy_ratio": 0.32249876944409284,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 63,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.38502310410437623,
+      "observed_tangent_COM_ratio": 0.9141513132105056,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 30.4,
+      "sphere_induced_spin_rad_s": 10.950000000000014,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        7.9500000000000135,
+        13.950000000000014
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.6398026315789469,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4175525487108935,
+      "published_energy_ratio": 0.4175525487108935,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 64,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.40503311258278146,
+      "observed_tangent_COM_ratio": 0.8370627851401261,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.6,
+      "sphere_induced_spin_rad_s": 18.749999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        15.749999999999986,
+        21.749999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.40664556962025367,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.3605470482206388,
+      "published_energy_ratio": 0.3605470482206388,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 65,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.3170501951285157,
+      "observed_tangent_COM_ratio": 0.8520128087831657,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 25.8,
+      "sphere_induced_spin_rad_s": 16.17499999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        13.17499999999999,
+        19.17499999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.37306201550387635,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.29715712745468453,
+      "published_energy_ratio": 0.29715712745468453,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 66,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 30.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.36697365055001285,
+      "observed_tangent_COM_ratio": 0.7830287754673388,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 26.3,
+      "sphere_induced_spin_rad_s": 25.824999999999992,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        22.824999999999992,
+        28.824999999999992
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.018060836501901465,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.2971288514277869,
+      "published_energy_ratio": 0.2971288514277869,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 67,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.6007810804946844,
+      "observed_tangent_COM_ratio": 0.7510442773600668,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 33.8,
+      "sphere_induced_spin_rad_s": 29.799999999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        26.799999999999997,
+        32.8
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.1183431952662722,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5698341949145107,
+      "published_energy_ratio": 0.5698341949145107,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 68,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.560788082652571,
+      "observed_tangent_COM_ratio": 0.6919535189651392,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 27.4,
+      "sphere_induced_spin_rad_s": 35.124999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        32.124999999999986,
+        38.124999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.2819343065693426,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.482910135130616,
+      "published_energy_ratio": 0.482910135130616,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 69,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.5170831208567057,
+      "observed_tangent_COM_ratio": 0.7349876870619435,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 32.1,
+      "sphere_induced_spin_rad_s": 34.974999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        31.974999999999994,
+        37.974999999999994
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.08956386292834868,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5384708528396293,
+      "published_energy_ratio": 0.5384708528396291,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 70,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.5677432059866089,
+      "observed_tangent_COM_ratio": 0.7009588818462539,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 37.6,
+      "sphere_induced_spin_rad_s": 45.999999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        42.999999999999986,
+        48.999999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.2234042553191485,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5117204135727255,
+      "published_energy_ratio": 0.5117204135727255,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 71,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.44000000000000006,
+      "observed_tangent_COM_ratio": 0.6532502526103066,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 28.7,
+      "sphere_induced_spin_rad_s": 51.47499999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        48.47499999999998,
+        54.47499999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.7935540069686404,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.37310134084912155,
+      "published_energy_ratio": 0.37310134084912155,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 72,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.46741344195519346,
+      "observed_tangent_COM_ratio": 0.7460343153123988,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.5,
+      "sphere_induced_spin_rad_s": 39.224999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        36.224999999999994,
+        42.224999999999994
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.24523809523809506,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.48941826248225156,
+      "published_energy_ratio": 0.48941826248225156,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 73,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.40878082910617464,
+      "observed_tangent_COM_ratio": 0.8070071258907363,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 29.4,
+      "sphere_induced_spin_rad_s": 32.499999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        29.499999999999986,
+        35.499999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.10544217687074788,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.49282855002867426,
+      "published_energy_ratio": 0.49282855002867426,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 74,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.5906272793581328,
+      "observed_tangent_COM_ratio": 0.8589470480827753,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 29.7,
+      "sphere_induced_spin_rad_s": 23.175000000000008,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        20.175000000000008,
+        26.175000000000008
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.21969696969696942,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6262912773061897,
+      "published_energy_ratio": 0.6262912773061897,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 75,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 45.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.40878082910617464,
+      "observed_tangent_COM_ratio": 0.9069180522565321,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 22.7,
+      "sphere_induced_spin_rad_s": 15.674999999999992,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        12.674999999999992,
+        18.67499999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.30947136563876687,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5744796627267864,
+      "published_energy_ratio": 0.5744796627267864,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 76,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.830824088748019,
+      "observed_tangent_COM_ratio": 0.7280334728033473,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 39.4,
+      "sphere_induced_spin_rad_s": 38.999999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        35.999999999999986,
+        41.999999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.010152284263959716,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.7141380819525798,
+      "published_energy_ratio": 0.7141380819525798,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 77,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.8041533546325879,
+      "observed_tangent_COM_ratio": 0.7329700272479565,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 32.6,
+      "sphere_induced_spin_rad_s": 36.749999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        33.749999999999986,
+        39.749999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.12730061349693203,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6699816530004483,
+      "published_energy_ratio": 0.6699816530004482,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 78,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.6578947368421053,
+      "observed_tangent_COM_ratio": 0.6900369003690037,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.5,
+      "sphere_induced_spin_rad_s": 44.09999999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        41.09999999999999,
+        47.09999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3999999999999996,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5647297898682786,
+      "published_energy_ratio": 0.5647297898682786,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 79,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.6172001293242807,
+      "observed_tangent_COM_ratio": 0.7539460097359493,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.7,
+      "sphere_induced_spin_rad_s": 41.699999999999996,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        38.699999999999996,
+        44.699999999999996
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3154574132492112,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6085240507774556,
+      "published_energy_ratio": 0.6085240507774556,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 80,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.6703096539162113,
+      "observed_tangent_COM_ratio": 0.592057761732852,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 38.4,
+      "sphere_induced_spin_rad_s": 70.62499999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        67.62499999999999,
+        73.62499999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.839192708333333,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.46905886112657674,
+      "published_energy_ratio": 0.4690588611265767,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 81,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.9261114589855981,
+      "observed_tangent_COM_ratio": 0.6339194884464467,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 42.5,
+      "sphere_induced_spin_rad_s": 62.974999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        59.974999999999994,
+        65.975
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.4817647058823528,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6082003729743826,
+      "published_energy_ratio": 0.6082003729743826,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 82,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.7273922187171399,
+      "observed_tangent_COM_ratio": 0.49506558400999373,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 40.2,
+      "sphere_induced_spin_rad_s": 101.05,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        98.05,
+        104.05
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.5136815920398008,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.37970274412590505,
+      "published_energy_ratio": 0.379702744125905,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 83,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.46945182323110357,
+      "observed_tangent_COM_ratio": 0.6700861195542047,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.3,
+      "sphere_induced_spin_rad_s": 65.12499999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        62.12499999999997,
+        68.12499999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.0806709265175711,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.44899318252637666,
+      "published_energy_ratio": 0.44899318252637666,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 84,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 60.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 0.7317425885755604,
+      "observed_tangent_COM_ratio": 0.716077690855139,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 45.3,
+      "sphere_induced_spin_rad_s": 52.62499999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        49.62499999999998,
+        55.62499999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.16169977924944773,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.6318942624669277,
+      "published_energy_ratio": 0.6318942624669277,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 85,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.8743824982357092,
+      "observed_tangent_COM_ratio": 0.618950585838003,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 40.5,
+      "sphere_induced_spin_rad_s": 56.099999999999994,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        53.099999999999994,
+        59.099999999999994
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.385185185185185,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.582807010753591,
+      "published_energy_ratio": 0.5828070107535909,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 86,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.7847100175746925,
+      "observed_tangent_COM_ratio": 0.6639198578122475,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 37.6,
+      "sphere_induced_spin_rad_s": 51.99999999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        48.99999999999999,
+        54.99999999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.3829787234042551,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5893206517930547,
+      "published_energy_ratio": 0.5893206517930546,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 87,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 2.5,
+      "observed_normal_COM_ratio": 0.7096466093600764,
+      "observed_tangent_COM_ratio": 0.8409364778791529,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 25.2,
+      "sphere_induced_spin_rad_s": 23.100000000000005,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        20.100000000000005,
+        26.100000000000005
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.0833333333333331,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.773676812944864,
+      "published_energy_ratio": 0.773676812944864,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 88,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 1.1356743814844374,
+      "observed_tangent_COM_ratio": 0.8259026458120158,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 32.8,
+      "sphere_induced_spin_rad_s": 29.77499999999999,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        26.77499999999999,
+        32.77499999999999
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.09222560975609774,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.7908073283688886,
+      "published_energy_ratio": 0.7908073283688886,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 89,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 0.7924008810572687,
+      "observed_tangent_COM_ratio": 0.6689821377941594,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 31.6,
+      "sphere_induced_spin_rad_s": 58.374999999999986,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        55.374999999999986,
+        61.374999999999986
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.847310126582278,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.534030264788819,
+      "published_energy_ratio": 0.534030264788819,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 90,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 3.5,
+      "observed_normal_COM_ratio": 1.3015993907083017,
+      "observed_tangent_COM_ratio": 0.5318669670067577,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 42.0,
+      "sphere_induced_spin_rad_s": 88.32499999999997,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        85.32499999999997,
+        91.32499999999997
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.1029761904761899,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.4445867974906707,
+      "published_energy_ratio": 0.4445867974906707,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 91,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.0215274218349564,
+      "observed_tangent_COM_ratio": 0.6250469630557294,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 43.9,
+      "sphere_induced_spin_rad_s": 74.85000000000001,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        71.85000000000001,
+        77.85000000000001
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.7050113895216403,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.5415539026619444,
+      "published_energy_ratio": 0.5415539026619444,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 92,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.0744186046511628,
+      "observed_tangent_COM_ratio": 0.8179136497720568,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 35.6,
+      "sphere_induced_spin_rad_s": 33.95000000000001,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        30.95000000000001,
+        36.95000000000001
+      ],
+      "observed_spin_inside_conditional_sphere_range": true,
+      "relative_spin_discrepancy_at_zero_initial_spin": 0.04634831460674133,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.7755505146433322,
+      "published_energy_ratio": 0.7755505146433322,
+      "full_actual_shape_model_validation": false
+    },
+    {
+      "source_row": 93,
+      "diameter_m": 0.2,
+      "slope_angle_deg": 75.0,
+      "release_height_m": 4.5,
+      "observed_normal_COM_ratio": 1.428421052631579,
+      "observed_tangent_COM_ratio": 0.5269461077844312,
+      "tangent_COM_ratio_is_contact_tangential_restitution": false,
+      "observed_outgoing_rotation_speed_rad_s": 45.0,
+      "sphere_induced_spin_rad_s": 94.79999999999998,
+      "sphere_outgoing_spin_range_for_incoming_norm_le3": [
+        91.79999999999998,
+        97.79999999999998
+      ],
+      "observed_spin_inside_conditional_sphere_range": false,
+      "relative_spin_discrepancy_at_zero_initial_spin": 1.1066666666666662,
+      "energy_ratio_reconstructed_under_author_sphere_inertia": 0.42639894782521637,
+      "published_energy_ratio": 0.4263989478252163,
+      "full_actual_shape_model_validation": false
+    }
+  ],
+  "definition_check": "Rock Rt is outgoing/incoming COM tangential speed, not our signed contact-slip restitution.",
+  "conditional_geometry_mismatch_count": 69
+}

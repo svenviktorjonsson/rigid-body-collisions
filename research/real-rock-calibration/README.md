@@ -35,3 +35,17 @@ measurements on the same contact pair when available. Literature compilations
 supply comparison ranges, not same-specimen independent validation. No fitted
 friction values or exact experimental matches are claimed yet. Existing authored
 synthetic benchmark materials and all acceptance gates remain unchanged.
+
+`tschamut-impact-fixtures.json` now imports2219 actual impact observations from74
+recorded tests, all joined to specimen mass, with scalar before/after rotational
+speeds and contact duration. These measurement-derived database records retain
+source attribution and the dataset's ODbL+DbCL terms; see
+https://opendatacommons.org/licenses/odbl/1-0/ and
+https://opendatacommons.org/licenses/dbcl/1-0/ . Derived database redistribution
+uses those terms rather than an implied code license. Missing full-state inputs
+remain marked, and no rotation-speed ratio is relabelled as tangential restitution.
+
+The additional Wang2018 public workbook provides75 measured limestone impacts
+and outgoing rotational speeds. Its COM tangential ratio uses a DIFFERENT
+convention from our contact-slip coefficient. The separate `wang2018` geometry
+comparison preserves that distinction and all actual measurement targets.

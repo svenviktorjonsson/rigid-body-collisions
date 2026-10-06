@@ -469,3 +469,15 @@ independentmaterialprediction. All historiesandcomparisonsretained. Rockparser
 imports2219before/after scalarrotation impacts74tests,massjoined2219; signed3D
 omega/contactframes and independentcoeffs absent,NO fake rockvalidationclaim.
 All13accuracybaseline andrequested2x gates remain OPEN. Continuous ordinarypushes.
+
+Actual rock comparison extended with Wang2018 public limestone/concrete75impact
+workbook,10/20cmdiameters. IMPORTANT:their Rt is COMtangent velocity ratio,not
+our signedcontact-slip e_t. Reconstructed published energyformula agrees1.11e−16;
+conditional sphere-point angularimpulse approximation matches only6/75 within
+reportedincoming spin bound3rad/s. Exactfacetedshape/contactorientations absent:
+this identifies insufficientsphereapproximation,NOTfullshape-modelfailure orproof
+that materialcoefficientsdependonlocation. Twelve COMRn>1 mustnotbe interpreted
+as intrinsiccontact restitution>1. Rawpubliczipandpaperexternalcache;download
+hashes/sourceattributionandallcomparisonrecordsretained. InitialguessedPDF404,
+actualpublisherzipdownloadPASS,repeated workbookheader importererrorcorrected
+andretained. Independentrockfullstatevalidation remains OPEN.
