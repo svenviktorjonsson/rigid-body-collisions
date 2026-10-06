@@ -1,5 +1,5 @@
 """Prospective unchanged-scene temporal hard-contact reference ladders."""
-import hashlib,json,os,subprocess,time
+import hashlib,json,os,subprocess,time,re
 from importlib import import_module
 from pathlib import Path
 import numpy as np
@@ -11,7 +11,7 @@ assert json.loads((H/'controls-v3/summary.json').read_text())['passed']
 assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'
 exe=ROOT/plan['binary'];receipt=json.loads((H/'build-receipt.json').read_text());assert sha(exe)==receipt['binary_sha256']
 paths=[Path(__file__),H/'plan.json',H/'build-receipt.json',H/'controls-v3/summary.json',exe,exe.parent/'precision-source.json',ROOT/'rigid_engine.py',ROOT/'research/rapid-friction/run.py'];guards={str(p):sha(p) for p in paths}
-save(D/'provenance.json',{'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards})
+libs=re.findall(r'(/\S+)\s+\(',subprocess.check_output(['ldd',str(exe)],text=True));save(D/'provenance.json',{'source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards,'runtime':{str(Path(p).resolve()):sha(Path(p).resolve()) for p in libs}})
 base=import_module('research.rapid-friction.run');gates=json.loads((ROOT/'research/rapid-friction/plan.json').read_text());scenes=base.scenes();save(D/'scenes.json',{k:scenes[k] for k in plan['cases']});summary={}
 for name in plan['cases']:
  entry=scenes[name];target=D/name;target.mkdir();refs=[];edges=[]
