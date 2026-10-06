@@ -1,0 +1,469 @@
+{
+  "points": [
+    {
+      "id": "Glass photo roll1 frame29",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.46260486860203875,
+        0.24221455756952714,
+        0.17325158627630316
+      ],
+      "predicted_signature": [
+        0.4883376677064739,
+        0.2202715643531194,
+        0.22810906931732253
+      ],
+      "mix_angle_error_deg": 5.659723231019948,
+      "magnitude_error_percent": 5.8327443709679905,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 2
+    },
+    {
+      "id": "Glass photo roll1 frame35",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.43342252901021705,
+        0.3183067737229524,
+        0.2315201769476738
+      ],
+      "predicted_signature": [
+        0.4041189733815814,
+        0.3354070891044159,
+        0.18876938849401503
+      ],
+      "mix_angle_error_deg": 4.732714601939286,
+      "magnitude_error_percent": -4.679828586811974,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 13
+    },
+    {
+      "id": "Glass photo roll2 frame3",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.3722318571754776,
+        0.3726566853015996,
+        0.18229492744150033
+      ],
+      "predicted_signature": [
+        0.36870442387164776,
+        0.3766839451622231,
+        0.17222677778994167
+      ],
+      "mix_angle_error_deg": 1.1380096499657868,
+      "magnitude_error_percent": -0.5107327553672936,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 24
+    },
+    {
+      "id": "Glass photo roll2 frame17",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.4261170240228347,
+        0.30361926997214733,
+        0.2173944153161296
+      ],
+      "predicted_signature": [
+        0.44551979895527166,
+        0.307333728508235,
+        0.20810826897591048
+      ],
+      "mix_angle_error_deg": 1.7314605688867226,
+      "magnitude_error_percent": 2.3446729617774276,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 35
+    },
+    {
+      "id": "Glass photo roll2 frame34",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.2847357900177411,
+        0.46516930674942064,
+        0.10343235241876123
+      ],
+      "predicted_signature": [
+        0.3090593816211192,
+        0.4487959360416554,
+        0.1443657791881743
+      ],
+      "mix_angle_error_deg": 5.083063166960292,
+      "magnitude_error_percent": 1.5491884023678848,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 46
+    },
+    {
+      "id": "Glass photo roll4 frame6",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.348561624844445,
+        0.3946236035819581,
+        0.14113553574670354
+      ],
+      "predicted_signature": [
+        0.34743720669374656,
+        0.38616078763200595,
+        0.16229257562158386
+      ],
+      "mix_angle_error_deg": 2.398324368746638,
+      "magnitude_error_percent": -0.16345396849127836,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 57
+    },
+    {
+      "id": "Glass photo roll4 frame11",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5138446208670457,
+        0.19698762624068444,
+        0.25677813993319515
+      ],
+      "predicted_signature": [
+        0.4765971969782658,
+        0.2106489069764979,
+        0.22262493809366152
+      ],
+      "mix_angle_error_deg": 3.2246380891483377,
+      "magnitude_error_percent": -6.690590135038144,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 68
+    },
+    {
+      "id": "Glass photo roll4 frame16",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.4591066529513838,
+        0.3183018925353558,
+        0.21257155191481705
+      ],
+      "predicted_signature": [
+        0.46483574827369684,
+        0.3164781101908448,
+        0.21713100777609448
+      ],
+      "mix_angle_error_deg": 0.5328520386294666,
+      "magnitude_error_percent": 0.8493424200472388,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 79
+    },
+    {
+      "id": "Glass photo roll4 frame18",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.4991203677045187,
+        0.2669057184456862,
+        0.2343702469883896
+      ],
+      "predicted_signature": [
+        0.4922505485873272,
+        0.26867908587406575,
+        0.2299368284174408
+      ],
+      "mix_angle_error_deg": 0.4955066778448957,
+      "magnitude_error_percent": -1.060707487283219,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 90
+    },
+    {
+      "id": "Glass photo roll4 frame22",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.48195295756331774,
+        0.27379833032660966,
+        0.2656827337740847
+      ],
+      "predicted_signature": [
+        0.4687532508869889,
+        0.2924870535364933,
+        0.21896092574937562
+      ],
+      "mix_angle_error_deg": 4.539589610804383,
+      "magnitude_error_percent": -3.3114824395812037,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 101
+    },
+    {
+      "id": "Glass photo roll4 frame23",
+      "type": "Capacity limited",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5367865645277693,
+        0.1524818138039376,
+        0.2399605274149412
+      ],
+      "predicted_signature": [
+        0.5107520259916215,
+        0.15303437818154153,
+        0.23857911647093138
+      ],
+      "mix_angle_error_deg": 1.126189137235152,
+      "magnitude_error_percent": -3.835980977220521,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 112
+    },
+    {
+      "id": "Glass photo roll5 frame4",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5729355010339208,
+        0.1173274902334423,
+        0.18737989769881336
+      ],
+      "predicted_signature": [
+        0.599798649461893,
+        0.11317019013152221,
+        0.19777314795361356
+      ],
+      "mix_angle_error_deg": 0.8659678856579652,
+      "magnitude_error_percent": 4.480015775678825,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 123
+    },
+    {
+      "id": "Glass photo roll5 frame20",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5643661348438641,
+        0.11404829930562871,
+        0.17970461938911636
+      ],
+      "predicted_signature": [
+        0.5740311677792126,
+        0.10943317223598537,
+        0.19124243706322472
+      ],
+      "mix_angle_error_deg": 0.9909756818696397,
+      "magnitude_error_percent": 1.9397875204659076,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 134
+    },
+    {
+      "id": "Glass photo roll5 frame22",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5803356642582894,
+        0.11403795899133444,
+        0.20691981551950797
+      ],
+      "predicted_signature": [
+        0.5895692205052994,
+        0.11583432096654565,
+        0.20242891058147994
+      ],
+      "mix_angle_error_deg": 0.6638050082579059,
+      "magnitude_error_percent": 1.1871374934824708,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 145
+    },
+    {
+      "id": "Glass photo roll5 frame34",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.589421638232134,
+        0.0227395330360797,
+        0.014632215376818199
+      ],
+      "predicted_signature": [
+        0.5970068320820144,
+        0.01682868100180741,
+        0.029409345462498925
+      ],
+      "mix_angle_error_deg": 1.5191264516877296,
+      "magnitude_error_percent": 1.3433030460386464,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 156
+    },
+    {
+      "id": "Glass photo roll6 frame2",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.6078797859059262,
+        0.02053299666599507,
+        0.0262897186655078
+      ],
+      "predicted_signature": [
+        0.579362725077766,
+        0.018274486083497927,
+        0.03193599512175065
+      ],
+      "mix_angle_error_deg": 0.690478833529212,
+      "magnitude_error_percent": -4.642686521652328,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 167
+    },
+    {
+      "id": "Glass photo roll6 frame8",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5659884885816878,
+        0.08276033306252234,
+        0.12771826769095002
+      ],
+      "predicted_signature": [
+        0.5807384793386062,
+        0.07877889674272937,
+        0.13767185849043245
+      ],
+      "mix_angle_error_deg": 0.8578548803874927,
+      "magnitude_error_percent": 2.7160140976305813,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 178
+    },
+    {
+      "id": "Glass photo roll6 frame20",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5849932392616568,
+        0.08841742271264734,
+        0.17672763770431665
+      ],
+      "predicted_signature": [
+        0.5627263414057718,
+        0.09364670404385234,
+        0.16365443437630417
+      ],
+      "mix_angle_error_deg": 1.0299577961283712,
+      "magnitude_error_percent": -3.8856758730877794,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 189
+    },
+    {
+      "id": "Glass photo roll6 frame22",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5904538648175628,
+        0.09317845012414976,
+        0.1421124457258258
+      ],
+      "predicted_signature": [
+        0.5966146367646861,
+        0.08829950355336537,
+        0.15430981215278675
+      ],
+      "mix_angle_error_deg": 1.1140677893594086,
+      "magnitude_error_percent": 1.321472158297965,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 200
+    },
+    {
+      "id": "Glass photo roll6 frame27",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5618941712207434,
+        0.10610050286689593,
+        0.19192458350750286
+      ],
+      "predicted_signature": [
+        0.5421875601137341,
+        0.10763225502791118,
+        0.18809520310496472
+      ],
+      "mix_angle_error_deg": 0.5602823022039808,
+      "magnitude_error_percent": -3.1962800550054515,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 211
+    },
+    {
+      "id": "Glass photo roll6 frame29",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.6078123870017259,
+        0.05517820892770657,
+        0.10474275991776694
+      ],
+      "predicted_signature": [
+        0.6079619409272221,
+        0.057135755571576415,
+        0.09984889330809232
+      ],
+      "mix_angle_error_deg": 0.4860208135024827,
+      "magnitude_error_percent": -0.07821002660505227,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 222
+    },
+    {
+      "id": "Glass photo roll6 frame30",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.6254288798169223,
+        0.02453885512420223,
+        0.07507802773428898
+      ],
+      "predicted_signature": [
+        0.6153605140268441,
+        0.03211838182103123,
+        0.05612921099221648
+      ],
+      "mix_angle_error_deg": 1.7936133053003736,
+      "magnitude_error_percent": -1.8476558362003792,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 233
+    },
+    {
+      "id": "Glass photo roll6 frame33",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5510853210536748,
+        0.11903097397309294,
+        0.21103504611519583
+      ],
+      "predicted_signature": [
+        0.5358228154176555,
+        0.11974190978625264,
+        0.20925770658229656
+      ],
+      "mix_angle_error_deg": 0.5130737760331497,
+      "magnitude_error_percent": -2.3971406949641505,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 244
+    },
+    {
+      "id": "Glass photo roll6 frame37",
+      "type": "Tangential target realized",
+      "ell_m": 0.00159,
+      "observed_signature": [
+        0.5826227740021847,
+        0.05263958875236963,
+        0.08493197443354122
+      ],
+      "predicted_signature": [
+        0.584267702186918,
+        0.050977571344882816,
+        0.08908701795225828
+      ],
+      "mix_angle_error_deg": 0.41483194664088713,
+      "magnitude_error_percent": 0.3528485848098395,
+      "measured_comparison": "Source worksheet contact reconstruction; spin inferred by angular momentum, not independently measured. Published coefficients unchanged.",
+      "source_excel_row": 255
+    }
+  ],
+  "profile_id": "glass-soda-binary",
+  "fixed_parameters": {
+    "normal_restitution": 0.97,
+    "tangential_restitution": 0.44,
+    "pair_friction": 0.092
+  },
+  "no_project_fitting": true,
+  "independent_parameter_dataset": false,
+  "source_spin_is_inferred": true
+}

@@ -50,7 +50,8 @@ def apply_delassus(bodies,contacts,impulses):
 def predict_native(scene,normal_restitution,tangential_restitution,friction,dt=1e-6):
     """Run current coupled 3D solver, with both restitution parameters explicit.
 
-    One common friction overrides both sides, yielding the given pair value.
+    Each side receives sqrt(pair friction), so Bullet product mixing yields
+    the documented pair value.
     Heterogeneous material-pair mixing needs an explicitly declared policy;
     do not silently substitute fitted pair values for independent materials.
     """
@@ -58,7 +59,7 @@ def predict_native(scene,normal_restitution,tangential_restitution,friction,dt=1
     root=Path(__file__).resolve().parents[2];sys.path.insert(0,str(root))
     from spatial_engine import run
     cfg=copy.deepcopy(scene)
-    for body in cfg['bodies']:body['friction']=float(friction)
+    for body in cfg['bodies']:body['friction']=float(np.sqrt(friction))
     return run(cfg,dt=dt,primary_steps=1,iterations=4096,travel_fraction=0,solver='coulomb',kinematic_contact_phase='start',position_stabilization='split_translation_combined',normal_restitution=normal_restitution,tangential_restitution=tangential_restitution,record_contact_impacts=True)
 
 def predict_planar(scene,normal_restitution,tangential_restitution,friction,dt=1e-6):

@@ -1,0 +1,6 @@
+{
+  "cause": "Adapter assigned pair mu to both Bullet body frictions; Bullet multiplies values, giving mu squared. Initial analytic mismatch was not a production solver rejection.",
+  "fix": "Assign sqrt(mu) to each side, realizing measured pair mu; keep published en/et/mu unchanged.",
+  "failed_case": "delrin-smallparts-binary_t0.03_spin-0.3",
+  "production_physics_modified": false
+}

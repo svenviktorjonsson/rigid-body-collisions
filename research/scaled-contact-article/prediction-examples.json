@@ -356,7 +356,7 @@
           ]
         ]
       ],
-      "step_s": 0.000955143,
+      "step_s": 0.000122131,
       "tangent_gyro_correction_max_m_s": 0.0,
       "terminal_component_polish_policy": {
         "attempts": 0,
@@ -393,7 +393,7 @@
       "updates": [
         1
       ],
-      "wall_time_s": 0.01903837099962402,
+      "wall_time_s": 0.010077920000185259,
       "mass": [
         0,
         0.103
@@ -438,7 +438,7 @@
         "kinematic",
         "dynamic"
       ],
-      "physical_setup_id": "c21c502c8e6bce3192eb67ce420ff0f03d7b41486686ccf64f6dc522155503a9",
+      "physical_setup_id": "45dda7683d7e9c5b6bcd2d210b4ade549ccf343a9640a24ea443194234533776",
       "numerical_model": {
         "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
         "solver": "coulomb",
@@ -771,7 +771,7 @@
       "global_contact_declines": 0,
       "global_native_residual_max_m_s": 2.7752446295331874e-14,
       "global_actual_body_residual_max_m_s": 2.7752446295331874e-14,
-      "step_s": 0.000278784,
+      "step_s": 0.000266953,
       "controller_s": 0,
       "reported_max_penetration_fraction": 0,
       "internal_contact_points_removed": 0,
@@ -851,8 +851,8 @@
       },
       "evidence_kind": "numerical_simulation",
       "parameter_provenance": "synthetic_declared",
-      "wall_time_s": 0.006083462998503819,
-      "engine_and_controller_s": 0.000278784,
+      "wall_time_s": 0.005595562994130887,
+      "engine_and_controller_s": 0.000266953,
       "times": [
         0.0,
         1e-06

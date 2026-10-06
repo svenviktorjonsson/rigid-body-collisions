@@ -2,13 +2,43 @@
   "date": "2026-10-06",
   "request": "Reduce measured deviation dots through shared physical model changes; no pointwise offsets or altered plotting metric",
   "hypothesis": "The homogeneous sphere inertia and radial contact lever assumptions bias spin and translation for faceted rocks. Test one shared effective inertia, then shared dimensionless oblique contact geometry, using full normal/tangent mobility and both restitution coefficients.",
-  "models": ["baseline sphere en et mu, alpha0.4", "shared inertia en et mu alpha", "shared effective facet en et mu alpha s with contact lever r/R=(s,-1)"],
-  "bounds": {"en": [0,1], "et": [-1,1], "mu": [0,2], "alpha": [0.2,1.0], "s": [-0.4,0.4]},
+  "models": [
+    "baseline sphere en et mu, alpha0.4",
+    "shared inertia en et mu alpha",
+    "shared effective facet en et mu alpha s with contact lever r/R=(s,-1)"
+  ],
+  "bounds": {
+    "en": [
+      0,
+      1
+    ],
+    "et": [
+      -1,
+      1
+    ],
+    "mu": [
+      0,
+      2
+    ],
+    "alpha": [
+      0.2,
+      1.0
+    ],
+    "s": [
+      -0.4,
+      0.4
+    ]
+  },
   "physics": "Exact shared-point Jacobian, positive inertia, Coulomb cone, full contact normal/tangent target coupling, actual energy check; zero incoming spin and unknown experimental facet geometry remain assumptions.",
   "validation": "Fit only on each training split. Evaluate four leave-one-plate-angle groups and three leave-one-release-height groups. The prior4.5m split is an out-of-fit development comparison, not a new blind test. These data have already informed development; no independent validation claim.",
   "acceptance": "Both pooled group-CV errors must improve vs refitted frozen-law baseline; report per-component RMSE, mapping errors, improved-point counts and all regressions. No production adoption from an effective-geometry fit without measured-shape validation.",
   "optimizer": "Fixed multistarts selected by training residual only; joint residual outgoing normal/tangent and R*omega divided by incoming speed. Invalid/injective predictions rejected.",
   "mapping": "Keep existing ell=radius, axes and observed signatures unchanged; evaluate all predictions at identical recorded incoming states.",
   "rubber": "Separately cross-validate one inertia per ball material across four surfaces. This cannot independently validate friction or remove the previously established incompatibility of one inertia with all measured spin intervals.",
-  "performance_gate": "removed"
+  "performance_gate": "removed",
+  "latest_user_override": {
+    "date": "2026-10-06",
+    "status": "completed exploratory fits; no adoption; superseded",
+    "direction": "No project-fitted parameter search. Use documented experimental material-pair parameters and source-matched comparisons; missing values stay missing."
+  }
 }

@@ -139,9 +139,38 @@ Shared bodies automatically generate the off-diagonal contact coupling. This ope
 
 A practical prediction requires incoming translation and spin, mass and inertia, contact geometry and normal, and explicit $e_n,e_t,\mu$. For each active approaching contact, construct the restitution target and solve the simultaneous system with nonnegative normal impulse and the exact circular tangential capacity. Report whether each tangential target was realized or capacity-limited, outgoing velocities and spin, momentum balance, and work-corrected energy. Use the physical incoming contact velocity in the energy check. The native implementation has validated coefficient bounds, but not every large-scene trajectory refinement is qualified.
 
-The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the illustrative homogeneous pair assigns the same friction value on both sides. These checks do not establish a speedup or replace native simultaneous-solver verification. Native material/contact inputs here are $e_n,e_t,\mu$. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
+The accompanying \texttt{matrix\_tools.py} demonstrates scaled variables and matrix-free contact operations without changing production code. Its three-dimensional operations pass 100 seeded four-body, three-contact shared-chain comparisons between dense and matrix-free Delassus actions (maximum discrepancy $2.84\times10^{-14}$). Its native 2D and 3D prediction wrappers reproduce their retained demonstration trajectories exactly (\texttt{prediction-examples.json}). The planar restitution build remains isolated and has not qualified the full benchmark baseline. Each wrapper passes $e_n,e_t,\mu$ explicitly to the actual solver; the 3D illustrative pair assigns the square root of the pair coefficient to each body because Bullet multiplies body friction, while the 2D wrapper uses the Box2D square-root mixing convention. These checks do not establish a speedup or replace native simultaneous-solver verification. Native material/contact inputs here are $e_n,e_t,\mu$. Rolling resistance, torsional resistance, independent contact moments, and compliant patch stiffness/damping would require additional measured laws and validation. They are not silently assumed present merely because their symbols could be added to a matrix.
 
-\section{Comparisons against public experimental data}
+\section{Selecting documented material-pair inputs}
+The active modeling policy uses published experimental parameter profiles and performs no project fitting of material or extra contact parameters. Each profile identifies the material pair, specimen/surface condition, collision geometry and reported size. Missing coefficients remain unavailable rather than being supplied by a fit. Uncertainties and source validity conditions are retained; a generic material name does not define a universally exact collision constant.
+
+The separate catalog contains eleven complete published triples. The following subset illustrates lookup inputs; equations above remain symbolic. Cornell's chart describes small spheres, while Joseph and Hunt document the air/Zerodur profiles over a specified normal-speed range\cite{cornell,joseph}.
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\hline
+Documented pair & Diameter mm & $e_n$ & $e_t$ & $\mu$\\
+\hline
+Soda glass / same & 3.18 & $.97\pm.01$ & $.44\pm.07$ & $.092\pm.006$\\
+Fresh glass / same & 2.97 & $.922\pm.021$ & $.37\pm.07$ & $.048\pm.006$\\
+Spent glass / same & 2.97 & $.972\pm.015$ & $.25\pm.08$ & $.177\pm.020$\\
+Soda glass / smooth Al & 3.18 & $.831\pm.009$ & $.31\pm.06$ & $.125\pm.007$\\
+Steel / Zerodur, air & 12.7 & $.97\pm.02$ & $.34\pm.07$ & $.11\pm.003$\\
+Glass / Zerodur, air & 12.7 & $.97\pm.02$ & $.39\pm.06$ & $.106\pm.008$\\
+\hline
+\end{tabular}\end{center}
+The catalog is in \texttt{research/documented-materials/catalog.json}. The pair loader realizes a published pair friction value through the backend's actual combination rule; it does not reinterpret pair friction as a universal single-body property. Eighty-one native analytic/energy controls pass with source coefficients unchanged. These are integration checks, not measured-motion validation.
+
+For the original Cornell glass-binary worksheet, twenty-four source-reconstructed impacts were predicted with the fixed published profile and no project coefficient optimization. Outgoing relative normal-velocity RMSE is $0.03667\,{\rm m/s}$ and COM tangential-velocity RMSE is $0.01780\,{\rm m/s}$. The parameter chart and worksheet may share characterization trials, so this is reproduction rather than independent cross-dataset validation. Spin is inferred from the author's angular-momentum reconstruction under sphere inertia, not independently measured. The plate worksheet has a different parameter summary and is not silently merged into this comparison.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{../documented-materials/material-backed-deviation-map.png}
+\caption{Source-backed inputs without project fitting: the same fixed glass/glass profile predicts twenty-four incoming states. Hollow points identify that spin is reconstructed rather than independently measured. Colour distinguishes the model's tangential-capacity regimes; it is not a classification of measured force history. The existing radius policy and observation values are unchanged.}
+\end{figure}
+
+For limestone/concrete, a compatible complete contact restitution/friction profile has not been verified. The old fitted rock coefficients below are historical diagnostics and are excluded from material lookup. Likewise, the rubber comparison's assumed friction is not a documented pair value. Their dots cannot be relabeled as independently specified material predictions.
+
+\section{Historical diagnostic comparisons, not material lookup}
 \begin{center}\small
 \begin{tabular}{llrr}
 \hline
@@ -259,6 +288,8 @@ First replace approximate shapes, inertias, and initial states with independentl
 For non-spherical rocks, contact location already changes the Jacobian and effective mass without changing restitution. Introduce a material map only if repeated experiments with measured geometry and state show a reproducible residual dependence that transfers to unseen contacts. The reference length $\Lref$ must never serve as an adjustable mechanism for improving agreement: it changes notation, not physics.
 
 \begin{thebibliography}{9}
+\bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
+\bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
 \bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
 \bibitem{wang} Wang et al., \emph{Effects of the impact angle on the coefficient of restitution in rockfall}, Natural Hazards and Earth System Sciences 18 (2018), 3045--3060. \url{https://doi.org/10.5194/nhess-18-3045-2018}. Publisher supplementary spreadsheet provides the impact observations.
 \end{thebibliography}

@@ -304,3 +304,5 @@ The all-case working baseline and subsequent2x performance gate remain pending.
 The fallback now supports192-row exact components after an actual135-row
 component passed original native and independent gates. The completed125-sphere
 refinement still fails its second spin edge; all-case qualification remains open.
+
+Documented material-pair inputs are available through [the catalog](research/documented-materials/catalog.html) and `material_profiles.documented_profile(profile_id)`. These11profiles come from primary experimental sources, not project fits. `run_documented_pair` predicts one3Dpair using the published normal/tangential restitution and pair sliding friction; it checks documented geometry,size and density and preserves source conditions. Heterogeneous contact groups require per-contact parameter resolution. Missing limestone/concrete and matched Superball friction profiles remain unavailable; historical fitted coefficients are not material-library entries. See [source-backed comparisons](research/documented-materials/README.md).
