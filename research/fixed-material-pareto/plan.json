@@ -1,0 +1,14 @@
+{
+ "date":"2026-10-06",
+ "user_steering":"Freeze restitution and friction; add only2/3 shared parameters, seek Pareto improvement of aggregate and outlier error.",
+ "material_policy":"Rubber/golf published en/et fixed per surface; mu0.9 remains disclosed assumption. Rocks freeze prior sphere-training en0.49298555778963815 et-0.19158225671821516 mu0.8114839449450747; these are not independently published matched-material values. No en/et/mu optimized.",
+ "additional_physical_parameters":["kappa: shared inertia ratio alpha=0.4*kappa","s0: shared dimensionless tangential contact-offset intercept","s1: shared incidence dependence, s=s0+s1*vt/sqrt(vn^2+vt^2); r/R=(s,-1)"],
+ "bounds":{"kappa":[0.5,1.6666666666666667],"s0":[-0.3,0.3],"s1":[-0.3,0.3]},
+ "physical_scope":"Effective geometry/inertia hypothesis with positive shared-point contact mobility, exact restitution targets subject to Coulomb capacity, actual kinetic-energy gate. Not measured facet/contactpatch geometry. Inertia is not known experimentally; parameters are not identified material properties.",
+ "objectives":"Pareto mean squared relative observable-signature discrepancy and maximum discrepancy. q=(abs(vn),abs(vt),R*abs(omega)). Same radius metric, incoming states, fixed material values and measurement signatures for all candidates.",
+ "optimizer":"SLSQP epigraph maximum-error variable (numerical auxiliary, not a fourth physical parameter). Weights0,.03,.1,.3,1,3,10,30. Fixed multistarts. Reject energy, impulse, constraint failures. Frontier domination computed explicitly.",
+ "selection":"Among physical frontier candidates that dominate baseline aggregate AND maximum, minimize product of mean-error and maximum-error ratios. No heldout values used for selection. If none, retain baseline.",
+ "experiments":"All83case calibration frontier as user requested; explicitly in-sample. Separately50rock+6ball training with25rock+2pad development tests. Four leave-one-rock-plate-group fits with ballpad withheld from training. Previously seen datasets are development evidence, not a new blind validation.",
+ "report":"Per-case improvements/regressions, counts of simultaneous angle/magnitude improvement, fixed parameter hashes, mean/tail metrics, native/independent matrix/energy audits, changed-dot plots. No aggregate-Pareto result called all-case domination unless each case improves.",
+ "adoption":"No production geometry/material change without measured-geometry transfer evidence; preserve baseline and genuine failures.2x remains removed."
+}
