@@ -1,0 +1,25 @@
+{
+  "source": "4147a42ef7533c0ceb02b2087279ae69a42d37e4",
+  "case": "3d_sphere_125",
+  "scene_sha256": "1fae88889c328df226eb186e3949f1727b8629cbe1d82e77e4bef1ffd3514532",
+  "settings": [
+    {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.00125,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Fresh same125-sphere three-level1.25/.625/.3125us reference ladder with stricter1e-11 numerical contact/position solve tolerances. Same actual equations, authored material/geometry/gravity/motion/horizon/contactslop1nm. ALL original full physical gates remain1e-8, geometry2mm, energy1J and both quarter-budget accuracy edges unchanged. Retain strict-search declines; a search decline below1e-8 is not original physical infeasibility. Compare original-tolerance archived ladder only as accuracy experiment, not a speed ranking. Concurrent studies allowed, descriptive cost only.",
+  "numerical_search_tolerance_m_s": 1e-11,
+  "physical_velocity_position_gates_m_s": 1e-08
+}
