@@ -1,0 +1,8 @@
+{
+  "source": "4b57a8d08e9d136532230f9dbe3a217f484002e0",
+  "manifest_sha256": "cd897a389d65e4a575d5a7e0464ebd90cf3e85ea61dc7682cfb7b43eb5c0a51b",
+  "binary_sha256": "27633d4e59d08dcf6839d20720a86e7ebbb22eabc123e7d9ff93c601c188d22e",
+  "builder_sha256": "832de3d5d12599fd45f82eee544d2cdafe2119b749bc5ef05b9757cb099376a7",
+  "prototype_sha256": "694a00ef28f3cf2a1e891289edcec489d32a809e9139344de0b19118886a4701",
+  "scope": "Experimental isolated solver override; original precision inventory and all prior builds preserved."
+}
