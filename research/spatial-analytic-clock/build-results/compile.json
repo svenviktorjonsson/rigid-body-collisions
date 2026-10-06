@@ -1,0 +1,23 @@
+{
+  "command": [
+    "c++",
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-DSPATIAL_LAPACK_RECOVERY=1",
+    "-ffp-contract=off",
+    "-I/home/viktor/.cache/physics-spatial-analytic-clock-20261006/source",
+    "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src",
+    "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/json-src/include",
+    "/home/viktor/.cache/physics-spatial-analytic-clock-20261006/source/runner.cpp",
+    "-o",
+    "/home/viktor/.cache/physics-spatial-analytic-clock-20261006/spatial_runner",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+    "-l:liblapack.so.3",
+    "-l:libblas.so.3"
+  ],
+  "exit": 0
+}

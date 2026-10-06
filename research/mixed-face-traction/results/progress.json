@@ -1,0 +1,85 @@
+[
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": false,
+    "lp_calls": 16,
+    "parts": [
+      {
+        "component_rows": 27,
+        "search_rows": 21,
+        "weak_contacts": 4,
+        "strong_sliding_contacts": 3,
+        "accepted": false,
+        "lp_calls": 16
+      }
+    ],
+    "original_full_gate": {
+      "accepted": false,
+      "projection_m_s": 1.2320806822837637e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.8920086012591364e-08,
+      "support_gap_J": 1.6418948721054571e-09,
+      "passive_bound_J": -0.1541385057434588,
+      "passivity_scale": 1.2219553436749169,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 0.0806461290048901
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h10us/rejection.json",
+    "accepted": false,
+    "lp_calls": 32,
+    "parts": [
+      {
+        "component_rows": 492,
+        "search_rows": 60,
+        "weak_contacts": 5,
+        "strong_sliding_contacts": 15,
+        "accepted": false,
+        "lp_calls": 32
+      }
+    ],
+    "original_full_gate": {
+      "accepted": false,
+      "projection_m_s": 2.1663795332208674e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.2637961745057094e-08,
+      "support_gap_J": 7.807769109796876e-10,
+      "passive_bound_J": -12.347342123195967,
+      "passivity_scale": 15.9153346470646,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 0.4785273399975267
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h5us/rejection.json",
+    "accepted": false,
+    "lp_calls": 0,
+    "parts": [
+      {
+        "component_rows": 885,
+        "search_rows": 183,
+        "weak_contacts": 11,
+        "strong_sliding_contacts": 50,
+        "decline": "declared search/weak-face cap"
+      }
+    ],
+    "original_full_gate": {
+      "accepted": false,
+      "projection_m_s": 9.995924980935927e-08,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 8.827775770429321e-10,
+      "support_gap_J": 1.1297283087576036e-09,
+      "passive_bound_J": -44.957001769065066,
+      "passivity_scale": 81.8499308730222,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 0.42129508899961365
+  }
+]

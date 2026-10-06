@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "phase": "start",
+      "primary_steps": 1,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": true,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "start",
+      "primary_steps": 2,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": true,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "start",
+      "primary_steps": 4,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": true,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "start",
+      "primary_steps": 16,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": true,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "end",
+      "primary_steps": 1,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": false,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "end",
+      "primary_steps": 2,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": false,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "end",
+      "primary_steps": 4,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": false,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "phase": "end",
+      "primary_steps": 16,
+      "position_error_m": 1.4210854715202004e-14,
+      "quaternion_error": 1.6653345369377348e-16,
+      "prescribed_pose_bytes_exact_across_levels": true,
+      "prescribed_velocity_bytes_exact_across_levels": false,
+      "disabled_original_state_bytes_exact": true
+    },
+    {
+      "signed_wall": -1,
+      "analytic_velocity_error_m_s": 0.0,
+      "actuator_work_J": 400.0,
+      "original_contact_residual_m_s": 2.0194839173657902e-28
+    },
+    {
+      "signed_wall": 1,
+      "analytic_velocity_error_m_s": 0.0,
+      "actuator_work_J": 400.0,
+      "original_contact_residual_m_s": 2.0194839173657902e-28
+    },
+    {
+      "touching8_reversal": true
+    }
+  ],
+  "scope": "Prescribed-pose/reversal/impact controls and disabled original state parity; no world/refinement/performance acceptance."
+}

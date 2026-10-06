@@ -1,0 +1,24 @@
+[
+  {
+    "left": 0,
+    "right": 1,
+    "passed": false,
+    "errors": {
+      "position_m": 0.07490828636264701,
+      "velocity_m_s": 2.1399098008548694,
+      "omega_rad_s": 19.392794735169886,
+      "orientation_rad": 0.4728035621560869
+    }
+  },
+  {
+    "left": 1,
+    "right": 2,
+    "passed": false,
+    "errors": {
+      "position_m": 0.06925934240729915,
+      "velocity_m_s": 1.9143063699202338,
+      "omega_rad_s": 16.979221566950653,
+      "orientation_rad": 0.25181393841621014
+    }
+  }
+]

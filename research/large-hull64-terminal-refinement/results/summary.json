@@ -1,0 +1,64 @@
+[
+  {
+    "trial": 0,
+    "authenticated_anchor": {
+      "path": "research/large-terminal-world/results/hull64_h10us/final.json",
+      "sha256": "6c378614a379dbba36685bd24c9879acec99b9be7174aa50b89bc280744b254e"
+    },
+    "complete": true,
+    "physical": {
+      "passed": true,
+      "metrics": {
+        "quaternion_norm_error": 2.220446049250313e-16,
+        "energy_change_minus_boundary_work_J": -59362.92989046737,
+        "max_contact_penetration_m": 0.0014673208569705681,
+        "max_closing_contact_speed_m_s": 0.07228576431351615,
+        "coupled_fallbacks": 0,
+        "sampled_container_surface_excess_m": 7.523862078917531e-07,
+        "container_surface_excess_m": 0.0003692758228360793,
+        "contact_residual_m_s": 9.995983645365269e-09,
+        "position_residual_m_s": 7.77824027409224e-09
+      },
+      "limits": {
+        "quaternion_norm_error": 1e-12,
+        "energy_change_minus_boundary_work_J": 1.0,
+        "container_surface_excess_m": 0.002,
+        "contact_residual_m_s": 1e-08,
+        "position_residual_m_s": 1e-08
+      }
+    },
+    "setting": {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0
+    },
+    "elapsed_s_descriptive": 1071.696387236996,
+    "source_binary_unchanged": true
+  },
+  {
+    "trial": 1,
+    "complete": false,
+    "error": "Command '['/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner']' returned non-zero exit status 1.",
+    "stderr": "Coulomb residual gate failed (7.73599e-07 m/s): increase iterations or refine timestep; no friction-law fallback\n",
+    "setting": {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "travel_fraction": 0
+    },
+    "elapsed_s_descriptive": 224.52931674799765,
+    "source_binary_unchanged": true
+  },
+  {
+    "trial": 2,
+    "complete": false,
+    "error": "Command '['/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner']' returned non-zero exit status 1.",
+    "stderr": "Coulomb residual gate failed (1.54268e-07 m/s): increase iterations or refine timestep; no friction-law fallback\n",
+    "setting": {
+      "dt": 0.01,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    "elapsed_s_descriptive": 99.14212158900045,
+    "source_binary_unchanged": true
+  }
+]
