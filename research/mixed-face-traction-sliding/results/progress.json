@@ -1,0 +1,101 @@
+[
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "lp_calls": 34,
+    "parts": [
+      {
+        "component_rows": 27,
+        "search_rows": 21,
+        "weak_contacts": 4,
+        "strong_sliding_contacts": 3,
+        "accepted": true,
+        "lp_calls": 34,
+        "dropped_contacts": [
+          15
+        ],
+        "original_gate": {
+          "accepted": true,
+          "projection_m_s": 7.678711410808697e-09,
+          "circle_violation_scaled_m_s": 0.0,
+          "sticking_m_s": 5.686014608371592e-10,
+          "support_gap_J": 1.5346097736335592e-11,
+          "passive_bound_J": -0.15361049435609817,
+          "passivity_scale": 1.2214266956835973,
+          "finite": true,
+          "bounds": true,
+          "native_response_max_discrepancy": 0.0
+        }
+      }
+    ],
+    "original_full_gate": {
+      "accepted": true,
+      "projection_m_s": 7.678711098988528e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 5.686015302260943e-10,
+      "support_gap_J": 1.5346099748012617e-11,
+      "passive_bound_J": -0.15413852106832013,
+      "passivity_scale": 1.2219548080722133,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 0.16209848900325596
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h10us/rejection.json",
+    "accepted": false,
+    "lp_calls": 243,
+    "parts": [
+      {
+        "component_rows": 492,
+        "search_rows": 60,
+        "weak_contacts": 5,
+        "strong_sliding_contacts": 15,
+        "accepted": false,
+        "lp_calls": 243
+      }
+    ],
+    "original_full_gate": {
+      "accepted": false,
+      "projection_m_s": 2.1663795332208674e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.2637961745057094e-08,
+      "support_gap_J": 7.807769109796876e-10,
+      "passive_bound_J": -12.347342123195967,
+      "passivity_scale": 15.9153346470646,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 0.8404081690023304
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h5us/rejection.json",
+    "accepted": false,
+    "lp_calls": 4096,
+    "parts": [
+      {
+        "component_rows": 885,
+        "search_rows": 183,
+        "weak_contacts": 11,
+        "strong_sliding_contacts": 50,
+        "accepted": false,
+        "lp_calls": 4096
+      }
+    ],
+    "original_full_gate": {
+      "accepted": false,
+      "projection_m_s": 9.995924980935927e-08,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 8.827775770429321e-10,
+      "support_gap_J": 1.1297283087576036e-09,
+      "passive_bound_J": -44.957001769065066,
+      "passivity_scale": 81.8499308730222,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 0.0
+    },
+    "elapsed_s_descriptive": 27.678546563001873
+  }
+]
