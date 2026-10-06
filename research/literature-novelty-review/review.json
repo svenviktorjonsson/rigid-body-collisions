@@ -112,6 +112,18 @@
       "difference": "Our proposed fixed independently characterized input test differs from fitting against comparison outcomes; no first-ever claim for such tests.",
       "cache_pdf": "fazeli2017.pdf",
       "sha256": "72857723106b9048841a9595f2d52bdf3d9d184fca873763939dc0c19784996a"
+    },
+    {
+      "id": "gauge2026",
+      "authors": "Shuai Wang et al.",
+      "year": 2026,
+      "title": "GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models",
+      "url": "https://arxiv.org/abs/2608.05948",
+      "full_text_url": "https://arxiv.org/html/2608.05948v1",
+      "location": "Abstract and appendixA.2.1",
+      "verification": "Primary arXiv submission metadata and full HTML inspected.",
+      "supports": "Measured simulator benchmarking with calibrated physical metadata already exists; offers a candidate validation source.",
+      "limits": "Published calibration text describes friction and rail-collision restitution. Complete independent signed tangential restitution profile and full spin-state/data suitability not verified. No native GAUGE prediction claimed."
     }
   ],
   "limitations": [
