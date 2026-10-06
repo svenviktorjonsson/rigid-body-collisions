@@ -1,0 +1,17 @@
+{
+  "source": "f5ed4df8236e856d03c2af46ed7a55c9b181f8ef",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+    "research/large-velocity-world/results/trial_1/rejection.json": "a2f393e8e8c5a3edc4678817651fa3bf1b4f15c06c170deb74bcddc2cdd8b619"
+  },
+  "scope": "Hosted CI393/126-component recovery portability failure retained. Two isolated unchanged-law search controls: seed16 component128; tight6 component192 with internal numerical tolerance0.5 times original tolerance. Each search retains2048 iteration/SVD caps, exact graph, Jacobi64, original material/equations. FINAL original native eager-cone and independent absolute1e-8 bounds/friction/support/passivity gates remain mandatory. Controls162/297/393, no body apply or trajectory/performance acceptance. Extra research step reports genuine declines without weakening required production regression. Source/compiler/library/CPU inventories retained; one-thread sequential execution.",
+  "guards": {
+    "tight6/null_seed192.h": "bcd21bcde6e9ed29f9687c5fce59039e0f5248f0a9372824b8e9fe6270ffb8a6",
+    "tight6/projection192.h": "b3e29f42db650303043026e35810d88e9d6b0f450caab2f44ee2b31f4fe45737",
+    "tight6/replay.cpp": "da200c90332c8cc03b1b028ecc4b1bf0388196aec4c9b97ed830a1401d974f5a",
+    "seed16/replay.cpp": "8459d2a5d963dc84aa28bc35b1b3783633240b5ea389cc353930503090a4a08b",
+    "seed16/projection128.h": "c900b5ce8d30e4e80a9ba121ff7379301acfb74f1e6b9097d2377a58a5c2260f",
+    "seed16/null_seed128.h": "599bfc06d0007229ebd1abc727ab22b57439db7dda794b0d14bb002c853a84a2"
+  }
+}

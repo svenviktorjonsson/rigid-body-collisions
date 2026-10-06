@@ -2,6 +2,10 @@ name: Physics and benchmark validation
 
 on: [push, pull_request]
 
+concurrency:
+  group: physics-validation-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -106,3 +110,17 @@ jobs:
         run: |
           python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json
           python -m research.benchmark_tools convergence --axis dt_s --runs research/adaptive-benchmarks/examples/coarse.json research/adaptive-benchmarks/examples/medium.json research/adaptive-benchmarks/examples/fine.json --budget research/adaptive-benchmarks/examples/budget.json
+
+      - name: Isolated hosted contact portability controls
+        if: always() && matrix.python-version == '3.12'
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.ci-contact-portability.run build/ci-contact-portability
+      - name: Retain hosted contact portability artifacts
+        if: always() && matrix.python-version == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: contact-portability-${{ github.run_id }}
+          path: build/ci-contact-portability
+          if-no-files-found: warn
