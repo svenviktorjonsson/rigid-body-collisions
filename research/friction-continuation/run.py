@@ -3,7 +3,7 @@ import ast,hashlib,json,os,subprocess,time
 from pathlib import Path
 import numpy as np
 from scipy.optimize import least_squares
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'results';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'results-v2';D.mkdir(exist_ok=False)
 save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'
@@ -45,7 +45,11 @@ for index,(path,digest) in enumerate(plan['inputs'].items()):
     return J if jac else F
    try:least_squares(equations,q,jac=lambda x:equations(x,True),method='trf',x_scale='jac',ftol=1e-14,xtol=1e-14,gtol=1e-14,max_nfev=1024)
    except Limit:pass
-   candidate=box['best'];stage_hi=hi.copy();stage_hi[localdep>=0]*=target;stage_local=dict(local,hi=stage_hi.tolist());gate=ns['external'](stage_local,{'p':candidate.tolist(),'w':(M@candidate-rhs).tolist()});passed=bool(gate['accepted']);attempts.append({'component_rows':ids,'stage':stage,'friction_fraction':target,'accepted_intermediate':passed,'raw_evaluations':box['raw'],'candidate_p':candidate.tolist(),'independent':gate,'elapsed_s_descriptive':time.perf_counter()-start});save(D/f'{index}-progress.json',attempts)
+   candidate=box['best'].copy();stage_hi=hi.copy();stage_hi[localdep>=0]*=target
+   for k,ts,eig,mu in contacts:
+    if -tol/M[k,k]<=candidate[k]<0:candidate[k]=0
+    cap=target*mu*max(0,candidate[k]);length=np.linalg.norm(candidate[ts]);candidate[ts]*=min(1.,cap/max(length,1e-300))
+   stage_local=dict(local,hi=stage_hi.tolist());gate=ns['external'](stage_local,{'p':candidate.tolist(),'w':(M@candidate-rhs).tolist()});passed=bool(gate['accepted']);attempts.append({'component_rows':ids,'stage':stage,'friction_fraction':target,'accepted_intermediate':passed,'raw_evaluations':box['raw'],'candidate_p':candidate.tolist(),'independent':gate,'elapsed_s_descriptive':time.perf_counter()-start});save(D/f'{index}-progress.json',attempts)
    print(index,len(q),stage,target,passed,gate['projection_m_s'],flush=True)
    if passed:
     q=candidate;accepted_fraction=target

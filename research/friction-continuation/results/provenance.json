@@ -1,0 +1,8 @@
+{
+  "source": "004bf30888021c4f38232542a9cbb8929214d8ae",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/friction-continuation/run.py": "79a844ffcc87d6c23d9f81da5649f9bf7ce5910d3e8959fc202b5a23975b5ad6",
+    "/home/viktor/.cache/vkf-physics-continuation/research/friction-continuation/plan.json": "8f9f961d2cf1dae0d263cef76f715ad3c4069a7ddc252c90aded1f48db2f44b3",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_coulomb_replay": "0f6d3e76baadebfcdf2592351750ae00973cc6667c81fb693240a74dec5a1c79"
+  }
+}
