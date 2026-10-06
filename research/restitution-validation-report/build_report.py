@@ -26,7 +26,7 @@ sections=[]
 def add(title,*paras):sections.append((title,list(paras)))
 add('Restitution validation report — 6 October 2026',
 'The normal and tangential restitution model is implemented in the native 3D solver and an isolated simultaneous 2D build. Implementation checks pass. Experimental comparisons show partial agreement, including an unresolved rubber-pad spin discrepancy. These results do not establish an exact real-rock replay or independently validated material friction.',
-'This report separates measured comparisons, analytic/native verification and synthetic geometry tests. The original 13-case accuracy-qualified benchmark baseline and subsequent 2x performance gate remain OPEN.')
+'This report separates measured comparisons, analytic/native verification and synthetic geometry tests. The original 13-case accuracy-qualified baseline remains OPEN. The user removed the 2x performance requirement; priority is realistic prediction against independent measurements.')
 add('1. Model and scope',
 'At a shared contact point, u_n(after) = -e_n u_n(before) and u_t(after) = -e_t u_t(before) when friction capacity permits. Normal restitution is restricted to [0,1]; tangential restitution to [-1,1]. A tangential value of -1 preserves contact slip, 0 requests sticking, and positive values request slip reversal. Both coefficients must be supplied together.',
 'Tangential impulses obey the circular Coulomb bound |J_t| <= mu J_n. The full contact Jacobian includes lever arms and body inertia. Simultaneous contacts retain coupled solving. A separate actual kinetic-energy minus boundary-work gate rejects energy injection; the shifted restitution target is not used as incoming velocity in that audit.',
@@ -64,7 +64,7 @@ add('7. Other public data and remaining identification gaps',
 add('8. Engineering status and reproducibility',
 'The report evidence was pushed at commit 4ffacf7 on research/adaptive-benchmark-validation, draft PR #1. Numerical model source was frozen from the restitution implementation; plan.json names d999256 and the raw XLSX SHA256 328d727800aba8a00f1ec6c6ef46b85f440f0bad9335c395d88727ca1963e77f. Native binary hashes are retained in experiment summaries.',
 'Rebuild with the repository Python environment: python research/restitution-validation-report/build_report.py. fit_rocks.py accepts --xlsx for the source supplement. native_holdout.py, geometry_sweep.py and rubber_surfaces.py retain the native replay construction; existing results must be preserved before rerunning. Publisher PDFs remain in the external cache and are not redistributed.',
-'The requested all-13-case working/accuracy baseline is unqualified. Large simultaneous systems and time-refinement checks retain genuine failures. No frozen-baseline five-repetition per-case 2x performance acceptance exists. Earlier scoped speedups and concurrent elapsed times cannot substitute for that gate. This report completes the present comparison study, not those outstanding engineering acceptance gates.')
+'The requested all-13-case working/accuracy baseline is unqualified. Large simultaneous systems and time-refinement checks retain genuine failures. The user removed the 2x performance gate. It is no longer an acceptance requirement. Physical and accuracy checks still apply. This report completes the present comparison study, not those outstanding engineering acceptance gates.')
 add('9. Primary sources',
 'https://nhess.copernicus.org/articles/18/3045/2018/ — Wang et al., limestone experiments and public supplement (CC BY 4.0).',
 'https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf — Cross, Enhancing the Bounce of a Ball (2010).',
@@ -82,10 +82,22 @@ for i,row in enumerate(r['rows']):
  ax.errorbar(c,i,xerr=[[c-lo],[hi-c]],fmt='o',color='tab:blue',label='Prediction range' if i==0 else None)
  ax.errorbar(row['observed_spin_factor'],i,xerr=.1,fmt='s',color='tab:orange',label='Measured' if i==0 else None)
 ax.set_yticks(range(4),[x['surface'] for x in r['rows']]);ax.set_xlabel('Outgoing spin / incoming speed (rad/m)');ax.legend();fig.tight_layout();fig.savefig(P/'rubber-spin.png',dpi=180);plt.close(fig)
+comparison_rows=[]
+for row in r['rows']:
+ lo,hi=row['predicted_range_over_angle_and_et_uncertainty']
+ comparison_rows.append([row['surface'],f"{row['observed_spin_factor']:.1f} +/-0.1",f"{row['predicted_central_spin_factor']:.2f} ({lo:.2f}–{hi:.2f})",'Overlaps reported uncertainty' if row['spin_intervals_overlap'] else 'Mismatch'])
+comparison_rows.extend([
+ ['Limestone normal velocity','25 held-out measured impacts','RMSE 1.004 m/s','Approximate sphere; actual facets unavailable'],
+ ['Limestone tangential velocity','Same 25 impacts','RMSE 1.305 m/s','Approximate sphere; fitted coefficients'],
+ ['Limestone angular speed','Same 25 impacts','RMSE 12.876 rad/s','Approximate sphere; initial spin omitted'],
+ ['Actual irregular-rock full motion','No complete matched dataset verified','Not validated','Mesh, inertia, attitude and contact geometry missing'],
+ ['Independent friction prediction','No matched same-pair measurement','Not validated','Rubber mu assumed; rock mu fitted']])
 body=''.join('<section><h2>'+html.escape(t)+'</h2>'+''.join('<p>'+html.escape(p)+'</p>' for p in ps)+'</section>' for t,ps in sections)
+body+='<h2>Comparison with reality</h2><p>Rubber values are spin factor in rad/m. Restitution is supplied from the same experiment; these are conditional spin predictions, not independent material predictions.</p><table border="1" cellpadding="8"><tr><th>Case / quantity</th><th>Measured</th><th>Model</th><th>Assessment</th></tr>'+''.join('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in row)+'</tr>' for row in comparison_rows)+'</table>'
 for title,path in [('Rock generalization','rock-validation.png'),('Rubber spin comparison','rubber-spin.png')]:
  body+='<h2>'+title+'</h2><img alt="'+title+'" src="data:image/png;base64,'+base64.b64encode((P/path).read_bytes()).decode()+'">'
 (P/'report.html').write_text('<!doctype html><meta charset="utf-8"><title>Restitution validation report</title><style>body{max-width:950px;margin:40px auto;padding:20px;font:17px/1.6 system-ui;color:#17212b}h2{margin-top:2em}img{max-width:100%}section{break-inside:avoid}</style>'+body)
+sections.append(('Comparison with reality', ['Rubber spin factors are rad/m; restitution comes from the same target experiment.']+[' | '.join(row) for row in comparison_rows]))
 with PdfPages(P/'report.pdf') as pdf:
  page=0
  for title,paras in sections:
@@ -96,6 +108,6 @@ with PdfPages(P/'report.pdf') as pdf:
    fig.text(.075,.895,'\n'.join(chunks[start:start+42]),fontsize=9.4,linespacing=1.5,va='top',family='DejaVu Sans');fig.text(.075,.04,f'Restitution validation | 6 October 2026 | Page {page}',fontsize=8);pdf.savefig(fig);plt.close(fig)
  for path in ['rock-validation.png','rubber-spin.png']:
   fig,ax=plt.subplots(figsize=(11.69,8.27));ax.imshow(plt.imread(P/path));ax.axis('off');pdf.savefig(fig);plt.close(fig)
-audit={'training_count':50,'heldout_count':25,'native_checks_passed':75,'geometry_checks_passed':96,'rubber_native_checks_passed':36,'rubber_surfaces_overlap':3,'pooled_angle_cv':cv,'all_13_case_baseline_qualified':False,'twofold_performance_gate_passed':False,'independent_material_friction_validated':False,'actual_rock_geometry_validated':False,'input_sha256':{str(path.relative_to(P)):hashlib.sha256(path.read_bytes()).hexdigest() for path in [P/'plan.json',P/'fits.json',P/'native-heldout/summary.json',P/'geometry-sweep/summary.json',P/'rubber-surfaces/summary.json']}}
+audit={'training_count':50,'heldout_count':25,'native_checks_passed':75,'geometry_checks_passed':96,'rubber_native_checks_passed':36,'rubber_surfaces_overlap':3,'pooled_angle_cv':cv,'all_13_case_baseline_qualified':False,'twofold_performance_gate_status':'removed_by_user','independent_material_friction_validated':False,'actual_rock_geometry_validated':False,'input_sha256':{str(path.relative_to(P)):hashlib.sha256(path.read_bytes()).hexdigest() for path in [P/'plan.json',P/'fits.json',P/'native-heldout/summary.json',P/'geometry-sweep/summary.json',P/'rubber-surfaces/summary.json']}}
 (P/'report-audit.json').write_text(json.dumps(audit,indent=2)+'\n')
 print(json.dumps(audit,indent=2))

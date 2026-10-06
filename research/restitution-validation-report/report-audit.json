@@ -11,7 +11,7 @@
     "angle": 0.13062474987267705
   },
   "all_13_case_baseline_qualified": false,
-  "twofold_performance_gate_passed": false,
+  "twofold_performance_gate_status": "removed_by_user",
   "independent_material_friction_validated": false,
   "actual_rock_geometry_validated": false,
   "input_sha256": {

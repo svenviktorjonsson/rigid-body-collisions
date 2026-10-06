@@ -1,3 +1,7 @@
+# Current user scope override — October 6, 2026
+
+The user explicitly removed the 2x performance gate. Focus on realistic behavior and a comparison table against measured reality. Historical 2x plans below are superseded; physical/accuracy requirements remain. Do not claim independent material validation from fitted or target-supplied restitution.
+
 # Physics-engine continuation
 
 ## Active user request — October6,2026
