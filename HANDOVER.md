@@ -1,6 +1,6 @@
 # Wedge notation correction — October 6, 2026
 
-User explicitly requests wedge on cross-product matrices, no redundant parentheses in associative matrix products, and lowercase delta for impulses. Active article uses r^wedge j and analogous matrix products, preserving factor order. This notation correction does not resolve the directional constitutive model mismatch documented below.
+User explicitly requests wedge on cross-product matrices, no redundant parentheses in associative matrix products, and lowercase delta for impulses. Active article uses r_subscript-wedge j and analogous matrix products, preserving factor order. This notation correction does not resolve the directional constitutive model mismatch documented below.
 
 # Directional model mismatch — October 6, 2026
 
