@@ -1,0 +1,233 @@
+[
+  {
+    "input": "research/large-velocity-world/results/trial_1/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.406567288053445e-09,
+      "circle_violation_scaled_m_s": 1.524635417456869e-17,
+      "sticking_m_s": 7.824273891264185e-10,
+      "support_gap_J": 1.0520971283930453e-12,
+      "passive_bound_J": -0.11142260791714743,
+      "passivity_scale": 1.1183722856237108,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 5.684341886080802e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 51,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 51
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": false,
+    "native_exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 1.2320806822837637e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.8920086012591364e-08,
+      "support_gap_J": 1.6418948721054571e-09,
+      "passive_bound_J": -0.1541385057434588,
+      "passivity_scale": 1.2219553436749169,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.2737367544323206e-13
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 14393,
+      "solves": 0,
+      "stage_attempts": 17,
+      "svd_calls": 14393
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/large-velocity-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 6.098779377142611e-09,
+      "circle_violation_scaled_m_s": 3.9886134467770524e-18,
+      "sticking_m_s": 5.74641454166639e-09,
+      "support_gap_J": 8.582107763122227e-13,
+      "passive_bound_J": -0.03449913002959419,
+      "passivity_scale": 1.034583709994356,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.4210854715202004e-14
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 1.876831824025351e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 6.643277975992979e-10,
+      "support_gap_J": 2.0536261445361869e-10,
+      "passive_bound_J": -14.642739552484377,
+      "passivity_scale": 32.04961553526842,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.842170943040401e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 69,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 69
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/large-velocity-cap128-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 9.910671197587572e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.3092074646268137e-09,
+      "support_gap_J": 2.0455583532129588e-11,
+      "passive_bound_J": -0.1461045992759194,
+      "passivity_scale": 1.1957610038810869,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.1368683772161603e-13
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h10us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.544395976817996e-09,
+      "circle_violation_scaled_m_s": 3.57701096983396e-16,
+      "sticking_m_s": 1.1595870925849452e-09,
+      "support_gap_J": 7.017905357720176e-11,
+      "passive_bound_J": -0.9497374349368572,
+      "passivity_scale": 2.2674903945423135,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 8.526512829121202e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 86,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 86
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h5us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 6.861764397569006e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 9.213269310903861e-10,
+      "support_gap_J": 1.708842866171997e-09,
+      "passive_bound_J": -74.65611857860728,
+      "passivity_scale": 148.01076363778648,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.1368683772161603e-13
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "reduced_rows_max": 93,
+      "solves": 1,
+      "support_passes": 1,
+      "svd_calls": 1277
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "source": "6414ecfdf38b0296f5cb4811a39154e497b4ce77",
+  "cases": [
+    {
+      "name": "hull64_h10us",
+      "case": "3d_hull_64",
+      "setting": {
+        "dt": 0.01,
+        "primary_steps": 1000,
+        "travel_fraction": 0
+      },
+      "scene_sha256": "1d75ccc28fabbbc69554916bac2a51963896b7115b5aa7bc59c82b227d13a891"
+    },
+    {
+      "name": "hull125_h10us",
+      "case": "3d_hull_125",
+      "setting": {
+        "dt": 0.01,
+        "primary_steps": 1000,
+        "travel_fraction": 0
+      },
+      "scene_sha256": "fdb3f62f73b4aa0d75e571d4bb658d53c04d2e171e89678e9e7ccf2ebac4e542"
+    },
+    {
+      "name": "hull125_h5us",
+      "case": "3d_hull_125",
+      "setting": {
+        "dt": 0.01,
+        "primary_steps": 2000,
+        "travel_fraction": 0
+      },
+      "scene_sha256": "fdb3f62f73b4aa0d75e571d4bb658d53c04d2e171e89678e9e7ccf2ebac4e542"
+    }
+  ],
+  "rule": "Fresh original64/125-hull authored scenes, geometry, inertia, friction, gravity, +/-20m/s reversals, horizon. Original numerical contact tolerance1e-8/slop1nm and full original physical/accuracy gates unchanged. New search-only numerical recovery tail already validated on actual captures and hosted. Retain every rejection and accepted prefix. Independent worlds may run concurrently, all elapsed values descriptive. No reference/baseline/performance qualification from isolated completion; both accuracy edges remain required. Fresh final terminal-polisher/large-support version: accepted earlier lanes unchanged; every later contact reject retained. Full .12s horizon, not just captured prefix."
+}

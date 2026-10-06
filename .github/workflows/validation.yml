@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 concurrency:
   group: physics-validation-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false # Retain running diagnostic evidence across live checkpoints.
 
 permissions:
   contents: read
