@@ -2,7 +2,7 @@
 import ast,hashlib,json,os,subprocess,time
 from pathlib import Path
 import numpy as np
-H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'results';D.mkdir(exist_ok=False)
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());D=H/'results-v2';D.mkdir(exist_ok=False)
 def save(p,x):p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 assert sha(H/'replay.cpp')==plan['source_sha256'] and sha(ROOT/plan['seed_archive'])==plan['seed_archive_sha256'];assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1'

@@ -1,0 +1,22 @@
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:3,
+                 from /home/viktor/.cache/vkf-physics-continuation/research/native-finite-projection/replay.cpp:2:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:64:51: error: expected class-name before ‘{’ token
+   64 | class NormalFirstDantzig : public btDantzigSolver {
+      |                                                   ^
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:68:7: error: ‘bool NormalFirstDantzig::solveMLCP(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, bool)’ marked ‘override’, but does not override
+   68 |  bool solveMLCP(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,const btVectorXu& lo,const btVectorXu& hi,const btAlignedObjectArray<int>& dependency,int iterations,bool sparse=true) override {
+      |       ^~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h: In constructor ‘NormalFirstDantzig::NormalFirstDantzig()’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:67:23: error: ‘m_acceptableUpperLimitSolution’ was not declared in this scope
+   67 |  NormalFirstDantzig(){m_acceptableUpperLimitSolution=btScalar(1e30);}
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h: In member function ‘bool NormalFirstDantzig::solveMLCP(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, bool)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:74:11: error: ‘btDantzigSolver’ has not been declared
+   74 |    return btDantzigSolver::solveMLCP(A,b,x,lo,hi,dependency,iterations,sparse);
+      |           ^~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:79:57: error: ‘btDantzigSolver’ has not been declared
+   79 |    if(dependency[row]>=0&&map[dependency[row]]<0)return btDantzigSolver::solveMLCP(A,b,x,lo,hi,dependency,iterations,sparse);
+      |                                                         ^~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h:86:21: error: ‘btDantzigSolver’ has not been declared
+   86 |   if(!result)result=btDantzigSolver::solveMLCP(reduced,rhs,solution,lower,upper,dep,iterations,sparse);
+      |                     ^~~~~~~~~~~~~~~

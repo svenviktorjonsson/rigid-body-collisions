@@ -1,4 +1,5 @@
 // Isolated CMINPACK numerical search; original physical system/gate unchanged.
+#include <BulletDynamics/MLCPSolvers/btDantzigSolver.h>
 #include "coulomb.h"
 #include <cminpack-1/cminpack.h>
 #include <nlohmann/json.hpp>
@@ -13,6 +14,7 @@ struct Context{
 int evaluate(void*opaque,int m,int n,const double*x,double*F,int){
  auto&c=*static_cast<Context*>(opaque);if(c.calls>=c.limit)return -2;c.calls++;std::vector<double>w(n);for(int i=0;i<n;i++){w[i]=-c.b[i];for(int j=0;j<n;j++)w[i]+=c.A(i,j)*x[j];}
  double residual=0;for(auto t:c.contacts){F[t.k]=(x[t.k]-std::max(0.,x[t.k]-w[t.k]/c.A(t.k,t.k)))*c.A(t.k,t.k);double zt=x[t.t]-w[t.t]/t.eig,zs=x[t.s]-w[t.s]/t.eig,cap=t.mu*std::max(0.,x[t.k]),length=std::hypot(zt,zs),factor=length>cap?cap/length:1.;F[t.t]=(x[t.t]-factor*zt)*t.eig;F[t.s]=(x[t.s]-factor*zs)*t.eig;residual=std::max(residual,std::max(std::abs(F[t.k]),std::hypot(F[t.t],F[t.s])));}
+ for(int i=0;i<n;i++)if(!std::isfinite(x[i])||!std::isfinite(F[i]))return -3;
  if(residual<c.best_score){c.best_score=residual;c.best.assign(x,x+n);}
  if(residual<=c.tolerance){btVectorXu q(n);for(int i=0;i<n;i++)q[i]=x[i];CoulombStats stats;try{if(coulombIterate(c.A,c.b,q,c.lo,c.hi,c.dep,0,c.tolerance,stats)){c.solution.resize(n);for(int i=0;i<n;i++)c.solution[i]=q[i];return -1;}}catch(const std::exception&){}}
  return 0;

@@ -1,10 +1,10 @@
 {
   "scope": "Isolated CMINPACK1.3.11 lmdif forward-difference numerical original-projection search on saved exact components and prior null seeds. At most2048 actual function calls/component/seed; original production zero-budget gate must accept. Fixed A/b/material and original tolerance, no physical regularization. Retain all declines; not a production/world/performance claim.",
   "source": "66d0f2a",
-  "source_sha256": "c834f21497ceb468f000b0dc19ca94648369d141b156bf0ff730e71f7ce9a9c3",
+  "source_sha256": "d0167c0615b77867a112a73583500b4dfee4cfd4a049d3fc3706c9d583791816",
   "package": "1.3.11-1",
   "seed_archive": "research/large-contact-recovery/results-null-seeds/summary.json",
   "seed_archive_sha256": "979b4882b45331ae27d994901b1f0e77e1b8d11f45ed3adade10280ac46477fe",
-  "binary": "/home/viktor/.cache/physics-native-minpack-20261006/replay",
+  "binary": "/home/viktor/.cache/physics-native-minpack-v2-20261006/replay",
   "execution": "Single-thread isolated pilots concurrent with untimed world correctness diagnostics; cost descriptive."
 }
