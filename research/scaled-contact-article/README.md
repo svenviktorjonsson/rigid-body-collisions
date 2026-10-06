@@ -1,3 +1,17 @@
+# Symbolic article rewrite — 6 October 2026
+
+Read `article.pdf`; edit `article.tex`. This reading version has been rewritten throughout using a baseline wedge: `r wedge` is the cross-product matrix, `wedge r` its transpose. Impulses use lowercase delta and lowercase indices. Combined V, P, F and mass M retain the dual fixed-length scaling. The directional labels are delta p_n, delta p_t, delta L_s and delta L_n; t follows relative contact velocity and s follows relative angular velocity. No independent linear spin component or arbitrary tangent basis is introduced.
+
+The article includes full force-plus-angular-impulse mechanics, explicit two-body mobility, permitted-component projection, energy/work, symbolic 2D and 3D examples, and coupled matrix-free calculations. The remaining exact constitutive closure is explicitly symbolic; this rewrite does not invent its missing rules or claim corrected native predictions.
+
+At the user's request, all numerical outputs, material values, comparison tables and plots are omitted pending recalculation. Prior artifacts and scripts below remain historical evidence for their originally specified models; their presence is not validation of this directional model.
+
+Build with `bash research/scaled-contact-article/build.sh`.
+
+---
+
+The following documentation describes historical artifacts and preceding article versions. It is superseded for the active PDF by the scope above.
+
 # Length-scaled rigid-body contact article
 
 Read **article.pdf**; edit **article.tex**. The notation is `(v, ell*omega)` and `(p, L/ell)`, with uppercase L the angular momentum and lowercase script ell a fixed coordinate length. Equations and matrix algorithms use symbols; numerical material/contact inputs are tabulated separately from measured prediction results.

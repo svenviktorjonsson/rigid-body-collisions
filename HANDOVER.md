@@ -1,3 +1,7 @@
+# Full symbolic article rewrite — October 6, 2026
+
+User requested full rewrite using baseline wedge, lowercase delta/indices and combined uppercase quantities; explicitly requested skipping numerical results pending redo. Active article.tex/pdf completely rewritten: r wedge denotes the cross-product matrix, wedge r its transpose; no surrounding parentheses in matrix chains. Directions t and s follow relative contact velocity and relative angular velocity. Components delta p_n, delta p_t, delta L_s, delta L_n. Upper/lowercase artifacts in user dictation are incidental. Full force+angular impulse, body-versus-contact angular impulse, 2D/3D symbolic examples, explicit mobility, constrained component map, energy and matrix-free shared-contact evaluation included. Material tables remain symbolic. All prior numbers and figures removed from active PDF; artifacts preserved. Exact directional constitutive closure still requires recovery: no native implementation or new empirical validation claimed. Active README distinguishes this scope from archived documentation.
+
 # Wedge notation correction — October 6, 2026
 
 User explicitly requests wedge on cross-product matrices, no redundant parentheses in associative matrix products, and lowercase delta for impulses. Active article uses r_subscript-wedge j and analogous matrix products, preserving factor order. This notation correction does not resolve the directional constitutive model mismatch documented below.
