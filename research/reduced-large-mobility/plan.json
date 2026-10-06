@@ -1,0 +1,6 @@
+{
+  "inputs": {
+    "research/large-mobility-world/results/hull125_h5us/rejection.json": "1c7b486702b882947cec3a2a8c86488ffccbaed8d343a7cea4441186a2729821"
+  },
+  "rule": "Prospective search-only reduced contact support within full4096-row exact components. Start from meaningful positive pressure/closing normals; freeze other complete triples to zero only as candidate, grow on violated inactive original normals for at most8 passes. At most192 nonlinear rows and17x2048 iteration/SVD stages PER pass. Final full ORIGINAL original-law gate and independent acceptance mandatory before any candidate/body application; all failed candidates retained. No world/performance proof."
+}
