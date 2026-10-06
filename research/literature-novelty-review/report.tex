@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,array,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\title{Literature and publication assessment\\Length-scaled rigid-body contact notation}
+\author{Physics-engine project review}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+
+\section{Assessment}
+The length-scaling operation is not unique. A direct planar velocity/force precedent exists in 2011; a related spatial deformation/force precedent exists in 2014. The exact symbol arrangement $(\mathbf v,\ell\boldsymbol\omega)$ and $(\mathbf p,\mathbf L/\ell)$ was not located as a pair in this search. That absence is not evidence of priority: the momentum expression follows from established dual scaling. Translation-first ordering and additive contact matrices provide a clear presentation, but do not establish new mechanics.
+
+The current article can be circulated as an explanatory technical note or tutorial with reproducible calculations and proper attribution. A research-paper contribution has not yet been established. Potential research directions are identified below; they are recommendations, not completed results or guarantees of acceptance.
+
+\section{Closest notation precedents}
+Vose, Umbanhowar and Lynch's RSS 2011 paper defines, in its appendix footnote 1 on PDF page 7, a planar twist whose angular-velocity component is multiplied by the radius of gyration $\rho$, and a wrench whose torque component is divided by $\rho$\cite{vose}. In our component names this reads
+\begin{equation}
+\boldsymbol\xi=\begin{bmatrix}v_x\\v_y\\\rho\omega\end{bmatrix},\qquad
+\mathbf w=\begin{bmatrix}f_x\\f_y\\\tau/\rho\end{bmatrix}.
+\end{equation}
+It uses the same planar scaling operation as our notation, with a particular geometric/inertial choice of length. Its force vector is not literally our momentum vector.
+
+Zhang, Su and Liao (2014), section 3.3, equation 21 of the author manuscript, multiply rotational deformation by a characteristic length and divide applied moment by that length\cite{zhang}. Their motion vector is rotation first and concerns small deformation. This is substantial prior art for the dual length scaling, rather than a claim that their entire collision formulation is ours.
+
+For fixed $\ell$, integrating the scaled wrench through an impulse gives
+\begin{equation}
+\int\begin{bmatrix}\mathbf f\\\boldsymbol\tau/\ell\end{bmatrix}\,dt
+=\begin{bmatrix}\Delta\mathbf p\\\Delta\mathbf L/\ell\end{bmatrix}.
+\end{equation}
+Thus the momentum pairing is a direct dual counterpart. Featherstone's spatial-vector documentation already treats motion vectors separately from their dual force, impulse and momentum vectors\cite{featherstone}. This inference does not depend on finding the exact letters $\ell$ and $\mathbf L$ in an earlier paper.
+
+\clearpage
+\section{Which parts are established?}
+\begin{center}\small
+\begin{tabular}{p{45mm}p{102mm}}
+\hline
+Our feature & Literature finding and implication\\
+\hline
+Length-scaled velocity and dual momentum & Direct velocity/wrench scaling in Vose et al.; related spatial scaling in Zhang et al.; momentum follows by duality. Scaling itself is not a new research result.\\[3pt]
+Plus-sign contact map & $\boldsymbol\omega\times\mathbf r=(-\mathbf r)\times\boldsymbol\omega$ is cross-product antisymmetry. $\mathbf C=[\mathbf1\ {-\,[\mathbf r]_\times/\ell}]$ is a scaled contact Jacobian. Moving the sign into a named block does not change the algebra.\\[3pt]
+Normal and tangential restitution plus friction & Already present in earlier impact models. Chatterjee and Ruina (1998) explicitly propose a 3D point-impact law with two restitution parameters and admissible frictional impulses\cite{chatterjee}. Their impulse-selection law is not asserted to be identical to ours.\\[3pt]
+Coupled contact effective mass & $\mathbf W=\mathbf J\mathbf M^{-1}\mathbf J^T$ is the established Delassus operator. Acary and Collins-Craft discuss this and normal/tangential restitution in their 2025 paper, section 2.5\cite{acary}.\\[3pt]
+Matrix-free contact evaluation & The SIGGRAPH 2022 course explicitly teaches coupled matrix-free evaluation using contact Jacobians and body inverse masses\cite{siggraph}. Our scatter/solve/gather organization is not sufficient evidence of a new algorithm.\\[3pt]
+Physical energy acceptance & Dissipation problems with restitution and coupled contacts have prior analysis\cite{acary}. Checking actual kinetic change is useful implementation practice; the check alone is not a new constitutive law or general existence theorem.\\[3pt]
+Experimental comparison and parameter interpretation & Fazeli et al. (2017) compare six planar impact models and examine fitted-parameter interpretation\cite{fazeli}. A comparison study needs a distinct question and evidence beyond repeating that general task.\\
+\hline
+\end{tabular}\end{center}
+
+The combined 2D/3D derivation, notation choices, implementation and comparison figures are our authored work. Original authorship of an implementation or explanation is distinct from scientific novelty. The two-coordinate deviation map is useful communication, but does not retain the full signed motion state and is not established here as a novel error metric.
+
+\section{What has not been proved by this review?}
+This is a targeted public-literature review, not an exhaustive bibliography or priority certification. A search hit is not proof of identical models: coefficient definitions, contact regimes, friction laws, energy assumptions and simultaneous-impact rules must be compared separately. Nor does this review prove that every production-solver detail has appeared before. It establishes strong prior art for the article's principal mathematical ingredients; algorithm-level novelty remains unverified.
+
+\clearpage
+\section{What could support a research paper?}
+\textbf{The strongest direction for the user's stated aim is independent prediction from documented material-pair inputs.} Pose a falsifiable question: with restitution and friction fixed from separate characterization, how accurately can the same model predict outgoing translation and spin over different initial states, sizes and non-spherical contact geometries?
+
+Before claiming that contribution, establish all of the following:
+\begin{enumerate}
+\item Parameter characterization and validation impacts are independent. No coefficients are optimized against validation outcomes, and no unknown coefficients are silently supplied.
+\item Shape, mass, full inertia, contact geometry, signed incoming/outgoing motion and measurement uncertainty are available at the level required by the model. Missing information restricts the claim.
+\item Compare appropriate established impact laws on the same impacts, with parameter definitions and calibration rules declared. Publish component errors, spin/velocity direction errors where measured, energy balance and worst cases, not only the compact plot.
+\item Preserve failure cases, uncertainty and validity ranges. Determine whether disagreement is due to missing geometry, measurement uncertainty, coefficient transfer, solver error or inadequacy of the contact law.
+\end{enumerate}
+Such a study could contribute a reproducible benchmark, a demonstrated transfer result, or a quantitative limit on what public material data can predict. No particular positive outcome is assumed.
+
+An alternative is a specific solver or constitutive-law contribution: for example, a well-defined simultaneous-contact method with a new justified admissibility/selection rule, appropriate existence or convergence analysis, and successful comparisons. Rejection of energy-producing candidates is not the same as constructing a solution for all admissible inputs. Total-system dissipation also does not by itself establish local thermodynamic admissibility. Numerical benchmarks must establish accuracy and robustness; the user has removed the requested $2\times$ performance gate.
+
+\section{Current readiness}
+\begin{center}\small
+\begin{tabular}{p{43mm}p{104mm}}
+\hline
+Existing evidence & What it supports now\\
+\hline
+24 Cornell glass impacts & Fixed published-input reproduction; normal RMSE $0.03667\,{\rm m/s}$, COM tangential RMSE $0.01780\,{\rm m/s}$. Characterization and worksheet may overlap; spin is reconstructed. Not a blind full-state validation.\\[3pt]
+81 material-profile controls & Native analytic/energy integration checks. Synthetic controls do not establish material transfer to measured reality.\\[3pt]
+Worked 3D cuboid & Reproducible coupled matrix calculation and coordinate-invariance checks. Illustrative prescribed inputs, not measured impact validation.\\[3pt]
+Rubber and rocks & Conditional ball comparisons and historical approximate-shape rock fits. Complete independently documented same-pair inputs and full rock geometry/state remain missing.\\[3pt]
+Larger coupled scenes & The global working/trajectory-accuracy baseline remains unqualified. No general robustness or speed advantage is claimed.\\
+\hline
+\end{tabular}\end{center}
+\textbf{Recommendation:} publish the derivation as an attributed explanatory resource if desired; develop the research submission around one independently specified, held-out material/shape comparison first. The current evidence does not justify a claim of a new general collision theory or universally authentic material lookup.
+
+\clearpage
+\section{Search and source record}
+Queries covered scaled twists/wrenches, characteristic length, angular momentum and homogeneous inertia, normal/tangential restitution, coupled impact energy, matrix-free Delassus solvers and empirical impact-model comparisons. References were examined through publisher pages, proceedings, institutional author material and author-uploaded manuscripts. Source PDF hashes and exact locations are retained in the accompanying \texttt{review.json}; copyrighted source PDFs are kept outside the repository. New search findings have also been incorporated into the derivation article's prior-art discussion.
+
+\begin{thebibliography}{9}
+\bibitem{vose} T. H. Vose, P. Umbanhowar and K. M. Lynch. \emph{Sliding Manipulation of Rigid Bodies on a Controlled 6-DoF Plate}. Robotics: Science and Systems VII, 2011. Appendix footnote 1, PDF p7. \url{https://www.roboticsproceedings.org/rss07/p43.pdf}. DOI: \url{https://doi.org/10.15607/RSS.2011.VII.043}.
+\bibitem{zhang} Y. Zhang, H.-J. Su and Q. Liao. \emph{Mobility criteria of compliant mechanisms based on decomposition of compliance matrices}. Mechanism and Machine Theory 79 (2014), 80--93. Author manuscript section 3.3, equation 21. \url{https://doi.org/10.1016/j.mechmachtheory.2014.04.010}.
+\bibitem{featherstone} R. Featherstone. \emph{General Comments on Coordinate Transforms}. Spatial Vector and Rigid-Body Dynamics documentation. \url{https://royfeatherstone.org/spatial/v2/xforms.html}.
+\bibitem{chatterjee} A. Chatterjee and A. Ruina. \emph{A New Algebraic Rigid-Body Collision Law Based on Impulse Space Considerations}. Journal of Applied Mechanics 65 (1998), 939--951. \url{https://doi.org/10.1115/1.2791938}.
+\bibitem{acary} V. Acary and N. A. Collins-Craft. \emph{On the Moreau--Jean scheme with the Fr\'emond impact law: energy conservation and dissipation properties for elastodynamics with contact, impact and friction}. JTCAM, 2025. Section 2.5, equations 44--46. \url{https://jtcam.episciences.org/15960/pdf}. DOI: \url{https://doi.org/10.46298/jtcam.13480}.
+\bibitem{siggraph} \emph{Contact and Friction Simulation for Computer Graphics}. SIGGRAPH 2022 course notes. Figure 43 and matrix-free contact tutorial, PDF pp163--164. \url{https://siggraphcontact.github.io/assets/files/SIGGRAPH22_friction_contact_notes.pdf}.
+\bibitem{fazeli} N. Fazeli, S. Zapolsky, E. Drumwright and A. Rodriguez. \emph{Fundamental Limitations in Performance and Interpretability of Common Planar Rigid-Body Contact Models}. 2017, arXiv:1710.04979. \url{https://arxiv.org/abs/1710.04979}.
+\end{thebibliography}
+\end{document}

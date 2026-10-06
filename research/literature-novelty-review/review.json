@@ -1,7 +1,24 @@
 {
   "checked_on": "2026-10-06",
-  "question": "Are the length-scaled motion/momentum notation and additive contact matrices new?",
-  "assessment": "Length scaling itself is not unique: explicit planar velocity/torque dual scaling is in RSS2011. The exact momentum symbol arrangement was not located, but follows directly from established dual scaling. No research contribution or priority established solely by notation.",
+  "scope": "Targeted public primary-literature review; not exhaustive priority certification.",
+  "notation_verdict": "Length scaling itself is not unique: explicit planar velocity/torque dual scaling is in RSS2011. The exact momentum symbol arrangement was not located, but follows directly from established dual scaling. No research contribution or priority established solely by notation.",
+  "publication_assessment": {
+    "tutorial": "An attributed explanatory technical note is a reasonable present publication form; no acceptance guarantee.",
+    "research": "No distinct completed new theoretical, numerical or independent experimental result has been established by this review.",
+    "recommended_direction": "Predict held-out translation and spin from separately documented material-pair inputs, measured geometry/inertia/state and uncertainty; compare established laws without validation-set coefficient fitting.",
+    "algorithm_alternative": "A specific new simultaneous-contact selection/solver law requires separate novelty analysis, feasibility/existence or convergence argument as appropriate, and accuracy/robustness evidence."
+  },
+  "representative_queries": [
+    "scaled twist scaled wrench characteristic length",
+    "angular momentum characteristic length velocity",
+    "dimensionally homogeneous spatial inertia",
+    "normal and tangential restitution Delassus energy",
+    "matrix-free Delassus contact solver",
+    "simultaneous impacts tangential restitution friction",
+    "A New Algebraic Rigid-Body Collision Law Based on Impulse Space Considerations",
+    "Empirical Evaluation of Common Contact Models for Planar Impact",
+    "Sliding Manipulation of Rigid Bodies on a Controlled 6-DoF Plate"
+  ],
   "sources": [
     {
       "url": "https://royfeatherstone.org/spatial/v2/xforms.html",
@@ -97,17 +114,12 @@
       "sha256": "72857723106b9048841a9595f2d52bdf3d9d184fca873763939dc0c19784996a"
     }
   ],
-  "choices_in_this_article": [
-    "Translation-first ordering",
-    "V=(v,ell*omega), P=(p,L/ell)",
-    "Signed lever R=[-r/ell]_cross yielding additive contact velocity",
-    "Consistent 2D/3D dual impulse, mass, restitution, friction capacity and matrix-free coupling"
-  ],
-  "mathematical_status": "D=diag(I,ell*I) is invertible; momentum uses D^-T, mass uses D^-T M0 D^-1 and contact map uses C0 D^-1; physical Delassus response unchanged.",
   "limitations": [
-    "Limited primary-source review, not an exhaustive priority search.",
-    "No evidence established that the exact symbol arrangement is first in the literature.",
-    "Notation scaling does not introduce or validate a new constitutive contact law."
-  ],
-  "closest_precedent": "vose2011 appendix footnote1, PDF page7"
+    "Exact (p,L/ell) symbol pair not located; search absence cannot establish uniqueness.",
+    "Different coefficient conventions and constitutive laws must not be equated solely because they use en,et,mu.",
+    "All production-solver algorithms have not been audited for literature priority.",
+    "Existing24glass comparison is reproduction rather than independent held-out validation; spin reconstructed.",
+    "Global larger-scene accuracy baseline remains unqualified.",
+    "No publication or external submission performed."
+  ]
 }
