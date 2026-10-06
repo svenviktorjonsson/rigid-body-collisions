@@ -1,0 +1,24 @@
+{
+  "source": "7dc6e3eb81d29af9c49856b623be8ced2bc636e8",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-global-contact/run.py": "fe075376feeb10d2a936a3198d7588a593f336a2c3aeb383071018c22367beb2",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-global-contact/plan.json": "24df11a279e768f7ad89bcdf4333ccb088a46167c22dd18ec138d8f92308015f",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-global-contact/build-receipt.json": "816be07c28a8163e7ff54d637b7eda35d3bc4aa5e30ce45fdd6f36e1b4b9c600",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-global-contact/controls-v2/summary.json": "d39b4c29cf54b94a43521c0eeb38e07d8aa9cf3f7972ab5522a9c54fdd0b739d",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_global_v2/rigid_runner": "2404dee69169297366c765692a9a9a092d75737b2abbca5597b52e8fb376b455",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_global_v2/precision-source.json": "6188d9b46cd78b05b5efd6edf178b020c82435577072c635de8947b348d4637a",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4"
+  },
+  "runtime": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "67faab0feef3cc4b20d98daffda4de59f6816ab565b044da096487f4075fccdf",
+    "/usr/lib/x86_64-linux-gnu/libmvec.so.1": "2f2e7f4ad88e1b13f2f8345c826b25f85ba61c93527d91e59dd0d2943eac6e80",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  }
+}

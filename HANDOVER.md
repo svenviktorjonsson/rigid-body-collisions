@@ -24,7 +24,7 @@ sixteen-seed and stricter six-seed variants also decline393;162/297 controls
 pass. Downloaded immutable diagnostic artifact37398436313 retained under
 research/ci-contact-portability/hosted-37398436313 (generated binaries excluded).
 Do not remove required gate or claim portability. Full-island planar prototype
-8 analytical controls pass; original rotating group ladder running, initialdisk
+8 analytical controls pass; original rotating group ladder COMPLETE:9 full physical passes,7 failed refinement edges; initialdisk
 level declines actual-body residual1.0000048e-10 above1e-10. Retain all real
 failures. Global13-case working baseline and requested per-case2x remain OPEN.
 
@@ -234,3 +234,12 @@ a08899dcfb43f755b731c98e2bdfac4742433ddb. The local original is preserved on
 archive/local-handover-4aa139e. Frozen research sources170/9e/bca are unaffected.
 Use the GitHub connector if the old shell publisher still returns401; do not ask
 for approval to repeat the already-authorized nonforced publication.
+
+## Numerical continuation controls — October6
+
+Isolated frictionless-to-original friction homotopy tests393/latest396/276/423.
+Initial numerical negatives near roundoff fail exact normal bounds; retained
+first outputs. Fresh cone-cleaned candidates are rechecked with unchanged
+original equations, bounds, passivity and zero-budget native gate. All four
+full systems still decline. Never apply intermediate altered-friction roots
+to bodies. Evidence:research/friction-continuation/results and results-v2.
