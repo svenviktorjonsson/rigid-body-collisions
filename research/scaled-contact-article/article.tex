@@ -2,12 +2,12 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{amsmath,amssymb,array,graphicx,hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue,pdftitle={Rigid-body contact in combined velocity and momentum notation},pdfauthor={Viktor: notation and model}}
-\newcommand{\rw}[1]{#1\mathbin{\wedge}}
-\newcommand{\lwedge}[1]{\mathbin{\wedge}#1}
+\newcommand{\rw}[1]{\mathord{#1\mkern2mu\wedge}}
+\newcommand{\lwedge}[1]{\mathord{\wedge\mkern2mu#1}}
 \newcommand{\id}{\mathbf1}
 \newcommand{\inertia}{\mathbb I}
 \title{Rigid-body contact in combined velocity and momentum notation\\\large Symbolic mechanics, directional impulses and coupled matrix calculations}
-\author{Viktor's notation: $\mathbf r\wedge$, $\ell\boldsymbol\omega$ and $\mathbf L/\ell$}
+\author{Viktor's notation: $\rw{\mathbf r}$, $\ell\boldsymbol\omega$ and $\mathbf L/\ell$}
 \date{6 October 2026}
 \begin{document}
 \maketitle
@@ -37,7 +37,7 @@ The wedge sits on the same baseline as the vector. The reversed notation denotes
 \begin{equation}
 \lwedge{\mathbf r}=\rw{\mathbf r}^{\mathsf T}.
 \end{equation}
-Here the superscript $\mathsf T$ applies to the matrix represented by $\mathbf r\wedge$. Moving the wedge from right to left denotes the transpose in both dimensions. No minus-sign replacement or operand-reversal rule is used.
+Here the superscript $\mathsf T$ applies to the matrix represented by $\rw{\mathbf r}$. Moving the wedge from right to left denotes the transpose in both dimensions. No minus-sign replacement or operand-reversal rule is used.
 
 Matrix associativity permits chains without redundant parentheses, for example
 \begin{equation}

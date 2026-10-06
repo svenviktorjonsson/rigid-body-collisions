@@ -1,3 +1,7 @@
+# Symmetric wedge spacing — October 6, 2026
+
+User requests equal vector/wedge spacing on either side. Active article macros now group each entire matrix symbol as one math atom and use the same fixed 2mu internal gap in r-wedge and wedge-r. This prevents TeX binary-operator spacing from making the two symbols asymmetric. Transpose-only semantics and double-struck inertia I remain unchanged.
+
 # Dimension-independent transpose and inertia notation — October 6, 2026
 
 Latest user explicitly removes the wedge-reversal minus-sign rule: use only transpose, wedge r = transpose of r wedge, for both 2D and 3D. Active article removes both negative-matrix and swapped-operand identities. Cross-product matrix entries retain their necessary signs; body/contact orientation still has physical signs. Inertia uses double-struck I (LaTeX mathbb I), not E or ordinary bold I, throughout tensor and scalar planar/sphere expressions. Numeric results remain omitted.
