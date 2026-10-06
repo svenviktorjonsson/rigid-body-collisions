@@ -1,0 +1,13 @@
+{
+  "source": "4147a42ef7533c0ceb02b2087279ae69a42d37e4",
+  "case": "3d_hull_64",
+  "scene_sha256": "1d75ccc28fabbbc69554916bac2a51963896b7115b5aa7bc59c82b227d13a891",
+  "settings": [
+    {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Fresh unchanged authored scene/horizon/material/gravity/motion and original full physical/accuracy gates. Numerical component192 fallback only. Retain every failure and prefix. Hull completion retry; sphere first level replays historical finest anchor, then two finer levels; both newest adjacent quarter-budget edges required. All costs descriptive because concurrent isolated research allowed. No2x claim."
+}
