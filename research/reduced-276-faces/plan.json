@@ -1,0 +1,60 @@
+{
+  "source": "3a2e7d6d18792943788a3340cdb466b756c7f62e",
+  "inputs": {
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734"
+  },
+  "component_rows": [
+    0,
+    91,
+    92,
+    93,
+    274,
+    275,
+    8,
+    9,
+    10,
+    11,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    71,
+    72,
+    73,
+    74,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241
+  ],
+  "active_normal_rows": [
+    0,
+    8,
+    9,
+    11,
+    72,
+    91
+  ],
+  "limits": {
+    "angle_offsets": [
+      0.0,
+      3.141592653589793,
+      1.5707963267948966,
+      -1.5707963267948966
+    ],
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "raw_evaluations_per_start_method": 4096
+  },
+  "scope": "Isolated original276-row rejection failing30-row component. Enumerate all64 sticking/sliding assignments on its six warm active normals, four angle offsets, two finite-difference methods; at most505 bounded searches. Exact original normals/sticking equations eliminated numerically with cutoff1e-13, then original full independent law and native eager-cone zero-budget gate required. Linear equation residuals retained; least-squares status never proof. Inactive support fixed only as explicit exploratory restriction; declines do not prove no root. No body apply/world/performance acceptance."
+}
