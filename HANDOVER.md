@@ -444,3 +444,28 @@ Retain initial KeyError reporting failure and all outcomes. Concrete gap require
 rubber tangential elasticity/dissipation and nonzero restitution+isotropicfriction;
 current Coulomb lane still e0 only. No completeexperimentalvalidation/all13baseline
 or2x claim. All prior authored cases/gates unchanged, continuous branchpushes.
+
+## User's two-channel restitution restored — October6
+
+User clarified BOTH normal/tangential restitution are CENTRAL to model. Prior
+zero-tangent Coulomb adequacy comparison was a scope mistake; do not present it
+as failure of user's complete model. Native3D Coulomb opt-in explicit normal/
+tangential endpoint targets now implemented,sharedcontact/fullgraph/freegyro,
+circularimpulsecap plus separate REALkinetic-minus-wallworkgate before application.
+Both run APIs accept normal_restitution/tangential_restitution; isolated2D
+simultaneous whole-island build auto-selected for explicitcoeffs. Unsupportedold
+binary acknowledgement rejects instead of silently ignoring inputs. Defaults
+retainlegacyphysics/outputselection; old24controls Float64bytesEXACT.
+144 native controlsPASS (bothcoeffs,3radii,3spins,2caps),3offcentre orientedbox
+controlsPASS fullinertia impulse/energy/contacttargets. Optional3Dpercontact
+point/basis/velocity/impulse diagnostics ready for non-spherical data. Coefficients
+currently uniform,NO fittedcontactpoint/directionmap. FournewregressionsPASS;
+11manualnativechecksPASS. CTest has NO registered tests,not counted as nativePASS.
+163 priorengine testsPASS; final167engine tests ALLPASS after restoration.
+Measured58mm rubber with BOTH.78/.49 predicts spinfactor15.5099central25deg;
+14.927–16.088 over24–26deg overlaps observed14.9±.1. Normal/tangentinputvalues
+fromsameimpact,μ.9 hypothesis,homogeneousinertia/fixedplane approximation; not
+independentmaterialprediction. All historiesandcomparisonsretained. Rockparser
+imports2219before/after scalarrotation impacts74tests,massjoined2219; signed3D
+omega/contactframes and independentcoeffs absent,NO fake rockvalidationclaim.
+All13accuracybaseline andrequested2x gates remain OPEN. Continuous ordinarypushes.

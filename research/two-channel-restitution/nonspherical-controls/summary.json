@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "angles_deg": [
+        13,
+        20,
+        0
+      ],
+      "contact_count": 1,
+      "contact_restitution_error": 4.033499090283499e-10,
+      "linear_impulse_error": 0.0,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.24291722888036976,
+      "passed": true
+    },
+    {
+      "angles_deg": [
+        -17,
+        9,
+        31
+      ],
+      "contact_count": 1,
+      "contact_restitution_error": 3.6529634872550787e-10,
+      "linear_impulse_error": 0.0,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.28470716233944815,
+      "passed": true
+    },
+    {
+      "angles_deg": [
+        7,
+        -23,
+        -11
+      ],
+      "contact_count": 1,
+      "contact_restitution_error": 3.631844824880659e-10,
+      "linear_impulse_error": 0.0,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.12917432406580176,
+      "passed": true
+    }
+  ],
+  "scope": "Off-centre rotated-box endpoint restitution and full-inertia wrench checks; not measured shape-dependent material validation."
+}

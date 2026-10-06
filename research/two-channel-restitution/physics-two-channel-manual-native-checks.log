@@ -1,0 +1,14 @@
+Normal QP analytic checks PASS
+Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks + energy overflow rejection)
+Shared contact checks PASS (full inertia, rotated/swapped rows, normal/tangent targets, split RHS, warm start, gyro, P/L/energy, endpoint selection, unsupported flags)
+Translation split checks PASS (Gram, isolated pushes, redundant and infeasible constraints)
+PASS pressure release/redundancy/infeasibility/failed-output; full450-row inactive-contact expansion
+9 normal-null controls passed (including translation recovery enable/disable)
+PASS: rank-deficient and weak-direction TRF; invalid shape/radius/nonfinite; analytical contact; budget/dependency/output preservation
+PASS exact component triples, independent support66, untouched tiny couplings, no-work cap rejection, invalid dependency/nonfinite and failure-output preservation
+PASS actual upstream parity: warm normal/two tangents/fixed and rotating kinematic slots/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged
+PASS full angular physical normal rate; fake push/turn excluded
+PASS finite/dimension/index/alias rejection and output preservation; normal-order target bookkeeping
+PASS all 15 distance/rate branches, signed remaining clearance and opposing-face zero-push control
+Optional scheduling local checks passed; captured/trajectory checks remain separate.
+{"controls":[{"accepted":true,"name":"diagonal-stick","passed":true,"svd_calls":2,"unchanged_on_decline":true},{"accepted":true,"name":"separating","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"zero-budget","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"negative-budget","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"cap-66","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"negative-friction","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"nan-matrix","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"invalid-dependency","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"inconsistent-PSD-normal-targets","passed":true,"svd_calls":64,"unchanged_on_decline":true}],"passed":true}

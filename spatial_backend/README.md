@@ -238,3 +238,16 @@ mobility, add compliance or waive any contact/energy condition. Weak numerical
 modes can require huge increments for tiny residuals and stall line search. The
 48-row shared-hull fixture now passes the exact gate; all retries still share
 256 SVD calls. Counters and numerical metadata disclose the alternate rank retry.
+
+## Two-channel endpoint restitution
+
+The circular shared-point solver now accepts explicit `normal_restitution` and
+`tangential_restitution` together through `spatial_engine.run`. This opt-in
+impact law supersedes the zero-restitution restriction for configured impacts;
+the unconfigured lane retains its original checks. Explicit values override
+body normal-restitution mixing. Positive tangent restitution requests slip
+reversal subject to circular impulse capacity. Full simultaneous coupling and
+an additional actual kinetic-energy/boundary-work gate remain mandatory.
+Optional `record_contact_impacts=True` records contact geometry, basis, before/
+after relative motion and actual impulses. See the
+[two-channel evidence](../research/two-channel-restitution/README.md).

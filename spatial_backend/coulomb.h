@@ -477,6 +477,9 @@ inline bool coulombSolve(const btMatrixXu& A,const btVectorXu& b,btVectorXu& x,
 
 #include "shared_contact.h"
 
+struct RestitutionContactRecord {
+ int body_a,body_b;btVector3 point,normal,tangent1,tangent2,impulse_world,velocity_before,velocity_after;
+};
 class CoulombMLCP : public RecordedMLCP {
 protected:
  btScalar solveGroupCacheFriendlyIterations(btCollisionObject** bodies,int count,
@@ -517,6 +520,30 @@ protected:
    double corrected=consistentTangentRHS(m_b[i],c,m_tmpSolverBodyPool[c.m_solverBodyIdA],m_tmpSolverBodyPool[c.m_solverBodyIdB]);
    gyro_correction_max=std::max(gyro_correction_max,std::abs(corrected-m_b[i]));m_b[i]=corrected;
   }
+  btVectorXu physical_free;std::vector<bool> restitution_impact;
+  if(restitution_enabled){
+   physical_free.resize(m_b.rows());
+   restitution_impact.assign(m_b.rows(),false);
+   for(int i=0;i<m_b.rows();i++){
+    const auto& row=*m_allConstraintPtrArray[i];
+    const auto& a=m_tmpSolverBodyPool[row.m_solverBodyIdA];
+    const auto& b=m_tmpSolverBodyPool[row.m_solverBodyIdB];
+    // false includes the free gyroscopic increment for ALL coordinates.
+    physical_free[i]=contactRowFreeVelocity(row,a,b,false);
+    if(m_limitDependencies[i]<0){
+     auto* cp=static_cast<btManifoldPoint*>(row.m_originalContactPoint);
+     restitution_impact[i]=cp&&cp->getDistance()<=contact_slop_m&&physical_free[i]<-tolerance;
+    }
+   }
+   for(int i=0;i<m_b.rows();i++){
+    const int normal=m_limitDependencies[i]<0?i:m_limitDependencies[i];
+    if(restitution_impact[normal]&&(normal_restitution!=0||tangential_restitution!=0)){
+     const double e=m_limitDependencies[i]<0?normal_restitution:tangential_restitution;
+     m_b[i]=-(1+e)*physical_free[i];
+     restitution_rows++;
+    }
+   }
+  }
   // Touching within the declared geometric tolerance is treated as touching,
   // avoiding inconsistent gap/h targets on nearly redundant face points.
   for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]<0){
@@ -528,6 +555,40 @@ protected:
   std::vector<double> rejected;
   if(!coulombSolve(m_A,m_b,m_x,m_lo,m_hi,m_limitDependencies,info.m_numIterations,tolerance,stats,rejection_observer?&rejected:nullptr,recovery_enabled,early_component_recovery))
    {if(rejection_observer)rejection_observer(m_A,m_b,rejected,m_lo,m_hi,m_limitDependencies,"velocity",stats.last_residual,info.m_timeStep);std::ostringstream message;message<<"Coulomb residual gate failed ("<<stats.last_residual<<" m/s): increase iterations or refine timestep; no friction-law fallback";throw std::runtime_error(message.str());}
+  if(restitution_enabled){
+   double change=0,scale=1;
+   for(int i=0;i<m_x.rows();i++){
+    double response=0;for(int j=0;j<m_x.rows();j++)response+=m_A(i,j)*m_x[j];
+    const double term=m_x[i]*(physical_free[i]+.5*response);
+    change+=term;scale+=std::abs(m_x[i]*physical_free[i]);
+   }
+   // Restitution targets are not actual incoming velocities. Gate the REAL
+   // kinetic change minus prescribed-boundary work before body application.
+   if(!std::isfinite(change)||!std::isfinite(scale)||change>tolerance*scale)
+    throw std::runtime_error("Normal/tangential restitution physical energy gate failed");
+   restitution_energy_change_max=std::max(restitution_energy_change_max,change);
+   if(record_contact_impacts){
+    for(int k=0;k<m_b.rows();k++)if(m_limitDependencies[k]<0&&restitution_impact[k]){
+     if(restitution_contacts.size()>=100000)throw std::runtime_error("Restitution contact diagnostic cap exceeded");
+     const auto& normal=*m_allConstraintPtrArray[k];
+     const auto& a=m_tmpSolverBodyPool[normal.m_solverBodyIdA];const auto& b=m_tmpSolverBodyPool[normal.m_solverBodyIdB];
+     auto* cp=static_cast<btManifoldPoint*>(normal.m_originalContactPoint);
+     RestitutionContactRecord record{a.m_originalBody?a.m_originalBody->getUserIndex():-1,b.m_originalBody?b.m_originalBody->getUserIndex():-1,sharedContactPoint(*cp,a,b),normal.m_contactNormal1,btVector3(0,0,0),btVector3(0,0,0),btVector3(0,0,0),btVector3(0,0,0),btVector3(0,0,0)};
+     int coord=0;
+     for(int i=0;i<m_b.rows();i++)if(i==k||m_limitDependencies[i]==k){
+      if(coord>=3)throw std::runtime_error("Unsupported restitution contact dimension");
+      const auto& row=*m_allConstraintPtrArray[i];
+      double response=0;for(int j=0;j<m_b.rows();j++)response+=m_A(i,j)*m_x[j];
+      record.velocity_before[coord]=physical_free[i];record.velocity_after[coord]=physical_free[i]+response;
+      record.impulse_world+=row.m_contactNormal1*m_x[i];
+      if(coord==1)record.tangent1=row.m_contactNormal1;if(coord==2)record.tangent2=row.m_contactNormal1;
+      coord++;
+     }
+     restitution_contacts.push_back(record);
+    }
+   }
+
+  }
   if(info.m_splitImpulse){
    std::vector<int> normals;for(int i=0;i<m_b.rows();i++)if(m_limitDependencies[i]<0)normals.push_back(i);
    int k=static_cast<int>(normals.size());btMatrixXu A(k,k);btVectorXu b(k),upper(k),x(k);
@@ -578,6 +639,8 @@ public:
   const btVectorXu&,double)> position_geometry_observer;
  // Opt-in diagnostic only. Rejection remains an error; never reuse a rejected iterate.
  std::function<void(const btMatrixXu&,const btVectorXu&,const std::vector<double>&,const btVectorXu&,const btVectorXu&,const btAlignedObjectArray<int>&,const char*,double,double)> rejection_observer;
+ bool record_contact_impacts=false;std::vector<RestitutionContactRecord> restitution_contacts;
+ bool restitution_enabled=false;double normal_restitution=0,tangential_restitution=0,restitution_energy_change_max=0;unsigned long long restitution_rows=0;
  bool early_component_recovery=false; // Explicit research opt-in; velocity solve only.
  bool recovery_enabled=true,shared_contact_point=true;
  bool translation_clearance=false,translation_combined=false;

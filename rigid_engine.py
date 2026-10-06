@@ -5,6 +5,8 @@ Run a scene: python rigid_engine.py scene.json --output result.json --preset hig
 """
 import argparse
 import hashlib
+import os
+from restitution import coefficients
 import json
 from pathlib import Path
 import subprocess
@@ -117,7 +119,7 @@ def validate_scene(scene):
 
 
 def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend="block", binary=None,
-        position_iterations=3):
+        position_iterations=3, normal_restitution=None, tangential_restitution=None):
     """Run an entire scene, retaining the same world through adaptive changes.
 
     State columns: COM x,y [m], angle [rad], vx,vy [m/s], omega [rad/s].
@@ -128,6 +130,8 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
     updates in both. The block backend rejects nonzero rolling coefficients.
     """
     validate_scene(scene)
+    endpoint_restitution=coefficients(normal_restitution,tangential_restitution)
+    if endpoint_restitution is not None and backend!='block':raise ValueError('Explicit normal/tangential restitution requires the block backend')
     if backend not in BINARIES:
         raise ValueError("Choose block or temporal backend")
     dt = float(_finite(dt, "dt"))
@@ -202,15 +206,22 @@ def run(scene, *, dt=1 / 120, primary_steps=8, substeps=32, policy=None, backend
     for command in commands: values.extend(command)
     values.extend([int(scene.get('suppress_internal_edges', False)), position_iterations,
                    int(scene.get('analytic_kinematics', False))])
-    executable = Path(binary) if binary is not None else BINARIES[backend]
+    restitution_binary=Path(__file__).parent/'build/rigid_double_restitution_v1/rigid_runner'
+    executable = Path(binary) if binary is not None else (restitution_binary if endpoint_restitution is not None else BINARIES[backend])
     if not executable.is_file():
         raise FileNotFoundError(f"Build the pinned backend first: {executable}")
     start = time.perf_counter()
+    contact_env=os.environ.copy()
+    for key in ('PHYSICS_NORMAL_RESTITUTION','PHYSICS_TANGENTIAL_RESTITUTION'):contact_env.pop(key,None)
+    if endpoint_restitution is not None:
+        contact_env['PHYSICS_NORMAL_RESTITUTION']=str(endpoint_restitution['normal'])
+        contact_env['PHYSICS_TANGENTIAL_RESTITUTION']=str(endpoint_restitution['tangential'])
     process = subprocess.run([str(executable.resolve())], input=" ".join(map(str, values)),
-                             text=True, capture_output=True)
+                             text=True, capture_output=True, env=contact_env)
     if process.returncode:
         raise RuntimeError(f"Rigid backend failed: {process.stderr.strip()}")
     result = json.loads(process.stdout)
+    if endpoint_restitution is not None and "contact_restitution" not in result:raise RuntimeError("Backend does not support explicit normal/tangential restitution")
     if not np.all(np.isfinite(result["states"])):
         raise RuntimeError("Nonfinite engine state")
     physical = {"bodies": scene["bodies"], "gravity": scene.get("gravity", [0, -9.81]),

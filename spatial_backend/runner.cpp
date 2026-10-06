@@ -36,6 +36,14 @@ int main(){try{
  std::string point_policy=in.value("contact_point_policy",coulomb_solver?std::string("shared"):std::string("separate"));
  if((point_policy!="shared"&&point_policy!="separate")||(point_policy=="shared"&&!coulomb_solver))throw std::runtime_error("Invalid contact point policy for solver");
  coulomb_mlcp.shared_contact_point=point_policy=="shared";
+ if(in.contains("contact_restitution")){
+  if(!coulomb_solver||point_policy!="shared")throw std::runtime_error("Normal/tangential restitution requires shared-point Coulomb assembly");
+  const auto& r=in.at("contact_restitution");
+  coulomb_mlcp.normal_restitution=r.at("normal").get<double>();coulomb_mlcp.tangential_restitution=r.at("tangential").get<double>();
+  if(!std::isfinite(coulomb_mlcp.normal_restitution)||coulomb_mlcp.normal_restitution<0||coulomb_mlcp.normal_restitution>1||!std::isfinite(coulomb_mlcp.tangential_restitution)||coulomb_mlcp.tangential_restitution< -1||coulomb_mlcp.tangential_restitution>1)throw std::runtime_error("Invalid normal/tangential restitution coefficients");
+  coulomb_mlcp.restitution_enabled=true;coulomb_mlcp.record_contact_impacts=in.value("record_contact_impacts",false);
+ }
+
  coulomb_mlcp.recovery_enabled=in.value("contact_recovery",true);
  coulomb_mlcp.early_component_recovery=in.value("early_component_recovery",false);
  if(coulomb_mlcp.early_component_recovery&&(!coulomb_solver||!coulomb_mlcp.recovery_enabled||!coulombLapackRecoveryEnabled()))throw std::runtime_error("Early component schedule requires Coulomb and enabled compiled recovery");
@@ -321,6 +329,11 @@ int main(){try{
  out["coulomb_continuation_normal_pivot_guides"]=continuation.normal_pivot_guides;
  out["mobility_rows_max"]=matrix_rows;out["mobility_matrix_bytes_max"]=8ULL*matrix_rows*matrix_rows;
  if(in.contains("container_half"))out["max_container_surface_excess_m"]=surface_excess;
+ if(coulomb_mlcp.record_contact_impacts){
+  out["restitution_contact_impacts"]=json::array();
+  for(const auto& c:coulomb_mlcp.restitution_contacts)out["restitution_contact_impacts"].push_back({{"body_a",c.body_a},{"body_b",c.body_b},{"point_world_m",array(c.point)},{"normal",array(c.normal)},{"tangent1",array(c.tangent1)},{"tangent2",array(c.tangent2)},{"impulse_world_kg_m_s",array(c.impulse_world)},{"contact_velocity_before_normal_tangent_m_s",array(c.velocity_before)},{"contact_velocity_after_normal_tangent_m_s",array(c.velocity_after)}});
+ }
+ if(coulomb_mlcp.restitution_enabled)out["contact_restitution"]={{"normal",coulomb_mlcp.normal_restitution},{"tangential",coulomb_mlcp.tangential_restitution},{"law","approaching-impact endpoint restitution, friction-limited circular tangential impulse"},{"definition","u_after=-e*u_before when friction capacity permits"},{"rows",coulomb_mlcp.restitution_rows},{"physical_energy_change_minus_boundary_work_max_J",coulomb_mlcp.restitution_energy_change_max}};
  for(auto& b:bodies)world.removeRigidBody(b.rb.get());
  out["coulomb_polish_solves"]=coulomb_mlcp.stats.polish_solves;out["coulomb_rank_restarts"]=coulomb_mlcp.stats.rank_restarts;out["coulomb_opposing_restarts"]=coulomb_mlcp.stats.opposing_restarts;out["coulomb_polish_svd_calls"]=coulomb_mlcp.stats.polish_svd_calls;out["coulomb_polish_budget_rejections"]=coulomb_mlcp.stats.polish_budget_rejections;out["coulomb_polish_svd_rejections"]=coulomb_mlcp.stats.polish_svd_rejections;out["coulomb_polish_steps"]=coulomb_mlcp.stats.polish_steps;out["coulomb_gauge_restarts"]=coulomb_mlcp.stats.gauge_restarts;out["coulomb_cold_restarts"]=coulomb_mlcp.stats.cold_restarts;std::cout<<out.dump()<<'\n';
  }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 1;}}

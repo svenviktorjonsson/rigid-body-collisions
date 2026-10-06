@@ -3,6 +3,14 @@
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
+[Normal and tangential restitution](research/two-channel-restitution/README.md)
+are now explicit impact-model inputs in the 3D shared-point contact solver and
+an isolated 2D simultaneous-contact build. Positive tangential restitution
+reverses contact slip when friction capacity permits; actual energy and boundary
+work are checked separately. Synthetic controls pass, and the measured rubber
+comparison is consistent with reported angle uncertainty. Independent material
+calibration and the all-case performance gate remain open.
+
 The [Float64 3D backend](spatial_backend/README.md) supports arbitrary convex
 hulls, boxes, spheres and compounds, full inertia tensors, quaternion rotation
 and prescribed moving walls. Mechanics tests include 100 m/s walls driving
