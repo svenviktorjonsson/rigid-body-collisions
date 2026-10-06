@@ -5,6 +5,7 @@
 \newcommand{\rw}[1]{#1\mathbin{\wedge}}
 \newcommand{\lwedge}[1]{\mathbin{\wedge}#1}
 \newcommand{\id}{\mathbf1}
+\newcommand{\inertia}{\mathbb I}
 \title{Rigid-body contact in combined velocity and momentum notation\\\large Symbolic mechanics, directional impulses and coupled matrix calculations}
 \author{Viktor's notation: $\mathbf r\wedge$, $\ell\boldsymbol\omega$ and $\mathbf L/\ell$}
 \date{6 October 2026}
@@ -34,17 +35,13 @@ In three dimensions define
 \end{equation}
 The wedge sits on the same baseline as the vector. The reversed notation denotes the transpose:
 \begin{equation}
-\lwedge{\mathbf r}=\rw{\mathbf r}^{\mathsf T}
-=-\rw{\mathbf r}.
+\lwedge{\mathbf r}=\rw{\mathbf r}^{\mathsf T}.
 \end{equation}
-Here the superscript $\mathsf T$ applies to the matrix represented by $\mathbf r\wedge$. Reversing cross-product operands gives
-\begin{equation}
-\rw{\mathbf r}\mathbf a=-\rw{\mathbf a}\mathbf r
-=\lwedge{\mathbf a}\mathbf r.
-\end{equation}
+Here the superscript $\mathsf T$ applies to the matrix represented by $\mathbf r\wedge$. Moving the wedge from right to left denotes the transpose in both dimensions. No minus-sign replacement or operand-reversal rule is used.
+
 Matrix associativity permits chains without redundant parentheses, for example
 \begin{equation}
-\lwedge{\mathbf r}\mathbf I^{-1}\rw{\mathbf r}\delta\mathbf p.
+\lwedge{\mathbf r}\inertia^{-1}\rw{\mathbf r}\delta\mathbf p.
 \end{equation}
 The factor order is retained. Transposition reverses a product's factor order; it does not make general matrices commute.
 
@@ -53,14 +50,14 @@ In two dimensions the moment map is a row and its transpose is a column:
 \rw{\mathbf r}=\begin{bmatrix}-r_y&r_x\end{bmatrix},\qquad
 \lwedge{\mathbf r}=\begin{bmatrix}-r_y\\r_x\end{bmatrix}.
 \end{equation}
-Thus $\rw{\mathbf r}\mathbf a=r_xa_y-r_ya_x$. The three-dimensional equality to the negative of the same square matrix does not apply to these differently shaped planar maps.
+Thus $\rw{\mathbf r}\mathbf a=r_xa_y-r_ya_x$. The right-wedge map takes a planar linear vector to a scalar moment, while its left-wedge transpose takes a scalar angular velocity to a planar contact-velocity contribution. The same transpose notation therefore applies to rectangular planar maps and square spatial maps.
 
 \section{Combined body velocity, momentum and force}
-Let $m$ be mass, $\mathbf I$ the world-frame central inertia, $\mathbf v$ the centre-of-mass velocity and $\boldsymbol\omega$ angular velocity. Define
+Let $m$ be mass, $\inertia$ the world-frame central inertia, $\mathbf v$ the centre-of-mass velocity and $\boldsymbol\omega$ angular velocity. Define
 \begin{equation}
 \mathbf V=\begin{bmatrix}\mathbf v\\\ell\boldsymbol\omega\end{bmatrix},\quad
 \mathbf P=\begin{bmatrix}\mathbf p\\\mathbf L/\ell\end{bmatrix},\quad
-\mathbf M=\begin{bmatrix}m\id&0\\0&\mathbf I/\ell^2\end{bmatrix},\quad
+\mathbf M=\begin{bmatrix}m\id&0\\0&\inertia/\ell^2\end{bmatrix},\quad
 \boxed{\mathbf P=\mathbf M\mathbf V}.
 \end{equation}
 The combined force and its impulse are
@@ -74,7 +71,7 @@ where $\boldsymbol\tau$ is the torque about the centre of mass for this body-lev
 =\mathbf v^{\mathsf T}\mathbf f+\boldsymbol\omega^{\mathsf T}\boldsymbol\tau,\qquad
 E_k=\tfrac12\mathbf V^{\mathsf T}\mathbf M\mathbf V.
 \end{equation}
-In planar motion the vectors have three components, the angular quantities are scalars, and $\mathbf M=\operatorname{diag}(m,m,I/\ell^2)$.
+In planar motion the vectors have three components, the angular quantities are scalars, and $\mathbf M=\operatorname{diag}(m,m,\inertia/\ell^2)$.
 
 A change of fixed representation length must leave the physical velocity, impulse and energy unchanged. Changing $\ell$ during motion would require coordinate-derivative terms and is outside this presentation. For simplicity we use one common fixed length throughout the contact assembly.
 
@@ -154,9 +151,9 @@ The explicit two-body matrix is
 \begin{equation}
 \boxed{\mathbf W=\sum_{a\in\{A,B\}}
 \begin{bmatrix}
-\id/m_a+\lwedge{\mathbf r_a}\mathbf I_a^{-1}\rw{\mathbf r_a}
-&\ell\lwedge{\mathbf r_a}\mathbf I_a^{-1}\\
-\ell\mathbf I_a^{-1}\rw{\mathbf r_a}&\ell^2\mathbf I_a^{-1}
+\id/m_a+\lwedge{\mathbf r_a}\inertia_a^{-1}\rw{\mathbf r_a}
+&\ell\lwedge{\mathbf r_a}\inertia_a^{-1}\\
+\ell\inertia_a^{-1}\rw{\mathbf r_a}&\ell^2\inertia_a^{-1}
 \end{bmatrix}}.
 \end{equation}
 All products retain their order and the off-diagonal blocks couple linear and angular impulses. The matrix is symmetric positive semidefinite. A prescribed boundary contributes its known motion but zero inverse mass; its mass is not inserted as a large finite substitute.
@@ -268,7 +265,7 @@ The pair contributions sum to zero, including the independent opposite angular i
 
 \section{Symbolic three-dimensional examples}
 \subsection{Central normal impact with axial spin}
-Consider a homogeneous sphere of radius $R$ and central inertia $I\id$, with $\mathbf r=-R\mathbf n$. Prescribe a central linear impulse and axial incoming spin:
+Consider a homogeneous sphere of radius $R$ and central inertia $\inertia\id$, with $\mathbf r=-R\mathbf n$. Prescribe a central linear impulse and axial incoming spin:
 \begin{equation}
 \delta\mathbf p=q\mathbf n,\qquad
 \boldsymbol\omega^- =\omega^-\mathbf n.
@@ -281,15 +278,15 @@ Then
 The complete angular update is therefore
 \begin{equation}
 \boxed{\delta\mathbf L_a=\delta\mathbf L_s+\delta\mathbf L_n},\qquad
-\boldsymbol\omega^+=\boldsymbol\omega^-+I^{-1}\delta\mathbf L_a.
+\boldsymbol\omega^+=\boldsymbol\omega^-+\inertia^{-1}\delta\mathbf L_a.
 \end{equation}
 A force-only model sets these independent angular impulses to zero and cannot change this axial spin. Here $\mathbf s$ is parallel or antiparallel to $\mathbf n$: the component map is dependent, yet the physical total angular impulse is well defined. The contact law must determine that total. No arbitrary inversion of two collinear angular directions is required.
 
 \subsection{Rotated non-spherical body}
 Let a homogeneous cuboid have half-extents $a,b,c$, mass $m$, and attitude matrix $\mathbf Q$. Its shape-frame and world inertia are
 \begin{equation}
-\mathbf I_0=\frac m3\operatorname{diag}(b^2+c^2,a^2+c^2,a^2+b^2),\qquad
-\mathbf I=\mathbf Q\mathbf I_0\mathbf Q^{\mathsf T}.
+\inertia_0=\frac m3\operatorname{diag}(b^2+c^2,a^2+c^2,a^2+b^2),\qquad
+\inertia=\mathbf Q\inertia_0\mathbf Q^{\mathsf T}.
 \end{equation}
 For a supporting vertex $\mathbf r_0$, use $\mathbf r=\mathbf Q\mathbf r_0$. A fixed plane gives
 \begin{equation}
@@ -300,8 +297,8 @@ Construct $\mathbf t$, $\mathbf s$, the direction map and the full mobility from
 \begin{equation}
 \boxed{\mathbf v^+=\mathbf v^-+\delta\mathbf p/m},\qquad
 \boxed{\boldsymbol\omega^+=\boldsymbol\omega^-
-+\mathbf I^{-1}\rw{\mathbf r}\delta\mathbf p
-+\mathbf I^{-1}\delta\mathbf L}.
++\inertia^{-1}\rw{\mathbf r}\delta\mathbf p
++\inertia^{-1}\delta\mathbf L}.
 \end{equation}
 The same formula includes spin-generated sliding, an off-centre normal force moment, and the independent angular impulse. Non-diagonal inertia couples the angular directions without adding material parameters. This is a symbolic 3D example; the earlier force-only cuboid numbers have been removed from this reading version.
 
@@ -337,7 +334,7 @@ The operator need not be formed densely. For a trial component vector $\mathbf q
 \begin{equation}
 \boxed{\mathbf A\mathbf q=\mathbf H\mathbf M^{-1}\mathbf H^{\mathsf T}\mathbf q}
 \end{equation}
-through three operations: scatter $\mathbf H^{\mathsf T}\mathbf q$ to bodies, apply each body's inverse mass and inertia solve, and gather with $\mathbf H$. Rotation uses the world inertia $\mathbf Q\mathbf I_0\mathbf Q^{\mathsf T}$. Solve small inertia systems or use a rotated precomputed shape-frame inverse; avoid forming a large inverse.
+through three operations: scatter $\mathbf H^{\mathsf T}\mathbf q$ to bodies, apply each body's inverse mass and inertia solve, and gather with $\mathbf H$. Rotation uses the world inertia $\mathbf Q\inertia_0\mathbf Q^{\mathsf T}$. Solve small inertia systems or use a rotated precomputed shape-frame inverse; avoid forming a large inverse.
 
 The directional law selects the component unknowns and active branches. Assemble small matrices for modest islands or use iterative operator evaluations for large islands. Dependent directions and redundant contacts require rank-aware solves; a failed inverse is not repaired by silently changing the physical components. Check the full-system work and energy, not independent contact energies that omit shared-body cross terms.
 
@@ -351,7 +348,7 @@ Select independently documented material-pair parameters without project fitting
 For the eventual visualization, compare measured and predicted outgoing motion using the previously requested two-coordinate deviation map. Define the observation signature and its metric before inspecting agreement; state which components were independently measured. Distinct collision types can share the same error point. No dots are supplied here until the corrected model has actually been evaluated.
 
 \section{Relation to prior notation}
-Combined motion and dual force/momentum, power pairing and characteristic-length normalization have established precedents\cite{featherstone,modernrobotics,angeles}. Vose and colleagues explicitly scale planar angular velocity and torque by reciprocal factors\cite{vose}; Zhang and colleagues give related deformation/moment scaling\cite{zhang}. The baseline wedge here makes the cross-product transpose and additive matrix chains explicit; associativity and antisymmetry are established algebra.
+Combined motion and dual force/momentum, power pairing and characteristic-length normalization have established precedents\cite{featherstone,modernrobotics,angeles}. Vose and colleagues explicitly scale planar angular velocity and torque by reciprocal factors\cite{vose}; Zhang and colleagues give related deformation/moment scaling\cite{zhang}. The baseline wedge here makes the cross-product transpose and additive matrix chains explicit; matrix associativity and transpose duality are established algebra.
 
 Contact force-and-moment models and matrix-free coupled contact calculations also have prior art\cite{drakewrench,mujocowrench,siggraph}. This symbolic rewrite is a presentation of the intended notation and mechanics, not a demonstrated novelty claim or a completed validation of the directional constitutive law. The separate literature review retains the source-specific findings. A publishable predictive claim requires new, reproducible evidence after the corrected model is implemented.
 
