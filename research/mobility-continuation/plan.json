@@ -1,0 +1,34 @@
+{
+  "inputs": {
+    "research/large-velocity-world/results/trial_1/rejection.json": "a2f393e8e8c5a3edc4678817651fa3bf1b4f15c06c170deb74bcddc2cdd8b619",
+    "research/large-velocity-cap192-world/results/trial_0/rejection.json": "82fc85b766a262c65664a9a040efc46290f6ad3cf2d477ac77bbf083ec5f4285",
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40"
+  },
+  "limits": {
+    "component_rows": 192,
+    "raw_evaluations_per_stage": 2048,
+    "maximum_stage_attempts": 64,
+    "minimum_friction_fraction_step": 0.0009765625
+  },
+  "rule": "Isolated numerical mobility diagonal regularization homotopy, keeping ORIGINAL Coulomb coefficient throughout. Modified matrices are SEARCH ONLY, never body dynamics. Final zero regularization must pass unchanged original mobility, full original independent law and native zero-budget acceptance. Retain every intermediate decline, matrix scale and function count. No world or performance claim.",
+  "relative_diagonal_search_levels": [
+    0.1,
+    0.03,
+    0.01,
+    0.003,
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    1e-06,
+    1e-07,
+    1e-08,
+    1e-09,
+    1e-10,
+    1e-11,
+    1e-12,
+    0.0
+  ]
+}
