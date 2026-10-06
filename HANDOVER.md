@@ -259,3 +259,15 @@ alone has not explained hosted GCC13/LAPACK behavior. All records preserved.
 Do not edit native helper/portable driver or spatial sources while hosted run
 is collecting diagnostics; snapshot nativebinary and original192source exist.
 All-case accuracy/baseline/2x task remains OPEN; do not claimworldcompletion.
+
+## Hosted native continuation reproduced — October6
+
+Artifact37400982980/11384849365 reproduces native original-law393/276/423
+acceptance on hosted GCC13/LAPACK and latest396 decline. Artifacts archived
+under research/ci-contact-portability/hosted-37400982980; binaryexcluded.
+Production integration can now proceed only after ALL existing lanes decline,
+with authoritative original zero-budget gate before any body writes. Required
+393 physical acceptance must remain mandatory; old bare null-only search is
+known nonportable, so validate actual combined production pipeline. Preserve
+original bare failure evidence. Local and hosted saved roots are instantaneous
+proofs, not full histories or reference/performance qualification.

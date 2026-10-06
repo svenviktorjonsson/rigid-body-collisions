@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "source": "ad64b32748ac96109ae515f27e4bd18c9d27d32e",
+  "attempted_supports": 512,
+  "total_sticking_supports": 512,
+  "accepted": false,
+  "independent": {
+    "accepted": false,
+    "projection_m_s": 1.2320806822837637e-07,
+    "circle_violation_scaled_m_s": 0.0,
+    "sticking_m_s": 2.8920086012591364e-08,
+    "support_gap_J": 1.6418948721054571e-09,
+    "passive_bound_J": -0.1541385057434588,
+    "passivity_scale": 1.2219553436749169,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 0.0
+  },
+  "native_exit": 2,
+  "scope": "Sticking-only linear faces; failure is NOT proof no sliding original-law root exists. No body, world, reference or performance acceptance."
+}
