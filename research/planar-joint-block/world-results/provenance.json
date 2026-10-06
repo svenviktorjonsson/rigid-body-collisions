@@ -1,0 +1,20 @@
+{
+  "source": "f5ed4df8236e856d03c2af46ed7a55c9b181f8ef",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-joint-block/run.py": "3442bfff6d5cf163a521d488263b36776f05e84c3a580c541e8d49223a9fc9ac",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-joint-block/plan.json": "594b9427dbb9bf1a08bd7ddd5bd9cad7e219eb8f3221a77e40a9986f80d9ba92",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-joint-block/build-receipt.json": "2d42929c81bae607c641ead3820bbc537ae6997b9aaea3be2326d378f8049671",
+    "/home/viktor/.cache/vkf-physics-continuation/research/planar-joint-block/controls-v2/summary.json": "aba214b566f2021371f886c9881ea8799f3c2e501ae7b47e46023730ea464ee2",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_joint_v2/rigid_runner": "27633d4e59d08dcf6839d20720a86e7ebbb22eabc123e7d9ff93c601c188d22e",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_joint_v2/precision-source.json": "cd897a389d65e4a575d5a7e0464ebd90cf3e85ea61dc7682cfb7b43eb5c0a51b",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4"
+  },
+  "runtime": {
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  }
+}

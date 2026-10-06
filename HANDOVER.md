@@ -4,6 +4,30 @@
 
 Finish larger irregular2D/3D cases and make EVERY rapid-friction example pass original model/accuracy gates. Then freeze a working baseline and seek >=2x end-to-end performance improvement on EACH case, preserving full physics and accuracy. Continuously push live checkpoints. Exact13-case scope and prospective timing rules: research/rapid-friction/performance-gate-plan.json. Earlier fine-reference speed ratios are not the requested new2x gate. Baseline is not yet qualified: original rotating/irregular examples and new larger scenes retain genuine failures. Six larger ladders from published6b63cb2 are COMPLETE:20 full histories/10 genuine rejections (nine velocity, one translation-only position), no qualified references. Independent state/provenance/rejection audits pass. Preserve outputs; never restart over existing files. Isolated exact-component recovery pilots and rotating planar discovery trials are declared under research/large-contact-recovery and research/rapid-friction/planar-discovery-plan.json. Solver/accuracy remediation precedes performance claims.
 
+## Latest independent checkpoints — October6
+
+Six additional125-sphere full histories pass independent physical and frozen
+provenance audits. Finer312.5/156.25/78.125ns ladder fails BOTH spin edges
+0.0347795/0.0353242rad/s (quarter limit0.025). Stricter1e-11 numerical search
+at1.25/.625/.3125us passes first edge but fails second spin0.0355317.
+Original physical gates remain unchanged; neither ladder qualifies. Evidence:
+research/large-sphere-finer and research/large-sphere-strict-search.
+
+Fresh component19264-hull world still declines later396-row contact at0.02s;
+independent accepted-prefix geometry/pose/energy and actual rejection checks
+pass. Preserve component192 binary snapshot before changing production source.
+Joint planar prototype10 full histories pass physical gates but all8 refinement
+edges fail; independent archive audit passes. Prototype remains isolated.
+
+Hosted CI required393 replay FAILS despite local acceptance. Both hosted
+sixteen-seed and stricter six-seed variants also decline393;162/297 controls
+pass. Downloaded immutable diagnostic artifact37398436313 retained under
+research/ci-contact-portability/hosted-37398436313 (generated binaries excluded).
+Do not remove required gate or claim portability. Full-island planar prototype
+8 analytical controls pass; original rotating group ladder running, initialdisk
+level declines actual-body residual1.0000048e-10 above1e-10. Retain all real
+failures. Global13-case working baseline and requested per-case2x remain OPEN.
+
 ## Production component192 checkpoint — October6
 
 The actual135-row component now passes the production helper and independent

@@ -1,0 +1,2020 @@
+{
+  "dimension": 3,
+  "scene": {
+    "duration": 0.12,
+    "gravity": [
+      0,
+      0,
+      -9.81
+    ],
+    "bodies": [
+      {
+        "type": "kinematic",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          20,
+          0,
+          0
+        ],
+        "omega": [
+          0,
+          0,
+          0
+        ],
+        "velocity_schedule": [
+          {
+            "time_s": 0.04,
+            "velocity": [
+              -20,
+              0,
+              0
+            ],
+            "omega": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "time_s": 0.08,
+            "velocity": [
+              20,
+              0,
+              0
+            ],
+            "omega": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "friction": 0.6324555320336759,
+        "shapes": [
+          {
+            "kind": "box",
+            "half_extents": [
+              0.025,
+              0.6075,
+              0.6075
+            ],
+            "center": [
+              -0.5825,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "kind": "box",
+            "half_extents": [
+              0.025,
+              0.6075,
+              0.6075
+            ],
+            "center": [
+              0.5825,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "kind": "box",
+            "half_extents": [
+              0.6075,
+              0.025,
+              0.6075
+            ],
+            "center": [
+              0.0,
+              -0.5825,
+              0.0
+            ]
+          },
+          {
+            "kind": "box",
+            "half_extents": [
+              0.6075,
+              0.025,
+              0.6075
+            ],
+            "center": [
+              0.0,
+              0.5825,
+              0.0
+            ]
+          },
+          {
+            "kind": "box",
+            "half_extents": [
+              0.6075,
+              0.6075,
+              0.025
+            ],
+            "center": [
+              0.0,
+              0.0,
+              -0.5825
+            ]
+          },
+          {
+            "kind": "box",
+            "half_extents": [
+              0.6075,
+              0.6075,
+              0.025
+            ],
+            "center": [
+              0.0,
+              0.0,
+              0.5825
+            ]
+          }
+        ]
+      },
+      {
+        "position": [
+          -0.41,
+          -0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          -0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.0,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.0,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.0,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.0,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.0,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.41,
+          0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          -0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.0,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.0,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.0,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.0,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.0,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          -0.205,
+          0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          -0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.0,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.0,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.0,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.0,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.0,
+          0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          -0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.0,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.0,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.0,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.0,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.0,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.205,
+          0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          -0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.0,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.0,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.0,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.0,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.0,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.205,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.205,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.205,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.205,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.205,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.41,
+          -0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.41,
+          -0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.41,
+          0.0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.41,
+          0.205
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      },
+      {
+        "position": [
+          0.41,
+          0.41,
+          0.41
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0.6324555320336759
+      }
+    ],
+    "container_interior_half_extents_m": [
+      0.5575,
+      0.5575,
+      0.5575
+    ]
+  }
+}
