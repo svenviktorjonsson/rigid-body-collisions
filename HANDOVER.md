@@ -1,3 +1,57 @@
+# Public experimental data extension — October 7, 2026
+
+Latest user asks for more public observations to improve authenticity. New isolated
+research/public-validation-data/ imports GAUGE22bounce/59sliding/160spatialimpact
+trials, MIT1718signedplanarstates, and135limestonerockingtrials (134unique processed
+pairs; group1_n13 exactlyduplicates1_n7). All published materialvalues unchanged;
+no new fit or empiricalaccuracy gain. Protocol checkpoints80d893e/1ec0648 pushed
+before baseline/candidate outcomes; data/evidence checkpointa49eafd pushed.
+
+GAUGE metadata e=.576733 and friction wood/plastic/metal=.273673/.275018/.262758.
+Nominal30deg four-frame prefix-conditioned sliding forecasts:56evaluationtrials,
+478forecastpoints, positionRMSE6.962/10.824/2.880mm. Measured prefix-board orientation
+29.56–29.67deg makes ALL56trials worse, RMSE9.010/12.709/4.573mm; retainfailedcandidate.
+Quaternion/ZYXEuleragreement1.74e-6rad. Separate mu_s/mu_d/rolling/tangentiale absent;
+pair/calibration/evaluation independence incompletelydocumented.
+
+Bounce audit corrected outcome dependency: original jointarcintersectionusespost
+trajectorytoinferinputtime; originalRMSE.382254m/s retainedonlyasconsistencydiagnostic.
+marker-v1 uses observedvalleytimestamp and incoming-only fit:42evalevents/21trials,
+RMSE.380733m/s,max.671462,mean-.350346. Oneframe sensitivity ±.515592m/s includeszero
+for35/42; NOTconfidenceinterval. GAUGEreleased30Hz vs180Hzpapercapture; deformable
+ball/plank,contactduration and sceneorigin/pairmatch prevent cleanmaterial inference.
+MEASUREMENT-ERRATUM.md explicitlysupersedesoriginalprotocolinput-independenceclaim.
+
+MITmass.0364kg,gyrationradius.0192m,I=1.3418496e-5kgm2; all1718rowsimported. Inferred
+freecoupleresidualRMS.00118023Nms NOTindependenttorquemeasurement; finitecontact,
+contactpointmotion,guide/externalreactions/gravity/noise cancontribute. Geometry/Jac
+mismatch1.72mm; authorcoeffsfitonoutcomes, matchedindependentpropsmissing. v1bodyindex
+wascaseindex; v2usescase_index plusbody_index=0; equivalencecheckedall1718, otherCSV/
+metricsbitidentical, sourcesnapshotpreserved. Noauthorcode/originalMATredistributed.
+
+Rockinggeometry-onlyHousnerangularratio comparator:134firsteventsRMSE.039013,max.125871,
+22ratios>1retained. 7545sourceprocessedrows,7519unique-finite/2820>1 (correlated, not
+independentmaterialrestitution). Nominalinertiageometric; effectivegeometryoutcome;
+fc=.7 assumedenergycorrection, NOTindependentfriction. 2026release135trials vsassociated
+paper120. RAR6 archive156426196bytes SHAa2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4;
+270processedTXTsextractedviaunrar (authorizedordinaryhostsetup); failed7zemptyfolder
+retainedoutsideGitandignored. fetch_rocking.py verifiescontentandcompleteness.
+
+Spatialfullimport160trials,280bodyrecords,4686poses; flatcase/bodyindices,explicit
+poseoffset/count, sourcexyzwquatsnormerror8.98e-7. Nofullspatialendpointpredictions:
+measuredinertiatensorsabsent; nonsmoothfolders task1/2/3 vsmetadata3/4/5 mismatch,
+restitutiondictspreservedwithoutguessmapping. Keep user'sfullt/s/independentdeltaL;
+productionunchanged andzero-slipclosureoriginal13scenes/hosted393issuesremainopen.
+
+New2026RemondABSshell/siliconepaper relevant tocheaplocalmemory/spin; originalPDF
+cached, sourcecatalogonly, Fig8notdigitized. mu~.92/localstiffness/effectivemassfit
+fromsameoutcomes, derivedGnotindependentinput. Do notclaimfixedindependentcharacterization.
+24analyticbounceextraction+9planecontrols pass (max1.47e-14m/s); noenginequalification.
+Report5pages withzero-error dots, materialtable, failed-candidateplot and provenance;
+reproduction/sourcehashes retained. Download package and finalpush noted by latest git.
+Next:resolveGAUGEscene/materialmapping, uncertainty-awareimpactstates, thenpassive
+smalllocalhistory comparisonon declaredsplits. Noarbitrarycorrection or2xgate.
+
 # Indexed pressure-patch continuation — October 7, 2026
 
 Latest user: continue authentic/efficient work; use indices suitable for later

@@ -1,0 +1,295 @@
+{
+  "scope": "Public experimental extension; branch checks/comparator/imports, no full-engine validation",
+  "files": [
+    {
+      "path": "research/public-validation-data/MEASUREMENT-ERRATUM.md",
+      "bytes": 1420,
+      "sha256": "ba7641022e72da427067db0141348443bbc1b3d37bddb3f00731125325471ca8"
+    },
+    {
+      "path": "research/public-validation-data/ORIENTATION-PROTOCOL.json",
+      "bytes": 1444,
+      "sha256": "8aca4977918b072864f214feb3a28f95f8dd7fc0d730eb01ff65af2f62fe4f07"
+    },
+    {
+      "path": "research/public-validation-data/PROTOCOL.json",
+      "bytes": 4242,
+      "sha256": "dd65e8d1921cda61b3d6f01cadaec91537e0e2e6e82ca0c9740959004a7c9655"
+    },
+    {
+      "path": "research/public-validation-data/README.md",
+      "bytes": 9776,
+      "sha256": "565da2c746a78ef68a84bedd5ccd144ad8547982fc4f09158106b0df09917ebe"
+    },
+    {
+      "path": "research/public-validation-data/ROCKING-PROTOCOL.json",
+      "bytes": 1514,
+      "sha256": "b51225ce4fcb2c9b66374a1f040ebe53beff1187a30c50fc9a63f95389ba0eb6"
+    },
+    {
+      "path": "research/public-validation-data/audit-v1/index-correction.json",
+      "bytes": 204,
+      "sha256": "f5b0b557d3e5d6f3640173d916f5c0d22d9fb3124a9e1ee54bf651ceea994c95"
+    },
+    {
+      "path": "research/public-validation-data/audit-v1/results.json",
+      "bytes": 954,
+      "sha256": "09e3292f23588345375b758da54b9f74739e7945bb4c9fe849cced667f358d32"
+    },
+    {
+      "path": "research/public-validation-data/audit.py",
+      "bytes": 3973,
+      "sha256": "a03a29bb8ff10377ce06abb6a6e2285f00b2a80a2671289d87ebd13f6787f76d"
+    },
+    {
+      "path": "research/public-validation-data/catalog-v1/sources.json",
+      "bytes": 4421,
+      "sha256": "8c5361b3f0bc929d134639aa2fa845fbc79020893c80bdf528e6b96faa1d7d4f"
+    },
+    {
+      "path": "research/public-validation-data/catalog-v1/spatial-bodies.csv",
+      "bytes": 66221,
+      "sha256": "43f984844891ad17a879cf5768eec16ac31ce39e4797369d8f30f6c098d58953"
+    },
+    {
+      "path": "research/public-validation-data/catalog-v1/spatial-poses.npz",
+      "bytes": 206671,
+      "sha256": "d929bbaf34ceb417e53974a276b0b8295f3545c0383a7f07580677430558eceb"
+    },
+    {
+      "path": "research/public-validation-data/catalog-v1/spatial-results.json",
+      "bytes": 882,
+      "sha256": "d322edd05c33a225f2307bd708b6fabbebf3e21acce58b9fb9cefcb14620dafc"
+    },
+    {
+      "path": "research/public-validation-data/catalog.py",
+      "bytes": 7580,
+      "sha256": "c11e8dab941a0ea92ece05284f32e8400dc0e757302a950c10b4a45ba3502a33"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/bouncing ball-inventory.json",
+      "bytes": 3404,
+      "sha256": "e67548e33bb0241fc99dbce97421f7e6f3e4febe25a03983c2938610f74d326d"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/downloads.json",
+      "bytes": 46036,
+      "sha256": "ef323d5448ca7b5b56fe7ae4eecd49d892665a3ff44a176089ac7893870a8a24"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/nonsmooth contact-inventory.json",
+      "bytes": 28620,
+      "sha256": "2f481a6298a16fc5e1abf4c546b4b5b306c0c6989424fe51ae214e9df5a0370b"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/slope contact-inventory.json",
+      "bytes": 6714,
+      "sha256": "28d2c8788055caa8e4d0e5f21ec40d58612a145739402baeae96bf0c80ea2d8d"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/slope slider-inventory.json",
+      "bytes": 31547,
+      "sha256": "5986c60a3b7be313ff552e03bdf7391612a1f6d6a9cee11979aec5702f3bdd37"
+    },
+    {
+      "path": "research/public-validation-data/downloads-v1/turntable-inventory.json",
+      "bytes": 31309,
+      "sha256": "ac1d0da9051c1e383a92fcd1fdee1f25d9ec87a66119baecd601a4357341cb5e"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/bounce-events.csv",
+      "bytes": 11772,
+      "sha256": "ba55b0d3380b7ecdf49e451f94eed00cbe70937224f4b75a0ba6012449b10937"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/limestone-rocking-events.csv",
+      "bytes": 852222,
+      "sha256": "81773206fab1e1fe1e9495f90fec8253ba8d98f5ab8900da03adc28dae88d5f6"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/limestone-rocking-trials.csv",
+      "bytes": 18922,
+      "sha256": "fbb3e3c9753fe4ab80ed98e6b1b593ddafdd346589f1bf4010f0e3cae3bc3a3b"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/mit-ellipse-states.csv",
+      "bytes": 727433,
+      "sha256": "4ef48356bcbbe397a1fce8d798abc06b9c01cee1a5401cd4ee439474ce53a737"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/results.json",
+      "bytes": 5985,
+      "sha256": "dcd4241601f8d18275cef411959c59411bec3012c224b55dff11ecd9729246a6"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/results.partial.json",
+      "bytes": 5528,
+      "sha256": "75b71fdb60c60531f84cdf430ec6e1d4277053ec399a5665046723bd10dca448"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/slider-forecast-points.csv",
+      "bytes": 52058,
+      "sha256": "4e66ee4aa3114c0af6d561a81ac88eb715c268ab17e87fe80664ea699cf1e7a1"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v1/slider-trials.csv",
+      "bytes": 8609,
+      "sha256": "dbf22037b7bf26612cae99fb61040c8d9e5954ee2a16ebcadb501eb125b32bde"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/bounce-events.csv",
+      "bytes": 11772,
+      "sha256": "ba55b0d3380b7ecdf49e451f94eed00cbe70937224f4b75a0ba6012449b10937"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/limestone-rocking-events.csv",
+      "bytes": 852222,
+      "sha256": "81773206fab1e1fe1e9495f90fec8253ba8d98f5ab8900da03adc28dae88d5f6"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/limestone-rocking-trials.csv",
+      "bytes": 18922,
+      "sha256": "fbb3e3c9753fe4ab80ed98e6b1b593ddafdd346589f1bf4010f0e3cae3bc3a3b"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/mit-ellipse-states.csv",
+      "bytes": 730880,
+      "sha256": "95318c956a0a2cd9d340a20645f70dc8c5e4ef5327e5f1fcccdc2334726f2a12"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/results.json",
+      "bytes": 5985,
+      "sha256": "1d645e56008ea206dadfbe9402fda3538cfdc5bc60d4b81ce879dbb8383faef6"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/results.partial.json",
+      "bytes": 5528,
+      "sha256": "75b71fdb60c60531f84cdf430ec6e1d4277053ec399a5665046723bd10dca448"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/slider-forecast-points.csv",
+      "bytes": 52058,
+      "sha256": "4e66ee4aa3114c0af6d561a81ac88eb715c268ab17e87fe80664ea699cf1e7a1"
+    },
+    {
+      "path": "research/public-validation-data/evidence-v2/slider-trials.csv",
+      "bytes": 8609,
+      "sha256": "dbf22037b7bf26612cae99fb61040c8d9e5954ee2a16ebcadb501eb125b32bde"
+    },
+    {
+      "path": "research/public-validation-data/fetch.py",
+      "bytes": 3419,
+      "sha256": "21ec5fc26389da88561baf5b5d0e433252e3783a11190dea6adcccbd1bbf835f"
+    },
+    {
+      "path": "research/public-validation-data/fetch_rocking.py",
+      "bytes": 2073,
+      "sha256": "0e6384d72d9971e04abddb67b06b4a2fafd6afbada015b044fc3122277b2df19"
+    },
+    {
+      "path": "research/public-validation-data/fetch_spatial.py",
+      "bytes": 1512,
+      "sha256": "5c2013984f99b2d40ed57c6155e24a46920f69aaf4583b30f61fa884824a31c8"
+    },
+    {
+      "path": "research/public-validation-data/marker-v1/bounce-marker-events.csv",
+      "bytes": 8116,
+      "sha256": "bebef539f2f97e5d30690b7e8b9e9f432430946534ea47a5b4ebdf6ee7df7e05"
+    },
+    {
+      "path": "research/public-validation-data/marker-v1/results.json",
+      "bytes": 723,
+      "sha256": "211185a34b009604e00a7e8763c5d6ddcd0e63d333bb39f972e5d3a2ac26ac91"
+    },
+    {
+      "path": "research/public-validation-data/marker.py",
+      "bytes": 3436,
+      "sha256": "8385bb551253b3151e3bb2e4d9c0c930cce0693eaeb65c06515f1a25a9395281"
+    },
+    {
+      "path": "research/public-validation-data/orientation-v1/orientation-points.csv",
+      "bytes": 33290,
+      "sha256": "f8bb7946b3839601fa3ac55bac75fa25e6b01d2e754068e28a40504fc312f924"
+    },
+    {
+      "path": "research/public-validation-data/orientation-v1/orientation-trials.csv",
+      "bytes": 11804,
+      "sha256": "0eb5a75ee3571024bcb580609b09c57c691c760bae8058ec88969a4eeb7afbea"
+    },
+    {
+      "path": "research/public-validation-data/orientation-v1/results.json",
+      "bytes": 1547,
+      "sha256": "3ce1583bc15e58fa9bff8500d4b8c87f28c0191217d8f47ac0c003a3ed085a72"
+    },
+    {
+      "path": "research/public-validation-data/orientation.py",
+      "bytes": 5129,
+      "sha256": "45a819be576123ac124eb6bf5c3abc72d8a5b25c751bd247695291003a8f0f7c"
+    },
+    {
+      "path": "research/public-validation-data/report/build.json",
+      "bytes": 283,
+      "sha256": "acebfbb32508a91e07cd4cc2c0ab743e268566aabbfc2c7083e457fc8efb7691"
+    },
+    {
+      "path": "research/public-validation-data/report/build.stdout",
+      "bytes": 12605,
+      "sha256": "95a8de0669efadb2ffc3f59986e728ecf291df8678164562b4023ffe88fd80e7"
+    },
+    {
+      "path": "research/public-validation-data/report/deviation-map.pdf",
+      "bytes": 35603,
+      "sha256": "65ffdfa0d655224829b062f5ff2795f1602f1cebdaa0000e4a1bfd0c051f423e"
+    },
+    {
+      "path": "research/public-validation-data/report/deviation-map.png",
+      "bytes": 225508,
+      "sha256": "c564389d0bac12524bcac12b30553ded7e1f3c23b6c97533a3966a32a8c639fe"
+    },
+    {
+      "path": "research/public-validation-data/report/orientation-comparison.pdf",
+      "bytes": 17767,
+      "sha256": "46a9d3551c7f3dde709e278c214bb79a1b8e57fad1b269abf50369a73ed79cf3"
+    },
+    {
+      "path": "research/public-validation-data/report/orientation-comparison.png",
+      "bytes": 91549,
+      "sha256": "89ea16c31b97a391133c7cf68e65252736e143af743ce7b6d8a09236965998b4"
+    },
+    {
+      "path": "research/public-validation-data/report/report.pdf",
+      "bytes": 232344,
+      "sha256": "6198500dba0a3abde8572db4e1c9f5d13f2df303aea8bbac7f56817adf1a22cd"
+    },
+    {
+      "path": "research/public-validation-data/report/report.tex",
+      "bytes": 13268,
+      "sha256": "8b2ea94d62706137edb4e7b4486fa789d6bdad739ca0f13d5a9eb2fe4090ce21"
+    },
+    {
+      "path": "research/public-validation-data/report.py",
+      "bytes": 18057,
+      "sha256": "85253af5cfc41d8aa12f29fbbef5f6414a612c3ea8186e4a0c1bcf09f2687e8a"
+    },
+    {
+      "path": "research/public-validation-data/rocking-download-v1/receipt.json",
+      "bytes": 52248,
+      "sha256": "bae4ac590b3382723d2887e1a2e9975bd976de4397cba239d3db944e395c27a8"
+    },
+    {
+      "path": "research/public-validation-data/source-snapshots/study-v1.py",
+      "bytes": 15348,
+      "sha256": "02f7c9b3187c40c9d7c410dd856f07580322bce461054c8fe93aa8e54294f5bf"
+    },
+    {
+      "path": "research/public-validation-data/spatial-download-v1/downloads.json",
+      "bytes": 67634,
+      "sha256": "4769bbca20c8a7f89cc2c5c3166bf974bea88e9da237d38b93dec5221c388aa2"
+    },
+    {
+      "path": "research/public-validation-data/study.py",
+      "bytes": 15344,
+      "sha256": "080300e64a7c7f969fb00d19e4dec2784d8b7df8a2975ca93ceca410cb36dee9"
+    }
+  ]
+}

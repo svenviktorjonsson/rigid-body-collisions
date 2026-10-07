@@ -1,0 +1,82 @@
+{
+  "sources": [
+    {
+      "id": "gauge",
+      "title": "GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models",
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset",
+      "paper": "https://arxiv.org/html/2608.05948v1",
+      "license": "MIT (dataset)",
+      "revision": "9e0acb70fecc0d4161660264d9a4b08d8f56d45a",
+      "local_trials": {
+        "bounce": 22,
+        "sliding_task2": 59,
+        "spatial_impact": 160
+      },
+      "tested": "Conditional normal bounce and prefix-conditioned sliding branches; no full spatial endpoint prediction.",
+      "parameter_provenance": "Published calibrated metadata fixed unchanged. Material-pair and calibration/evaluation split are incompletely specified; not certified independent material validation."
+    },
+    {
+      "id": "mit_ellipse",
+      "title": "Learning Data-Efficient Rigid-Body Contact Models: Case Study of Planar Impact",
+      "url": "https://github.com/mcubelab/planar-impact-dataset",
+      "paper": "https://proceedings.mlr.press/v78/fazeli17a.html",
+      "revision": "f24a7e3b31ad0b53652d6b2a6b26a702cc4362da",
+      "license": "No repository LICENSE found; originals stay outside this package.",
+      "local_records": 1718,
+      "tested": "Complete signed planar pre/post-state import and impulse reconstruction, not constitutive prediction.",
+      "parameter_provenance": "Published mass and radius of gyration supplied. Published model coefficients fitted on these outcomes; independent matched friction/restitution absent."
+    },
+    {
+      "id": "limestone_rocking",
+      "title": "Experimental dataset on the free-rocking response of masonry blocks",
+      "url": "https://experiments.builtenvdata.eu/datasets/92/",
+      "doi": "10.60756/uminho-jh25",
+      "paper": "https://link.springer.com/article/10.1007/s10518-025-02224-8",
+      "license": "CC BY 4.0",
+      "archive_sha256": "a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4",
+      "release_date": "2026-06-17",
+      "local_trials": 135,
+      "unique_processed_pairs": 134,
+      "processed_rows": 7545,
+      "primary_events": 134,
+      "tested": "Nominal geometry-only ideal rocking comparator; no full rigid-body spatial prediction.",
+      "parameter_provenance": "Nominal dimensions/mass/geometric inertia supplied. Processed angular ratios/effective geometry are outcomes. fc=.7 is an assumed energy correction, not independent friction.",
+      "discrepancy": "Source paper describes 120 trials; released archive contains 135. Preserve release count and exact duplicate separately."
+    },
+    {
+      "id": "silicone_shell",
+      "title": "Effect of a compliant substrate on the rebound of a spherical shell",
+      "url": "https://data.hal.science/document/hal-05532284v1",
+      "pdf": "https://hal.science/hal-05532284v1/file/EY12181.pdf",
+      "doi": "10.1103/mmdr-2mm3",
+      "license": "CC BY-NC-ND 4.0 paper metadata; original PDF outside repository.",
+      "tested": "Source assessment only. Figure 8 spin data not digitized; no new prediction claimed.",
+      "experiment": "40 mm diameter, 2.7 g ABS shell against bare glass or 0.50/0.96/1.25/1.78 mm silicone layers.",
+      "parameter_provenance": "mu~.92, local stiffness/effective mass and derived shear modulus are fitted from rebound/spin results, not independently measured input properties.",
+      "model_relevance": "Compliant local tangential displacement/pressure history changes spin transfer while keeping global bodies rigid; promising comparison for reduced local memory, pending independent inputs and data extraction."
+    }
+  ],
+  "extra_source_fingerprints": [
+    {
+      "cache_name": "silicone-paper",
+      "bytes": 1176659,
+      "sha256": "b0f1e18a8dc6e574e4b6d2bbd16ad2b8e4db436a24afdd0769a2a9fa6f31b86e"
+    },
+    {
+      "cache_name": "mit-paper",
+      "bytes": 4542050,
+      "sha256": "be74616c2bd76e7d82a5597a0af8b7f663795acd7a5ff503f99578848e2a81f1"
+    },
+    {
+      "cache_name": "gauge-paper",
+      "bytes": 725590,
+      "sha256": "492030dcfbcd123f2e991b39a6788a9e6cbace54de2fd12f154157825371c404"
+    },
+    {
+      "cache_name": "RockMasonry1.rar",
+      "bytes": 156426196,
+      "sha256": "a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4"
+    }
+  ],
+  "catalog_sha256": "c11e8dab941a0ea92ece05284f32e8400dc0e757302a950c10b4a45ba3502a33"
+}

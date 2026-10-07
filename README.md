@@ -5,6 +5,16 @@
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
+The [public experimental data extension](research/public-validation-data/README.md)
+adds 1,718 signed planar impacts, 160 non-spherical spatial impact trials,
+22 rubber-bounce trials, 59 sliding trials and 135 limestone rocking trials
+(134 unique processed pairs). Its [report](research/public-validation-data/report/report.pdf)
+keeps published material values fixed: sliding forecast RMSE is 2.88–10.82 mm;
+a conditional bounce check has 0.381 m/s normal-speed RMSE. A measured-slope
+correction worsens all 56 sliding evaluations and is retained. These are branch
+checks, an ideal-rocking comparator and state imports; full experimental model
+validation and production angular-friction integration remain open.
+
 [Normal and tangential restitution](research/two-channel-restitution/README.md)
 are now explicit impact-model inputs in the 3D shared-point contact solver and
 an isolated 2D simultaneous-contact build. Positive tangential restitution

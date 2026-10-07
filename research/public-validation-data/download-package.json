@@ -1,0 +1,10 @@
+{
+  "report_path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/public-data-comparison-report.pdf",
+  "report_bytes": 232344,
+  "report_sha256": "6198500dba0a3abde8572db4e1c9f5d13f2df303aea8bbac7f56817adf1a22cd",
+  "zip_path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-public-data-20261007.zip",
+  "zip_bytes": 1841625,
+  "zip_sha256": "6b91ede2dc62196b64cd3c80ac337947e078334bac8df4eb92a02acdb65e85f9",
+  "zip_members": 59,
+  "all_members_sha256_checked": true
+}
