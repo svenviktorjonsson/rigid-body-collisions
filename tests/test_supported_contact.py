@@ -5,6 +5,22 @@ from supported_contact import Resistance,advance_planar,advance_spatial
 
 
 class SupportedContactTests(unittest.TestCase):
+    def test_small_radius_does_not_mix_linear_and_angular_acceleration_tolerances(self):
+        for radius in [1e-12,1e-9,1e-6,1e-3,1.,1e3,1e6]:
+            result=self.case(radius_m=radius,inertia_kg_m2=.4*radius*radius,
+                             velocity_m_s=0.,omega_rad_s=0.,drive_force_N=1e-8,
+                             material=Resistance(0.,0.,0.,0.))
+            self.assertAlmostEqual(result['velocity_m_s'],1e-8,places=22)
+            self.assertEqual(result['omega_rad_s'],0.)
+
+    def test_spin_arrest_is_exact_for_400_nonbinary_mass_properties(self):
+        rng=np.random.default_rng(19)
+        for _ in range(400):
+            result=self.case(inertia_kg_m2=rng.uniform(.001,.009),spin_rad_s=rng.uniform(-10,10),
+                             velocity_m_s=0.,omega_rad_s=0.,duration_s=1e6,
+                             material=Resistance(.5,.3,0.,0.,.1,.02))
+            self.assertEqual(result['spin_rad_s'],0.)
+
     def case(self,**changes):
         args=dict(mass_kg=1.,inertia_kg_m2=.004,radius_m=.1,normal_load_N=9.81,
                   drive_force_N=0.,velocity_m_s=1.,omega_rad_s=10.,duration_s=1.,

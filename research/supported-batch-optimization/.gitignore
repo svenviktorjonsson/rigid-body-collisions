@@ -1,0 +1,4 @@
+run-*/benchmark
+*.aux
+*.out
+*.log

@@ -1,0 +1,18 @@
+{
+  "focused_tests": 54,
+  "exit_code": 0,
+  "first_c_probe_failure_retained": true,
+  "final_benchmark_source_hashes_match": true,
+  "physics_parameters_fitted": false,
+  "source_sha256": {
+    "supported_backend/kernel.h": "6e5050759cbc00734215b4a15ded36f1dd1ca903d40cceb0149fe20fe8c8c40d",
+    "supported_backend/batch.cpp": "2f0ea4cd586c8fc95cd9acc630c4a3f2ba777fd6849986df2e0a2ac6cdbd92ad",
+    "supported_backend/batch.h": "9b0503a766a3476960a447a96a1050eaca375a3e399c6b6685c13aca6a779d9d",
+    "supported_batch.py": "3bcd0fcf0daf2849bd26145da43b6567e21683d5e6fb2166d9a380f89e388ba0",
+    "supported_contact.py": "4bd89331410985870c0a6e21510cb56ef1db0af575e538fc0dfd3456a493101d",
+    "contact_history.py": "ead2359fd8280d508dec50062ffd512e53fbe7700600054d575d7b186c2a0adc",
+    "tests/test_supported_batch.py": "451da472c1fa3c17ebaa80c9fcfb733ea55cab2149030271680f06b159cd3797",
+    "tests/test_supported_contact.py": "f9083dc13da465d36c0635b2eb283c4472079efa7ede74090e80d506b05d4543",
+    "tests/test_contact_history.py": "29b257eaff3fad3fc9e673fb357bb8e4d8a1192b2ff5d4be72a6946244a4e743"
+  }
+}

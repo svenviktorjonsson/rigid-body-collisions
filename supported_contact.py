@@ -32,7 +32,9 @@ def _branch(v,w,m,I,R,N,drive,law,tolerance):
     """Find static/onset/continued-motion constraints without arbitrary directions."""
     u=v-R*w;A=1/m+R*R/I;cap=law.mu_r*law.rolling_length_m*N
     signs=lambda x,tol: [int(np.sign(x))] if abs(x)>tol else [0,-1,1]
-    force_tolerance=64*np.finfo(float).eps*max(N,abs(drive),cap/R,1e-300)
+    # Compare force capacities and acceleration residuals in compatible units.
+    # Scaling with bare N hid real drive when all friction coefficients were zero.
+    force_tolerance=64*np.finfo(float).eps*max(law.mu_s*N,law.mu_d*N,abs(drive),cap/R,1e-300)
     for su,sw in itertools.product(signs(u,tolerance),signs(w,tolerance/R)):
         if su==sw==0:f=-drive;M=R*f
         elif su==0:
@@ -42,9 +44,10 @@ def _branch(v,w,m,I,R,N,drive,law,tolerance):
         if su==0 and abs(f)>law.mu_s*N+force_tolerance:continue
         if sw==0 and abs(M)>cap+R*force_tolerance:continue
         dv=(drive+f)/m;dw=(-R*f+M)/I;du=dv-R*dw
-        acceleration_tolerance=force_tolerance*max(A,R/I)
-        if abs(u)<=tolerance and su and su*du<=acceleration_tolerance:continue
-        if abs(w)<=tolerance/R and sw and sw*dw<=acceleration_tolerance/R:continue
+        slip_acceleration_tolerance=force_tolerance*(1/m+2*R*R/I)
+        angular_acceleration_tolerance=2*force_tolerance*R/I
+        if abs(u)<=tolerance and su and su*du<=slip_acceleration_tolerance:continue
+        if abs(w)<=tolerance/R and sw and sw*dw<=angular_acceleration_tolerance:continue
         return f,M,dv,dw,su,sw
     raise RuntimeError('No admissible supported-contact branch; no fallback law')
 
@@ -100,13 +103,16 @@ def advance_planar(*,mass_kg,inertia_kg_m2,radius_m,normal_load_N,drive_force_N,
         if stop_u or su==0:v=R*w
         if duration_s-t<=8*np.finfo(float).eps*duration_s:t=duration_s
     spin0=float(spin_rad_s);spin_cap=material.mu_n*material.spin_length_m*N*duration_s
-    spin_impulse=-np.sign(spin0)*min(spin_cap,I*abs(spin0));spin=spin0+spin_impulse/I
+    spin_impulse=-np.sign(spin0)*min(spin_cap,I*abs(spin0))
+    spin=0. if spin_cap>=I*abs(spin0) else spin0+spin_impulse/I
     spin_loss=.5*I*(spin0*spin0-spin*spin)
     initial=.5*m*v0*v0+.5*I*(w0*w0+spin0*spin0)
     final=.5*m*v*v+.5*I*(w*w+spin*spin)
     external_work=F*distance;loss=sliding_loss+rolling_loss+spin_loss
     residual=final-initial-external_work+loss
     scale=max(initial,final,abs(external_work),loss,1e-300)
+    if not all(math.isfinite(x) for x in [v,w,spin,distance,p,L,spin_impulse,initial,final,external_work,sliding_loss,rolling_loss,spin_loss,residual]):
+        raise RuntimeError('Supported-contact result exceeds finite Float64 range')
     if min(sliding_loss,rolling_loss,spin_loss)<-1e-11*scale or abs(residual)>2e-10*scale:
         raise RuntimeError('Supported-contact energy gate rejected result')
     return dict(velocity_m_s=v,omega_rad_s=w,spin_rad_s=spin,distance_m=distance,

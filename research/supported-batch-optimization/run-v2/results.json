@@ -1,0 +1,286 @@
+{
+  "controls": 400,
+  "max_python_scaled_error": 1.0359988616147875e-15,
+  "batches": [
+    {
+      "responses": 100,
+      "threads": 1,
+      "baseline_median_ms": 0.00467,
+      "candidate_median_ms": 0.00572,
+      "candidate_min_ms": 0.00568,
+      "candidate_max_ms": 0.010581,
+      "speedup": 0.8164335664335663,
+      "working_arrays_bytes": 38400,
+      "native_reference_max_abs_difference": 1.8189894035458565e-12,
+      "checksum": 10810.900416208706,
+      "samples_ms": [
+        0.00568,
+        0.00569,
+        0.0057,
+        0.00572,
+        0.00573,
+        0.0058,
+        0.010581
+      ]
+    },
+    {
+      "responses": 100,
+      "threads": 4,
+      "baseline_median_ms": 0.00491,
+      "candidate_median_ms": 0.00523,
+      "candidate_min_ms": 0.00517,
+      "candidate_max_ms": 0.00653,
+      "speedup": 0.9388145315487572,
+      "working_arrays_bytes": 38400,
+      "native_reference_max_abs_difference": 1.8189894035458565e-12,
+      "checksum": 10810.900416208706,
+      "samples_ms": [
+        0.00517,
+        0.00521,
+        0.00522,
+        0.00523,
+        0.00544,
+        0.005751,
+        0.00653
+      ]
+    },
+    {
+      "responses": 100,
+      "threads": 8,
+      "baseline_median_ms": 0.00477,
+      "candidate_median_ms": 0.00501,
+      "candidate_min_ms": 0.00455,
+      "candidate_max_ms": 0.00576,
+      "speedup": 0.9520958083832336,
+      "working_arrays_bytes": 38400,
+      "native_reference_max_abs_difference": 1.8189894035458565e-12,
+      "checksum": 10810.900416208706,
+      "samples_ms": [
+        0.00455,
+        0.00483,
+        0.00497,
+        0.00501,
+        0.00508,
+        0.00544,
+        0.00576
+      ]
+    },
+    {
+      "responses": 10000,
+      "threads": 1,
+      "baseline_median_ms": 0.464737,
+      "candidate_median_ms": 0.495498,
+      "candidate_min_ms": 0.492228,
+      "candidate_max_ms": 0.499107,
+      "speedup": 0.9379190228820299,
+      "working_arrays_bytes": 3840000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 609639.7349488331,
+      "samples_ms": [
+        0.492228,
+        0.493357,
+        0.495167,
+        0.495498,
+        0.496397,
+        0.497187,
+        0.499107
+      ]
+    },
+    {
+      "responses": 10000,
+      "threads": 4,
+      "baseline_median_ms": 0.468426,
+      "candidate_median_ms": 0.154652,
+      "candidate_min_ms": 0.153932,
+      "candidate_max_ms": 0.172683,
+      "speedup": 3.0289036029278638,
+      "working_arrays_bytes": 3840000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 609639.7349488331,
+      "samples_ms": [
+        0.153932,
+        0.154433,
+        0.154642,
+        0.154652,
+        0.163452,
+        0.164312,
+        0.172683
+      ]
+    },
+    {
+      "responses": 10000,
+      "threads": 8,
+      "baseline_median_ms": 0.472126,
+      "candidate_median_ms": 0.125222,
+      "candidate_min_ms": 0.125052,
+      "candidate_max_ms": 0.140022,
+      "speedup": 3.7703119260193896,
+      "working_arrays_bytes": 3840000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 609639.7349488331,
+      "samples_ms": [
+        0.125052,
+        0.125132,
+        0.125222,
+        0.125222,
+        0.129922,
+        0.132722,
+        0.140022
+      ]
+    },
+    {
+      "responses": 100000,
+      "threads": 1,
+      "baseline_median_ms": 4.743198,
+      "candidate_median_ms": 5.113684,
+      "candidate_min_ms": 5.087093,
+      "candidate_max_ms": 5.154694,
+      "speedup": 0.9275500793557051,
+      "working_arrays_bytes": 38400000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 6096397.349488017,
+      "samples_ms": [
+        5.087093,
+        5.093433,
+        5.097193,
+        5.113684,
+        5.131414,
+        5.135424,
+        5.154694
+      ]
+    },
+    {
+      "responses": 100000,
+      "threads": 4,
+      "baseline_median_ms": 4.662957,
+      "candidate_median_ms": 2.378384,
+      "candidate_min_ms": 1.649383,
+      "candidate_max_ms": 2.465685,
+      "speedup": 1.9605568318656699,
+      "working_arrays_bytes": 38400000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 6096397.349488017,
+      "samples_ms": [
+        1.649383,
+        2.249512,
+        2.261913,
+        2.378384,
+        2.449066,
+        2.458235,
+        2.465685
+      ]
+    },
+    {
+      "responses": 100000,
+      "threads": 8,
+      "baseline_median_ms": 4.700907,
+      "candidate_median_ms": 0.825092,
+      "candidate_min_ms": 0.780321,
+      "candidate_max_ms": 1.208197,
+      "speedup": 5.697433740722246,
+      "working_arrays_bytes": 38400000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 6096397.349488017,
+      "samples_ms": [
+        0.780321,
+        0.783002,
+        0.821872,
+        0.825092,
+        0.825702,
+        1.099765,
+        1.208197
+      ]
+    },
+    {
+      "responses": 1000000,
+      "threads": 1,
+      "baseline_median_ms": 46.938613,
+      "candidate_median_ms": 51.497039,
+      "candidate_min_ms": 51.290556,
+      "candidate_max_ms": 51.824823,
+      "speedup": 0.9114817844187119,
+      "working_arrays_bytes": 384000000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 60963973.49514758,
+      "samples_ms": [
+        51.290556,
+        51.352267,
+        51.398327,
+        51.497039,
+        51.52612,
+        51.673671,
+        51.824823
+      ]
+    },
+    {
+      "responses": 1000000,
+      "threads": 4,
+      "baseline_median_ms": 47.170216,
+      "candidate_median_ms": 21.716522,
+      "candidate_min_ms": 13.479604,
+      "candidate_max_ms": 22.266179,
+      "speedup": 2.172088882372601,
+      "working_arrays_bytes": 384000000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 60963973.49514758,
+      "samples_ms": [
+        13.479604,
+        13.560254,
+        13.615505,
+        21.716522,
+        21.887184,
+        21.926875,
+        22.266179
+      ]
+    },
+    {
+      "responses": 1000000,
+      "threads": 8,
+      "baseline_median_ms": 48.285533,
+      "candidate_median_ms": 12.649422,
+      "candidate_min_ms": 12.50665,
+      "candidate_max_ms": 13.2793,
+      "speedup": 3.81721259674948,
+      "working_arrays_bytes": 384000000,
+      "native_reference_max_abs_difference": 2.2737367544323206e-12,
+      "checksum": 60963973.49514758,
+      "samples_ms": [
+        12.50665,
+        12.522129,
+        12.638402,
+        12.649422,
+        13.040007,
+        13.128049,
+        13.2793
+      ]
+    }
+  ],
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "host": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           43 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 7 3700X 8-Core Processor\nCPU family:                              23\nModel:                                   113\nThread(s) per core:                      2\nCore(s) per socket:                      8\nSocket(s):                               1\nStepping:                                0\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      65%\nCPU max MHz:                             4426.1709\nCPU min MHz:                             2200.0000\nBogoMIPS:                                7199.88\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es\nVirtualization:                          AMD-V\nL1d cache:                               256 KiB (8 instances)\nL1i cache:                               256 KiB (8 instances)\nL2 cache:                                4 MiB (8 instances)\nL3 cache:                                32 MiB (2 instances)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fopenmp",
+    "/home/viktor/.cache/vkf-physics-continuation/research/supported-batch-optimization/benchmark.cpp",
+    "/home/viktor/.cache/vkf-physics-continuation/supported_backend/batch.cpp",
+    "-o",
+    "/home/viktor/.cache/vkf-physics-continuation/research/supported-batch-optimization/run-v2/benchmark"
+  ],
+  "scope": "Same physical response channels and energy/branch gates. Field loads and all 11 stores included. Preparation/validation/allocation, collision detection, moving frames, impacts, groups and contact-history update excluded.",
+  "target_ms": 20.0,
+  "target_responses": 1000000,
+  "preferred_threads": 4,
+  "source_sha256": {
+    "research/supported-batch-optimization/benchmark.cpp": "c57da8bc8bd337ba6291ef166a476410006daed7df3acc90d1ee141f8e865524",
+    "supported_backend/batch.cpp": "2270384833f89d8ccb5f8054e2c9261fe322dfeab1fe186264e81305347c0e7c",
+    "supported_backend/kernel.h": "8e13a00029c51e4b366ef3e2fb465c17cfc689dad75cead0a760012b871ec3e4",
+    "supported_backend/batch.h": "be4357198e51ac0708c1c3a104cdf7088e19f12770d7d4288ee604e2b26fa31f",
+    "research/contact-gap-fix/supported_kernel.h": "50355e3488b132cbe379dc148865f2cd9840984a25615d29fc0ff2ed4509a1c2"
+  },
+  "controls_sha256": "e3482f1ef51d73f1723d17aa876c41cf684ef923776a98f628f80cf8bd9a0cda"
+}

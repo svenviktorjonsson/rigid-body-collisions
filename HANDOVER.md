@@ -1,3 +1,55 @@
+# Indexed batch/compiler import package — October 7, 2026
+
+Latest user: improve algorithms/correctness before BKF library tuning; finish for
+main compiler integration. No compiler repo edits or import/acceptance claims.
+Read paired bootstrap/spec AGENTS and handovers read-only for import boundaries:
+Section0 authority, append-only/newfixture workflow, oldpendingerrorspreserved.
+No new agents or physicalGPU sessions. Targetphysicsbranch same, origin0/0 atstart.
+
+Public supported_batch.PreparedBatch validates/owns immutable field-major15xN
+Float64 inputs, zero-copy11xN responsebuffer, explicitworker count. C11-compatible
+supported_backend/batch.h ABI1 withversion/count exports, validation, synchronous
+update, SIZE_MAXsuccess / SIZE_MAX-1globalargumenterror / earliestfailedbody.
+Disjointcallerownedbuffers, no retainedpointers/perbodyallocation; discardall
+outputsafterfailure. LinuxnativeOpenMP build; noWASM/GPU/compiler claims.
+supported_backend/INTEGRATION.md givesfields/units/ownership/lowering/oracles.
+
+Kernel normalizes q=Romega,b=M/R; consistentlinear mobility,tolerance andknown-
+direction fastpath. Actualoldbug: frictionless1e-8Ndrive rejectsR<=1e-6m due
+mixedaccelerationunits; fixedtestsR1e-12..1e6m. Exactspin0 onarrest; finiteenergy
+residual+p/Lguards catchoverflowincludingstaticimpulseoverflowwithoutwork.
+All physicalloss/energy/branch gates retained. Fullt/s meanings notchanged.
+
+Finalpairedrun-v3:1Mresponsecandidate1/4/8workers50.975/22.646/12.830msmedian;
+8workersrange12.417..14.606ms(7samples), ALLunder20ms. Preferred4missesmedian,
+retainednotcherry-picked. Matched-layoutoldreference46.463ms1worker vsnew50.975:
+NOscalaralgorithmicspeedup. Earlier81.4msharnessdifferent, donotuseasfairpaired
+baseline. Loads/all11stores/workerentry/gatesincluded; validation/prep/allocation/
+detection/poses/impacts/groups/historyexcluded. Timedrunsalternateordering,
+400Pythoncontrols1.04e-15scalederror, all1Moutputsworkerbit-identical.
+384MBbenchmarkarraysincludesverificationbuffers. run-v1/v2retained.
+
+contact_history.py experimental3orlessmodeimplicitmidpointspring/slider:
+staticcapacityfirst,dynamicconvexreturnmap,cachedsmallfactors,max27activesets.
+Openingzeroimpulse movesstoredenergytoseparatereleasedinternalmodeledger,
+notinferredheat/bodykineticenergy. 300randomcoupledpassivity/permutationcontrols.
+Nojointnormalimpact/generalmovingfullt/s/coupledpatchbudget/groupintegration;
+thiscomponentNOTcalledbynativebatch. Stiffness/capacitiesnotfit/publishedvalues
+unchanged; noempiricalaccuracygain. Prior24glasserrorsstillunchanged.
+
+54focusedtestsfinalPASS;2000randomcases m1e-6..1e6kg,R1e-9..1e6m maxscaled
+native/Python1.02e-15. Original400+100rotatedauditpasses unchangedmechanical
+numbers. InitialCprobeFAILusedF-contiguousinputwithfield-majorpointercontract;
+correctedprobeC-contiguous, sameoracle/kernel; failurelogpreserved. Newsource
+andreceiptsinresearch/supported-batch-optimization. Download/artifactcheckpoint
+followscodecheckpoint; finalgit historyanddownloadsreceiptidentifypins.
+
+Original13worldqualification/hosted393/maincompileracceptance remainopen.
+ReadyforSCOPEDsupportedbatchimportonly; generalcollisionmodelnotperfect.
+Nextcompilerowner shouldstartfromitscurrentacceptedpairedcheckpoint, addfresh
+oracleswithoutchangingoldones, independentlyrunactualnative/WASM/GPU routes
+underexistingauthorization/hardwarepolicy. No automaticworldcontact substitution.
+
 # Measured properties and sustained-contact repair — October 7, 2026
 
 Latest user: find missing model physics, fix it, continue. This checkpoint repairs

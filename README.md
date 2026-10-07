@@ -5,6 +5,14 @@
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
+The [supported-contact integration package](research/supported-batch-optimization/README.md)
+provides ABI v1, an indexed native/Python batch API and compiler import oracles.
+One million independent supported responses takes 12.83 ms with eight workers
+on the measured host; single-worker algorithmic speedup is not established.
+It fixes dimensional branch tolerances and exact spin arrest and adds a separate
+experimental passive contact-history component. General impact/group integration
+and moving-direction history remain unqualified.
+
 The [measured-inertia and sustained-contact repair](research/contact-gap-fix/README.md)
 adds authoritative mass/COM/inertia to the 3D adapter and a separate exact
 sphere/disk contact primitive with static/dynamic friction and independent rolling
