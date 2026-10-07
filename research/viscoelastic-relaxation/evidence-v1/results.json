@@ -1,0 +1,5219 @@
+{
+  "plan": {
+    "date": "2026-10-07",
+    "scope": "Search for a cheap physically motivated deformation reduction while bodies remain rigid. Isolated normal impacts and sustained pure rolling only; no production adoption or complete directional collision closure.",
+    "hypothesis": "Use one nonnegative viscoelastic relaxation time for normal indentation damping and speed-dependent rolling moment. A local contact history, rather than an arbitrary raw-impulse polynomial, supplies the physical connection.",
+    "normal": "F = k*x^(3/2) + 1.5*A*k*sqrt(x)*xdot. End a repulsive collision at the first unloading zero of total normal force. Retain residual elastic energy explicitly as unresolved internal recovery; never erase it or apply restitution again.",
+    "rolling": "Independent moment = -A*R*N*omega for a soft sphere on a hard plane in the small-deformation, slow-relaxation regime. In this project's dimensionless convention mu_r=A*abs(omega). The source's mu_roll has units of length, so mu_roll=R*mu_r; do not confuse the conventions.",
+    "documented_inputs": "Existing published restitution/friction inputs remain unchanged. No missing static friction is silently filled from dynamic friction. No coefficients from unlike rubber specimens or substrates are transferred.",
+    "rolling_data": "Reuse the 17 digitized experimental tennis points and the existing even-index 9-point fit / odd-index 8-point evaluation partition. Estimate one A>=0 per specimen versus one nonnegative constant per specimen. A first preview has already inspected evaluation errors: this is exploratory reuse, not a new confirmatory blind validation.",
+    "rock_data": "Use all 75 existing Wang2018 records. Compare one fitted constant normal restitution with one effective viscoelastic parameter under a homogeneous sphere size proxy, using the existing 50/25 release-height partition and four leave-one-plate-angle-out folds. Fit normal speed residual only, with identical objective for both models. Keep historical tangential restitution and sliding friction fixed for conditional secondary endpoints. Effective A*k^(2/5)/m^(2/5) cannot identify A without independent stiffness/mass characterization.",
+    "efficiency": "Exact exponential rolling advance; cache the dimensionless isolated normal restitution map versus beta. Compare table lookup with direct ODE at declared accuracy, and report setup cost, memory and batch sizes. This is not native-engine or all-case benchmarking, and isolated pair maps are invalid for overlapping simultaneous impacts.",
+    "acceptance": "Nonnegative losses, energy accounting including stored energy at release, analytical rolling/Newton-Euler closure, timestep subdivision and coordinate-length invariance. Retain worse predictions, failed assumptions, validation failures and scope limitations. No empirical model promoted from the tiny reused samples alone.",
+    "sources": [
+      "https://arxiv.org/pdf/cond-mat/0203343",
+      "https://arxiv.org/pdf/0708.1434",
+      "https://docs.lammps.org/pair_granular.html",
+      "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/21.%20GripSlip.PDF",
+      "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/47.%20MoreSpin.pdf"
+    ],
+    "twofold_gate": "Removed by user"
+  },
+  "tennis": {
+    "datasets": [
+      {
+        "specimen": "moderately_old",
+        "parameter_count_each_model": 1,
+        "estimated_effective_relaxation_s": 0.001860268160398083,
+        "constant_mu_r": 0.01643839116579818,
+        "training_count": 3,
+        "evaluation_count": 2,
+        "constant": {
+          "count": 2,
+          "rmse": 0.0024945220080479728,
+          "maximum_absolute_error": 0.0032692849325928128
+        },
+        "relaxation": {
+          "count": 2,
+          "rmse": 0.00120907616003431,
+          "maximum_absolute_error": 0.0013787825941371477
+        },
+        "rmse_reduction_percent": 51.530747929522455,
+        "maximum_error_reduction_percent": 57.82617231090777,
+        "one_pdf_point_sensitivity_s": [
+          0.0018256656297991156,
+          0.0018951628597916894
+        ],
+        "leave_one_out": {
+          "constant": {
+            "count": 5,
+            "rmse": 0.004902395990770716,
+            "maximum_absolute_error": 0.007781932155120066
+          },
+          "relaxation": {
+            "count": 5,
+            "rmse": 0.002422522191662276,
+            "maximum_absolute_error": 0.0039338587522774245
+          },
+          "records": [
+            {
+              "omitted_index": 0,
+              "relaxation_s": 0.0019417595720858617,
+              "constant_error": 0.007781932155120066,
+              "relaxation_error": 0.0039338587522774245
+            },
+            {
+              "omitted_index": 1,
+              "relaxation_s": 0.0018996021564319145,
+              "constant_error": 0.002142861170982214,
+              "relaxation_error": 0.0013522136722125058
+            },
+            {
+              "omitted_index": 2,
+              "relaxation_s": 0.001874679561174346,
+              "constant_error": 0.00015870762566123908,
+              "relaxation_error": 0.0001381128646899786
+            },
+            {
+              "omitted_index": 3,
+              "relaxation_s": 0.001833166128706282,
+              "constant_error": -0.003600669917051314,
+              "relaxation_error": -0.0016458141238933945
+            },
+            {
+              "omitted_index": 4,
+              "relaxation_s": 0.0017950737847570218,
+              "constant_error": -0.006482831034712203,
+              "relaxation_error": -0.003051485384774604
+            }
+          ]
+        },
+        "records": [
+          {
+            "specimen": "moderately_old",
+            "split": "train",
+            "omega_rad_s": 7.485712135471619,
+            "observed_mu_r": 0.010601594440653889,
+            "constant_prediction": 0.01643839116579818,
+            "relaxation_prediction": 0.013925431943523395,
+            "pdf_center_pt": [
+              414.5356140136719,
+              213.16357421875
+            ]
+          },
+          {
+            "specimen": "moderately_old",
+            "split": "held_out",
+            "omega_rad_s": 8.667638560225448,
+            "observed_mu_r": 0.015112851227964172,
+            "constant_prediction": 0.01643839116579818,
+            "relaxation_prediction": 0.016124132039426083,
+            "pdf_center_pt": [
+              444.6846008300781,
+              194.73870849609375
+            ]
+          },
+          {
+            "specimen": "moderately_old",
+            "split": "train",
+            "omega_rad_s": 8.98195471783082,
+            "observed_mu_r": 0.01670017406422095,
+            "constant_prediction": 0.01643839116579818,
+            "relaxation_prediction": 0.016708844379718025,
+            "pdf_center_pt": [
+              452.70228576660156,
+              188.25576782226562
+            ]
+          },
+          {
+            "specimen": "moderately_old",
+            "split": "held_out",
+            "omega_rad_s": 9.852823315715732,
+            "observed_mu_r": 0.019707676098390994,
+            "constant_prediction": 0.01643839116579818,
+            "relaxation_prediction": 0.018328893504253846,
+            "pdf_center_pt": [
+              474.9167022705078,
+              175.9725341796875
+            ]
+          },
+          {
+            "specimen": "moderately_old",
+            "split": "train",
+            "omega_rad_s": 10.563309301690769,
+            "observed_mu_r": 0.022013404992519706,
+            "constant_prediction": 0.01643839116579818,
+            "relaxation_prediction": 0.019650587962372245,
+            "pdf_center_pt": [
+              493.04002380371094,
+              166.55548095703125
+            ]
+          }
+        ]
+      },
+      {
+        "specimen": "old",
+        "parameter_count_each_model": 1,
+        "estimated_effective_relaxation_s": 0.00215927869871226,
+        "constant_mu_r": 0.017674730139661452,
+        "training_count": 3,
+        "evaluation_count": 3,
+        "constant": {
+          "count": 3,
+          "rmse": 0.004041847687442658,
+          "maximum_absolute_error": 0.006627750801946258
+        },
+        "relaxation": {
+          "count": 3,
+          "rmse": 0.0013153539026285804,
+          "maximum_absolute_error": 0.002166800433882312
+        },
+        "rmse_reduction_percent": 67.45661874604616,
+        "maximum_error_reduction_percent": 67.30715292967827,
+        "one_pdf_point_sensitivity_s": [
+          0.002121530179933446,
+          0.0021973662594795816
+        ],
+        "leave_one_out": {
+          "constant": {
+            "count": 6,
+            "rmse": 0.004054076503490832,
+            "maximum_absolute_error": 0.00641610921613011
+          },
+          "relaxation": {
+            "count": 6,
+            "rmse": 0.0009818668527420127,
+            "maximum_absolute_error": 0.001979192033568125
+          },
+          "records": [
+            {
+              "omitted_index": 0,
+              "relaxation_s": 0.0022346145514017266,
+              "constant_error": 0.006416063164698626,
+              "relaxation_error": 0.0008278218629264866
+            },
+            {
+              "omitted_index": 1,
+              "relaxation_s": 0.0022185534266975205,
+              "constant_error": 0.00270678441653769,
+              "relaxation_error": -0.00025242727733807216
+            },
+            {
+              "omitted_index": 2,
+              "relaxation_s": 0.002226636316398903,
+              "constant_error": 0.0009022043875922814,
+              "relaxation_error": 0.00021301731742696603
+            },
+            {
+              "omitted_index": 3,
+              "relaxation_s": 0.0022337200482815366,
+              "constant_error": -0.0009022504390237725,
+              "relaxation_error": 0.0005455059492291449
+            },
+            {
+              "omitted_index": 4,
+              "relaxation_s": 0.0022420170221217938,
+              "constant_error": -0.0027066923136747113,
+              "relaxation_error": 0.0008804614177179704
+            },
+            {
+              "omitted_index": 5,
+              "relaxation_s": 0.002177579415618457,
+              "constant_error": -0.00641610921613011,
+              "relaxation_error": -0.001979192033568125
+            }
+          ]
+        },
+        "records": [
+          {
+            "specimen": "old",
+            "split": "train",
+            "omega_rad_s": 6.460544084193104,
+            "observed_mu_r": 0.013609003957583764,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.013950115223089674,
+            "pdf_center_pt": [
+              387.70545959472656,
+              421.5708465576172
+            ]
+          },
+          {
+            "specimen": "old",
+            "split": "held_out",
+            "omega_rad_s": 7.413678708741605,
+            "observed_mu_r": 0.01670006958105121,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.01600819851488236,
+            "pdf_center_pt": [
+              412.2810821533203,
+              408.46107482910156
+            ]
+          },
+          {
+            "specimen": "old",
+            "split": "train",
+            "omega_rad_s": 8.271177225318649,
+            "observed_mu_r": 0.01820388627183905,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.017859776795904534,
+            "pdf_center_pt": [
+              434.3908233642578,
+              402.08311462402344
+            ]
+          },
+          {
+            "specimen": "old",
+            "split": "held_out",
+            "omega_rad_s": 9.066984285771555,
+            "observed_mu_r": 0.019707598627352427,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.019578146029825313,
+            "pdf_center_pt": [
+              454.909912109375,
+              395.7055969238281
+            ]
+          },
+          {
+            "specimen": "old",
+            "split": "train",
+            "omega_rad_s": 9.853520909654993,
+            "observed_mu_r": 0.021211300189561546,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.02127649780753388,
+            "pdf_center_pt": [
+              475.1899719238281,
+              389.328125
+            ]
+          },
+          {
+            "specimen": "old",
+            "split": "held_out",
+            "omega_rad_s": 10.25142355219202,
+            "observed_mu_r": 0.02430248094160771,
+            "constant_prediction": 0.017674730139661452,
+            "relaxation_prediction": 0.022135680507725398,
+            "pdf_center_pt": [
+              485.4494934082031,
+              376.2178649902344
+            ]
+          }
+        ]
+      },
+      {
+        "specimen": "new",
+        "parameter_count_each_model": 1,
+        "estimated_effective_relaxation_s": 0.02503925610788261,
+        "constant_mu_r": 0.23107289777253626,
+        "training_count": 3,
+        "evaluation_count": 3,
+        "constant": {
+          "count": 3,
+          "rmse": 0.057619589145812306,
+          "maximum_absolute_error": 0.08987226001464599
+        },
+        "relaxation": {
+          "count": 3,
+          "rmse": 0.0381973279813562,
+          "maximum_absolute_error": 0.05799620521205884
+        },
+        "rmse_reduction_percent": 33.70773976764407,
+        "maximum_error_reduction_percent": 35.46817983368003,
+        "one_pdf_point_sensitivity_s": [
+          0.024520923640680595,
+          0.02556178147842841
+        ],
+        "leave_one_out": {
+          "constant": {
+            "count": 6,
+            "rmse": 0.05914789822699078,
+            "maximum_absolute_error": 0.09115919315308227
+          },
+          "relaxation": {
+            "count": 6,
+            "rmse": 0.03773631785073931,
+            "maximum_absolute_error": 0.0633001773992174
+          },
+          "records": [
+            {
+              "omitted_index": 0,
+              "relaxation_s": 0.026141238848415623,
+              "constant_error": 0.07509116415903638,
+              "relaxation_error": 0.02859519384403733
+            },
+            {
+              "omitted_index": 1,
+              "relaxation_s": 0.02645068277565275,
+              "constant_error": 0.057166270387633056,
+              "relaxation_error": 0.04416521909852267
+            },
+            {
+              "omitted_index": 2,
+              "relaxation_s": 0.026222618633194545,
+              "constant_error": 0.027502758560727675,
+              "relaxation_error": 0.028859854408645746
+            },
+            {
+              "omitted_index": 3,
+              "relaxation_s": 0.025749187069233303,
+              "constant_error": -0.016069633828029534,
+              "relaxation_error": 0.00122297962527107
+            },
+            {
+              "omitted_index": 4,
+              "relaxation_s": 0.02516419590336161,
+              "constant_error": -0.05253136612628531,
+              "relaxation_error": -0.03057167130153543
+            },
+            {
+              "omitted_index": 5,
+              "relaxation_s": 0.024534186524289545,
+              "constant_error": -0.09115919315308227,
+              "relaxation_error": -0.0633001773992174
+            }
+          ]
+        },
+        "records": [
+          {
+            "specimen": "new",
+            "split": "train",
+            "omega_rad_s": 8.071476200036415,
+            "observed_mu_r": 0.18240319336041672,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.20210375974139091,
+            "pdf_center_pt": [
+              431.4753723144531,
+              655.1055908203125
+            ]
+          },
+          {
+            "specimen": "new",
+            "split": "held_out",
+            "omega_rad_s": 9.130419278152221,
+            "observed_mu_r": 0.1973406048365861,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.2286189066780021,
+            "pdf_center_pt": [
+              459.24363708496094,
+              651.29931640625
+            ]
+          },
+          {
+            "specimen": "new",
+            "split": "train",
+            "omega_rad_s": 9.5688403947837,
+            "observed_mu_r": 0.22206019802567395,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.2395966453004416,
+            "pdf_center_pt": [
+              470.7401885986328,
+              645.0003967285156
+            ]
+          },
+          {
+            "specimen": "new",
+            "split": "held_out",
+            "omega_rad_s": 10.08161942913352,
+            "observed_mu_r": 0.258370525016305,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.2524362508682795,
+            "pdf_center_pt": [
+              484.1865997314453,
+              635.7479858398438
+            ]
+          },
+          {
+            "specimen": "new",
+            "split": "train",
+            "omega_rad_s": 10.259959492506283,
+            "observed_mu_r": 0.2887553019315181,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.2569017533893661,
+            "pdf_center_pt": [
+              488.86314392089844,
+              628.0054931640625
+            ]
+          },
+          {
+            "specimen": "new",
+            "split": "held_out",
+            "omega_rad_s": 10.501468232210959,
+            "observed_mu_r": 0.32094515778718224,
+            "constant_prediction": 0.23107289777253626,
+            "relaxation_prediction": 0.2629489525751234,
+            "pdf_center_pt": [
+              495.1961364746094,
+              619.8030395507812
+            ]
+          }
+        ]
+      }
+    ],
+    "fit_is_validation": false,
+    "independent_confirmatory_validation": false,
+    "input_is_apparent_belt_speed_not_independent_ball_spin": true,
+    "actual_viscoelastic_relaxation_identified": false,
+    "scope": "Exploratory effective law for three quasirolling tennis specimens; slight skid, shell construction and specimen age confound continuum A"
+  },
+  "rocks": {
+    "height_split": {
+      "constant": {
+        "estimated_parameter": 0.4929855577176672,
+        "parameter_count": 1,
+        "training_count": 50,
+        "evaluation_count": 25,
+        "normal": {
+          "count": 25,
+          "rmse": 1.0043664381073134,
+          "maximum_absolute_error": 2.297267168903381
+        },
+        "tangent": {
+          "count": 25,
+          "rmse": 1.304693086608915,
+          "maximum_absolute_error": 3.4292956014615705
+        },
+        "spin": {
+          "count": 25,
+          "rmse": 12.876456216680483,
+          "maximum_absolute_error": 26.150396648327686
+        },
+        "records": [
+          {
+            "source_row": 25,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.751,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.8211310578696387,
+              3.465219899649222,
+              52.0390050175389
+            ],
+            "observed": [
+              3.039,
+              3.947,
+              51.3
+            ],
+            "energy_retained": 0.3647189179537257
+          },
+          {
+            "source_row": 26,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.457,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.6761933039006442,
+              3.784364652945811,
+              56.83176735270948
+            ],
+            "observed": [
+              3.177,
+              4.074,
+              65.8
+            ],
+            "energy_retained": 0.3891814112250239
+          },
+          {
+            "source_row": 27,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.901,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.8950788915272887,
+              3.7397612898344805,
+              56.161935508276
+            ],
+            "observed": [
+              2.718,
+              4.537,
+              59.2
+            ],
+            "energy_retained": 0.37539097873160054
+          },
+          {
+            "source_row": 35,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.592,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.756775238757195,
+              5.121696522783804,
+              76.91517386080982
+            ],
+            "observed": [
+              2.696,
+              4.682,
+              67.6
+            ],
+            "energy_retained": 0.525579765179358
+          },
+          {
+            "source_row": 36,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.698,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.8090317078752682,
+              5.26242782363507,
+              79.02860881824648
+            ],
+            "observed": [
+              3.722,
+              4.509,
+              58.2
+            ],
+            "energy_retained": 0.5275229436330281
+          },
+          {
+            "source_row": 37,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.523,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.722759235274676,
+              5.1478433218490665,
+              77.30783390754668
+            ],
+            "observed": [
+              3.342,
+              5.349,
+              54.1
+            ],
+            "energy_retained": 0.5296578613188863
+          },
+          {
+            "source_row": 44,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.384,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.1612486850342534,
+              6.022992067033446,
+              90.45039664832768
+            ],
+            "observed": [
+              2.016,
+              5.663,
+              64.3
+            ],
+            "energy_retained": 0.6098423376551386
+          },
+          {
+            "source_row": 45,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.81,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              1.8782749749043122,
+              6.149880944850162,
+              92.3559527574919
+            ],
+            "observed": [
+              2.913,
+              5.374,
+              81.5
+            ],
+            "energy_retained": 0.6356540913573818
+          },
+          {
+            "source_row": 46,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.798,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              1.8723591482117001,
+              5.916866823768556,
+              88.85665881157217
+            ],
+            "observed": [
+              1.414,
+              5.394,
+              66.2
+            ],
+            "energy_retained": 0.6303858932855417
+          },
+          {
+            "source_row": 53,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.301,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.641374210590685,
+              7.181794513030295,
+              78.81027434848521
+            ],
+            "observed": [
+              1.663,
+              5.281,
+              97.5
+            ],
+            "energy_retained": 0.7424002825720999
+          },
+          {
+            "source_row": 54,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.535,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.7567328310966192,
+              7.3532956014615705,
+              92.98521992692145
+            ],
+            "observed": [
+              3.054,
+              3.924,
+              107.2
+            ],
+            "energy_retained": 0.72550491150426
+          },
+          {
+            "source_row": 55,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.807,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.8908249027958246,
+              6.9050620237351,
+              103.69689881324493
+            ],
+            "observed": [
+              3.176,
+              4.013515124283919,
+              93.2
+            ],
+            "energy_retained": 0.706021317103311
+          },
+          {
+            "source_row": 63,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.358,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.627387733686595,
+              3.9235579067932385,
+              29.461052330169046
+            ],
+            "observed": [
+              2.833,
+              4.664,
+              30.4
+            ],
+            "energy_retained": 0.39944911998208055
+          },
+          {
+            "source_row": 64,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.55,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.7220409607683873,
+              3.5398151793354122,
+              26.579620516614682
+            ],
+            "observed": [
+              3.058,
+              3.853,
+              31.6
+            ],
+            "energy_retained": 0.37357391744677115
+          },
+          {
+            "source_row": 65,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.431,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.663375679399985,
+              3.3621707503920106,
+              25.245731240199735
+            ],
+            "observed": [
+              2.356,
+              3.725,
+              25.8
+            ],
+            "energy_retained": 0.36690946410455744
+          },
+          {
+            "source_row": 66,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.818,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              3.854161090236722,
+              3.661320892638692,
+              27.491977684032694
+            ],
+            "observed": [
+              2.869,
+              3.728,
+              26.3
+            ],
+            "energy_retained": 0.3733586225166158
+          },
+          {
+            "source_row": 73,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.717,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.8183984334719034,
+              5.1801423089296845,
+              38.896442276757874
+            ],
+            "observed": [
+              2.337,
+              5.436,
+              29.4
+            ],
+            "energy_retained": 0.5230609215687696
+          },
+          {
+            "source_row": 74,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.484,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.703532798523687,
+              5.054022454614889,
+              37.94943863462778
+            ],
+            "observed": [
+              3.239,
+              5.645,
+              29.7
+            ],
+            "energy_retained": 0.5270270967481852
+          },
+          {
+            "source_row": 75,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.717,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.8183984334719034,
+              5.1801423089296845,
+              38.896442276757874
+            ],
+            "observed": [
+              2.337,
+              6.109,
+              22.7
+            ],
+            "energy_retained": 0.5230609215687696
+          },
+          {
+            "source_row": 82,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.804,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              1.875317061558006,
+              6.1560331328655185,
+              46.224171678362055
+            ],
+            "observed": [
+              2.767,
+              3.963,
+              40.2
+            ],
+            "energy_retained": 0.6360276730172828
+          },
+          {
+            "source_row": 83,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.141,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.04145319450886,
+              6.072209571156293,
+              45.59476072109266
+            ],
+            "observed": [
+              1.944,
+              5.291,
+              31.3
+            ],
+            "energy_retained": 0.6208563703597398
+          },
+          {
+            "source_row": 84,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.149,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              2.0453970789706015,
+              5.701540243231099,
+              42.81149391922252
+            ],
+            "observed": [
+              3.036,
+              5.309,
+              45.3
+            ],
+            "energy_retained": 0.6098854587856752
+          },
+          {
+            "source_row": 91,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.951,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.9618148231071688,
+              6.1406526628271285,
+              46.1086834293218
+            ],
+            "observed": [
+              1.993,
+              4.991,
+              43.9
+            ],
+            "energy_retained": 0.6976335569838316
+          },
+          {
+            "source_row": 92,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.505,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.7419432643650891,
+              5.735377277315557,
+              43.06556806711108
+            ],
+            "observed": [
+              1.617,
+              6.1,
+              35.6
+            ],
+            "energy_retained": 0.7059228131043206
+          },
+          {
+            "source_row": 93,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 0.95,
+            "effective_e_n": 0.4929855577176672,
+            "prediction": [
+              0.46833627983178383,
+              6.865042880383383,
+              28.77392799041543
+            ],
+            "observed": [
+              1.357,
+              4.224,
+              45.0
+            ],
+            "energy_retained": 0.7774842777615292
+          }
+        ]
+      },
+      "viscoelastic": {
+        "estimated_parameter": 0.7132855392873007,
+        "parameter_count": 1,
+        "training_count": 50,
+        "evaluation_count": 25,
+        "normal": {
+          "count": 25,
+          "rmse": 1.1396901592997986,
+          "maximum_absolute_error": 2.347178412399441
+        },
+        "tangent": {
+          "count": 25,
+          "rmse": 1.2971935542423496,
+          "maximum_absolute_error": 3.460002276915828
+        },
+        "spin": {
+          "count": 25,
+          "rmse": 12.829220106773644,
+          "maximum_absolute_error": 26.150396648327686
+        },
+        "records": [
+          {
+            "source_row": 25,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.751,
+            "effective_e_n": 0.3731198471855906,
+            "prediction": [
+              2.892051935535513,
+              3.465219899649222,
+              52.0390050175389
+            ],
+            "observed": [
+              3.039,
+              3.947,
+              51.3
+            ],
+            "energy_retained": 0.287125983059811
+          },
+          {
+            "source_row": 26,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.457,
+            "effective_e_n": 0.3753522494983598,
+            "prediction": [
+              2.799001724509269,
+              3.784364652945811,
+              56.83176735270948
+            ],
+            "observed": [
+              3.177,
+              4.074,
+              65.8
+            ],
+            "energy_retained": 0.31802422407731923
+          },
+          {
+            "source_row": 27,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.901,
+            "effective_e_n": 0.3720145269393452,
+            "prediction": [
+              2.9392867773477667,
+              3.7397612898344805,
+              56.161935508276
+            ],
+            "observed": [
+              2.718,
+              4.537,
+              59.2
+            ],
+            "energy_retained": 0.2995005872753315
+          },
+          {
+            "source_row": 35,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.592,
+            "effective_e_n": 0.3920647232393319,
+            "prediction": [
+              2.1924259323543436,
+              5.121696522783804,
+              76.91517386080982
+            ],
+            "observed": [
+              2.696,
+              4.682,
+              67.6
+            ],
+            "energy_retained": 0.48864701871029703
+          },
+          {
+            "source_row": 36,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.698,
+            "effective_e_n": 0.3909695621630911,
+            "prediction": [
+              2.227744565205293,
+              5.26242782363507,
+              79.02860881824648
+            ],
+            "observed": [
+              3.722,
+              4.509,
+              58.2
+            ],
+            "energy_retained": 0.4905993590514222
+          },
+          {
+            "source_row": 37,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.523,
+            "effective_e_n": 0.39278915666857384,
+            "prediction": [
+              2.169374512280533,
+              5.1478433218490665,
+              77.30783390754668
+            ],
+            "observed": [
+              3.342,
+              5.349,
+              54.1
+            ],
+            "energy_retained": 0.4937115287123474
+          },
+          {
+            "source_row": 44,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.384,
+            "effective_e_n": 0.40630961398097726,
+            "prediction": [
+              1.7812613476926045,
+              6.022992067033446,
+              90.45039664832768
+            ],
+            "observed": [
+              2.016,
+              5.663,
+              64.3
+            ],
+            "energy_retained": 0.5912461380453758
+          },
+          {
+            "source_row": 45,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.81,
+            "effective_e_n": 0.4145605642936284,
+            "prediction": [
+              1.5794757499587242,
+              6.149880944850162,
+              92.3559527574919
+            ],
+            "observed": [
+              2.913,
+              5.374,
+              81.5
+            ],
+            "energy_retained": 0.6224872997803844
+          },
+          {
+            "source_row": 46,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.798,
+            "effective_e_n": 0.4147463061077582,
+            "prediction": [
+              1.5752064705972657,
+              5.916866823768556,
+              88.85665881157217
+            ],
+            "observed": [
+              1.414,
+              5.394,
+              66.2
+            ],
+            "energy_retained": 0.6164709326447297
+          },
+          {
+            "source_row": 53,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.301,
+            "effective_e_n": 0.4781185692133478,
+            "prediction": [
+              0.6220322585465654,
+              7.197490196577995,
+              78.0254901711002
+            ],
+            "observed": [
+              1.663,
+              5.281,
+              97.5
+            ],
+            "energy_retained": 0.7433974579548287
+          },
+          {
+            "source_row": 54,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.535,
+            "effective_e_n": 0.4683339931922728,
+            "prediction": [
+              0.7188926795501387,
+              7.384002276915828,
+              91.44988615420857
+            ],
+            "observed": [
+              3.054,
+              3.924,
+              107.2
+            ],
+            "energy_retained": 0.7268062849188215
+          },
+          {
+            "source_row": 55,
+            "diameter_m": 0.1,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.807,
+            "effective_e_n": 0.45867271034895374,
+            "prediction": [
+              0.8288215876005594,
+              6.9050620237351,
+              103.69689881324493
+            ],
+            "observed": [
+              3.176,
+              4.013515124283919,
+              93.2
+            ],
+            "energy_retained": 0.7047502869513484
+          },
+          {
+            "source_row": 63,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.358,
+            "effective_e_n": 0.5782989559558492,
+            "prediction": [
+              4.255123717923138,
+              3.9235579067932385,
+              29.461052330169046
+            ],
+            "observed": [
+              2.833,
+              4.664,
+              30.4
+            ],
+            "energy_retained": 0.4611692275947902
+          },
+          {
+            "source_row": 64,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.55,
+            "effective_e_n": 0.5768604188382773,
+            "prediction": [
+              4.355296162228994,
+              3.5398151793354122,
+              26.579620516614682
+            ],
+            "observed": [
+              3.058,
+              3.853,
+              31.6
+            ],
+            "energy_retained": 0.4389916002266856
+          },
+          {
+            "source_row": 65,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.431,
+            "effective_e_n": 0.5777478764489599,
+            "prediction": [
+              4.293244469892221,
+              3.3621707503920106,
+              25.245731240199735
+            ],
+            "observed": [
+              2.356,
+              3.725,
+              25.8
+            ],
+            "energy_retained": 0.434329715051694
+          },
+          {
+            "source_row": 66,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 30.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 7.818,
+            "effective_e_n": 0.5749092763892398,
+            "prediction": [
+              4.494640722811077,
+              3.661320892638692,
+              27.491977684032694
+            ],
+            "observed": [
+              2.869,
+              3.728,
+              26.3
+            ],
+            "energy_retained": 0.4371770915352349
+          },
+          {
+            "source_row": 73,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.717,
+            "effective_e_n": 0.592281833979513,
+            "prediction": [
+              3.3860752448608755,
+              5.1801423089296845,
+              38.896442276757874
+            ],
+            "observed": [
+              2.337,
+              5.436,
+              29.4
+            ],
+            "energy_retained": 0.568183081185043
+          },
+          {
+            "source_row": 74,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.484,
+            "effective_e_n": 0.5945677167107013,
+            "prediction": [
+              3.260609358441486,
+              5.054022454614889,
+              37.94943863462778
+            ],
+            "observed": [
+              3.239,
+              5.645,
+              29.7
+            ],
+            "energy_retained": 0.5723756785032783
+          },
+          {
+            "source_row": 75,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 45.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 5.717,
+            "effective_e_n": 0.592281833979513,
+            "prediction": [
+              3.3860752448608755,
+              5.1801423089296845,
+              38.896442276757874
+            ],
+            "observed": [
+              2.337,
+              6.109,
+              22.7
+            ],
+            "energy_retained": 0.568183081185043
+          },
+          {
+            "source_row": 82,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 3.804,
+            "effective_e_n": 0.6144047868336293,
+            "prediction": [
+              2.337195809115126,
+              6.1560331328655185,
+              46.224171678362055
+            ],
+            "observed": [
+              2.767,
+              3.963,
+              40.2
+            ],
+            "energy_retained": 0.6607973642374091
+          },
+          {
+            "source_row": 83,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.141,
+            "effective_e_n": 0.6098438614354441,
+            "prediction": [
+              2.525363430204174,
+              6.072209571156293,
+              45.59476072109266
+            ],
+            "observed": [
+              1.944,
+              5.291,
+              31.3
+            ],
+            "energy_retained": 0.6486560776690484
+          },
+          {
+            "source_row": 84,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 60.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 4.149,
+            "effective_e_n": 0.609739851048321,
+            "prediction": [
+              2.5298106419994837,
+              5.701540243231099,
+              42.81149391922252
+            ],
+            "observed": [
+              3.036,
+              5.309,
+              45.3
+            ],
+            "energy_retained": 0.6405898594338401
+          },
+          {
+            "source_row": 91,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.951,
+            "effective_e_n": 0.6493101563329624,
+            "prediction": [
+              1.2668041150056097,
+              6.1406526628271285,
+              46.1086834293218
+            ],
+            "observed": [
+              1.993,
+              4.991,
+              43.9
+            ],
+            "energy_retained": 0.7076933298641064
+          },
+          {
+            "source_row": 92,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 1.505,
+            "effective_e_n": 0.6623817808623665,
+            "prediction": [
+              0.9968845801978615,
+              5.735377277315557,
+              43.06556806711108
+            ],
+            "observed": [
+              1.617,
+              6.1,
+              35.6
+            ],
+            "energy_retained": 0.7135808481475071
+          },
+          {
+            "source_row": 93,
+            "diameter_m": 0.2,
+            "plate_angle_deg": 75.0,
+            "release_height_m": 4.5,
+            "incoming_normal_m_s": 0.95,
+            "effective_e_n": 0.6848210912444503,
+            "prediction": [
+              0.6505800366822277,
+              6.717154997632774,
+              32.471125059180665
+            ],
+            "observed": [
+              1.357,
+              4.224,
+              45.0
+            ],
+            "energy_retained": 0.7636874082861281
+          }
+        ]
+      }
+    },
+    "angle_folds": [
+      {
+        "angle": 30.0,
+        "models": {
+          "constant": {
+            "estimated_parameter": 0.612417165487975,
+            "parameter_count": 1,
+            "training_count": 55,
+            "evaluation_count": 20,
+            "normal": {
+              "count": 20,
+              "rmse": 1.62156934929883,
+              "maximum_absolute_error": 2.310329435881172
+            },
+            "tangent": {
+              "count": 20,
+              "rmse": 0.4975990343678955,
+              "maximum_absolute_error": 1.0709793918546713
+            },
+            "spin": {
+              "count": 20,
+              "rmse": 4.273365703708761,
+              "maximum_absolute_error": 9.056284633607369
+            },
+            "records": [
+              {
+                "source_row": 18,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.366,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.2862305100084734,
+                  2.8069357820061387,
+                  42.153210899693065
+                ],
+                "observed": [
+                  2.57,
+                  2.898,
+                  48.4
+                ],
+                "energy_retained": 0.48567934202182084
+              },
+              {
+                "source_row": 19,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.753,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.5232359530523203,
+                  2.610065765514749,
+                  39.19671172426254
+                ],
+                "observed": [
+                  1.714,
+                  2.824,
+                  43.2
+                ],
+                "energy_retained": 0.465346581524006
+              },
+              {
+                "source_row": 20,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.299,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.2451985599207798,
+                  2.718498079285397,
+                  40.825096035730134
+                ],
+                "observed": [
+                  1.929,
+                  2.902,
+                  41.5
+                ],
+                "energy_retained": 0.4827586385658445
+              },
+              {
+                "source_row": 21,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.445,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.334611466082024,
+                  2.6731256926721474,
+                  40.143715366392634
+                ],
+                "observed": [
+                  2.826,
+                  2.655,
+                  49.2
+                ],
+                "energy_retained": 0.4763111962362488
+              },
+              {
+                "source_row": 22,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.553,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.0131696854427,
+                  3.1537653813718287,
+                  47.361730931408566
+                ],
+                "observed": [
+                  2.536,
+                  3.342,
+                  50.6
+                ],
+                "energy_retained": 0.4734754991124467
+              },
+              {
+                "source_row": 23,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.314,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.866801982891074,
+                  3.376013173426561,
+                  50.69934132867193
+                ],
+                "observed": [
+                  2.683,
+                  4.008,
+                  55.4
+                ],
+                "energy_retained": 0.48902068678012794
+              },
+              {
+                "source_row": 24,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.68,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.090946665459673,
+                  3.15222733436799,
+                  47.338633281600515
+                ],
+                "observed": [
+                  2.184,
+                  4.168,
+                  44.8
+                ],
+                "energy_retained": 0.4707155732989054
+              },
+              {
+                "source_row": 25,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.751,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.746845449697294,
+                  3.465219899649222,
+                  52.0390050175389
+                ],
+                "observed": [
+                  3.039,
+                  3.947,
+                  51.3
+                ],
+                "energy_retained": 0.46339145049847774
+              },
+              {
+                "source_row": 26,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.457,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.5667948030438295,
+                  3.784364652945811,
+                  56.83176735270948
+                ],
+                "observed": [
+                  3.177,
+                  4.074,
+                  65.8
+                ],
+                "energy_retained": 0.481150007848685
+              },
+              {
+                "source_row": 27,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.901,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.83870802452049,
+                  3.7397612898344805,
+                  56.161935508276
+                ],
+                "observed": [
+                  2.718,
+                  4.537,
+                  59.2
+                ],
+                "energy_retained": 0.4711388375398121
+              },
+              {
+                "source_row": 57,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.365,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.285618092842986,
+                  2.5070166162575376,
+                  18.824584593561557
+                ],
+                "observed": [
+                  2.119,
+                  2.728,
+                  20.6
+                ],
+                "energy_retained": 0.46936034723173636
+              },
+              {
+                "source_row": 58,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.658,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.4650563223309625,
+                  2.8300064870637236,
+                  21.249837823406914
+                ],
+                "observed": [
+                  2.337,
+                  3.326,
+                  19.7
+                ],
+                "energy_retained": 0.4790165756074941
+              },
+              {
+                "source_row": 59,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.37,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.288680178670426,
+                  2.642364752595368,
+                  19.8408811851158
+                ],
+                "observed": [
+                  2.073,
+                  3.03,
+                  24.8
+                ],
+                "energy_retained": 0.4766418073152298
+              },
+              {
+                "source_row": 60,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.557,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.015619354104652,
+                  3.169145851410219,
+                  23.796353714744537
+                ],
+                "observed": [
+                  2.289,
+                  3.281,
+                  29.2
+                ],
+                "energy_retained": 0.47407843296041874
+              },
+              {
+                "source_row": 61,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.888,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.218329435881172,
+                  3.063020608145329,
+                  22.99948479636678
+                ],
+                "observed": [
+                  1.908,
+                  4.134,
+                  23.0
+                ],
+                "energy_retained": 0.46268904813231626
+              },
+              {
+                "source_row": 62,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.413,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  3.9274312822743838,
+                  3.267580859655913,
+                  24.535478508602168
+                ],
+                "observed": [
+                  1.911,
+                  3.51,
+                  27.9
+                ],
+                "energy_retained": 0.4817418955910934
+              },
+              {
+                "source_row": 63,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.358,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.50616550366052,
+                  3.9235579067932385,
+                  29.461052330169046
+                ],
+                "observed": [
+                  2.833,
+                  4.664,
+                  30.4
+                ],
+                "energy_retained": 0.48860385536926276
+              },
+              {
+                "source_row": 64,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.55,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.623749599434211,
+                  3.5398151793354122,
+                  26.579620516614682
+                ],
+                "observed": [
+                  3.058,
+                  3.853,
+                  31.6
+                ],
+                "energy_retained": 0.46981974113056163
+              },
+              {
+                "source_row": 65,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.431,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.550871956741142,
+                  3.3621707503920106,
+                  25.245731240199735
+                ],
+                "observed": [
+                  2.356,
+                  3.725,
+                  25.8
+                ],
+                "energy_retained": 0.46498167840437415
+              },
+              {
+                "source_row": 66,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.818,
+                "effective_e_n": 0.612417165487975,
+                "prediction": [
+                  4.787877399784988,
+                  3.661320892638692,
+                  27.491977684032694
+                ],
+                "observed": [
+                  2.869,
+                  3.728,
+                  26.3
+                ],
+                "energy_retained": 0.4696634476848377
+              }
+            ]
+          },
+          "viscoelastic": {
+            "estimated_parameter": 0.4690526187647044,
+            "parameter_count": 1,
+            "training_count": 55,
+            "evaluation_count": 20,
+            "normal": {
+              "count": 20,
+              "rmse": 1.701631216502942,
+              "maximum_absolute_error": 2.846563766943985
+            },
+            "tangent": {
+              "count": 20,
+              "rmse": 0.4975990343678955,
+              "maximum_absolute_error": 1.0709793918546713
+            },
+            "spin": {
+              "count": 20,
+              "rmse": 4.273365703708761,
+              "maximum_absolute_error": 9.056284633607369
+            },
+            "records": [
+              {
+                "source_row": 18,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.366,
+                "effective_e_n": 0.5180183152609382,
+                "prediction": [
+                  2.7796862796901944,
+                  2.8069357820061387,
+                  42.153210899693065
+                ],
+                "observed": [
+                  2.57,
+                  2.898,
+                  48.4
+                ],
+                "energy_retained": 0.41272317611335413
+              },
+              {
+                "source_row": 19,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.753,
+                "effective_e_n": 0.5139531807179922,
+                "prediction": [
+                  2.956772648670609,
+                  2.610065765514749,
+                  39.19671172426254
+                ],
+                "observed": [
+                  1.714,
+                  2.824,
+                  43.2
+                ],
+                "energy_retained": 0.3830741472356906
+              },
+              {
+                "source_row": 20,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.299,
+                "effective_e_n": 0.5187509118778398,
+                "prediction": [
+                  2.7488610820406736,
+                  2.718498079285397,
+                  40.825096035730134
+                ],
+                "observed": [
+                  1.929,
+                  2.902,
+                  41.5
+                ],
+                "energy_retained": 0.40943687527489536
+              },
+              {
+                "source_row": 21,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.445,
+                "effective_e_n": 0.5171658350150483,
+                "prediction": [
+                  2.815967971656938,
+                  2.6731256926721474,
+                  40.143715366392634
+                ],
+                "observed": [
+                  2.826,
+                  2.655,
+                  49.2
+                ],
+                "energy_retained": 0.3998694979168784
+              },
+              {
+                "source_row": 22,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.553,
+                "effective_e_n": 0.5063326294577214,
+                "prediction": [
+                  3.3179977208364484,
+                  3.1537653813718287,
+                  47.361730931408566
+                ],
+                "observed": [
+                  2.536,
+                  3.342,
+                  50.6
+                ],
+                "energy_retained": 0.3881940199312953
+              },
+              {
+                "source_row": 23,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.314,
+                "effective_e_n": 0.5085097309109279,
+                "prediction": [
+                  3.2107304409715987,
+                  3.376013173426561,
+                  50.69934132867193
+                ],
+                "observed": [
+                  2.683,
+                  4.008,
+                  55.4
+                ],
+                "energy_retained": 0.4105041160003349
+              },
+              {
+                "source_row": 24,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.68,
+                "effective_e_n": 0.5052071063089233,
+                "prediction": [
+                  3.3747834701436075,
+                  3.15222733436799,
+                  47.338633281600515
+                ],
+                "observed": [
+                  2.184,
+                  4.168,
+                  44.8
+                ],
+                "energy_retained": 0.3836703848839826
+              },
+              {
+                "source_row": 25,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.751,
+                "effective_e_n": 0.49647158652476164,
+                "prediction": [
+                  3.8481512671534275,
+                  3.465219899649222,
+                  52.0390050175389
+                ],
+                "observed": [
+                  3.039,
+                  3.947,
+                  51.3
+                ],
+                "energy_retained": 0.3672969269369838
+              },
+              {
+                "source_row": 26,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.457,
+                "effective_e_n": 0.4987457492705852,
+                "prediction": [
+                  3.7191470523107535,
+                  3.784364652945811,
+                  56.83176735270948
+                ],
+                "observed": [
+                  3.177,
+                  4.074,
+                  65.8
+                ],
+                "energy_retained": 0.3931609312995767
+              },
+              {
+                "source_row": 27,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.901,
+                "effective_e_n": 0.4953436758239057,
+                "prediction": [
+                  3.913710382684679,
+                  3.7397612898344805,
+                  56.161935508276
+                ],
+                "observed": [
+                  2.718,
+                  4.537,
+                  59.2
+                ],
+                "energy_retained": 0.37708125018241817
+              },
+              {
+                "source_row": 57,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.365,
+                "effective_e_n": 0.7019141120252821,
+                "prediction": [
+                  3.7657692110156384,
+                  2.5070166162575376,
+                  18.824584593561557
+                ],
+                "observed": [
+                  2.119,
+                  2.728,
+                  20.6
+                ],
+                "energy_retained": 0.555269015690622
+              },
+              {
+                "source_row": 58,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.658,
+                "effective_e_n": 0.6994604961083639,
+                "prediction": [
+                  3.9575474869811234,
+                  2.8300064870637236,
+                  21.249837823406914
+                ],
+                "observed": [
+                  2.337,
+                  3.326,
+                  19.7
+                ],
+                "energy_retained": 0.5592610621795875
+              },
+              {
+                "source_row": 59,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 5.37,
+                "effective_e_n": 0.7018712442466792,
+                "prediction": [
+                  3.7690485816046677,
+                  2.642364752595368,
+                  19.8408811851158
+                ],
+                "observed": [
+                  2.073,
+                  3.03,
+                  24.8
+                ],
+                "energy_retained": 0.5600586374356377
+              },
+              {
+                "source_row": 60,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.557,
+                "effective_e_n": 0.692586153899612,
+                "prediction": [
+                  4.541287411119756,
+                  3.169145851410219,
+                  23.796353714744537
+                ],
+                "observed": [
+                  2.289,
+                  3.281,
+                  29.2
+                ],
+                "energy_retained": 0.5490755285639904
+              },
+              {
+                "source_row": 61,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.888,
+                "effective_e_n": 0.6902676781277562,
+                "prediction": [
+                  4.754563766943985,
+                  3.063020608145329,
+                  22.99948479636678
+                ],
+                "observed": [
+                  1.908,
+                  4.134,
+                  23.0
+                ],
+                "energy_retained": 0.5386906604873413
+              },
+              {
+                "source_row": 62,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 6.413,
+                "effective_e_n": 0.6936278706880792,
+                "prediction": [
+                  4.448235534722652,
+                  3.267580859655913,
+                  24.535478508602168
+                ],
+                "observed": [
+                  1.911,
+                  3.51,
+                  27.9
+                ],
+                "energy_retained": 0.5554499199541895
+              },
+              {
+                "source_row": 63,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.358,
+                "effective_e_n": 0.6871424082256289,
+                "prediction": [
+                  5.055993839724177,
+                  3.9235579067932385,
+                  29.461052330169046
+                ],
+                "observed": [
+                  2.833,
+                  4.664,
+                  30.4
+                ],
+                "energy_retained": 0.5541833603186198
+              },
+              {
+                "source_row": 64,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.55,
+                "effective_e_n": 0.6859172709437881,
+                "prediction": [
+                  5.1786753956256,
+                  3.5398151793354122,
+                  26.579620516614682
+                ],
+                "observed": [
+                  3.058,
+                  3.853,
+                  31.6
+                ],
+                "energy_retained": 0.5393888792806305
+              },
+              {
+                "source_row": 65,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.431,
+                "effective_e_n": 0.6866732384268684,
+                "prediction": [
+                  5.10266883475006,
+                  3.3621707503920106,
+                  25.245731240199735
+                ],
+                "observed": [
+                  2.356,
+                  3.725,
+                  25.8
+                ],
+                "energy_retained": 0.5366417973238369
+              },
+              {
+                "source_row": 66,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 30.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 7.818,
+                "effective_e_n": 0.6842534026992149,
+                "prediction": [
+                  5.3494931023024614,
+                  3.661320892638692,
+                  27.491977684032694
+                ],
+                "observed": [
+                  2.869,
+                  3.728,
+                  26.3
+                ],
+                "energy_retained": 0.5376121970136934
+              }
+            ]
+          }
+        }
+      },
+      {
+        "angle": 45.0,
+        "models": {
+          "constant": {
+            "estimated_parameter": 0.4667055420520207,
+            "parameter_count": 1,
+            "training_count": 56,
+            "evaluation_count": 19,
+            "normal": {
+              "count": 19,
+              "rmse": 0.4546620949020958,
+              "maximum_absolute_error": 1.0627118213875857
+            },
+            "tangent": {
+              "count": 19,
+              "rmse": 0.4912538601528487,
+              "maximum_absolute_error": 0.9288576910703155
+            },
+            "spin": {
+              "count": 19,
+              "rmse": 12.306853970956881,
+              "maximum_absolute_error": 23.20783390754668
+            },
+            "records": [
+              {
+                "source_row": 28,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.992,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.8630885238716666,
+                  3.620562647036959,
+                  54.371867648152055
+                ],
+                "observed": [
+                  2.141,
+                  3.879,
+                  42.6
+                ],
+                "energy_retained": 0.5127346931437597
+              },
+              {
+                "source_row": 29,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.234,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.9760312650482557,
+                  3.9443215413450643,
+                  59.23392293274677
+                ],
+                "observed": [
+                  2.562,
+                  3.852,
+                  53.7
+                ],
+                "energy_retained": 0.519314164543354
+              },
+              {
+                "source_row": 30,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.124,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.9246936554225331,
+                  3.715152537773057,
+                  55.792373111347175
+                ],
+                "observed": [
+                  2.04,
+                  4.628,
+                  39.8
+                ],
+                "energy_retained": 0.5110698741125064
+              },
+              {
+                "source_row": 31,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.914,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.826685491591609,
+                  3.9435525178431448,
+                  59.222374107842754
+                ],
+                "observed": [
+                  1.952,
+                  3.739,
+                  46.4
+                ],
+                "energy_retained": 0.5381534586435139
+              },
+              {
+                "source_row": 32,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.95,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.3101924331575026,
+                  4.544928896344186,
+                  68.25355518279069
+                ],
+                "observed": [
+                  2.723,
+                  4.468,
+                  58.0
+                ],
+                "energy_retained": 0.5157598197920401
+              },
+              {
+                "source_row": 33,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.788,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.2345861353450753,
+                  4.558771319378737,
+                  68.46143403106313
+                ],
+                "observed": [
+                  2.406,
+                  5.258,
+                  53.2
+                ],
+                "energy_retained": 0.5246214985827228
+              },
+              {
+                "source_row": 34,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.862,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.2691223454569247,
+                  4.727187466299105,
+                  70.99062668504475
+                ],
+                "observed": [
+                  2.403,
+                  4.248,
+                  51.6
+                ],
+                "energy_retained": 0.5296714763260065
+              },
+              {
+                "source_row": 35,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.592,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.6098173911548996,
+                  5.121696522783804,
+                  76.91517386080982
+                ],
+                "observed": [
+                  2.696,
+                  4.682,
+                  67.6
+                ],
+                "energy_retained": 0.5151513115466234
+              },
+              {
+                "source_row": 36,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.698,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.6592881786124143,
+                  5.26242782363507,
+                  79.02860881824648
+                ],
+                "observed": [
+                  3.722,
+                  4.509,
+                  58.2
+                ],
+                "energy_retained": 0.5171962223556434
+              },
+              {
+                "source_row": 37,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.523,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.5776147087533103,
+                  5.1478433218490665,
+                  77.30783390754668
+                ],
+                "observed": [
+                  3.342,
+                  5.349,
+                  54.1
+                ],
+                "energy_retained": 0.5194429106327463
+              },
+              {
+                "source_row": 67,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.609,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.1510458433177635,
+                  3.6820845271905185,
+                  27.647886820237044
+                ],
+                "observed": [
+                  2.769,
+                  3.596,
+                  33.8
+                ],
+                "energy_retained": 0.48094664539014537
+              },
+              {
+                "source_row": 68,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.162,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.94242846602051,
+                  3.507516192254794,
+                  26.337095193630148
+                ],
+                "observed": [
+                  2.334,
+                  3.156,
+                  27.4
+                ],
+                "energy_retained": 0.49443372649626594
+              },
+              {
+                "source_row": 69,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.922,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  1.8304191359280253,
+                  4.0596750666329875,
+                  30.4831233341753
+                ],
+                "observed": [
+                  2.028,
+                  3.88,
+                  32.1
+                ],
+                "energy_retained": 0.5444698249219905
+              },
+              {
+                "source_row": 70,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 5.078,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.369930742540161,
+                  4.731801607310622,
+                  35.529959817234435
+                ],
+                "observed": [
+                  2.883,
+                  4.313,
+                  37.6
+                ],
+                "energy_retained": 0.5193773949373214
+              },
+              {
+                "source_row": 71,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 5.375,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.508542288529611,
+                  4.566461554397931,
+                  34.2884611400517
+                ],
+                "observed": [
+                  2.365,
+                  3.879,
+                  28.7
+                ],
+                "energy_retained": 0.49646012425173547
+              },
+              {
+                "source_row": 72,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.91,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.2915242114754215,
+                  4.75102719485861,
+                  35.67432012853477
+                ],
+                "observed": [
+                  2.295,
+                  4.609,
+                  31.5
+                ],
+                "energy_retained": 0.5285195780850683
+              },
+              {
+                "source_row": 73,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.717,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.668155583911402,
+                  5.1801423089296845,
+                  38.896442276757874
+                ],
+                "observed": [
+                  2.337,
+                  5.436,
+                  29.4
+                ],
+                "energy_retained": 0.5125005974468477
+              },
+              {
+                "source_row": 74,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.484,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.5594131926132815,
+                  5.054022454614889,
+                  37.94943863462778
+                ],
+                "observed": [
+                  3.239,
+                  5.645,
+                  29.7
+                ],
+                "energy_retained": 0.5166744161095318
+              },
+              {
+                "source_row": 75,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.717,
+                "effective_e_n": 0.4667055420520207,
+                "prediction": [
+                  2.668155583911402,
+                  5.1801423089296845,
+                  38.896442276757874
+                ],
+                "observed": [
+                  2.337,
+                  6.109,
+                  22.7
+                ],
+                "energy_retained": 0.5125005974468477
+              }
+            ]
+          },
+          "viscoelastic": {
+            "estimated_parameter": 0.7876435852726543,
+            "parameter_count": 1,
+            "training_count": 56,
+            "evaluation_count": 19,
+            "normal": {
+              "count": 19,
+              "rmse": 0.7486290923209645,
+              "maximum_absolute_error": 1.6575607938083277
+            },
+            "tangent": {
+              "count": 19,
+              "rmse": 0.4912538601528487,
+              "maximum_absolute_error": 0.9288576910703155
+            },
+            "spin": {
+              "count": 19,
+              "rmse": 12.306853970956881,
+              "maximum_absolute_error": 23.20783390754668
+            },
+            "records": [
+              {
+                "source_row": 28,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.992,
+                "effective_e_n": 0.38282511705332284,
+                "prediction": [
+                  1.5282378672768648,
+                  3.620562647036959,
+                  54.371867648152055
+                ],
+                "observed": [
+                  2.141,
+                  3.879,
+                  42.6
+                ],
+                "energy_retained": 0.4829302761217765
+              },
+              {
+                "source_row": 29,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.234,
+                "effective_e_n": 0.3794125065377854,
+                "prediction": [
+                  1.6064325526809835,
+                  3.9443215413450643,
+                  59.23392293274677
+                ],
+                "observed": [
+                  2.562,
+                  3.852,
+                  53.7
+                ],
+                "energy_retained": 0.48938035651737155
+              },
+              {
+                "source_row": 30,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.124,
+                "effective_e_n": 0.3809379696604016,
+                "prediction": [
+                  1.5709881868794962,
+                  3.715152537773057,
+                  55.792373111347175
+                ],
+                "observed": [
+                  2.04,
+                  4.628,
+                  39.8
+                ],
+                "energy_retained": 0.4804238691899085
+              },
+              {
+                "source_row": 31,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.914,
+                "effective_e_n": 0.3839708323643562,
+                "prediction": [
+                  1.5028618378740901,
+                  3.9435525178431448,
+                  59.222374107842754
+                ],
+                "observed": [
+                  1.952,
+                  3.739,
+                  46.4
+                ],
+                "energy_retained": 0.512245349232781
+              },
+              {
+                "source_row": 32,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.95,
+                "effective_e_n": 0.3703888385276822,
+                "prediction": [
+                  1.833424750712027,
+                  4.544928896344186,
+                  68.25355518279069
+                ],
+                "observed": [
+                  2.723,
+                  4.468,
+                  58.0
+                ],
+                "energy_retained": 0.4825186483804319
+              },
+              {
+                "source_row": 33,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.788,
+                "effective_e_n": 0.37230607615380035,
+                "prediction": [
+                  1.7826014926243963,
+                  4.558771319378737,
+                  68.46143403106313
+                ],
+                "observed": [
+                  2.406,
+                  5.258,
+                  53.2
+                ],
+                "energy_retained": 0.49335185520698893
+              },
+              {
+                "source_row": 34,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.862,
+                "effective_e_n": 0.3714220665333421,
+                "prediction": [
+                  1.8058540874851092,
+                  4.727187466299105,
+                  70.99062668504475
+                ],
+                "observed": [
+                  2.403,
+                  4.248,
+                  51.6
+                ],
+                "energy_retained": 0.49893777021349084
+              },
+              {
+                "source_row": 35,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.592,
+                "effective_e_n": 0.3633847168639502,
+                "prediction": [
+                  2.0320473367032093,
+                  5.121696522783804,
+                  76.91517386080982
+                ],
+                "observed": [
+                  2.696,
+                  4.682,
+                  67.6
+                ],
+                "energy_retained": 0.4796882675282019
+              },
+              {
+                "source_row": 36,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.698,
+                "effective_e_n": 0.3623094429960815,
+                "prediction": [
+                  2.0644392061916723,
+                  5.26242782363507,
+                  79.02860881824648
+                ],
+                "observed": [
+                  3.722,
+                  4.509,
+                  58.2
+                ],
+                "energy_retained": 0.4817596245042761
+              },
+              {
+                "source_row": 37,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.523,
+                "effective_e_n": 0.3640961499952671,
+                "prediction": [
+                  2.0109030364238603,
+                  5.1478433218490665,
+                  77.30783390754668
+                ],
+                "observed": [
+                  3.342,
+                  5.349,
+                  54.1
+                ],
+                "energy_retained": 0.4849155266769304
+              },
+              {
+                "source_row": 67,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.609,
+                "effective_e_n": 0.5767328442455733,
+                "prediction": [
+                  2.658161679127847,
+                  3.6820845271905185,
+                  27.647886820237044
+                ],
+                "observed": [
+                  2.769,
+                  3.596,
+                  33.8
+                ],
+                "energy_retained": 0.5361638831040049
+              },
+              {
+                "source_row": 68,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 4.162,
+                "effective_e_n": 0.582418757399655,
+                "prediction": [
+                  2.424026868297364,
+                  3.507516192254794,
+                  26.337095193630148
+                ],
+                "observed": [
+                  2.334,
+                  3.156,
+                  27.4
+                ],
+                "energy_retained": 0.5495912305784528
+              },
+              {
+                "source_row": 69,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.922,
+                "effective_e_n": 0.5857142949853607,
+                "prediction": [
+                  2.2971714649325845,
+                  4.0596750666329875,
+                  30.4831233341753
+                ],
+                "observed": [
+                  2.028,
+                  3.88,
+                  32.1
+                ],
+                "energy_retained": 0.5890147004594398
+              },
+              {
+                "source_row": 70,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 5.078,
+                "effective_e_n": 0.5713026696317957,
+                "prediction": [
+                  2.9010749563902585,
+                  4.731801607310622,
+                  35.529959817234435
+                ],
+                "observed": [
+                  2.883,
+                  4.313,
+                  37.6
+                ],
+                "energy_retained": 0.5633658070964948
+              },
+              {
+                "source_row": 71,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 5.375,
+                "effective_e_n": 0.5681049061507131,
+                "prediction": [
+                  3.0535638705600827,
+                  4.566461554397931,
+                  34.2884611400517
+                ],
+                "observed": [
+                  2.365,
+                  3.879,
+                  28.7
+                ],
+                "energy_retained": 0.5437157085912435
+              },
+              {
+                "source_row": 72,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 4.91,
+                "effective_e_n": 0.573191014442537,
+                "prediction": [
+                  2.8143678809128567,
+                  4.75102719485861,
+                  35.67432012853477
+                ],
+                "observed": [
+                  2.295,
+                  4.609,
+                  31.5
+                ],
+                "energy_retained": 0.5713866957007353
+              },
+              {
+                "source_row": 73,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.717,
+                "effective_e_n": 0.5646242363097891,
+                "prediction": [
+                  3.227956758983064,
+                  5.1801423089296845,
+                  38.896442276757874
+                ],
+                "observed": [
+                  2.337,
+                  5.436,
+                  29.4
+                ],
+                "energy_retained": 0.5547853050888447
+              },
+              {
+                "source_row": 74,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.484,
+                "effective_e_n": 0.5669732549296433,
+                "prediction": [
+                  3.109281330034164,
+                  5.054022454614889,
+                  37.94943863462778
+                ],
+                "observed": [
+                  3.239,
+                  5.645,
+                  29.7
+                ],
+                "energy_retained": 0.5592188203849461
+              },
+              {
+                "source_row": 75,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 45.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 5.717,
+                "effective_e_n": 0.5646242363097891,
+                "prediction": [
+                  3.227956758983064,
+                  5.1801423089296845,
+                  38.896442276757874
+                ],
+                "observed": [
+                  2.337,
+                  6.109,
+                  22.7
+                ],
+                "energy_retained": 0.5547853050888447
+              }
+            ]
+          }
+        }
+      },
+      {
+        "angle": 60.0,
+        "models": {
+          "constant": {
+            "estimated_parameter": 0.4490089533530621,
+            "parameter_count": 1,
+            "training_count": 57,
+            "evaluation_count": 18,
+            "normal": {
+              "count": 18,
+              "rmse": 1.028611089826039,
+              "maximum_absolute_error": 2.0441627169844008
+            },
+            "tangent": {
+              "count": 18,
+              "rmse": 0.8510497608538126,
+              "maximum_absolute_error": 2.1930331328655184
+            },
+            "spin": {
+              "count": 18,
+              "rmse": 11.433062716316194,
+              "maximum_absolute_error": 26.150396648327686
+            },
+            "records": [
+              {
+                "source_row": 38,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.52,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.1315025624497166,
+                  4.449569982106169,
+                  66.82150089469151
+                ],
+                "observed": [
+                  2.074,
+                  3.755,
+                  66.8
+                ],
+                "energy_retained": 0.641356792969228
+              },
+              {
+                "source_row": 39,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.868,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.287757678216582,
+                  4.427268300550503,
+                  66.48658497247479
+                ],
+                "observed": [
+                  2.23,
+                  4.22,
+                  59.4
+                ],
+                "energy_retained": 0.6207502612960168
+              },
+              {
+                "source_row": 40,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.892,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.2985338930970556,
+                  4.732570630812542,
+                  71.07146845937291
+                ],
+                "observed": [
+                  1.951,
+                  4.234,
+                  61.7
+                ],
+                "energy_retained": 0.6301358110633644
+              },
+              {
+                "source_row": 41,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.382,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.518548280240056,
+                  5.6800075851773535,
+                  85.29962074113232
+                ],
+                "observed": [
+                  2.797,
+                  6.323,
+                  62.4
+                ],
+                "energy_retained": 0.6340948170698835
+              },
+              {
+                "source_row": 42,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.464,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.5553670144150071,
+                  5.500056085728193,
+                  82.59719571359037
+                ],
+                "observed": [
+                  2.713,
+                  4.828,
+                  81.3
+                ],
+                "energy_retained": 0.6253654804314009
+              },
+              {
+                "source_row": 43,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.494,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.5688372830155992,
+                  5.313952398263677,
+                  79.80238008681619
+                ],
+                "observed": [
+                  3.613,
+                  3.849,
+                  75.4
+                ],
+                "energy_retained": 0.6182479868134385
+              },
+              {
+                "source_row": 44,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.384,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.9684552514998246,
+                  6.022992067033446,
+                  90.45039664832768
+                ],
+                "observed": [
+                  2.016,
+                  5.663,
+                  64.3
+                ],
+                "energy_retained": 0.5999592323423438
+              },
+              {
+                "source_row": 45,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.81,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.7107241122751666,
+                  6.149880944850162,
+                  92.3559527574919
+                ],
+                "observed": [
+                  2.913,
+                  5.374,
+                  81.5
+                ],
+                "energy_retained": 0.6279905972233237
+              },
+              {
+                "source_row": 46,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.798,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.70533600483493,
+                  5.916866823768556,
+                  88.85665881157217
+                ],
+                "observed": [
+                  1.414,
+                  5.394,
+                  66.2
+                ],
+                "energy_retained": 0.6222693748639072
+              },
+              {
+                "source_row": 76,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.524,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.1332985982631287,
+                  4.411118807010195,
+                  33.12202982474512
+                ],
+                "observed": [
+                  2.097,
+                  4.176,
+                  39.4
+                ],
+                "energy_retained": 0.6399072170112655
+              },
+              {
+                "source_row": 77,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.13,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.4053980239950843,
+                  4.233474378066792,
+                  31.788140548330183
+                ],
+                "observed": [
+                  2.517,
+                  4.035,
+                  32.6
+                ],
+                "energy_retained": 0.596963672783261
+              },
+              {
+                "source_row": 78,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.888,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.2967378572836434,
+                  4.376512749423818,
+                  32.86218126440455
+                ],
+                "observed": [
+                  1.9,
+                  3.927,
+                  31.5
+                ],
+                "energy_retained": 0.617635761768466
+              },
+              {
+                "source_row": 79,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.093,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.3887846927210212,
+                  5.213210319512223,
+                  39.14474201219442
+                ],
+                "observed": [
+                  1.909,
+                  5.111,
+                  31.7
+                ],
+                "energy_retained": 0.6346286467998247
+              },
+              {
+                "source_row": 80,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.294,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.4790354923449867,
+                  5.325487750792468,
+                  39.98780623018829
+                ],
+                "observed": [
+                  2.208,
+                  4.1,
+                  38.4
+                ],
+                "energy_retained": 0.6282424588830927
+              },
+              {
+                "source_row": 81,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.194,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.4341345970096804,
+                  5.291650716708011,
+                  39.733732082299724
+                ],
+                "observed": [
+                  2.958,
+                  4.362,
+                  42.5
+                ],
+                "energy_retained": 0.6320332843351023
+              },
+              {
+                "source_row": 82,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.804,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.7080300585550483,
+                  6.1560331328655185,
+                  46.224171678362055
+                ],
+                "observed": [
+                  2.767,
+                  3.963,
+                  40.2
+                ],
+                "energy_retained": 0.6283963040165284
+              },
+              {
+                "source_row": 83,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.141,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.8593460758350302,
+                  6.072209571156293,
+                  45.59476072109266
+                ],
+                "observed": [
+                  1.944,
+                  5.291,
+                  31.3
+                ],
+                "energy_retained": 0.611920386672082
+              },
+              {
+                "source_row": 84,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.149,
+                "effective_e_n": 0.4490089533530621,
+                "prediction": [
+                  1.8629381474618547,
+                  5.701540243231099,
+                  42.81149391922252
+                ],
+                "observed": [
+                  3.036,
+                  5.309,
+                  45.3
+                ],
+                "energy_retained": 0.6000060615565884
+              }
+            ]
+          },
+          "viscoelastic": {
+            "estimated_parameter": 0.8316444570009138,
+            "parameter_count": 1,
+            "training_count": 57,
+            "evaluation_count": 18,
+            "normal": {
+              "count": 18,
+              "rmse": 1.009805752233816,
+              "maximum_absolute_error": 2.303438612058444
+            },
+            "tangent": {
+              "count": 18,
+              "rmse": 0.8510497608538126,
+              "maximum_absolute_error": 2.1930331328655184
+            },
+            "spin": {
+              "count": 18,
+              "rmse": 11.433062716316194,
+              "maximum_absolute_error": 26.150396648327686
+            },
+            "records": [
+              {
+                "source_row": 38,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.52,
+                "effective_e_n": 0.39378418955405986,
+                "prediction": [
+                  0.9923361576762308,
+                  4.449569982106169,
+                  66.82150089469151
+                ],
+                "observed": [
+                  2.074,
+                  3.755,
+                  66.8
+                ],
+                "energy_retained": 0.6339357438461733
+              },
+              {
+                "source_row": 39,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.868,
+                "effective_e_n": 0.3862460948677649,
+                "prediction": [
+                  1.1077538000807496,
+                  4.427268300550503,
+                  66.48658497247479
+                ],
+                "observed": [
+                  2.23,
+                  4.22,
+                  59.4
+                ],
+                "energy_retained": 0.6103268319320077
+              },
+              {
+                "source_row": 40,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.892,
+                "effective_e_n": 0.3857615193863521,
+                "prediction": [
+                  1.1156223140653303,
+                  4.732570630812542,
+                  71.07146845937291
+                ],
+                "observed": [
+                  1.951,
+                  4.234,
+                  61.7
+                ],
+                "energy_retained": 0.620585178541661
+              },
+              {
+                "source_row": 41,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.382,
+                "effective_e_n": 0.3766856653472863,
+                "prediction": [
+                  1.2739509202045223,
+                  5.6800075851773535,
+                  85.29962074113232
+                ],
+                "observed": [
+                  2.797,
+                  6.323,
+                  62.4
+                ],
+                "energy_retained": 0.623744333513508
+              },
+              {
+                "source_row": 42,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.464,
+                "effective_e_n": 0.3753010167729532,
+                "prediction": [
+                  1.3000427221015098,
+                  5.500056085728193,
+                  82.59719571359037
+                ],
+                "observed": [
+                  2.713,
+                  4.828,
+                  81.3
+                ],
+                "energy_retained": 0.6138207321757897
+              },
+              {
+                "source_row": 43,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.494,
+                "effective_e_n": 0.37480291583902586,
+                "prediction": [
+                  1.3095613879415564,
+                  5.313952398263677,
+                  79.80238008681619
+                ],
+                "observed": [
+                  3.613,
+                  3.849,
+                  75.4
+                ],
+                "energy_retained": 0.6058005637207903
+              },
+              {
+                "source_row": 44,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.384,
+                "effective_e_n": 0.3617576163266853,
+                "prediction": [
+                  1.5859453899761884,
+                  6.022992067033446,
+                  90.45039664832768
+                ],
+                "observed": [
+                  2.016,
+                  5.663,
+                  64.3
+                ],
+                "energy_retained": 0.583082386540939
+              },
+              {
+                "source_row": 45,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.81,
+                "effective_e_n": 0.3698109494941176,
+                "prediction": [
+                  1.408979717572588,
+                  6.149880944850162,
+                  92.3559527574919
+                ],
+                "observed": [
+                  2.913,
+                  5.374,
+                  81.5
+                ],
+                "energy_retained": 0.6159939637401755
+              },
+              {
+                "source_row": 46,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.798,
+                "effective_e_n": 0.3699925289048709,
+                "prediction": [
+                  1.4052316247806997,
+                  5.916866823768556,
+                  88.85665881157217
+                ],
+                "observed": [
+                  1.414,
+                  5.394,
+                  66.2
+                ],
+                "energy_retained": 0.6095898851580165
+              },
+              {
+                "source_row": 76,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.524,
+                "effective_e_n": 0.5950270423013606,
+                "prediction": [
+                  1.5018482547686343,
+                  4.411118807010195,
+                  33.12202982474512
+                ],
+                "observed": [
+                  2.097,
+                  4.176,
+                  39.4
+                ],
+                "energy_retained": 0.664636686890839
+              },
+              {
+                "source_row": 77,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 3.13,
+                "effective_e_n": 0.5831502505989388,
+                "prediction": [
+                  1.8252602843746784,
+                  4.233474378066792,
+                  31.788140548330183
+                ],
+                "observed": [
+                  2.517,
+                  4.035,
+                  32.6
+                ],
+                "energy_retained": 0.6307882709756483
+              },
+              {
+                "source_row": 78,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 2.888,
+                "effective_e_n": 0.5876090685477933,
+                "prediction": [
+                  1.697014989966027,
+                  4.376512749423818,
+                  32.86218126440455
+                ],
+                "observed": [
+                  1.9,
+                  3.927,
+                  31.5
+                ],
+                "energy_retained": 0.6470585193329886
+              },
+              {
+                "source_row": 79,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.093,
+                "effective_e_n": 0.5838104631318443,
+                "prediction": [
+                  1.8057257624667942,
+                  5.213210319512223,
+                  39.14474201219442
+                ],
+                "observed": [
+                  1.909,
+                  5.111,
+                  31.7
+                ],
+                "energy_retained": 0.6586179634860313
+              },
+              {
+                "source_row": 80,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.294,
+                "effective_e_n": 0.580309873909587,
+                "prediction": [
+                  1.9115407246581795,
+                  5.325487750792468,
+                  39.98780623018829
+                ],
+                "observed": [
+                  2.208,
+                  4.1,
+                  38.4
+                ],
+                "energy_retained": 0.6531793774502204
+              },
+              {
+                "source_row": 81,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 3.194,
+                "effective_e_n": 0.5820254562834302,
+                "prediction": [
+                  1.8589893073692758,
+                  5.291650716708011,
+                  39.733732082299724
+                ],
+                "observed": [
+                  2.958,
+                  4.362,
+                  42.5
+                ],
+                "energy_retained": 0.6563443901166429
+              },
+              {
+                "source_row": 82,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 3.804,
+                "effective_e_n": 0.572261053891035,
+                "prediction": [
+                  2.176881049001497,
+                  6.1560331328655185,
+                  46.224171678362055
+                ],
+                "observed": [
+                  2.767,
+                  3.963,
+                  40.2
+                ],
+                "energy_retained": 0.6515845178239377
+              },
+              {
+                "source_row": 83,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.141,
+                "effective_e_n": 0.56748638882892,
+                "prediction": [
+                  2.349961136140558,
+                  6.072209571156293,
+                  45.59476072109266
+                ],
+                "observed": [
+                  1.944,
+                  5.291,
+                  31.3
+                ],
+                "energy_retained": 0.6378988429664421
+              },
+              {
+                "source_row": 84,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 60.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 4.149,
+                "effective_e_n": 0.5673775864186617,
+                "prediction": [
+                  2.354049606051027,
+                  5.701540243231099,
+                  42.81149391922252
+                ],
+                "observed": [
+                  3.036,
+                  5.309,
+                  45.3
+                ],
+                "energy_retained": 0.6286977377255208
+              }
+            ]
+          }
+        }
+      },
+      {
+        "angle": 75.0,
+        "models": {
+          "constant": {
+            "estimated_parameter": 0.4684309450138271,
+            "parameter_count": 1,
+            "training_count": 57,
+            "evaluation_count": 18,
+            "normal": {
+              "count": 18,
+              "rmse": 1.1044510123200113,
+              "maximum_absolute_error": 2.3349584994037755
+            },
+            "tangent": {
+              "count": 18,
+              "rmse": 1.7828452349203918,
+              "maximum_absolute_error": 3.4598815110262593
+            },
+            "spin": {
+              "count": 18,
+              "rmse": 12.023099643089065,
+              "maximum_absolute_error": 33.72571556539269
+            },
+            "records": [
+              {
+                "source_row": 47,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.371,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.6422188256139569,
+                  5.040180031580338,
+                  75.6909984209831
+                ],
+                "observed": [
+                  1.582,
+                  3.192,
+                  75.9
+                ],
+                "energy_retained": 0.703586454811618
+              },
+              {
+                "source_row": 48,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.652,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.7738479211628423,
+                  4.6802770326820164,
+                  70.28614836589918
+                ],
+                "observed": [
+                  1.553,
+                  3.378,
+                  68.2
+                ],
+                "energy_retained": 0.6900933241095848
+              },
+              {
+                "source_row": 49,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.264,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.5920967144974775,
+                  4.839464897579351,
+                  72.67675512103246
+                ],
+                "observed": [
+                  1.158,
+                  3.367,
+                  73.1
+                ],
+                "energy_retained": 0.7051755000970021
+              },
+              {
+                "source_row": 50,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.431,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.6703246823147866,
+                  5.969808757184741,
+                  85.25956214076295
+                ],
+                "observed": [
+                  1.641,
+                  4.421,
+                  91.2
+                ],
+                "energy_retained": 0.7113164265150859
+              },
+              {
+                "source_row": 51,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.464,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.6857829035002428,
+                  6.085485688692146,
+                  87.22571556539269
+                ],
+                "observed": [
+                  1.11,
+                  7.117,
+                  53.5
+                ],
+                "energy_retained": 0.7109566344071834
+              },
+              {
+                "source_row": 52,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.25,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.5855386812672838,
+                  6.383489829825945,
+                  74.47550850870277
+                ],
+                "observed": [
+                  1.786,
+                  3.551,
+                  85.6
+                ],
+                "energy_retained": 0.7339240500449105
+              },
+              {
+                "source_row": 53,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.301,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.609428659462989,
+                  7.207717814882842,
+                  77.51410925585785
+                ],
+                "observed": [
+                  1.663,
+                  5.281,
+                  97.5
+                ],
+                "energy_retained": 0.7440642101293291
+              },
+              {
+                "source_row": 54,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.535,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.7190415005962245,
+                  7.383881511026259,
+                  91.455924448687
+                ],
+                "observed": [
+                  3.054,
+                  3.924,
+                  107.2
+                ],
+                "energy_retained": 0.7268009542666617
+              },
+              {
+                "source_row": 55,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.807,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.8464547176399855,
+                  6.9050620237351,
+                  103.69689881324493
+                ],
+                "observed": [
+                  3.176,
+                  4.013515124283919,
+                  93.2
+                ],
+                "energy_retained": 0.7051024287845814
+              },
+              {
+                "source_row": 85,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.417,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.663766649084593,
+                  4.5287794028038775,
+                  34.00551492990308
+                ],
+                "observed": [
+                  1.239,
+                  3.645,
+                  40.5
+                ],
+                "energy_retained": 0.6971157553418138
+              },
+              {
+                "source_row": 86,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.138,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.5330744154257352,
+                  4.83294994107354,
+                  33.9012514731615
+                ],
+                "observed": [
+                  0.893,
+                  4.109,
+                  37.6
+                ],
+                "energy_retained": 0.7131220600210731
+              },
+              {
+                "source_row": 87,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.047,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.49044719942947695,
+                  4.5613862814622115,
+                  31.19034296344472
+                ],
+                "observed": [
+                  0.743,
+                  4.885,
+                  25.2
+                ],
+                "energy_retained": 0.7157761008995259
+              },
+              {
+                "source_row": 88,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.253,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.5869439741023253,
+                  5.347915005417526,
+                  37.32712486456183
+                ],
+                "observed": [
+                  1.423,
+                  5.65,
+                  32.8
+                ],
+                "energy_retained": 0.7136336947787187
+              },
+              {
+                "source_row": 89,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.816,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.85067059614511,
+                  5.4246917825400836,
+                  40.73270543649792
+                ],
+                "observed": [
+                  1.439,
+                  4.719,
+                  31.6
+                ],
+                "energy_retained": 0.6933617176599024
+              },
+              {
+                "source_row": 90,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.313,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.6150498308031549,
+                  5.9824185172491715,
+                  39.1145370687707
+                ],
+                "observed": [
+                  1.709,
+                  4.014,
+                  42.0
+                ],
+                "energy_retained": 0.7206298014384394
+              },
+              {
+                "source_row": 91,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.951,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.9139087737219767,
+                  6.1406526628271285,
+                  46.1086834293218
+                ],
+                "observed": [
+                  1.993,
+                  4.991,
+                  43.9
+                ],
+                "energy_retained": 0.6963036325435811
+              },
+              {
+                "source_row": 92,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.505,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.7049885722458097,
+                  5.735377277315557,
+                  43.06556806711108
+                ],
+                "observed": [
+                  1.617,
+                  6.1,
+                  35.6
+                ],
+                "energy_retained": 0.7049990976683247
+              },
+              {
+                "source_row": 93,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 0.95,
+                "effective_e_n": 0.4684309450138271,
+                "prediction": [
+                  0.4450093977631357,
+                  6.8839722706677176,
+                  28.300693233307054
+                ],
+                "observed": [
+                  1.357,
+                  4.224,
+                  45.0
+                ],
+                "energy_retained": 0.7794934657340998
+              }
+            ]
+          },
+          "viscoelastic": {
+            "estimated_parameter": 0.7775936472200244,
+            "parameter_count": 1,
+            "training_count": 57,
+            "evaluation_count": 18,
+            "normal": {
+              "count": 18,
+              "rmse": 1.0553307011953508,
+              "maximum_absolute_error": 2.393361986499859
+            },
+            "tangent": {
+              "count": 18,
+              "rmse": 1.7666719116300473,
+              "maximum_absolute_error": 3.4918463768620156
+            },
+            "spin": {
+              "count": 18,
+              "rmse": 11.930216719567566,
+              "maximum_absolute_error": 32.36799090272416
+            },
+            "records": [
+              {
+                "source_row": 47,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.371,
+                "effective_e_n": 0.44946149515190165,
+                "prediction": [
+                  0.6162117098532571,
+                  5.040180031580338,
+                  75.6909984209831
+                ],
+                "observed": [
+                  1.582,
+                  3.192,
+                  75.9
+                ],
+                "energy_retained": 0.7028564788555113
+              },
+              {
+                "source_row": 48,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.652,
+                "effective_e_n": 0.4384205853421168,
+                "prediction": [
+                  0.724270806985177,
+                  4.6802770326820164,
+                  70.28614836589918
+                ],
+                "observed": [
+                  1.553,
+                  3.378,
+                  68.2
+                ],
+                "energy_retained": 0.6882257051841264
+              },
+              {
+                "source_row": 49,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.264,
+                "effective_e_n": 0.4542754794119754,
+                "prediction": [
+                  0.5742042059767369,
+                  4.839464897579351,
+                  72.67675512103246
+                ],
+                "observed": [
+                  1.158,
+                  3.367,
+                  73.1
+                ],
+                "energy_retained": 0.7046689884557368
+              },
+              {
+                "source_row": 50,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.431,
+                "effective_e_n": 0.4469242455538804,
+                "prediction": [
+                  0.6395485953876029,
+                  5.994783057614384,
+                  84.01084711928078
+                ],
+                "observed": [
+                  1.641,
+                  4.421,
+                  91.2
+                ],
+                "energy_retained": 0.7120895424484194
+              },
+              {
+                "source_row": 51,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.464,
+                "effective_e_n": 0.44557386787152226,
+                "prediction": [
+                  0.6523201425639086,
+                  6.112640181945517,
+                  85.86799090272416
+                ],
+                "observed": [
+                  1.11,
+                  7.117,
+                  53.5
+                ],
+                "energy_retained": 0.7117673819200812
+              },
+              {
+                "source_row": 52,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.25,
+                "effective_e_n": 0.4549353186753909,
+                "prediction": [
+                  0.5686691483442387,
+                  6.397179184951718,
+                  73.79104075241409
+                ],
+                "observed": [
+                  1.786,
+                  3.551,
+                  85.6
+                ],
+                "energy_retained": 0.7347738905234852
+              },
+              {
+                "source_row": 53,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.301,
+                "effective_e_n": 0.452566179720407,
+                "prediction": [
+                  0.5887885998162495,
+                  7.224466891908881,
+                  76.67665540455594
+                ],
+                "observed": [
+                  1.663,
+                  5.281,
+                  97.5
+                ],
+                "energy_retained": 0.745185029862367
+              },
+              {
+                "source_row": 54,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.535,
+                "effective_e_n": 0.4427692951921278,
+                "prediction": [
+                  0.6796508681199162,
+                  7.4158463768620155,
+                  89.85768115689919
+                ],
+                "observed": [
+                  3.054,
+                  3.924,
+                  107.2
+                ],
+                "energy_retained": 0.7282704540379311
+              },
+              {
+                "source_row": 55,
+                "diameter_m": 0.1,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.807,
+                "effective_e_n": 0.4331145619812624,
+                "prediction": [
+                  0.7826380135001412,
+                  6.9050620237351,
+                  103.69689881324493
+                ],
+                "observed": [
+                  3.176,
+                  4.013515124283919,
+                  93.2
+                ],
+                "energy_retained": 0.7038631131133603
+              },
+              {
+                "source_row": 85,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.417,
+                "effective_e_n": 0.6435905806454482,
+                "prediction": [
+                  0.9119678527746,
+                  4.5287794028038775,
+                  34.00551492990308
+                ],
+                "observed": [
+                  1.239,
+                  3.645,
+                  40.5
+                ],
+                "energy_retained": 0.7077758338808683
+              },
+              {
+                "source_row": 86,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.138,
+                "effective_e_n": 0.6547572407649768,
+                "prediction": [
+                  0.7451137399905435,
+                  4.759486453379724,
+                  35.7378386655069
+                ],
+                "observed": [
+                  0.893,
+                  4.109,
+                  37.6
+                ],
+                "energy_retained": 0.7150899336217935
+              },
+              {
+                "source_row": 87,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 2.5,
+                "incoming_normal_m_s": 1.047,
+                "effective_e_n": 0.6589478462460431,
+                "prediction": [
+                  0.6899183950196071,
+                  4.467257522650318,
+                  33.543561933742055
+                ],
+                "observed": [
+                  0.743,
+                  4.885,
+                  25.2
+                ],
+                "energy_retained": 0.7156304698406788
+              },
+              {
+                "source_row": 88,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.253,
+                "effective_e_n": 0.6498796663823758,
+                "prediction": [
+                  0.8142992219771168,
+                  5.260889776631232,
+                  39.50275558421921
+                ],
+                "observed": [
+                  1.423,
+                  5.65,
+                  32.8
+                ],
+                "energy_retained": 0.7149560239515982
+              },
+              {
+                "source_row": 89,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.816,
+                "effective_e_n": 0.6307158763610897,
+                "prediction": [
+                  1.145380031471739,
+                  5.4246917825400836,
+                  40.73270543649792
+                ],
+                "observed": [
+                  1.439,
+                  4.719,
+                  31.6
+                ],
+                "energy_retained": 0.70444899137019
+              },
+              {
+                "source_row": 90,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 3.5,
+                "incoming_normal_m_s": 1.313,
+                "effective_e_n": 0.6474956058161571,
+                "prediction": [
+                  0.8501617304366141,
+                  5.803820368986392,
+                  43.57949077534021
+                ],
+                "observed": [
+                  1.709,
+                  4.014,
+                  42.0
+                ],
+                "energy_retained": 0.7157967058587706
+              },
+              {
+                "source_row": 91,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.951,
+                "effective_e_n": 0.6269487648870999,
+                "prediction": [
+                  1.223177040294732,
+                  6.1406526628271285,
+                  46.1086834293218
+                ],
+                "observed": [
+                  1.993,
+                  4.991,
+                  43.9
+                ],
+                "energy_retained": 0.7060855746701299
+              },
+              {
+                "source_row": 92,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 1.505,
+                "effective_e_n": 0.6404869688078381,
+                "prediction": [
+                  0.9639328880557962,
+                  5.735377277315557,
+                  43.06556806711108
+                ],
+                "observed": [
+                  1.617,
+                  6.1,
+                  35.6
+                ],
+                "energy_retained": 0.7124646650826513
+              },
+              {
+                "source_row": 93,
+                "diameter_m": 0.2,
+                "plate_angle_deg": 75.0,
+                "release_height_m": 4.5,
+                "incoming_normal_m_s": 0.95,
+                "effective_e_n": 0.6637980619629638,
+                "prediction": [
+                  0.6306081588648156,
+                  6.733361855832008,
+                  32.06595360419979
+                ],
+                "observed": [
+                  1.357,
+                  4.224,
+                  45.0
+                ],
+                "energy_retained": 0.7650350177616515
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "pooled_angle_normal": {
+      "constant": {
+        "count": 75,
+        "rmse": 1.140284926446507,
+        "maximum_absolute_error": 2.3349584994037755
+      },
+      "viscoelastic": {
+        "count": 75,
+        "rmse": 1.1942148919375277,
+        "maximum_absolute_error": 2.846563766943985
+      }
+    },
+    "fixed_historical_tangential_restitution": -0.19158225671821516,
+    "fixed_historical_sliding_friction": 0.8114839449450747,
+    "documented_coefficients_changed": false,
+    "actual_rock_shapes_reproduced": false,
+    "normal_parameter_is_true_material_constant": false,
+    "scope": "Normal-response hypothesis test under homogeneous-sphere proxy; missing actual inertia/contact attitude; secondary endpoints retain historical fitted tangent/sliding inputs"
+  },
+  "normal_table": {
+    "grid_nodes": 513,
+    "range": [
+      0,
+      8
+    ],
+    "build_seconds": 7.7536916169920005,
+    "grid_array_bytes": 8208,
+    "pchip_coefficients_bytes": 16384,
+    "independent_random_checks": 64,
+    "maximum_restitution_error": 1.3419351818644287e-07,
+    "maximum_reference_energy_error": 2.2443886749101694e-09,
+    "validation_records": [
+      {
+        "beta": 1.591379606611702,
+        "restitution": 0.2659857730941447,
+        "duration": 2.571990562573659,
+        "release_compression": 0.4232843349508695,
+        "stored_energy_at_release": 0.046627322979542196,
+        "dissipated_energy": 0.4179984612759639,
+        "energy_balance_residual": -2.490230244234226e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.79460786232279,
+        "restitution": 0.036494622699988974,
+        "duration": 1.7645176219931038,
+        "release_compression": 0.2844612730298378,
+        "stored_energy_at_release": 0.017263063360079746,
+        "dissipated_energy": 0.482071007896931,
+        "energy_balance_residual": 1.8096635301390052e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 4.024221234819815,
+        "restitution": 0.09226625646907338,
+        "duration": 2.121271301746714,
+        "release_compression": 0.3712998285401762,
+        "stored_energy_at_release": 0.03360252114238603,
+        "dissipated_energy": 0.46214094781620974,
+        "energy_balance_residual": 4.218847493575595e-15,
+        "minimum_sampled_force": -3.382537410007751e-17
+      },
+      {
+        "beta": 7.2716418011904045,
+        "restitution": 0.04042677251846349,
+        "duration": 1.8021232034852046,
+        "release_compression": 0.2939690089324746,
+        "stored_energy_at_release": 0.018741910599400422,
+        "dissipated_energy": 0.48044092743248734,
+        "energy_balance_residual": 1.7541523789077473e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.6392805319002255,
+        "restitution": 0.15568778784911022,
+        "duration": 2.3380568485750644,
+        "release_compression": 0.4109037475247691,
+        "stored_energy_at_release": 0.043292258867436234,
+        "dissipated_energy": 0.4445883974898532,
+        "energy_balance_residual": -3.58046925441613e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 3.4319552530871693,
+        "restitution": 0.11323564602174141,
+        "duration": 2.2047913932900403,
+        "release_compression": 0.38861967020103466,
+        "stored_energy_at_release": 0.037659273578626015,
+        "dissipated_energy": 0.4559295706563871,
+        "energy_balance_residual": -6.328271240363392e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.1573783244428633,
+        "restitution": 0.19523516764709506,
+        "duration": 2.4353876630945765,
+        "release_compression": 0.42119611885081143,
+        "stored_energy_at_release": 0.046054375014644024,
+        "dissipated_energy": 0.4348872396421847,
+        "energy_balance_residual": -7.666089985036706e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.099643788382867,
+        "restitution": 0.041868478616175354,
+        "duration": 1.8151024150346116,
+        "release_compression": 0.29725128413637025,
+        "stored_energy_at_release": 0.019269450933605808,
+        "dissipated_energy": 0.47985406431559513,
+        "energy_balance_residual": 1.7541523789077473e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.9278622892655903,
+        "restitution": 0.21990154446850374,
+        "duration": 2.4874356499002666,
+        "release_compression": 0.4239398949320885,
+        "stored_energy_at_release": 0.04680806745207253,
+        "dissipated_energy": 0.4290135879180034,
+        "energy_balance_residual": -1.0735856648125264e-13,
+        "minimum_sampled_force": -7.228736158505554e-17
+      },
+      {
+        "beta": 0.7699799535241683,
+        "restitution": 0.4710635651868892,
+        "duration": 2.8367063907439922,
+        "release_compression": 0.36270950202953,
+        "stored_energy_at_release": 0.03169256020912129,
+        "dissipated_energy": 0.3573569985670177,
+        "energy_balance_residual": -5.697109450863991e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.3649651813101213,
+        "restitution": 0.3061014037726863,
+        "duration": 2.635503523562072,
+        "release_compression": 0.41781775809986743,
+        "stored_energy_at_release": 0.04513643220247698,
+        "dissipated_energy": 0.40801453310117997,
+        "energy_balance_residual": -5.384581669432009e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.5572372511228956,
+        "restitution": 0.5650751890277819,
+        "duration": 2.924846603275353,
+        "release_compression": 0.3148809450115917,
+        "stored_energy_at_release": 0.02225491509251985,
+        "dissipated_energy": 0.318090100279523,
+        "energy_balance_residual": -5.654365864415922e-13,
+        "minimum_sampled_force": -3.114966814371607e-17
+      },
+      {
+        "beta": 4.965946684493465,
+        "restitution": 0.0695503516942816,
+        "duration": 2.0088144490883866,
+        "release_compression": 0.34538333840157215,
+        "stored_energy_at_release": 0.02804228822634865,
+        "dissipated_energy": 0.46953908606326333,
+        "energy_balance_residual": 1.1102230246251565e-14,
+        "minimum_sampled_force": -3.2623528042687665e-17
+      },
+      {
+        "beta": 7.945159923172065,
+        "restitution": 0.03547435572539424,
+        "duration": 1.754175621712456,
+        "release_compression": 0.2818494294097518,
+        "stored_energy_at_release": 0.0168695264369385,
+        "dissipated_energy": 0.48250125860601456,
+        "energy_balance_residual": 1.8984813721090177e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.323472461716225,
+        "restitution": 0.3144712355078836,
+        "duration": 2.6478098099929994,
+        "release_compression": 0.4161940201965614,
+        "stored_energy_at_release": 0.04469918260646397,
+        "dissipated_energy": 0.40585473841211944,
+        "energy_balance_residual": -4.89164264649844e-13,
+        "minimum_sampled_force": -3.581196506580366e-17
+      },
+      {
+        "beta": 6.666569878385342,
+        "restitution": 0.04588251384964079,
+        "duration": 1.8492560818496973,
+        "release_compression": 0.30587898477461356,
+        "stored_energy_at_release": 0.020698272082254422,
+        "dissipated_energy": 0.4782491253791812,
+        "energy_balance_residual": 1.687538997430238e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 3.9988428091570167,
+        "restitution": 0.09303486094077833,
+        "duration": 2.1246213245920784,
+        "release_compression": 0.3720317846739544,
+        "stored_energy_at_release": 0.0337683705859126,
+        "dissipated_energy": 0.461903886738955,
+        "energy_balance_residual": 2.55351295663786e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.807886052817938,
+        "restitution": 0.03640277739712375,
+        "duration": 1.7635971619292534,
+        "release_compression": 0.2842287379228386,
+        "stored_energy_at_release": 0.017227805419194008,
+        "dissipated_energy": 0.4821096134797122,
+        "energy_balance_residual": 1.84297022087776e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 3.0963757325424517,
+        "restitution": 0.12866702859761628,
+        "duration": 2.2577633400359645,
+        "release_compression": 0.39840146492800477,
+        "stored_energy_at_release": 0.040073964394691755,
+        "dissipated_energy": 0.45164843348122313,
+        "energy_balance_residual": -1.5210055437364645e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.179520761861344,
+        "restitution": 0.06562325374900793,
+        "duration": 1.9860923098926742,
+        "release_compression": 0.33989700525388183,
+        "stored_energy_at_release": 0.026941907248658543,
+        "dissipated_energy": 0.47090488703504974,
+        "energy_balance_residual": 1.1657341758564144e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.16994610435955249,
+        "restitution": 0.82711228975913,
+        "duration": 3.1170977785233696,
+        "release_compression": 0.1405645115124736,
+        "stored_energy_at_release": 0.002963119800145389,
+        "dissipated_energy": 0.15497951026465226,
+        "energy_balance_residual": 9.314771176605063e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 4.412636042726345,
+        "restitution": 0.0816503826539624,
+        "duration": 2.0722360784788836,
+        "release_compression": 0.36029342140127246,
+        "stored_energy_at_release": 0.031167417771190753,
+        "dissipated_energy": 0.4654991897350485,
+        "energy_balance_residual": 8.548717289613705e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.9430570426280998,
+        "restitution": 0.13684838366888716,
+        "duration": 2.283564074506354,
+        "release_compression": 0.4027525993289906,
+        "stored_energy_at_release": 0.041177110831124186,
+        "dissipated_energy": 0.44945914911246776,
+        "energy_balance_residual": -1.459943277382081e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.519366778058227,
+        "restitution": 0.060058452789782356,
+        "duration": 1.951716204204051,
+        "release_compression": 0.3314846290695032,
+        "stored_energy_at_release": 0.025305707204356084,
+        "dissipated_energy": 0.4728907839199052,
+        "energy_balance_residual": 1.2545520178264269e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.09193865744758156,
+        "restitution": 0.9009024292313775,
+        "duration": 3.162006787473865,
+        "release_compression": 0.08282775983479765,
+        "stored_energy_at_release": 0.0007897684497413965,
+        "dissipated_energy": 0.09339763805167217,
+        "energy_balance_residual": -1.0878520306789596e-12,
+        "minimum_sampled_force": -1.5976005152345247e-17
+      },
+      {
+        "beta": 7.466943121981172,
+        "restitution": 0.03888298197700656,
+        "duration": 1.787762104212425,
+        "release_compression": 0.29033701483532703,
+        "stored_energy_at_release": 0.01816837182569628,
+        "dissipated_energy": 0.4810756850306109,
+        "energy_balance_residual": 1.9317880628477724e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.278493087158931,
+        "restitution": 0.040370980799812654,
+        "duration": 1.8016127304519969,
+        "release_compression": 0.2938399046732623,
+        "stored_energy_at_release": 0.01872133986340774,
+        "dissipated_energy": 0.48046375209124087,
+        "energy_balance_residual": 1.7985612998927536e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.9255572660434854,
+        "restitution": 0.2201736023670506,
+        "duration": 2.487979831366898,
+        "release_compression": 0.4239568798288435,
+        "stored_energy_at_release": 0.04681275593558129,
+        "dissipated_energy": 0.42894903647467014,
+        "energy_balance_residual": -1.0652589921278377e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.1259667696507982,
+        "restitution": 0.1983477634194376,
+        "duration": 2.4422713169415173,
+        "release_compression": 0.4216807538642826,
+        "stored_energy_at_release": 0.04618696661677539,
+        "dissipated_energy": 0.43414211575638073,
+        "energy_balance_residual": -9.725553695716371e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.567809223238486,
+        "restitution": 0.1607151204934806,
+        "duration": 2.351590965515079,
+        "release_compression": 0.4126857687170441,
+        "stored_energy_at_release": 0.043763164992872444,
+        "dissipated_energy": 0.4433221600294702,
+        "energy_balance_residual": -4.035660694512444e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 6.9585939141270385,
+        "restitution": 0.04311261430890681,
+        "duration": 1.8259882106961995,
+        "release_compression": 0.30000317555206524,
+        "stored_energy_at_release": 0.019718533870778068,
+        "dissipated_energy": 0.47935211737296435,
+        "energy_balance_residual": 1.6653345369377348e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.89870373636571,
+        "restitution": 0.13936849245493835,
+        "duration": 2.291231568113053,
+        "release_compression": 0.40398796981078605,
+        "stored_energy_at_release": 0.041493595880946275,
+        "dissipated_energy": 0.4487946157744572,
+        "energy_balance_residual": -1.5432100042289676e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.166082240515078,
+        "restitution": 0.0413020623426813,
+        "duration": 1.8100511197970066,
+        "release_compression": 0.29597397545053505,
+        "stored_energy_at_release": 0.01906311228768687,
+        "dissipated_energy": 0.4800839575354511,
+        "energy_balance_residual": 1.7319479184152442e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.306599827171145,
+        "restitution": 0.040143373579570416,
+        "duration": 1.7995237133107616,
+        "release_compression": 0.29331156645855594,
+        "stored_energy_at_release": 0.01863729865181558,
+        "dissipated_energy": 0.4805569561270273,
+        "energy_balance_residual": 1.7319479184152442e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.541908413865075,
+        "restitution": 0.0383151077495493,
+        "duration": 1.7823522069056716,
+        "release_compression": 0.2889690335144728,
+        "stored_energy_at_release": 0.017955117636710777,
+        "dissipated_energy": 0.48131085862237744,
+        "energy_balance_residual": 1.7985612998927536e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 6.735901176242301,
+        "restitution": 0.04519985468022366,
+        "duration": 1.843639864217991,
+        "release_compression": 0.30446175430649963,
+        "stored_energy_at_release": 0.02045935108519605,
+        "dissipated_energy": 0.47851913548326347,
+        "energy_balance_residual": 1.6209256159527285e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.464938119217944,
+        "restitution": 0.0388983531686169,
+        "duration": 1.7879075645470415,
+        "release_compression": 0.2903737993432104,
+        "stored_energy_at_release": 0.018174127017838323,
+        "dissipated_energy": 0.48106933204256386,
+        "energy_balance_residual": 1.7430501486614958e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.409577943909593,
+        "restitution": 0.17279646040809693,
+        "duration": 2.3826174315138466,
+        "release_compression": 0.41636653978499755,
+        "stored_energy_at_release": 0.04474551846056901,
+        "dissipated_energy": 0.4403251731746078,
+        "energy_balance_residual": -3.9690473130349346e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 6.676069740376753,
+        "restitution": 0.04578801235272172,
+        "duration": 1.8484830664113598,
+        "release_compression": 0.30568396374000245,
+        "stored_energy_at_release": 0.02066529606384494,
+        "dissipated_energy": 0.47828643289856526,
+        "energy_balance_residual": 1.6653345369377348e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.010422818353163,
+        "restitution": 0.06870242042178273,
+        "duration": 2.0040073852890625,
+        "release_compression": 0.34422817495739255,
+        "stored_energy_at_release": 0.027808401620653345,
+        "dissipated_energy": 0.4698315870934522,
+        "energy_balance_residual": 1.1213252548714081e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.028857810373165,
+        "restitution": 0.042485629258220976,
+        "duration": 1.8205376344381656,
+        "release_compression": 0.29862544704026517,
+        "stored_energy_at_release": 0.01949292552692875,
+        "dissipated_energy": 0.47960456012635455,
+        "energy_balance_residual": 1.6764367671839864e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.839948875280573,
+        "restitution": 0.4453066247746778,
+        "duration": 2.8098811172737643,
+        "release_compression": 0.37403479863447897,
+        "stored_energy_at_release": 0.03422472867850602,
+        "dissipated_energy": 0.3666262762868472,
+        "energy_balance_residual": -5.389577673042822e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 4.142437870583047,
+        "restitution": 0.08881467155684304,
+        "duration": 2.1059109457394114,
+        "release_compression": 0.36790925892046156,
+        "stored_energy_at_release": 0.032840653093127885,
+        "dissipated_energy": 0.46321532396500154,
+        "energy_balance_residual": 4.3298697960381105e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.24724451816469184,
+        "restitution": 0.7622127788599802,
+        "duration": 3.0748462089529354,
+        "release_compression": 0.18845293124820667,
+        "stored_energy_at_release": 0.006166904652190712,
+        "dissipated_energy": 0.20334893521823083,
+        "energy_balance_residual": -8.519296379461139e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 2.863651555972025,
+        "restitution": 0.1414121842425219,
+        "duration": 2.297358338679698,
+        "release_compression": 0.40495522143950047,
+        "stored_energy_at_release": 0.04174240803423631,
+        "dissipated_energy": 0.44825888903962113,
+        "energy_balance_residual": -2.2093438190040615e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.869294111227356,
+        "restitution": 0.05507087783413729,
+        "duration": 1.9183952405168077,
+        "release_compression": 0.32322717897202313,
+        "stored_energy_at_release": 0.02375908279430286,
+        "dissipated_energy": 0.47472451641300045,
+        "energy_balance_residual": 1.454392162258955e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 6.728962742354765,
+        "restitution": 0.04526744563704433,
+        "duration": 1.8441992820456303,
+        "release_compression": 0.3046029551332411,
+        "stored_energy_at_release": 0.020483080520501462,
+        "dissipated_energy": 0.47849234866226303,
+        "energy_balance_residual": 1.587618925213974e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 3.382413065805025,
+        "restitution": 0.11532462316528384,
+        "duration": 2.212329753020877,
+        "release_compression": 0.39007551220329695,
+        "stored_energy_at_release": 0.038012961861838244,
+        "dissipated_energy": 0.4553371537840497,
+        "energy_balance_residual": -4.6629367034256575e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.8329731031079683,
+        "restitution": 0.44777644420613183,
+        "duration": 2.8125115447732543,
+        "release_compression": 0.37298573422903364,
+        "stored_energy_at_release": 0.033985255943635995,
+        "dissipated_energy": 0.36576287206274194,
+        "energy_balance_residual": -6.785128014996644e-13,
+        "minimum_sampled_force": -3.3902080039571736e-17
+      },
+      {
+        "beta": 2.871158227597145,
+        "restitution": 0.14097056284728476,
+        "duration": 2.2960411950976938,
+        "release_compression": 0.40474879136798203,
+        "stored_energy_at_release": 0.0416892318206116,
+        "dissipated_energy": 0.44837441838462555,
+        "energy_balance_residual": -2.270406085358445e-14,
+        "minimum_sampled_force": -3.5316122488181257e-17
+      },
+      {
+        "beta": 6.462947021745393,
+        "restitution": 0.04798483177773655,
+        "duration": 1.8660970181787657,
+        "release_compression": 0.3101234256268761,
+        "stored_energy_at_release": 0.021423795921552222,
+        "dissipated_energy": 0.4774249320380956,
+        "energy_balance_residual": 1.6653345369377348e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.237963778788498,
+        "restitution": 0.06460956089937131,
+        "duration": 1.9800296483303899,
+        "release_compression": 0.33842253975433656,
+        "stored_energy_at_release": 0.02665067371847046,
+        "dissipated_energy": 0.47126212860173716,
+        "energy_balance_residual": 1.2434497875801753e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.192806471582026,
+        "restitution": 0.3432882078628106,
+        "duration": 2.6880585450524177,
+        "release_compression": 0.409476395956556,
+        "stored_energy_at_release": 0.04291727823468716,
+        "dissipated_energy": 0.3981593249360875,
+        "energy_balance_residual": -3.9518388561532447e-13,
+        "minimum_sampled_force": -1.4208710365057023e-16
+      },
+      {
+        "beta": 6.070938529189099,
+        "restitution": 0.052487958290870024,
+        "duration": 1.9000662749611419,
+        "release_compression": 0.31865116830651324,
+        "stored_energy_at_release": 0.022927081729399015,
+        "dissipated_energy": 0.47569542538784393,
+        "energy_balance_residual": 1.4988010832439613e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.397734125595297,
+        "restitution": 0.06196130415686465,
+        "duration": 1.963780003207034,
+        "release_compression": 0.334450645913898,
+        "stored_energy_at_release": 0.02587557973983669,
+        "dissipated_energy": 0.47220481865376607,
+        "energy_balance_residual": 1.2545520178264269e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 1.8159945323741349,
+        "restitution": 0.23373859663447866,
+        "duration": 2.5143755692944945,
+        "release_compression": 0.4244680134930166,
+        "stored_energy_at_release": 0.04695398029557866,
+        "dissipated_energy": 0.42572915392587896,
+        "energy_balance_residual": -2.1460611066004276e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 5.231393537609422,
+        "restitution": 0.0647222813840336,
+        "duration": 1.9807079926206246,
+        "release_compression": 0.338587724571772,
+        "stored_energy_at_release": 0.02668320626182344,
+        "dissipated_energy": 0.4712223068844111,
+        "energy_balance_residual": 1.1546319456101628e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 4.354694312133092,
+        "restitution": 0.08310792510068546,
+        "duration": 2.07929646506798,
+        "release_compression": 0.361909608729138,
+        "stored_energy_at_release": 0.03151811790775554,
+        "dissipated_energy": 0.46502841848498006,
+        "energy_balance_residual": 6.217248937900877e-15,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 7.263904622952705,
+        "restitution": 0.040489925418447384,
+        "duration": 1.8027002758948556,
+        "release_compression": 0.2941149564300702,
+        "stored_energy_at_release": 0.01876518136491471,
+        "dissipated_energy": 0.48041510160490697,
+        "energy_balance_residual": 1.7430501486614958e-14,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.061197488395394295,
+        "restitution": 0.9325087599530978,
+        "duration": 3.1803645741100697,
+        "release_compression": 0.05706719401583336,
+        "stored_energy_at_release": 0.0003111904700043558,
+        "dissipated_energy": 0.06490251583467277,
+        "energy_balance_residual": -6.908362770730037e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.0011330247723275733,
+        "restitution": 0.998694149381335,
+        "duration": 3.2173532686850614,
+        "release_compression": 0.0011315452112274742,
+        "stored_energy_at_release": 1.7228194606817384e-08,
+        "dissipated_energy": 0.0013049807661768015,
+        "energy_balance_residual": -1.3744005933347125e-12,
+        "minimum_sampled_force": -6.469933906546636e-18
+      },
+      {
+        "beta": 1.2684369766902677,
+        "restitution": 0.3261333050241706,
+        "duration": 2.6644786127558198,
+        "release_compression": 0.41367954342286384,
+        "stored_energy_at_release": 0.04402710251900903,
+        "dissipated_energy": 0.40279143115741234,
+        "energy_balance_residual": -5.843103778602199e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 0.27609956823109716,
+        "restitution": 0.7398719330917592,
+        "duration": 3.0596162087845347,
+        "release_compression": 0.20427832127294207,
+        "stored_energy_at_release": 0.007544243405416623,
+        "dissipated_energy": 0.21875051790525993,
+        "energy_balance_residual": -8.550937735662956e-13,
+        "minimum_sampled_force": 0.0
+      },
+      {
+        "beta": 6.997577046650159,
+        "restitution": 0.042762959256608245,
+        "duration": 1.8229572928794102,
+        "release_compression": 0.2992371021408778,
+        "stored_energy_at_release": 0.019592894145162774,
+        "dissipated_energy": 0.4794927705126632,
+        "energy_balance_residual": 1.709743457922741e-14,
+        "minimum_sampled_force": 0.0
+      }
+    ],
+    "timing": {
+      "batches": [
+        {
+          "batch_size": 1,
+          "median_seconds": 1.691719030204695e-05,
+          "median_microseconds_per_lookup": 16.917190302046947
+        },
+        {
+          "batch_size": 100,
+          "median_seconds": 2.056370984064415e-05,
+          "median_microseconds_per_lookup": 0.2056370984064415
+        },
+        {
+          "batch_size": 10000,
+          "median_seconds": 0.0008027819858398288,
+          "median_microseconds_per_lookup": 0.08027819858398288
+        }
+      ],
+      "direct_ode_count": 16,
+      "direct_ode_seconds": 0.22687887301435694,
+      "comparison_maximum_error": 8.997378730946082e-09,
+      "scope": "Local Python isolated normal endpoint map only; no collision detection, simultaneous-contact solve or native engine timing"
+    }
+  },
+  "sources_sha256": {
+    "research/full-experimental-report/evidence-v3/results.json": "5fe7f2a9fe6a4f764aa2a615d023499873326860aa6f941d1b51505cf5b0fb11",
+    "research/restitution-validation-report/fits.json": "5e3b2a8717136f0c6d926b55a09059b8939c714543c032a14214d799b02e7127"
+  },
+  "host": {
+    "python": "3.14.4",
+    "machine": "x86_64"
+  },
+  "production_adopted": false,
+  "complete_directional_model_validated": false
+}

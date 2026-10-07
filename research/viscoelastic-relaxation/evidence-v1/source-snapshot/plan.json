@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-07",
+  "scope": "Search for a cheap physically motivated deformation reduction while bodies remain rigid. Isolated normal impacts and sustained pure rolling only; no production adoption or complete directional collision closure.",
+  "hypothesis": "Use one nonnegative viscoelastic relaxation time for normal indentation damping and speed-dependent rolling moment. A local contact history, rather than an arbitrary raw-impulse polynomial, supplies the physical connection.",
+  "normal": "F = k*x^(3/2) + 1.5*A*k*sqrt(x)*xdot. End a repulsive collision at the first unloading zero of total normal force. Retain residual elastic energy explicitly as unresolved internal recovery; never erase it or apply restitution again.",
+  "rolling": "Independent moment = -A*R*N*omega for a soft sphere on a hard plane in the small-deformation, slow-relaxation regime. In this project's dimensionless convention mu_r=A*abs(omega). The source's mu_roll has units of length, so mu_roll=R*mu_r; do not confuse the conventions.",
+  "documented_inputs": "Existing published restitution/friction inputs remain unchanged. No missing static friction is silently filled from dynamic friction. No coefficients from unlike rubber specimens or substrates are transferred.",
+  "rolling_data": "Reuse the 17 digitized experimental tennis points and the existing even-index 9-point fit / odd-index 8-point evaluation partition. Estimate one A>=0 per specimen versus one nonnegative constant per specimen. A first preview has already inspected evaluation errors: this is exploratory reuse, not a new confirmatory blind validation.",
+  "rock_data": "Use all 75 existing Wang2018 records. Compare one fitted constant normal restitution with one effective viscoelastic parameter under a homogeneous sphere size proxy, using the existing 50/25 release-height partition and four leave-one-plate-angle-out folds. Fit normal speed residual only, with identical objective for both models. Keep historical tangential restitution and sliding friction fixed for conditional secondary endpoints. Effective A*k^(2/5)/m^(2/5) cannot identify A without independent stiffness/mass characterization.",
+  "efficiency": "Exact exponential rolling advance; cache the dimensionless isolated normal restitution map versus beta. Compare table lookup with direct ODE at declared accuracy, and report setup cost, memory and batch sizes. This is not native-engine or all-case benchmarking, and isolated pair maps are invalid for overlapping simultaneous impacts.",
+  "acceptance": "Nonnegative losses, energy accounting including stored energy at release, analytical rolling/Newton-Euler closure, timestep subdivision and coordinate-length invariance. Retain worse predictions, failed assumptions, validation failures and scope limitations. No empirical model promoted from the tiny reused samples alone.",
+  "sources": [
+    "https://arxiv.org/pdf/cond-mat/0203343",
+    "https://arxiv.org/pdf/0708.1434",
+    "https://docs.lammps.org/pair_granular.html",
+    "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/21.%20GripSlip.PDF",
+    "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/47.%20MoreSpin.pdf"
+  ],
+  "twofold_gate": "Removed by user"
+}
