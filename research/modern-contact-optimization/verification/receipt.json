@@ -1,0 +1,38 @@
+{
+  "physics_code_checkpoint": "e8f67523f454f9c03ad78b965f8488d02fabd1cf",
+  "full_focused_tests": 63,
+  "focused_exit_code": 0,
+  "boundary_cases": 300,
+  "boundary_branch_changes": 0,
+  "random_cases": 1500,
+  "optimizer_cases": 141,
+  "source_sha256": {
+    "contact_history.py": "4fc4ce17ef231364caa60f4633e49871a6913465bf52c21cd4cf7a8568c3646f",
+    "contact_backend/schedule.h": "76171a43635169a774f826ad8ac54bd00b6416e946d2e659a318301c4a65643e",
+    "tests/test_contact_history_warm_start.py": "9f1f7055c9d8b9bd61ab73a1dfdce1a6bfd9111bb9c760caf9bb535643d14f3d",
+    "research/modern-contact-optimization/history_experiment.py": "fa6d80a75a534e64df60b1fc557c190f6aefe3f562f1dced7684f0fb24132190",
+    "research/modern-contact-optimization/schedule_benchmark.cpp": "f092631ea5229c5c72edaa3ac70475209bba867c32dad3ec581013cfeef2db50",
+    "research/modern-contact-optimization/schedule_controls.cpp": "f4c992f836c44041df66c0934d1ab989b341e1184c60d0fdc03939445769c4a0"
+  },
+  "final_benchmark_hashes_match": true,
+  "experimental_accuracy_improved": false,
+  "parameters_fitted": false,
+  "world_or_compiler_acceptance": false,
+  "host": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+    "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "cpu": "AMD Ryzen 7 3700X, eight cores / sixteen logical CPUs"
+  },
+  "native_planner_compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "research/modern-contact-optimization/schedule_benchmark.cpp",
+    "-o",
+    "build/modern-contact-optimization/schedule_benchmark"
+  ],
+  "native_planner_binary_sha256": "f110f35df9c5cbcb63dcfc9152d9f085a4b62f23ac187da7880194ebcde9972d"
+}

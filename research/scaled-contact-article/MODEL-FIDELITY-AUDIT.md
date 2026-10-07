@@ -2,6 +2,20 @@
 
 ## Latest continuation — 7 October 2026
 
+The modern-contact-optimization continuation preserves the fixed-mode local
+history law while adding numerical face hints/prediction and complete-block
+topology scheduling. An exact-static-limit audit rejected the first candidate:
+9/100 cases changed friction branch from roundoff despite broad random agreement.
+The correction retains the original unconstrained arithmetic for every static
+decision, with no capacity tolerance/material change. 63 focused tests, 1,500
+random/141 independent-optimizer controls and 300 exact/adjacent-limit controls
+pass. Accepted Python local gains are 1.03–12.97x; planning reuse is below 1.01 ms
+per million edges. Neither is a complete-world speed or empirical accuracy gain.
+The visitor verifies prescribed 2D/3D force-plus-free-couple momentum application;
+the general nonlinear world does not yet use it. Full moving t/s/history, normal
+impact, static-direction closure, physical patch budgets and group qualification
+remain open. The symbolic article and compiler repositories are preserved.
+
 The subsequent `../supported-batch-optimization/` package prepares a versioned
 independent supported-contact ABI and importer oracles. It fixes dimensionally
 inconsistent onset tolerances and exact axial arrest. 54 repository tests and 25

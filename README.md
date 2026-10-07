@@ -5,6 +5,14 @@
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
+The [modern contact optimization study](research/modern-contact-optimization/README.md)
+adds checked face prediction/warm starts and an indexed island/color scheduler.
+After correcting an exact-static-limit regression, 63 focused tests pass and
+1,500 controls preserve the declared local memory law. Default repeated Python
+response gains range from 1.03 to 12.97x; simple sticking is essentially unchanged.
+Million-contact topology reuse costs 0.85–1.00 ms. These are local solver and
+planning results, not full-scene speedups or new experimental agreement.
+
 The [supported-contact integration package](research/supported-batch-optimization/README.md)
 provides ABI v1, an indexed native/Python batch API and compiler import oracles.
 One million independent supported responses takes 12.83 ms with eight workers

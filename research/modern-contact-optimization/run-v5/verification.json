@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "numpy": "2.5.3",
+  "hashes": {
+    "frozen": "ead2359fd8280d508dec50062ffd512e53fbe7700600054d575d7b186c2a0adc",
+    "candidate": "4fc4ce17ef231364caa60f4633e49871a6913465bf52c21cd4cf7a8568c3646f",
+    "harness": "fa6d80a75a534e64df60b1fc557c190f6aefe3f562f1dced7684f0fb24132190"
+  },
+  "scope": "Python local history updates, validation and energy gates included; preparation/world/detection/group solving excluded",
+  "verification": {
+    "cases": 1500,
+    "sliding_cases": 910,
+    "max_scaled_frozen_difference": 2.168404344971009e-19,
+    "independent_optimizer_cases": 141,
+    "independent_optimizer_max_impulse_error": 5.551115123125783e-17
+  }
+}

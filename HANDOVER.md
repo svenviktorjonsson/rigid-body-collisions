@@ -1,3 +1,57 @@
+# Modern solver techniques and complete-contact scheduling — October 7, 2026
+
+Latest user: continue researching/adopting efficient modern methods while keeping
+our contact law. No new agents, compiler edits, physical parameter fits or world
+replacement. No missing origin/main commits at start; existing draft PR/branch
+research/adaptive-benchmark-validation maintained with continuous ordinary pushes.
+
+Physical code checkpoint e8f6752; final study/artifact checkpoints follow in git.
+contact_history.py prepares small factors/face metadata, tests caller-owned prior
+faces and current unconstrained-face predictions, then exhaustively verifies the
+same static/dynamic box law and midpoint energy ledger. Crucial late audit rejected
+the fast unbounded trial: 9/100 exact-static-limit cases switched friction branch
+solely from roundoff, max modal-motion change6.52. Bad source/evidence retained.
+Current EVERY static trial uses the original NumPy arithmetic; no capacity is
+expanded and no material value changes. 300 exact/adjacent-limit controls have
+zero branch/output differences. Static/open steps return no dynamic-face hint.
+Prepared G/K/A are read-only; changed mobility/stiffness/h needs a new object.
+
+Accepted run-v5: 51 size/scenario combinations,100/1k/10k repeated Python local
+responses, seven alternating samples. Default median gains1.03..12.97x; simple
+sticking essentially unchanged, not a universal2x gate. At10k,3-mode reversing/
+mixed/upper gains6.91/10.27/12.90x; correct hint coupled-face2.86x vsdefault1.31x.
+Wrong hints add cost. Prep0.106..0.842ms vsold0.068..0.199ms, so frequent geometry
+changes may erase benefit. Inputs/validation/energy included, preparation/world
+integration/detection/groups excluded. Initial v2/v3/v4 NOTaccepted performance.
+1500random physical outputs maxscaled2.17e-19;141SciPyBVLS optimizer controls
+maximpulsedifference5.55e-17. Initial looseSLSQP oracle failure retained.
+
+contact_backend/schedule.h: header-onlyC++17 flatUInt32 contacts/body endpoints,
+explicitmutablemask, DSUislands and bounded32(default)/64(max)greedycolors.
+Prescribed-support-only sharing doesnotmerge islands; completeforce/freecouple
+blocks staytogether. Overflowtail serial, allcontactsretained. Cache compares full
+orderedtopology/mask/colorbudget; failedpreparation preservescache. OptionalOpenMP
+visitor takesnoexcept callback, barrierseparatescolors; no sharedreductions.
+300random independentBFS/conflictcontrols andprescribed2D/3D P/Limpulses pass,
+eightworkers bitidenticaltoserialcolored application. NOTa nonlinearworldsolver.
+Mustincludejoints/sharedmutablehistories beforeusingislands asindependentsolves.
+Topologyreuse isnotphysicalpatchidentityorframe/historytransport.
+
+Native schedule-v1:100..1Mcontacts, fourgraphfamilies. At1M, freshbuild14.97..27.84ms,
+exactcachecheck/reuse0.85..1.00ms. Million-edgehub999968serialcontacts; do notclaim
+parallelinteractingmillion-bodyupdates. Thesearediscovery/solve-freeplanningcosts;
+heterogeneousdegreegraphisnotanirregularshapeexperimental/worldbenchmark.
+
+63focusedfullrepositorytestsPASS. Three-page separatePDF built/visuallychecked;
+source/hash/timing/failure receipts inresearch/modern-contact-optimization.
+Standaloneextensionpackaging and15componenttests verificationfollow; downloads
+receipt identifies artifacts andsourcepin. Existing supportedbatchCABI1/v2bundle
+isimmutable/unchanged; newplanner isC++header, notCABI/compiler/GPUacceptance.
+Original13worldqualification/hosted393issues andempiricalmodelaccuracy remainopen.
+Article preserved; no new measured-error improvement. Next priorityROADMAP.md:
+fullshared-point wrench matrix-free body response, same-law closure/final gates,
+thenqualifiedcolored worlditeration andmatched-law competingenginebenchmarks.
+
 # Indexed batch/compiler import package — October 7, 2026
 
 Latest user: improve algorithms/correctness before BKF library tuning; finish for

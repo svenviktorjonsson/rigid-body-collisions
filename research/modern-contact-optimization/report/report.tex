@@ -1,37 +1,4 @@
-"""Build a separate numerical report; do not change the symbolic article."""
-import hashlib
-import json
-from pathlib import Path
-import subprocess
-
-HERE=Path(__file__).resolve().parent
-
-
-def escape(value):
-    return str(value).replace('_',r'\_').replace('%',r'\%').replace('&',r'\&')
-
-
-def main():
-    runs=[json.loads((HERE/'run-v5/results.json').read_text())]
-    rows=[row for run in runs for row in run['benchmarks']]
-    assert len(rows)==51
-    million=[row for row in json.loads((HERE/'schedule-v1/results.json').read_text())['cases'] if row['contacts']==1000000]
-    verified=runs[0]['verification']
-    assert hashlib.sha256((HERE.parents[1]/'contact_history.py').read_bytes()).hexdigest()==runs[0]['hashes']['candidate']
-    selected=[row for row in rows if row['count']==10000]
-    names={'stick':'Static/sticking','coherent_slide':'Coherent lower','reversing_slide':'Reversing',
-           'coherent_upper':'Coherent upper','coherent_mixed':'Mixed directions','coupled_face':'Coupled face'}
-    lines=[]
-    for row in selected:
-        ms=row['median_ms']
-        lines.append(f"{row['modes']} & {names[row['scenario']]} & {ms['frozen']:.1f} & {ms['candidate_cold']:.1f} & {ms['candidate_hint']:.1f} & {row['speedup_cold']:.2f}/{row['speedup_hint']:.2f} \\\\")
-    native=[]
-    for row in million:
-        native.append(f"{escape(row['kind'])} & {row['islands']:,} & {row['colors']} & {row['serial_contacts']:,} & {row['build_median_ms']:.2f} & {row['cache_hit_median_ms']:.2f} \\\\")
-    prep=[r['preparation_ms'] for r in rows]
-    gains=[r['speedup_cold'] for r in rows];hints=[r['speedup_hint'] for r in rows]
-    folder=HERE/'report';folder.mkdir(exist_ok=True)
-    source=r'''\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[margin=22mm]{geometry}
 \usepackage{hyperref}
 \newcommand{\toprule}{\hline}\newcommand{\midrule}{\hline}\newcommand{\bottomrule}{\hline}
@@ -111,17 +78,33 @@ cases test a wrong unconstrained guess and a valid previous face.
 \begin{center}\small
 \begin{tabular}{rlrrrr}\toprule
 Modes & Case & Frozen ms & Current ms & Warm ms & Gain current/warm\\\midrule
-'''+'\n'.join(lines)+r'''
+1 & Static/sticking & 626.3 & 586.3 & 591.4 & 1.07/1.06 \\
+1 & Coherent lower & 1058.5 & 959.3 & 979.5 & 1.10/1.08 \\
+1 & Reversing & 1491.8 & 979.4 & 1242.5 & 1.52/1.20 \\
+1 & Coherent upper & 1875.7 & 960.8 & 980.8 & 1.95/1.91 \\
+1 & Mixed directions & 1920.8 & 977.8 & 992.8 & 1.96/1.93 \\
+2 & Static/sticking & 645.5 & 625.4 & 625.1 & 1.03/1.03 \\
+2 & Coherent lower & 1112.8 & 1009.9 & 1043.2 & 1.10/1.07 \\
+2 & Reversing & 2919.0 & 1001.4 & 1282.9 & 2.91/2.28 \\
+2 & Coherent upper & 4743.7 & 1018.1 & 1035.9 & 4.66/4.58 \\
+2 & Mixed directions & 3906.3 & 1023.9 & 1061.9 & 3.82/3.68 \\
+2 & Coupled face & 1708.9 & 1583.0 & 1097.8 & 1.08/1.56 \\
+3 & Static/sticking & 636.8 & 597.5 & 600.2 & 1.07/1.06 \\
+3 & Coherent lower & 1088.2 & 988.5 & 1012.7 & 1.10/1.07 \\
+3 & Reversing & 7213.2 & 1043.2 & 1293.8 & 6.91/5.58 \\
+3 & Coherent upper & 13368.6 & 1036.1 & 1055.3 & 12.90/12.67 \\
+3 & Mixed directions & 10416.5 & 1014.1 & 1028.2 & 10.27/10.13 \\
+3 & Coupled face & 3187.9 & 2431.8 & 1114.3 & 1.31/2.86 \\
 \bottomrule\end{tabular}\end{center}
 All 51 size/scenario combinations are retained in the machine-readable results
-(100, 1,000 and 10,000 updates). Across them the default gain is '''+f'{min(gains):.2f}--{max(gains):.2f}'+r''' times;
-with hints it is '''+f'{min(hints):.2f}--{max(hints):.2f}'+r''' times. These are measured local numerical gains,
+(100, 1,000 and 10,000 updates). Across them the default gain is 1.03--12.97 times;
+with hints it is 1.02--12.67 times. These are measured local numerical gains,
 not an all-scene 2x gate or a competitor ranking. A hint can cost time when it
 fails or when the current prediction already succeeds.
 
 Preparation is deliberately reported separately: frozen objects took
-'''+f"{min(p['frozen'] for p in prep):.3f}--{max(p['frozen'] for p in prep):.3f}"+r''' ms;
-prepared candidates took '''+f"{min(p['candidate'] for p in prep):.3f}--{max(p['candidate'] for p in prep):.3f}"+r''' ms.
+0.068--0.199 ms;
+prepared candidates took 0.106--0.842 ms.
 Candidate preparation includes all zero-capacity patterns and their small factor
 metadata. Frequent mobility changes can reduce or erase its amortized benefit.
 
@@ -144,7 +127,10 @@ hit. These costs exclude collision discovery and all physical solving.
 \begin{center}\small
 \begin{tabular}{lrrrrr}\toprule
 Graph & Islands & Colors & Serial tail & Build ms & Reuse ms\\\midrule
-'''+'\n'.join(native)+r'''
+independent\_floor & 1,000,000 & 1 & 0 & 27.84 & 1.00 \\
+chain & 1 & 2 & 0 & 24.61 & 0.95 \\
+hub & 1 & 32 & 999,968 & 14.97 & 0.85 \\
+heterogeneous\_degree & 41,667 & 7 & 0 & 22.84 & 0.87 \\
 \bottomrule\end{tabular}\end{center}
 The million-contact hub illustrates the ownership limit: nearly every contact
 shares one dynamic body, so coloring cannot manufacture parallel independence.
@@ -153,10 +139,10 @@ geometry. Shapes and materials do not enter this planner.
 
 \textbf{Verification.} All 63 focused repository tests pass, including the
 existing supported, restitution, measured-inertia and conservation checks.
-'''+str(verified['cases'])+r''' seeded local-history cases ('''+str(verified['sliding_cases'])+r''' yielded) agree
-with the frozen physical outputs to '''+f"{verified['max_scaled_frozen_difference']:.3g}"+r''' maximum scaled difference.
-'''+str(verified['independent_optimizer_cases'])+r''' cases were independently checked by BVLS;
-the maximum impulse difference was '''+f"{verified['independent_optimizer_max_impulse_error']:.3g}"+r'''.
+1500 seeded local-history cases (910 yielded) agree
+with the frozen physical outputs to 2.17e-19 maximum scaled difference.
+141 cases were independently checked by BVLS;
+the maximum impulse difference was 5.55e-17.
 Sequential motion/history, opening/recontact, zero capacities, singular body
 mobility, wrong face hints and coupled fallback have explicit controls.
 An additional 300 exact/adjacent-static-limit controls preserve every original
@@ -184,13 +170,3 @@ sample timings, source hashes, independent audits and tests are retained in
 \href{https://github.com/svenviktorjonsson/rigid-body-collisions/tree/research/adaptive-benchmark-validation/research/modern-contact-optimization}{research/modern-contact-optimization}.
 The separate symbolic article is preserved.
 \end{document}
-'''
-    (folder/'report.tex').write_text(source)
-    for k in (1,2):
-        command=['pdflatex','-interaction=nonstopmode','-halt-on-error','report.tex']
-        result=subprocess.run(command,cwd=folder,capture_output=True,text=True)
-        (folder/f'build-{k}.txt').write_text(result.stdout+result.stderr);result.check_returncode()
-    for suffix in ('aux','log','out'):(folder/f'report.{suffix}').unlink(missing_ok=True)
-
-
-if __name__=='__main__':main()

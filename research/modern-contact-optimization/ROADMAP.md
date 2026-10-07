@@ -41,6 +41,11 @@ and rapid-group scenes, including discovery, assembly, solve and integration.
 
 ## 3. Reuse work within a frozen solve — partially implemented
 
+MuJoCo's [computation reference](https://mujoco.readthedocs.io/en/stable/computation/)
+also describes avoiding contact-matrix construction in its sparse solver.
+This supports adopting sparse operators, not assuming that its soft-contact
+optimization objective is equivalent to our restitution/friction closure.
+
 The local contact-history component now prepares Cholesky factors and active-set
 metadata, tests a caller-owned prior face and the current unconstrained face,
 and falls back to exhaustive exact face search. Hints are checked against the
@@ -91,6 +96,13 @@ without redefining the law. Measure preparation, allocations, scheduling and
 barriers as well as the contact kernel. GPU/BKF lowering is a later compiler
 acceptance task, not demonstrated by these host C++/Python results.
 
+Keep immutable material profiles in a separate table referenced by compact
+indices, rather than duplicating every coefficient at every contact. The pair
+profile and physical moment lengths must still be resolved correctly; this is
+data reuse, not a new mixing rule or a replacement of geometric contact scales
+with the notation's reference length. Measure bandwidth and gather/scatter cost
+before assuming arithmetic is the main bottleneck.
+
 ## Techniques that require a physical decision
 
 Soft constraints, positional friction anchors, Baumgarte bias, XPBD compliance,
@@ -103,3 +115,24 @@ also needs its existing momentum/energy ledger and fresh trajectory qualificatio
 Primary references and the predeclared experiment are in [README.md](README.md).
 The full directional closure and experimental limitations remain in the
 [model fidelity audit](../scaled-contact-article/MODEL-FIDELITY-AUDIT.md).
+
+## Comparable-engine experiment after world integration
+
+Freeze exact geometry, mass/COM/full inertia, initial linear/angular states,
+material-pair properties, boundary work and physical horizon. Compare on the
+same host with matched error budgets, not just the same iteration count.
+Measure full discovery/assembly/solve/integration time and memory as well as
+velocity/angular errors, penetration, momentum and energy/work ledgers.
+
+Material definitions must be translated explicitly: for example,
+[Box2D's documented mixing](https://box2d.org/documentation/md_simulation.html)
+uses the geometric mean of shape friction values; the older native comparator
+here uses product mixing. Assigning the same two shape numbers would therefore
+produce different pair coefficients. Treat the pair property as authoritative.
+Record absent static/dynamic, rolling/spin or tangential-restitution support
+rather than silently replacing it with another engine's default.
+
+Start with comparable isolated impacts and supported motion, then stacks,
+irregular shapes and rapid groups at increasing body counts. Distinguish an
+engine's numerical error from disagreement caused by a different material law.
+Unsupported law branches cannot establish a speed or authenticity ranking.
