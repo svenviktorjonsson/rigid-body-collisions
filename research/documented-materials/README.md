@@ -6,6 +6,13 @@ The sources are [Cornell's impact chart](https://grainflowresearch.mae.cornell.e
 
 `material_profiles.documented_profile(id)` returns a source-backed nominal profile. `run_documented_pair(scene,id,**options)` passes both restitution coefficients unchanged to the native3D solver and realizes the measured pair friction through Bullet's product mixing (`sqrt(mu)` on each side). It requires one pair, documented geometry and nominal size. It does not define a generic per-body mixing law or heterogeneous restitution graph. Parameters remain in the separate catalog; equations stay symbolic.
 
+The 7 October measured-properties adapter accepts explicit mass/COM/inertia, but
+this source-specific wrapper checks authoritative mass against the documented
+density and preserves declared homogeneous-sphere COM/inertia assumptions.
+Conflicting overrides are rejected. A fresh 24-case replay in
+`../contact-gap-fix/glass-repeat-v2/` has exactly the prior residuals. The new
+supported rolling/spin primitive is separate and is not validated by this worksheet.
+
 The81native/analytic/energy checks pass for the nine profiles with documented density. They verify parameter loading and mechanics, not real-world accuracy. The initial loader error assignedmu to both Bullet bodies, producingmu²; its failed control and diagnosis are preserved separately. This correction changes the adapter, not production contact physics or source values. The corresponding3D educational wrapper is corrected too; Box2D2D mixing remains different.
 
 ## Comparison with recorded impact data

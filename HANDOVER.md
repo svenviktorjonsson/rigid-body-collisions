@@ -1,3 +1,68 @@
+# Measured properties and sustained-contact repair — October 7, 2026
+
+Latest user: find missing model physics, fix it, continue. This checkpoint repairs
+two concrete gaps, not the full authentic collision model. First code checkpoint
+26d77f3 pushed on research/adaptive-benchmark-validation; latest code/evidence/report
+commit identified by git history. No missing remote pushes at task start. Do not
+spawn new agents under current developer instructions; no language repo edits.
+
+spatial_engine.py accepts explicit mass_properties with all three SI keys:
+mass_kg, center_of_mass_m, inertia_body_kg_m2 (about supplied local COM, body axes).
+Maps full measured tensor into native principal axes, preserves collision geometry
+and authored position-as-COM semantics. Finite/symmetry/positive/triangle/shape
+extent bounds; no proof of exact-shape realizability. Legacy defaults match old
+512a1b2 preparation bitwise for three scenes. material_profiles.py now checks
+authoritative density and its declared homogeneous-sphere COM/inertia assumptions
+instead of allowing measured overrides to bypass specimen guards.
+
+New supported_contact.py public primitive: exact constant-load/drive supported
+scalar-I disk/sphere dynamics; mu_s vs mu_d, independent rolling/spin moments with
+physical moment lengths, event integration to slip/rolling/axial arrest, no
+through-zero reversal. Separate impulse/work/loss channels and moving-plane work.
+advance_spatial rotates the motion-plane branch and retains FULL t/s definitions.
+Rejects general noncollinear/normal-impact states. Partial angular arrest can need
+transverse static moment outside s/n span: explicit rejection test, no relabeled s.
+Complete static reactions flagged; original zero/static directional law unresolved.
+Independent angular capacities phenomenological, not coupled finite-patch budget.
+Native production contacts do NOT automatically use this supported primitive.
+
+39 focused tests PASS (15new/24existing), verification receipt/logs in
+research/contact-gap-fix/verification/. Initial coarse free-rotation native test
+failed same1e-7 momentum tolerance; 32/64/128/256 refinement retained, 256 passes
+8.24e-8. audit-v2:400randomcontrols, energy1.22e-15/composition2.80e-16 maximum
+scaled errors, max4intervals; 100rotated/moving-planecontrols angularimpulse2.01e-15
+Nms. Tiny motions1e-14 preserved; static constraints projected at exact arrest to
+avoid roundoff chatter. No source coefficient fits.
+
+glass-repeat-v1 and reproducible v2 retain 24 native analytic/energy passes and
+exact old RMSE:normal.0366739897m/s,COMtangent.0178047683m/s,joint.0241563367.
+No empiricalaccuracy gain. Historical contact-tangent target reconstructs spin,
+source parameter/evaluation independence incomplete. No rolling/spin calibration.
+
+Native C++ supported kernel:400Pythoncontrols match exactly, O3WallWextraWerror,
+no-fast-math. Flat SoA body index k; median100/10k/100k/1M independent response
+cost48.6/46.94/80.94/81.41ns, 1Mtotal81.4ms,208MBarrays. 5repeats+warmup,
+inputload/all11outputstores/energy/branch checks timed; allocation/detection/poses/
+changingloads/impacts/groups excluded. Not a many-body scene or baseline speedup.
+User removed2xgate; no restoration. Newreport5pages, syntheticmotiontraces and
+glassCOMvelocity magnitude/angle error dots, no invented angular targets.
+
+Host disk filled during benchmark source creation; only our downloaded156426196B
+RockMasonry1.rar moved to /tmp/physics-public-cache-preserved-20261007/ after SHA
+a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4 verification.
+Original cache file absent, no symlink; receipt/source URL in cache-relocation.json.
+Temporary copy can disappear on reboot; reproducibly re-download with fetch script.
+No measurements deleted, unrelated local-results untouched. Ordinary filesystem
+free space remains tight; avoid large builds/copies without checking available.
+
+Next: specify general zero/static-direction convention without widening t/s;
+combine unilateral opening and local shear/elastic-mode state with a physical
+finite-patch budget/work ledger. Independently characterized contact parameters
+and well-resolved incoming/outgoing spin/timing still missing for clean held-out
+data. Maw1976 tangential compliance/partial stick is relevant prior art, not a
+complete parameter source. Existing all-case contact-group qualification remains
+open; do not claim full realism or infer a coefficient merely to erase residuals.
+
 # Public experimental data extension — October 7, 2026
 
 Latest user asks for more public observations to improve authenticity. New isolated

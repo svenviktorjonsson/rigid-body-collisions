@@ -69,9 +69,12 @@ def advance_planar(*,mass_kg,inertia_kg_m2,radius_m,normal_load_N,drive_force_N,
     while t<duration_s:
         if len(events)>=max_events:raise RuntimeError('Supported contact exceeded branch budget; no accepted result')
         u=v-R*w
-        if abs(u)<=velocity_tolerance:v=R*w;u=0.
-        if abs(w)<=velocity_tolerance/R:w=0.
-        f,M,dv,dw,su,sw=_branch(v,w,m,I,R,N,F,material,velocity_tolerance)
+        # Resolve cancellation relative to this motion's scale; an absolute
+        # threshold must not erase a physically small initial velocity.
+        numerical_tolerance=min(velocity_tolerance,64*np.finfo(float).eps*max(abs(v),R*abs(w)))
+        if abs(u)<=numerical_tolerance:v=R*w;u=0.
+        if abs(w)<=numerical_tolerance/R:w=0.
+        f,M,dv,dw,su,sw=_branch(v,w,m,I,R,N,F,material,numerical_tolerance)
         remaining=duration_s-t;h=remaining;stop_u=False;stop_w=False
         du=dv-R*dw
         candidates=[]
@@ -93,8 +96,8 @@ def advance_planar(*,mass_kg,inertia_kg_m2,radius_m,normal_load_N,drive_force_N,
                            force_N=f,independent_rolling_moment_Nm=M,
                            slip_sign=su,rolling_sign=sw,slip_arrest=stop_u,rolling_arrest=stop_w))
         v+=dv*h;w+=dw*h;t+=h
-        if stop_w:w=0.
-        if stop_u:v=R*w
+        if stop_w or sw==0:w=0.
+        if stop_u or su==0:v=R*w
         if duration_s-t<=8*np.finfo(float).eps*duration_s:t=duration_s
     spin0=float(spin_rad_s);spin_cap=material.mu_n*material.spin_length_m*N*duration_s
     spin_impulse=-np.sign(spin0)*min(spin_cap,I*abs(spin0));spin=spin0+spin_impulse/I
@@ -154,8 +157,9 @@ def advance_spatial(*,normal,direction,velocity,omega,plane_velocity=(0.,0.,0.),
             motion=(local_v-R*local_w)*d;rotation=local_w*axis+axial*n
             speed=np.linalg.norm(motion);angular_speed=np.linalg.norm(rotation)
             moment=event['independent_rolling_moment_Nm']*axis+(I*spin_rate if time<spin_stop else 0.)*n
-            t=motion/speed if speed>options.get('velocity_tolerance',1e-12) else None
-            s=rotation/angular_speed if R*angular_speed>options.get('velocity_tolerance',1e-12) else None
+            tolerance=min(options.get('velocity_tolerance',1e-12),64*np.finfo(float).eps*max(abs(local_v),R*abs(local_w)))
+            t=motion/speed if speed>tolerance else None
+            s=rotation/angular_speed if angular_speed>0 else None
             moment_map=np.column_stack([s,n]) if s is not None else n[:,None]
             coefficients=np.linalg.lstsq(moment_map,moment,rcond=None)[0]
             residual=np.linalg.norm(moment-moment_map@coefficients)
@@ -168,7 +172,16 @@ def advance_spatial(*,normal,direction,velocity,omega,plane_velocity=(0.,0.,0.),
                                force_n_N=options['normal_load_N'],force_t_N=None if t is None else float(event['force_N']*d@t),
                                independent_moment=moment.tolist(),angular_span_residual_Nm=float(residual),
                                static_linear_reaction=t is None,static_angular_reaction=s is None))
-    result.update(velocity=final_v.tolist(),omega=final_w.tolist(),linear_impulse=delta_p.tolist(),
+    body_initial=.5*m*(v@v)+.5*I*(w@w)
+    body_final=.5*m*(final_v@final_v)+.5*I*(final_w@final_w)
+    body_drive_work=options['drive_force_N']*(result['distance_m']+options['duration_s']*(U@d))
+    losses=result['sliding_loss_J']+result['rolling_loss_J']+result['spin_loss_J']
+    residual=body_final-body_initial-body_drive_work-support_work+losses
+    if abs(residual)>2e-10*max(body_initial,body_final,abs(body_drive_work),abs(support_work),losses,1e-300):
+        raise RuntimeError('Moving-support body energy/work gate failed')
+    result.update(relative_initial_kinetic_J=result['initial_kinetic_J'],relative_final_kinetic_J=result['final_kinetic_J'],
+                  initial_kinetic_J=float(body_initial),final_kinetic_J=float(body_final),external_work_J=float(body_drive_work),energy_residual_J=float(residual),
+                  velocity=final_v.tolist(),omega=final_w.tolist(),linear_impulse=delta_p.tolist(),
                   independent_angular_impulse=delta_L.tolist(),body_angular_change=angular_change.tolist(),
                   support_work_J=support_work,
                   directional_branch_frames=frames,

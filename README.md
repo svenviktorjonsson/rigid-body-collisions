@@ -5,6 +5,15 @@
 A physics-engine research prototype with real 2D and 3D native collision backends
 and reproducible speed/accuracy benchmarks.
 
+The [measured-inertia and sustained-contact repair](research/contact-gap-fix/README.md)
+adds authoritative mass/COM/inertia to the 3D adapter and a separate exact
+sphere/disk contact primitive with static/dynamic friction and independent rolling
+and spin angular impulses. 39 focused tests pass; 400 randomized and 100 rotated
+controls verify mechanics. Its [report](research/contact-gap-fix/report/report.pdf)
+retains unchanged glass experimental errors and explicitly identifies unsupported
+general 3D static-direction branches. The native contact-group solver does not
+yet integrate this resistance primitive. No full-model authenticity is claimed.
+
 The [public experimental data extension](research/public-validation-data/README.md)
 adds 1,718 signed planar impacts, 160 non-spherical spatial impact trials,
 22 rubber-bounce trials, 59 sliding trials and 135 limestone rocking trials
@@ -21,7 +30,8 @@ an isolated 2D simultaneous-contact build. Positive tangential restitution
 reverses contact slip when friction capacity permits; actual energy and boundary
 work are checked separately. Synthetic controls pass, and the measured rubber
 comparison is consistent with reported angle uncertainty. Independent material
-calibration and the all-case performance gate remain open.
+calibration and general experimental qualification remain open; the user removed
+the all-case 2x performance gate.
 
 The [Float64 3D backend](spatial_backend/README.md) supports arbitrary convex
 hulls, boxes, spheres and compounds, full inertia tensors, quaternion rotation

@@ -73,6 +73,25 @@ class SupportedContactTests(unittest.TestCase):
         np.testing.assert_allclose(r['body_angular_change'],expected,atol=1e-14)
         np.testing.assert_allclose(.004*(np.array(r['omega'])-10*axis-5*n),expected,atol=1e-14)
         self.assertAlmostEqual(r['support_work_J'],U@J,places=14)
+        self.assertAlmostEqual(r['final_kinetic_J']-r['initial_kinetic_J']-r['support_work_J']+
+                               r['sliding_loss_J']+r['rolling_loss_J']+r['spin_loss_J'],0,places=13)
+        for frame in r['directional_branch_frames']:
+            if frame['s'] is not None:
+                M=np.array(frame['independent_moment']);B=np.column_stack([frame['s'],n])
+                np.testing.assert_allclose(B@np.linalg.lstsq(B,M,rcond=None)[0],M,atol=1e-13)
+
+    def test_small_initial_motion_is_not_erased_by_absolute_stop_threshold(self):
+        for scale in [1e-14,1e-9,1e-4]:
+            r=self.case(velocity_m_s=scale,omega_rad_s=0.,material=Resistance(.5,.3,0.,0.))
+            self.assertAlmostEqual(r['velocity_m_s']/scale,1/1.4,places=12)
+            self.assertGreater(r['velocity_m_s'],0.)
+            self.assertLess(abs(r['energy_residual_J'])/r['initial_kinetic_J'],1e-12)
+
+    def test_partial_angular_arrest_with_transverse_static_couple_is_not_relabelled(self):
+        with self.assertRaisesRegex(ValueError,'s/n span'):
+            advance_spatial(normal=[0,0,1],direction=[1,0,0],velocity=[1,0,0],omega=[0,0,5],
+                            mass_kg=1.,inertia_kg_m2=.004,radius_m=.1,normal_load_N=9.81,
+                            drive_force_N=0.,duration_s=.01,material=Resistance(.5,.3,.5,.1))
 
     def test_semigroup_and_sign_symmetry(self):
         law=Resistance(.4,.2,.06,.07,.03,.01)

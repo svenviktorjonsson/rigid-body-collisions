@@ -38,8 +38,9 @@ def run_documented_pair(scene,profile_id,**options):
     product mixing realizes that measured pair value. No per-body material law is inferred.
     Heterogeneous groups require per-contact profile resolution, not this wrapper.
     """
-    from spatial_engine import run
+    from spatial_engine import run,prepare
     profile=documented_profile(profile_id);cfg=copy.deepcopy(scene)
+    prepare(cfg)  # Validate authoritative mass-property units and realizability too.
     if len(cfg.get('bodies',[]))!=2:raise ValueError('This wrapper supports one two-body pair; no global coefficient substitution for heterogeneous contact graphs.')
     for key in ['normal_restitution','tangential_restitution','solver']:
         if key in options:raise ValueError('Profile-owned option cannot be overridden: '+key)
@@ -52,8 +53,16 @@ def run_documented_pair(scene,profile_id,**options):
             if not math.isclose(2*radius,profile.metadata['sphere_diameter_m'],rel_tol=1e-9):
                 raise ValueError('Sphere size differs from documented profile; do not silently extrapolate the coefficients.')
             density=profile.metadata.get('sphere_density_kg_m3')
-            if density is not None and not math.isclose(float(body['shapes'][0].get('density',1)),density,rel_tol=1e-9):
+            properties=body.get('mass_properties')
+            actual_density=(properties['mass_kg']/(4*math.pi*radius**3/3)) if properties is not None else float(body['shapes'][0].get('density',1))
+            if density is not None and not math.isclose(actual_density,density,rel_tol=1e-9):
                 raise ValueError('Sphere density differs from documented specimen; do not silently change the material.')
+            if properties is not None and profile.metadata.get('inertia_model')=='homogeneous sphere assumption; not a measured tensor':
+                center=body['shapes'][0].get('center',[0,0,0]);expected=.4*properties['mass_kg']*radius*radius
+                if not all(math.isclose(c,d,abs_tol=radius*1e-9) for c,d in zip(properties['center_of_mass_m'],center,strict=True)):
+                    raise ValueError('Measured COM differs from this profile\'s homogeneous sphere assumption')
+                if not all(math.isclose(properties['inertia_body_kg_m2'][i][j],expected if i==j else 0.,rel_tol=1e-9,abs_tol=expected*1e-12) for i in range(3) for j in range(3)):
+                    raise ValueError('Measured inertia differs from this profile\'s homogeneous sphere assumption; use an explicitly matched profile')
     if geometry=='sphere_plane':
         plane=next(b for b in cfg['bodies'] if not (len(b.get('shapes',[]))==1 and b['shapes'][0].get('kind')=='sphere'))
         if plane.get('type')!='kinematic':raise ValueError('Plane profile requires prescribed support; a freely moving support changes the experimental geometry.')

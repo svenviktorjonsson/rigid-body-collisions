@@ -1,0 +1,49 @@
+{
+  "random_cases": 400,
+  "random_passes": 400,
+  "max_scaled_step_composition_error": 2.8048493552487794e-16,
+  "max_relative_energy_residual": 1.223316108963942e-15,
+  "max_branch_intervals": 4,
+  "rotated_spatial_cases": 100,
+  "max_rotated_velocity_error_m_s": 2.433010126791216e-15,
+  "max_rotated_angular_impulse_error_Nms": 2.010435991964995e-15,
+  "max_directional_span_error_Nm": 1.201444733223523e-15,
+  "unchanged_default_scene_preparations": 3,
+  "baseline_revision": "512a1b2",
+  "input_fields": [
+    "mass_kg",
+    "inertia_kg_m2",
+    "radius_m",
+    "normal_load_N",
+    "drive_force_N",
+    "velocity_m_s",
+    "omega_rad_s",
+    "spin_rad_s",
+    "duration_s",
+    "mu_s",
+    "mu_d",
+    "mu_r",
+    "rolling_length_m",
+    "mu_n",
+    "spin_length_m"
+  ],
+  "output_fields": [
+    "velocity_m_s",
+    "omega_rad_s",
+    "spin_rad_s",
+    "distance_m",
+    "tangent_impulse_Ns",
+    "independent_rolling_impulse_Nms",
+    "independent_spin_impulse_Nms",
+    "sliding_loss_J",
+    "rolling_loss_J",
+    "spin_loss_J",
+    "energy_residual_J"
+  ],
+  "scope": "Exact supported branch and native input mechanics. No new empirical accuracy qualification or interacting group simulation.",
+  "sources": {
+    "supported_contact.py": "963d0002fa99d1a8127c29acdb0dd9bd131dab5bf609d4c4ebbd4ffd004b59e2",
+    "spatial_engine.py": "df54d0f670550180fab8282ef6a5cb668fc2deb6efdf65690c5be6232586210a",
+    "material_profiles.py": "96c6d2889db6a91e69ccc6c8dd4189b2d0b65e352b3742c62f852c762c91a09e"
+  }
+}

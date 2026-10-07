@@ -1,0 +1,58 @@
+{
+  "native_reference_controls": 400,
+  "max_scaled_error": 0,
+  "batches": [
+    {
+      "responses": 100,
+      "median_ns_per_response": 48.6,
+      "min_ns_per_response": 48.2,
+      "max_ns_per_response": 58.2,
+      "array_bytes": 20800,
+      "checksum": 10810.900416208704
+    },
+    {
+      "responses": 10000,
+      "median_ns_per_response": 46.9387,
+      "min_ns_per_response": 46.6297,
+      "max_ns_per_response": 47.5147,
+      "array_bytes": 2080000,
+      "checksum": 609639.7349488307
+    },
+    {
+      "responses": 100000,
+      "median_ns_per_response": 80.93651,
+      "min_ns_per_response": 79.5985,
+      "max_ns_per_response": 83.01495,
+      "array_bytes": 20800000,
+      "checksum": 6096397.349487878
+    },
+    {
+      "responses": 1000000,
+      "median_ns_per_response": 81.405842,
+      "min_ns_per_response": 81.102518,
+      "max_ns_per_response": 81.473154,
+      "array_bytes": 208000000,
+      "checksum": 60963973.4948835
+    }
+  ],
+  "host": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "/home/viktor/.cache/vkf-physics-continuation/research/contact-gap-fix/benchmark.cpp",
+    "-o",
+    "research/contact-gap-fix/benchmark-v1/supported-benchmark"
+  ],
+  "scope": "Independent supported-contact updates with SoA input loads/output stores; not interacting body scenes. Allocation, collision detection, frame/quaternion evolution, changing loads, impacts and group solving excluded.",
+  "baseline_speedup_claimed": false,
+  "source_sha256": {
+    "supported_kernel.h": "50355e3488b132cbe379dc148865f2cd9840984a25615d29fc0ff2ed4509a1c2",
+    "benchmark.cpp": "733520083dca31f481c2e6fd72eee6cdbdc183b603adcbed6524f9db31f307b0",
+    "controls.txt": "f7d78e6a5795f5924b4721d4a7492e05d10dc17492222b838304e60977135a21"
+  }
+}

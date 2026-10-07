@@ -1,8 +1,10 @@
 import copy
 import unittest
 import numpy as np
+import math
 from scipy.spatial.transform import Rotation
 from spatial_engine import prepare,run,BINARY,energy
+from material_profiles import documented_profile,run_documented_pair
 
 
 class MeasuredPropertiesTests(unittest.TestCase):
@@ -29,6 +31,20 @@ class MeasuredPropertiesTests(unittest.TestCase):
             with self.assertRaises(ValueError):prepare(scene)
         scene=self.scene();del scene['bodies'][0]['mass_properties']['center_of_mass_m']
         with self.assertRaises(ValueError):prepare(scene)
+
+    @unittest.skipUnless(BINARY.exists(),'Build native spatial backend')
+    def test_documented_profile_checks_authoritative_properties_instead_of_dummy_density(self):
+        p=documented_profile('glass-soda-binary');R=p.metadata['sphere_diameter_m']/2
+        m=4*math.pi*R**3*p.metadata['sphere_density_kg_m3']/3;I=.4*m*R*R
+        def body(z,v):return dict(position=[0,0,z],velocity=[0,0,v],shapes=[dict(kind='sphere',radius=R)],
+                                 mass_properties=dict(mass_kg=m,center_of_mass_m=[0,0,0],inertia_body_kg_m2=(I*np.eye(3)).tolist()))
+        scene=dict(duration=1e-7,gravity=[0,0,0],bodies=[body(R-1e-12,-.1),body(-R,.1)])
+        r=run_documented_pair(scene,p.id,dt=1e-7,primary_steps=1,travel_fraction=0,kinematic_contact_phase='start',position_stabilization='split_translation_combined')
+        self.assertAlmostEqual(r['states'][-1][0][9]-r['states'][-1][1][9],p.normal_restitution*.2,places=8)
+        wrong_mass=copy.deepcopy(scene);wrong_mass['bodies'][0]['mass_properties']['mass_kg']*=2
+        with self.assertRaisesRegex(ValueError,'density'):run_documented_pair(wrong_mass,p.id)
+        wrong_I=copy.deepcopy(scene);wrong_I['bodies'][0]['mass_properties']['inertia_body_kg_m2'][0][0]*=1.1
+        with self.assertRaisesRegex(ValueError,'inertia'):run_documented_pair(wrong_I,p.id)
 
     @unittest.skipUnless(BINARY.exists(),'Build native spatial backend')
     def test_native_free_rotation_uses_measured_tensor(self):
