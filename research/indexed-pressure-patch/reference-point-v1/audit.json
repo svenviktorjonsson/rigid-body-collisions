@@ -1,0 +1,123 @@
+{
+  "pass_": true,
+  "reference_origin_controls": 100,
+  "length_scale_controls": 300,
+  "maximum_scaled_error": 1.887379141862766e-15,
+  "center_of_pressure_examples": [
+    {
+      "kind": "hertz",
+      "center_of_pressure_offset": [
+        0.0004194174757281552,
+        0.0003355339805825234,
+        0.0
+      ],
+      "nominal_origin": {
+        "linear_residual": 0.4425181568230075,
+        "angular_residual": 0.010372234429418934,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          20.00444781402091,
+          -4.4787565830047
+        ],
+        "angular_components": [
+          -0.026707559186537895,
+          -0.02044208639788834
+        ]
+      },
+      "pressure_origin": {
+        "linear_residual": 0.07000944487064985,
+        "angular_residual": 7.659668088175211e-18,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          20.005906917389854,
+          -4.499827297923291
+        ],
+        "angular_components": [
+          2.2487502177949233e-17,
+          -0.045655374497722244
+        ]
+      }
+    },
+    {
+      "kind": "ellipse",
+      "center_of_pressure_offset": [
+        0.00041941747572815587,
+        8.38834951456314e-05,
+        0.0
+      ],
+      "nominal_origin": {
+        "linear_residual": 0.3806838047237797,
+        "angular_residual": 0.005926991102525107,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          19.881448563248373,
+          -5.403753110716533
+        ],
+        "angular_components": [
+          -0.045197407854140906,
+          0.01298570404723289
+        ]
+      },
+      "pressure_origin": {
+        "linear_residual": 0.6173348141502123,
+        "angular_residual": 2.14519720095364e-18,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          19.88435999499274,
+          -5.381467273662887
+        ],
+        "angular_components": [
+          -1.4871466228417018e-17,
+          -0.03003073003438797
+        ]
+      }
+    },
+    {
+      "kind": "irregular",
+      "center_of_pressure_offset": [
+        0.0005150517550975545,
+        0.00040863993522245533,
+        0.0
+      ],
+      "nominal_origin": {
+        "linear_residual": 0.6315871351203538,
+        "angular_residual": 0.012674809157580751,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          20.017094457465518,
+          -4.354498848781368
+        ],
+        "angular_components": [
+          -0.03304103668497007,
+          -0.0181547121167911
+        ]
+      },
+      "pressure_origin": {
+        "linear_residual": 0.19237580385405925,
+        "angular_residual": 2.604535141511192e-18,
+        "t_defined": true,
+        "s_defined": true,
+        "linear_components": [
+          20.017113060967926,
+          -4.395854017114229
+        ],
+        "angular_components": [
+          -1.8055802226709178e-17,
+          -0.049274377278005835
+        ]
+      }
+    }
+  ],
+  "experimental_validation": false,
+  "conclusion": "Moving to normal center of pressure removes transverse contact couple for this flat patch, but mixed friction force may still lie outside n/t at that actual point. Total body torque and work are origin invariant. This does not establish incompatibility of every possible directional closure.",
+  "source_sha256": {
+    "reference_point_audit.py": "d49e32cd1408b3f1cd42e08d7d04f179ce28085434564326abbf1a313c97b1ef",
+    "model.py": "0a804bac45e15cadc88e29dc033359030ba364f5c73c22edd4dd6c0b335590d2",
+    "audit.py": "969ea081ab81a486cbaf9d3e5b3ed29bbad2ef906bbcb8eb3259315e0fc1f6bf"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "reviewed_utc_date": "2026-10-07",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1904.11433",
+      "title": "A pressure field model for fast, robust approximation of net contact force and moment between nominally rigid objects",
+      "authors": "Elandt, Drumwright, Sherman, Ruina",
+      "scope": "Primary pressure-field precedent; this flat foundation does not implement its pressure-field intersection geometry"
+    },
+    {
+      "url": "https://drake.mit.edu/doxygen_cxx/group__hydroelastic__user__guide.html",
+      "title": "Hydroelastic Contact User Guide",
+      "scope": "Official pressure-patch implementation context; defaults do not identify measured material properties"
+    }
+  ]
+}

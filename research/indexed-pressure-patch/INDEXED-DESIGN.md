@@ -75,6 +75,14 @@ motion shares the local friction budget, rather than independently applying
 maximum sliding force and maximum spin torque. These formulas assume the supplied
 footprint/pressure shape; they are not a universal material identification.
 
+That rolling pressure moment is about the nominal patch center. Moving the
+contact origin to its center of normal pressure transfers transverse moment into
+the normal force's lever arm; total body torque/work remains invariant. Axial
+spin couple remains independent. `reference_point_audit.py` checks this explicitly:
+transverse angular-span residual disappears at that origin, but mixed friction
+force can still disagree with n/t there. Do not infer that every possible
+directional closure is incompatible from a fixed-origin residual alone.
+
 Reference length ell changes only coordinates: **V** = [**v**; ell **omega**],
 **P** = [**p**; **L**/ell], independent impulse has angular entries delta **L**/ell.
 The physical radius a and physical inertia are not replaced by ell. Code uses

@@ -109,9 +109,7 @@ Wrench compact(const Patch&p,const V&d,const V&u,const V&omega,double K,double C
 }
 
 int main(int argc,char**argv) {
-    if(argc!=2 && argc!=3) return 2;
-    const bool confirmation=argc==3 && std::string(argv[2])=="confirmation";
-    if(argc==3 && !confirmation) return 2;
+    if(argc!=2) return 2;
     std::ifstream input(argv[1]);size_t count;input>>count;
     std::vector<Patch> patches(count);std::vector<std::string> names(count);
     for(size_t i=0;i<count;++i) {
@@ -130,8 +128,7 @@ int main(int argc,char**argv) {
     // Modes cover loaded sliding/rolling, loaded mixed twist, and opening/clipping.
     for(size_t shape=0;shape<count;++shape) for(int mode=0;mode<3;++mode) {
         if(shape==0 && mode==1) continue; // 2D has no axial twist.
-        const std::vector<size_t> sizes=confirmation?std::vector<size_t>{10000,100000}:std::vector<size_t>{100,10000,100000,1000000};
-        for(size_t n:sizes) {
+        for(size_t n:{100ul,10000ul,100000ul,1000000ul}) {
             Contacts c(n);Fields b(n+1);std::vector<Wrench> base(n),fast(n);
             for(size_t i=0;i<n;++i) {
                 const double f=double((i*7919)%10007)/10007;
@@ -162,17 +159,16 @@ int main(int argc,char**argv) {
             }
             if(error>1e-11 || scatter_error>1e-10) throw std::runtime_error("native equivalence");
             std::array<double,2> seconds{};
-            std::array<std::vector<double>,2> samples;
             const size_t repeats=std::max(1ul,100000ul/n);
-            for(int trial=0;trial<5;++trial) {
-                for(int position=0;position<2;++position) {
-                    const int which=(trial+position)%2;
+            for(int which=0;which<2;++which) {
+                std::vector<double> samples;
+                for(int trial=0;trial<5;++trial) {
                     const auto start=std::chrono::steady_clock::now();
                     for(size_t r=0;r<repeats;++r) run(patches[shape],c,b,which?fast:base,which);
-                    samples[which].push_back(std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count()/repeats);
+                    samples.push_back(std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count()/repeats);
                 }
+                std::sort(samples.begin(),samples.end());seconds[which]=samples[2];
             }
-            for(int which=0;which<2;++which) {std::sort(samples[which].begin(),samples[which].end());seconds[which]=samples[which][2];}
             double checksum=0;for(const auto&w:fast) for(int a=0;a<3;++a) checksum+=w.f[a]+w.m[a];
             if(!std::isfinite(checksum)) return 4;
             if(!first) std::cout<<",";
@@ -182,7 +178,7 @@ int main(int argc,char**argv) {
                      <<",\"compact_seconds\":"<<seconds[1]<<",\"speedup\":"<<seconds[0]/seconds[1]
                      <<",\"maximum_scaled_wrench_error\":"<<error<<",\"maximum_scaled_scatter_error\":"<<scatter_error
                      <<",\"checksum\":"<<checksum<<",\"array_bytes\":"
-                     <<(n*6*sizeof(double)+(n+1)*18*sizeof(double)+(n+1)*sizeof(size_t)+2*n*(sizeof(size_t)+4*sizeof(double))+2*n*sizeof(Wrench)+patches[shape].x.size()*3*sizeof(double))<<"}";
+                     <<(n*9*sizeof(double)+(n+1)*12*sizeof(double)+(n+1)*sizeof(size_t)+2*n*(sizeof(size_t)+4*sizeof(double))+2*n*sizeof(Wrench))<<"}";
             if(n==100) {
                 // Auditable controls in raw output, not only checksums.
                 std::cout.flush();

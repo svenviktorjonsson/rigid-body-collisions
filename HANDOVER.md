@@ -1,3 +1,51 @@
+# Indexed pressure-patch continuation — October 7, 2026
+
+Latest user: continue authentic/efficient work; use indices suitable for later
+Vektor Flow. Read spec/bootstrap AGENTS + handovers and authoritative Section0;
+no language repo edits/port/compiler/GPU claims. Physics remote fetched: no missing
+main/branch pushes; ADMIN push permissions confirmed. Same research branch retained.
+New isolated study research/indexed-pressure-patch/; single owner body k, flat
+contact/incidence/site ranges, shared footprint templates, SoA fields, explicit
+ordered gather/scatter. INDEXED-DESIGN.md describes later-port boundary and material
+vs state inputs. No dense pair-body tensors or hidden sums.
+
+Flat unilateral normal foundation + existing dynamic friction now generates
+force/couple for mixed sliding/twist/transverse rotation/nonuniform pressure and
+2D interval/3D circular/ellipse/irregular patches. Cache3x3Gram pressure moments;
+loaded zero-axial-twist branch eliminates site loops exactly. Open/clipped/mixed
+branches preserve site-level physics. K,C,patch inputs synthetic, no new fit.
+Static/shear history, moving patch/yield, restitution consistency, coupled group
+step and experimental calibration still unimplemented; production unchanged.
+
+audit-v2:240 mechanical controls,50loaded/190opening-clipped, scaled power1.92e-15,
+indexed work/global momentum4.91e-16; analytic Hertzspin/cachedGram pass; normal
+transient stored/lost energy residual1.34e-9J of.5J. reference-point-v1:100origin/
+300ell controls,1.89e-15; centerofpressure removes transverse freecouple but does
+NOT generally align mixed force with user's full t. Fixed-origin residual alone
+does not prove every directional closure incompatible; full zero/static/directional
+law remains unresolved. Never relabel t/s or declare conventional patch equivalence.
+
+benchmark-v1:44synthetic local indexed batches100/10k/100k/1Mresponses, gainsall
+1.41to27.93x,48native/Python controls2.27e-15. v2alternate-order22confirm10k/100k
+allimprove1.42to28.94x,48controls; warning-freeO3WallWextraWerror/no-fast-math.
+Gather/scatter/outputreset included, identityframes; allocations/detection/history/
+integration/group solving excluded. Responses are NOT interacting body scenes.
+v1incorrectmemoryestimate/orderbias retained; v2memorycounts include verification
+snapshots. No2xgate restored and original13scenequalification remains open.
+
+refinement-v2:18mixedsyntheticstates against147456site reference;12estimatesadmit,
+6decline atworkbudget. Returnednumericerrorsall<=1e-4,max2.06e-5, but declines stay
+declines; no general bound. Nearlocal-slipzero canneed65536sites, tooexpensive;
+next efficient reduction must preserve force/couple errors and positive work ledger.
+audit/refinement-v1 factor2reference-site LABEL mistakes retained with v2 correction,
+originalsource snapshots and strict numeric-equivalence receipt; no physics changes.
+Initial optionalbooktabs/rowescape PDFbuildfailures retained, corrected report6pages.
+
+No new measured comparisons or materialfits this checkpoint: earlier107collision+
+17rolling tables unchanged, prior rock damping/sharedball fits remain rejected.
+Next: reconcile pressure origin/directions, small shear/mode history and independent
+matched characterization; avoid performance/experimental claims beyond this scope.
+
 # Efficient deformation reduction search — October 7, 2026
 
 Latest user asks to continue finding a more authentic model while retaining efficiency.

@@ -5,7 +5,7 @@ from audit import footprint
 from model import evaluate
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--confirmation',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()
     out=Path(args.output);out.mkdir(parents=True,exist_ok=False)
     here=Path(__file__).resolve().parent
     shapes={kind:footprint(kind,8,16) for kind in ['interval','hertz','ellipse','irregular']}
@@ -22,7 +22,7 @@ if __name__=='__main__':
     if compile_result.returncode:raise RuntimeError('Compile failed; logs retained')
     start=time.time()
     with (out/'native.json').open('w') as stream,(out/'native.stderr').open('w') as errors:
-        run=subprocess.run([str(binary),str(patches)]+(['confirmation'] if args.confirmation else []),stdout=stream,stderr=errors)
+        run=subprocess.run([str(binary),str(patches)],stdout=stream,stderr=errors)
     if run.returncode:raise RuntimeError('Native run failed; raw output retained')
     result=json.loads((out/'native.json').read_text());worst=0.
     for control in result['controls']:
@@ -36,9 +36,7 @@ if __name__=='__main__':
                  native_python_controls=len(result['controls']),maximum_scaled_native_python_error=worst,
                  source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [here/'kernel.cpp',here/'benchmark.py',here/'model.py',here/'audit.py']},
                  binary_sha256=hashlib.sha256(binary.read_bytes()).hexdigest(),patches_sha256=hashlib.sha256(patches.read_bytes()).hexdigest(),
-                 timing='5 median trials with alternating baseline/compact order; allocations excluded; output resets, ordered gather/scatter included; same prescribed pressure sites',
-                 confirmation=args.confirmation,
-                 memory='Numeric vector elements, including retained equivalence snapshots and both output arrays; vector headers/capacity slack/allocator overhead excluded. v1 array_bytes was an inaccurate estimate; v1 timings/wrenches unchanged.',
+                 timing='5 median trials; baseline then compact (order bias possible); allocations excluded; output resets, ordered gather/scatter included; same prescribed pressure sites',
                  production_adoption=False,experimental_validation=False)
     (out/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt,indent=2))

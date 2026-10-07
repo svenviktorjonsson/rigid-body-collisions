@@ -97,7 +97,7 @@ def audit():
             def error(value):
                 return max(np.linalg.norm(value['force']-refs[-1]['force'])/(.4*N),np.linalg.norm(value['moment']-refs[-1]['moment'])/(.4*N*a))
             errors=[float(error(evaluate(footprint(kind,n,4*n),*args))) for n in [4,8,16,32]]
-            quadrature.append(dict(kind=kind,velocity_spin_ratio=ratio,site_counts=[64,256,1024,4096],errors=errors,reference_16384_vs_65536=float(error(refs[0]))))
+            quadrature.append(dict(kind=kind,velocity_spin_ratio=ratio,site_counts=[64,256,1024,4096],errors=errors,reference_32768_vs_131072=float(error(refs[0]))))
     # Pure normal transient: internal energy retained even after force-zero release.
     p=footprint('interval',8); K=10000.; C=20.
     def rhs(time,state):

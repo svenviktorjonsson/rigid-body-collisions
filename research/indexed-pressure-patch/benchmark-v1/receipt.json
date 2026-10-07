@@ -1,0 +1,32 @@
+{
+  "pass_": true,
+  "scope": "Synthetic frozen local pressure patch including indexed body gather/scatter; no scene detection or coupled time stepping",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "/home/viktor/.cache/vkf-physics-continuation/research/indexed-pressure-patch/kernel.cpp",
+    "-o",
+    "research/indexed-pressure-patch/benchmark-v1/kernel"
+  ],
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "machine": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "cpu": "",
+  "wall_seconds": 124.83649682998657,
+  "native_python_controls": 48,
+  "maximum_scaled_native_python_error": 2.2705312984815232e-15,
+  "source_sha256": {
+    "kernel.cpp": "0301514a6e497da4ca6ffa2647c6198b42c7d232a1af365d4b76bc0db3c4a6ba",
+    "benchmark.py": "2ed4360219c5d9d2a5a39c690c2236a761cb6ada52509fae70eacd7ec7790af8",
+    "model.py": "0a804bac45e15cadc88e29dc033359030ba364f5c73c22edd4dd6c0b335590d2",
+    "audit.py": "0b6969349d63ba963658c65fb7ebc850c255586ac36f3bcc34a76602a08bc391"
+  },
+  "binary_sha256": "a59f0b58d29418fc0213d5a669de862f1a2449118438f468a15d266a365865b8",
+  "patches_sha256": "3df8832c963e5323bcb12e8ea01600bbd44eafb8757a609f81ea9a621cbac65e",
+  "timing": "5 median trials; baseline then compact (order bias possible); allocations excluded; output resets, ordered gather/scatter included; same prescribed pressure sites",
+  "production_adoption": false,
+  "experimental_validation": false
+}
