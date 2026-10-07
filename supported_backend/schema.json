@@ -1,0 +1,147 @@
+{
+  "abi_version": 1,
+  "scalar": "IEEE-754 binary64",
+  "layout": "field-major contiguous",
+  "address": "field * count + k",
+  "body_index": "k",
+  "input_fields": [
+    {
+      "offset": 0,
+      "name": "mass_kg",
+      "unit": "kg"
+    },
+    {
+      "offset": 1,
+      "name": "inertia_kg_m2",
+      "unit": "kg m^2"
+    },
+    {
+      "offset": 2,
+      "name": "radius_m",
+      "unit": "m"
+    },
+    {
+      "offset": 3,
+      "name": "normal_load_N",
+      "unit": "N"
+    },
+    {
+      "offset": 4,
+      "name": "drive_force_N",
+      "unit": "N"
+    },
+    {
+      "offset": 5,
+      "name": "velocity_m_s",
+      "unit": "m/s"
+    },
+    {
+      "offset": 6,
+      "name": "omega_rad_s",
+      "unit": "rad/s"
+    },
+    {
+      "offset": 7,
+      "name": "spin_rad_s",
+      "unit": "rad/s"
+    },
+    {
+      "offset": 8,
+      "name": "duration_s",
+      "unit": "s"
+    },
+    {
+      "offset": 9,
+      "name": "mu_s",
+      "unit": "1"
+    },
+    {
+      "offset": 10,
+      "name": "mu_d",
+      "unit": "1"
+    },
+    {
+      "offset": 11,
+      "name": "mu_r",
+      "unit": "1"
+    },
+    {
+      "offset": 12,
+      "name": "rolling_length_m",
+      "unit": "m"
+    },
+    {
+      "offset": 13,
+      "name": "mu_n",
+      "unit": "1"
+    },
+    {
+      "offset": 14,
+      "name": "spin_length_m",
+      "unit": "m"
+    }
+  ],
+  "output_fields": [
+    {
+      "offset": 0,
+      "name": "velocity_m_s",
+      "unit": "m/s"
+    },
+    {
+      "offset": 1,
+      "name": "omega_rad_s",
+      "unit": "rad/s"
+    },
+    {
+      "offset": 2,
+      "name": "spin_rad_s",
+      "unit": "rad/s"
+    },
+    {
+      "offset": 3,
+      "name": "distance_m",
+      "unit": "m"
+    },
+    {
+      "offset": 4,
+      "name": "tangent_impulse_Ns",
+      "unit": "N s"
+    },
+    {
+      "offset": 5,
+      "name": "independent_rolling_impulse_Nms",
+      "unit": "N m s"
+    },
+    {
+      "offset": 6,
+      "name": "independent_spin_impulse_Nms",
+      "unit": "N m s"
+    },
+    {
+      "offset": 7,
+      "name": "sliding_loss_J",
+      "unit": "J"
+    },
+    {
+      "offset": 8,
+      "name": "rolling_loss_J",
+      "unit": "J"
+    },
+    {
+      "offset": 9,
+      "name": "spin_loss_J",
+      "unit": "J"
+    },
+    {
+      "offset": 10,
+      "name": "energy_residual_J",
+      "unit": "J"
+    }
+  ],
+  "success": "SIZE_MAX",
+  "invalid_argument": "SIZE_MAX - 1",
+  "body_failure": "first failing body index; discard entire output",
+  "ownership": "caller-owned disjoint synchronous buffers; no retained pointers",
+  "scope": "independent supported scalar-inertia sphere/disk; constant normal load/drive; no impact restitution, detection, contact groups or experimental history update",
+  "source_header": "supported_backend/batch.h"
+}

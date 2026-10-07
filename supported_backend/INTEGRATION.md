@@ -16,6 +16,11 @@ g++ -std=c++17 -O3 -Wall -Wextra -Werror -fopenmp -fPIC -shared supported_backen
 and host worker limit are callable. Inputs and outputs are IEEE Float64 with
 field-major contiguous storage. Use one body index `k`:
 
+`schema.json` provides the same field offsets, names, units and status/ownership
+rules as machine-readable importer metadata. The Python field lists are checked
+when generating this artifact; actual channel behavior is tested against the
+archived physical oracles.
+
 ```
 input[field * count + k]
 output[field * count + k]

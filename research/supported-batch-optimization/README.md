@@ -5,6 +5,8 @@ an indexed algorithm, import oracles and a separate experimental local-history
 component. It is ready for a scoped compiler import, not certification that the
 entire collision engine or compiler is complete. No compiler repositories were
 modified. Read [the integration contract](../../supported_backend/INTEGRATION.md).
+The [three-page report](report/report.pdf) gives the benchmark and import boundary.
+The native fields and units also have a [machine-readable schema](../../supported_backend/schema.json).
 
 ## Performance result and algorithmic changes
 
@@ -89,6 +91,7 @@ Do not use this loop to scatter simultaneous contacts to shared body storage.
 python -m unittest tests.test_supported_contact tests.test_supported_batch tests.test_contact_history tests.test_measured_mass_properties tests.test_spatial_engine tests.test_two_channel_restitution tests.test_predictive_contact_review -v
 python research/contact-gap-fix/audit.py --output /tmp/contact-audit-fresh
 python research/supported-batch-optimization/benchmark.py --controls /tmp/contact-audit-fresh/controls.txt --output /tmp/contact-benchmark-fresh
+python research/supported-batch-optimization/verify_scale.py --controls research/supported-batch-optimization/scale-audit-v1/controls.txt --output /tmp/contact-scale-fresh
 ```
 
 Evidence directories are immutable and require new paths. `run-v1/v2/v3` preserve
