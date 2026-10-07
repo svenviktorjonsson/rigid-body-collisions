@@ -2,6 +2,17 @@
 
 ## Latest continuation — 7 October 2026
 
+The subsequent `../supported-batch-optimization/` package prepares a versioned
+independent supported-contact ABI and importer oracles. It fixes dimensionally
+inconsistent onset tolerances and exact axial arrest. 54 repository tests and 25
+fresh extracted-package component tests pass. Eight-worker independent updates
+meet 20 ms/million; no single-worker algorithmic gain or interacting-scene timing
+is claimed. The separate passive spring/slider memory now includes static/dynamic
+yield and opening-energy transfer, but general moving full t/s history, joint
+normal impact and a coupled physical patch budget remain unqualified. It is
+experimental and not invoked by the native batch. Compiler source/acceptance and
+the active symbolic article remain unchanged; no empirical accuracy gain.
+
 The contact-gap repair in `../contact-gap-fix/` fixes explicit measured mass/COM/
 inertia input and adds a separate sustained scalar-inertia sphere/disk primitive
 with static/dynamic friction and independent angular resistance. It preserves

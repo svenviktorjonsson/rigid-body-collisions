@@ -1,0 +1,21 @@
+{
+  "source_revision": "df23b35088268485dfc67229927160d0ccd59a8f",
+  "zip_members_verified": 48,
+  "every_member_hash_verified": true,
+  "extracted_package_tests": 25,
+  "extracted_package_exit_code": 0,
+  "standalone_supported_core_verified": true,
+  "whole_engine_bundle": false,
+  "artifacts": [
+    {
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/supported-contact-compiler-integration-report.pdf",
+      "bytes": 169284,
+      "sha256": "205a8952cef38e8e3218f255dfa31d902e939c2682fe4c1f7530b9ede2ac434b"
+    },
+    {
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-supported-contact-compiler-package-20261007.zip",
+      "bytes": 964337,
+      "sha256": "6dd49e90278f5e3c5f69a028552b1f9661b99690378788132c2c3070116ab5fc"
+    }
+  ]
+}
