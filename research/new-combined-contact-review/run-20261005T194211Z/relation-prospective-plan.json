@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-05T19:54:31.630451+00:00",
+  "scope": "Prospective bounded numerical row-relation guide after original tails fail. No modification of original laws/materials/tolerance. Existing unsuccessful projection header/trials retained.",
+  "header": "relation_recovery.h",
+  "header_sha256": "c69ea8be7325e228108923f26f4702460014832dd290486f7c212711401494a4",
+  "caps": {
+    "max_full_rows": 4096,
+    "max_exact_component_rows": 64,
+    "max_components": 4,
+    "max_guide_attempts": 8,
+    "max_sweeps_per_guide": 4096,
+    "max_total_component_sweeps_per_call": 16384
+  },
+  "relation": "Near +/- row/RHS equality within64 machineeps*rowScale is numerical guide only; never change coupling or final exact gate.",
+  "tests": [
+    "First compile and run single new42 with exact terminal rejected seed and direct helper; preserve every compile/runtimefailure and sourceversion.",
+    "Native independent full law/passivity acceptance at archived tolerance required.",
+    "Finite/invalid/asymmetry/nonrelation/overcap/decline-p-preservation/freshbudgetcontrols.",
+    "If single new42 succeeds, freeze/publish 23default-vs-after-tailfallback controls; preserve prior22successfulendpoints/counters and bypass helper on baseline success."
+  ]
+}

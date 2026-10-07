@@ -1,0 +1,14 @@
+{
+  "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_runner": {
+    "snapshot": "/home/viktor/.cache/physics-large-reference-binaries-20261006/spatial-spatial_runner",
+    "sha256": "2fc75ac7fcec3c429b86d67eb397046d59666b756a68654d5b2fdb05350000fc"
+  },
+  "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/rigid_runner": {
+    "snapshot": "/home/viktor/.cache/physics-large-reference-binaries-20261006/rigid_double_tight-rigid_runner",
+    "sha256": "a46eaa4ee3e2da99e5f7f8c66abc17e5edb848bb4b8fa56339c1703e17c66306"
+  },
+  "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_tight/precision-source.json": {
+    "snapshot": "/home/viktor/.cache/physics-large-reference-binaries-20261006/rigid_double_tight-precision-source.json",
+    "sha256": "bc58ef33dbc3708e577e364abbeb088d48a8cbd66f86dac2ba6ba8ab30111169"
+  }
+}

@@ -1,0 +1,1641 @@
+{
+  "case_count": 96,
+  "pass_count": 48,
+  "records": [
+    {
+      "case": "2_box_13.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_13.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_13.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_13.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_13.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_13.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-17.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_29.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_box_-31.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_13.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-17.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_29.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "2_hull_-31.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "passed": false,
+      "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+    },
+    {
+      "case": "3_box_13.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 1.0381695503269839e-12,
+      "tangent_target_error": 1.3420485661961208,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.22983306764430989,
+      "outgoing_angular_speed_rad_s": 14.037620508636333,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 2.6827040588983664e-10,
+      "tangent_target_error": 1.6653345369377348e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.2672243499163278,
+      "outgoing_angular_speed_rad_s": 7.253623286821285,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 3.9745984281580604e-14,
+      "tangent_target_error": 2.6843504927673423,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-18,
+      "kinetic_change_minus_work_J": -0.10636169865474021,
+      "outgoing_angular_speed_rad_s": 5.8437604389185305,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 5.452379658876794e-10,
+      "tangent_target_error": 1.6653345369377348e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.4212451754438489,
+      "outgoing_angular_speed_rad_s": 13.633975381574803,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 2.1694770424574017e-09,
+      "tangent_target_error": 0.03971275208676273,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.17772941000321474,
+      "outgoing_angular_speed_rad_s": 18.264550207279598,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 5.9243092653815665e-09,
+      "tangent_target_error": 1.1102230246251565e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.17563441115747103,
+      "outgoing_angular_speed_rad_s": 18.248910026677503,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.2304380564719395e-13,
+      "tangent_target_error": 1.57341508880982,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.23005574318132738,
+      "outgoing_angular_speed_rad_s": 13.646252241437027,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 3.854622177001943e-10,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.31974252487218163,
+      "outgoing_angular_speed_rad_s": 4.793967079409275,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 7.993605777301127e-15,
+      "tangent_target_error": 2.6639993360019156,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.09698008899195765,
+      "outgoing_angular_speed_rad_s": 5.767350235825371,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 7.253436740128905e-10,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.45062922033762365,
+      "outgoing_angular_speed_rad_s": 13.062673264647428,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 6.850076061937216e-12,
+      "tangent_target_error": 1.0715061009401128,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.2538021997660964,
+      "outgoing_angular_speed_rad_s": 17.172852381331694,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 1.4402323778028858e-10,
+      "tangent_target_error": 4.041272810440265e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.23513585287524452,
+      "outgoing_angular_speed_rad_s": 16.959079123768024,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0694889418516595e-11,
+      "tangent_target_error": 1.2314675914598372,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.356065477263028,
+      "outgoing_angular_speed_rad_s": 11.625391817085744,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 5.88192827777334e-11,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.6020852139652106e-18,
+      "kinetic_change_minus_work_J": -0.3185168431100878,
+      "outgoing_angular_speed_rad_s": 4.900552496258428,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 8.523182160047327e-13,
+      "tangent_target_error": 2.6597719214920508,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.1694386010678568,
+      "outgoing_angular_speed_rad_s": 5.135406532213492,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 8.287714958754577e-11,
+      "tangent_target_error": 4.440892098500626e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.3621973473461161,
+      "outgoing_angular_speed_rad_s": 14.698731323631883,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0289546992225951e-11,
+      "tangent_target_error": 2.482534153247273e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.2625804960312119,
+      "outgoing_angular_speed_rad_s": 16.759841333006964,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0289546992225951e-11,
+      "tangent_target_error": 2.482534153247273e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.2625804960312119,
+      "outgoing_angular_speed_rad_s": 16.759841333006964,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 4.5285997174460135e-13,
+      "tangent_target_error": 1.5772187902060568,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.589415207398531e-18,
+      "kinetic_change_minus_work_J": -0.2729566585011555,
+      "outgoing_angular_speed_rad_s": 12.925760409504045,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.585809344424206e-11,
+      "tangent_target_error": 4.577566798522237e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.1275702593849246e-17,
+      "kinetic_change_minus_work_J": -0.33540205543782353,
+      "outgoing_angular_speed_rad_s": 3.7022829385884415,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 5.4289905904170155e-14,
+      "tangent_target_error": 2.7350862662603856,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.3852447794681098e-18,
+      "kinetic_change_minus_work_J": -0.1187037285947301,
+      "outgoing_angular_speed_rad_s": 5.452850574923084,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 5.3024584723004864e-11,
+      "tangent_target_error": 1.3877787807814457e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.49235236050578635,
+      "outgoing_angular_speed_rad_s": 12.224127061343689,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.4481616733851297e-10,
+      "tangent_target_error": 0.6165784289369016,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.2555299184311386,
+      "outgoing_angular_speed_rad_s": 16.91426859227655,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 3.3069724736378703e-09,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.806255641895632e-18,
+      "kinetic_change_minus_work_J": -0.22849044293986398,
+      "outgoing_angular_speed_rad_s": 17.001196579051708,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1379786002407855e-13,
+      "tangent_target_error": 1.4126358300466841,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.14397912462842766,
+      "outgoing_angular_speed_rad_s": 17.127991416859704,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 5.551115123125783e-16,
+      "tangent_target_error": 3.3306690738754696e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.24663698562993291,
+      "outgoing_angular_speed_rad_s": 9.302573806963366,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.0103029524088925e-14,
+      "tangent_target_error": 2.755494718383762,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.0671898181823034,
+      "outgoing_angular_speed_rad_s": 6.949318825623892,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.2212453270876722e-15,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.214306433183765e-17,
+      "kinetic_change_minus_work_J": -0.5556945462035565,
+      "outgoing_angular_speed_rad_s": 12.630332350994465,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.3830470102504933e-09,
+      "tangent_target_error": 0.1473799329983473,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.11088745654290033,
+      "outgoing_angular_speed_rad_s": 21.80150186469009,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 2.220446049250313e-16,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.10778032924686509,
+      "outgoing_angular_speed_rad_s": 22.501923835899415,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 1.1742906454118802,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.12904351639222483,
+      "outgoing_angular_speed_rad_s": 16.709131401371174,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 2.0431545344479218e-11,
+      "tangent_target_error": 2.7755575615628914e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.2259245654285258,
+      "outgoing_angular_speed_rad_s": 11.12215268717003,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 1.207135502667711e-10,
+      "tangent_target_error": 2.4543243496879064,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.057486842499508084,
+      "outgoing_angular_speed_rad_s": 6.962624819982616,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 6.634256477511258e-10,
+      "tangent_target_error": 1.0190492755571723e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.0816681711721685e-17,
+      "kinetic_change_minus_work_J": -0.354442385679417,
+      "outgoing_angular_speed_rad_s": 19.084345825741647,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 7.847714700304209e-09,
+      "tangent_target_error": 1.3586671744375145,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.18246254178658505,
+      "outgoing_angular_speed_rad_s": 20.36084688112681,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 5.761480181831757e-09,
+      "tangent_target_error": 3.3766115072321297e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.19681357760660156,
+      "outgoing_angular_speed_rad_s": 22.555517644907887,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 4.153455357425173e-12,
+      "tangent_target_error": 1.6181501333269785,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.22642893117614554,
+      "outgoing_angular_speed_rad_s": 17.3741646822989,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 9.694605782913356e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.071532165918825e-18,
+      "kinetic_change_minus_work_J": -0.2990767358120689,
+      "outgoing_angular_speed_rad_s": 6.8537231171212225,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 7.062128659640621e-13,
+      "tangent_target_error": 2.843441253580211,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.10202619804202939,
+      "outgoing_angular_speed_rad_s": 7.1013431128593165,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 2.7755575615628914e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.806255641895632e-18,
+      "kinetic_change_minus_work_J": -0.4924545491086303,
+      "outgoing_angular_speed_rad_s": 14.26577135778138,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 9.234657483148112e-10,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.14602472866406302,
+      "outgoing_angular_speed_rad_s": 21.670792242933384,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 9.234657483148112e-10,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.14602472866406302,
+      "outgoing_angular_speed_rad_s": 21.670792242933384,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 5.88418203051333e-15,
+      "tangent_target_error": 1.3661803260621985,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.5236570605778894e-18,
+      "kinetic_change_minus_work_J": -0.1716010640874578,
+      "outgoing_angular_speed_rad_s": 17.04295168888493,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 2.2939039556746366e-10,
+      "tangent_target_error": 4.742874840267547e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.27349717289426795,
+      "outgoing_angular_speed_rad_s": 8.923507401591628,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 2.9573101745228314e-09,
+      "tangent_target_error": 2.5131512518461845,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-18,
+      "kinetic_change_minus_work_J": -0.07300806969606644,
+      "outgoing_angular_speed_rad_s": 7.228431861101551,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 6.29009955233073e-10,
+      "tangent_target_error": 1.3788683915077173e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-17,
+      "kinetic_change_minus_work_J": -0.38059046102728433,
+      "outgoing_angular_speed_rad_s": 18.537620274543475,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 3.241851231905457e-14,
+      "tangent_target_error": 1.2956510559074477,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.22144513536988053,
+      "outgoing_angular_speed_rad_s": 20.970233459754372,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 1.1079248629641825e-10,
+      "tangent_target_error": 2.9893669801409083e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.22459631137518898,
+      "outgoing_angular_speed_rad_s": 21.88507260707583,
+      "passed": true
+    }
+  ],
+  "coefficients_fixed": true,
+  "fitted_material_location_or_direction_dependence": false,
+  "actual_rock_shape_validation": false
+}

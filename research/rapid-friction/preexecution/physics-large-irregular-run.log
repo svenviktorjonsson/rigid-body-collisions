@@ -1,0 +1,54 @@
+2d_mixed_polygons_36 reference 0 complete True
+2d_mixed_polygons_36 reference 1 complete True
+EDGE 2d_mixed_polygons_36 {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.06225467829324818, 'velocity_m_s': 6.3275796866175265, 'omega_rad_s': 49.10677868539794, 'orientation_rad': 0.3790792242773721}}
+2d_mixed_polygons_36 reference 2 complete True
+EDGE 2d_mixed_polygons_36 {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 0.052999724576210744, 'velocity_m_s': 5.237991096610424, 'omega_rad_s': 36.83747709485097, 'orientation_rad': 0.371248195108393}}
+2d_mixed_polygons_36 reference 3 complete True
+EDGE 2d_mixed_polygons_36 {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.07763541094764262, 'velocity_m_s': 6.2193792644761725, 'omega_rad_s': 42.48961633547874, 'orientation_rad': 0.5307385654952034}}
+2d_mixed_polygons_36 reference 4 complete True
+EDGE 2d_mixed_polygons_36 {'left': 3, 'right': 4, 'passed': False, 'errors': {'position_m': 0.06177408176314295, 'velocity_m_s': 7.736514592202043, 'omega_rad_s': 55.96733408884249, 'orientation_rad': 0.6056358776029424}}
+2d_mixed_polygons_100 reference 0 complete True
+2d_mixed_polygons_100 reference 1 complete True
+EDGE 2d_mixed_polygons_100 {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.1618695522239446, 'velocity_m_s': 7.50230135611477, 'omega_rad_s': 40.32133372925737, 'orientation_rad': 0.5752629676134003}}
+2d_mixed_polygons_100 reference 2 complete True
+EDGE 2d_mixed_polygons_100 {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 0.10386846621123418, 'velocity_m_s': 6.350448442156419, 'omega_rad_s': 37.61947701637403, 'orientation_rad': 0.5461622933975765}}
+2d_mixed_polygons_100 reference 3 complete True
+EDGE 2d_mixed_polygons_100 {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.08912050017675249, 'velocity_m_s': 5.505489112344295, 'omega_rad_s': 33.61080357073164, 'orientation_rad': 0.4446892357113056}}
+2d_mixed_polygons_100 reference 4 complete True
+EDGE 2d_mixed_polygons_100 {'left': 3, 'right': 4, 'passed': False, 'errors': {'position_m': 0.10648100986107699, 'velocity_m_s': 6.2653092777556125, 'omega_rad_s': 34.230312933041716, 'orientation_rad': 0.5156420654642598}}
+2d_disks_100 reference 0 complete True
+2d_disks_100 reference 1 complete True
+EDGE 2d_disks_100 {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.007868660876587706, 'velocity_m_s': 0.6763707239174637, 'omega_rad_s': 8.103477305044967, 'orientation_rad': 0.10383070371239735}}
+2d_disks_100 reference 2 complete True
+EDGE 2d_disks_100 {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 0.005732664734970408, 'velocity_m_s': 0.5966085697418068, 'omega_rad_s': 7.692311612538745, 'orientation_rad': 0.08503851136040727}}
+2d_disks_100 reference 3 complete True
+EDGE 2d_disks_100 {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.005604822146159559, 'velocity_m_s': 0.664557625913889, 'omega_rad_s': 9.065491873840871, 'orientation_rad': 0.1180874004918428}}
+2d_disks_100 reference 4 complete True
+EDGE 2d_disks_100 {'left': 3, 'right': 4, 'passed': False, 'errors': {'position_m': 0.0034038666212260434, 'velocity_m_s': 0.4288391579145862, 'omega_rad_s': 5.191085628801086, 'orientation_rad': 0.060434026313435876}}
+3d_hull_64 reference 0 complete False
+3d_hull_64 reference 1 complete False
+EDGE 3d_hull_64 {'left': 0, 'right': 1, 'passed': False, 'errors': None}
+3d_hull_64 reference 2 complete False
+EDGE 3d_hull_64 {'left': 1, 'right': 2, 'passed': False, 'errors': None}
+3d_hull_64 reference 3 complete False
+EDGE 3d_hull_64 {'left': 2, 'right': 3, 'passed': False, 'errors': None}
+3d_hull_64 reference 4 complete False
+EDGE 3d_hull_64 {'left': 3, 'right': 4, 'passed': False, 'errors': None}
+3d_hull_125 reference 0 complete False
+3d_hull_125 reference 1 complete False
+EDGE 3d_hull_125 {'left': 0, 'right': 1, 'passed': False, 'errors': None}
+3d_hull_125 reference 2 complete False
+EDGE 3d_hull_125 {'left': 1, 'right': 2, 'passed': False, 'errors': None}
+3d_hull_125 reference 3 complete False
+EDGE 3d_hull_125 {'left': 2, 'right': 3, 'passed': False, 'errors': None}
+3d_hull_125 reference 4 complete False
+EDGE 3d_hull_125 {'left': 3, 'right': 4, 'passed': False, 'errors': None}
+3d_sphere_125 reference 0 complete True
+3d_sphere_125 reference 1 complete True
+EDGE 3d_sphere_125 {'left': 0, 'right': 1, 'passed': False, 'errors': {'position_m': 0.00014453171000094098, 'velocity_m_s': 0.018688291340314207, 'omega_rad_s': 0.19021975621645512, 'orientation_rad': 0.0022241930466459585}}
+3d_sphere_125 reference 2 complete True
+EDGE 3d_sphere_125 {'left': 1, 'right': 2, 'passed': False, 'errors': {'position_m': 3.720461499106006e-05, 'velocity_m_s': 0.001982646324459878, 'omega_rad_s': 0.029990660613316317, 'orientation_rad': 0.0004709065735095404}}
+3d_sphere_125 reference 3 complete True
+EDGE 3d_sphere_125 {'left': 2, 'right': 3, 'passed': False, 'errors': {'position_m': 0.00026232863827584194, 'velocity_m_s': 0.01925786364336201, 'omega_rad_s': 0.1453967512646028, 'orientation_rad': 0.002284956230727679}}
+3d_sphere_125 reference 4 complete True
+EDGE 3d_sphere_125 {'left': 3, 'right': 4, 'passed': True, 'errors': {'position_m': 7.772759985711552e-06, 'velocity_m_s': 0.0005557195749114749, 'omega_rad_s': 0.009925440876826645, 'orientation_rad': 0.00011991570147173009}}

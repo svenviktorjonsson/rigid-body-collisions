@@ -1,0 +1,13 @@
+{
+  "schema": "rejected-numerical-probe-manifest-v1",
+  "files": {
+    "README.md": "6af58d33fad55092f59e336030866682d3fd1674739030ce4e90fde452731ed1",
+    "fast_shake8_hulls42-reference_0-cold.json": "65d6e2fd4e53d220d37ebee7382b171b8cf0aaccf2b2e676ff215ba444c7886f",
+    "fast_shake8_hulls42-reference_0-warm.json": "e01418f8841526c87bdd521a0c28cdbd7368a9be7a3235252c7235cb26681659",
+    "fast_shake8_hulls42-reference_1-cold.json": "640fb4a7f11926e800037ee995a0654286c07edd89b2c8d1be37f108aae85980",
+    "fast_shake8_hulls42-reference_1-warm.json": "d5a7fab573f11c1369fcc1514bbc6cd569ff697eeb08c4fabceaee087e67f9a1",
+    "fast_shake8_hulls42-reference_2-cold.json": "fe33c135e487c990f4a9c08bbe56f92c0d91fef5e5f2afb8da4f271bbc1b9c53",
+    "fast_shake8_hulls42-reference_2-warm.json": "08cca7ac4734956f9e41e5a8545a032ec8e6c88bcdcd8ce218ad7438b9c9115f",
+    "../coulomb_cone_probe.py": "e16fd1f3a0c222dfb024b175d2e6be4fc2bf85c6894144c371004d4b8f22e710"
+  }
+}

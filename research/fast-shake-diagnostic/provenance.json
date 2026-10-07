@@ -1,0 +1,14 @@
+{
+  "backend_source_commit": "0f17e758c731da1cf7d32f4e5f7ba6233d539951",
+  "diagnostic_scripts": "Exact snapshots included; may precede their publishing commit",
+  "source_hashes": {
+    "spatial_engine.py": "aa4717c4877b4f02d344a7ccec71396d6366411eed9588e79a45597371937105",
+    "spatial_backend/runner.cpp": "eb31d80942121b9b2efda692631ddf4842972de64fcc2e365b4a6e0fcf4980d3",
+    "spatial_backend/coulomb.h": "3187f6e6a356995959c0ff567eb9d46d401d05c4fab68a02f7e1c0319b74a0aa",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "research/fast_shake_diagnostic.py": "5eea032ca4c873dbe7e52d40eee87955601e40b296a47312ffc85a320a479bb8",
+    "research/fast-shake-diagnostic/plan.json": "b5cca103bcda33fcbdea9de968e989b1869fb4142e11ac86cb959f9178f14974"
+  },
+  "binary_sha256": "854958ef6bb6fbbff2eed572ee202ddae5455c34b6028fb3dbda7ce66f13ce05",
+  "scope": "Exploratory diagnosis only; retain all outcomes. Same geometry, friction, restitution, gravity and prescribed walls. Fixed-step trials explicitly disable heuristic travel guard while resolving travel more finely than the failed fine baseline. No retrospective reference qualification or engine timing ranking. Compare common 10ms output times. Source snapshot and binary SHA precede runs."
+}

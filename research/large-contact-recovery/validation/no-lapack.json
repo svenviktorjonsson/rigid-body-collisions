@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "scene": {
+    "duration": 0.1,
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "bodies": [
+      {
+        "type": "kinematic",
+        "position": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          20.0,
+          0,
+          0
+        ],
+        "friction": 0,
+        "restitution": 0,
+        "shapes": [
+          {
+            "kind": "box",
+            "half_extents": [
+              0.05,
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "shapes": [
+          {
+            "kind": "sphere",
+            "radius": 0.1,
+            "density": 238.732414637843
+          }
+        ],
+        "friction": 0,
+        "restitution": 0
+      }
+    ]
+  },
+  "binary_sha256": "fa8b3fcffd47b1869e32d6ac31a05b6cd7d1ce39c5df0ab72c24f26973e4f9a9",
+  "policy": {
+    "claim": "bounded numerical search; no trajectory or performance qualification",
+    "compiled": false,
+    "enabled": false,
+    "final_gate": "original production eager cone projection, bounds, residual and passivity",
+    "graph_coupling_threshold": 0,
+    "max_component_rows": 64,
+    "max_full_rows": 4096,
+    "max_iteration_steps_per_search": 2048,
+    "max_searches_per_component": 7,
+    "max_seeds_per_component": 6,
+    "max_svd_calls_per_search": 2048,
+    "null_jacobi_sweeps_per_factorization": 64,
+    "seed_svd_calls_per_component": 7,
+    "stage": "after existing projection tail decline"
+  },
+  "residual_m_s": 0.0
+}

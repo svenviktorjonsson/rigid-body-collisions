@@ -1,0 +1,17 @@
+{
+  "test_count": 39,
+  "new_test_count": 15,
+  "regression_count": 24,
+  "exit_code": 0,
+  "command": "python -m unittest tests.test_supported_contact tests.test_measured_mass_properties tests.test_spatial_engine tests.test_two_channel_restitution tests.test_predictive_contact_review -v",
+  "audit_source_hashes_match": true,
+  "glass_replay_v1_v2_summary_identical": true,
+  "files": {
+    "supported_contact.py": "963d0002fa99d1a8127c29acdb0dd9bd131dab5bf609d4c4ebbd4ffd004b59e2",
+    "spatial_engine.py": "df54d0f670550180fab8282ef6a5cb668fc2deb6efdf65690c5be6232586210a",
+    "material_profiles.py": "96c6d2889db6a91e69ccc6c8dd4189b2d0b65e352b3742c62f852c762c91a09e",
+    "tests/test_supported_contact.py": "5227ab09b4473ce771e1caf44c55b92591aebda17a9efd1f6a0372b08ea2af8f",
+    "tests/test_measured_mass_properties.py": "3c8f3c71821fdadfd3c00259b9f5890cad53a89ff0af7f7d3392dc7a6a460ad9",
+    "research/contact-gap-fix/verification/focused-tests.log": "696c6de8543aa9aedaee1c7f6c3d1c1c00c1d387edb2e42ba1e6786a3e84f049"
+  }
+}

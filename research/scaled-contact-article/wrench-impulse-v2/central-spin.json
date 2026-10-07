@@ -1,0 +1,73 @@
+{
+  "input_table": "torque_spin_inputs.json",
+  "input_sha256": "18267332135c779f8a8408c131afffdb1b93394d5fe09da1db53e89506064d72",
+  "inputs": {
+    "purpose": "Prescribed central normal impulse and independent torsional impulse; algebra demonstration, not a measured material law.",
+    "mass_kg": 1.0,
+    "radius_m": 0.05,
+    "homogeneous_sphere_inertia_factor": 0.4,
+    "reference_length_m": 0.05,
+    "contact_reference_length_m": 0.05,
+    "normal_world": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "incoming_velocity_m_s": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "incoming_angular_velocity_rad_s": [
+      0.0,
+      0.0,
+      20.0
+    ],
+    "normal_restitution": 0.6,
+    "prescribed_free_torque_impulse_kg_m2_s": [
+      0.0,
+      0.0,
+      -0.008
+    ],
+    "boundary": "Stationary plane"
+  },
+  "inertia_kg_m2": 0.0010000000000000002,
+  "force_impulse_kg_m_s": [
+    0.0,
+    0.0,
+    1.6
+  ],
+  "free_torque_impulse_kg_m2_s": [
+    0.0,
+    0.0,
+    -0.008
+  ],
+  "force_only_outgoing_spin_rad_s": [
+    0.0,
+    0.0,
+    20.0
+  ],
+  "wrench_outgoing_spin_rad_s": [
+    0.0,
+    0.0,
+    11.999999999999998
+  ],
+  "outgoing_velocity_m_s": [
+    0.0,
+    0.0,
+    0.6000000000000001
+  ],
+  "angular_momentum_before_kg_m2_s": [
+    0.0,
+    0.0,
+    0.020000000000000004
+  ],
+  "angular_momentum_after_kg_m2_s": [
+    0.0,
+    0.0,
+    0.012000000000000002
+  ],
+  "energy_before_J": 0.7,
+  "energy_after_J": 0.25200000000000006,
+  "interpretation": "Prescribed central normal impulse and independent torsional impulse; algebra demonstration, not a measured material law."
+}

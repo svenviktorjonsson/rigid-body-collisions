@@ -1,0 +1,39 @@
+{
+  "source_files_verified": 29,
+  "catalog_cases": 10,
+  "physically_validated_cases": 0,
+  "source_integrity_passed": true,
+  "scope": "File integrity and provenance records; no physics accuracy claim."
+}
+{
+  "source_files_verified": 6,
+  "traces_verified": 153,
+  "comparisons_recomputed": 119,
+  "follow_up_traces_verified": 40,
+  "physically_validated_cases": 0,
+  "scope": "Numerical reproduction and file integrity, not material or reference truth"
+}
+Audited 53 retained histories, all trajectory comparisons, analytic rows and reference gates.
+Audited 139 snapshots: exact row mechanics, Coulomb gates, external work, timings, storage and retained failures.
+Random shapes: 80 native attempts, 78 retained histories, 12 physical contact geometries, 24/24 accepted solves; 4/8 references qualified. All archived results audit.
+Audited 60 follow-up histories; 3/4 concave references/selectors qualified, 0/2 packed; geometry fixes, exact partition unions, full-precision provenance, boundary paths and original budgets verified.
+3D audit PASS: 102 histories, 1/6 qualified references; geometry, quaternions, work, containment, budgets and timing selection agree.
+3D normal audit PASS: 36 histories, 6/6 analytic gates, identical-state ablation and timing/matrix claims agree.
+3D friction audit PASS: 76 attempts, 52 histories, 3/6 reference gates, 3 qualified choices; all rejections retained.
+Gyroscopic follow-up audit PASS: exact paired physics/controls, 6 retained rejections; no hull trajectory qualification.
+Native recovery follow-up audit PASS: exact paired physics, bounded same-law recovery, 6 retained rejections; no hull trajectory qualification.
+Native recovery follow-up audit PASS: exact paired physics, bounded same-law recovery, 3 retained rejections; no hull trajectory qualification.
+Fast-shake audit PASS: 8 histories, 1 retained input rejection; independent reference decisions {'fixed': True, 'travel': True}
+Fast-shake audit PASS: 8 histories, 1 retained input rejection; independent reference decisions {'fixed': True, 'travel': True}
+Repeated shake cost audit PASS: 6 retained attempts; qualified True native median ratio 6.112574100031995
+Elastic source/bookkeeping audit: 28 histories, 2 retained rejections, 4/10 qualified cases
+Shared shake audit PASS: 9 attempts; references True qualified True ratio 7.17373053549261
+{
+  "native_cases": 42,
+  "discovery_cases": 30,
+  "maximum_endpoint_identity_error": 2.7755575615628914e-17,
+  "maximum_linear_momentum_error": 0.0,
+  "maximum_common_point_angular_error": 2.7755575615628914e-17,
+  "maximum_energy_increase_J": 0.0
+}
+Elastic source/bookkeeping audit: 15 histories, 3 retained rejections, 5/6 qualified cases

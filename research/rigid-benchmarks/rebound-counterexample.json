@@ -1,0 +1,968 @@
+{
+  "case": {
+    "id": "normal_rebound_boxes",
+    "duration": 1.2,
+    "gravity": [
+      0,
+      0
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          -1.5,
+          0
+        ],
+        "velocity": [
+          2,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0,
+            "restitution": 0.6
+          }
+        ]
+      },
+      {
+        "position": [
+          1.5,
+          0
+        ],
+        "velocity": [
+          -2,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0,
+            "restitution": 0.6
+          }
+        ]
+      }
+    ],
+    "split": "verification",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  "evidence": "synthetic numerical results versus analytic symmetric impact; not measured material data",
+  "sweep": [
+    {
+      "backend": "block",
+      "primary_steps": 1,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000048,
+        1.200000048
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 1,
+      "solver_steps": 4,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 1,
+      "solver_steps": 16,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 1,
+      "solver_steps": 64,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 2,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000048,
+        1.200000048
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 2,
+      "solver_steps": 4,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 2,
+      "solver_steps": 16,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 2,
+      "solver_steps": 64,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 4,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000048,
+        1.200000048
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 4,
+      "solver_steps": 4,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 4,
+      "solver_steps": 16,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 4,
+      "solver_steps": 64,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 8,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000048,
+        1.200000048
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 8,
+      "solver_steps": 4,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 8,
+      "solver_steps": 16,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 8,
+      "solver_steps": 64,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 16,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000048,
+        1.200000048
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 16,
+      "solver_steps": 4,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 16,
+      "solver_steps": 16,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "block",
+      "primary_steps": 16,
+      "solver_steps": 64,
+      "solver_steps_meaning": "velocity_iterations",
+      "outgoing_vx_m_s": [
+        -1.200000286,
+        1.200000286
+      ],
+      "outgoing_omega_rad_s": [
+        0.0,
+        0.0
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 1,
+      "solver_steps": 1,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.051911712,
+        1.051911712
+      ],
+      "outgoing_omega_rad_s": [
+        0.2961764336,
+        -0.2961764336
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 1,
+      "solver_steps": 4,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055652976,
+        1.055652976
+      ],
+      "outgoing_omega_rad_s": [
+        0.2886943817,
+        -0.2886943817
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 1,
+      "solver_steps": 16,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.056000233,
+        1.056000233
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879992723,
+        -0.2879992723
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 1,
+      "solver_steps": 64,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879998684,
+        -0.2880001068
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 2,
+      "solver_steps": 1,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.048242092,
+        1.048242092
+      ],
+      "outgoing_omega_rad_s": [
+        0.3035159111,
+        -0.3035154343
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 2,
+      "solver_steps": 4,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.04757309,
+        1.04757309
+      ],
+      "outgoing_omega_rad_s": [
+        0.3048539162,
+        -0.3048536777
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 2,
+      "solver_steps": 16,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055737972,
+        1.055737972
+      ],
+      "outgoing_omega_rad_s": [
+        0.2885237932,
+        -0.2885237932
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 2,
+      "solver_steps": 64,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879999876,
+        -0.2879997492
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 4,
+      "solver_steps": 1,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -0.9085028172,
+        0.9085028172
+      ],
+      "outgoing_omega_rad_s": [
+        0.5829935074,
+        -0.5829935074
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 4,
+      "solver_steps": 4,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.052536488,
+        1.052536488
+      ],
+      "outgoing_omega_rad_s": [
+        0.2949271202,
+        -0.2949272394
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 4,
+      "solver_steps": 16,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999637,
+        1.055999637
+      ],
+      "outgoing_omega_rad_s": [
+        0.2880007029,
+        -0.2880007029
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 4,
+      "solver_steps": 64,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879999876,
+        -0.2879999876
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 8,
+      "solver_steps": 1,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.000198603,
+        1.000198603
+      ],
+      "outgoing_omega_rad_s": [
+        0.3996038437,
+        -0.3996038437
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 8,
+      "solver_steps": 4,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -0.8615926504,
+        0.8615926504
+      ],
+      "outgoing_omega_rad_s": [
+        0.6768155098,
+        -0.6768155098
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 8,
+      "solver_steps": 16,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879999876,
+        -0.2879997492
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 8,
+      "solver_steps": 64,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879998684,
+        -0.2879999876
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 16,
+      "solver_steps": 1,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -0.9508981705,
+        0.9508981705
+      ],
+      "outgoing_omega_rad_s": [
+        0.4982042313,
+        -0.4982042313
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 16,
+      "solver_steps": 4,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055637598,
+        1.055637598
+      ],
+      "outgoing_omega_rad_s": [
+        0.2887247801,
+        -0.2887250185
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 16,
+      "solver_steps": 16,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879998684,
+        -0.2880001068
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    },
+    {
+      "backend": "temporal",
+      "primary_steps": 16,
+      "solver_steps": 64,
+      "solver_steps_meaning": "temporal_substeps",
+      "outgoing_vx_m_s": [
+        -1.055999994,
+        1.055999994
+      ],
+      "outgoing_omega_rad_s": [
+        0.2879999876,
+        -0.2879999876
+      ],
+      "analytic_vx_m_s": [
+        -1.2,
+        1.2
+      ],
+      "analytic_omega_rad_s": [
+        0,
+        0
+      ]
+    }
+  ]
+}

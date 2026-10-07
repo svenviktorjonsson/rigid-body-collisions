@@ -1,0 +1,13 @@
+# Integrated production status — October 5, 2026
+
+Published source 8c7065eb8219cb0735aa3e742aa82b99521a26c1 integrates the proposal with a missing independent residual helper repaired. Live23 original-law checks and prior22 Float64 byte/counter preservation pass; eleven native check executables and engine regressions pass. Receipts/raw logs are in live-validation/. The original uncompiled proposal below is retained as historical source evidence. The subsequent six-lane hull study remains unqualified.
+
+# Pending projection-tail production integration
+
+These are **unapplied, uncompiled production proposals**, prepared from live source bca35c3103a78c731b37ea8a467e5fc71d13e8aa. Production remains unchanged. The helper is a path/comment adapter of frozen170d798b113863dc4bee3df515bb8ab63175ea21 `projection_more_v2.h`; isolated42-row strict acceptance is proven, and the23-input preservation summary passes (122 strict checks pass; guard released). No production acceptance or trajectory accuracy is claimed.
+
+Inspect the completed23 summary and strict `audit23.py` receipt. The strict audit passed and guards are released. Review these proposals against the current live files before applying them. Add `projection_tail_checks` to the LAPACK-enabled CMake targets and CI, with proper Float64 Bullet/LAPACK links; build runner/replay and every affected native check. Update Python numerical-model metadata and the live23 replay corpus/validator. Verify all23 original contact gates, old22 endpoint preservation, native input/output immutability/finite/cap checks and engine regressions. A proposal file is not a verified implementation.
+
+The proposed search runs only after all existing velocity lanes fail, seeds the actual final rejected PGS vector, permits at most64 full rows and fresh2048 SVD/iteration steps, and accepts only unchanged full original projection/bounds/passivity gates. The terminal and atomic-prefix policy records `stage=after_all_existing_pipeline_failure`, compiled/enabled state, exact caps and actual attempts/solves/declines/SVD/iteration/Newton counters. The chosen helper does not change friction, shape, inertia, RHS or tolerances.
+
+Only after reviewed production integration, BUILD READY, the23 default-preservation proof and an exact published source SHA may the prepared `research/hull-search-completion` protocol execute its six unchanged full trajectories. Do not overwrite/retry old bca results. Do not claim material calibration, dense-hull convergence, superiority or a VKF port.

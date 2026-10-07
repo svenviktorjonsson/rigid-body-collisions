@@ -1,0 +1,6 @@
+test_gap_pose_policy_preserves_spin_and_accounts_gravity_repair (tests.test_spatial_friction.Coulomb3D.test_gap_pose_policy_preserves_spin_and_accounts_gravity_repair) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+OK

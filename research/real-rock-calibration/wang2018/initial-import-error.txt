@@ -1,0 +1,2 @@
+First workbook import declined on repeated second-size header A='D'. Explicit repeated-header skip added; numerical measurements unchanged.
+ValueError: could not convert string to float: 'D'

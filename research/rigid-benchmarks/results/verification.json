@@ -1,0 +1,72 @@
+{
+  "recorded_utc": "2026-10-04T20:47:29.261798+00:00",
+  "scope": "Numerical and analytic rigid verification; not experimental material validation.",
+  "tested_source_base_commit": "62e38def9334999d303399e3f3ad49adf683bd5d",
+  "tested_working_source_sha256": {
+    "rigid_engine.py": "1a59cf70612318b5a05e02131b159786219d1ffff1cc2a679b27880186a29fff",
+    "rigid_backend/runner.cpp": "71507d8bd491c9319f5b3cdbf0a9e491835a73d8036d03ea89d6b96ca0132b07",
+    "rigid_backend/compat2.h": "be4a946f8090b35af40c631ff370207a4f30236541bfb52b2b4addbb0d6900a6",
+    "rigid_backend/CMakeLists.txt": "5323e397653cbe18cc1dfce2359b8cca67dbcedf426c63881fb28526e534c9e2",
+    "tests/test_rigid_engine.py": "15121415f0db1314c88ff17e2e4557b7d96b2050b452ec7507ed5d89ddd9a48a",
+    "research/run_rigid_study.py": "1672aad88e9f1b2c4f97577012ed3de318370656b79f9f27e4ad3a70caba80d2",
+    "research/refine_rigid_references.py": "de9e2dbb9a74135bae74977d7f2437a58b24fe1f0ba492efcf5b5a831012ac7b",
+    "research/time_rigid_modes.py": "b87bd12dfdef0fc46f58fd5c67bafba3c30a45e89cfdb6bdedd906533cdca255",
+    "research/audit_rigid_study.py": "eab9e1aea8a97350d16738eb9b80de4f99251989a6b4a8c4b957085397692cd6",
+    "research/rigid_scenes.py": "16e1da63b7c7c4b4981b72af376f69ce28b2abea6e5146b78544eafd13612938"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C; shared KVM environment, not CPU-isolated",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 38,
+      "result": "passed",
+      "skips": 0
+    },
+    {
+      "command": "python -m unittest discover -s research -p 'test_*.py' -v",
+      "tests": 10,
+      "result": "passed"
+    },
+    {
+      "command": "python -m research.benchmark_tools audit",
+      "source_files_verified": 29,
+      "result": "passed"
+    },
+    {
+      "command": "python -m research.audit_rigid_study",
+      "source_files_verified": 6,
+      "traces_verified": 153,
+      "comparisons_recomputed": 119,
+      "follow_up_traces_verified": 40,
+      "result": "passed"
+    },
+    {
+      "command": "rigid_engine.py CLI default, fast and frozen adaptive settings on concave_L_drop",
+      "result": "passed"
+    }
+  ],
+  "research_results": {
+    "initial_cases": 17,
+    "initial_qualified_block_references": 10,
+    "additional_exploratory_qualified_cases": 3,
+    "qualified_held_out_adaptive_speed_wins": 0,
+    "held_out_interleaved_timing_repeats": 20,
+    "physically_validated_cases": 0,
+    "conservative_default": {
+      "backend": "block",
+      "primary_steps": 8,
+      "velocity_iterations": 32,
+      "qualified_cases_within_budget": 13,
+      "scope": "10 initial plus 3 exploratory qualified references; no experimental validation"
+    }
+  },
+  "limitations": "Self-reference convergence and synthetic idealized laws do not identify real material properties. Unqualified scenes and adaptive failures remain in the published data."
+}

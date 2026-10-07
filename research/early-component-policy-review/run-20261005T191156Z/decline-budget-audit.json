@@ -1,0 +1,149 @@
+{
+  "scope": "Supplemental original-cap/immutability audit; no new solver acceptance criterion",
+  "declines": 5,
+  "records": [
+    {
+      "index": 0,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 1,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 2,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 3,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 4,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 5,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 6,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 7,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 8,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 9,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 10,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 11,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 12,
+      "early_declined": true,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true,
+      "exact_baseline_endpoint_retained": true,
+      "extra_work_exactly_aggregated": true
+    },
+    {
+      "index": 13,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 14,
+      "early_declined": true,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true,
+      "exact_baseline_endpoint_retained": true,
+      "extra_work_exactly_aggregated": true
+    },
+    {
+      "index": 15,
+      "early_declined": true,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true,
+      "exact_baseline_endpoint_retained": true,
+      "extra_work_exactly_aggregated": true
+    },
+    {
+      "index": 16,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 17,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 18,
+      "early_declined": true,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true,
+      "exact_baseline_endpoint_retained": true,
+      "extra_work_exactly_aggregated": true
+    },
+    {
+      "index": 19,
+      "early_declined": true,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true,
+      "exact_baseline_endpoint_retained": true,
+      "extra_work_exactly_aggregated": true
+    },
+    {
+      "index": 20,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    },
+    {
+      "index": 21,
+      "early_declined": false,
+      "per_call_caps_pass": true,
+      "aggregate_two_call_caps_pass": true
+    }
+  ],
+  "passed": true
+}

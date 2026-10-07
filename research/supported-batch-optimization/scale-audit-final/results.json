@@ -1,0 +1,12 @@
+{
+  "cases": 2000,
+  "max_scaled_error": 1.0170772314127156e-15,
+  "worker_outputs_bit_identical": true,
+  "controls_sha256": "ce15ffcdbbd4f917cb21baf9f5445254a001c1363ff62fdecfd8b255474c0089",
+  "source_sha256": {
+    "supported_backend/kernel.h": "6e5050759cbc00734215b4a15ded36f1dd1ca903d40cceb0149fe20fe8c8c40d",
+    "supported_backend/batch.cpp": "2f0ea4cd586c8fc95cd9acc630c4a3f2ba777fd6849986df2e0a2ac6cdbd92ad",
+    "supported_backend/batch.h": "9b0503a766a3476960a447a96a1050eaca375a3e399c6b6685c13aca6a779d9d",
+    "supported_batch.py": "3bcd0fcf0daf2849bd26145da43b6567e21683d5e6fb2166d9a380f89e388ba0"
+  }
+}

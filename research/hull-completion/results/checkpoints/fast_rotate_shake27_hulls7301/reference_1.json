@@ -1,0 +1,1 @@
+{"attempt_status":"interrupted","interruption_reason":"Unified exec server transport disconnected; Python orchestrator/helper disappeared; native child result stdout and exit status unavailable.","qualification":"unavailable; interrupted attempt is neither a completed trajectory nor an inferred physics rejection","rejection_dump":null}

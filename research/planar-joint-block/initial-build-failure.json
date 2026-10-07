@@ -1,0 +1,5 @@
+{
+  "failed": true,
+  "reason": "Pinned Box2D library explicitly compiles as C++11; std::clamp is C++17. No prototype executable completed or physical trial run. Initial transformed inventory/baseline build retained in build/rigid_double_joint.",
+  "prototype_sha256": "c0b5997df7980d11aa0bc04d2dbecf8469f63d50fff06f97456f42ea0ee8d468"
+}

@@ -1,0 +1,1142 @@
+[
+  {
+    "type": "directory",
+    "oid": "0be639693057d17065f90bc266ae2f8d4b8456fe",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/metal"
+  },
+  {
+    "type": "directory",
+    "oid": "3f11b1aab358a4e219896890b241097c263c624d",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/metal/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "762f0a06e80d7aeb44e049e537a265d2f36fdcef",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/metal/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "c52d8b624eb7e6d991dd32a27ed83a6506440173",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/metal/task-3"
+  },
+  {
+    "type": "directory",
+    "oid": "335e1d0d6a92fffac7440395b292f1fc7112a9a6",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/plastic"
+  },
+  {
+    "type": "directory",
+    "oid": "a8a2b95dcf1fc484363e880abf5108f3010da374",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/plastic/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "fa5d3fcf9417e97b2fa506a92b2319f3886b19d2",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/plastic/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "60ad311f25a84c77ec5b46dac54f6d33903be84b",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/plastic/task-3"
+  },
+  {
+    "type": "directory",
+    "oid": "6cc22040a05fd74644887d1a247f62e9fa253b12",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/wood"
+  },
+  {
+    "type": "directory",
+    "oid": "8568653da86c13e6eee5b25e83aa98a910f47c78",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/wood/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "e2dfed595755b313b7c9634c5461b49791ffdf8d",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/wood/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "d6cd01e38cec94be6a2740631637af4fff214dce",
+    "size": 0,
+    "path": "data/rigid/slope slider/json/wood/task-3"
+  },
+  {
+    "type": "file",
+    "oid": "aee9a1f1e0f274af0a3a2f49ed8d5ca255eca384",
+    "size": 16023,
+    "path": "data/rigid/slope slider/json/metal/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "364be056b8211a1b40bee6a9f1a743cbe1379d9e",
+    "size": 24159,
+    "path": "data/rigid/slope slider/json/metal/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "7fc537dea6095071c784a22f733f933bf18f8b8e",
+    "size": 12857,
+    "path": "data/rigid/slope slider/json/metal/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "f11e95e085f2132fae7d1fe9600bbf1263b28778",
+    "size": 21331,
+    "path": "data/rigid/slope slider/json/metal/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "565db64ca5ee6dba6fc1a81477dbd9e34b3b0fbc",
+    "size": 6491,
+    "path": "data/rigid/slope slider/json/metal/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "98c5084b6573886e1f1e4f9a6f3e16a497342481",
+    "size": 26262,
+    "path": "data/rigid/slope slider/json/metal/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "09facb6dfc4021d7f6062bce596282d729b3c8e7",
+    "size": 23146,
+    "path": "data/rigid/slope slider/json/metal/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "62ced1578a648f86f0ff12b494c43194ff294083",
+    "size": 32579,
+    "path": "data/rigid/slope slider/json/metal/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "f975b3496b3f755e6f97ff82c0a0dd6ad836cc08",
+    "size": 30508,
+    "path": "data/rigid/slope slider/json/metal/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "4a5f157b7184215fab1cda07870917d4611a7cce",
+    "size": 22219,
+    "path": "data/rigid/slope slider/json/metal/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "76a2eb79bbecc3914d25c49647f51e5b0dad6295",
+    "size": 6861,
+    "path": "data/rigid/slope slider/json/metal/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "1f4caebdfc9fc7a555d60b99c3147136444ad7f4",
+    "size": 3680,
+    "path": "data/rigid/slope slider/json/metal/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "d6ef5f9bdaa92c470cf18d966fa479d8121207e3",
+    "size": 6857,
+    "path": "data/rigid/slope slider/json/metal/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "a64afdfc45289e2111ec62a6c8291801d8d69382",
+    "size": 12506,
+    "path": "data/rigid/slope slider/json/metal/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "6aeadd98636095fd7865c615f04b126a28834d42",
+    "size": 13561,
+    "path": "data/rigid/slope slider/json/metal/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "b11c7f79735e6798c1e005ff5a5e7e1054aa491d",
+    "size": 19889,
+    "path": "data/rigid/slope slider/json/metal/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "3e9de2c86ca0e617e94b63eb15848ebfb40c0bd7",
+    "size": 34732,
+    "path": "data/rigid/slope slider/json/metal/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "42e48780e3507a11fb86f1a9a2e161c5001a3c09",
+    "size": 29450,
+    "path": "data/rigid/slope slider/json/metal/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "bcf5ce85441b460fefd22d65e5a0d61dee62993f",
+    "size": 6851,
+    "path": "data/rigid/slope slider/json/metal/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "84f67a9774f4c52cae203a4440afe4e42bc55107",
+    "size": 6491,
+    "path": "data/rigid/slope slider/json/metal/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "e5d7d341bfe8a60bf1e9d3dc0375b50a103bac2c",
+    "size": 8758,
+    "path": "data/rigid/slope slider/json/metal/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "850dce4c8da8db48652b92b418af16361d9909de",
+    "size": 8718,
+    "path": "data/rigid/slope slider/json/metal/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "b987bb6f51f40a3324dbdc47e80ae27022ce9779",
+    "size": 8027,
+    "path": "data/rigid/slope slider/json/metal/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "b82513c879f74e8dc0434895b601ddc15fd4c07c",
+    "size": 7992,
+    "path": "data/rigid/slope slider/json/metal/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "5289cce8bbbe5b88143abcb61a3eefd666ddf742",
+    "size": 8347,
+    "path": "data/rigid/slope slider/json/metal/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "fe480a81cb3c642ed333287acdeda867d20bb86d",
+    "size": 7324,
+    "path": "data/rigid/slope slider/json/metal/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "635630ffe33c58a7c2de3eb06319a3b0c25da843",
+    "size": 8038,
+    "path": "data/rigid/slope slider/json/metal/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "6b1994185a848a520065caaca7b45b9b24708adc",
+    "size": 7977,
+    "path": "data/rigid/slope slider/json/metal/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "bc22fb249411c7d0b869b91c2049a0dc13ed5cc0",
+    "size": 8384,
+    "path": "data/rigid/slope slider/json/metal/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "6d33097e28db7ecd5e2e6e8143f108208c5da5bf",
+    "size": 8016,
+    "path": "data/rigid/slope slider/json/metal/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "5224f38238b89822c0f2ff522d1e30218a412a5b",
+    "size": 7705,
+    "path": "data/rigid/slope slider/json/metal/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "4543636e58ac770da4c8c5c1aa8bf30575cc12de",
+    "size": 8373,
+    "path": "data/rigid/slope slider/json/metal/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "da82d820e7659603623888a33f77791c533b89db",
+    "size": 8016,
+    "path": "data/rigid/slope slider/json/metal/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "7ffe1aea7bb0b93f526e8b2911a60b289ba55262",
+    "size": 8292,
+    "path": "data/rigid/slope slider/json/metal/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "672bb1108da869f3a47da1e28d7a00288a5308d1",
+    "size": 8420,
+    "path": "data/rigid/slope slider/json/metal/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "e38be303eaff898c311b6c2349b6ce3bbf908b78",
+    "size": 8055,
+    "path": "data/rigid/slope slider/json/metal/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "41350e07d31cb958fb4d23e3a881b8ea09a858d3",
+    "size": 7981,
+    "path": "data/rigid/slope slider/json/metal/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "a8e090af8287484407a7f3a4afc3cc5f00b887da",
+    "size": 7324,
+    "path": "data/rigid/slope slider/json/metal/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "723b5f66ee305987b3a7afbece057dfd95555674",
+    "size": 8771,
+    "path": "data/rigid/slope slider/json/metal/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "8f4d3803510761abe6ce414b9e88b45e71e8c7c9",
+    "size": 22525,
+    "path": "data/rigid/slope slider/json/metal/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "563fb6e01aa9befdb44c9263046ff37cd26212db",
+    "size": 22506,
+    "path": "data/rigid/slope slider/json/metal/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "cc0367cc942d6a6a1a927c1b5e4640757fa3a369",
+    "size": 23239,
+    "path": "data/rigid/slope slider/json/metal/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "77a9189b35234778a29180a9f19a739118888594",
+    "size": 22862,
+    "path": "data/rigid/slope slider/json/metal/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "b6f6817411eff08c229d240e71bd9f73bfb88341",
+    "size": 22144,
+    "path": "data/rigid/slope slider/json/metal/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "8b161b8b904b470f9771e1d851fcbc84135c6035",
+    "size": 22163,
+    "path": "data/rigid/slope slider/json/metal/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "f30ef8bc8273b35ba226534edb34c940e5a28d27",
+    "size": 22557,
+    "path": "data/rigid/slope slider/json/metal/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "f6821af88e41a3becc650b1f40eee0e63294e089",
+    "size": 23209,
+    "path": "data/rigid/slope slider/json/metal/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "4fb01f0d1b90f809a3b53aaab35f1b4a85243a5f",
+    "size": 23530,
+    "path": "data/rigid/slope slider/json/metal/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "3911f8c4acb26fb2fb2290c29949aba2ff458100",
+    "size": 23122,
+    "path": "data/rigid/slope slider/json/metal/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "d2cfe987ca64f21f4913a31f37c91ea7ce78f1db",
+    "size": 22094,
+    "path": "data/rigid/slope slider/json/metal/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "231ccff2b1791df3e7dd5d295d136d7199d9e03b",
+    "size": 25689,
+    "path": "data/rigid/slope slider/json/metal/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "1d129e3a679e0402cfcef1a8487cfa09d7230317",
+    "size": 23127,
+    "path": "data/rigid/slope slider/json/metal/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "0631090570c666ce4751141c8db2ca4c6cf64c22",
+    "size": 26072,
+    "path": "data/rigid/slope slider/json/metal/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "96b1cd934261dc17f0fd71cccc00071fdf1b6a15",
+    "size": 26587,
+    "path": "data/rigid/slope slider/json/metal/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "9cbaabd3c9c7b16b2bebe315c6fbf14668c00639",
+    "size": 23303,
+    "path": "data/rigid/slope slider/json/metal/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "fb81b1c1293e00d788aaf096686d99c7bf61f111",
+    "size": 26093,
+    "path": "data/rigid/slope slider/json/metal/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "3b7f34b1e4278d415fe7cabeed2c3294635a4c85",
+    "size": 23598,
+    "path": "data/rigid/slope slider/json/metal/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "21a3c2411d9086528ab103bf69eeceaa291f0a08",
+    "size": 24443,
+    "path": "data/rigid/slope slider/json/metal/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "d79b20d9913d3447aa31ded43775ddf3f5c1e0a3",
+    "size": 22540,
+    "path": "data/rigid/slope slider/json/metal/task-3/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "6efe05b783130fca599d18f4686e2134590eacff",
+    "size": 30306,
+    "path": "data/rigid/slope slider/json/plastic/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "a86f5dc1de9165498ed5e3e0e4060846552cba3c",
+    "size": 31001,
+    "path": "data/rigid/slope slider/json/plastic/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "67cec82429d52da64c53b1963e9c596e5da88175",
+    "size": 28516,
+    "path": "data/rigid/slope slider/json/plastic/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "dc47665eb4184cc71d12bd79ae20abffcc1367a0",
+    "size": 25317,
+    "path": "data/rigid/slope slider/json/plastic/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "d7d2414d02b077a64304063fefe8dea460d1d468",
+    "size": 32082,
+    "path": "data/rigid/slope slider/json/plastic/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "3b4cbd6de610addd7fcbbbb20cf3630b0b91a132",
+    "size": 15033,
+    "path": "data/rigid/slope slider/json/plastic/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "2271b5530be6ccfa0ec627379463892e44abddaa",
+    "size": 28155,
+    "path": "data/rigid/slope slider/json/plastic/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "ea45c1b7856afa1ab550965246edade70312fb2c",
+    "size": 57604,
+    "path": "data/rigid/slope slider/json/plastic/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "1c5615bd25e6481c78e4e5123d817e222c913b8c",
+    "size": 35619,
+    "path": "data/rigid/slope slider/json/plastic/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "1c811f5dc8344c96a235126501d21cd2e2035748",
+    "size": 37387,
+    "path": "data/rigid/slope slider/json/plastic/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "ab2df2ead99ced02c440ee542c2bf5e8c71d4e8c",
+    "size": 32044,
+    "path": "data/rigid/slope slider/json/plastic/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "4be2ad6fa117cbc358ddd6c00d6341588954f5cb",
+    "size": 24973,
+    "path": "data/rigid/slope slider/json/plastic/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "11f6ff75fca2ff18c44aaf6c4badc364e0cecaaf",
+    "size": 34193,
+    "path": "data/rigid/slope slider/json/plastic/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "ed43169ead647755a3c50e22ad2668f8e0b3b073",
+    "size": 26761,
+    "path": "data/rigid/slope slider/json/plastic/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "742546bb3099d8ad6f85a794add5c20c76f83114",
+    "size": 32415,
+    "path": "data/rigid/slope slider/json/plastic/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "6daa23d69be598ece627788818911dc0098195e4",
+    "size": 13626,
+    "path": "data/rigid/slope slider/json/plastic/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "af8eb5a3b7a67b3b4bd556e5b876039eaffce49f",
+    "size": 11157,
+    "path": "data/rigid/slope slider/json/plastic/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "758de3aee123cd61b3b02db0b7b3c90c2f99c4d3",
+    "size": 29970,
+    "path": "data/rigid/slope slider/json/plastic/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "ad55cece2967b7c0393851d96e753fd8dce68215",
+    "size": 24764,
+    "path": "data/rigid/slope slider/json/plastic/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "89d5959c212b72a1c71a97d423450c1828691688",
+    "size": 13729,
+    "path": "data/rigid/slope slider/json/plastic/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "452e8c9168d3a4940e6d212c0df00e0a2d9cea6c",
+    "size": 7631,
+    "path": "data/rigid/slope slider/json/plastic/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "f454ecc3e79fde4a5ef88ac05d9b15e46e3a1502",
+    "size": 8008,
+    "path": "data/rigid/slope slider/json/plastic/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "8bdd833f2c4d920afd071ed720d992ca1dd2ec66",
+    "size": 7574,
+    "path": "data/rigid/slope slider/json/plastic/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "0d063f4bdbf9fe01b38c41febf32da887439e36f",
+    "size": 7285,
+    "path": "data/rigid/slope slider/json/plastic/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "0c298233dfa46c805053725cb176d6d291a3a20d",
+    "size": 7214,
+    "path": "data/rigid/slope slider/json/plastic/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "ba476cc9b675fe7813f065ec2999e6f72b51e12a",
+    "size": 7293,
+    "path": "data/rigid/slope slider/json/plastic/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "f14157808fc233481c801510026974726a9f0af5",
+    "size": 8001,
+    "path": "data/rigid/slope slider/json/plastic/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "b3b9545c2875ce80fa0435220a4a5dbde87fac0c",
+    "size": 7642,
+    "path": "data/rigid/slope slider/json/plastic/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "494db305fb2fffb9fc057022761804ca41b3f1df",
+    "size": 8018,
+    "path": "data/rigid/slope slider/json/plastic/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "2d717befda052bc51bfae693c12902f838e78e68",
+    "size": 7288,
+    "path": "data/rigid/slope slider/json/plastic/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "11c586877c1dc2fd36906284b26a905d680c953b",
+    "size": 7330,
+    "path": "data/rigid/slope slider/json/plastic/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "465cba8f7e19b660944727c803d927ce7674302d",
+    "size": 6589,
+    "path": "data/rigid/slope slider/json/plastic/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "78da03d55fadb46ac64235d845bbe71cc8f21dbd",
+    "size": 7704,
+    "path": "data/rigid/slope slider/json/plastic/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "06a1be2a3e690d3d5821ad42a8b9cfa55cd5075f",
+    "size": 7581,
+    "path": "data/rigid/slope slider/json/plastic/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "cfc52d6d61fb1082b2cb56f4620ce8ad69af23a1",
+    "size": 6583,
+    "path": "data/rigid/slope slider/json/plastic/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "cea3acbb31b21ac56baa9a839cb0c61736027630",
+    "size": 7305,
+    "path": "data/rigid/slope slider/json/plastic/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "ae451dcfc5936e6f2040e4ed358ab5fd59d9f31c",
+    "size": 7231,
+    "path": "data/rigid/slope slider/json/plastic/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "21e0f16dfe9920fc24604d01d0896ad5322c717f",
+    "size": 8002,
+    "path": "data/rigid/slope slider/json/plastic/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "15a7b8855d156fcb0a53f158b9c00771c2c83d1a",
+    "size": 7642,
+    "path": "data/rigid/slope slider/json/plastic/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "fc0b4b3012c610e53299ff35adc580d1e43693b3",
+    "size": 7653,
+    "path": "data/rigid/slope slider/json/plastic/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "cad88e35fc99d6a8c6af37d95e8581636c47e01b",
+    "size": 22220,
+    "path": "data/rigid/slope slider/json/plastic/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "fba33d0eadbc37fe7447ff6f4bfeb416e5505e98",
+    "size": 20344,
+    "path": "data/rigid/slope slider/json/plastic/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "59e78220564dd5c7c028ea1a87e771e0bc6d77dc",
+    "size": 19366,
+    "path": "data/rigid/slope slider/json/plastic/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "24540cd93b76aa4eac6a106823a6d9e1ba38705b",
+    "size": 17546,
+    "path": "data/rigid/slope slider/json/plastic/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "9a9d660bdee52bf5e9f1463bed1116ad6661e0ab",
+    "size": 18658,
+    "path": "data/rigid/slope slider/json/plastic/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "b97f84fd209c7dde99091917b2e8919c0415b32e",
+    "size": 16958,
+    "path": "data/rigid/slope slider/json/plastic/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "5b066b50325012ebf2aa1702e21db3499059429c",
+    "size": 18046,
+    "path": "data/rigid/slope slider/json/plastic/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "d52bdcac12872547ecea350113354827f4d814b1",
+    "size": 17689,
+    "path": "data/rigid/slope slider/json/plastic/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "f52ff1f6a25308f0aeab28fb8f5e734a014e2496",
+    "size": 17681,
+    "path": "data/rigid/slope slider/json/plastic/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "25ace9b1fea7d39aa28612f5c0fc44e0b0115402",
+    "size": 17325,
+    "path": "data/rigid/slope slider/json/plastic/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "ffa8089fa1749b7d1fe68f449e526d965b87c74e",
+    "size": 17599,
+    "path": "data/rigid/slope slider/json/plastic/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "3ce7669ab04d371b126299cc782345d90aa37e25",
+    "size": 23639,
+    "path": "data/rigid/slope slider/json/plastic/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "4519ac42c8297a2e1efb87e3ac73be75a119be36",
+    "size": 18036,
+    "path": "data/rigid/slope slider/json/plastic/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "2d831769ac3b532ce64c94a557a54196387d7a60",
+    "size": 23669,
+    "path": "data/rigid/slope slider/json/plastic/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "ee677796aa35f3bf5354e1e84ae352c1fea4ce75",
+    "size": 22588,
+    "path": "data/rigid/slope slider/json/plastic/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "baf50100ae866318d8007337b2eedddc0a119671",
+    "size": 20811,
+    "path": "data/rigid/slope slider/json/plastic/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "f020d8517af63b175a36a785f42df19c340863d9",
+    "size": 19753,
+    "path": "data/rigid/slope slider/json/plastic/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "94aef198f0877bb55f9161ca0014db37ace5e49b",
+    "size": 21532,
+    "path": "data/rigid/slope slider/json/plastic/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "f4b960f0204d8cb7881e82c99d1b1fe5ab1d583f",
+    "size": 19632,
+    "path": "data/rigid/slope slider/json/plastic/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "d69b7a3074f8f09725d99ede497d12d0440f676c",
+    "size": 21518,
+    "path": "data/rigid/slope slider/json/plastic/task-3/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "4eb49934b5ea61774f4705c3e3a2010897daec50",
+    "size": 30487,
+    "path": "data/rigid/slope slider/json/wood/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "edbe8c87875eb4fdffff385a150d0cf16345179b",
+    "size": 23350,
+    "path": "data/rigid/slope slider/json/wood/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "fa94b3d681341f8b9d4d02254fd2abe7198d02e4",
+    "size": 31914,
+    "path": "data/rigid/slope slider/json/wood/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "dbcdc56e29a65251be93b077a8e18b963259ed1b",
+    "size": 20128,
+    "path": "data/rigid/slope slider/json/wood/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "4bdf45fc2637439264aaf94f6a59549f4f4a0d45",
+    "size": 29765,
+    "path": "data/rigid/slope slider/json/wood/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "3e289e389265c11ccdf1797a45d63db147f0943c",
+    "size": 20463,
+    "path": "data/rigid/slope slider/json/wood/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "e2001658d8bb672493ebb2f029cc432777020675",
+    "size": 23682,
+    "path": "data/rigid/slope slider/json/wood/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "44f89674cc3ef3592f029fffd8e54016b1e92730",
+    "size": 31547,
+    "path": "data/rigid/slope slider/json/wood/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "b49e07a48116891f722c3a9ed9184d7b0020d120",
+    "size": 33300,
+    "path": "data/rigid/slope slider/json/wood/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "09a5896f1723757c55025ed0319ee7f94b36fabd",
+    "size": 31527,
+    "path": "data/rigid/slope slider/json/wood/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "adc67aaf3624427f25c074a8601f28854fb684e9",
+    "size": 33684,
+    "path": "data/rigid/slope slider/json/wood/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "df28adadfe4b57bc0aad548a4ee7fbf2bdc56496",
+    "size": 34735,
+    "path": "data/rigid/slope slider/json/wood/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "d72ccb19940fd907dc43625e53f9e6cb28b12f1e",
+    "size": 51196,
+    "path": "data/rigid/slope slider/json/wood/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "b404e8ff418e11a435c9eb3744b8352c821d37aa",
+    "size": 31913,
+    "path": "data/rigid/slope slider/json/wood/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "bbc20b99abd05dd9f874669efc3a954360a5d493",
+    "size": 22994,
+    "path": "data/rigid/slope slider/json/wood/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "2c0cc053b7ff78a96bba2f014976dca3763f5971",
+    "size": 23355,
+    "path": "data/rigid/slope slider/json/wood/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "6b873f5ff365ad47c7b5734b375bf42b4a417b15",
+    "size": 35818,
+    "path": "data/rigid/slope slider/json/wood/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "3a53d3e40d3138634d10ac1da41eea7d56ef1c78",
+    "size": 24420,
+    "path": "data/rigid/slope slider/json/wood/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "6b9416a9408011ef0ce58e24fd5f913baf20533a",
+    "size": 31211,
+    "path": "data/rigid/slope slider/json/wood/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "cb51afd34b70ba693c9028f0d52a067525318e80",
+    "size": 7630,
+    "path": "data/rigid/slope slider/json/wood/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "19e2cd68fb3794d7e1ea6bb5a9f1da119df99abd",
+    "size": 7265,
+    "path": "data/rigid/slope slider/json/wood/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "59d48cfdf638c27a36e4bcdfc7e98e28b5539300",
+    "size": 7676,
+    "path": "data/rigid/slope slider/json/wood/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "f1e19a6e1b4f935168751c4082b5d890a22772d9",
+    "size": 7624,
+    "path": "data/rigid/slope slider/json/wood/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "54c07383b01a24b29034b7fdf618ee99395b16fd",
+    "size": 8031,
+    "path": "data/rigid/slope slider/json/wood/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "7c16a990e41a6b2044cec62a5c8dd47c0142ee3c",
+    "size": 8038,
+    "path": "data/rigid/slope slider/json/wood/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "b912b71ea14122d2d33ec49b12a5828e8b6a03c0",
+    "size": 7974,
+    "path": "data/rigid/slope slider/json/wood/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "7192190cd9e8fff9399aa6da208881b8016801ee",
+    "size": 8007,
+    "path": "data/rigid/slope slider/json/wood/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "7d974dd72eabffe953bbb6219d856d89bc6f43c6",
+    "size": 7671,
+    "path": "data/rigid/slope slider/json/wood/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "8cfe6567a04b92320da0d3afcd5888fafa14de3f",
+    "size": 8703,
+    "path": "data/rigid/slope slider/json/wood/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "14f608572021eaf75e7db76b6f3836c1ff8d4d19",
+    "size": 7309,
+    "path": "data/rigid/slope slider/json/wood/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "fe1f739c38130117accdff4003837236353c1454",
+    "size": 8017,
+    "path": "data/rigid/slope slider/json/wood/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "043889e86b4ec2cdfd23a6317774578fe55d2e35",
+    "size": 8022,
+    "path": "data/rigid/slope slider/json/wood/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "97ddd3c978c2f4304c8abb4bcd80fc16350e5237",
+    "size": 7981,
+    "path": "data/rigid/slope slider/json/wood/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "dada8d20c86cc6c5f137603f56d4b85750557ac8",
+    "size": 8030,
+    "path": "data/rigid/slope slider/json/wood/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "7f2ccdfea5b7f17e14ead8d1e9bec3391d88b299",
+    "size": 8391,
+    "path": "data/rigid/slope slider/json/wood/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "6c50ffe1776e459540a26da63d6f63d49452b3d3",
+    "size": 7323,
+    "path": "data/rigid/slope slider/json/wood/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "875d2ce4472eeba1770cb306e561c7d52a9c47c6",
+    "size": 8010,
+    "path": "data/rigid/slope slider/json/wood/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "1d704fd1e37ed45c7de36372d729c941d09ba4b2",
+    "size": 7632,
+    "path": "data/rigid/slope slider/json/wood/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "65510349974aa8552dd4919b9d2685ac2d409593",
+    "size": 7270,
+    "path": "data/rigid/slope slider/json/wood/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "ebf83eb9c64861e305ffce80657d4e409ce1d34c",
+    "size": 19328,
+    "path": "data/rigid/slope slider/json/wood/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "72244fb8a17417b5818207b366f7da0c36045210",
+    "size": 18229,
+    "path": "data/rigid/slope slider/json/wood/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "bc8e11b159e9477ec29ac70922719701d627eb90",
+    "size": 18441,
+    "path": "data/rigid/slope slider/json/wood/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "d9f1da58e834fe259ca858fddff0514f29b789d5",
+    "size": 18384,
+    "path": "data/rigid/slope slider/json/wood/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "7e275a8cd49daf127692a504eeae01331eab6398",
+    "size": 17662,
+    "path": "data/rigid/slope slider/json/wood/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "0402172534b6c3dd8a17eb13ea288639990bc994",
+    "size": 17667,
+    "path": "data/rigid/slope slider/json/wood/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "edca501fef6bb418915d291aca0e4e01c45f20ce",
+    "size": 17672,
+    "path": "data/rigid/slope slider/json/wood/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "139dd90681dde616a3e5fb4418d4414bd805c7ba",
+    "size": 18221,
+    "path": "data/rigid/slope slider/json/wood/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "a0851fe4b5a522c01b7fbef4b041b980098801bd",
+    "size": 17288,
+    "path": "data/rigid/slope slider/json/wood/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "f53046e0ea6ab78e572e0977392b7ae48bf4ecb4",
+    "size": 18561,
+    "path": "data/rigid/slope slider/json/wood/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "b22db557f023836ff005215d9c73bea862453436",
+    "size": 17853,
+    "path": "data/rigid/slope slider/json/wood/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "2f1548a7bddff0ac2738b20560d22c6358a543df",
+    "size": 17003,
+    "path": "data/rigid/slope slider/json/wood/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "8781b48990cece0e1521e1f48bf4585287679e18",
+    "size": 18291,
+    "path": "data/rigid/slope slider/json/wood/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "82a2a0a1fa9b679a794a3672f9c3b6dde6f871b1",
+    "size": 18240,
+    "path": "data/rigid/slope slider/json/wood/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "4525e2117c4757633bae3b46377a900f4cbefda0",
+    "size": 17736,
+    "path": "data/rigid/slope slider/json/wood/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "b1ee8262a54a44be86c6a22a24a5f3fe1c690bf2",
+    "size": 18559,
+    "path": "data/rigid/slope slider/json/wood/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "28d654cfa9c1ebf3c82810d87cb1bc0f292548b1",
+    "size": 18209,
+    "path": "data/rigid/slope slider/json/wood/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "277e40a96cbedf3dc78c3c042ded58bb63e6eb52",
+    "size": 18579,
+    "path": "data/rigid/slope slider/json/wood/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "e73187754f72959c341d39c5eb054e396843847e",
+    "size": 18555,
+    "path": "data/rigid/slope slider/json/wood/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "deb6251c8e98ded0d15d8e5423fc905d28a21409",
+    "size": 18577,
+    "path": "data/rigid/slope slider/json/wood/task-3/9.json"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "archive": {
+    "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/modern-contact-optimization-extension-20261007.zip",
+    "bytes": 214654,
+    "sha256": "6cae6275986216060f20be4b0cb57ca8f1c3d7a2893ca20c297ea1ca7daf8358",
+    "members": 55
+  },
+  "report": {
+    "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/modern-contact-optimization-report-20261007.pdf",
+    "bytes": 91611,
+    "sha256": "fd8504e6b1b610cc7191e8786dc7b78627acfaa66b53a9055ddf37d69327a851"
+  },
+  "payload_verified": true,
+  "extracted_component_tests": 15,
+  "extracted_tests_exit_code": 0,
+  "source_revision": "b93b694c7f8f414a0d9af6810ba0f2a0272ce0e5",
+  "physics_source_sha256": "4fc4ce17ef231364caa60f4633e49871a6913465bf52c21cd4cf7a8568c3646f",
+  "scope": "Experimental extension; no world/compiler acceptance or empirical accuracy claim"
+}

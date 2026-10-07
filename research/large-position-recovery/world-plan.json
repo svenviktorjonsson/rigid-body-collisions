@@ -1,0 +1,11 @@
+{
+  "source": "88438b881fd55fc70849a70aeeded10e2f7d8ecf",
+  "case": "3d_hull_125",
+  "scene_sha256": "fdb3f62f73b4aa0d75e571d4bb658d53c04d2e171e89678e9e7ccf2ebac4e542",
+  "setting": {
+    "dt": 0.0025,
+    "primary_steps": 4000,
+    "travel_fraction": 0
+  },
+  "rule": "Fresh full original finest125-hull trajectory with only integrated position normal-search cap512. Original geometry/material/motion/gravity/full horizon/tolerances and physical gates preserved. Atomic progress and all rejection geometry retained. Single history may prove completion/physics but cannot qualify reference refinement or2x performance. Concurrent numerical root research allowed during this diagnostic, so elapsed is descriptive only."
+}

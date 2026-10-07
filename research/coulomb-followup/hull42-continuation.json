@@ -1,0 +1,1479 @@
+[
+  {
+    "steps": 10,
+    "accepted": false,
+    "residual": 8.386957747301286e-06,
+    "path": [
+      {
+        "fraction": 0.0,
+        "residual": 0.0002496833556583489,
+        "accepted": false
+      },
+      {
+        "fraction": 0.1,
+        "residual": 0.26687166900133463,
+        "accepted": false
+      },
+      {
+        "fraction": 0.2,
+        "residual": 0.5339780115924131,
+        "accepted": false
+      },
+      {
+        "fraction": 0.3,
+        "residual": 0.8010843589948848,
+        "accepted": false
+      },
+      {
+        "fraction": 0.4,
+        "residual": 1.0681907075994124,
+        "accepted": false
+      },
+      {
+        "fraction": 0.5,
+        "residual": 1.3352970566846352,
+        "accepted": false
+      },
+      {
+        "fraction": 0.6,
+        "residual": 3.1656261461813205e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.7,
+        "residual": 8.38695774760686e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.8,
+        "residual": 8.386957747411585e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.9,
+        "residual": 8.386957747386264e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 1.0,
+        "residual": 8.386957747386264e-06,
+        "accepted": false
+      }
+    ],
+    "impulse": [
+      0.16865431346513107,
+      0.05284372999209007,
+      0.24680407056424233,
+      1.03765711456801e-19,
+      0.00029914092646841835,
+      -5.414417460118134e-19,
+      1.044144601972605e-19,
+      0.1760610548920917,
+      0.24396832790314532,
+      1.2415731122773275e-20,
+      -1.6949740480877456e-19,
+      1.6065585646706406e-19,
+      3.2620598372767495e-19,
+      0.46834237119263106,
+      0.0007282271632887724,
+      0.003086741543963263,
+      0.023079467511656935,
+      0.019734836998428065,
+      -0.0011941141480317097,
+      0.01977123502563889,
+      0.04237007672224286,
+      3.8083416088203544e-19,
+      -3.6423927318871145e-20,
+      0.0001166349826041776,
+      2.6719428419497963e-05,
+      5.653946517614205e-19,
+      1.1271119074939664e-18,
+      1.2025953956500001e-19,
+      -4.87908553207993e-20,
+      0.07042442154453411,
+      7.6205208263115685e-06,
+      0.09758732990555202,
+      -1.5655095453525785e-05,
+      -2.626621675995138e-19,
+      1.1843383152428892e-19,
+      3.223979579983841e-21,
+      -2.4681628584787305e-19,
+      7.79031930489072e-20,
+      2.0099322445177908e-19,
+      3.406012721480681e-20,
+      3.0535451564965827e-19,
+      0.1807306981843657,
+      -0.04931071890051387,
+      0.0002865761017652394,
+      -5.219680175352728e-05
+    ]
+  },
+  {
+    "steps": 50,
+    "accepted": false,
+    "residual": 8.386957746945071e-06,
+    "path": [
+      {
+        "fraction": 0.0,
+        "residual": 0.0002496833556583489,
+        "accepted": false
+      },
+      {
+        "fraction": 0.02,
+        "residual": 0.05337435880078006,
+        "accepted": false
+      },
+      {
+        "fraction": 0.04,
+        "residual": 0.1067582044442435,
+        "accepted": false
+      },
+      {
+        "fraction": 0.06,
+        "residual": 0.16014205013406868,
+        "accepted": false
+      },
+      {
+        "fraction": 0.08,
+        "residual": 0.2135258954376069,
+        "accepted": false
+      },
+      {
+        "fraction": 0.1,
+        "residual": 0.26690988280288325,
+        "accepted": false
+      },
+      {
+        "fraction": 0.12,
+        "residual": 0.3202938701707946,
+        "accepted": false
+      },
+      {
+        "fraction": 0.14,
+        "residual": 0.3736778575402118,
+        "accepted": false
+      },
+      {
+        "fraction": 0.16,
+        "residual": 0.4270618449105698,
+        "accepted": false
+      },
+      {
+        "fraction": 0.18,
+        "residual": 0.4804458322815553,
+        "accepted": false
+      },
+      {
+        "fraction": 0.2,
+        "residual": 0.53382981965298,
+        "accepted": false
+      },
+      {
+        "fraction": 0.22,
+        "residual": 0.587213807024724,
+        "accepted": false
+      },
+      {
+        "fraction": 0.24,
+        "residual": 0.6405977943967075,
+        "accepted": false
+      },
+      {
+        "fraction": 0.26,
+        "residual": 0.6939817817688756,
+        "accepted": false
+      },
+      {
+        "fraction": 0.28,
+        "residual": 0.7473657691411882,
+        "accepted": false
+      },
+      {
+        "fraction": 0.3,
+        "residual": 0.800749755021695,
+        "accepted": false
+      },
+      {
+        "fraction": 0.32,
+        "residual": 0.8541338808008057,
+        "accepted": false
+      },
+      {
+        "fraction": 0.34,
+        "residual": 0.9075180065800276,
+        "accepted": false
+      },
+      {
+        "fraction": 0.36,
+        "residual": 0.9609021323593416,
+        "accepted": false
+      },
+      {
+        "fraction": 0.38,
+        "residual": 1.014286258138734,
+        "accepted": false
+      },
+      {
+        "fraction": 0.4,
+        "residual": 1.0676703839181925,
+        "accepted": false
+      },
+      {
+        "fraction": 0.42,
+        "residual": 1.1210545096977076,
+        "accepted": false
+      },
+      {
+        "fraction": 0.44,
+        "residual": 1.1744386354772718,
+        "accepted": false
+      },
+      {
+        "fraction": 0.46,
+        "residual": 1.2278227612568786,
+        "accepted": false
+      },
+      {
+        "fraction": 0.48,
+        "residual": 1.2812068870365227,
+        "accepted": false
+      },
+      {
+        "fraction": 0.5,
+        "residual": 1.3345910128161995,
+        "accepted": false
+      },
+      {
+        "fraction": 0.52,
+        "residual": 1.3879751385959056,
+        "accepted": false
+      },
+      {
+        "fraction": 0.54,
+        "residual": 1.4413592643756374,
+        "accepted": false
+      },
+      {
+        "fraction": 0.56,
+        "residual": 3.1656261466187533e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.58,
+        "residual": 3.165626146584994e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.6,
+        "residual": 3.1656261463886276e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.62,
+        "residual": 3.1656261464114463e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.64,
+        "residual": 3.1656261465151e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.66,
+        "residual": 8.386957747190987e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.68,
+        "residual": 8.386957747360942e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.7,
+        "residual": 1.4365955616291617e-05,
+        "accepted": false
+      },
+      {
+        "fraction": 0.72,
+        "residual": 1.1094367245496486e-05,
+        "accepted": false
+      },
+      {
+        "fraction": 0.74,
+        "residual": 9.58560703569974e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.76,
+        "residual": 8.672395319181742e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.78,
+        "residual": 3.1656261461922612e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.8,
+        "residual": 8.386957747386264e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.82,
+        "residual": 8.386957747190987e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.84,
+        "residual": 8.386957746945071e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.86,
+        "residual": 8.386957747436904e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.88,
+        "residual": 8.386957747462226e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.9,
+        "residual": 8.386957747216308e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.92,
+        "residual": 8.386957747165667e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.94,
+        "residual": 8.386957746945071e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.96,
+        "residual": 8.38695774749656e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 0.98,
+        "residual": 8.386957747216308e-06,
+        "accepted": false
+      },
+      {
+        "fraction": 1.0,
+        "residual": 8.386957747411585e-06,
+        "accepted": false
+      }
+    ],
+    "impulse": [
+      0.16865395875999467,
+      0.052843313938151726,
+      0.2468048440226796,
+      5.673553748238637e-18,
+      0.0002991409264684616,
+      -2.1322858682740533e-18,
+      2.0858833186056696e-17,
+      0.17606105489209195,
+      0.24396832790314552,
+      -1.1078146651589309e-17,
+      7.382810333058401e-18,
+      -3.550443937588565e-18,
+      3.681739468783163e-18,
+      0.4683423711926308,
+      0.0007282271632887781,
+      0.010737936113666692,
+      -0.0012262507476993659,
+      0.017234659590971427,
+      -0.009223474698929075,
+      0.014620217863380889,
+      0.07470515553243212,
+      -4.985646206006745e-18,
+      2.979246178664134e-19,
+      0.0001166349826041906,
+      2.6719428419501016e-05,
+      -4.433849771131039e-18,
+      -1.4825803427020642e-17,
+      -7.952732672766547e-18,
+      -3.5929254714427286e-18,
+      0.07042442154453422,
+      7.6205208263055045e-06,
+      0.0975873299055521,
+      -1.5655095453521476e-05,
+      -3.1618862645881804e-18,
+      -6.960242217319003e-18,
+      -4.510877953192271e-19,
+      -8.72881885113224e-18,
+      -1.2981267526387404e-17,
+      -7.240018356113271e-18,
+      9.094329113435251e-18,
+      -6.4848040556608375e-18,
+      0.18073069818436563,
+      -0.049310718900513806,
+      0.0002865761017652396,
+      -5.219680175352349e-05
+    ]
+  },
+  {
+    "steps": 200,
+    "accepted": false,
+    "residual": 0.0002496543529525722,
+    "path": [
+      {
+        "fraction": 0.0,
+        "residual": 0.0002496833556583489,
+        "accepted": false
+      },
+      {
+        "fraction": 0.005,
+        "residual": 0.01334359090173707,
+        "accepted": false
+      },
+      {
+        "fraction": 0.01,
+        "residual": 0.026687772191077888,
+        "accepted": false
+      },
+      {
+        "fraction": 0.015,
+        "residual": 0.04003195348116302,
+        "accepted": false
+      },
+      {
+        "fraction": 0.02,
+        "residual": 0.05337613477143423,
+        "accepted": false
+      },
+      {
+        "fraction": 0.025,
+        "residual": 0.06672031606177989,
+        "accepted": false
+      },
+      {
+        "fraction": 0.03,
+        "residual": 0.08006449720297697,
+        "accepted": false
+      },
+      {
+        "fraction": 0.035,
+        "residual": 0.09340871486971025,
+        "accepted": false
+      },
+      {
+        "fraction": 0.04,
+        "residual": 0.10675293253646888,
+        "accepted": false
+      },
+      {
+        "fraction": 0.045,
+        "residual": 0.12009715020324441,
+        "accepted": false
+      },
+      {
+        "fraction": 0.05,
+        "residual": 0.1334413678700318,
+        "accepted": false
+      },
+      {
+        "fraction": 0.055,
+        "residual": 0.14678558553682777,
+        "accepted": false
+      },
+      {
+        "fraction": 0.06,
+        "residual": 0.16012980320363016,
+        "accepted": false
+      },
+      {
+        "fraction": 0.065,
+        "residual": 0.17347402087043753,
+        "accepted": false
+      },
+      {
+        "fraction": 0.07,
+        "residual": 0.18681823853724883,
+        "accepted": false
+      },
+      {
+        "fraction": 0.075,
+        "residual": 0.20016245620406323,
+        "accepted": false
+      },
+      {
+        "fraction": 0.08,
+        "residual": 0.21350667387088015,
+        "accepted": false
+      },
+      {
+        "fraction": 0.085,
+        "residual": 0.2268508915376992,
+        "accepted": false
+      },
+      {
+        "fraction": 0.09,
+        "residual": 0.24019510920451984,
+        "accepted": false
+      },
+      {
+        "fraction": 0.095,
+        "residual": 0.2535393268713421,
+        "accepted": false
+      },
+      {
+        "fraction": 0.1,
+        "residual": 0.26688354453816565,
+        "accepted": false
+      },
+      {
+        "fraction": 0.105,
+        "residual": 0.2802277622049901,
+        "accepted": false
+      },
+      {
+        "fraction": 0.11,
+        "residual": 0.2935719798718156,
+        "accepted": false
+      },
+      {
+        "fraction": 0.115,
+        "residual": 0.30691619753864186,
+        "accepted": false
+      },
+      {
+        "fraction": 0.12,
+        "residual": 0.3202604152054688,
+        "accepted": false
+      },
+      {
+        "fraction": 0.125,
+        "residual": 0.33360463287229636,
+        "accepted": false
+      },
+      {
+        "fraction": 0.13,
+        "residual": 0.3469488505391245,
+        "accepted": false
+      },
+      {
+        "fraction": 0.135,
+        "residual": 0.3602930682059532,
+        "accepted": false
+      },
+      {
+        "fraction": 0.14,
+        "residual": 0.37363728587278217,
+        "accepted": false
+      },
+      {
+        "fraction": 0.145,
+        "residual": 0.3869815035396115,
+        "accepted": false
+      },
+      {
+        "fraction": 0.15,
+        "residual": 0.40032572120644133,
+        "accepted": false
+      },
+      {
+        "fraction": 0.155,
+        "residual": 0.41366993887327147,
+        "accepted": false
+      },
+      {
+        "fraction": 0.16,
+        "residual": 0.42701415654010183,
+        "accepted": false
+      },
+      {
+        "fraction": 0.165,
+        "residual": 0.44035837420693247,
+        "accepted": false
+      },
+      {
+        "fraction": 0.17,
+        "residual": 0.45370259187376344,
+        "accepted": false
+      },
+      {
+        "fraction": 0.175,
+        "residual": 0.4670468095405944,
+        "accepted": false
+      },
+      {
+        "fraction": 0.18,
+        "residual": 0.4803910272074257,
+        "accepted": false
+      },
+      {
+        "fraction": 0.185,
+        "residual": 0.49373524487425724,
+        "accepted": false
+      },
+      {
+        "fraction": 0.19,
+        "residual": 0.5070794597047076,
+        "accepted": false
+      },
+      {
+        "fraction": 0.195,
+        "residual": 0.5204237385981739,
+        "accepted": false
+      },
+      {
+        "fraction": 0.2,
+        "residual": 0.5337680174916483,
+        "accepted": false
+      },
+      {
+        "fraction": 0.205,
+        "residual": 0.5471122963851298,
+        "accepted": false
+      },
+      {
+        "fraction": 0.21,
+        "residual": 0.5604565752786181,
+        "accepted": false
+      },
+      {
+        "fraction": 0.215,
+        "residual": 0.573800854172113,
+        "accepted": false
+      },
+      {
+        "fraction": 0.22,
+        "residual": 0.5871451330656136,
+        "accepted": false
+      },
+      {
+        "fraction": 0.225,
+        "residual": 0.6004894119591198,
+        "accepted": false
+      },
+      {
+        "fraction": 0.23,
+        "residual": 0.6138336908526311,
+        "accepted": false
+      },
+      {
+        "fraction": 0.235,
+        "residual": 0.6271779697461471,
+        "accepted": false
+      },
+      {
+        "fraction": 0.24,
+        "residual": 0.6405222486396677,
+        "accepted": false
+      },
+      {
+        "fraction": 0.245,
+        "residual": 0.6538665275331926,
+        "accepted": false
+      },
+      {
+        "fraction": 0.25,
+        "residual": 0.6672108064267214,
+        "accepted": false
+      },
+      {
+        "fraction": 0.255,
+        "residual": 0.6805550853202541,
+        "accepted": false
+      },
+      {
+        "fraction": 0.26,
+        "residual": 0.6938993642137902,
+        "accepted": false
+      },
+      {
+        "fraction": 0.265,
+        "residual": 0.7072436431073297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.27,
+        "residual": 0.7205879220008723,
+        "accepted": false
+      },
+      {
+        "fraction": 0.275,
+        "residual": 0.7339322008944179,
+        "accepted": false
+      },
+      {
+        "fraction": 0.28,
+        "residual": 0.7472764797879664,
+        "accepted": false
+      },
+      {
+        "fraction": 0.285,
+        "residual": 0.7606207586815172,
+        "accepted": false
+      },
+      {
+        "fraction": 0.29,
+        "residual": 0.7739650375750707,
+        "accepted": false
+      },
+      {
+        "fraction": 0.295,
+        "residual": 0.7873093164686268,
+        "accepted": false
+      },
+      {
+        "fraction": 0.3,
+        "residual": 0.8006535953621852,
+        "accepted": false
+      },
+      {
+        "fraction": 0.305,
+        "residual": 0.8139978742557457,
+        "accepted": false
+      },
+      {
+        "fraction": 0.31,
+        "residual": 0.8273421531493081,
+        "accepted": false
+      },
+      {
+        "fraction": 0.315,
+        "residual": 0.8406864320428725,
+        "accepted": false
+      },
+      {
+        "fraction": 0.32,
+        "residual": 0.8540307109364389,
+        "accepted": false
+      },
+      {
+        "fraction": 0.325,
+        "residual": 0.8673749898300072,
+        "accepted": false
+      },
+      {
+        "fraction": 0.33,
+        "residual": 0.8807192687235771,
+        "accepted": false
+      },
+      {
+        "fraction": 0.335,
+        "residual": 0.8940635476171485,
+        "accepted": false
+      },
+      {
+        "fraction": 0.34,
+        "residual": 0.9074078265107215,
+        "accepted": false
+      },
+      {
+        "fraction": 0.345,
+        "residual": 0.920752105404296,
+        "accepted": false
+      },
+      {
+        "fraction": 0.35,
+        "residual": 0.934096384297872,
+        "accepted": false
+      },
+      {
+        "fraction": 0.355,
+        "residual": 0.9474406631914493,
+        "accepted": false
+      },
+      {
+        "fraction": 0.36,
+        "residual": 0.960784942085028,
+        "accepted": false
+      },
+      {
+        "fraction": 0.365,
+        "residual": 0.974129220978608,
+        "accepted": false
+      },
+      {
+        "fraction": 0.37,
+        "residual": 0.9874734998721891,
+        "accepted": false
+      },
+      {
+        "fraction": 0.375,
+        "residual": 1.0008177787657715,
+        "accepted": false
+      },
+      {
+        "fraction": 0.38,
+        "residual": 1.0141620576593549,
+        "accepted": false
+      },
+      {
+        "fraction": 0.385,
+        "residual": 1.0275063365529393,
+        "accepted": false
+      },
+      {
+        "fraction": 0.39,
+        "residual": 1.040850615446525,
+        "accepted": false
+      },
+      {
+        "fraction": 0.395,
+        "residual": 1.0541948943401112,
+        "accepted": false
+      },
+      {
+        "fraction": 0.4,
+        "residual": 1.0675391732336985,
+        "accepted": false
+      },
+      {
+        "fraction": 0.405,
+        "residual": 1.080883452127287,
+        "accepted": false
+      },
+      {
+        "fraction": 0.41,
+        "residual": 1.094227731020876,
+        "accepted": false
+      },
+      {
+        "fraction": 0.415,
+        "residual": 1.107572009914466,
+        "accepted": false
+      },
+      {
+        "fraction": 0.42,
+        "residual": 1.1209162888080568,
+        "accepted": false
+      },
+      {
+        "fraction": 0.425,
+        "residual": 1.1342605677016486,
+        "accepted": false
+      },
+      {
+        "fraction": 0.43,
+        "residual": 1.147604846595241,
+        "accepted": false
+      },
+      {
+        "fraction": 0.435,
+        "residual": 1.160949125488834,
+        "accepted": false
+      },
+      {
+        "fraction": 0.44,
+        "residual": 1.1742934043824278,
+        "accepted": false
+      },
+      {
+        "fraction": 0.445,
+        "residual": 1.1876376832760225,
+        "accepted": false
+      },
+      {
+        "fraction": 0.45,
+        "residual": 1.2009819621696178,
+        "accepted": false
+      },
+      {
+        "fraction": 0.455,
+        "residual": 1.2143262410632136,
+        "accepted": false
+      },
+      {
+        "fraction": 0.46,
+        "residual": 1.22767051995681,
+        "accepted": false
+      },
+      {
+        "fraction": 0.465,
+        "residual": 1.2410147988504072,
+        "accepted": false
+      },
+      {
+        "fraction": 0.47,
+        "residual": 1.2543590777440048,
+        "accepted": false
+      },
+      {
+        "fraction": 0.475,
+        "residual": 1.2677033566376028,
+        "accepted": false
+      },
+      {
+        "fraction": 0.48,
+        "residual": 1.2810476355312017,
+        "accepted": false
+      },
+      {
+        "fraction": 0.485,
+        "residual": 1.294391914424801,
+        "accepted": false
+      },
+      {
+        "fraction": 0.49,
+        "residual": 1.3077361933184009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.495,
+        "residual": 0.000249654510960401,
+        "accepted": false
+      },
+      {
+        "fraction": 0.5,
+        "residual": 0.0002496545109604009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.505,
+        "residual": 0.00024965451096084507,
+        "accepted": false
+      },
+      {
+        "fraction": 0.51,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.515,
+        "residual": 0.0002496545109617332,
+        "accepted": false
+      },
+      {
+        "fraction": 0.52,
+        "residual": 0.0002496545109612891,
+        "accepted": false
+      },
+      {
+        "fraction": 0.525,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.53,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.535,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.54,
+        "residual": 0.0002496545109606229,
+        "accepted": false
+      },
+      {
+        "fraction": 0.545,
+        "residual": 0.0002496545109601789,
+        "accepted": false
+      },
+      {
+        "fraction": 0.55,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.555,
+        "residual": 0.0002496545109606229,
+        "accepted": false
+      },
+      {
+        "fraction": 0.56,
+        "residual": 0.0002496545109601788,
+        "accepted": false
+      },
+      {
+        "fraction": 0.565,
+        "residual": 0.0002496545109604009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.57,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.575,
+        "residual": 0.0002496545109612891,
+        "accepted": false
+      },
+      {
+        "fraction": 0.58,
+        "residual": 0.0002496545109606229,
+        "accepted": false
+      },
+      {
+        "fraction": 0.585,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.59,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.595,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.6,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.605,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.61,
+        "residual": 0.00024965451096084507,
+        "accepted": false
+      },
+      {
+        "fraction": 0.615,
+        "residual": 0.00024965451096084507,
+        "accepted": false
+      },
+      {
+        "fraction": 0.62,
+        "residual": 0.00024965451096084507,
+        "accepted": false
+      },
+      {
+        "fraction": 0.625,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.63,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.635,
+        "residual": 0.0002496545109604009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.64,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.645,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.65,
+        "residual": 0.0002496545109612891,
+        "accepted": false
+      },
+      {
+        "fraction": 0.655,
+        "residual": 0.0002496545109615112,
+        "accepted": false
+      },
+      {
+        "fraction": 0.66,
+        "residual": 0.00024965451066708,
+        "accepted": false
+      },
+      {
+        "fraction": 0.665,
+        "residual": 0.0002496545106433212,
+        "accepted": false
+      },
+      {
+        "fraction": 0.67,
+        "residual": 0.0002496545109588466,
+        "accepted": false
+      },
+      {
+        "fraction": 0.675,
+        "residual": 0.0002496545109592907,
+        "accepted": false
+      },
+      {
+        "fraction": 0.68,
+        "residual": 0.0002496545106228931,
+        "accepted": false
+      },
+      {
+        "fraction": 0.685,
+        "residual": 0.00024965451066730204,
+        "accepted": false
+      },
+      {
+        "fraction": 0.69,
+        "residual": 0.00024965451090555596,
+        "accepted": false
+      },
+      {
+        "fraction": 0.695,
+        "residual": 0.0002496545109601789,
+        "accepted": false
+      },
+      {
+        "fraction": 0.7,
+        "residual": 0.00024965451044836606,
+        "accepted": false
+      },
+      {
+        "fraction": 0.705,
+        "residual": 0.00024965451044881015,
+        "accepted": false
+      },
+      {
+        "fraction": 0.71,
+        "residual": 0.000249654510448366,
+        "accepted": false
+      },
+      {
+        "fraction": 0.715,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.72,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.725,
+        "residual": 0.00024965451044836606,
+        "accepted": false
+      },
+      {
+        "fraction": 0.73,
+        "residual": 0.0002496545109604009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.735,
+        "residual": 0.00024965451096106706,
+        "accepted": false
+      },
+      {
+        "fraction": 0.74,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.745,
+        "residual": 0.00024965451044881015,
+        "accepted": false
+      },
+      {
+        "fraction": 0.75,
+        "residual": 0.000249654510448366,
+        "accepted": false
+      },
+      {
+        "fraction": 0.755,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.76,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.765,
+        "residual": 0.000249654510448366,
+        "accepted": false
+      },
+      {
+        "fraction": 0.77,
+        "residual": 0.0002496545109604009,
+        "accepted": false
+      },
+      {
+        "fraction": 0.775,
+        "residual": 0.000249654510448366,
+        "accepted": false
+      },
+      {
+        "fraction": 0.78,
+        "residual": 0.000249654510961067,
+        "accepted": false
+      },
+      {
+        "fraction": 0.785,
+        "residual": 0.0002496545104488101,
+        "accepted": false
+      },
+      {
+        "fraction": 0.79,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.795,
+        "residual": 0.0002496545109601789,
+        "accepted": false
+      },
+      {
+        "fraction": 0.8,
+        "residual": 0.000249654510961067,
+        "accepted": false
+      },
+      {
+        "fraction": 0.805,
+        "residual": 0.00024965451044925424,
+        "accepted": false
+      },
+      {
+        "fraction": 0.81,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.815,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.82,
+        "residual": 0.000249654510960845,
+        "accepted": false
+      },
+      {
+        "fraction": 0.825,
+        "residual": 0.0002496545109601789,
+        "accepted": false
+      },
+      {
+        "fraction": 0.83,
+        "residual": 0.0002496545109519632,
+        "accepted": false
+      },
+      {
+        "fraction": 0.835,
+        "residual": 0.00024965451096062297,
+        "accepted": false
+      },
+      {
+        "fraction": 0.84,
+        "residual": 0.00024965451044814396,
+        "accepted": false
+      },
+      {
+        "fraction": 0.845,
+        "residual": 0.0002496543529536821,
+        "accepted": false
+      },
+      {
+        "fraction": 0.85,
+        "residual": 0.00024965434780846446,
+        "accepted": false
+      },
+      {
+        "fraction": 0.855,
+        "residual": 0.000249654352953238,
+        "accepted": false
+      },
+      {
+        "fraction": 0.86,
+        "residual": 0.0002496543478082425,
+        "accepted": false
+      },
+      {
+        "fraction": 0.865,
+        "residual": 0.00024965434780757634,
+        "accepted": false
+      },
+      {
+        "fraction": 0.87,
+        "residual": 0.00024965434780802037,
+        "accepted": false
+      },
+      {
+        "fraction": 0.875,
+        "residual": 0.000249654352953238,
+        "accepted": false
+      },
+      {
+        "fraction": 0.88,
+        "residual": 0.0002496543478082425,
+        "accepted": false
+      },
+      {
+        "fraction": 0.885,
+        "residual": 0.00024965435295390415,
+        "accepted": false
+      },
+      {
+        "fraction": 0.89,
+        "residual": 0.0002496543478077984,
+        "accepted": false
+      },
+      {
+        "fraction": 0.895,
+        "residual": 0.0002496543529536821,
+        "accepted": false
+      },
+      {
+        "fraction": 0.9,
+        "residual": 0.0002496543478077984,
+        "accepted": false
+      },
+      {
+        "fraction": 0.905,
+        "residual": 0.0002496543478082425,
+        "accepted": false
+      },
+      {
+        "fraction": 0.91,
+        "residual": 0.0002496543478080204,
+        "accepted": false
+      },
+      {
+        "fraction": 0.915,
+        "residual": 0.00024965434780757634,
+        "accepted": false
+      },
+      {
+        "fraction": 0.92,
+        "residual": 0.000249654352953238,
+        "accepted": false
+      },
+      {
+        "fraction": 0.925,
+        "residual": 0.0002496543478080204,
+        "accepted": false
+      },
+      {
+        "fraction": 0.93,
+        "residual": 0.00024965434780779833,
+        "accepted": false
+      },
+      {
+        "fraction": 0.935,
+        "residual": 0.00024965434780757634,
+        "accepted": false
+      },
+      {
+        "fraction": 0.94,
+        "residual": 0.00024965435295346006,
+        "accepted": false
+      },
+      {
+        "fraction": 0.945,
+        "residual": 0.00024965434780757634,
+        "accepted": false
+      },
+      {
+        "fraction": 0.95,
+        "residual": 0.0002496543529536821,
+        "accepted": false
+      },
+      {
+        "fraction": 0.955,
+        "residual": 0.0002496543529534601,
+        "accepted": false
+      },
+      {
+        "fraction": 0.96,
+        "residual": 0.00024965434780802037,
+        "accepted": false
+      },
+      {
+        "fraction": 0.965,
+        "residual": 0.0002496543529543483,
+        "accepted": false
+      },
+      {
+        "fraction": 0.97,
+        "residual": 0.00024965434780757634,
+        "accepted": false
+      },
+      {
+        "fraction": 0.975,
+        "residual": 0.0002496543529536821,
+        "accepted": false
+      },
+      {
+        "fraction": 0.98,
+        "residual": 0.00024965434780824247,
+        "accepted": false
+      },
+      {
+        "fraction": 0.985,
+        "residual": 0.0002496543529536821,
+        "accepted": false
+      },
+      {
+        "fraction": 0.99,
+        "residual": 0.00024965434780824247,
+        "accepted": false
+      },
+      {
+        "fraction": 0.995,
+        "residual": 0.0002496543478089086,
+        "accepted": false
+      },
+      {
+        "fraction": 1.0,
+        "residual": 0.00024965435295368205,
+        "accepted": false
+      }
+    ],
+    "impulse": [
+      0.3128006609992406,
+      0.052863180972631055,
+      0.0013694191623295042,
+      0.10117953449737291,
+      0.000299140926468419,
+      6.855597008516058e-21,
+      -1.7666034829763287e-20,
+      0.1760610548920918,
+      0.24396832790314538,
+      -1.0988075630576143e-20,
+      -3.759777129790777e-21,
+      -1.48274882540189e-20,
+      3.687776208357065e-21,
+      0.46834279091008263,
+      0.0007282271632887718,
+      0.003614360587663965,
+      0.036442691310888654,
+      0.01903481353761235,
+      0.00881637285347078,
+      -0.00047670827712547074,
+      -0.00026981221852411354,
+      0.020374467298623872,
+      0.01907405205542645,
+      0.00011663498260417756,
+      2.671942841949741e-05,
+      -6.099330226479665e-21,
+      -6.188514663811741e-21,
+      1.9405896400777593e-20,
+      -8.296341958539216e-21,
+      0.07042442154453417,
+      7.6205208263116015e-06,
+      0.09758732990555205,
+      -1.5655095453519145e-05,
+      -1.683896367752624e-22,
+      -4.433513801616377e-23,
+      -2.3009481378976293e-23,
+      -1.9500279326400206e-21,
+      -5.100711449380729e-21,
+      -3.5488964044211624e-21,
+      -5.126756114900441e-23,
+      7.143953067979822e-22,
+      0.18071417301164688,
+      -0.049371883094609915,
+      0.0002865761017652394,
+      -5.219680175352733e-05
+    ]
+  }
+]

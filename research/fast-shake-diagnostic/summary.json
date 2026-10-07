@@ -1,0 +1,273 @@
+{
+  "provenance": {
+    "backend_source_commit": "0f17e758c731da1cf7d32f4e5f7ba6233d539951",
+    "diagnostic_scripts": "Exact snapshots included; may precede their publishing commit",
+    "source_hashes": {
+      "spatial_engine.py": "aa4717c4877b4f02d344a7ccec71396d6366411eed9588e79a45597371937105",
+      "spatial_backend/runner.cpp": "eb31d80942121b9b2efda692631ddf4842972de64fcc2e365b4a6e0fcf4980d3",
+      "spatial_backend/coulomb.h": "3187f6e6a356995959c0ff567eb9d46d401d05c4fab68a02f7e1c0319b74a0aa",
+      "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+      "research/fast_shake_diagnostic.py": "5eea032ca4c873dbe7e52d40eee87955601e40b296a47312ffc85a320a479bb8",
+      "research/fast-shake-diagnostic/plan.json": "b5cca103bcda33fcbdea9de968e989b1869fb4142e11ac86cb959f9178f14974"
+    },
+    "binary_sha256": "854958ef6bb6fbbff2eed572ee202ddae5455c34b6028fb3dbda7ce66f13ce05",
+    "scope": "Exploratory diagnosis only; retain all outcomes. Same geometry, friction, restitution, gravity and prescribed walls. Fixed-step trials explicitly disable heuristic travel guard while resolving travel more finely than the failed fine baseline. No retrospective reference qualification or engine timing ranking. Compare common 10ms output times. Source snapshot and binary SHA precede runs."
+  },
+  "runs": {
+    "reproduce_finest": {
+      "error_vs_failed_finest": {
+        "position_m": 1.0787780531005454e-08,
+        "velocity_m_s": 1.7797421129934072e-06,
+        "omega_rad_s": 1.608523034378602e-05,
+        "orientation_rad": 1.0239183057295359e-07
+      },
+      "error_vs_preceding": {
+        "position_m": 0.0003225518355763817,
+        "velocity_m_s": 0.07900809779698888,
+        "omega_rad_s": 0.4985833116597801,
+        "orientation_rad": 0.006335853093864205
+      },
+      "frame_velocity_rms_vs_finest": [
+        0.0,
+        1.584924042258197e-30,
+        1.584924042258197e-30,
+        1.584924042258197e-30,
+        1.584924042258197e-30,
+        7.32857960853613e-30,
+        7.32857960853613e-30,
+        7.32857960853613e-30,
+        7.32857960853613e-30,
+        1.499120818934932e-14,
+        3.504997364436182e-14,
+        4.233548403817724e-13,
+        6.41695144550034e-06
+      ],
+      "frame_omega_rms_vs_finest": [
+        0.0,
+        1.8810621277765377e-17,
+        1.8810621277765377e-17,
+        2.4126703807912663e-17,
+        1.8810621277765377e-17,
+        7.079939031228903e-16,
+        1.8872581986604465e-15,
+        5.842566369880276e-15,
+        1.5894610395177585e-14,
+        1.9111814711619955e-13,
+        4.591340309905696e-13,
+        3.1838892740338903e-12,
+        5.799612278216966e-05
+      ],
+      "bitwise_same_as_finest": false,
+      "collision_updates": 54284,
+      "boundary_work_J": 54052.23405710479,
+      "step_s": 12.662604427,
+      "contact_residual_m_s": 9.791761705589e-09,
+      "penetration_m": 0.00012172317523120868,
+      "surface_excess_m": 6.733005784892443e-05
+    },
+    "half_output_frame": {
+      "error_vs_failed_finest": {
+        "position_m": 0.0003194991224415037,
+        "velocity_m_s": 0.07898777140485233,
+        "omega_rad_s": 0.49694736567548464,
+        "orientation_rad": 0.006309638596922251
+      },
+      "error_vs_preceding": {
+        "position_m": 6.683546848151708e-06,
+        "velocity_m_s": 0.0006378101256478726,
+        "omega_rad_s": 0.014665357248354436,
+        "orientation_rad": 0.00032955574176806205
+      },
+      "frame_velocity_rms_vs_finest": [
+        0.0,
+        5.667236627449522e-15,
+        4.7744908983571094e-15,
+        3.645670566158576e-15,
+        4.5955202321826244e-15,
+        5.356565519951527e-14,
+        5.2805263350255377e-14,
+        5.280869649878405e-14,
+        5.375623332943797e-14,
+        0.07980793821575288,
+        0.0797535422654825,
+        0.2610565585823038,
+        0.015080554518662479
+      ],
+      "frame_omega_rms_vs_finest": [
+        0.0,
+        1.5575101645259764e-15,
+        1.5383403992082674e-15,
+        9.400288244056034e-16,
+        1.2366470849897283e-15,
+        4.744575110623906e-13,
+        4.842957622144954e-13,
+        4.804718377650673e-13,
+        4.87596235761421e-13,
+        1.1198181531722196,
+        0.8301517347903956,
+        1.106297013397455,
+        0.2083247812234009
+      ],
+      "bitwise_same_as_finest": false,
+      "collision_updates": 54287,
+      "boundary_work_J": 54057.05813191505,
+      "step_s": 12.290704296,
+      "contact_residual_m_s": 9.509970934356994e-09,
+      "penetration_m": 0.00012172317523054255,
+      "surface_excess_m": 6.733005785458657e-05
+    },
+    "half_travel": {
+      "error_vs_failed_finest": {
+        "position_m": 0.00031643426892669427,
+        "velocity_m_s": 0.0789757469255567,
+        "omega_rad_s": 0.4954809168144731,
+        "orientation_rad": 0.006284332407306585
+      },
+      "error_vs_preceding": {
+        "position_m": 1.2504193385614677e-05,
+        "velocity_m_s": 0.0005059896912696355,
+        "omega_rad_s": 0.024171315756735243,
+        "orientation_rad": 0.0005755289288721577
+      },
+      "frame_velocity_rms_vs_finest": [
+        0.0,
+        6.039652728649322e-06,
+        6.0396527284486975e-06,
+        6.039652728484972e-06,
+        6.03965272731768e-06,
+        8.415705641029343e-05,
+        8.41570564113133e-05,
+        8.415705641031313e-05,
+        8.415705641018279e-05,
+        0.07953343923398162,
+        0.07942911792571253,
+        0.26119900677095903,
+        0.014956252448945963
+      ],
+      "frame_omega_rms_vs_finest": [
+        0.0,
+        9.092195554532152e-05,
+        9.092195554389429e-05,
+        9.092195554413292e-05,
+        9.092195554264237e-05,
+        0.001442866609810918,
+        0.0014428666097902666,
+        0.001442866609789486,
+        0.0014428666098032117,
+        1.1167409461685864,
+        0.830004292309448,
+        1.1006368540793683,
+        0.20997641503814565
+      ],
+      "bitwise_same_as_finest": false,
+      "collision_updates": 108522,
+      "boundary_work_J": 54057.00217807374,
+      "step_s": 23.026495663,
+      "contact_residual_m_s": 9.6541319681551e-09,
+      "penetration_m": 6.349961161242201e-05,
+      "surface_excess_m": 4.367290734236251e-05
+    },
+    "fixed_5us": {
+      "error_vs_failed_finest": {
+        "position_m": 0.0003257679178678016,
+        "velocity_m_s": 0.07900797964400859,
+        "omega_rad_s": 0.5005020041776115,
+        "orientation_rad": 0.006378387141009086
+      },
+      "error_vs_preceding": {
+        "position_m": 6.2876625309839475e-06,
+        "velocity_m_s": 0.0006922418265685505,
+        "omega_rad_s": 0.013448849160069165,
+        "orientation_rad": 0.0002322753119327445
+      },
+      "frame_velocity_rms_vs_finest": [
+        0.0,
+        1.3442294406400552e-05,
+        1.3442294410078366e-05,
+        1.3442294413847083e-05,
+        1.3442294417907093e-05,
+        0.0002051474509100935,
+        0.00020514745090508346,
+        0.0002051474509028532,
+        0.00020514745090036336,
+        0.08028288515845568,
+        0.08039473857848048,
+        0.2608286429097036,
+        0.014456325580581563
+      ],
+      "frame_omega_rms_vs_finest": [
+        0.0,
+        0.00019598286646100912,
+        0.00019598286646034367,
+        0.0001959828664613824,
+        0.00019598286646300425,
+        0.003483230091915096,
+        0.003483230091912407,
+        0.003483230091900575,
+        0.003483230091898504,
+        1.126586849334138,
+        0.8303478758582821,
+        1.1181306531866941,
+        0.21814894815277544
+      ],
+      "bitwise_same_as_finest": false,
+      "collision_updates": 24000,
+      "boundary_work_J": 54057.04716356535,
+      "step_s": 5.503760876,
+      "contact_residual_m_s": 9.980432009971342e-09,
+      "penetration_m": 0.00027925051959445946,
+      "surface_excess_m": 0.00019998439183782635
+    },
+    "fixed_2_5us": {
+      "error_vs_failed_finest": {
+        "position_m": 0.0003207173855717821,
+        "velocity_m_s": 0.07899554970658841,
+        "omega_rad_s": 0.49731026803578754,
+        "orientation_rad": 0.006319315159727623
+      },
+      "error_vs_preceding": {
+        "position_m": 4.982690088113275e-06,
+        "velocity_m_s": 0.0006036547301000683,
+        "omega_rad_s": 0.010435805927255144,
+        "orientation_rad": 0.00022366857142686367
+      },
+      "frame_velocity_rms_vs_finest": [
+        0.0,
+        1.8452507047559221e-06,
+        1.8452507069677545e-06,
+        1.8452507091459012e-06,
+        1.8452507116317097e-06,
+        2.7083812029551258e-05,
+        2.708381211639393e-05,
+        2.7083812150240073e-05,
+        2.708381219383472e-05,
+        0.0798860131854733,
+        0.07987785010806017,
+        0.26102068457920885,
+        0.015159570847934007
+      ],
+      "frame_omega_rms_vs_finest": [
+        0.0,
+        2.3626252738088227e-05,
+        2.3626252736488852e-05,
+        2.362625273773807e-05,
+        2.362625273885304e-05,
+        0.0004174652251374276,
+        0.0004174652251333567,
+        0.00041746522512399475,
+        0.0004174652251139911,
+        1.1208791107982188,
+        0.8297832078498322,
+        1.1077916845021747,
+        0.20739880995937343
+      ],
+      "bitwise_same_as_finest": false,
+      "collision_updates": 48000,
+      "boundary_work_J": 54057.082224110505,
+      "step_s": 9.738593705,
+      "contact_residual_m_s": 9.843199535604342e-09,
+      "penetration_m": 0.00013925471080367124,
+      "surface_excess_m": 9.99845648300135e-05
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "final-rejected-tail-seed-manifest-v1",
+  "files": {
+    "README.md": "307ba63d472597018d76bee79d313c5cd47d99e803f3dfed3c039b6e923d1cb5",
+    "combined22-native.jsonl": "14dfeb692c2b0b91d34ce8a7a7e6713a8072d88d3be5b53594b69989b8451a59",
+    "independent-audit.json": "5398213e593185a456daf0c68268ff09087c8702c8fd5d37e63a7e10c548356b",
+    "plan.json": "632f53743c6c1d539ddf37ad0647a51a42cf0c933eecee904ac7a27500e1cf64",
+    "provenance.json": "ec83344d09ed570e46791f91f45d3f3dfb675b19d53b69d8f3cf97bfd04a6e75",
+    "replay.cpp": "234a7e6f85f69386111ced27f01f139c294ae2e95a8796ac8175a784d0adc6a6",
+    "source.zip": "21b1eb9768ac586a1a49af385ecf394207cc0e9e6ae502384bcb6b75345c7c5c"
+  }
+}

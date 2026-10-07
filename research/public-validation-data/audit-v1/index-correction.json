@@ -1,0 +1,5 @@
+{
+  "records": 1718,
+  "physics_and_metrics_unchanged": true,
+  "reason": "One physical body per impact trial; use separate flat case_index and body_index=0. Original v1 and source snapshot preserved."
+}

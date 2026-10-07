@@ -1,0 +1,6 @@
+{
+  "report_sha256": "6198500dba0a3abde8572db4e1c9f5d13f2df303aea8bbac7f56817adf1a22cd",
+  "script_sha256": "85253af5cfc41d8aa12f29fbbef5f6414a612c3ea8186e4a0c1bcf09f2687e8a",
+  "source_evidence": "evidence-v2, marker-v1, orientation-v1, catalog-v1, audit-v1",
+  "latex_passes": 2
+}

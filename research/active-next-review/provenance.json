@@ -1,0 +1,36 @@
+{
+  "protocol": "Independent captured-system diagnostics; no accepted full trajectory claim",
+  "production_source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "source_sha256": {
+    "research/active-next-review/release_modes.py": "a9a388014f7b565b0882d927c49bca302cd2876e4884b35075c7ba10d06fe093",
+    "research/active-next-review/normal_active.py": "a6cce54aafc937d0ad9bea5582c1b0fae156eb88930e87879da1996a05438581",
+    "research/active-next-review/normal_null.h": "dbd0a7fce8ea1f6a087d902d55e7d1102e47cc93bd43c76559d0cf0f87c8ed3b",
+    "research/active-next-review/normal_probe.py": "b5dff06c1673dff5037eafee58f6012c80f843f801d7bd1e97809594fc2d3444",
+    "research/active-next-review/normal_checks.cpp": "a334b15f1113dec421664f46ec1616543c3f533df909ed7cf8ea3e8b7d2e07aa",
+    "research/active-next-review/probe.py": "478b618cab0f8cb2ed9764b316512d2f5a548ab2a8dd38d92f6298d8851c1164",
+    "research/active-next-review/normal_replay.cpp": "4603d6a29a159db0a74c0f35a26cd58468231f760d1471c7f6197bb7f64094ee",
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84",
+    "research/completion-review/active_modes.py": "3e143e63b53a425e4035bd58de1ed561d0d2a8ff976a2ad78c3c9cc1c9deab24",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2"
+  },
+  "source_zip_sha256": "6b6818b8e6e10b60ed24c9eaec944e8abcd2959de5b7c6b7598742cc4e090ace",
+  "native_flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off"
+  ],
+  "native_limits": {
+    "normal_max_rows": 384,
+    "active_state_limit": 128,
+    "absolute_null_gradient_trigger": 1e-12,
+    "relative_rank_cutoff": 1e-13,
+    "jacobi_max_sweeps": 64,
+    "retained_column_correlation_gate": 1e-10
+  },
+  "binary_sha256": {
+    "normal-null-replay": "865f820c62a97fd328a44c924918eb6788c6ca42288d2652cce35d296dd18590",
+    "normal-null-checks": "9fc69f4f131284e010dc7baebc4222898d86d31b7bdeb60083b1c42d564132dc"
+  }
+}

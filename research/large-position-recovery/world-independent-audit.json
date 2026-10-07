@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "complete_full_horizon": true,
+  "body_count": 125,
+  "updates": 192000,
+  "simulated_s": 0.12,
+  "scene_sha256": "fdb3f62f73b4aa0d75e571d4bb658d53c04d2e171e89678e9e7ccf2ebac4e542",
+  "source": "88438b881fd55fc70849a70aeeded10e2f7d8ecf",
+  "original_physical_gates_passed": true,
+  "metrics": {
+    "quaternion_norm_error": 2.220446049250313e-16,
+    "energy_change_minus_boundary_work_J": -111304.04008602486,
+    "container_surface_excess_m": 1.73710937320104e-05,
+    "sampled_container_surface_excess_m": 1.3280562916051508e-07,
+    "contact_residual_m_s": 9.999823354423998e-09,
+    "position_residual_m_s": 9.997124948282367e-09
+  },
+  "limits": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002,
+    "contact_residual_m_s": 1e-08,
+    "position_residual_m_s": 1e-08
+  },
+  "reference_qualified": false,
+  "performance_qualified": false,
+  "scope": "Single completed original125-hull finest history. Independent archived geometry/energy and original gate checks; source/binary/runtime guards match. Concurrent research and brief sampling make elapsed descriptive only; both adjacent refinement edges still required."
+}

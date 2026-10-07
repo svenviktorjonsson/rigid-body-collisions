@@ -1,0 +1,23 @@
+{
+  "command": [
+    "c++",
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-DSPATIAL_LAPACK_RECOVERY=1",
+    "-ffp-contract=off",
+    "-I/home/runner/work/rigid-body-collisions/rigid-body-collisions/spatial_backend",
+    "-I/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/spatial/_deps/bullet-src/src",
+    "-I/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/spatial/_deps/json-src/include",
+    "/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/ci-contact-portability/mobility-continuation/frozen_replay.cpp",
+    "-o",
+    "/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/ci-contact-portability/mobility-continuation/replay",
+    "/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+    "/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+    "/home/runner/work/rigid-body-collisions/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+    "-l:liblapack.so.3",
+    "-l:libblas.so.3"
+  ],
+  "exit": 0
+}

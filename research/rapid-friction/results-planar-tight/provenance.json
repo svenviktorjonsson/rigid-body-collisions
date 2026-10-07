@@ -1,0 +1,13 @@
+{
+  "source": "5aea11b0b04eabfab42a339d5534fa0b306a12bf",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-tight/adapter.py": "67cbc2351cc942fc5382a8fa382ca1173555fdcb43d3f201ca1b94a1b4316e73",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar-tight-plan.json": "83d14dd0b6da8ea72620d54f47e46deaeb4f4b6b160d76487f3a669301d00fe2",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/plan.json": "26f803be1d027a6283c2d810d9b3071ae7a688ab54ec7e1233c1a64e605b8af8",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/physics-planar-tight-01/rigid_runner": "a46eaa4ee3e2da99e5f7f8c66abc17e5edb848bb4b8fa56339c1703e17c66306",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/runner.cpp": "52ed51d8685b82eeeccf56a8e632409d2deb83bd4faf49c01855350fe99fa533",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/compat2.h": "d44db56ca09ac0379df6764b51be1e530eab323eae90e66b6c25b8cea5d30f68"
+  },
+  "scene_source_sha256": "52073c6119f74166ddc31f03a92a3709c21260297fa6caa8e06a0fbb5ae47b3c"
+}

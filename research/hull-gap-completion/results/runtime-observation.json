@@ -1,0 +1,18 @@
+{
+  "schema": "gap-study-readonly-runtime-observation-v1",
+  "lane": "fast_rotate_shake27_hulls7301/reference_2",
+  "observation_path": "research/native-pc-observation/observation.json",
+  "observation_sha256": "642d079f28bb34a38b958e8c3d409997f030ef7693bcf7d088f03d4004f4f138",
+  "observation_plan_source_commit": "f5fae07936309d5ba3ab700d8d986d6733948e19",
+  "native_pid": 75548,
+  "binary_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+  "started_utc": "2026-10-05T19:12:34.978620+00:00",
+  "finished_utc": "2026-10-05T19:12:35.009201+00:00",
+  "attach_read_detach_elapsed_sum_s": 0.001667452001129277,
+  "all_detaches_succeeded": true,
+  "register_or_memory_writes": false,
+  "ref2_time_includes_observed_debug_pauses": true,
+  "ref0_ref1_debug_pause_performed": false,
+  "timing_ranking_qualified": false,
+  "interpretation": "Three read-only PC observations of the active continuation search; not a whole-run profile or attribution for completed earlier lanes. No kill or retry."
+}

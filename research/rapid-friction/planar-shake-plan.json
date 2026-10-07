@@ -1,0 +1,19 @@
+{
+  "purpose": "Rapid purely translational planar shaking counterparts to the qualified 3D sphere scene. Separately declared scenes; they do not qualify the failed rotating or mixed-polygon scenes.",
+  "sides": [3, 5],
+  "geometry": "Unit-mass disks, radius .1m, spacing .205m, square container half extent side*.205/2+.045m; gravity9.81m/s2; friction .4; zero restitution; +/-20m/s reversals at .04/.08s; horizon .12s. Container omega0 and analytic poses. Initial velocities0. Actual friction impulse telemetry must be strictly positive.",
+  "phases": [
+    {"id": "velocity128", "substeps": 128, "position_iterations": 12},
+    {"id": "velocity512", "substeps": 512, "position_iterations": 12}
+  ],
+  "reference_levels": [
+    {"dt": 0.01, "primary_steps": 1000},
+    {"dt": 0.01, "primary_steps": 2000},
+    {"dt": 0.01, "primary_steps": 4000}
+  ],
+  "candidate_primary_steps": [8, 32, 128, 512],
+  "candidate_substeps": [32, 128, 512],
+  "timing_repetitions": 3,
+  "rule": "All original planar full-state quarter/full budgets and physical gates remain unchanged. Both adjacent reference edges must pass before selecting a candidate or timing it. One warmup per variant and three alternating interleaved repetitions; each timed result must pass and repeat states bitwise. Preserve all failures. No material change across levels. Source/plan must be published before execution. No speed ranking for an unqualified reference.",
+  "limitations": "Synthetic translational shaking of disks only; not rotating containers, arbitrary polygons or calibrated materials. Experimental transformed Float64 Box2D backend. Costs include native collision discovery, stepping, observers and state recording; process costs retained. External host load uncontrolled."
+}

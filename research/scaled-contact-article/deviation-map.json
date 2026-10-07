@@ -1,0 +1,732 @@
+{
+  "signature_definition": "q=(abs(vn),abs(vt),ell*abs(omega)); ell=reported radius, fixed policy, not fitted",
+  "x": "acos(q_observed dot q_predicted / norms), degrees; angle in observable-signature space, not spatial heading",
+  "y": "100*(norm(q_predicted)/norm(q_observed)-1), percent",
+  "points": [
+    {
+      "id": "Rock row 25",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.039,
+        3.947,
+        2.565
+      ],
+      "predicted_signature": [
+        3.8211310584274853,
+        3.465219899649222,
+        2.601950250876945
+      ],
+      "mix_angle_error_deg": 9.099527777761,
+      "magnitude_error_percent": 3.1136118504378363,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 25
+    },
+    {
+      "id": "Rock row 26",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.177,
+        4.074,
+        3.29
+      ],
+      "predicted_signature": [
+        3.676193304437332,
+        3.784364652945811,
+        2.841588367635474
+      ],
+      "mix_angle_error_deg": 6.801560021165119,
+      "magnitude_error_percent": -2.1618071056537125,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 26
+    },
+    {
+      "id": "Rock row 27",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        2.718,
+        4.537,
+        2.9600000000000004
+      ],
+      "predicted_signature": [
+        3.8950788920959307,
+        3.7397612898344805,
+        2.8080967754138
+      ],
+      "mix_angle_error_deg": 13.516961427654682,
+      "magnitude_error_percent": 0.42021587165821384,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 27
+    },
+    {
+      "id": "Rock row 35",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        2.696,
+        4.682,
+        3.38
+      ],
+      "predicted_signature": [
+        2.7567752391596563,
+        5.121696522783804,
+        3.845758693040491
+      ],
+      "mix_angle_error_deg": 1.9965961459401618,
+      "magnitude_error_percent": 9.414875120806254,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 35
+    },
+    {
+      "id": "Rock row 36",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.722,
+        4.509,
+        2.91
+      ],
+      "predicted_signature": [
+        2.8090317082853584,
+        5.26242782363507,
+        3.951430440912324
+      ],
+      "mix_angle_error_deg": 12.156974490856877,
+      "magnitude_error_percent": 9.560188022323546,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 36
+    },
+    {
+      "id": "Rock row 37",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.342,
+        5.349,
+        2.705
+      ],
+      "predicted_signature": [
+        2.7227592356721715,
+        5.1478433218490665,
+        3.865391695377334
+      ],
+      "mix_angle_error_deg": 10.974036611287607,
+      "magnitude_error_percent": 1.848367927722805,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 37
+    },
+    {
+      "id": "Rock row 44",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        2.016,
+        5.663,
+        3.215
+      ],
+      "predicted_signature": [
+        2.161248685349774,
+        6.022992067033446,
+        4.522519832416385
+      ],
+      "mix_angle_error_deg": 7.11223756290573,
+      "magnitude_error_percent": 14.947568898735785,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 44
+    },
+    {
+      "id": "Rock row 45",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        2.913,
+        5.374,
+        4.075
+      ],
+      "predicted_signature": [
+        1.8782749751785215,
+        6.149880944850162,
+        4.617797637874595
+      ],
+      "mix_angle_error_deg": 9.639212992227858,
+      "magnitude_error_percent": 7.7605387335570875,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 45
+    },
+    {
+      "id": "Rock row 46",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        1.414,
+        5.394,
+        3.3100000000000005
+      ],
+      "predicted_signature": [
+        1.8723591484850457,
+        5.916866823768556,
+        4.442832940578609
+      ],
+      "mix_angle_error_deg": 5.4618979102104905,
+      "magnitude_error_percent": 17.69970482899128,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 46
+    },
+    {
+      "id": "Rock row 53",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        1.663,
+        5.281,
+        4.875
+      ],
+      "predicted_signature": [
+        0.6413742106843192,
+        7.181794512954312,
+        3.940513717614218
+      ],
+      "mix_angle_error_deg": 16.218502292530403,
+      "magnitude_error_percent": 11.385142685354577,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 53
+    },
+    {
+      "id": "Rock row 54",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.054,
+        3.924,
+        5.36
+      ],
+      "predicted_signature": [
+        0.7567328312070946,
+        7.353295601371921,
+        4.649260996570195
+      ],
+      "mix_angle_error_deg": 28.545133546249293,
+      "magnitude_error_percent": 19.44140765745197,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 54
+    },
+    {
+      "id": "Rock row 55",
+      "type": "10 cm limestone",
+      "ell_m": 0.05,
+      "observed_signature": [
+        3.176,
+        4.013515124283919,
+        4.66
+      ],
+      "predicted_signature": [
+        0.8908249029258761,
+        6.9050620237351,
+        5.184844940662247
+      ],
+      "mix_angle_error_deg": 24.43574137790281,
+      "magnitude_error_percent": 25.412851145211857,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 55
+    },
+    {
+      "id": "Rock row 63",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.833,
+        4.664,
+        3.04
+      ],
+      "predicted_signature": [
+        3.6273877342161573,
+        3.9235579067932385,
+        2.9461052330169046
+      ],
+      "mix_angle_error_deg": 10.038964577157465,
+      "magnitude_error_percent": -2.3187629679325417,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 63
+    },
+    {
+      "id": "Rock row 64",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        3.058,
+        3.853,
+        3.16
+      ],
+      "predicted_signature": [
+        3.7220409613117678,
+        3.5398151793354122,
+        2.6579620516614684
+      ],
+      "mix_angle_error_deg": 8.750089007441748,
+      "magnitude_error_percent": -1.0793697621050535,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 64
+    },
+    {
+      "id": "Rock row 65",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.356,
+        3.725,
+        2.58
+      ],
+      "predicted_signature": [
+        3.663375679934801,
+        3.3621707503920106,
+        2.5245731240199736
+      ],
+      "mix_angle_error_deg": 13.7127893602035,
+      "magnitude_error_percent": 9.191625153471072,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 65
+    },
+    {
+      "id": "Rock row 66",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.869,
+        3.728,
+        2.6300000000000003
+      ],
+      "predicted_signature": [
+        3.854161090799391,
+        3.661320892638692,
+        2.7491977684032696
+      ],
+      "mix_angle_error_deg": 8.044108230521632,
+      "magnitude_error_percent": 11.046956065972147,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 66
+    },
+    {
+      "id": "Rock row 73",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.337,
+        5.436,
+        2.94
+      ],
+      "predicted_signature": [
+        2.818398433883361,
+        5.1801423089296845,
+        3.8896442276757877
+      ],
+      "mix_angle_error_deg": 8.351548561506828,
+      "magnitude_error_percent": 6.9203998459695715,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 73
+    },
+    {
+      "id": "Rock row 74",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        3.239,
+        5.645,
+        2.97
+      ],
+      "predicted_signature": [
+        2.7035327989183755,
+        5.054022454614889,
+        3.7949438634627786
+      ],
+      "mix_angle_error_deg": 9.101322993898648,
+      "magnitude_error_percent": -3.9103383884581455,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 74
+    },
+    {
+      "id": "Rock row 75",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.337,
+        6.109,
+        2.27
+      ],
+      "predicted_signature": [
+        2.818398433883361,
+        5.1801423089296845,
+        3.8896442276757877
+      ],
+      "mix_angle_error_deg": 15.804330782485685,
+      "magnitude_error_percent": 2.0364798077291413,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 75
+    },
+    {
+      "id": "Rock row 82",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        2.767,
+        3.963,
+        4.0200000000000005
+      ],
+      "predicted_signature": [
+        1.8753170618317834,
+        6.1560331328655185,
+        4.622417167836206
+      ],
+      "mix_angle_error_deg": 14.762349585193375,
+      "magnitude_error_percent": 26.035216727766986,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 82
+    },
+    {
+      "id": "Rock row 83",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        1.944,
+        5.291,
+        3.1300000000000003
+      ],
+      "predicted_signature": [
+        2.0414531948068917,
+        6.072209571156293,
+        4.559476072109266
+      ],
+      "mix_angle_error_deg": 6.537976105249782,
+      "magnitude_error_percent": 21.954865201705864,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 83
+    },
+    {
+      "id": "Rock row 84",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        3.036,
+        5.309,
+        4.53
+      ],
+      "predicted_signature": [
+        2.045397079269209,
+        5.701540243231099,
+        4.281149391922252
+      ],
+      "mix_angle_error_deg": 8.22004271347608,
+      "magnitude_error_percent": -2.5391796442529424,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 84
+    },
+    {
+      "id": "Rock row 91",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        1.993,
+        4.991,
+        4.39
+      ],
+      "predicted_signature": [
+        0.961814823247584,
+        6.1406526628271285,
+        4.61086834293218
+      ],
+      "mix_angle_error_deg": 10.487485133591257,
+      "magnitude_error_percent": 11.524458298809837,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 91
+    },
+    {
+      "id": "Rock row 92",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        1.617,
+        6.1,
+        3.5600000000000005
+      ],
+      "predicted_signature": [
+        0.7419432644734054,
+        5.735377277315557,
+        4.306556806711108
+      ],
+      "mix_angle_error_deg": 9.572138032393315,
+      "magnitude_error_percent": -0.4838770353423505,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 92
+    },
+    {
+      "id": "Rock row 93",
+      "type": "20 cm limestone",
+      "ell_m": 0.1,
+      "observed_signature": [
+        1.357,
+        4.224,
+        4.5
+      ],
+      "predicted_signature": [
+        0.46833627990015625,
+        6.865042880327899,
+        2.8773927991802513
+      ],
+      "mix_angle_error_deg": 25.38328610130101,
+      "magnitude_error_percent": 18.025423447063595,
+      "measured_comparison": "Held-out impact; sphere approximation; initial spin omitted",
+      "source_row": 93
+    },
+    {
+      "id": "Superball / granite",
+      "type": "Superball",
+      "ell_m": 0.029,
+      "observed_signature": [
+        0.706920073888587,
+        0.22501705174705733,
+        0.43210000000000004
+      ],
+      "predicted_signature": [
+        0.706920073888587,
+        0.2427036303139446,
+        0.4497865785668873
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 1.3815977740240124,
+      "magnitude_error_percent": 1.6063234594187348,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.060980608112797804,
+          3.16993041956847
+        ],
+        "magnitude_error_percent": [
+          -0.45455236974404345,
+          3.817583626142662
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "granite"
+    },
+    {
+      "id": "Superball / rubber",
+      "type": "Superball",
+      "ell_m": 0.029,
+      "observed_signature": [
+        0.706920073888587,
+        0.2472265126863133,
+        0.42050000000000004
+      ],
+      "predicted_signature": [
+        0.706920073888587,
+        0.2523634762965891,
+        0.42563696361027586
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 0.4029518454472485,
+      "magnitude_error_percent": 0.46746938896775614,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.39797333192895584,
+          2.125327701160481
+        ],
+        "magnitude_error_percent": [
+          -1.5102035139087255,
+          2.5570518292197475
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "rubber"
+    },
+    {
+      "id": "Superball / Superball pad",
+      "type": "Superball",
+      "ell_m": 0.029,
+      "observed_signature": [
+        0.706920073888587,
+        0.28690759080780137,
+        0.5278
+      ],
+      "predicted_signature": [
+        0.706920073888587,
+        0.2330437843313,
+        0.47393619352349864
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 3.8798142396035726,
+      "magnitude_error_percent": -4.881003570055709,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          2.1588449939329544,
+          5.619345409198283
+        ],
+        "magnitude_error_percent": [
+          -6.99224660769352,
+          -2.744674176781259
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "Superball pad"
+    },
+    {
+      "id": "Superball / tennis strings",
+      "type": "Superball",
+      "ell_m": 0.029,
+      "observed_signature": [
+        0.8247400862033515,
+        0.30326182617406994,
+        0.261
+      ],
+      "predicted_signature": [
+        0.8247400862033515,
+        0.3139449944359482,
+        0.27168316826187827
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 0.8440676437388493,
+      "magnitude_error_percent": 0.728318150651952,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.036896276240454995,
+          2.1343046610049594
+        ],
+        "magnitude_error_percent": [
+          -0.3602865222292251,
+          1.9131324481538758
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "tennis strings"
+    },
+    {
+      "id": "golf / granite",
+      "type": "Golf ball",
+      "ell_m": 0.0214,
+      "observed_signature": [
+        0.7884877747218855,
+        0.304041452147779,
+        0.31672
+      ],
+      "predicted_signature": [
+        0.7884877747218855,
+        0.2982477447141508,
+        0.3109262925663718
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 0.45651727640373313,
+      "magnitude_error_percent": -0.4384187707028975,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.04082318491102812,
+          1.7888800877806088
+        ],
+        "magnitude_error_percent": [
+          -1.6910117737147345,
+          0.8744362945869444
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "granite"
+    },
+    {
+      "id": "golf / rubber",
+      "type": "Golf ball",
+      "ell_m": 0.0214,
+      "observed_signature": [
+        0.5347215943516235,
+        0.22316468651224325,
+        0.4387
+      ],
+      "predicted_signature": [
+        0.5347215943516235,
+        0.24028866881828337,
+        0.4558239823060401
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 1.4296571267742713,
+      "magnitude_error_percent": 2.177590831323162,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.0638424290006707,
+          3.2742174873805925
+        ],
+        "magnitude_error_percent": [
+          -0.6418700713033298,
+          5.194974029995425
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "rubber"
+    },
+    {
+      "id": "golf / Superball pad",
+      "type": "Golf ball",
+      "ell_m": 0.0214,
+      "observed_signature": [
+        0.7341093074996865,
+        0.27259995604261533,
+        0.50504
+      ],
+      "predicted_signature": [
+        0.7341093074996865,
+        0.23545874582696114,
+        0.46789878978434585
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 2.6951355265884294,
+      "magnitude_error_percent": -3.219302386853695,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          1.0396978072293694,
+          4.3694463728150446
+        ],
+        "magnitude_error_percent": [
+          -5.158953155708601,
+          -1.2559302555866014
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "Superball pad"
+    },
+    {
+      "id": "golf / tennis strings",
+      "type": "Golf ball",
+      "ell_m": 0.0214,
+      "observed_signature": [
+        0.8247400862033515,
+        0.325226182617407,
+        0.321
+      ],
+      "predicted_signature": [
+        0.8247400862033515,
+        0.30307766770547306,
+        0.2988514850880661
+      ],
+      "signatures_divided_by_incoming_speed": true,
+      "mix_angle_error_deg": 1.691681764937496,
+      "magnitude_error_percent": -1.5670875056289613,
+      "uncertainty_envelope": {
+        "angle_error_deg": [
+          0.43515686259201103,
+          2.9567740110208054
+        ],
+        "magnitude_error_percent": [
+          -2.695285466012076,
+          -0.40960825645218746
+        ]
+      },
+      "measured_comparison": "Conditional spin comparison; velocity reconstructed from target-supplied restitution; assumed inertia",
+      "surface": "tennis strings"
+    }
+  ],
+  "case_count": 33,
+  "uncertainties": "Ball angle +/-1deg, et +/-0.01, spin factor +/-0.1 corner envelope; en +/-0.01 varied consistently in both signatures. Not confidence intervals. Rock error bars unavailable.",
+  "limitations": [
+    "Ball components reconstructed from supplied restitution and spin; not independent whole-vector observations",
+    "Rock inputs omit small initial spin and exact shape/inertia",
+    "Magnitude signatures omit unreported sign/direction of omega",
+    "Different true states can share error-map coordinates; no jitter or artificial separation",
+    "Only a two-coordinate summary: norm/mix angle does not identify which component is wrong",
+    "Synthetic checks excluded from measured reality plot"
+  ]
+}

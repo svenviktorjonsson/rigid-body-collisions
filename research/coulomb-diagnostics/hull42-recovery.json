@@ -1,0 +1,345 @@
+{
+  "native": {
+    "rows": 18,
+    "contacts": 6,
+    "rank": 14,
+    "min_eigenvalue": -2.3032806465248047e-15,
+    "max_eigenvalue": 26.804437752883185,
+    "singular_values": [
+      26.804437752883175,
+      15.876165965589419,
+      14.148101761973521,
+      11.873935611533861,
+      10.778753866745149,
+      10.604443191378344,
+      8.631528556438035,
+      6.886142685449573,
+      6.602123852402484,
+      5.2556776547128825,
+      2.6319318198271837,
+      2.5248494217519832,
+      1.8516691994970138,
+      1.6466004123363098,
+      2.606706727583557e-15,
+      1.3242611682975598e-15,
+      5.394959417696166e-16,
+      3.791511446828479e-16
+    ],
+    "normal_target_witness": null,
+    "iterate": {
+      "accepted": false,
+      "residual_m_s": 1.7789545662011904e-08,
+      "passive_change_bound_J": -1.7710097973252754,
+      "passivity_scale": 4.261415909143517,
+      "upper_bounds_ok": true,
+      "normal_min": 0.0
+    },
+    "jacobian_rank": 18,
+    "active_normal_rows": [
+      1,
+      2,
+      3
+    ],
+    "active_normal_target_range_error_m_s": 3.1086244689504383e-15,
+    "worst_contacts": [
+      {
+        "normal": 2,
+        "tangents": [
+          10,
+          11
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.20680702240038626,
+        "normal_velocity": 1.778954561437729e-08,
+        "tangential_impulse_norm": 0.08272280896015438,
+        "tangential_velocity_norm": 0.5365132008317768,
+        "normal_residual": 1.7789545662011904e-08,
+        "tangent_residual": 7.378197139164458e-10
+      },
+      {
+        "normal": 1,
+        "tangents": [
+          8,
+          9
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.6786144082688179,
+        "normal_velocity": 1.5308764034216438e-08,
+        "tangential_impulse_norm": 0.2714457633075262,
+        "tangential_velocity_norm": 0.6569092436903394,
+        "normal_residual": 1.5308763856103316e-08,
+        "tangent_residual": 5.016966802106094e-09
+      },
+      {
+        "normal": 3,
+        "tangents": [
+          12,
+          13
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.25401196217360567,
+        "normal_velocity": 1.0075491552186122e-09,
+        "tangential_impulse_norm": 0.10160478486944224,
+        "tangential_velocity_norm": 0.5716455839374278,
+        "normal_residual": 1.0075491258024244e-09,
+        "tangent_residual": 1.5798125987821122e-16
+      },
+      {
+        "normal": 0,
+        "tangents": [
+          6,
+          7
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 18.37187836234475,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 6.273950999451753,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 4,
+        "tangents": [
+          14,
+          15
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 5.881316180084929,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.11776332752339966,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 5,
+        "tangents": [
+          16,
+          17
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 12.62172315383416,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.1652453022306536,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      }
+    ]
+  },
+  "independent_solve": {
+    "impulse": [
+      0.0,
+      0.5703118618579304,
+      -1.0164395367051604e-20,
+      0.5703573739616686,
+      8.470329472543003e-22,
+      8.470329472543003e-22,
+      -5.082197683525802e-21,
+      1.6940658945086007e-21,
+      0.06503071731976154,
+      -0.2186593357020213,
+      1.699921955287949e-21,
+      8.044741878970097e-21,
+      0.009440575078355069,
+      -0.22794754009260101,
+      1.925929944387236e-34,
+      2.407412430484045e-35,
+      1.0544939977127685e-22,
+      1.7754189668701036e-23
+    ],
+    "velocity": [
+      18.37187836234475,
+      0.0,
+      2.3666392068300013e-08,
+      2.220446049250313e-16,
+      5.881316180084929,
+      12.62172315383416,
+      -4.833309038352757,
+      4.0001981055066755,
+      -0.19173211123130396,
+      0.6446801868172638,
+      0.06525519296000491,
+      0.5096229146602291,
+      -0.023027848848795107,
+      0.5560192408374107,
+      -0.1091642170968789,
+      0.04417437056720776,
+      -0.09573208427375512,
+      -0.13468993262268228
+    ],
+    "method": "semismooth-svd+cold-restart",
+    "newton_residual_path": [
+      3.488386832452071,
+      2.15991852990471,
+      2.1248490347535425,
+      2.1082444672804153,
+      0.4854394335542956,
+      0.031422646739569106,
+      0.00015503489753908515,
+      4.809548839465017e-09
+    ],
+    "jacobian_ranks": [
+      17,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "evaluations": 20,
+    "optimizer_success": null,
+    "accepted": true,
+    "residual_m_s": 4.809548839465017e-09,
+    "passive_change_bound_J": -1.7702098390353194,
+    "passivity_scale": 4.260025245625323,
+    "upper_bounds_ok": true,
+    "normal_min": -1.0164395367051604e-20,
+    "recovery_attempts": [
+      {
+        "label": "warm-newton",
+        "accepted": false,
+        "residual_m_s": 1.77895458518793e-08,
+        "newton_steps": 2,
+        "evaluations": 59
+      },
+      {
+        "label": "cold-newton",
+        "accepted": true,
+        "residual_m_s": 4.809548839465017e-09,
+        "newton_steps": 7,
+        "evaluations": 20
+      }
+    ]
+  },
+  "solved_analysis": {
+    "rows": 18,
+    "contacts": 6,
+    "rank": 14,
+    "min_eigenvalue": -2.3032806465248047e-15,
+    "max_eigenvalue": 26.804437752883185,
+    "singular_values": [
+      26.804437752883175,
+      15.876165965589419,
+      14.148101761973521,
+      11.873935611533861,
+      10.778753866745149,
+      10.604443191378344,
+      8.631528556438035,
+      6.886142685449573,
+      6.602123852402484,
+      5.2556776547128825,
+      2.6319318198271837,
+      2.5248494217519832,
+      1.8516691994970138,
+      1.6466004123363098,
+      2.606706727583557e-15,
+      1.3242611682975598e-15,
+      5.394959417696166e-16,
+      3.791511446828479e-16
+    ],
+    "normal_target_witness": null,
+    "iterate": {
+      "accepted": true,
+      "residual_m_s": 4.809548839465017e-09,
+      "passive_change_bound_J": -1.7702098390353194,
+      "passivity_scale": 4.260025245625323,
+      "upper_bounds_ok": true,
+      "normal_min": -1.0164395367051604e-20
+    },
+    "jacobian_rank": 18,
+    "active_normal_rows": [
+      1,
+      3
+    ],
+    "active_normal_target_range_error_m_s": 1.7763568394002505e-15,
+    "worst_contacts": [
+      {
+        "normal": 1,
+        "tangents": [
+          8,
+          9
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.5703118618579304,
+        "normal_velocity": 0.0,
+        "tangential_impulse_norm": 0.2281247450075769,
+        "tangential_velocity_norm": 0.6725873517632898,
+        "normal_residual": 0.0,
+        "tangent_residual": 4.809548839465017e-09
+      },
+      {
+        "normal": 3,
+        "tangents": [
+          12,
+          13
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.5703573739616686,
+        "normal_velocity": 2.220446049250313e-16,
+        "tangential_impulse_norm": 0.22814294968742296,
+        "tangential_velocity_norm": 0.5564958921717333,
+        "normal_residual": 2.511986517466741e-16,
+        "tangent_residual": 6.758764539069105e-10
+      },
+      {
+        "normal": 2,
+        "tangents": [
+          10,
+          11
+        ],
+        "friction": 0.4,
+        "normal_impulse": -1.0164395367051604e-20,
+        "normal_velocity": 2.3666392068300013e-08,
+        "tangential_impulse_norm": 8.22238448099609e-21,
+        "tangential_velocity_norm": 0.5137837632263544,
+        "normal_residual": 6.95315160661848e-20,
+        "tangent_residual": 8.236803073888624e-20
+      },
+      {
+        "normal": 0,
+        "tangents": [
+          6,
+          7
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 18.37187836234475,
+        "tangential_impulse_norm": 5.3571067330577106e-21,
+        "tangential_velocity_norm": 6.273950999451753,
+        "normal_residual": 0.0,
+        "tangent_residual": 6.568421140554839e-20
+      },
+      {
+        "normal": 5,
+        "tangents": [
+          16,
+          17
+        ],
+        "friction": 0.4,
+        "normal_impulse": 8.470329472543003e-22,
+        "normal_velocity": 12.62172315383416,
+        "tangential_impulse_norm": 1.0693356424862481e-22,
+        "tangential_velocity_norm": 0.1652453022306536,
+        "normal_residual": 2.734092475296701e-21,
+        "tangent_residual": 2.8197094703276723e-21
+      },
+      {
+        "normal": 4,
+        "tangents": [
+          14,
+          15
+        ],
+        "friction": 0.4,
+        "normal_impulse": 8.470329472543003e-22,
+        "normal_velocity": 5.881316180084929,
+        "tangential_impulse_norm": 1.9409179521020233e-34,
+        "tangential_velocity_norm": 0.11776332752339966,
+        "normal_residual": 2.0702604090894916e-21,
+        "tangent_residual": 2.3243164160105894e-21
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+In file included from /home/runner/work/rigid-body-collisions/rigid-body-collisions/research/mobility-continuation/native_replay.cpp:5:
+/home/runner/work/rigid-body-collisions/rigid-body-collisions/research/mobility-continuation/native_helper.h:6:8: error: redefinition of ‘struct mobility_continuation::Stats’
+    6 | struct Stats {int components=0,largest_rows=0,stage_attempts=0,stage_accepts=0,iteration_steps=0,svd_calls=0;};
+      |        ^~~~~
+In file included from /home/runner/work/rigid-body-collisions/rigid-body-collisions/spatial_backend/coulomb.h:4,
+                 from /home/runner/work/rigid-body-collisions/rigid-body-collisions/research/mobility-continuation/native_replay.cpp:4:
+/home/runner/work/rigid-body-collisions/rigid-body-collisions/spatial_backend/mobility_continuation.h:8:8: note: previous definition of ‘struct mobility_continuation::Stats’
+    8 | struct Stats {int components=0,largest_rows=0,stage_attempts=0,stage_accepts=0,iteration_steps=0,svd_calls=0;};
+      |        ^~~~~

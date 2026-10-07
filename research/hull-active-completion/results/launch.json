@@ -1,0 +1,19 @@
+{
+  "source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "runner_pid": 51146,
+  "command": [
+    "python",
+    "-u",
+    "research/hull-active-completion/runner.py",
+    "--source-commit",
+    "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb"
+  ],
+  "thread_counts": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "process_mode": "single sequential frozen runner; detached from tool session to preserve progress on transport loss",
+  "log": "execution.log"
+}

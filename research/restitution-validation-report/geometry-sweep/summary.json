@@ -1,0 +1,2553 @@
+{
+  "case_count": 96,
+  "pass_count": 96,
+  "records": [
+    {
+      "case": "2_box_13.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 2.7977620220553945e-14,
+      "tangent_target_error": 0.3576566452351056,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.427392034742297e-14,
+      "kinetic_change_minus_work_J": -0.16615616007118483,
+      "outgoing_angular_speed_rad_s": 12.854996057054336,
+      "passed": true
+    },
+    {
+      "case": "2_box_13.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 1.52433621281034e-13,
+      "tangent_target_error": 5.396183500039342e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.7398582574656984e-13,
+      "kinetic_change_minus_work_J": -0.15515289980214975,
+      "outgoing_angular_speed_rad_s": 10.792176132858978,
+      "passed": true
+    },
+    {
+      "case": "2_box_13.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 1.1018963519404679e-14,
+      "tangent_target_error": 1.8776868961954347,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.2485485695611374e-14,
+      "kinetic_change_minus_work_J": -0.07374169790009666,
+      "outgoing_angular_speed_rad_s": 6.221983809303031,
+      "passed": true
+    },
+    {
+      "case": "2_box_13.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 1.2461143228392757e-12,
+      "tangent_target_error": 1.5725044396361885,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0757020274532181e-13,
+      "kinetic_change_minus_work_J": -0.24231083662660013,
+      "outgoing_angular_speed_rad_s": 7.982153682558326,
+      "passed": true
+    },
+    {
+      "case": "2_box_13.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 3.4083846855992306e-14,
+      "tangent_target_error": 2.6051879742821265,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.913009219568835e-14,
+      "kinetic_change_minus_work_J": -0.48163168206348606,
+      "outgoing_angular_speed_rad_s": 15.425995268465199,
+      "passed": true
+    },
+    {
+      "case": "2_box_13.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.06670205246562556,
+        0.01
+      ],
+      "normal_target_error": 7.154277170684509e-13,
+      "tangent_target_error": 1.992850329202156e-13,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.154033004359462e-13,
+      "kinetic_change_minus_work_J": -0.7805335589421367,
+      "outgoing_angular_speed_rad_s": 0.4003170620083899,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 8.326672684688674e-14,
+      "tangent_target_error": 1.3400986579585321,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.193445921733655e-14,
+      "kinetic_change_minus_work_J": -0.28359025118044057,
+      "outgoing_angular_speed_rad_s": 12.610298753629527,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 1.6486811915683575e-13,
+      "tangent_target_error": 2.2415957978694223e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.220096494478298e-13,
+      "kinetic_change_minus_work_J": -0.3151511814283303,
+      "outgoing_angular_speed_rad_s": 4.483603410604191,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 3.3362201889985954e-14,
+      "tangent_target_error": 2.744039463183413,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.2768926461201886e-14,
+      "kinetic_change_minus_work_J": -0.13585846051690886,
+      "outgoing_angular_speed_rad_s": 5.044119501451812,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 4.5208281562736374e-13,
+      "tangent_target_error": 5.79769565689503e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.291112158469559e-13,
+      "kinetic_change_minus_work_J": -0.5461060809703004,
+      "outgoing_angular_speed_rad_s": 11.596426024194413,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 1.84297022087776e-14,
+      "tangent_target_error": 9.288014801711597e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.576894419017208e-14,
+      "kinetic_change_minus_work_J": -0.20320134110033905,
+      "outgoing_angular_speed_rad_s": 18.576135432052595,
+      "passed": true
+    },
+    {
+      "case": "2_box_-17.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06188579524090599,
+        0.01
+      ],
+      "normal_target_error": 1.84297022087776e-14,
+      "tangent_target_error": 9.288014801711597e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.576894419017208e-14,
+      "kinetic_change_minus_work_J": -0.20320134110033905,
+      "outgoing_angular_speed_rad_s": 18.576135432052595,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 6.027400800689975e-13,
+      "tangent_target_error": 0.25148707648122676,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.1271192312811706e-13,
+      "kinetic_change_minus_work_J": -0.24022356581720372,
+      "outgoing_angular_speed_rad_s": 10.343013925461468,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 5.050404539019837e-13,
+      "tangent_target_error": 4.31704672010369e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.5941761799531662e-13,
+      "kinetic_change_minus_work_J": -0.22190263737288274,
+      "outgoing_angular_speed_rad_s": 8.634374144152584,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 2.4097390749489023e-13,
+      "tangent_target_error": 1.6915030519244791,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.2154834350706096e-14,
+      "kinetic_change_minus_work_J": -0.09942046566626739,
+      "outgoing_angular_speed_rad_s": 6.962905057480066,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 1.5543122344752192e-15,
+      "tangent_target_error": 1.1084468831764585,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.404432126150823e-13,
+      "kinetic_change_minus_work_J": -0.25117458431900375,
+      "outgoing_angular_speed_rad_s": 10.924273484904115,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 7.235323451482145e-13,
+      "tangent_target_error": 2.4777844917774714,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.352529199749597e-13,
+      "kinetic_change_minus_work_J": -0.7137823489823165,
+      "outgoing_angular_speed_rad_s": 12.411616710553757,
+      "passed": true
+    },
+    {
+      "case": "2_box_29.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.0457290955588348,
+        0.01
+      ],
+      "normal_target_error": 1.8877122087701537e-12,
+      "tangent_target_error": 2.2116752873557743e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.954264858942793e-13,
+      "kinetic_change_minus_work_J": -0.7475043312080254,
+      "outgoing_angular_speed_rad_s": 4.422811568926796,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 6.327161017338767e-13,
+      "tangent_target_error": 1.1468732118792566,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.188042719757476e-13,
+      "kinetic_change_minus_work_J": -0.38817590535681923,
+      "outgoing_angular_speed_rad_s": 9.616237879006796,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 1.957323192414151e-13,
+      "tangent_target_error": 8.556766406542238e-13,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.2048669273976316e-13,
+      "kinetic_change_minus_work_J": -0.34379997851799604,
+      "outgoing_angular_speed_rad_s": 1.7119776637445097,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 2.5307533846330443e-13,
+      "tangent_target_error": 2.666749284751703,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.752448434786061e-14,
+      "kinetic_change_minus_work_J": -0.19328746273077857,
+      "outgoing_angular_speed_rad_s": 3.8464951516027215,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 3.1585845050585704e-13,
+      "tangent_target_error": 7.2664096961716496e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.164965677373345e-13,
+      "kinetic_change_minus_work_J": -0.4108934645132917,
+      "outgoing_angular_speed_rad_s": 14.532764261981232,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 7.771561172376096e-16,
+      "tangent_target_error": 8.52595771760889e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.9220736113823023e-15,
+      "kinetic_change_minus_work_J": -0.28478482408994543,
+      "outgoing_angular_speed_rad_s": 17.05138424386406,
+      "passed": true
+    },
+    {
+      "case": "2_box_-31.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04282148031066628,
+        0.01
+      ],
+      "normal_target_error": 7.771561172376096e-16,
+      "tangent_target_error": 8.52595771760889e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.9220736113823023e-15,
+      "kinetic_change_minus_work_J": -0.28478482408994543,
+      "outgoing_angular_speed_rad_s": 17.05138424386406,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 3.3306690738754696e-16,
+      "tangent_target_error": 0.13582715116278285,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.6044804374004684e-13,
+      "kinetic_change_minus_work_J": -0.3619383248804946,
+      "outgoing_angular_speed_rad_s": 0.3964841125278121,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 1.2218448475209698e-11,
+      "tangent_target_error": 9.126033262418787e-13,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.8641034896238473e-13,
+      "kinetic_change_minus_work_J": -0.34647536350422803,
+      "outgoing_angular_speed_rad_s": 1.8252490110289576,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 8.326672684688674e-17,
+      "tangent_target_error": 2.262330860465114,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.417696235549997e-14,
+      "kinetic_change_minus_work_J": -0.235042458126552,
+      "outgoing_angular_speed_rad_s": 0.15859364501111856,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 1.1977974168075889e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.966790867477755e-13,
+      "kinetic_change_minus_work_J": -0.3707569539582082,
+      "outgoing_angular_speed_rad_s": 23.9560368991535,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 3.3306690738754696e-16,
+      "tangent_target_error": 0.11612372822541717,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.700931062664779e-13,
+      "kinetic_change_minus_work_J": -0.4960109210054071,
+      "outgoing_angular_speed_rad_s": 19.477525970742853,
+      "passed": true
+    },
+    {
+      "case": "2_hull_13.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.011247552717193236,
+        0.01
+      ],
+      "normal_target_error": 1.2604473020871865e-11,
+      "tangent_target_error": 1.0349388013253247e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.9229756675898102e-13,
+      "kinetic_change_minus_work_J": -0.4818415544712952,
+      "outgoing_angular_speed_rad_s": 20.699030694691494,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 1.8762769116165146e-14,
+      "tangent_target_error": 1.1921690719988727,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 9.463957395539069e-14,
+      "kinetic_change_minus_work_J": -0.31345005013984084,
+      "outgoing_angular_speed_rad_s": 14.937000987492942,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 2.05702122002549e-12,
+      "tangent_target_error": 2.7135516056375764e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.037672973744577e-13,
+      "kinetic_change_minus_work_J": -0.3209580846082065,
+      "outgoing_angular_speed_rad_s": 5.426214215880645,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 7.271960811294775e-15,
+      "tangent_target_error": 2.684867628799549,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.785166624581393e-14,
+      "kinetic_change_minus_work_J": -0.15463002464316156,
+      "outgoing_angular_speed_rad_s": 5.974800394997179,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 6.58018084465084e-12,
+      "tangent_target_error": 7.721601136267964e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.339892582614027e-13,
+      "kinetic_change_minus_work_J": -0.5456502338146482,
+      "outgoing_angular_speed_rad_s": 15.444312151554614,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 4.0611958240788226e-13,
+      "tangent_target_error": 1.193567467083767e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.969319648637452e-14,
+      "kinetic_change_minus_work_J": -0.2419780244244849,
+      "outgoing_angular_speed_rad_s": 23.870967971760393,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-17.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.043759865473966784,
+        0.01
+      ],
+      "normal_target_error": 4.0611958240788226e-13,
+      "tangent_target_error": 1.193567467083767e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.969319648637452e-14,
+      "kinetic_change_minus_work_J": -0.2419780244244849,
+      "outgoing_angular_speed_rad_s": 23.870967971760393,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 7.005507285384738e-14,
+      "tangent_target_error": 0.05563955322363573,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.230092416815154e-13,
+      "kinetic_change_minus_work_J": -0.23811979638850528,
+      "outgoing_angular_speed_rad_s": 11.436811279713204,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 1.1102230246251565e-15,
+      "tangent_target_error": 5.472122754923703e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3400044962530444e-13,
+      "kinetic_change_minus_work_J": -0.2331392260856014,
+      "outgoing_angular_speed_rad_s": 10.944518789560103,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 2.3647750424515834e-14,
+      "tangent_target_error": 1.7507508454165617,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.676572934985245e-14,
+      "kinetic_change_minus_work_J": -0.11582893095838798,
+      "outgoing_angular_speed_rad_s": 8.423496453093332,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 1.4988010832439613e-15,
+      "tangent_target_error": 1.0667783851105206,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.7194232149186917e-13,
+      "kinetic_change_minus_work_J": -0.30033940485323307,
+      "outgoing_angular_speed_rad_s": 14.475207622666241,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 7.105427357601002e-14,
+      "tangent_target_error": 2.2427674638683666,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.4760762057086652e-13,
+      "kinetic_change_minus_work_J": -0.7444254337949888,
+      "outgoing_angular_speed_rad_s": 13.72417353565593,
+      "passed": true
+    },
+    {
+      "case": "2_hull_29.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        -0.03233535356717974,
+        0.01
+      ],
+      "normal_target_error": 5.662137425588298e-15,
+      "tangent_target_error": 3.0595526112620064e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.908606937055083e-13,
+      "kinetic_change_minus_work_J": -0.7446393705611712,
+      "outgoing_angular_speed_rad_s": 6.119579977156585,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_0.3_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 5.340172748447003e-14,
+      "tangent_target_error": 0.9506944443013736,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.282897399423888e-13,
+      "kinetic_change_minus_work_J": -0.3939318445042177,
+      "outgoing_angular_speed_rad_s": 10.473292129932522,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_0.3_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 2.220446049250313e-16,
+      "tangent_target_error": 9.753586827088156e-13,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.077538224260934e-13,
+      "kinetic_change_minus_work_J": -0.3451131962089641,
+      "outgoing_angular_speed_rad_s": 1.951259526653791,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_1.5_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 2.120525977034049e-14,
+      "tangent_target_error": 2.5882777777205495,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.1318324589821884e-14,
+      "kinetic_change_minus_work_J": -0.20465854221217983,
+      "outgoing_angular_speed_rad_s": 4.189316851973009,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_1.5_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 7.771561172376096e-16,
+      "tangent_target_error": 9.50661771526029e-12,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.399222735569253e-13,
+      "kinetic_change_minus_work_J": -0.4211929881893639,
+      "outgoing_angular_speed_rad_s": 19.012025851138624,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_-1.0_0.2",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 1.0133005545753804e-11,
+      "tangent_target_error": 1.092415047310169e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.145295218194178e-14,
+      "kinetic_change_minus_work_J": -0.3186199059090107,
+      "outgoing_angular_speed_rad_s": 21.847192837856184,
+      "passed": true
+    },
+    {
+      "case": "2_hull_-31.0_-1.0_2.0",
+      "dimension": 2,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.03027935910811834,
+        0.01
+      ],
+      "normal_target_error": 1.0133005545753804e-11,
+      "tangent_target_error": 1.092415047310169e-11,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 4.145295218194178e-14,
+      "kinetic_change_minus_work_J": -0.3186199059090107,
+      "outgoing_angular_speed_rad_s": 21.847192837856184,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 1.0381695503269839e-12,
+      "tangent_target_error": 1.3420485661961208,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.22983306764430989,
+      "outgoing_angular_speed_rad_s": 14.037620508636333,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 2.6827040588983664e-10,
+      "tangent_target_error": 1.6653345369377348e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.2672243499163278,
+      "outgoing_angular_speed_rad_s": 7.253623286821285,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 3.9745984281580604e-14,
+      "tangent_target_error": 2.6843504927673423,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-18,
+      "kinetic_change_minus_work_J": -0.10636169865474021,
+      "outgoing_angular_speed_rad_s": 5.8437604389185305,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 5.452379658876794e-10,
+      "tangent_target_error": 1.6653345369377348e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.4212451754438489,
+      "outgoing_angular_speed_rad_s": 13.633975381574803,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 2.1694770424574017e-09,
+      "tangent_target_error": 0.03971275208676273,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.17772941000321474,
+      "outgoing_angular_speed_rad_s": 18.264550207279598,
+      "passed": true
+    },
+    {
+      "case": "3_box_13.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05705382364172008,
+        -0.03700821351631869,
+        -9.999917560676863e-13
+      ],
+      "normal_target_error": 5.9243092653815665e-09,
+      "tangent_target_error": 1.1102230246251565e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.17563441115747103,
+      "outgoing_angular_speed_rad_s": 18.248910026677503,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.2304380564719395e-13,
+      "tangent_target_error": 1.57341508880982,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.23005574318132738,
+      "outgoing_angular_speed_rad_s": 13.646252241437027,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 3.854622177001943e-10,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.31974252487218163,
+      "outgoing_angular_speed_rad_s": 4.793967079409275,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 7.993605777301127e-15,
+      "tangent_target_error": 2.6639993360019156,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.09698008899195765,
+      "outgoing_angular_speed_rad_s": 5.767350235825371,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 7.253436740128905e-10,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.45062922033762365,
+      "outgoing_angular_speed_rad_s": 13.062673264647428,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 6.850076061937216e-12,
+      "tangent_target_error": 1.0715061009401128,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.2538021997660964,
+      "outgoing_angular_speed_rad_s": 17.172852381331694,
+      "passed": true
+    },
+    {
+      "case": "3_box_-17.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05000810859239775,
+        0.05328061199278146,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 1.4402323778028858e-10,
+      "tangent_target_error": 4.041272810440265e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.23513585287524452,
+      "outgoing_angular_speed_rad_s": 16.959079123768024,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0694889418516595e-11,
+      "tangent_target_error": 1.2314675914598372,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.356065477263028,
+      "outgoing_angular_speed_rad_s": 11.625391817085744,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 5.88192827777334e-11,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.6020852139652106e-18,
+      "kinetic_change_minus_work_J": -0.3185168431100878,
+      "outgoing_angular_speed_rad_s": 4.900552496258428,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 8.523182160047327e-13,
+      "tangent_target_error": 2.6597719214920508,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.1694386010678568,
+      "outgoing_angular_speed_rad_s": 5.135406532213492,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 8.287714958754577e-11,
+      "tangent_target_error": 4.440892098500626e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.3621973473461161,
+      "outgoing_angular_speed_rad_s": 14.698731323631883,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0289546992225951e-11,
+      "tangent_target_error": 2.482534153247273e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.2625804960312119,
+      "outgoing_angular_speed_rad_s": 16.759841333006964,
+      "passed": true
+    },
+    {
+      "case": "3_box_29.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.04247289955252023,
+        -0.02050930379799838,
+        -1.0000611450067254e-12
+      ],
+      "normal_target_error": 1.0289546992225951e-11,
+      "tangent_target_error": 2.482534153247273e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.2625804960312119,
+      "outgoing_angular_speed_rad_s": 16.759841333006964,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 4.5285997174460135e-13,
+      "tangent_target_error": 1.5772187902060568,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.589415207398531e-18,
+      "kinetic_change_minus_work_J": -0.2729566585011555,
+      "outgoing_angular_speed_rad_s": 12.925760409504045,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.585809344424206e-11,
+      "tangent_target_error": 4.577566798522237e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.1275702593849246e-17,
+      "kinetic_change_minus_work_J": -0.33540205543782353,
+      "outgoing_angular_speed_rad_s": 3.7022829385884415,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 5.4289905904170155e-14,
+      "tangent_target_error": 2.7350862662603856,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.3852447794681098e-18,
+      "kinetic_change_minus_work_J": -0.1187037285947301,
+      "outgoing_angular_speed_rad_s": 5.452850574923084,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 5.3024584723004864e-11,
+      "tangent_target_error": 1.3877787807814457e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.49235236050578635,
+      "outgoing_angular_speed_rad_s": 12.224127061343689,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 2.4481616733851297e-10,
+      "tangent_target_error": 0.6165784289369016,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.2555299184311386,
+      "outgoing_angular_speed_rad_s": 16.91426859227655,
+      "passed": true
+    },
+    {
+      "case": "3_box_-31.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "box",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.056479688813704035,
+        0.0371372834748829,
+        -1.0000333894311098e-12
+      ],
+      "normal_target_error": 3.3069724736378703e-09,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.806255641895632e-18,
+      "kinetic_change_minus_work_J": -0.22849044293986398,
+      "outgoing_angular_speed_rad_s": 17.001196579051708,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1379786002407855e-13,
+      "tangent_target_error": 1.4126358300466841,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.14397912462842766,
+      "outgoing_angular_speed_rad_s": 17.127991416859704,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 5.551115123125783e-16,
+      "tangent_target_error": 3.3306690738754696e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.24663698562993291,
+      "outgoing_angular_speed_rad_s": 9.302573806963366,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.0103029524088925e-14,
+      "tangent_target_error": 2.755494718383762,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.0671898181823034,
+      "outgoing_angular_speed_rad_s": 6.949318825623892,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.2212453270876722e-15,
+      "tangent_target_error": 4.47545209131181e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.214306433183765e-17,
+      "kinetic_change_minus_work_J": -0.5556945462035565,
+      "outgoing_angular_speed_rad_s": 12.630332350994465,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.3830470102504933e-09,
+      "tangent_target_error": 0.1473799329983473,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.11088745654290033,
+      "outgoing_angular_speed_rad_s": 21.80150186469009,
+      "passed": true
+    },
+    {
+      "case": "3_hull_13.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 13.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.06840149934584548,
+        -0.022167670871629415,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 2.220446049250313e-16,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.10778032924686509,
+      "outgoing_angular_speed_rad_s": 22.501923835899415,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 1.1742906454118802,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.12904351639222483,
+      "outgoing_angular_speed_rad_s": 16.709131401371174,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 2.0431545344479218e-11,
+      "tangent_target_error": 2.7755575615628914e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.2259245654285258,
+      "outgoing_angular_speed_rad_s": 11.12215268717003,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 1.207135502667711e-10,
+      "tangent_target_error": 2.4543243496879064,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.057486842499508084,
+      "outgoing_angular_speed_rad_s": 6.962624819982616,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 6.634256477511258e-10,
+      "tangent_target_error": 1.0190492755571723e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 2.0816681711721685e-17,
+      "kinetic_change_minus_work_J": -0.354442385679417,
+      "outgoing_angular_speed_rad_s": 19.084345825741647,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 7.847714700304209e-09,
+      "tangent_target_error": 1.3586671744375145,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.18246254178658505,
+      "outgoing_angular_speed_rad_s": 20.36084688112681,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-17.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -17.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.031222424059438855,
+        0.06790236233313131,
+        -1.000019511643302e-12
+      ],
+      "normal_target_error": 5.761480181831757e-09,
+      "tangent_target_error": 3.3766115072321297e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.0408340855860843e-17,
+      "kinetic_change_minus_work_J": -0.19681357760660156,
+      "outgoing_angular_speed_rad_s": 22.555517644907887,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 4.153455357425173e-12,
+      "tangent_target_error": 1.6181501333269785,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.938893903907228e-18,
+      "kinetic_change_minus_work_J": -0.22642893117614554,
+      "outgoing_angular_speed_rad_s": 17.3741646822989,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 9.694605782913356e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 6.071532165918825e-18,
+      "kinetic_change_minus_work_J": -0.2990767358120689,
+      "outgoing_angular_speed_rad_s": 6.8537231171212225,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 7.062128659640621e-13,
+      "tangent_target_error": 2.843441253580211,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.10202619804202939,
+      "outgoing_angular_speed_rad_s": 7.1013431128593165,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 1.1102230246251565e-16,
+      "tangent_target_error": 2.7755575615628914e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 7.806255641895632e-18,
+      "kinetic_change_minus_work_J": -0.4924545491086303,
+      "outgoing_angular_speed_rad_s": 14.26577135778138,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 9.234657483148112e-10,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.14602472866406302,
+      "outgoing_angular_speed_rad_s": 21.670792242933384,
+      "passed": true
+    },
+    {
+      "case": "3_hull_29.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": 29.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.05771948592484423,
+        -0.01234951893715297,
+        -1.0000056338554941e-12
+      ],
+      "normal_target_error": 9.234657483148112e-10,
+      "tangent_target_error": 2.0014830212433605e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 5.204170427930421e-18,
+      "kinetic_change_minus_work_J": -0.14602472866406302,
+      "outgoing_angular_speed_rad_s": 21.670792242933384,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_0.3_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 5.88418203051333e-15,
+      "tangent_target_error": 1.3661803260621985,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.5236570605778894e-18,
+      "kinetic_change_minus_work_J": -0.1716010640874578,
+      "outgoing_angular_speed_rad_s": 17.04295168888493,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_0.3_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        0.3,
+        -1.0
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 2.2939039556746366e-10,
+      "tangent_target_error": 4.742874840267547e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 3.469446951953614e-18,
+      "kinetic_change_minus_work_J": -0.27349717289426795,
+      "outgoing_angular_speed_rad_s": 8.923507401591628,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_1.5_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 2.9573101745228314e-09,
+      "tangent_target_error": 2.5131512518461845,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-18,
+      "kinetic_change_minus_work_J": -0.07300806969606644,
+      "outgoing_angular_speed_rad_s": 7.228431861101551,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_1.5_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        1.5,
+        -0.4
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 6.29009955233073e-10,
+      "tangent_target_error": 1.3788683915077173e-15,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.734723475976807e-17,
+      "kinetic_change_minus_work_J": -0.38059046102728433,
+      "outgoing_angular_speed_rad_s": 18.537620274543475,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_-1.0_0.2",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 0.2,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 3.241851231905457e-14,
+      "tangent_target_error": 1.2956510559074477,
+      "capacity_limited": true,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 8.673617379884035e-18,
+      "kinetic_change_minus_work_J": -0.22144513536988053,
+      "outgoing_angular_speed_rad_s": 20.970233459754372,
+      "passed": true
+    },
+    {
+      "case": "3_hull_-31.0_-1.0_2.0",
+      "dimension": 3,
+      "shape": "hull",
+      "angle_deg": -31.0,
+      "velocity": [
+        -1.0,
+        -1.2
+      ],
+      "mu": 2.0,
+      "normal_restitution": 0.6,
+      "tangential_restitution": 0.6,
+      "contact_count": 1,
+      "contact_point_world_m": [
+        0.032931150109355996,
+        0.058299920672331904,
+        -9.999848171737824e-13
+      ],
+      "normal_target_error": 1.1079248629641825e-10,
+      "tangent_target_error": 2.9893669801409083e-16,
+      "capacity_limited": false,
+      "friction_bound_passed": true,
+      "angular_impulse_error": 1.3877787807814457e-17,
+      "kinetic_change_minus_work_J": -0.22459631137518898,
+      "outgoing_angular_speed_rad_s": 21.88507260707583,
+      "passed": true
+    }
+  ],
+  "coefficients_fixed": true,
+  "fitted_material_location_or_direction_dependence": false,
+  "actual_rock_shape_validation": false
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "captured-state-pose-guide-ledger-v1",
+  "scope": "Independent pose change at frozen captured rigid velocities; physical MLCP impulse not yet applied. No pose guide integrated.",
+  "source_sha256": "f7d2a165410b237a8ad2f4e1430b0856eb25c456b310969bd9bd90feeee02572",
+  "input_sha256": {
+    "/workspace/rigid-body-collisions/research/translation-position-geometry-review/results/rejected-normal-system.json.geometry.json": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+    "/workspace/rigid-body-collisions/research/translation-position-geometry-review/results/linear-pose-guides.json": "6bcb337c2262d7d6d604df6a44bb9b5aed1c7890b1023f73b6b72e6a01610785"
+  },
+  "trials": [
+    {
+      "method": "bounded-feasibility-LP",
+      "physical_velocity_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "COM_change_m": [
+        7.385970858818294e-06,
+        3.260144908048039e-05,
+        3.9382493283073056e-05
+      ],
+      "linear_momentum_change_kg_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spin_angular_momentum_change_kg_m2_s": [
+        8.108921614687538e-05,
+        -0.0001148047181504899,
+        4.097148411593162e-05
+      ],
+      "orbital_angular_momentum_change_kg_m2_s": [
+        -0.000774911190475896,
+        -0.006246970751504143,
+        0.0029001858875893766
+      ],
+      "total_angular_momentum_change_kg_m2_s": [
+        -0.000693821974329021,
+        -0.006361775469654633,
+        0.002941157371705308
+      ],
+      "rotational_kinetic_energy_change_J": -0.0009662585625220491,
+      "gravity_potential_change_J": 0.00569456439916985,
+      "unaccounted_pose_energy_change_J": 0.004728305836647801,
+      "physically_integrated": false
+    },
+    {
+      "method": "bounded-minimum-pose-QP",
+      "physical_velocity_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "COM_change_m": [
+        -1.142561362039858e-08,
+        -2.8645523326230954e-09,
+        1.95155243927783e-10
+      ],
+      "linear_momentum_change_kg_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spin_angular_momentum_change_kg_m2_s": [
+        -7.524052179265277e-09,
+        -2.980310763756524e-08,
+        4.618667546263789e-08
+      ],
+      "orbital_angular_momentum_change_kg_m2_s": [
+        7.164048280718962e-08,
+        5.829672278745062e-07,
+        -5.201779787019409e-07
+      ],
+      "total_angular_momentum_change_kg_m2_s": [
+        6.411643062792433e-08,
+        5.531641202369411e-07,
+        -4.7399130323930283e-07
+      ],
+      "rotational_kinetic_energy_change_J": -4.525575133561375e-06,
+      "gravity_potential_change_J": 2.821873405511675e-08,
+      "unaccounted_pose_energy_change_J": -4.497356399506258e-06,
+      "physically_integrated": false
+    }
+  ]
+}

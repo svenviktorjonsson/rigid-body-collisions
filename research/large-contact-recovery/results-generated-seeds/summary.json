@@ -1,0 +1,197 @@
+{
+  "complete": true,
+  "source": "df3e9f5436c03075804d07358dd2bc0e60dd8ff9",
+  "binary_sha256": "d3efc46e9784c9c92010b3235e4876695d9c35778b6b7a076b96e0fc51a146d3",
+  "records": [
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "budget_per_component_per_seed": 128,
+      "accepted": true,
+      "prototype_accepted": true,
+      "production_zero_accepted": true,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 7.18717523685474e-09,
+        "circle_violation_scaled_m_s": 3.018846901087747e-11,
+        "sticking_m_s": 6.369625984500258e-12,
+        "support_gap_J": 8.88785571767178e-15,
+        "passive_bound_J": -0.08098558676275099,
+        "passivity_scale": 1.0811424204042144,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 8.881784197001252e-16
+      },
+      "native_stats": {
+        "budget_rejections": 2,
+        "iteration_steps": 263,
+        "newton_steps": 17,
+        "residual_m_s": 7.187175234070599e-09,
+        "svd_calls": 263
+      },
+      "elapsed_s_descriptive": 0.03051473799860105
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "budget_per_component_per_seed": 128,
+      "accepted": false,
+      "prototype_accepted": false,
+      "production_zero_accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "native_stats": {
+        "budget_rejections": 7,
+        "iteration_steps": 896,
+        "newton_steps": 460,
+        "residual_m_s": 9.115300953419861e-07,
+        "svd_calls": 896
+      },
+      "elapsed_s_descriptive": 0.079782361004618
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "budget_per_component_per_seed": 512,
+      "accepted": false,
+      "prototype_accepted": false,
+      "production_zero_accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "native_stats": {
+        "budget_rejections": 7,
+        "iteration_steps": 3584,
+        "newton_steps": 1868,
+        "residual_m_s": 9.03629936561308e-07,
+        "svd_calls": 3584
+      },
+      "elapsed_s_descriptive": 0.231077352000284
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "budget_per_component_per_seed": 2048,
+      "accepted": true,
+      "prototype_accepted": true,
+      "production_zero_accepted": true,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.97170712681192e-09,
+        "circle_violation_scaled_m_s": 1.5082155774027089e-09,
+        "sticking_m_s": 9.971707134999528e-09,
+        "support_gap_J": 1.91031578743365e-09,
+        "passive_bound_J": -2.1732043888969486,
+        "passivity_scale": 4.272469489665399,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "native_stats": {
+        "budget_rejections": 4,
+        "iteration_steps": 10154,
+        "newton_steps": 4372,
+        "residual_m_s": 9.971706888184459e-09,
+        "svd_calls": 10154
+      },
+      "elapsed_s_descriptive": 0.6302353810024215
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "budget_per_component_per_seed": 128,
+      "accepted": false,
+      "prototype_accepted": false,
+      "production_zero_accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "native_stats": {
+        "budget_rejections": 7,
+        "iteration_steps": 896,
+        "newton_steps": 110,
+        "residual_m_s": 1.300794628232943e-07,
+        "svd_calls": 896
+      },
+      "elapsed_s_descriptive": 0.09854944700055057
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "budget_per_component_per_seed": 512,
+      "accepted": false,
+      "prototype_accepted": false,
+      "production_zero_accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "native_stats": {
+        "budget_rejections": 7,
+        "iteration_steps": 3584,
+        "newton_steps": 110,
+        "residual_m_s": 1.300794628232943e-07,
+        "svd_calls": 3584
+      },
+      "elapsed_s_descriptive": 0.25433687300392194
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "budget_per_component_per_seed": 2048,
+      "accepted": false,
+      "prototype_accepted": false,
+      "production_zero_accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "native_stats": {
+        "budget_rejections": 7,
+        "iteration_steps": 14336,
+        "newton_steps": 110,
+        "residual_m_s": 1.300794628232943e-07,
+        "svd_calls": 14336
+      },
+      "elapsed_s_descriptive": 0.8869795790014905
+    }
+  ],
+  "scope": "Native-generated numerical seed instantaneous proof only; production source untouched, world/refinement/performance gates still required."
+}

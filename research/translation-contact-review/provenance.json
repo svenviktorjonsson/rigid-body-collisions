@@ -1,0 +1,21 @@
+{
+  "protocol": "Independent later captured-system strict-law diagnostics; no accepted full trajectory claim",
+  "production_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "capture_sha256": "7b7a7649645426d21030a51310cdc235a417cbc830f0a13cfa951d4581c018d6",
+  "source_sha256": {
+    "research/translation-contact-review/ranked_release.py": "d70db057cd58eaefa1de2b0efc900270c900f0771dd3b631cc8f57dfe739e62b",
+    "research/translation-contact-review/audit.py": "6a79ad8ccdfaf9dcd11dd7e73eb7d48a1f91fa3b0d27112ebca62be1dd2cfd41",
+    "research/translation-contact-review/native_seed_ranked_release.py": "f18e9bd7c0d8c46baf18faa7e52636841ad8fee6fb0b19e9f3e593cd0bf142be",
+    "research/translation-contact-review/release.py": "3cb7e7bfc499e407db5ac01ce2f35e4e35adc3bf8e4ea05bf2d3f50e934fdb36",
+    "research/translation-contact-review/probe.py": "ff676b57c27770667637025bd702aba0213ae2fdf706fb7bf6b530ea031d71db",
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84"
+  },
+  "archive_sha256": "3fe201fbcfa67d941e2a44705765bd9948aa9adb9402116a178d49b01e4c3bec",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "limits": {
+    "max_release_guesses": 4,
+    "max_function_evaluations_per_trial": 1000
+  }
+}

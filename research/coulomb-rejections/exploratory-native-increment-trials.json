@@ -1,0 +1,50 @@
+[
+  {
+    "side": 2,
+    "seed": 42,
+    "fraction": 0.06,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (1.77895e-08 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 0.050110912998206913
+  },
+  {
+    "side": 2,
+    "seed": 42,
+    "fraction": 0.03,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (1.31218e-08 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 0.2350777990068309
+  },
+  {
+    "side": 2,
+    "seed": 42,
+    "fraction": 0.015,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (1.65955e-06 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 0.12363413099956233
+  },
+  {
+    "side": 3,
+    "seed": 7301,
+    "fraction": 0.06,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (9.78841e-06 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 0.2860457469942048
+  },
+  {
+    "side": 3,
+    "seed": 7301,
+    "fraction": 0.03,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (8.83641e-06 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 0.4620591839920962
+  },
+  {
+    "side": 3,
+    "seed": 7301,
+    "fraction": 0.015,
+    "completed": false,
+    "rejected": "Coulomb residual gate failed (0.000439035 m/s): increase iterations or refine timestep; no friction-law fallback",
+    "elapsed_s": 1.3455056140082888
+  }
+]

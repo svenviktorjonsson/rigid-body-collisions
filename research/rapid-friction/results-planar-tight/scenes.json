@@ -1,0 +1,888 @@
+{
+  "2d_shake9": {
+    "dimension": 2,
+    "scene": {
+      "id": "2d_shake9",
+      "duration": 0.12,
+      "gravity": [
+        0,
+        -9.81
+      ],
+      "collision_skin_m": 0.01,
+      "analytic_kinematics": true,
+      "container_half_extents_m": [
+        0.3525,
+        0.3525
+      ],
+      "bodies": [
+        {
+          "type": "kinematic",
+          "position": [
+            0,
+            0
+          ],
+          "velocity": [
+            20,
+            0
+          ],
+          "omega": 0,
+          "polygons": [
+            {
+              "vertices": [
+                [
+                  -0.46249999999999997,
+                  -0.3625
+                ],
+                [
+                  -0.3625,
+                  -0.3625
+                ],
+                [
+                  -0.3625,
+                  0.3625
+                ],
+                [
+                  -0.46249999999999997,
+                  0.3625
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  0.3625,
+                  -0.3625
+                ],
+                [
+                  0.46249999999999997,
+                  -0.3625
+                ],
+                [
+                  0.46249999999999997,
+                  0.3625
+                ],
+                [
+                  0.3625,
+                  0.3625
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  -0.4625,
+                  -0.46249999999999997
+                ],
+                [
+                  0.4625,
+                  -0.46249999999999997
+                ],
+                [
+                  0.4625,
+                  -0.3625
+                ],
+                [
+                  -0.4625,
+                  -0.3625
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  -0.4625,
+                  0.3625
+                ],
+                [
+                  0.4625,
+                  0.3625
+                ],
+                [
+                  0.4625,
+                  0.46249999999999997
+                ],
+                [
+                  -0.4625,
+                  0.46249999999999997
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "velocity_schedule": [
+            {
+              "time_s": 0.04,
+              "velocity": [
+                -20,
+                0
+              ]
+            },
+            {
+              "time_s": 0.08,
+              "velocity": [
+                20,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "2d_shake25": {
+    "dimension": 2,
+    "scene": {
+      "id": "2d_shake25",
+      "duration": 0.12,
+      "gravity": [
+        0,
+        -9.81
+      ],
+      "collision_skin_m": 0.01,
+      "analytic_kinematics": true,
+      "container_half_extents_m": [
+        0.5575,
+        0.5575
+      ],
+      "bodies": [
+        {
+          "type": "kinematic",
+          "position": [
+            0,
+            0
+          ],
+          "velocity": [
+            20,
+            0
+          ],
+          "omega": 0,
+          "polygons": [
+            {
+              "vertices": [
+                [
+                  -0.6675000000000001,
+                  -0.5675
+                ],
+                [
+                  -0.5675,
+                  -0.5675
+                ],
+                [
+                  -0.5675,
+                  0.5675
+                ],
+                [
+                  -0.6675000000000001,
+                  0.5675
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  0.5675,
+                  -0.5675
+                ],
+                [
+                  0.6675000000000001,
+                  -0.5675
+                ],
+                [
+                  0.6675000000000001,
+                  0.5675
+                ],
+                [
+                  0.5675,
+                  0.5675
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  -0.6675,
+                  -0.6675000000000001
+                ],
+                [
+                  0.6675,
+                  -0.6675000000000001
+                ],
+                [
+                  0.6675,
+                  -0.5675
+                ],
+                [
+                  -0.6675,
+                  -0.5675
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            },
+            {
+              "vertices": [
+                [
+                  -0.6675,
+                  0.5675
+                ],
+                [
+                  0.6675,
+                  0.5675
+                ],
+                [
+                  0.6675,
+                  0.6675000000000001
+                ],
+                [
+                  -0.6675,
+                  0.6675000000000001
+                ]
+              ],
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "velocity_schedule": [
+            {
+              "time_s": 0.04,
+              "velocity": [
+                -20,
+                0
+              ]
+            },
+            {
+              "time_s": 0.08,
+              "velocity": [
+                20,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.41,
+            -0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            -0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            -0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            -0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.41,
+            -0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.41,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.41,
+            -0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.41,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.41,
+            0.0
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.41,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.41,
+            0.205
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.41,
+            0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            -0.205,
+            0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.0,
+            0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.205,
+            0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        },
+        {
+          "circles": [
+            {
+              "radius": 0.1,
+              "density": 31.830988618379067,
+              "friction": 0.4,
+              "restitution": 0
+            }
+          ],
+          "position": [
+            0.41,
+            0.41
+          ],
+          "velocity": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "source": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+  "table": "I",
+  "diameter_m": 0.058,
+  "mass_kg": 0.103,
+  "material_identity": "same reported58mm Superball across four surfaces",
+  "case_count": 4,
+  "native_run_count": 36,
+  "spin_interval_overlap_count": 3,
+  "rows": [
+    {
+      "surface": "granite",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "observed_spin_factor": 14.9,
+      "observed_spin_factor_error": 0.1,
+      "predicted_central_spin_factor": 15.50988201954784,
+      "predicted_range_over_angle_and_et_uncertainty": [
+        14.826852998822273,
+        16.19597832964572
+      ],
+      "spin_intervals_overlap": true,
+      "inferred_alpha_range_if_pure_point_force_model": [
+        0.3838396132234123,
+        0.5320520041556758
+      ],
+      "effective_normal_force_offset_m_diagnostic_only": 0.00044511696531436274,
+      "friction_hypothesis": 0.9,
+      "friction_independently_measured": false,
+      "native_runs": [
+        {
+          "angle_deg": 24.0,
+          "et": 0.48,
+          "predicted_spin_factor": 14.826852998822273,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.49,
+          "predicted_spin_factor": 14.92703443800351,
+          "analytic_native_error": 3.552713678800501e-15
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.5,
+          "predicted_spin_factor": 15.027215877184739,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.48,
+          "predicted_spin_factor": 15.40578885163141,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.49,
+          "predicted_spin_factor": 15.50988201954784,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.5,
+          "predicted_spin_factor": 15.613975187464263,
+          "analytic_native_error": 3.552713678800501e-15
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.48,
+          "predicted_spin_factor": 15.980031951917107,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.49,
+          "predicted_spin_factor": 16.088005140781412,
+          "analytic_native_error": 3.552713678800501e-15
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.5,
+          "predicted_spin_factor": 16.19597832964572,
+          "analytic_native_error": 0.0
+        }
+      ]
+    },
+    {
+      "surface": "rubber",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.41,
+      "observed_spin_factor": 14.5,
+      "observed_spin_factor_error": 0.1,
+      "predicted_central_spin_factor": 14.677136676216406,
+      "predicted_range_over_angle_and_et_uncertainty": [
+        14.02540148537242,
+        15.33219281873128
+      ],
+      "spin_intervals_overlap": true,
+      "inferred_alpha_range_if_pure_point_force_model": [
+        0.3449015122959853,
+        0.4906298573766519
+      ],
+      "effective_normal_force_offset_m_diagnostic_only": 0.00012928162699693478,
+      "friction_hypothesis": 0.9,
+      "friction_independently_measured": false,
+      "native_runs": [
+        {
+          "angle_deg": 24.0,
+          "et": 0.39999999999999997,
+          "predicted_spin_factor": 14.02540148537242,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.41,
+          "predicted_spin_factor": 14.125582924553653,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.42,
+          "predicted_spin_factor": 14.225764363734882,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.39999999999999997,
+          "predicted_spin_factor": 14.573043508299982,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.41,
+          "predicted_spin_factor": 14.677136676216406,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.42,
+          "predicted_spin_factor": 14.781229844132838,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.39999999999999997,
+          "predicted_spin_factor": 15.116246441002668,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.41,
+          "predicted_spin_factor": 15.224219629866974,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.42,
+          "predicted_spin_factor": 15.33219281873128,
+          "analytic_native_error": 0.0
+        }
+      ]
+    },
+    {
+      "surface": "superball_disk",
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.57,
+      "observed_spin_factor": 18.2,
+      "observed_spin_factor_error": 0.1,
+      "predicted_central_spin_factor": 16.342627362879263,
+      "predicted_range_over_angle_and_et_uncertainty": [
+        15.628304512272127,
+        17.05976384056016
+      ],
+      "spin_intervals_overlap": false,
+      "inferred_alpha_range_if_pure_point_force_model": [
+        0.1956079954743699,
+        0.3195397445737138
+      ],
+      "effective_normal_force_offset_m_diagnostic_only": -0.0013555868925371256,
+      "friction_hypothesis": 0.9,
+      "friction_independently_measured": false,
+      "native_runs": [
+        {
+          "angle_deg": 24.0,
+          "et": 0.5599999999999999,
+          "predicted_spin_factor": 15.628304512272127,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.57,
+          "predicted_spin_factor": 15.728485951453356,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 24.0,
+          "et": 0.58,
+          "predicted_spin_factor": 15.828667390634589,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.5599999999999999,
+          "predicted_spin_factor": 16.23853419496284,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.57,
+          "predicted_spin_factor": 16.342627362879263,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": 0.58,
+          "predicted_spin_factor": 16.446720530795695,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.5599999999999999,
+          "predicted_spin_factor": 16.843817462831545,
+          "analytic_native_error": 3.552713678800501e-15
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.57,
+          "predicted_spin_factor": 16.951790651695855,
+          "analytic_native_error": 3.552713678800501e-15
+        },
+        {
+          "angle_deg": 26.0,
+          "et": 0.58,
+          "predicted_spin_factor": 17.05976384056016,
+          "analytic_native_error": 0.0
+        }
+      ]
+    },
+    {
+      "surface": "tennis_strings",
+      "normal_restitution": 0.91,
+      "tangential_restitution": -0.1,
+      "observed_spin_factor": 9.0,
+      "observed_spin_factor_error": 0.1,
+      "predicted_central_spin_factor": 9.36838511247856,
+      "predicted_range_over_angle_and_et_uncertainty": [
+        8.916148087129612,
+        9.825560186651735
+      ],
+      "spin_intervals_overlap": true,
+      "inferred_alpha_range_if_pure_point_force_model": [
+        0.3717150903276323,
+        0.5455937372261155
+      ],
+      "effective_normal_force_offset_m_diagnostic_only": 0.00025056304804582305,
+      "friction_hypothesis": 0.9,
+      "friction_independently_measured": false,
+      "native_runs": [
+        {
+          "angle_deg": 24.0,
+          "et": -0.11,
+          "predicted_spin_factor": 8.916148087129612,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 24.0,
+          "et": -0.1,
+          "predicted_spin_factor": 9.016329526310843,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 24.0,
+          "et": -0.09000000000000001,
+          "predicted_spin_factor": 9.116510965492076,
+          "analytic_native_error": 1.7763568394002505e-15
+        },
+        {
+          "angle_deg": 25.0,
+          "et": -0.11,
+          "predicted_spin_factor": 9.264291944562132,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": -0.1,
+          "predicted_spin_factor": 9.36838511247856,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 25.0,
+          "et": -0.09000000000000001,
+          "predicted_spin_factor": 9.472478280394988,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": -0.11,
+          "predicted_spin_factor": 9.609613808923125,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": -0.1,
+          "predicted_spin_factor": 9.717586997787432,
+          "analytic_native_error": 0.0
+        },
+        {
+          "angle_deg": 26.0,
+          "et": -0.09000000000000001,
+          "predicted_spin_factor": 9.825560186651735,
+          "analytic_native_error": 0.0
+        }
+      ]
+    }
+  ],
+  "one_inertia_factor_explains_all_within_reported_angle_et_spin_uncertainty": false,
+  "independent_material_validation_passed": false,
+  "offset_is_measured_contact_point": false,
+  "scope": "Native endpoint-law comparison to measured normal/tangent restitution and spin. Fixed plane/sphere inertia; force history and support compliance absent. Normal-offset diagnostic is inferred from target endpoints and cannot count as validation."
+}

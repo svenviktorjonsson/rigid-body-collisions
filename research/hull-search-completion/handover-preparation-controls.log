@@ -1,0 +1,24 @@
+Shared hull audit PASS: 2 histories; 4 retained rejections; 0 qualified references
+Shared hull audit PASS: 3 histories; 3 retained rejections; 0 qualified references
+{
+  "schema": "prospective-search-auditor-controls-v1",
+  "checks": [
+    "Selected strategy remains blocked until integration/build/default proof; preceding bca archive is sealed",
+    "Only declared bounded-search tail added; original policies/duration/lanes/slop/contact/energy/containment/quarter gates and14 exact archive pins retained",
+    "Finite ledger/vector/triangle/zero-update, strict projection/counter AND producer position-eligibility controls",
+    "Final/native-prefix finite ledger equality and availability controls",
+    "Portable runtime manifest includes ALL recorded libraries and loader; malformed hash/path or missing loader rejected",
+    "Exact source-file set and byte/hash controls reject missing helper or changed native source",
+    "Native principal/authored conversion and full tensor energy controls; partial or failed physical prefix never qualifies",
+    "Selected tail exact helper/caps/stage/compile/recovery/counter contract enforced; synthetic readiness cannot replace actual integration/build/default proof",
+    "New translation reject requires finite symmetric pure-normal matrix; no historical missing-capture exception",
+    "Both exact quarter-budget edges required; missing/rejected/partial lane cannot be skipped",
+    "hull-active-completion original receipt reproduced BYTE IDENTICALLY; historical auditor unchanged",
+    "hull-translation-completion original receipt reproduced BYTE IDENTICALLY; historical auditor unchanged",
+    "Sealed bca six-attempt5history1reject0qualification receipt reproduced BYTE IDENTICALLY; historical combined auditor unchanged"
+  ],
+  "native_execution": false,
+  "search_trajectory_executed": false,
+  "fixture_scope": "Existing historical/native records read only plus synthetic malformed controls; not bounded-search policy evidence",
+  "historical_sources_or_receipts_mutated": false
+}

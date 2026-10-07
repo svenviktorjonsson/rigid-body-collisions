@@ -1,0 +1,5 @@
+{
+  "complete": false,
+  "stage": "compilation",
+  "reason": "Missing upstream Dantzig include before project adapter; no numerical trial executed. Corrected in fresh results-v2 directory."
+}

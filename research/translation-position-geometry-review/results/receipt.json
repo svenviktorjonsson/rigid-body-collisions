@@ -1,0 +1,17 @@
+{
+  "complete": false,
+  "exit_code": 1,
+  "error": "Translation-only position projection failed; repair initial overlap or refine timestep",
+  "elapsed_s": 36.77507025899831,
+  "matrix_snapshot_available": true,
+  "scope": "Single-lane diagnostic; geometry re-query and changed pose-policy qualification require separate analysis.",
+  "matrix_schema": "normal-only-position-rejection-v1",
+  "phase": "position_translation",
+  "rows": 74,
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry_snapshot_available": true,
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "geometry_rows": 74,
+  "geometry_schema": "normal-position-geometry-v1",
+  "original_capture_byte_identical": true
+}

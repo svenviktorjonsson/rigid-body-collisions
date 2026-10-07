@@ -1,0 +1,17 @@
+{
+  "trials": 160,
+  "counts": {
+    "slope contact": 40,
+    "nonsmooth contact": 120
+  },
+  "body_records": 280,
+  "pose_records": 4686,
+  "maximum_source_quaternion_norm_error": 8.975785972253902e-07,
+  "indexing": "Flat case_index; one body_index per case; explicit pose_offset/pose_count. Arrays contain observations, not predictions.",
+  "limits": [
+    "Released poses are 30 Hz; instantaneous velocities/spin and contact intervals cannot be assumed exact.",
+    "No independently measured full 3D inertia tensor provided by the metadata; uniform-density mesh inertia would be an assumption.",
+    "Nonsmooth JSON folders task-1/2/3 do not match metadata task-3/4/5 labels. Restitution dictionaries are preserved without guessing a mapping.",
+    "No separate mu_s, mu_d, mu_r or tangential restitution fields. Do not fill missing values with unrelated material data."
+  ]
+}

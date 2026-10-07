@@ -1,0 +1,146 @@
+{
+  "schema": "accepted-qr-baseline-root-comparison-v1",
+  "receipt_sha256": "a217d2d3668f6649d75848d579b94d499cf2c5fbb64a296cb01389790f2833ad",
+  "reviewer_source_sha256": "dc815a454b97c6848490d0d2989b4ad45758849f5cb656e50df2b7c3fdaf71c6",
+  "pairs": [
+    {
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "rows": 18,
+      "maximum_impulse_difference_N_s": 2.7755575615628914e-17,
+      "maximum_physical_relative_velocity_difference_m_s": 1.4697154291498335e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "rows": 108,
+      "maximum_impulse_difference_N_s": 0.0,
+      "maximum_physical_relative_velocity_difference_m_s": 0.0,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "rows": 267,
+      "maximum_impulse_difference_N_s": 0.0,
+      "maximum_physical_relative_velocity_difference_m_s": 0.0,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "rows": 45,
+      "maximum_impulse_difference_N_s": 0.0,
+      "maximum_physical_relative_velocity_difference_m_s": 0.0,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 48,
+      "maximum_impulse_difference_N_s": 1.7608784981353043e-14,
+      "maximum_physical_relative_velocity_difference_m_s": 9.164682229262756e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 216,
+      "maximum_impulse_difference_N_s": 1.8615317620707117e-14,
+      "maximum_physical_relative_velocity_difference_m_s": 1.0613518952670563e-13,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "rows": 192,
+      "maximum_impulse_difference_N_s": 1.3877787807814457e-17,
+      "maximum_physical_relative_velocity_difference_m_s": 6.282198322054941e-17,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "rows": 123,
+      "maximum_impulse_difference_N_s": 1.1102230246251565e-16,
+      "maximum_physical_relative_velocity_difference_m_s": 5.842483939920099e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "rows": 48,
+      "maximum_impulse_difference_N_s": 1.1102230246251565e-16,
+      "maximum_physical_relative_velocity_difference_m_s": 1.1310069821157947e-15,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 51,
+      "maximum_impulse_difference_N_s": 3.3306690738754696e-16,
+      "maximum_physical_relative_velocity_difference_m_s": 1.1340344637521238e-15,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "rows": 30,
+      "maximum_impulse_difference_N_s": 2.8380076066980564e-15,
+      "maximum_physical_relative_velocity_difference_m_s": 3.075096016056051e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 321,
+      "maximum_impulse_difference_N_s": 1.0623502078033198e-11,
+      "maximum_physical_relative_velocity_difference_m_s": 2.3914208445241442e-11,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "rows": 231,
+      "maximum_impulse_difference_N_s": 2.7755575615628914e-17,
+      "maximum_physical_relative_velocity_difference_m_s": 1.5507840330464832e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "rows": 54,
+      "maximum_impulse_difference_N_s": 0.0,
+      "maximum_physical_relative_velocity_difference_m_s": 0.0,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 45,
+      "maximum_impulse_difference_N_s": 2.6590448939933786e-10,
+      "maximum_physical_relative_velocity_difference_m_s": 2.554607143604122e-15,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "rows": 48,
+      "maximum_impulse_difference_N_s": 2.7755575615628914e-17,
+      "maximum_physical_relative_velocity_difference_m_s": 1.2149549711642393e-16,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 291,
+      "maximum_impulse_difference_N_s": 0.0,
+      "maximum_physical_relative_velocity_difference_m_s": 0.0,
+      "tolerance_m_s": 1e-08,
+      "distinct_physical_response_above_ten_tolerances": false
+    }
+  ],
+  "accepted_pair_count": 17,
+  "distinct_physical_responses": 0,
+  "scope": "Retained accepted validation roots only. A times impulse difference is the physical relative contact response; no proof of uniqueness or explanation of full trajectory refinement error."
+}

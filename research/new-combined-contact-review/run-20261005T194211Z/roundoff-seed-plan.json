@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-05T19:46:41.371106+00:00",
+  "original_plan_and_failed_controls_retained": true,
+  "finding": "Exact equality seed control finds none: largest row4-row30 difference1.9984e-15,RHS8.1567e-15. This is a roundoff relation only, correcting earlier informal exact wording.",
+  "prospective_change": "Relation detector uses abs(rowdiff)<=1e-13*max(1,maxA,maxb), solely to choose numerical starting impulse. Original A,b,bounds,mu and acceptance tolerance remain byte unchanged.",
+  "budgets": "same at-most2 existing native calls at256/4096 and2 exact-projection SciPy calls3000; strict nativebudget0 gates if root."
+}

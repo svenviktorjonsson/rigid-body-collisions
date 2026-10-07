@@ -1,0 +1,113 @@
+{
+  "execution_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "attempt_count": 6,
+  "history_count": 6,
+  "rejection_count": 0,
+  "rejections": [],
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": {
+            "position_m": 0.053654487096564875,
+            "velocity_m_s": 4.296497691710076,
+            "omega_rad_s": 93.14734404026453,
+            "orientation_rad": 1.1398196582250524
+          },
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": {
+            "position_m": 0.056535990702348736,
+            "velocity_m_s": 5.186100641037533,
+            "omega_rad_s": 83.42254761113111,
+            "orientation_rad": 1.0120395191360643
+          },
+          "passed": false
+        }
+      ],
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8123.373174966394,
+          "container_surface_excess_m": 0.0003764683958575321,
+          "sampled_container_surface_excess_m": 4.7379545892733965e-06
+        },
+        "reference_1": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8100.7866531341715,
+          "container_surface_excess_m": 0.00019867147472985014,
+          "sampled_container_surface_excess_m": 2.0124887423200732e-08
+        },
+        "reference_2": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -8044.53484905108,
+          "container_surface_excess_m": 0.000173784877359473,
+          "sampled_container_surface_excess_m": 2.8044354061229626e-09
+        }
+      }
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": true,
+        "reference_2": true
+      },
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "error": {
+            "position_m": 0.0934974520680159,
+            "velocity_m_s": 5.530220742087601,
+            "omega_rad_s": 78.31753427935863,
+            "orientation_rad": 1.2078022260679395
+          },
+          "passed": false
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "error": {
+            "position_m": 0.08664977666632431,
+            "velocity_m_s": 6.54508445966446,
+            "omega_rad_s": 85.61799827088048,
+            "orientation_rad": 1.3904216940758363
+          },
+          "passed": false
+        }
+      ],
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -27843.90997253381,
+          "container_surface_excess_m": 0.00043544492255281897,
+          "sampled_container_surface_excess_m": 2.6434008302045342e-05
+        },
+        "reference_1": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -28284.602338998073,
+          "container_surface_excess_m": 0.00021344433558329046,
+          "sampled_container_surface_excess_m": 1.8011359712355457e-05
+        },
+        "reference_2": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -28593.771340396564,
+          "container_surface_excess_m": 6.77671141882108e-05,
+          "sampled_container_surface_excess_m": 2.821599019986465e-06
+        }
+      }
+    }
+  }
+}

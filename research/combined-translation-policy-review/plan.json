@@ -1,0 +1,34 @@
+{
+  "schema": "prospective-combined-translation-review-v1",
+  "baseline_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "baseline_plan": "research/hull-gap-completion/plan.json",
+  "candidate_position_stabilization": "split_translation_combined",
+  "hypothesis": "Subtract final accepted physical normal motion from every desired combined normal geometric rate, preventing independently allocated physical and pose motion from consuming the same clearance and avoiding repairs already supplied by physical motion.",
+  "desired_combined_rates": {
+    "penetrating_below_negative_slop": "unchanged original legacy ERP split target in m/s",
+    "within_declared_slop": "zero m/s",
+    "separated_above_positive_slop": "negative(distance-slop)/internal_timestep in m/s",
+    "numerical_pose_target": "desired_combined_rate minus final accepted physical normal rate"
+  },
+  "physical_velocity_reconstruction": "Copy the post-transport solver-body pool, retaining existing warm-start delta velocities and external force/gyro increments. In exact upstream row/A/B order, apply accepted physical delta x[i]-row.appliedImpulse via internalApplyImpulse(normal*internalInvMass, angularComponent, delta). Evaluate the signed full normal Jacobian against base+delta+external translation AND rotation. Do not apply position impulses, mutate original rows/body pool/rigid bodies, substitute pre-contact velocities, infer from RHS conventions or double-count warm starts.",
+  "geometry_limit": "Fixed-row first-order combined-motion condition only. Finite angular drift, curved surfaces, contact-set/normal changes and continuous containment require geometry requery and separate validation; no accuracy order or continuous nonpenetration theorem is claimed.",
+  "optional_separate_numerical_schedule": {
+    "parameter": "early_component_recovery",
+    "candidate_value_if_used": true,
+    "baseline_value": false,
+    "meaning": "A separately declared earlier attempt of an unchanged-law recovery helper; no physical material/equation/acceptance gate changes.",
+    "rule": "Root must freeze whether this option is used before any fresh full study. If combined with the new position policy, disclose both changes and do not attribute a whole-study cost difference to either alone. No promotion or speed/accuracy claim until unchanged physical and both refinement gates pass."
+  },
+  "checks_after_root_publication_and_current_six_terminal_outcomes": [
+    "Closed-form opposing-face control: old independent gap target admits 50 micrometres combined penetration; all-row combined targets choose zero pose impulse and preserve approximately50 micrometres right clearance.",
+    "Every distance/slop branch with positive/zero/negative accepted physical normal rates, signed negative remaining clearance retained, finite h/slop/target checks.",
+    "Native copied solver-body predictor matches exact upstream A-then-B accepted-delta application with nonzero warm starts, two tangents, rotated anisotropic inertia, external force/gyro, nonunit factors, a fixed-body slot and prescribed rotating kinematic slot; original pool/rows/rigid-body state unchanged.",
+    "Off-centre angular normal motion changes the target; nonzero fake push/turn sentinels never enter the physical normal-rate predictor.",
+    "Invalid dimensions, null/out-of-range rows, nonfinite accepted impulses/rates/targets or time/slop values reject without changing any output argument.",
+    "Root-owned actual native sphere between two planar box walls: radius.1m,mass1kg,x0,vx.95m/s,h.001s,gravity0,friction/restitution0,primary1,travel_fraction0. Left interior−.0995m,right interior+.101000001m. Old gap policy approximatelyx.00105m/rightpenetration50micrometres; combined policy approximatelyx.00095m/rightclearance50micrometres, zero unnecessary pose correction. All original strict contact gates remain mandatory."
+  ],
+  "execution_rule": "Root alone commits/publishes this prospective review and authorizes controls afterward. Root subsequently permits research-only C++ helper compilation against read-only existing Bullet libraries while the old study runs, with a different research executable destination. Never run a production build, change guarded sources/libraries/the spatial runner, or duplicate world simulations while source108 study is active. Preserve all failed controls, complete stdout/stderr and source/binary/runtime hashes. No existing guarded source edits in this review.",
+  "full_study_rule": "Controls alone do not qualify a trajectory. A separately frozen prospective six full-history study must retain the original authored source52 scenes/material/gravity/wall schedules/shared contact points, original physical gates, original fractions/time step and both original quarter-budget refinement edges, with no skipped failed level or promoted prefix. Numerical pose ledger remains separately disclosed and is not subtracted from physical energy.",
+  "infeasibility_rule": "Reject or use a separately declared bounded transactional rollback/refinement that restores body, force, interpolation, manifold/cache/warm-start and prescribed-wall schedule state before recomputing geometry and physical impulses at the smaller step. Do not add physical regularization or loosen an acceptance gate silently.",
+  "performance_rule": "No timing experiment or speed ranking is part of these controls. Current study timings remain descriptive; any future controlled cost comparison requires a separate fixed plan."
+}

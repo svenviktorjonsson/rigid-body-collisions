@@ -1,0 +1,11 @@
+{
+  "declared_date": "2026-10-07",
+  "source": "https://experiments.builtenvdata.eu/datasets/92/",
+  "archive_sha256": "a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4",
+  "archive_trials": 135,
+  "pilot": "BlockGroup_9_n2 inspected for schema and first three processed rows. All comparisons are exploratory fixed-geometry tests, not untouched blind validation.",
+  "prediction": "Parameter-free ideal Housner angular speed ratio 1 - 1.5*B^2/(B^2+H^2), using only nominal measured block dimensions. Validate against source nominal CoR_Housner and compare against source processed Angular_CoR from thita_dot_x (column 10).",
+  "metrics": "Per-row signed error, trial mean/median/RMSE and group aggregates; primary all first finite angular-ratio entries per unique trial, secondary all finite entries. Retain nonfinite rows as missing; do not discard large finite errors.",
+  "duplicate_policy": "Fingerprint Singular_data and HalfCycle_and_Impact_data together. Report repeated files as separate source trial IDs but do not double-count exact duplicates in primary metrics. Data rows within trials are correlated.",
+  "limits": "Housner is an established ideal no-slip instantaneous pivot-transfer comparator, not our complete directional constitutive law or a measured material coefficient. Source nominal inertia is geometric, not a measured full tensor. Positive/negative effective geometry and fc=0.7 energy corrections are output-derived/assumed and must not be used as independent inputs."
+}

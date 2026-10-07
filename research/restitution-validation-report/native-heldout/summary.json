@@ -1,0 +1,609 @@
+{
+  "case_count": 75,
+  "native_law_pass_count": 75,
+  "records": [
+    {
+      "model": "fixed",
+      "source_row": 25,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -30.639112462908265,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 26,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -29.25445630890719,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 27,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -32.25777175162112,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 35,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -21.52712102353315,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 36,
+      "analytic_native_max_error": 0.0,
+      "kinetic_change_minus_boundary_work_J": -22.478715750678884,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 37,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -21.25377305686742,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 44,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -18.85858585601175,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 45,
+      "analytic_native_max_error": 2.842170943040401e-14,
+      "kinetic_change_minus_boundary_work_J": -17.153720683225757,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 46,
+      "analytic_native_max_error": 2.842170943040401e-14,
+      "kinetic_change_minus_boundary_work_J": -16.32713543622912,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 53,
+      "analytic_native_max_error": 2.1316282072803006e-13,
+      "kinetic_change_minus_boundary_work_J": -12.116743411251612,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 54,
+      "analytic_native_max_error": 3.126388037344441e-13,
+      "kinetic_change_minus_boundary_work_J": -14.367445257195627,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 55,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -14.79671557032843,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 63,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -240.73252580047304,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 64,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -244.901618356175,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 65,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -235.3012184473053,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 66,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -262.5259062968902,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 73,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -186.1440401998191,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 74,
+      "analytic_native_max_error": 1.3322676295501878e-15,
+      "kinetic_change_minus_boundary_work_J": -173.2628393134378,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 75,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -186.1440401998191,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 82,
+      "analytic_native_max_error": 6.661338147750939e-16,
+      "kinetic_change_minus_boundary_work_J": -142.95093397630902,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 83,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -150.69953978257928,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 84,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -140.79545298275372,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 91,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -102.14940184976831,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 92,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -85.11592033691514,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "fixed",
+      "source_row": 93,
+      "analytic_native_max_error": 4.973799150320701e-14,
+      "kinetic_change_minus_boundary_work_J": -72.49423825939368,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 25,
+      "analytic_native_max_error": 1.3322676295501878e-15,
+      "kinetic_change_minus_boundary_work_J": -30.11291850112901,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 26,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -28.754240194993134,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 27,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -31.704812985964814,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 35,
+      "analytic_native_max_error": 0.0,
+      "kinetic_change_minus_boundary_work_J": -21.17110857593367,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 36,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -22.107198199622374,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 37,
+      "analytic_native_max_error": 0.0,
+      "kinetic_change_minus_boundary_work_J": -20.90274411457055,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 44,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -18.55693644847274,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 45,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -16.883053160800664,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 46,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -16.06874935876479,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 53,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -13.235255753617551,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 54,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -14.86180568792308,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 55,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -14.574823969703282,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 63,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -245.07252780184837,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 64,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -249.35421146776966,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 65,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -239.5880516277019,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 66,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -267.2992491790745,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 73,
+      "analytic_native_max_error": 0.0,
+      "kinetic_change_minus_boundary_work_J": -189.3213975175923,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 74,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -176.21355377038086,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 75,
+      "analytic_native_max_error": 0.0,
+      "kinetic_change_minus_boundary_work_J": -189.3213975175923,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 82,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -145.18430225346293,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 83,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -153.09078157836686,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 84,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -143.05274615530993,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 91,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -103.61825347185996,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 92,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -86.32220849562196,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "size",
+      "source_row": 93,
+      "analytic_native_max_error": 3.907985046680551e-14,
+      "kinetic_change_minus_boundary_work_J": -72.45411629002948,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 25,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -35.21508339350168,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 26,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -32.56137520558055,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 27,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -36.56417599949526,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 35,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -19.880957063484573,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 36,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -20.70768432556363,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 37,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -19.525595642861557,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 44,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -16.00825977974077,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 45,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -14.468374160777117,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 46,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -13.77225294700645,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 53,
+      "analytic_native_max_error": 8.526512829121202e-14,
+      "kinetic_change_minus_boundary_work_J": -11.753516110862712,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 54,
+      "analytic_native_max_error": 1.9895196601282805e-13,
+      "kinetic_change_minus_boundary_work_J": -13.647653518957561,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 55,
+      "analytic_native_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_boundary_work_J": -13.807209808682167,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 63,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -264.2870515366142,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 64,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -278.2567589648656,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 65,
+      "analytic_native_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_boundary_work_J": -269.67798996321085,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 66,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -298.36538175645956,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 73,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -172.47409117112082,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 74,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -159.7141358884615,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 75,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -172.47409117112082,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 82,
+      "analytic_native_max_error": 8.881784197001252e-16,
+      "kinetic_change_minus_boundary_work_J": -120.57515533926863,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 83,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -127.35036418397044,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 84,
+      "analytic_native_max_error": 4.440892098500626e-16,
+      "kinetic_change_minus_boundary_work_J": -119.51270486295581,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 91,
+      "analytic_native_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_boundary_work_J": -92.84832104185384,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 92,
+      "analytic_native_max_error": 2.220446049250313e-16,
+      "kinetic_change_minus_boundary_work_J": -79.3967715890335,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    },
+    {
+      "model": "angle",
+      "source_row": 93,
+      "analytic_native_max_error": 3.907985046680551e-14,
+      "kinetic_change_minus_boundary_work_J": -73.22429268020937,
+      "native_law_check_passed": true,
+      "experimental_full_state_validated": false
+    }
+  ],
+  "binary_sha256": "3fa3ee35e9d9d1cae0fca297cc4e2356db0d590f033c442cd2bd950ddb5a8a70",
+  "all_native_predictions_reproduced": true,
+  "actual_specimen_geometry_validated": false
+}

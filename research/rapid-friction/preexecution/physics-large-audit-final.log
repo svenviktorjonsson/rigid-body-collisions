@@ -1,0 +1,68 @@
+{
+  "record_count": 174,
+  "qualified_benchmarks": {
+    "3d_sphere": {
+      "median_s": {
+        "reference": 13.280505561,
+        "candidate": 1.752767971
+      },
+      "ratio": 7.576875993131666,
+      "record_directory": "results-spatial"
+    },
+    "2d_shake9": {
+      "median_s": {
+        "reference": 5.003431284999999,
+        "candidate": 0.216925447
+      },
+      "ratio": 23.06521136268535,
+      "record_directory": "results-planar-optimized",
+      "adapter_process_median_s": {
+        "reference": 5.009658386999945,
+        "candidate": 0.22064112199950614
+      }
+    },
+    "2d_shake25": {
+      "median_s": {
+        "reference": 13.070366567999999,
+        "candidate": 0.8349467270000002
+      },
+      "ratio": 15.654132348015057,
+      "record_directory": "results-planar-optimized",
+      "adapter_process_median_s": {
+        "reference": 13.081778752999526,
+        "candidate": 0.8420663080032682
+      }
+    }
+  },
+  "directories": {
+    "results": {
+      "records": 10,
+      "qualified_references": 0
+    },
+    "results-spatial": {
+      "records": 26,
+      "qualified_references": 1
+    },
+    "results-planar-resolution": {
+      "records": 12,
+      "qualified_references": 0
+    },
+    "results-planar-shake": {
+      "records": 12,
+      "qualified_references": 0
+    },
+    "results-planar-tight": {
+      "records": 50,
+      "qualified_references": 2
+    },
+    "results-planar-optimized": {
+      "records": 34,
+      "qualified_references": 2
+    },
+    "results-large-irregular": {
+      "records": 30,
+      "qualified_references": 0
+    }
+  },
+  "passed": true
+}

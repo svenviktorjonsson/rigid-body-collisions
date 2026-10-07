@@ -1,0 +1,2102 @@
+[
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.00028571428571427804,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0002857142857142857,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.00028571428571427804,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0002857142857142857,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-11
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-11
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -2.8571450760850325e-11,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -2.857142857142857e-11,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-11
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-11
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -2.8571450760850325e-11,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -2.857142857142857e-11,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-11
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-11
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0000000025,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-07
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-07
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -2.857142857304318e-07,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -2.857142857142857e-07,
+      0.0
+    ],
+    "energy_after_J": 0.7142857167857143,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-07
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-07
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -2.857142857304318e-07,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -2.857142857142857e-07,
+      0.0
+    ],
+    "energy_after_J": 0.7142857167857143,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      5e-07
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -5e-07
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0025,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -0.0002857142857143058,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0002857142857142857,
+      0.0
+    ],
+    "energy_after_J": 0.7167857142857144,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -0.0002857142857143058,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0002857142857142857,
+      0.0
+    ],
+    "energy_after_J": 0.7167857142857144,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.25,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -0.0020000000000000018,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0019999999999999983,
+      0.0
+    ],
+    "energy_after_J": 0.9900000000000001,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      -0.19999999999999984,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      4.9999999999999964,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      4.9999999999999964,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.005
+    ],
+    "residual_m_s": 1.1657341758564144e-15,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      -0.0028571428571428636,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.002857142857142857,
+      0.0
+    ],
+    "energy_after_J": 0.9642857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.005
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.005
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0125
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0125
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0125
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0125
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": false,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0125
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      -0.0125
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7122353914497941,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      -0.2877646085502059,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.158144637686373,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.158144637686373,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 3.858094399511458e-16,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7122353914497941,
+    "energy_before_J": 2.0,
+    "gap_m": -0.001,
+    "impulse_A_N_s": [
+      -0.2877646085502059,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.158144637686373,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.158144637686373,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 3.858094399511458e-16,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142857142857143,
+    "energy_before_J": 2.0,
+    "gap_m": 0,
+    "impulse_A_N_s": [
+      -0.2857142857142857,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857142857142,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.714285714489796,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      -0.28571428551020395,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857141326529,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857141326529,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 3.885780588963606e-16,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.714285714489796,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-10,
+    "impulse_A_N_s": [
+      -0.28571428551020395,
+      0.0,
+      1.0
+    ],
+    "normal_impulse_N_s": 1.0,
+    "omega_A_rad_s": [
+      0.0,
+      7.142857141326529,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142857141326529,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 3.885780588963606e-16,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0000000025,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142877575925657,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      -0.2857122449074343,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      7.142841836716473,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142841836716473,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7142877575925657,
+    "energy_before_J": 2.0,
+    "gap_m": 1e-06,
+    "impulse_A_N_s": [
+      -0.2857122449074343,
+      0.0,
+      0.99995
+    ],
+    "normal_impulse_N_s": 0.99995,
+    "omega_A_rad_s": [
+      0.0,
+      7.142841836716473,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.142841836716473,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0025,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7188170865764794,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      -0.2836829134235208,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      7.127533199765962,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.127533199765962,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.7188170865764794,
+    "energy_before_J": 2.0,
+    "gap_m": 0.001,
+    "impulse_A_N_s": [
+      -0.2836829134235208,
+      0.0,
+      0.95
+    ],
+    "normal_impulse_N_s": 0.95,
+    "omega_A_rad_s": [
+      0.0,
+      7.127533199765962,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      7.127533199765962,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 1.25,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 1.0002500000000003,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      -0.19999999999999973,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      5.249999999999994,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      5.249999999999994,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 2.0851376181241225e-15,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "energy_after_J": 0.9837770382695508,
+    "energy_before_J": 2.0,
+    "gap_m": 0.01,
+    "impulse_A_N_s": [
+      -0.26622296173044924,
+      0.0,
+      0.5
+    ],
+    "normal_impulse_N_s": 0.5,
+    "omega_A_rad_s": [
+      0.0,
+      6.988352745424292,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      6.988352745424292,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 4.170275236248245e-16,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 0.4,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  },
+  {
+    "common_point": true,
+    "delta_angular_momentum_kg_m2_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_linear_momentum_kg_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "endpoint_predicted_delta_L": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "energy_after_J": 2.0,
+    "energy_before_J": 2.0,
+    "gap_m": 0.025,
+    "impulse_A_N_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal_impulse_N_s": 0.0,
+    "omega_A_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "omega_B_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pair_mu": 1,
+    "point_A_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "point_B_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_m_s": 0.0,
+    "step_s": 0.01
+  }
+]

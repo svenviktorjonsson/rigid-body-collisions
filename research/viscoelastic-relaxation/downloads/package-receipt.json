@@ -1,0 +1,9 @@
+{
+  "zip_name": "physics-model-update-20261007.zip",
+  "bytes": 1147179,
+  "entry_count": 50,
+  "sha256": "f1699002dbe1672caa7cda7c06f1dbd4354f3dfe89c29663b96fd74904c8fe56",
+  "source_checkpoint": "cc0340016ccd8b5262ed645fc41947369a60bc0c",
+  "integrity_verified": true,
+  "every_member_matches_source_bytes": true
+}

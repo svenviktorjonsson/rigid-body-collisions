@@ -1,0 +1,905 @@
+{
+  "captured": {
+    "projection_merit": 2.215724309805177e-09,
+    "FB_merit": 2.2157274641418716e-09,
+    "max_residual_difference": 6.445583653537932e-11,
+    "max_J_difference": 2.359187210121405e-05,
+    "projection_gradient_inf": 0.000296721170968323,
+    "FB_gradient_inf": 0.0002967219938661841,
+    "projection_J_singular_values": [
+      25.960320476447755,
+      22.912172781284017,
+      14.928358141914147,
+      14.928358141914135,
+      14.48844344669999,
+      14.48844344669999,
+      10.994959379576482,
+      10.994959379576471,
+      10.306456816506001,
+      9.933237412807838,
+      9.897933197606033,
+      9.897933197606031,
+      9.753990724796978,
+      9.753990724796973,
+      9.714659062956256,
+      9.429229698867136,
+      9.165292289196456,
+      9.10688980828188,
+      9.10688980828188,
+      8.808356072452002,
+      8.271017803692864,
+      8.08575168467463,
+      7.349064448017983,
+      6.725501943190762,
+      6.344600665363418,
+      6.1714335343402595,
+      5.518378014929728,
+      5.464991813161232,
+      5.118398473656778,
+      4.896038014153863,
+      4.606482230358138,
+      3.4924012429993256,
+      3.413898589948147,
+      3.1324424930815185,
+      3.0928005621686125,
+      3.053342207806384,
+      2.818284878236485,
+      2.7943911777092185,
+      2.020906181000556,
+      1.3442590956298366,
+      1.0166093737915813,
+      0.00011448170946108976
+    ],
+    "projection_J_rank_relative1e12": 42,
+    "contacts": [
+      {
+        "normal": 0,
+        "pn": 0.0,
+        "normal_velocity": 24.226903426600856,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          14,
+          15
+        ],
+        "slip_velocity": [
+          -40.022759042287795,
+          0.09680398162219551
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 1,
+        "pn": 0.0,
+        "normal_velocity": 366.835036232734,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          16,
+          17
+        ],
+        "slip_velocity": [
+          2.653850883100361,
+          -2.199990621129617
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 2,
+        "pn": 5.056903505581718e-05,
+        "normal_velocity": 0.0,
+        "scaled_pressure": 9.604886595757529e-05,
+        "tangent_rows": [
+          18,
+          19
+        ],
+        "slip_velocity": [
+          0.7942063356089261,
+          40.686843220929795
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.9784228378324482e-19
+      },
+      {
+        "normal": 3,
+        "pn": 0.0,
+        "normal_velocity": 45.932180927917344,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          20,
+          21
+        ],
+        "slip_velocity": [
+          -0.2326982689491488,
+          -0.7505730902717123
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 4,
+        "pn": 1.3149224659109693,
+        "normal_velocity": -3.102141818511761e-05,
+        "scaled_pressure": 7.465151052551642,
+        "tangent_rows": [
+          22,
+          23
+        ],
+        "slip_velocity": [
+          0.0002897701603852276,
+          4.848218158609932e-05
+        ],
+        "normal_projection": -3.102141818461104e-05,
+        "normal_FB": -3.102148264044757e-05,
+        "tangent_residual_norm": 2.7366587489747492e-05
+      },
+      {
+        "normal": 5,
+        "pn": 0.0,
+        "normal_velocity": 349.81155734462675,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          24,
+          25
+        ],
+        "slip_velocity": [
+          39.58010879087179,
+          -2.604027396747244
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 6,
+        "pn": 0.0,
+        "normal_velocity": 269.6125257996341,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          26,
+          27
+        ],
+        "slip_velocity": [
+          0.8733070631789218,
+          39.99798659330761
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 7,
+        "pn": 1.0045070890168812,
+        "normal_velocity": 7.846387910445674e-06,
+        "scaled_pressure": 4.1554401777213625,
+        "tangent_rows": [
+          28,
+          29
+        ],
+        "slip_velocity": [
+          -6.73537007545022e-06,
+          -8.37014800214586e-06
+        ],
+        "normal_projection": 7.846387910779762e-06,
+        "normal_FB": 7.846380501774775e-06,
+        "tangent_residual_norm": 1.0743583556295202e-05
+      },
+      {
+        "normal": 8,
+        "pn": 1.299450696721837,
+        "normal_velocity": 1.809628199156421e-05,
+        "scaled_pressure": 8.135694922583367,
+        "tangent_rows": [
+          30,
+          31
+        ],
+        "slip_velocity": [
+          -3.102141819371837e-05,
+          4.848217736744785e-05
+        ],
+        "normal_projection": 1.809628199131327e-05,
+        "normal_FB": 1.8096261864997132e-05,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 9,
+        "pn": 0.0,
+        "normal_velocity": 367.4195943176299,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          32,
+          33
+        ],
+        "slip_velocity": [
+          -0.8715372243178185,
+          -5.277256262239727
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 10,
+        "pn": 0.0,
+        "normal_velocity": 415.9508669452089,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          34,
+          35
+        ],
+        "slip_velocity": [
+          -1.0178467753413059,
+          -5.05927813403958
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 11,
+        "pn": 0.0,
+        "normal_velocity": 1.1433607255456915,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          36,
+          37
+        ],
+        "slip_velocity": [
+          0.23269826896461954,
+          -6.922385815289309
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 12,
+        "pn": 0.0,
+        "normal_velocity": 124.4851281331937,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          38,
+          39
+        ],
+        "slip_velocity": [
+          3.227787483676407,
+          -5.44989925781135
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      },
+      {
+        "normal": 13,
+        "pn": 0.0,
+        "normal_velocity": 7.389209025591258,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          40,
+          41
+        ],
+        "slip_velocity": [
+          0.5344850528524693,
+          39.60048455386511
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 0.0
+      }
+    ],
+    "full_original_gate": {
+      "accepted": false,
+      "residual_m_s": 3.102141818461104e-05,
+      "passive_change_bound_J": -3.601423593556806,
+      "passivity_scale": 8.285062324042514,
+      "upper_bounds_ok": true,
+      "normal_min": 0.0
+    }
+  },
+  "projection-jac-scaled": {
+    "projection_merit": 4.414009980742276e-12,
+    "FB_merit": 4.4140103361518825e-12,
+    "max_residual_difference": 1.2084300468209817e-13,
+    "max_J_difference": 9.389290003269934e-07,
+    "projection_gradient_inf": 2.3082480336651625e-06,
+    "FB_gradient_inf": 2.3082485473759274e-06,
+    "projection_J_singular_values": [
+      26.689680969669002,
+      20.28255540446098,
+      15.705498740025286,
+      14.928358141914146,
+      14.928358141914137,
+      14.48844344669999,
+      12.12417338261493,
+      11.250424784026254,
+      10.994959379576477,
+      10.572948079496442,
+      10.420045156895418,
+      9.89793319760603,
+      9.89793319760603,
+      9.8697195869927,
+      9.753990724796973,
+      9.457514244668245,
+      9.23372492117692,
+      9.106889808281881,
+      9.106889808281878,
+      8.991274982761183,
+      8.52196823545237,
+      8.085751684674634,
+      7.349064448017986,
+      6.54847990781179,
+      5.8921141357212425,
+      5.596642252009141,
+      5.488248649110974,
+      5.469057334719598,
+      4.9083834930355055,
+      4.619096595832963,
+      4.249515305915388,
+      3.4952249006272607,
+      3.413898589948131,
+      3.293711943853466,
+      3.0533422078063843,
+      2.8532390181259943,
+      2.8182848782364855,
+      2.811112788381723,
+      1.987465101262028,
+      1.3442590956298381,
+      1.1135870567348949,
+      4.680912919519463e-05
+    ],
+    "projection_J_rank_relative1e12": 42,
+    "contacts": [
+      {
+        "normal": 0,
+        "pn": 0.0,
+        "normal_velocity": 24.226903426600856,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          14,
+          15
+        ],
+        "slip_velocity": [
+          -40.022759042287795,
+          0.09680398162219551
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 2.7264418189186865e-19
+      },
+      {
+        "normal": 1,
+        "pn": -6.194981726848427e-36,
+        "normal_velocity": 366.835036232734,
+        "scaled_pressure": -1.8915399183175583e-35,
+        "tangent_rows": [
+          16,
+          17
+        ],
+        "slip_velocity": [
+          2.653850883100361,
+          -2.199990621129617
+        ],
+        "normal_projection": -1.8915399183175583e-35,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 4.2714136636207713e-19
+      },
+      {
+        "normal": 2,
+        "pn": 5.0569035055817234e-05,
+        "normal_velocity": -1.3552527156068805e-20,
+        "scaled_pressure": 9.60488659575754e-05,
+        "tangent_rows": [
+          18,
+          19
+        ],
+        "slip_velocity": [
+          0.7942063356089261,
+          40.686843220929795
+        ],
+        "normal_projection": -1.2870572503142028e-20,
+        "normal_FB": -1.3552527156068805e-20,
+        "tangent_residual_norm": 6.041291432836639e-19
+      },
+      {
+        "normal": 3,
+        "pn": 9.27277050023718e-13,
+        "normal_velocity": 45.93218905042637,
+        "scaled_pressure": 4.7263748219414364e-12,
+        "tangent_rows": [
+          20,
+          21
+        ],
+        "slip_velocity": [
+          -0.23267939149480954,
+          -0.7505704613215518
+        ],
+        "normal_projection": 4.7263748219414364e-12,
+        "normal_FB": 4.725109192804666e-12,
+        "tangent_residual_norm": 5.863976259096944e-12
+      },
+      {
+        "normal": 4,
+        "pn": 1.5662711401687326,
+        "normal_velocity": -1.470617275733943e-06,
+        "scaled_pressure": 8.892121743856148,
+        "tangent_rows": [
+          22,
+          23
+        ],
+        "slip_velocity": [
+          0.0003078522783561688,
+          4.857323768298408e-05
+        ],
+        "normal_projection": -1.470617275905248e-06,
+        "normal_FB": -1.4706173967482528e-06,
+        "tangent_residual_norm": 9.085298075285042e-08
+      },
+      {
+        "normal": 5,
+        "pn": 7.269972300760954e-21,
+        "normal_velocity": 349.81155734462675,
+        "scaled_pressure": 2.248457441874372e-20,
+        "tangent_rows": [
+          24,
+          25
+        ],
+        "slip_velocity": [
+          39.58010879087179,
+          -2.604027396747244
+        ],
+        "normal_projection": 2.248457441874372e-20,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 4.299297007580537e-20
+      },
+      {
+        "normal": 6,
+        "pn": 9.462879014392048e-20,
+        "normal_velocity": 269.6125257996341,
+        "scaled_pressure": 5.839952888082378e-19,
+        "tangent_rows": [
+          26,
+          27
+        ],
+        "slip_velocity": [
+          0.8733070631789218,
+          39.99798659330761
+        ],
+        "normal_projection": 5.839952888082378e-19,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 5.40671594812078e-19
+      },
+      {
+        "normal": 7,
+        "pn": 1.004506160323663,
+        "normal_velocity": -1.2834691642815699e-11,
+        "scaled_pressure": 4.1554363359076465,
+        "tangent_rows": [
+          28,
+          29
+        ],
+        "slip_velocity": [
+          7.30260296677443e-12,
+          -1.5373258221984543e-12
+        ],
+        "normal_projection": -1.2834942076301085e-11,
+        "normal_FB": -1.283506634308651e-11,
+        "tangent_residual_norm": 7.462665795407219e-12
+      },
+      {
+        "normal": 8,
+        "pn": 1.189044629765166,
+        "normal_velocity": 1.4164017514417537e-08,
+        "scaled_pressure": 7.444456631951964,
+        "tangent_rows": [
+          30,
+          31
+        ],
+        "slip_velocity": [
+          -1.4706172865551481e-06,
+          4.8573233201431795e-05
+        ],
+        "normal_projection": 1.4164018150839067e-08,
+        "normal_FB": 1.4164017514417537e-08,
+        "tangent_residual_norm": 1.4976114063273454e-06
+      },
+      {
+        "normal": 9,
+        "pn": -1.7842553240270216e-13,
+        "normal_velocity": 367.4195992470137,
+        "scaled_pressure": -4.459549544638858e-13,
+        "tangent_rows": [
+          32,
+          33
+        ],
+        "slip_velocity": [
+          -0.8715397121880573,
+          -5.277280868649483
+        ],
+        "normal_projection": -4.459549544638858e-13,
+        "normal_FB": -4.547473508864641e-13,
+        "tangent_residual_norm": 1.324872550861717e-11
+      },
+      {
+        "normal": 10,
+        "pn": -3.528692859530356e-14,
+        "normal_velocity": 415.95087287606486,
+        "scaled_pressure": -1.0752156078381345e-13,
+        "tangent_rows": [
+          34,
+          35
+        ],
+        "slip_velocity": [
+          -1.0178470916067388,
+          -5.059304924550704
+        ],
+        "normal_projection": -1.0752156078381345e-13,
+        "normal_FB": -1.1368683772161603e-13,
+        "tangent_residual_norm": 1.3030451387280598e-11
+      },
+      {
+        "normal": 11,
+        "pn": 1.4649503157070724e-13,
+        "normal_velocity": 1.143358096595531,
+        "scaled_pressure": 8.960393988530803e-13,
+        "tangent_rows": [
+          36,
+          37
+        ],
+        "slip_velocity": [
+          0.2326793915102816,
+          -6.922393937798338
+        ],
+        "normal_projection": 8.960393988530803e-13,
+        "normal_FB": 8.959499808725013e-13,
+        "tangent_residual_norm": 6.6477234342043855e-12
+      },
+      {
+        "normal": 12,
+        "pn": 2.5262530529917413e-20,
+        "normal_velocity": 124.4851281331937,
+        "scaled_pressure": 1.163713979799445e-19,
+        "tangent_rows": [
+          38,
+          39
+        ],
+        "slip_velocity": [
+          3.227787483676407,
+          -5.44989925781135
+        ],
+        "normal_projection": 1.163713979799445e-19,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.1724043593417103e-19
+      },
+      {
+        "normal": 13,
+        "pn": -1.438934875391679e-19,
+        "normal_velocity": 7.389209025591258,
+        "scaled_pressure": -4.912377742126843e-19,
+        "tangent_rows": [
+          40,
+          41
+        ],
+        "slip_velocity": [
+          0.5344850528524693,
+          39.60048455386511
+        ],
+        "normal_projection": -4.912377742126843e-19,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.6181326845994584e-19
+      }
+    ],
+    "full_original_gate": {
+      "accepted": false,
+      "residual_m_s": 1.4976114063273454e-06,
+      "passive_change_bound_J": -3.601457584343964,
+      "passivity_scale": 8.285101462982539,
+      "upper_bounds_ok": true,
+      "normal_min": -1.7842553240270216e-13
+    }
+  },
+  "FB-jac-scaled": {
+    "projection_merit": 4.41410613322255e-12,
+    "FB_merit": 4.414106490032462e-12,
+    "max_residual_difference": 1.2130714845576566e-13,
+    "max_J_difference": 9.389394763914538e-07,
+    "projection_gradient_inf": 2.3082414025394336e-06,
+    "FB_gradient_inf": 2.3082419154728467e-06,
+    "projection_J_singular_values": [
+      26.697417141422207,
+      20.26661614658785,
+      15.705498740025286,
+      14.928358141914147,
+      14.928358141914144,
+      14.488443446699987,
+      12.124173382614927,
+      11.257227465279847,
+      10.99495937957648,
+      10.572948079496447,
+      10.420317971995056,
+      9.897933197606031,
+      9.897933197606028,
+      9.87582604107254,
+      9.753990724796976,
+      9.459022296478627,
+      9.233763135788454,
+      9.10688980828188,
+      9.106889808281876,
+      8.980962234838039,
+      8.518224621707054,
+      8.085751684674626,
+      7.349064448017986,
+      6.890386172609663,
+      5.932523300847716,
+      5.644512675028286,
+      5.596642252009141,
+      5.473615685169179,
+      4.91900802097932,
+      4.457711909350503,
+      4.2495153059153905,
+      3.682395886947745,
+      3.413898589948133,
+      3.2812419789753773,
+      3.0533422078063843,
+      2.8532390181259917,
+      2.8182848782364855,
+      2.5658129335927233,
+      1.9692612507791178,
+      1.3442590956298366,
+      1.1131072104434991,
+      4.6809117246870936e-05
+    ],
+    "projection_J_rank_relative1e12": 42,
+    "contacts": [
+      {
+        "normal": 0,
+        "pn": 0.0,
+        "normal_velocity": 24.226903426600856,
+        "scaled_pressure": 0.0,
+        "tangent_rows": [
+          14,
+          15
+        ],
+        "slip_velocity": [
+          -40.022759042287795,
+          0.09680398162219551
+        ],
+        "normal_projection": 0.0,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.3888040974816624e-19
+      },
+      {
+        "normal": 1,
+        "pn": -2.684843123740995e-26,
+        "normal_velocity": 366.835036232734,
+        "scaled_pressure": -8.197744831057118e-26,
+        "tangent_rows": [
+          16,
+          17
+        ],
+        "slip_velocity": [
+          2.653850883100361,
+          -2.199990621129617
+        ],
+        "normal_projection": -8.197744831057118e-26,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.1134042884912235e-19
+      },
+      {
+        "normal": 2,
+        "pn": 5.0569035055817234e-05,
+        "normal_velocity": 2.574980159653073e-19,
+        "scaled_pressure": 9.60488659575754e-05,
+        "tangent_rows": [
+          18,
+          19
+        ],
+        "slip_velocity": [
+          0.7942063356089261,
+          40.686843220929795
+        ],
+        "normal_projection": 2.5741145006284057e-19,
+        "normal_FB": 2.574980159653073e-19,
+        "tangent_residual_norm": 1.5947379337123922e-18
+      },
+      {
+        "normal": 3,
+        "pn": 9.269605131347561e-13,
+        "normal_velocity": 45.93218905042078,
+        "scaled_pressure": 4.724761418501584e-12,
+        "tangent_rows": [
+          20,
+          21
+        ],
+        "slip_velocity": [
+          -0.23267939149270678,
+          -0.7505704613223028
+        ],
+        "normal_projection": 4.724761418501584e-12,
+        "normal_FB": 4.725109192804666e-12,
+        "tangent_residual_norm": 5.864070483438751e-12
+      },
+      {
+        "normal": 4,
+        "pn": 1.566270813665606,
+        "normal_velocity": -1.4706333764102908e-06,
+        "scaled_pressure": 8.892119890214415,
+        "tangent_rows": [
+          22,
+          23
+        ],
+        "slip_velocity": [
+          0.0003078522780426418,
+          4.857323006063688e-05
+        ],
+        "normal_projection": -1.4706333763394966e-06,
+        "normal_FB": -1.470633497646645e-06,
+        "tangent_residual_norm": 9.085501576692914e-08
+      },
+      {
+        "normal": 5,
+        "pn": 9.128959139860612e-18,
+        "normal_velocity": 349.81155734462675,
+        "scaled_pressure": 2.823404995977519e-17,
+        "tangent_rows": [
+          24,
+          25
+        ],
+        "slip_velocity": [
+          39.58010879087179,
+          -2.604027396747244
+        ],
+        "normal_projection": 2.823404995977519e-17,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 9.908408271598989e-20
+      },
+      {
+        "normal": 6,
+        "pn": 3.1727228246013738e-18,
+        "normal_velocity": 269.6125257996341,
+        "scaled_pressure": 1.9580248034911666e-17,
+        "tangent_rows": [
+          26,
+          27
+        ],
+        "slip_velocity": [
+          0.8733070631789218,
+          39.99798659330761
+        ],
+        "normal_projection": 1.9580248034911666e-17,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 3.929610846471581e-19
+      },
+      {
+        "normal": 7,
+        "pn": 1.0045061603210241,
+        "normal_velocity": -1.2834691642815699e-11,
+        "scaled_pressure": 4.155436335896731,
+        "tangent_rows": [
+          28,
+          29
+        ],
+        "slip_velocity": [
+          7.30437932361383e-12,
+          -1.5379919560132294e-12
+        ],
+        "normal_projection": -1.2834942076301085e-11,
+        "normal_FB": -1.283506634308651e-11,
+        "tangent_residual_norm": 7.464541282624046e-12
+      },
+      {
+        "normal": 8,
+        "pn": 1.1890447570505558,
+        "normal_velocity": 1.4164332817756531e-08,
+        "scaled_pressure": 7.44445742886954,
+        "tangent_rows": [
+          30,
+          31
+        ],
+        "slip_velocity": [
+          -1.4706333852330944e-06,
+          4.85732255790846e-05
+        ],
+        "normal_projection": 1.41643323344401e-08,
+        "normal_FB": 1.4164332817756531e-08,
+        "tangent_residual_norm": 1.497627571338011e-06
+      },
+      {
+        "normal": 9,
+        "pn": -1.8813372407239132e-13,
+        "normal_velocity": 367.41959924701905,
+        "scaled_pressure": -4.702195096297436e-13,
+        "tangent_rows": [
+          32,
+          33
+        ],
+        "slip_velocity": [
+          -0.8715397121969755,
+          -5.277280868636636
+        ],
+        "normal_projection": -4.702195096297436e-13,
+        "normal_FB": -4.547473508864641e-13,
+        "tangent_residual_norm": 1.3269345643351769e-11
+      },
+      {
+        "normal": 10,
+        "pn": 3.104893219871801e-12,
+        "normal_velocity": 415.95087287607083,
+        "scaled_pressure": 9.460811080965778e-12,
+        "tangent_rows": [
+          34,
+          35
+        ],
+        "slip_velocity": [
+          -1.0178470916165607,
+          -5.059304924536893
+        ],
+        "normal_projection": 9.460811080965778e-12,
+        "normal_FB": 9.43600753089413e-12,
+        "tangent_residual_norm": 1.9964873797593024e-11
+      },
+      {
+        "normal": 11,
+        "pn": 1.4650581472047364e-13,
+        "normal_velocity": 1.1433580965962822,
+        "scaled_pressure": 8.961053541754611e-13,
+        "tangent_rows": [
+          36,
+          37
+        ],
+        "slip_velocity": [
+          0.2326793915081793,
+          -6.92239393779275
+        ],
+        "normal_projection": 8.961053541754611e-13,
+        "normal_FB": 8.961720254774264e-13,
+        "tangent_residual_norm": 6.647828905316121e-12
+      },
+      {
+        "normal": 12,
+        "pn": 5.598483298790301e-19,
+        "normal_velocity": 124.4851281331937,
+        "scaled_pressure": 2.578931383283433e-18,
+        "tangent_rows": [
+          38,
+          39
+        ],
+        "slip_velocity": [
+          3.227787483676407,
+          -5.44989925781135
+        ],
+        "normal_projection": 2.578931383283433e-18,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 2.563321045848221e-19
+      },
+      {
+        "normal": 13,
+        "pn": -5.5109408468757324e-18,
+        "normal_velocity": 7.389209025591258,
+        "scaled_pressure": -1.8813793186436622e-17,
+        "tangent_rows": [
+          40,
+          41
+        ],
+        "slip_velocity": [
+          0.5344850528524693,
+          39.60048455386511
+        ],
+        "normal_projection": -1.8813793186436622e-17,
+        "normal_FB": 0.0,
+        "tangent_residual_norm": 1.6948107421236243e-21
+      }
+    ],
+    "full_original_gate": {
+      "accepted": false,
+      "residual_m_s": 1.497627571338011e-06,
+      "passive_change_bound_J": -3.601457583002245,
+      "passivity_scale": 8.285101464204004,
+      "upper_bounds_ok": true,
+      "normal_min": -1.8813372407239132e-13
+    }
+  }
+}

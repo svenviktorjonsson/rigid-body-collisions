@@ -1,0 +1,33 @@
+# Independent 74-row translation-position review
+
+The observer-only source is `23751e6a29b0c5f8241e16581dd54ac172a80bdf`. Its normal-only capture is `research/translation-position-diagnostic/results/rejected-normal-system.json`, SHA-256 `c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617`. All 74 dependencies are −1 and all lower bounds are zero. The original upper bounds and 1e-8 m/s mechanical tolerance remain unchanged. This review changes no production matrix, body, binary or authored study.
+
+## What is established
+
+No tested output satisfies the strict original normal projection, finite pressure/bounds and finite passive-energy gate. **The separate exact finite-bound certificate now proves infeasibility of this captured bounded numerical repair problem.** A floating-point eigensolver finds the assembled mobility positive semidefinite up to approximately 9e-16 rounding error, with weak singular values around 3.03e-9, 7.06e-12, 4.13e-12 and 1.41e-13. Choosing a numerical rank cutoff cannot by itself prove that a physical mode is absent.
+
+Direct primal/nullspace linear programs return unknown or infeasible status in their numerical formulations. Those statuses are retained but are not proofs. Approximate Farkas searches produce positive mobility-response entries and therefore fail certificate validation. Local certificate refinement also fails. No claim of geometrically incompatible bodies follows from these unsuccessful searches.
+
+There is, however, a rigorously validated pressure lower bound. A nonnegative weighting supported on normal rows 11, 54 and 55 has approximate weights 0.11489686, 0.43524438 and 0.44985876. Its weighted target is 4.9386343e-5 m/s. `validate_bound.py` treats both the stored matrix coefficients and the weights as exact binary rational numbers; it does not assume an approximate null vector is exact. The resulting weighted mobility row has positive entries only at columns 53, 54 and 55, with maximum 5.8091010e-16; all other entries are nonpositive.
+
+Let λ denote those exact nonnegative weights, `w = A p − b`, and ε the maximum positive entry of `λᵀ A`. For `p ≥ 0` and every `w_i ≥ −tolerance`,
+
+`ε Σ p_i ≥ λᵀ A p ≥ λᵀ b − tolerance Σ λ_i`.
+
+Consequently, every such pressure must satisfy **Σ p_i ≥ 84,998,250,951.95053 N s**. The exact numerator/denominator proof is retained in `validated-pressure-bound.json`. This is a necessary condition for physical normal feasibility. The earlier report incorrectly described the configured upper bounds as 1e30; the actual capture has **1e10 per row**. The independent finite-bound certificate in `../translation-position-certificate` bounds every positive weighted column against its actual upper bound and proves a residual lower bound of **3.1914751406e-5 m/s**, exceeding the original gate. My old proof metadata and prose are retained as `.historical` files; none of the raw failed solver attempts have changed. A large pressure norm can contain cancelling contact forces; it does not alone prove a large body displacement or kinetic correction.
+
+## Retained bounded attempts
+
+| Search | Maximum pressure (N s) | Original residual (m/s) | Accepted |
+|---|---:|---:|---|
+| Captured native iterate | 0.207 | 1.06071e-4 | No |
+| Warm SLSQP, maximum 3000 iterations | 1.34e11 | 63.71 | No |
+| Objective-scaled warm SLSQP | 1.10e11 | 211.34 | No |
+| Warm FB trust search, maximum 3000 evaluations | 170.76 | 5.48549e-5 | No |
+| Cold FB trust search | 6.62 | 5.48549e-5 | No |
+| Warm normal null/active search, at most 512 states | 4.38e8 | 2.63279 | No |
+| Cold normal null/active search, 512 states exhausted | 0.080 | 0.00157259 | No |
+
+SLSQP's large cancelling pressures do not qualify a repair; their actual normal velocities fail the original tolerance severely. A future solver output must still pass all original gates and report its pressure scale, actual correction velocity/energy and implications for pose displacement. The retained searches support an ill-conditioning diagnosis, with explicit failure limits. The newly validated finite-bound contradiction resolves this captured bounded matrix feasibility question: no exact passing repair exists under its original bounds. It does not prove the authored physical geometry is infeasible or that rotations/nonlinear contact re-query cannot repair it.
+
+Sources, exact observer input and import hashes are pinned by `provenance.json` and `diagnostic-source.zip`. Every solver trial and failed certificate search remains visible. No compliance, material, acceptance-tolerance, physical-geometry infeasibility or completed-trajectory claim is introduced.

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/spatial-analytic-clock/controls.py", line 14, in <module>
+    result=run(scene,binary=exe,**settings);state=np.asarray(result['states'])[:,0];t=np.asarray(result['times']);u=np.where(t<=.04,t,np.where(t<=.08,.08-t,t-.08));expected_p=np.column_stack([100+20*u,np.zeros((len(t),2))]);expected_q=Rotation.from_rotvec(np.column_stack([np.zeros((len(t),2)),5*u])).as_quat();p_error=float(np.max(abs(state[:,:3]-expected_p)));q_error=float(np.max(np.minimum(np.linalg.norm(state[:,3:7]-expected_q,axis=1),np.linalg.norm(state[:,3:7]+expected_q,axis=1))));assert p_error<=1e-13 and q_error<=1e-13;assert result['analytic_clock_policy']['enabled']
+  File "/home/viktor/.cache/vkf-physics-continuation/spatial_engine.py", line 165, in run
+    raise ValueError('coulomb requires start-phase contacts and zero restitution')
+ValueError: coulomb requires start-phase contacts and zero restitution

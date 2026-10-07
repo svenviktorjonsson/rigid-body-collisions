@@ -1,0 +1,40 @@
+{
+  "schema": "later-frozen-contact-diagnostics-manifest-v1",
+  "files": [
+    {
+      "path": "research/new-hull-contact-review/README.md",
+      "sha256": "bc6f20b2cd4425481427e51e014180f270fc5323867062f1c72092d568a6c4a5",
+      "bytes": 3308
+    },
+    {
+      "path": "research/new-hull-contact-review/fast_rotate_shake27_hulls7301-reference_0-position.json",
+      "sha256": "4fa299b16e80dd198e7d12817435a5f58df76dd846178d48d8fa00319939ecf3",
+      "bytes": 32222
+    },
+    {
+      "path": "research/new-hull-contact-review/fast_shake8_hulls42-reference_0.json",
+      "sha256": "e764c4d02bd4f99ed273251c2774f4bc606f7793dbdd714f91f5650eb01f9816",
+      "bytes": 314968
+    },
+    {
+      "path": "research/new-hull-contact-review/fast_shake8_hulls42-reference_1.json",
+      "sha256": "f3679d94080afaf9fbb5e6a12d37f522d65701188f1313caf0a78fb0e9f27b39",
+      "bytes": 213199
+    },
+    {
+      "path": "research/new-hull-contact-review/fast_shake8_hulls42-reference_2.json",
+      "sha256": "1d87207e8134af44ad7491cb7bfaae8787a7dc5e8ee57bf6ac80e4d90e7384ce",
+      "bytes": 5905
+    },
+    {
+      "path": "research/study_coulomb_new_failures.py",
+      "sha256": "c4fb4a95de7dc34cf5c5da7637ae509bad0e1c26b0e09cc006ecf1bfef3bd8e2",
+      "bytes": 2966
+    },
+    {
+      "path": "research/study_new_position_failure.py",
+      "sha256": "4c9f0494191e627a9092ea5f35f53c3398a0cbacadf132dd43b6ca5fdf386294",
+      "bytes": 2866
+    }
+  ]
+}

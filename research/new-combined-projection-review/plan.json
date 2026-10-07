@@ -1,0 +1,49 @@
+{
+  "schema": "prospective-projection-merit-recovery-v1",
+  "baseline_source": "3ce80f6e429ae5c9d5c0cf5f0022748e7f705fe4",
+  "capture_sha256": {
+    "research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c"
+  },
+  "source_sha256": {
+    "research/new-combined-projection-review/projection_more.h": "5c1a65b4a90a97a4457870f2a60342e858d1db6348866c36044bd55f4e3f2f0a",
+    "research/new-combined-projection-review/replay.cpp": "5efdbf061280a705b8e6d11b3e12f3b23d84f6e2c792319e49bbb26bf3edc325",
+    "research/new-combined-projection-review/controls.cpp": "294a913b9b8e75d78bc310d08076f4ab1e7ffcdd0547b89acc1256e1df4974f0",
+    "research/new-combined-projection-review/runner.py": "fc143f47a1edb4933b6cb1667ed9346385a29de269629b08d80c9fbff386dae7"
+  },
+  "variants": [
+    [
+      "projection-jac-scaled",
+      1,
+      1
+    ],
+    [
+      "projection-unscaled",
+      0,
+      1
+    ],
+    [
+      "FB-jac-scaled",
+      1,
+      0
+    ],
+    [
+      "FB-unscaled",
+      0,
+      0
+    ]
+  ],
+  "budgets": {
+    "maximum_rows": 64,
+    "svd_calls_per_trial": 1024,
+    "iteration_steps_per_trial": 1024,
+    "trial_count": 4
+  },
+  "controls": 9,
+  "execution_rule": "Parent publishes checkpoint before isolated research compilation/execution. Mandatory frozen SHA; read-only production/library/header guards. Native executables in ownresults only; no production builds/source/binary edits.",
+  "hypothesis": "Original projection-map residual plus analytic-Jacobian-column scaling can change numerical merit basin/trust conditioning without changing physical A,b,mu,bounds or tolerance. Comparators isolate merit vs scaling; no success assumed.",
+  "acceptance": "Original all-row normal/circular projection norm <= captured tolerance, nonnegative finite normal impulses below originalhi, finite original passivity bound; independently recomputed. Failed search leaves caller unchanged and retains last numerical candidate.",
+  "integration_rule": "Only after existing accepted stages all decline, so old22 accepted outputs stay unchanged. Research controls do not qualify trajectories; critic owns prospective23corpus wrapper tests.",
+  "timing_scope": "Collaborative workload; no performance ranking.",
+  "limitations": "Trust proposal may exhaust budget; retain every failure. No row deletion, physical regularization, larger friction capacity or relaxed gates.",
+  "stats_contract": "Fresh per-call Stats and local1024caps; aggregate externally only after return. Nonempty/reused counter stats reject unchanged."
+}

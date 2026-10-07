@@ -1,0 +1,18 @@
+{
+  "purpose": "Independently qualify a declared tighter numerical penetration slop in the same rapid translational disk scenes. The baseline 5mm Box2D slop retains its unqualified archives. Authored polygon collision skin stays .01m; circles keep radius .1m; mass/inertia/material/schedules/gates remain exact.",
+  "linear_slop_m": 0.000001,
+  "phases": [{"id": "tight_velocity128", "substeps": 128, "position_iterations": 12}],
+  "reference_levels": [
+    {"dt": 0.01, "primary_steps": 1000},
+    {"dt": 0.01, "primary_steps": 2000},
+    {"dt": 0.01, "primary_steps": 4000},
+    {"dt": 0.005, "primary_steps": 4000},
+    {"dt": 0.0025, "primary_steps": 4000}
+  ],
+  "candidate_primary_steps": [8, 32, 128, 512],
+  "candidate_substeps": [32, 128, 512],
+  "timing_repetitions": 3,
+  "rule": "All five prospective levels execute; BOTH quarter-budget edges of the final three must pass. Retain every earlier failed edge. Independent scene mass/inertia/containment/energy gates and positive friction telemetry required. Candidate settings must pass full original budgets, then one warmup and three alternating interleaved timings must pass and repeat states bitwise. Never rank an unqualified reference.",
+  "implementation": "Clone the already declared experimental Float64 Box2D2.4.1 source into a new cache tree, replacing only b2_linearSlop in b2_common.h from .005 to .000001. Derived default polygon radius changes, but the adapter explicitly installs original authored polygon/circle radii. All changed source bytes and the original precision manifest are recorded. Angular slop, AABB padding, friction and solver law stay unchanged. Experimental binary must not replace the baseline.",
+  "scope": "Synthetic 9/25-disk purely translational shaking. A qualified result does not resolve rotating containers or mixed/arbitrary polygons. No calibrated-material or Vektor target claim. Publish exact plan/code before compilation/execution."
+}

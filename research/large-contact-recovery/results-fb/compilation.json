@@ -1,0 +1,22 @@
+[
+  {
+    "command": [
+      "c++",
+      "-O3",
+      "-DNDEBUG",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-DSPATIAL_LAPACK_RECOVERY=1",
+      "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src",
+      "-I/home/viktor/.cache/physics-relation-20261005/deps/_deps/json-src/include",
+      "/home/viktor/.cache/vkf-physics-continuation/research/large-contact-recovery/prototype/component_fb.cpp",
+      "-o",
+      "/home/viktor/.cache/physics-large-fb-recovery-20261006/components_fb",
+      "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "/usr/lib/x86_64-linux-gnu/liblapack.so.3",
+      "/usr/lib/x86_64-linux-gnu/libblas.so.3"
+    ],
+    "exit": 0
+  }
+]

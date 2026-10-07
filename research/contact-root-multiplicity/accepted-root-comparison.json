@@ -1,0 +1,197 @@
+{
+  "schema": "accepted-root-mobility-multiplicity-review-v1",
+  "pairs": 12,
+  "distinct_contact_velocity_pairs": 0,
+  "cases": [
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "a8f6601cc02e4d3b266250ece2d49440228ff8da867a8c9d62e5c1b0b7b08cdd",
+      "accepted_root_count": 3,
+      "pairs": [
+        {
+          "left": "research/completion-large-contact-review/reference_0-sticking-mode-trials.json#0",
+          "right": "research/coulomb-normal/active-final-four-native.jsonl#3",
+          "left_residual_m_s": 6.128194898760647e-16,
+          "right_residual_m_s": 1.0071931996102838e-11,
+          "maximum_impulse_difference_N_s": 1.149214057249992e-11,
+          "maximum_contact_velocity_difference_m_s": 2.586966581969513e-11,
+          "mobility_quadratic_J": 3.980957527135748e-22,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        },
+        {
+          "left": "research/completion-large-contact-review/reference_0-sticking-mode-trials.json#0",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#11",
+          "left_residual_m_s": 6.128194898760647e-16,
+          "right_residual_m_s": 9.314784762054179e-12,
+          "maximum_impulse_difference_N_s": 1.062361310033566e-11,
+          "maximum_contact_velocity_difference_m_s": 2.3914487948853142e-11,
+          "mobility_quadratic_J": 3.4009681234361387e-22,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        },
+        {
+          "left": "research/coulomb-normal/active-final-four-native.jsonl#3",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#11",
+          "left_residual_m_s": 1.0071931996102838e-11,
+          "right_residual_m_s": 9.314784762054179e-12,
+          "maximum_impulse_difference_N_s": 8.6852747216426e-13,
+          "maximum_contact_velocity_difference_m_s": 1.95517787084199e-12,
+          "mobility_quadratic_J": 2.2820386611058258e-24,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "capture_sha256": "b50ea9a0f145e4878ba1f8e6683ab125b4fb9418cc138de61d29c2f76abfbefd",
+      "accepted_root_count": 3,
+      "pairs": [
+        {
+          "left": "research/completion-large-contact-review/reference_2-fb-trf-normal-qp-10-subset.json",
+          "right": "research/coulomb-normal/active-final-four-native.jsonl#2",
+          "left_residual_m_s": 2.046432909596603e-16,
+          "right_residual_m_s": 8.868568375544756e-14,
+          "maximum_impulse_difference_N_s": 1.6073947728401095e-14,
+          "maximum_contact_velocity_difference_m_s": 8.231775229079842e-14,
+          "mobility_quadratic_J": 1.2763377206033517e-27,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        },
+        {
+          "left": "research/completion-large-contact-review/reference_2-fb-trf-normal-qp-10-subset.json",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#12",
+          "left_residual_m_s": 2.046432909596603e-16,
+          "right_residual_m_s": 8.868568375544756e-14,
+          "maximum_impulse_difference_N_s": 1.6073947728401095e-14,
+          "maximum_contact_velocity_difference_m_s": 8.231775229079842e-14,
+          "mobility_quadratic_J": 1.2763377206033517e-27,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        },
+        {
+          "left": "research/coulomb-normal/active-final-four-native.jsonl#2",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#12",
+          "left_residual_m_s": 8.868568375544756e-14,
+          "right_residual_m_s": 8.868568375544756e-14,
+          "maximum_impulse_difference_N_s": 0.0,
+          "maximum_contact_velocity_difference_m_s": 0.0,
+          "mobility_quadratic_J": 0.0,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "capture_sha256": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/new-hull-contact-review/fast_rotate_shake27_hulls7301-reference_0-position.json#3",
+          "right": "research/active-next-review/native-normal-replays.jsonl#0",
+          "left_residual_m_s": 4.2127307711211456e-16,
+          "right_residual_m_s": 7.382119881991728e-17,
+          "maximum_impulse_difference_N_s": 9.266402800108117e-17,
+          "maximum_contact_velocity_difference_m_s": 4.212736577934808e-16,
+          "mobility_quadratic_J": 4.829219748634899e-32,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/new-hull-contact-review/fast_shake8_hulls42-reference_0.json#42",
+          "right": "research/active-next-review/fast_shake8_hulls42-reference_0-FB-cold.json#clipped",
+          "left_residual_m_s": 4.062101514405419e-15,
+          "right_residual_m_s": 2.4013027624845656e-15,
+          "maximum_impulse_difference_N_s": 1.2404521854136874e-12,
+          "maximum_contact_velocity_difference_m_s": 2.6950556634416542e-15,
+          "mobility_quadratic_J": 3.921000930815302e-30,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/new-hull-contact-review/fast_shake8_hulls42-reference_2.json#0",
+          "right": "research/active-next-review/fast_shake8_hulls42-reference_2-FB-warm.json#clipped",
+          "left_residual_m_s": 8.407940425305967e-15,
+          "right_residual_m_s": 6.787154130206587e-15,
+          "maximum_impulse_difference_N_s": 1.5112910922709943e-14,
+          "maximum_contact_velocity_difference_m_s": 1.3882219436398793e-15,
+          "mobility_quadratic_J": 3.9510861884179135e-31,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "capture_sha256": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/coulomb-normal/active-final-four-native.jsonl#0",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#14",
+          "left_residual_m_s": 1.4671697898497045e-09,
+          "right_residual_m_s": 1.7519491334130247e-09,
+          "maximum_impulse_difference_N_s": 0.00010590062555780252,
+          "maximum_contact_velocity_difference_m_s": 1.9628814768241423e-11,
+          "mobility_quadratic_J": 8.504072657242009e-23,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "capture_sha256": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/coulomb-normal/active-final-four-native.jsonl#1",
+          "right": "research/coulomb-normal/integrated-sixteen-replays.json#15",
+          "left_residual_m_s": 9.393902494316418e-15,
+          "right_residual_m_s": 9.393902494316418e-15,
+          "maximum_impulse_difference_N_s": 0.0,
+          "maximum_contact_velocity_difference_m_s": 0.0,
+          "mobility_quadratic_J": 0.0,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "capture_sha256": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+      "accepted_root_count": 2,
+      "pairs": [
+        {
+          "left": "research/coulomb-normal/integrated-sixteen-replays.json#13",
+          "right": "research/active-next-review/native-normal-replays.jsonl#1",
+          "left_residual_m_s": 5.74020778461482e-09,
+          "right_residual_m_s": 1.0735088488216964e-17,
+          "maximum_impulse_difference_N_s": 0.0023073977937492817,
+          "maximum_contact_velocity_difference_m_s": 9.851410182407094e-09,
+          "mobility_quadratic_J": 1.7796059161893992e-17,
+          "screening_threshold_m_s": 1e-07,
+          "distinct_contact_velocity_detected": false
+        }
+      ]
+    }
+  ],
+  "rejected_inputs": [],
+  "interpretation": "This compares retained accepted roots only. Mobility-null impulse differences are not distinct physical branches. Absence of detected distinct contact velocities neither proves uniqueness nor explains full-trajectory refinement failure."
+}

@@ -1,0 +1,10 @@
+{
+  "rejection_backend_source_commit": "0f17e758c731da1cf7d32f4e5f7ba6233d539951",
+  "scope": "Frozen assembled systems captured by opt-in native diagnostics. The six native increment/rank-cutoff trials are exploratory uncommitted source, archived exactly; no completed trajectory, no claimed fix, no frozen validation plan.",
+  "hashes": {
+    "exploratory-native-increment-trials.json": "815637904e628f7ebc07f7bb709012e6afac6a6e309019f797a96807f07720af",
+    "hull42-rejected.json": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+    "exploratory-native-source.zip": "0b868617620892c13cadb9cfd788d53c664874851f751bc4926eeb49cb993a11",
+    "hull7301-rejected.json": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f"
+  }
+}

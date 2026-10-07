@@ -1,0 +1,88 @@
+{
+  "complete": true,
+  "records": [
+    {
+      "input": "research/large-hull64-terminal-refinement/results/trial_1/rejection.json",
+      "input_sha256": "fe3804ac793205b19e064e647b915af0ab69ceb317a2be50565e91bb1cc9d417",
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 7.73598692143583e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 7.735986921277734e-07,
+        "support_gap_J": 5.960804453447403e-08,
+        "passive_bound_J": -7.3206177112452995,
+        "passivity_scale": 14.577348689394707,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "policy": {
+        "accepted_residual": 0.0,
+        "components": 10,
+        "direction_iterations_per_face_cap": 128,
+        "direction_steps": 210,
+        "full_rows_cap": 4096,
+        "guide_velocity_allowance_fraction": 0.5,
+        "largest_rows": 105,
+        "lp_calls": 210,
+        "lp_calls_cap": 4096,
+        "lp_constraints_cap": 4096,
+        "lp_variables_cap": 384,
+        "mode_attempts": 81,
+        "physical_gate_changed": false,
+        "pivots": 6134,
+        "search_rows_max": 18,
+        "selected_rows_cap": 192,
+        "shared_pivots_cap": 100000,
+        "tableau_epsilon": 1e-12,
+        "weak_contacts_cap": 12,
+        "weak_contacts_max": 4
+      },
+      "elapsed_s_descriptive": 0.07675149900023825
+    },
+    {
+      "input": "research/large-hull64-terminal-refinement/results/trial_2/rejection.json",
+      "input_sha256": "ef5d4efff25f33957a72f191dab102e27efe4be2606af82a9f3164a070824383",
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.5426846478577063e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.542684648479067e-07,
+        "support_gap_J": 2.6941046962413364e-08,
+        "passive_bound_J": -7.801208465817561,
+        "passivity_scale": 13.596159030503209,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "accepted_residual": 0.0,
+        "components": 3,
+        "direction_iterations_per_face_cap": 128,
+        "direction_steps": 29,
+        "full_rows_cap": 4096,
+        "guide_velocity_allowance_fraction": 0.5,
+        "largest_rows": 21,
+        "lp_calls": 29,
+        "lp_calls_cap": 4096,
+        "lp_constraints_cap": 4096,
+        "lp_variables_cap": 384,
+        "mode_attempts": 27,
+        "physical_gate_changed": false,
+        "pivots": 809,
+        "search_rows_max": 15,
+        "selected_rows_cap": 192,
+        "shared_pivots_cap": 100000,
+        "tableau_epsilon": 1e-12,
+        "weak_contacts_cap": 12,
+        "weak_contacts_max": 3
+      },
+      "elapsed_s_descriptive": 0.049504802002047654
+    }
+  ],
+  "binary_sha256": "385ea213e76d64ebb9ece566f72c45ad951f9a4fe46ee8d34d251725a9273372",
+  "binary_provenance": "research/mixed-face-native/native-results/provenance.json",
+  "scope": "Previously declared native helper on two additional actual refined hull captures; no full-trajectory or performance claim."
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Circular 3D Coulomb contact: slow/fast shaking, exact analytic tests and same-law trajectory refinement",
+  "dt_s": 0.01,
+  "common": {"solver":"coulomb","kinematic_contact_phase":"start","position_stabilization":"split","primary_steps":4,"iterations":4096,"contact_tolerance_m_s":1e-8,"contact_slop_m":1e-9},
+  "trajectory_budget": {"position_m":0.005,"velocity_m_s":0.05,"omega_rad_s":0.1,"orientation_rad":0.01},
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {"quaternion_norm_error":1e-12,"energy_change_minus_boundary_work_J":1.0,"container_surface_excess_m":0.002},
+  "candidate_repetitions": 3,
+  "candidates": {"coarse":0.15,"medium":0.06,"fine":0.015},
+  "scenes": [
+    {"id":"slow_shake27_spheres","side":3,"speed":0.2,"shape":"sphere","shake":true,"spin":0,"seed":42,"duration":0.12,"fractions":[0.06,0.03,0.015]},
+    {"id":"fast_translate27_spheres","side":3,"speed":20,"shape":"sphere","shake":false,"spin":0,"seed":42,"duration":0.12,"fractions":[0.06,0.03,0.015,0.0075,0.00375]},
+    {"id":"fast_shake27_spheres","side":3,"speed":20,"shape":"sphere","shake":true,"spin":0,"seed":42,"duration":0.12,"fractions":[0.06,0.03,0.015,0.0075,0.00375]},
+    {"id":"fast_shake8_boxes","side":2,"speed":20,"shape":"box","shake":true,"spin":0,"seed":42,"duration":0.12,"fractions":[0.06,0.03,0.015]},
+    {"id":"fast_shake8_hulls42","side":2,"speed":20,"shape":"hull","shake":true,"spin":0,"seed":42,"duration":0.12,"fractions":[0.06,0.03,0.015]},
+    {"id":"fast_rotate_shake27_hulls7301","side":3,"speed":20,"shape":"hull","shake":true,"spin":10,"seed":7301,"duration":0.12,"fractions":[0.06,0.03,0.015]}
+  ],
+  "scope": "Synthetic pair mu=0.4, normal restitution=0. Native residual is a frozen-solve certificate, not trajectory certification. No elastic angular couple or experimental material authenticity is claimed in this lane. Earlier failed studies are unchanged. Report all attempts and rejection reasons. Candidate timings are three retained native runs; references are one run each. No cross-engine ranking."
+}

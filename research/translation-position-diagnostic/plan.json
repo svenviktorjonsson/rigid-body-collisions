@@ -1,0 +1,11 @@
+{
+  "schema": "prospective-translation-position-observer-v1",
+  "baseline_execution_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "baseline_study": "research/hull-translation-completion",
+  "scene": "fast_rotate_shake27_hulls7301",
+  "lane": "reference_2",
+  "travel_fraction": 0.015,
+  "change": "Diagnostic observer only: capture the actual normal translation-repair matrix, target, bounds and rejected iterate before the existing exception. No physical or numerical solver change.",
+  "execution_rule": "Commit this plan, driver and observer before execution. Require exact source SHA and unchanged executable/runtime libraries throughout. Retain result even if no position rejection is reproduced.",
+  "acceptance": "Diagnostic completeness, not trajectory qualification or proof of infeasibility. Preserve the original study's uncaptured rejection unchanged."
+}

@@ -1,0 +1,6 @@
+{
+  "inputs": {
+    "research/large-mobility-world/results/hull125_h10us/rejection.json": "9a11f8577f0df893b2d51cfe32b05fa8001501f167c382ac1387f876411e8aae"
+  },
+  "rule": "Prospective correction to SEARCH row-cap scope only: original-gated accepted large components require no nonlinear search. Same192-row cap for every failed-component nonlinear search, same17 stages/2048 budgets. Saved759 system has accepted249-row component and only failing57-row component. Final original full native gate and independent law mandatory; no body/world/performance acceptance."
+}

@@ -1,0 +1,137 @@
+{
+  "checked_on": "2026-10-06",
+  "scope": "Targeted public primary-literature review; not exhaustive priority certification.",
+  "notation_verdict": "Length scaling itself is not unique: explicit planar velocity/torque dual scaling is in RSS2011. The exact momentum symbol arrangement was not located, but follows directly from established dual scaling. No research contribution or priority established solely by notation.",
+  "publication_assessment": {
+    "tutorial": "An attributed explanatory technical note is a reasonable present publication form; no acceptance guarantee.",
+    "research": "No distinct completed new theoretical, numerical or independent experimental result has been established by this review.",
+    "recommended_direction": "Predict held-out translation and spin from separately documented material-pair inputs, measured geometry/inertia/state and uncertainty; compare established laws without validation-set coefficient fitting.",
+    "algorithm_alternative": "A specific new simultaneous-contact selection/solver law requires separate novelty analysis, feasibility/existence or convergence argument as appropriate, and accuracy/robustness evidence."
+  },
+  "representative_queries": [
+    "scaled twist scaled wrench characteristic length",
+    "angular momentum characteristic length velocity",
+    "dimensionally homogeneous spatial inertia",
+    "normal and tangential restitution Delassus energy",
+    "matrix-free Delassus contact solver",
+    "simultaneous impacts tangential restitution friction",
+    "A New Algebraic Rigid-Body Collision Law Based on Impulse Space Considerations",
+    "Empirical Evaluation of Common Contact Models for Planar Impact",
+    "Sliding Manipulation of Rigid Bodies on a Controlled 6-DoF Plate"
+  ],
+  "sources": [
+    {
+      "url": "https://royfeatherstone.org/spatial/v2/xforms.html",
+      "author": "Roy Featherstone",
+      "title": "General Comments on Coordinate Transforms",
+      "supports": "Spatial motion/force duality and dual inertia transforms."
+    },
+    {
+      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/",
+      "authors": "Kevin M. Lynch and Frank C. Park",
+      "title": "Modern Robotics, 3.4 Wrenches",
+      "supports": "Twist/wrench pairing is physical power."
+    },
+    {
+      "url": "https://cim.mcgill.ca/~rmsl/Index/Documents/MECH573/robotdes0312.pdf",
+      "author": "Jorge Angeles",
+      "title": "On the Optimum Dimensioning of Robotic Manipulators",
+      "supports": "Sections1-2 establish prior characteristic-length normalization for mixed-dimensional Jacobians. This is not a claim of the identical contact notation."
+    },
+    {
+      "id": "vose2011",
+      "authors": "Thomas H. Vose, Paul Umbanhowar, Kevin M. Lynch",
+      "year": 2011,
+      "title": "Sliding Manipulation of Rigid Bodies on a Controlled 6-DoF Plate",
+      "url": "https://www.roboticsproceedings.org/rss07/p43.pdf",
+      "doi": "10.15607/RSS.2011.VII.043",
+      "location": "Appendix footnote1, PDF page7",
+      "verification": "Full proceedings PDF downloaded and converted with pdftotext; equation text examined.",
+      "supports": "Direct planar velocity scaled by radius of gyration and torque divided by the same length.",
+      "difference": "Force/torque rather than momentum; radius of gyration rather than arbitrary fixed ell.",
+      "cache_pdf": "vose-rss2011.pdf",
+      "sha256": "7797f30ae4dccc8cf3983958cc90abfcba095cd84448bd0e357d15988157419d"
+    },
+    {
+      "id": "zhang2014",
+      "authors": "Ying Zhang, Hai-Jun Su, Qizheng Liao",
+      "year": 2014,
+      "title": "Mobility criteria of compliant mechanisms based on decomposition of compliance matrices",
+      "url": "https://doi.org/10.1016/j.mechmachtheory.2014.04.010",
+      "manuscript_url": "https://www.researchgate.net/publication/262192381_Mobility_criteria_of_compliant_mechanisms_based_on_decomposition_of_compliance_matrices",
+      "location": "Author manuscript section3.3, equation21",
+      "verification": "Publisher metadata and author-uploaded manuscript full text examined.",
+      "supports": "Explicit scaling of rotation by characteristic length and moment by reciprocal length.",
+      "difference": "Rotation-first small-deformation twist and applied moment, not literally our velocity/momentum vectors."
+    },
+    {
+      "id": "chatterjee1998",
+      "authors": "Anindya Chatterjee, Andy Ruina",
+      "year": 1998,
+      "title": "A New Algebraic Rigid-Body Collision Law Based on Impulse Space Considerations",
+      "url": "https://doi.org/10.1115/1.2791938",
+      "manuscript_url": "https://www.researchgate.net/publication/228705664_A_New_Algebraic_Rigid-Body_Collision_Law_Based_on_Impulse_Space_Considerations",
+      "location": "Abstract and sections3-6 of original manuscript",
+      "verification": "Original-paper text examined via manuscript rendering; publisher DOI fetch failed.",
+      "supports": "3D frictional point collisions with two restitution parameters and admissible impulse/energy region.",
+      "difference": "Its impulse-selection rule and sequential multiple-impact treatment are not asserted identical to our simultaneous endpoint model."
+    },
+    {
+      "id": "acary2025",
+      "authors": "Vincent Acary, Nicholas Anton Collins-Craft",
+      "year": 2025,
+      "title": "On the Moreau\u2013Jean scheme with the Fr\u00e9mond impact law: energy conservation and dissipation properties for elastodynamics with contact, impact and friction",
+      "url": "https://jtcam.episciences.org/15960/pdf",
+      "doi": "10.46298/jtcam.13480",
+      "location": "Section2.5, equations44-46, printed pages9-10",
+      "verification": "Publisher full PDF read in browser and downloaded/converted.",
+      "supports": "General Moreau normal/tangential restitution with friction, Delassus coupling and limitations of dissipation guarantees.",
+      "difference": "No claim their thermodynamically motivated law, local admissibility or integration scheme equals our endpoint acceptance gate.",
+      "cache_pdf": "acary-collinscraft2025.pdf",
+      "sha256": "b3e7524f769c3530bdeea698e116f8fd7ae4d1a896208b04a126d097cd28cb78"
+    },
+    {
+      "id": "siggraph2022",
+      "year": 2022,
+      "title": "Contact and Friction Simulation for Computer Graphics",
+      "url": "https://siggraphcontact.github.io/assets/files/SIGGRAPH22_friction_contact_notes.pdf",
+      "location": "Figure43 and matrix-free tutorial, PDF pages163-164",
+      "verification": "Full course PDF examined through browser.",
+      "supports": "Coupled Jacobian/inverse-mass matrix-free contact evaluation.",
+      "difference": "General operation organization is prior art; does not settle novelty of every production solver detail."
+    },
+    {
+      "id": "fazeli2017",
+      "authors": "Nima Fazeli, Samuel Zapolsky, Evan Drumwright, Alberto Rodriguez",
+      "year": 2017,
+      "title": "Fundamental Limitations in Performance and Interpretability of Common Planar Rigid-Body Contact Models",
+      "url": "https://arxiv.org/abs/1710.04979",
+      "location": "Abstract; empirical comparison and parameter-interpretation discussion",
+      "verification": "Author preprint downloaded and converted; primary arXiv record checked.",
+      "supports": "Comparison of six impact models and difficulty interpreting fitted parameters.",
+      "difference": "Our proposed fixed independently characterized input test differs from fitting against comparison outcomes; no first-ever claim for such tests.",
+      "cache_pdf": "fazeli2017.pdf",
+      "sha256": "72857723106b9048841a9595f2d52bdf3d9d184fca873763939dc0c19784996a"
+    },
+    {
+      "id": "gauge2026",
+      "authors": "Shuai Wang et al.",
+      "year": 2026,
+      "title": "GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models",
+      "url": "https://arxiv.org/abs/2608.05948",
+      "full_text_url": "https://arxiv.org/html/2608.05948v1",
+      "location": "Abstract and appendixA.2.1",
+      "verification": "Primary arXiv submission metadata and full HTML inspected.",
+      "supports": "Measured simulator benchmarking with calibrated physical metadata already exists; offers a candidate validation source.",
+      "limits": "Published calibration text describes friction and rail-collision restitution. Complete independent signed tangential restitution profile and full spin-state/data suitability not verified. No native GAUGE prediction claimed."
+    }
+  ],
+  "limitations": [
+    "Exact (p,L/ell) symbol pair not located; search absence cannot establish uniqueness.",
+    "Different coefficient conventions and constitutive laws must not be equated solely because they use en,et,mu.",
+    "All production-solver algorithms have not been audited for literature priority.",
+    "Existing24glass comparison is reproduction rather than independent held-out validation; spin reconstructed.",
+    "Global larger-scene accuracy baseline remains unqualified.",
+    "No publication or external submission performed."
+  ]
+}

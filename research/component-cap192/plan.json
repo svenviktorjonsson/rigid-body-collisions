@@ -1,0 +1,19 @@
+{
+  "source": "c8d934d34fb5b6fb6eafde39369c9de32e17e5f7",
+  "scope": "Isolated component192 numeric cap on actual new396-row world rejection with135-row component plus five retained controls. Same six seeds,2048 iterations/SVD per search, exact original graph, finite/passivity/friction/bounds/absolute1e-8 and production zero-budget gates. Production128 unchanged while sphere worlds active. No completion/refinement/performance claim; retain all declines.",
+  "inputs": {
+    "research/large-velocity-cap128-world/results/trial_0/rejection.json": "99da0251db5ec980d9ee32479256e4f3b961a4485fc9a336c8bee8f25c5fbd46",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+    "research/large-velocity-world/results/trial_1/rejection.json": "a2f393e8e8c5a3edc4678817651fa3bf1b4f15c06c170deb74bcddc2cdd8b619",
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734"
+  },
+  "source_guards": {
+    "null_seed192.h": "de262cf36a80db8664daca60da69554c08b9ded321815f24e571464958dcfcc4",
+    "projection192.h": "b3e29f42db650303043026e35810d88e9d6b0f450caab2f44ee2b31f4fe45737",
+    "replay.cpp": "da200c90332c8cc03b1b028ecc4b1bf0388196aec4c9b97ed830a1401d974f5a"
+  },
+  "binary": "/home/viktor/.cache/physics-component192-20261006/replay",
+  "execution": "Single-thread sequential instantaneous pilots, descriptive only."
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Test saved minimum-norm mobility-null contact-drop seeds through unchanged native exact-component projection search. Seed geometry is numerical only; original A/b/law unchanged and all full native/independent gates mandatory. At most six contact seeds per rejected block; exact graph thresholdzero, block64, fresh128/512/2048 search percomponent. Prior Python roots are not native solver claims.",
+  "binary": "/home/viktor/.cache/physics-large-recovery-20261006/components",
+  "binary_sha256": "e91a184706ce6eeaeae8164097aa85cc888d0880343cc81c8fef9adef5f55c13",
+  "budgets": [
+    128,
+    512,
+    2048
+  ],
+  "saved_seed_archive": "results-null-seeds/summary.json",
+  "seed_archive_sha256": "979b4882b45331ae27d994901b1f0e77e1b8d11f45ed3adade10280ac46477fe",
+  "execution": "Sequential single-thread pilots, no performance claim; declines preserved."
+}

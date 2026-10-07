@@ -1,0 +1,2 @@
+# CSV records use the standard CRLF row terminator; preserve archived bytes.
+*.csv whitespace=cr-at-eol

@@ -1,0 +1,129 @@
+{
+  "repository": "ipc-sim/IPC",
+  "commit": "573d2c7e04104d3f9baf526bdaee7745891a571a",
+  "checked_date": "2026-10-04",
+  "files": [
+    {
+      "path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/README.md",
+      "sha256": "3ec838463f87b99a1e1a12919a9d8c8717b9265f3f962606067f9642ef595ae9"
+    },
+    {
+      "path": "input/paperExamples/README.md",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/README.md",
+      "sha256": "7eb4941ac0e33c8875cb255f8a88b711fa586c7077128063352106e7361208c1"
+    },
+    {
+      "path": "input/paperExamples/10_cubeStack.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/10_cubeStack.txt",
+      "sha256": "953644101d7beebdf7795a5c7d5627ed2fbfe5afc6e6636ddf072f522a31bcd9"
+    },
+    {
+      "path": "input/paperExamples/12_largeMassRatio.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/12_largeMassRatio.txt",
+      "sha256": "cd4219ff9f7a04449374d7aed347fbae709a1df98596720738b3b5a8b9a201a7"
+    },
+    {
+      "path": "input/paperExamples/4_rodsTwist.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/4_rodsTwist.txt",
+      "sha256": "fefce7efac7e11b01222d2c100da0c32fdc4e8366996f97bf308a9d5a6360d02"
+    },
+    {
+      "path": "input/paperExamples/20_pencilStickSlip.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/20_pencilStickSlip.txt",
+      "sha256": "80a1486033eab4918da0f89294b56b18bb8b6a07930b466414383aacfca7de8c"
+    },
+    {
+      "path": "input/paperExamples/1_squeezeOut.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/1_squeezeOut.txt",
+      "sha256": "f2ec9f5dc1592faf887a38bfc1fd05c5f9f5cbaac3e00c9fe27ebebf4a1975b0"
+    },
+    {
+      "path": "input/paperExamples/19_golfBall.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/19_golfBall.txt",
+      "sha256": "d185b22761b3fd87530b8cd221a56c23734db9effc21df61378ed7107695eab6"
+    },
+    {
+      "path": "input/otherExamples/friction/slopeTest_highSchoolPhysics_0.49.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.49.txt",
+      "sha256": "51cd5c2022c46084b70baecbbd6a6fa7b34f10c05d33f2c9839b0191b2773b92"
+    },
+    {
+      "path": "input/otherExamples/friction/slopeTest_highSchoolPhysics_0.5.txt",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.5.txt",
+      "sha256": "322b0ae094e6f7f5099f2a54055a7038f4349ac23189d01b620ee8d01d274531"
+    },
+    {
+      "path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/LICENSE",
+      "sha256": "c490dd10c8c07cb29590ca8cdbb2734a4233fc0a5f57a1dbc9af8a2d7d655da3",
+      "bytes": 1064
+    },
+    {
+      "path": "input/tetMeshes/32770_octocat.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/32770_octocat.msh",
+      "sha256": "6513e3985e52950215dd8b84ab268f3bd950aa1bfd076502a3e73a2446353304",
+      "bytes": 904637
+    },
+    {
+      "path": "input/tetMeshes/alien.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/alien.msh",
+      "sha256": "b346c5d34d2b2ae96915601891781590cbbfbac5cf18d2cc88c84cd11a2b1bc1",
+      "bytes": 2141462
+    },
+    {
+      "path": "input/tetMeshes/cube.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/cube.msh",
+      "sha256": "ea939f1bc2f1bc6096d272f83aa7765df1e3f5c1e90d0cc4cb5a2a55f1f81f10",
+      "bytes": 591
+    },
+    {
+      "path": "input/tetMeshes/hollowCat7.5K.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/hollowCat7.5K.msh",
+      "sha256": "978a0f16ea7cb00802907f5dfa4acff8128d1e480a040f250f7479597fc72d76",
+      "bytes": 2354273
+    },
+    {
+      "path": "input/tetMeshes/monkey8K.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/monkey8K.msh",
+      "sha256": "36430783d91d7b7383db23a37e05fea19eff7bf05187e629e91eb1fd7abafec4",
+      "bytes": 2211923
+    },
+    {
+      "path": "input/tetMeshes/rod.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/rod.msh",
+      "sha256": "394eb4b3380362d44570351d8acee10b15eb90b6f9fe4c3d371f1972499305c3",
+      "bytes": 75556
+    },
+    {
+      "path": "input/tetMeshes/rod300x33.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/rod300x33.msh",
+      "sha256": "16145b7133dafa393f8d1e809fe56ac6023be9bf5747c9d735bf2224847d01bc",
+      "bytes": 2302085
+    },
+    {
+      "path": "input/tetMeshes/sphere19K.msh",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/tetMeshes/sphere19K.msh",
+      "sha256": "c70fa8be73a89e1ebcfe3424f384cd08a53af2fc7c9410b58f4b2cf99fc2ccf9",
+      "bytes": 5399675
+    },
+    {
+      "path": "input/triMeshes/coneBox.obj",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/triMeshes/coneBox.obj",
+      "sha256": "def18154efbb80a60a59025c914f3a1c12453e709340528d4e3f4d59ad882849",
+      "bytes": 74577
+    },
+    {
+      "path": "input/triMeshes/plane.obj",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/input/triMeshes/plane.obj",
+      "sha256": "0d38b91b285a43f2b7f846aaa9f738d4787e3dc56dbebddbb374d9f919ff8faa",
+      "bytes": 72
+    },
+    {
+      "path": "src/AnimScripter.cpp",
+      "source_url": "https://raw.githubusercontent.com/ipc-sim/IPC/573d2c7e04104d3f9baf526bdaee7745891a571a/src/AnimScripter.cpp",
+      "sha256": "6c0131ffad54fc72b9ca30796996903c551b085db3bbc0c9e94e84f923751000",
+      "bytes": 89664
+    }
+  ]
+}

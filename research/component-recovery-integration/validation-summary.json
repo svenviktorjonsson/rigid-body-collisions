@@ -1,0 +1,110 @@
+{
+  "execution_source": "9e97be07b833503c15d9a96f1f92afc59c11a292",
+  "total_count": 22,
+  "accepted_count": 22,
+  "old20_preserved": [
+    {
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "byte_identical_impulses": true,
+      "maximum_impulse_difference": 0.0
+    }
+  ],
+  "native_controls": "Exact component/triple/tiny coupling/caps/overflow/asymmetry/tangent PD/failure preservation PASS",
+  "python_tests": 159,
+  "scope": "Captured systems only; dense trajectory and elastic native integration remain unqualified"
+}

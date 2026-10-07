@@ -1,0 +1,170 @@
+[  7%] Built target LinearMath
+[ 45%] Built target BulletDynamics
+[ 73%] Built target BulletCollision
+[ 75%] Built target BulletInverseDynamics
+[ 85%] Built target BulletSoftBody
+[ 86%] Built target Bullet3Common
+[ 86%] Building CXX object CMakeFiles/spatial_runner.dir/runner.cpp.o
+[ 87%] Built target spatial_qp_checks
+[ 88%] Building CXX object CMakeFiles/spatial_friction_checks.dir/friction_checks.cpp.o
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:7,
+                 from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/friction_checks.cpp:3:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h: In function ‘bool mixed_face_traction::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate, OriginalResidual)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:6: error: there are no arguments to ‘gate’ that depend on a template parameter, so a declaration of ‘gate’ must be available [-Wtemplate-body]
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |      ^~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:6: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/runner.cpp:5:
+/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h: In member function ‘virtual bool btDantzigSolver::solveMLCP(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, bool)’:
+/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:187: warning: unused parameter ‘numIterations’ [-Wunused-parameter]
+   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)
+      |                                                                                                                                                                                       ~~~~^~~~~~~~~~~~~
+/home/viktor/.cache/physics-relation-20261005/deps/_deps/bullet-src/src/BulletDynamics/MLCPSolvers/btDantzigSolver.h:44:207: warning: unused parameter ‘useSparsity’ [-Wunused-parameter]
+   44 |         virtual bool solveMLCP(const btMatrixXu& A, const btVectorXu& b, btVectorXu& x, const btVectorXu& lo, const btVectorXu& hi, const btAlignedObjectArray<int>& limitDependency, int numIterations, bool useSparsity = true)
+      |                                                                                                                                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h: In instantiation of ‘bool mixed_face_traction::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate, OriginalResidual) [with OriginalGate = coulombSolve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, double, CoulombStats&, std::vector<double>*, bool, bool)::<lambda(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double)>; OriginalResidual = coulombSolve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, double, CoulombStats&, std::vector<double>*, bool, bool)::<lambda(const btMatrixXd&, const btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&)>; btMatrixXd = btMatrixX<double>; btVectorXd = btVectorX<double>]’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:464:40:   required from here
+  464 |   bool found=mixed_face_traction::solve(A,b,candidate,lo,hi,dep,tolerance,trial,gate,residual);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:10: error: ‘gate’ was not declared in this scope
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |      ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h:5,
+                 from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:4,
+                 from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/runner.cpp:13:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_more.h: In lambda function:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_more.h:88:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   88 |    if(!(radius>0&&std::isfinite(radius)))return false;alphaParameter*=oldRadius/radius;if(!std::isfinite(alphaParameter))return false;
+      |    ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_more.h:88:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   88 |    if(!(radius>0&&std::isfinite(radius)))return false;alphaParameter*=oldRadius/radius;if(!std::isfinite(alphaParameter))return false;
+      |                                                       ^~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h: In function ‘bool mobility_continuation::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate&&)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h:32:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   32 |  if(!original_gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |  ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h:32:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   32 |  if(!original_gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |                                                              ^
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:5:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h: In function ‘bool reduced_mobility_continuation::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate&&)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:36:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   36 |    if(found)break;bool grew=false;for(int k:normals)if(!active[k]){double w=-rhs[k];for(int j=0;j<m;j++)w+=M(k,j)*q[j];if(w<-tol){active[k]=true;grew=true;}}
+      |    ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:36:19: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   36 |    if(found)break;bool grew=false;for(int k:normals)if(!active[k]){double w=-rhs[k];for(int j=0;j<m;j++)w+=M(k,j)*q[j];if(w<-tol){active[k]=true;grew=true;}}
+      |                   ^~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:39:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   39 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:39:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   39 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |                          ^~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:41:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   41 |  if(!gate(A,b,candidate,lo,hi,dep))return false;p=candidate;return true;
+      |  ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h:41:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   41 |  if(!gate(A,b,candidate,lo,hi,dep))return false;p=candidate;return true;
+      |                                                 ^
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:6:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h: In function ‘bool terminal_component_polish::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, Gate, Iterate, Polish)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:16:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   16 |   if(m>192)return false;std::vector<double>rejected;int sweeps=0;bool found=original_iteration(M,rhs,q,lower,upper,d,tol,rejected,sweeps);stats.iteration_steps+=sweeps;
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:16:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   16 |   if(m>192)return false;std::vector<double>rejected;int sweeps=0;bool found=original_iteration(M,rhs,q,lower,upper,d,tol,rejected,sweeps);stats.iteration_steps+=sweeps;
+      |                         ^~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:18:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   18 |   if(!found||!original_gate(M,rhs,q,lower,upper,d,tol))return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:18:69: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   18 |   if(!found||!original_gate(M,rhs,q,lower,upper,d,tol))return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |                                                                     ^~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:20:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   20 |  if(!original_gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |  ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/terminal_component_polish.h:20:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   20 |  if(!original_gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |                                                              ^
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:3,
+                 from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:7:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_simplex.h: In member function ‘bool mixed_face_simplex::Solver::solve(std::vector<double>&)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_simplex.h:59:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   59 |   if(!optimize(false))return false;solution.assign(variables,0);
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_simplex.h:59:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   59 |   if(!optimize(false))return false;solution.assign(variables,0);
+      |                                    ^~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h: In function ‘bool mixed_face_traction::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate, OriginalResidual)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:35:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   35 |      if(!c.active)continue;cost[positive[c.normal]]=-1;
+      |      ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:35:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   35 |      if(!c.active)continue;cost[positive[c.normal]]=-1;
+      |                            ^~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:40:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   40 |     if(constraints.size()>4096)return false;stats.lp_calls++;mixed_face_simplex::Solver lp(constraints,limits,cost,stats.pivots,100000);std::vector<double>solution;if(!lp.solve(solution))break;
+      |     ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:40:45: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   40 |     if(constraints.size()>4096)return false;stats.lp_calls++;mixed_face_simplex::Solver lp(constraints,limits,cost,stats.pivots,100000);std::vector<double>solution;if(!lp.solve(solution))break;
+      |                                             ^~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:49:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   49 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:49:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   49 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=q[i];
+      |                          ^~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:6: error: there are no arguments to ‘gate’ that depend on a template parameter, so a declaration of ‘gate’ must be available [-Wtemplate-body]
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |      ^~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:6: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |  ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:53: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |                                                     ^
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_split.h:9,
+                 from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:13:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null.h: In function ‘bool normal_null::solve(const btMatrixXd&, const btVectorXd&, const btVectorXd&, const btVectorXd&, btVectorXd&, double, Stats&, int, int)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null.h:21:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   21 |   for(double v:delta)magnitude=std::max(magnitude,std::abs(v));const bool nullStep=magnitude>1e-12;
+      |   ^~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null.h:21:64: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   21 |   for(double v:delta)magnitude=std::max(magnitude,std::abs(v));const bool nullStep=magnitude>1e-12;
+      |                                                                ^~~~~
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:14:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined.h: In function ‘bool combined_translation_review::targets(const btAlignedObjectArray<btSolverConstraint*>&, const std::vector<int>&, const std::vector<double>&, const btAlignedObjectArray<btSolverBody>&, const btVectorXd&, double, double, btVectorXd&, btVectorXd*, btVectorXd*)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined.h:109:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  109 |  if(desired_rates)*desired_rates=desired_values;return true;
+      |  ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined.h:109:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  109 |  if(desired_rates)*desired_rates=desired_values;return true;
+      |                                                 ^~~~~~
+In file included from /home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:17:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h: In function ‘bool null_traction_seed::solve(const btMatrixXd&, const btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, btVectorXd&, double, Stats&)’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h:34:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   34 |     if(found||tries++>=6)break;stats.seed_attempts++;const int rows[3]={c.k,c.t,c.s};std::vector<double>gram(9,0),target(3);
+      |     ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h:34:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   34 |     if(found||tries++>=6)break;stats.seed_attempts++;const int rows[3]={c.k,c.t,c.s};std::vector<double>gram(9,0),target(3);
+      |                                ^~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h:44:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   44 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=p[i];
+      |   ^~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h:44:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   44 |   if(!found)return false;for(int i=0;i<m;i++)candidate[ids[i]]=p[i];
+      |                          ^~~
+gmake[2]: *** [CMakeFiles/spatial_friction_checks.dir/build.make:79: CMakeFiles/spatial_friction_checks.dir/friction_checks.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:397: CMakeFiles/spatial_friction_checks.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h: In instantiation of ‘bool mixed_face_traction::solve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double, Stats&, OriginalGate, OriginalResidual) [with OriginalGate = coulombSolve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, double, CoulombStats&, std::vector<double>*, bool, bool)::<lambda(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, double)>; OriginalResidual = coulombSolve(const btMatrixXd&, const btVectorXd&, btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&, int, double, CoulombStats&, std::vector<double>*, bool, bool)::<lambda(const btMatrixXd&, const btVectorXd&, const btVectorXd&, const btVectorXd&, const btAlignedObjectArray<int>&)>; btMatrixXd = btMatrixX<double>; btVectorXd = btVectorX<double>]’:
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h:464:40:   required from here
+  464 |   bool found=mixed_face_traction::solve(A,b,candidate,lo,hi,dep,tolerance,trial,gate,residual);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mixed_face_traction.h:51:10: error: ‘gate’ was not declared in this scope
+   51 |  if(!gate(A,b,candidate,lo,hi,dep,tol))return false;p=candidate;return true;
+      |      ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/spatial_runner.dir/build.make:79: CMakeFiles/spatial_runner.dir/runner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:329: CMakeFiles/spatial_runner.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

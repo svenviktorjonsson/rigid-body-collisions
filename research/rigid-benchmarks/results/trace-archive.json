@@ -1,0 +1,7 @@
+{
+  "path": "traces.zip",
+  "sha256": "d9bc63bce92b61cf1fb417626c94a6111d35ea9beb8a0a962c2096138cf9bc6c",
+  "entries": 153,
+  "extract_to": "traces/",
+  "format": "ZIP containing compressed NumPy NPZ arrays; no pickle"
+}

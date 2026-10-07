@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/viktor/.cache/vkf-physics-continuation/research/documented-materials/verify_predictions.py", line 27, in <module>
+    assert passed,(name,actual,predicted,err,delta)
+           ^^^^^^
+AssertionError: ('delrin-smallparts-binary_t0.03_spin-0.3', array([-8.6120000e-04,  9.7000000e-02, -9.1447874e+01]), array([-2.45800000e-02,  9.70000000e-02, -7.27716535e+01]), 18.676220472919752, -3.3212237539413727e-07)

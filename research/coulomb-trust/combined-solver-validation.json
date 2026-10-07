@@ -1,0 +1,20 @@
+{
+  "scope": "Local combined primary/polish/continuation and opt-in translation correction validation; full trajectories not yet evaluated",
+  "captured_systems": 11,
+  "independent_contact_and_passivity_gates": true,
+  "spatial_python_tests": 34,
+  "native_checks": [
+    "normal QP",
+    "circular Coulomb",
+    "shared-point conservation",
+    "translation split"
+  ],
+  "source_sha256": {
+    "spatial_backend/coulomb.h": "fe4b544306bd10466cca52926debf491ef2c21483b45ff81aa70de310ba6acb2",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/coulomb_replay.cpp": "ad536f0fc48f6185ab8aa490a4d44fcecbf67aeb7cb82c18379f6dee5b1a8426",
+    "spatial_backend/translation_split.h": "9ec790d8163cd0238586011e8fac10f1e37fec53ef3d40bae4d9bbc0d2134983",
+    "spatial_engine.py": "3761a3f4419fa9c2252c91f1c1e28334de2ee2fdf95ea9e34c78e5eebed4a34a"
+  },
+  "replays_sha256": "e60bbe1af8b7953c16d1f490e257a5a8f44945e630d0b2f56dee531c2563270e"
+}

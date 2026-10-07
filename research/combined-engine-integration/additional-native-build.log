@@ -1,0 +1,9 @@
+ninja: warning: premature end of file; recovering
+[1/8] Building CXX object CMakeFiles/translation_split_checks.dir/translation_split_checks.cpp.o
+[2/8] Building CXX object CMakeFiles/normal_null_checks.dir/normal_null_checks.cpp.o
+[3/8] Building CXX object CMakeFiles/support_restart_checks.dir/support_restart_checks.cpp.o
+[4/8] Linking CXX executable translation_split_checks
+[5/8] Linking CXX executable normal_null_checks
+[6/8] Linking CXX executable support_restart_checks
+[7/8] Building CXX object CMakeFiles/spatial_friction_checks.dir/friction_checks.cpp.o
+[8/8] Linking CXX executable spatial_friction_checks

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-06",
+  "scope": "All presently recovered collision records plus new rolling measurements; distinguish actual predictions, same-data estimation, historical comparators and unavailable full-state checks.",
+  "documented_parameters": "Keep all published normal/tangential restitution and source sliding/rolling curves fixed. Never relabel the Cornell single sliding coefficient as independently measured static friction.",
+  "tennis_fit": {
+    "parameter": "One nonnegative effective constant mu_r per specimen, least squares",
+    "training": "Sort by apparent angular speed; use zero-based even points",
+    "validation": "Use zero-based odd points without tuning, plus leave-one-speed-point-out sensitivity",
+    "source": "https://arxiv.org/pdf/0809.4823v2",
+    "data": "Experimental blue circle centers in the three PDF page-6 plots; exclude regression curves and deduplicate repeated marker paths",
+    "interpretation": "Effective quasirolling coefficient in that apparatus, not a universal ball/material property or bouncing validation"
+  },
+  "ball_moment_audit": {
+    "fixed": "Cross 2010 Table I en, et, incidence 25 degrees, measured mass and radius; assumed homogeneous inertia alpha=0.4",
+    "estimate": "Nonnegative effective angular resistance mu_r for each pair, moment impulse -mu_r R times normal impulse; singleton calibration, no independent holdout",
+    "rejection": "A required spin-assisting couple is not admissible as dissipative rolling resistance; keep residual rather than fitting a negative mu_r",
+    "uncertainty": "Report envelope over published incidence, restitution and spin error limits; maximum-error limits are not confidence intervals",
+    "source": "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+    "additional_signed_moment_hypothesis": "After the passive rolling audit, test a signed normal-pressure moment arm: fit one common offset/R per ball to three surfaces, predict the fourth, four folds. This can assist spin without calling a negative coefficient friction. Shared counterface transfer and actual patch size are unqualified; retain every held-out failure and passivity result."
+  },
+  "rock_policy": "Recompute the previously fixed three-coefficient sphere-proxy comparator and conditional inverse moment audit. It is historical evidence, not the requested directional full-moment rock prediction; measured shape/inertia/signed angular states remain unavailable.",
+  "mechanics": "New isolated no-slip rolling checks in 2D and arbitrarily rotated 3D: independent angular impulse, coupled static reaction, energy, arrest, ell invariance and static-capacity rejection. No production implementation or all-case qualification claimed.",
+  "fit_is_validation": false,
+  "twofold_gate": "Removed by user"
+}

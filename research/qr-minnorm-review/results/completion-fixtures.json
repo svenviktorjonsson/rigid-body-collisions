@@ -1,0 +1,21 @@
+{
+  "schema": "supplementary-qr-minimum-norm-fixtures-v1",
+  "utc": "2026-10-05T17:11:29.696662+00:00",
+  "accepted": true,
+  "scope": "Analytic numerical coverage only; no production changes or timing acceptance changes.",
+  "fixtures": [
+    "rank2 three coordinates, free Gram branch",
+    "rank1 four coordinates, retained Gram branch",
+    "rank1 uniform scale 1e-100",
+    "full rank three coordinates"
+  ],
+  "source_sha256": "2535ddeaee706630ac529b97a4aeb8cdb3f97e399173d7a2273633c07948aeca",
+  "header_sha256": "ab4ed3d859d1569abec7dc4a78797d3c8707402f05a4556b67d81ce126111076",
+  "compiler_flags": [
+    "-std=c++17",
+    "-O3",
+    "-ffp-contract=off"
+  ],
+  "stdout": "Both complete minimum-norm Gram branches PASS",
+  "experiment_interference": "A single brief g++ compile and analytic fixture execution occurred during paired timing in the shared container; costs are descriptive, not isolated-machine rankings."
+}

@@ -1,0 +1,9 @@
+{
+  "snapshot_sha256": {
+    "research/fast_shake_extension.py": "711e71e634c3f745a7dc8d832ecc82eccb240b8c257a28f068da5f97f8247f70",
+    "research/fast-shake-diagnostic/extension-plan.json": "4837772fa9ac45121faeefec151e9b3405d8869d67442b7693b4c467acefc8d1",
+    "research/fast_shake_diagnostic.py": "5eea032ca4c873dbe7e52d40eee87955601e40b296a47312ffc85a320a479bb8",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277"
+  },
+  "frozen_backend_provenance_sha256": "bbb84c0aca8fbe88854b7d8392dbb01084d91db14cadf0585f661e3d59feffd0"
+}

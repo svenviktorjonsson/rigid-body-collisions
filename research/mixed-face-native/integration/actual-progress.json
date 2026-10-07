@@ -1,0 +1,442 @@
+[
+  {
+    "input": "research/large-velocity-world/results/trial_1/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.406567288053445e-09,
+      "circle_violation_scaled_m_s": 1.524635417456869e-17,
+      "sticking_m_s": 7.824273891264185e-10,
+      "support_gap_J": 1.0520971283930453e-12,
+      "passive_bound_J": -0.11142260791714743,
+      "passivity_scale": 1.1183722856237108,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 5.684341886080802e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 51,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 51
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 7.782725292177349e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 7.071068268131605e-09,
+      "support_gap_J": 4.4781622354587645e-10,
+      "passive_bound_J": -0.15413851148944233,
+      "passivity_scale": 1.2219550828011472,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 4.547473508864641e-13
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 14393,
+      "solves": 0,
+      "stage_attempts": 17,
+      "svd_calls": 14393
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 1,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 34,
+      "mode_attempts": 30,
+      "pivots": 1130,
+      "search_rows_max": 21,
+      "solves": 1,
+      "weak_contacts_max": 4
+    }
+  },
+  {
+    "input": "research/large-velocity-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 6.098779377142611e-09,
+      "circle_violation_scaled_m_s": 3.9886134467770524e-18,
+      "sticking_m_s": 5.74641454166639e-09,
+      "support_gap_J": 8.582107763122227e-13,
+      "passive_bound_J": -0.03449913002959419,
+      "passivity_scale": 1.034583709994356,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.4210854715202004e-14
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 1.876831824025351e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 6.643277975992979e-10,
+      "support_gap_J": 2.0536261445361869e-10,
+      "passive_bound_J": -14.642739552484377,
+      "passivity_scale": 32.04961553526842,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.842170943040401e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 69,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 69
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-velocity-cap128-world/results/trial_0/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 9.910671197587572e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.3092074646268137e-09,
+      "support_gap_J": 2.0455583532129588e-11,
+      "passive_bound_J": -0.1461045992759194,
+      "passivity_scale": 1.1957610038810869,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.1368683772161603e-13
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h10us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 4.544395976817996e-09,
+      "circle_violation_scaled_m_s": 3.57701096983396e-16,
+      "sticking_m_s": 1.1595870925849452e-09,
+      "support_gap_J": 7.017905357720176e-11,
+      "passive_bound_J": -0.9497374349368572,
+      "passivity_scale": 2.2674903945423135,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 8.526512829121202e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "iteration_steps": 86,
+      "solves": 1,
+      "stage_attempts": 17,
+      "svd_calls": 86
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull125_h5us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 6.861764397569006e-09,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 9.213269310903861e-10,
+      "support_gap_J": 1.708842866171997e-09,
+      "passive_bound_J": -74.65611857860726,
+      "passivity_scale": 148.01076363778648,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.1368683772161603e-13
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 0,
+      "reduced_rows_max": 93,
+      "solves": 1,
+      "support_passes": 1,
+      "svd_calls": 1277
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-mobility-world/results/hull64_h10us/rejection.json",
+    "accepted": true,
+    "native_exit": 0,
+    "independent": {
+      "accepted": true,
+      "projection_m_s": 1.2372016395733368e-12,
+      "circle_violation_scaled_m_s": 1.207813480863616e-12,
+      "sticking_m_s": 2.32144148871843e-18,
+      "support_gap_J": 1.0842021724855044e-19,
+      "passive_bound_J": -0.03208239787939164,
+      "passivity_scale": 1.03215821862592,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 1.4210854715202004e-14
+    },
+    "mobility_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 0,
+      "declines": 0,
+      "reduced_rows_max": 0,
+      "solves": 0,
+      "support_passes": 0,
+      "svd_calls": 0
+    },
+    "mixed_face_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "lp_calls": 0,
+      "mode_attempts": 0,
+      "pivots": 0,
+      "search_rows_max": 0,
+      "solves": 0,
+      "weak_contacts_max": 0
+    }
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h10us/rejection.json",
+    "accepted": false,
+    "native_exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 2.1663795332208674e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.2637961745057094e-08,
+      "support_gap_J": 7.807769109796876e-10,
+      "passive_bound_J": -12.347342123195967,
+      "passivity_scale": 15.9153346470646,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 5.684341886080802e-14
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "reduced_rows_max": 60,
+      "solves": 0,
+      "support_passes": 1,
+      "svd_calls": 15073
+    },
+    "mixed_face_policy": {
+      "attempts": 1,
+      "compiled": true,
+      "declines": 1,
+      "lp_calls": 243,
+      "mode_attempts": 243,
+      "pivots": 11671,
+      "search_rows_max": 60,
+      "solves": 0,
+      "weak_contacts_max": 5
+    }
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h5us/rejection.json",
+    "accepted": false,
+    "native_exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 9.995924980935927e-08,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 8.827775770429321e-10,
+      "support_gap_J": 1.1297283087576036e-09,
+      "passive_bound_J": -44.957001769065066,
+      "passivity_scale": 81.8499308730222,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.2737367544323206e-13
+    },
+    "mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "reduced_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "reduced_rows_max": 183,
+      "solves": 0,
+      "support_passes": 1,
+      "svd_calls": 14362
+    },
+    "mixed_face_policy": {
+      "attempts": 1,
+      "compiled": true,
+      "declines": 1,
+      "lp_calls": 1500,
+      "mode_attempts": 1500,
+      "pivots": 100000,
+      "search_rows_max": 183,
+      "solves": 0,
+      "weak_contacts_max": 11
+    }
+  }
+]

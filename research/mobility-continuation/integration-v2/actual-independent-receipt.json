@@ -1,0 +1,317 @@
+{
+  "passed": true,
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/spatial_coulomb_replay": "e2f4302d022ccd1d578a401acd2c862d814d08b4df5faefbd37c0a56cd81f90e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_engine.py": "dc09e5b9cc6db307b7fd39f534973a58acc6d66f1aebeecac2532e16a7e6e90d",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/README.md": "e9c92de0a34b305eb0ad0d993b0f5dffda167cdb4465337741705ded892a4593",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/qp_checks.cpp": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/runner.cpp": "9194217c9eddd756341507518aacd37f9e57191f859d48c332072de775eafe62",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_more.h": "255592b9398edf7a4d53e392f0071a2a9239de3be9014e126a7828fdaa5cc55f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/projection_tail_checks.cpp": "c6841481b13b5f6b4ed48cfef485c070926bea0b1bf0a311492785ec50b47012",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null.h": "978f1deb8dc40c1ec6ff4245e0830b32ff2d60ea277d9daa4d40fe50a21808ba",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_early_checks.cpp": "9345a07f94883101ca93a6b95e5988eaa1939cbb0d935686876e7b60b9f9a50f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_replay.cpp": "2820415d696adfaaf5af06547574b058c088132788e259f02ce68f75a7c6cc9f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/reduced_mobility_continuation.h": "86595ffafaf236250d2ad6e2ce0d1e21424b5635b658f590aa2671a923f6bcce",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined.h": "42f1408561f156a5edd5ada01e68f95e19893281b97ecb825ec767c24f3c9fbd",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/CMakeLists.txt": "6770475f59afd2e89388802af5f5796adc032281891bc7482b92b0f4ea6146d5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_split_checks.cpp": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb.h": "e51c43ee4be83838c8a658fd2b4b9ce0738b231cf0ec12716b7ca6cf8bae8595",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_replay.cpp": "867464f5e0046a20f2dfc7fc2a8d8d31bb740abf09784aa36eb9824390664208",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_split.h": "4b9410c8a01ba5d4299d1f6778992e476924506155e348b9f4655d68b6fe73b9",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_restart_checks.cpp": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/mobility_continuation.h": "66459a23dfcf5bfb836290bf8557e190850703563ea47557c6e2fee0caa615e8",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/null_traction_seed.h": "d6b568b84a3f2a1eb11368d39bb4a20ae78ce797cb7dcd18673318edebee1e2e",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/active_contact_checks.cpp": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/shared_contact_checks.cpp": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/translation_combined_checks.cpp": "eb060fd993aff9c71e27427a5b6db9196a9f06669bfc915a319ff6165dcd875a",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "/home/viktor/.cache/vkf-physics-continuation/spatial_backend/position_replay.cpp": "75120566eb5ebce2a8f8ce0f182e024fe5fb50582642e11e6f553b8ec060d44f"
+  },
+  "records": [
+    {
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 4.406567288053445e-09,
+        "circle_violation_scaled_m_s": 1.524635417456869e-17,
+        "sticking_m_s": 7.824273891264185e-10,
+        "support_gap_J": 1.0520971283930453e-12,
+        "passive_bound_J": -0.11142260791714743,
+        "passivity_scale": 1.1183722856237108,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 5.684341886080802e-14
+      },
+      "mobility_policy": {
+        "attempts": 1,
+        "declines": 0,
+        "iteration_steps": 51,
+        "solves": 1,
+        "stage_attempts": 17,
+        "svd_calls": 51
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+      "accepted": false,
+      "native_exit": 2,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.2320806822837637e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.8920086012591364e-08,
+        "support_gap_J": 1.6418948721054571e-09,
+        "passive_bound_J": -0.1541385057434588,
+        "passivity_scale": 1.2219553436749169,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.2737367544323206e-13
+      },
+      "mobility_policy": {
+        "attempts": 1,
+        "declines": 1,
+        "iteration_steps": 14393,
+        "solves": 0,
+        "stage_attempts": 17,
+        "svd_calls": 14393
+      },
+      "reduced_policy": {
+        "attempts": 1,
+        "declines": 1,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/large-velocity-world/results/trial_0/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 6.098779377142611e-09,
+        "circle_violation_scaled_m_s": 3.9886134467770524e-18,
+        "sticking_m_s": 5.74641454166639e-09,
+        "support_gap_J": 8.582107763122227e-13,
+        "passive_bound_J": -0.03449913002959419,
+        "passivity_scale": 1.034583709994356,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "mobility_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "iteration_steps": 0,
+        "solves": 0,
+        "stage_attempts": 0,
+        "svd_calls": 0
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 1.876831824025351e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 6.643277975992979e-10,
+        "support_gap_J": 2.0536261445361869e-10,
+        "passive_bound_J": -14.642739552484377,
+        "passivity_scale": 32.04961553526842,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "mobility_policy": {
+        "attempts": 1,
+        "declines": 0,
+        "iteration_steps": 69,
+        "solves": 1,
+        "stage_attempts": 17,
+        "svd_calls": 69
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/large-velocity-cap128-world/results/trial_0/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 9.910671197587572e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.3092074646268137e-09,
+        "support_gap_J": 2.0455583532129588e-11,
+        "passive_bound_J": -0.1461045992759194,
+        "passivity_scale": 1.1957610038810869,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.1368683772161603e-13
+      },
+      "mobility_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "iteration_steps": 0,
+        "solves": 0,
+        "stage_attempts": 0,
+        "svd_calls": 0
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/large-mobility-world/results/hull125_h10us/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 4.544395976817996e-09,
+        "circle_violation_scaled_m_s": 3.57701096983396e-16,
+        "sticking_m_s": 1.1595870925849452e-09,
+        "support_gap_J": 7.017905357720176e-11,
+        "passive_bound_J": -0.9497374349368572,
+        "passivity_scale": 2.2674903945423135,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 8.526512829121202e-14
+      },
+      "mobility_policy": {
+        "attempts": 1,
+        "declines": 0,
+        "iteration_steps": 86,
+        "solves": 1,
+        "stage_attempts": 17,
+        "svd_calls": 86
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    },
+    {
+      "input": "research/large-mobility-world/results/hull125_h5us/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 6.861764397569006e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 9.213269310903861e-10,
+        "support_gap_J": 1.708842866171997e-09,
+        "passive_bound_J": -74.65611857860728,
+        "passivity_scale": 148.01076363778648,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.1368683772161603e-13
+      },
+      "mobility_policy": {
+        "attempts": 1,
+        "declines": 1,
+        "iteration_steps": 0,
+        "solves": 0,
+        "stage_attempts": 0,
+        "svd_calls": 0
+      },
+      "reduced_policy": {
+        "attempts": 1,
+        "declines": 0,
+        "reduced_rows_max": 93,
+        "solves": 1,
+        "support_passes": 1,
+        "svd_calls": 1277
+      }
+    },
+    {
+      "input": "research/large-mobility-world/results/hull64_h10us/rejection.json",
+      "accepted": true,
+      "native_exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 1.2372016395733368e-12,
+        "circle_violation_scaled_m_s": 1.207813480863616e-12,
+        "sticking_m_s": 2.32144148871843e-18,
+        "support_gap_J": 1.0842021724855044e-19,
+        "passive_bound_J": -0.03208239787939164,
+        "passivity_scale": 1.03215821862592,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "mobility_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "iteration_steps": 0,
+        "solves": 0,
+        "stage_attempts": 0,
+        "svd_calls": 0
+      },
+      "reduced_policy": {
+        "attempts": 0,
+        "declines": 0,
+        "reduced_rows_max": 0,
+        "solves": 0,
+        "support_passes": 0,
+        "svd_calls": 0
+      }
+    }
+  ],
+  "scope": "Every saved original-law acceptance independently verified; latest396 retained decline. Saved279 full replay success motivates bounded terminal-warm polish search, not a claim its world already completes.",
+  "initial_expectation_incorrect": "Expected saved279 to decline but a full fresh pipeline accepts it through its existing polisher; original false expectation receipt remains retained."
+}

@@ -1,0 +1,16 @@
+{
+  "pass_": true,
+  "audit_v1_reference_labels": "16384 vs 65536 sites, not 32768 vs 131072",
+  "refinement_v1_reference_label": "147456 sites, not 294912",
+  "numerical_evidence_exact_after_label_correction": true,
+  "native_controls_exact_between_timing_runs": true,
+  "v1_memory": "Incorrect estimate retained; v2 corrects numeric-array accounting incl both output arrays and validation snapshots; no timing/physics change",
+  "report_builds": "v1 missing optional booktabs; v2 row escaping; logs/input retained; later builds remove optional dependency and use correct row terminators",
+  "source_snapshots": {
+    "v1-benchmark.py": "2ed4360219c5d9d2a5a39c690c2236a761cb6ada52509fae70eacd7ec7790af8",
+    "v1-kernel.cpp": "0301514a6e497da4ca6ffa2647c6198b42c7d232a1af365d4b76bc0db3c4a6ba",
+    "v1-audit.py": "0b6969349d63ba963658c65fb7ebc850c255586ac36f3bcc34a76602a08bc391",
+    "v1-refinement.py": "8a75970a997fe16f7f8b637c556d9095e6e004db32bada203e125273a50ec1d6",
+    "v1-model.py": "0a804bac45e15cadc88e29dc033359030ba364f5c73c22edd4dd6c0b335590d2"
+  }
+}

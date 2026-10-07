@@ -1,0 +1,14 @@
+{
+  "binary_sha256": "2c7905fa4711274c75857319babcbd58794dc9a4041d2ad5251b15594d07c82d",
+  "libraries": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "67faab0feef3cc4b20d98daffda4de59f6816ab565b044da096487f4075fccdf",
+    "/usr/lib/x86_64-linux-gnu/libmvec.so.1": "2f2e7f4ad88e1b13f2f8345c826b25f85ba61c93527d91e59dd0d2943eac6e80",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  }
+}

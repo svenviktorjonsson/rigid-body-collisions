@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-06",
+  "objective": "Test whether passive shear plus horizontal-axis rocking compliance improves conditional rubber spin predictions without per-outcome corrections",
+  "source": "Cross2010 TableI; same58mm ball four surfaces",
+  "hypothesis": "A spring for tangential contact displacement and a separate rocking spring can change spin at fixed tangential restitution",
+  "model": "Isolated dimensionless finite-duration linear elastic contact: mass1, radius1, inertia0.4; shear potential0.5*k*(x-theta)^2 and rocking potential0.5*b*theta^2. Normal restitution remains supplied separately. Constant stiffness during contact; residual strain energy at separation is explicitly dissipated.",
+  "caution": "Phenomenological passive wrench experiment, not a derived finite contact patch or native coupled many-body implementation. No measured contact duration or rolling stiffness available.",
+  "calibration": "For each supplied tangential restitution determine shear stiffness on the lowest-frequency branch using only restitution; never choose this stiffness from measured spin. Fit one shared rocking stiffness using the other three surfaces, predict the withheld surface. Four leave-one-surface-out folds.",
+  "bounds": "rocking stiffness dimensionless0..20, shear stiffness0..40; first positive stiffness root. Friction hypothesis0.9; finite-patch moment length0.3R hypothesis. Integrated resultant impulse and moment budget checked; instantaneous Coulomb/patch admissibility is NOT established.",
+  "acceptance": "Compare pooled held-out spin error to point law; enforce nonnegative stiffness, energy+separation-loss balance, disclose unattained targets and impulse/moment budget failures; no production adoption without full contact-load, refinement and independent-data checks.",
+  "performance_gate": "removed by user"
+}

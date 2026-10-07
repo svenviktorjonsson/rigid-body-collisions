@@ -1,0 +1,30 @@
+{
+  "native_control_count": 81,
+  "source_hashes_verified": true,
+  "nominal_parameter_values_unchanged": true,
+  "retained_native_scene_source_size_density_verified": true,
+  "wrong_context_rejections": [
+    {
+      "case": "diameter",
+      "correctly_rejected": true,
+      "reason": "Sphere size differs from documented profile; do not silently extrapolate the coefficients."
+    },
+    {
+      "case": "density",
+      "correctly_rejected": true,
+      "reason": "Sphere density differs from documented specimen; do not silently change the material."
+    },
+    {
+      "case": "geometry",
+      "correctly_rejected": true,
+      "reason": "Scene must use the documented geometry; irregular shapes are not an exact profile validation."
+    },
+    {
+      "case": "override",
+      "correctly_rejected": true,
+      "reason": "Profile-owned option cannot be overridden: normal_restitution"
+    }
+  ],
+  "reported_experimental_comparison_count": 24,
+  "independent_experimental_validation": false
+}

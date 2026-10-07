@@ -1,0 +1,4 @@
+[ 95%] Built target box2d
+[ 97%] Building CXX object CMakeFiles/rigid_runner.dir/runner.cpp.o
+[100%] Linking CXX executable rigid_runner
+[100%] Built target rigid_runner

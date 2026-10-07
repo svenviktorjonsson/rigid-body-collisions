@@ -1,0 +1,18 @@
+{
+  "source": "66d0f2a6993763296ac05cf18ba752514d4f5708",
+  "case": "3d_hull_64",
+  "scene_sha256": "1d75ccc28fabbbc69554916bac2a51963896b7115b5aa7bc59c82b227d13a891",
+  "settings": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Fresh original64-hull coarse10us and previously297-row-rejected1.25us histories. Same authored geometry/material/motion/gravity/fullhorizon/tolerances; integrated bounded velocity seed fallback and512-row position recovery only. Preserve every rejection and full prefix. Completion and full physical gates can establish histories, not both reference edges or2x. Concurrent isolated research allowed; elapsed descriptive only."
+}

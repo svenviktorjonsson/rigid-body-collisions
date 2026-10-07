@@ -1,0 +1,68 @@
+{
+  "purpose": "Predeclared six-attempt full-hull reference ladder with corrected shared contact-point discretization and bounded residual-gated circular solver recovery",
+  "dt_s": 0.01,
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "primary_steps": 4,
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "candidate_repetitions": 0,
+  "candidates": {},
+  "scenes": [
+    {
+      "id": "fast_shake8_hulls42",
+      "side": 2,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 0,
+      "seed": 42,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    },
+    {
+      "id": "fast_rotate_shake27_hulls7301",
+      "side": 3,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 10,
+      "seed": 7301,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    }
+  ],
+  "scope": "Authored geometry, material parameters, zero restitution, gravity, wall schedule, spin, dt, refinement fractions, and numerical/trajectory/physical gates are paired with the original six hull scenes. Equal-and-opposite contact forces now use one shared contact point for both lever arms: this is an explicitly changed physics discretization, not merely a numerical recovery change. All six attempts, partial archives and rejection snapshots are retained. A completed solve does not qualify a trajectory: both adjacent ladder edges must independently pass quarter-budget errors and every physical gate. No new convergence order or material authenticity claim.",
+  "baseline_source_commit": "78e63313b5d13dd80170d03c54bcaffccbbf47e8",
+  "baseline_plan": "research/spatial-friction-recovery/plan.json",
+  "baseline_scenes": "research/spatial-friction-recovery/results/scenes.json",
+  "changed_discretization": "One shared world contact point: midpoint of surface endpoints for two finite dynamic bodies; finite-body surface endpoint against static/kinematic bodies. Full Jacobian, angular mobility, free-velocity and split RHS, warm angular-impulse transport, and boundary-work accounting use that same point.",
+  "execution_rule": "Do not execute until parent supplies an integration source SHA containing this unchanged protocol and runner. Source and binary hashes are rechecked before every attempt; no rejected refinement level is skipped.",
+  "performance_scope": "Costs are descriptive under recorded concurrent workload, not a controlled speed-ranking experiment.",
+  "contact_point_policy": "shared"
+}

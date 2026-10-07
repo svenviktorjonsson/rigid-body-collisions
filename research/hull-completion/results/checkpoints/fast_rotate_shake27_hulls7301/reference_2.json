@@ -1,0 +1,1 @@
+{"elapsed_s":105.79189653000503,"exit_code":1,"rejected":"Coulomb residual gate failed (3.05076e-07 m/s): increase iterations or refine timestep; no friction-law fallback","rejection_dump":"rejections/fast_rotate_shake27_hulls7301/reference_2.json","rejection_dump_status":"captured"}

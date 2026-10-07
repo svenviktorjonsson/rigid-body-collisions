@@ -1,0 +1,15 @@
+{
+  "purpose": "Test contact-manifold cache discretization as a cause of nonconvergent fast rotating boxes and hulls. Explicit numerical geometry policies; same original authored bodies, friction .4, zero restitution, gravity, +/-20m/s schedules and accuracy gates.",
+  "policies": ["cold", "tight"],
+  "cold": "Clear cached manifold contact points before every internal collision update. Narrowphase then reconstructs contact geometry; cached warm impulses are intentionally discarded. No rows from the newly queried system are removed.",
+  "tight": "Set cached manifold breaking threshold to1e-6m before every internal update; preserve other caches. This changes the numerical contact cache, not shape margin or material. Threshold affects cache lifetime; full reference qualification still required.",
+  "scenes": ["3d_sphere", "3d_box", "3d_hull"],
+  "reference_levels": [
+    {"dt": 0.01, "primary_steps": 1000, "travel_fraction": 0},
+    {"dt": 0.01, "primary_steps": 2000, "travel_fraction": 0},
+    {"dt": 0.01, "primary_steps": 4000, "travel_fraction": 0}
+  ],
+  "trajectory_budget": {"position_m": 0.005, "velocity_m_s": 0.05, "omega_rad_s": 0.1, "orientation_rad": 0.01},
+  "rule": "Build isolated executables; retain source/compiler/library hashes and all failures. All three levels execute once per policy and scene; BOTH adjacent quarter-budget edges and original physical gates must pass. Never promote instantaneous contact success or complete histories into trajectory accuracy. Original default production runner and old archives remain immutable.",
+  "cost_scope": "Descriptive execution costs only; this is numerical diagnosis, not a controlled speed ranking. Independent unchanged production header/hash guards must pass before/after every run. Publish exact source and plan before execution."
+}

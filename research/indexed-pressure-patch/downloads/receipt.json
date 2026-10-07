@@ -1,0 +1,16 @@
+{
+  "pass_": true,
+  "source_checkpoint": "8070f06342d28813ea329101a4a01e5dff794bd4",
+  "archive_sha256": "52d3a72c8b6ad6fbd7b3860ceda85bd29d4a1d28267ba8b5ff9ce545e3858708",
+  "archive_bytes": 1030773,
+  "members": 49,
+  "crc_and_manifest_verified": true,
+  "visible_files": [
+    "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/indexed-pressure-patch-report.pdf",
+    "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-indexed-patch-20261007.zip"
+  ],
+  "report_sha256": "c1fe41543ff9cc51f3c4238a7ce07492a4274e1acb4671170a64aef51cbe5b2d",
+  "ordinary_user_owned": true,
+  "third_party_source_pdfs_included": false,
+  "native_binaries_included": false
+}

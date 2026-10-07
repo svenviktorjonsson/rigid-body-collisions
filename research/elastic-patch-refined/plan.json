@@ -1,0 +1,294 @@
+{
+  "schema": 1,
+  "scope": "Synthetic sphere/fixed-plane elastic wrench prototype, not calibrated rubber, arbitrary body engine, or guaranteed finite-patch traction limit surface.",
+  "model": "Shared phenomenological L2 slider with constant effective contact length; \u03bckn\u03b4 conservative load capacity; explicit torsional couple independent of point force. Compression exponent2 conservative potential; exponent0 matched linear benchmark with explicit separation loss.",
+  "levels": [
+    {
+      "name": "coarse",
+      "max_step": 0.0002,
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    {
+      "name": "medium",
+      "max_step": 0.0001,
+      "rtol": 1e-12,
+      "atol": 1e-14
+    },
+    {
+      "name": "fine",
+      "max_step": 5e-05,
+      "rtol": 1e-13,
+      "atol": 1e-15
+    }
+  ],
+  "gates": {
+    "energy_absolute_J": 1e-08,
+    "energy_relative": 1e-09,
+    "position_refinement_m": 5e-08,
+    "velocity_refinement_m_s": 1e-05,
+    "omega_refinement_rad_s": 0.0001,
+    "analytic_velocity_m_s": 1e-05,
+    "analytic_omega_rad_s": 0.0001,
+    "yield_excess_N": 0.05,
+    "separation_loss_J": 1e-08
+  },
+  "cases": [
+    {
+      "name": "elastic-normal-axis-spin",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000.0,
+        "tangent_stiffness": 28571.428571428572,
+        "twist_stiffness": 400.0,
+        "effective_length": 0.02,
+        "friction": 3.0,
+        "normal_damping": 0.0,
+        "compression_exponent": 0
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -1
+        ],
+        "omega": [
+          0,
+          0,
+          10
+        ],
+        "duration": 0.04,
+        "sample_dt": 0.0002,
+        "expected_velocity": [
+          0,
+          0,
+          1
+        ],
+        "expected_omega": [
+          0,
+          0,
+          -10
+        ]
+      }
+    },
+    {
+      "name": "vertical-floor-ceiling",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000.0,
+        "tangent_stiffness": 28571.428571428572,
+        "twist_stiffness": 400.0,
+        "effective_length": 0.02,
+        "friction": 3.0,
+        "normal_damping": 0.0,
+        "compression_exponent": 0
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -1
+        ],
+        "omega": [
+          0,
+          0,
+          10
+        ],
+        "duration": 0.18,
+        "sample_dt": 0.0002,
+        "planes": [
+          {
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "offset": 0,
+            "name": "floor"
+          },
+          {
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "offset": -0.23,
+            "name": "ceiling"
+          }
+        ],
+        "minimum_bounces": 4
+      }
+    },
+    {
+      "name": "low-friction-no-spin-reversal",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000.0,
+        "tangent_stiffness": 28571.428571428572,
+        "twist_stiffness": 400.0,
+        "effective_length": 0.02,
+        "friction": 0.1,
+        "normal_damping": 0.0,
+        "compression_exponent": 0
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -1
+        ],
+        "omega": [
+          0,
+          0,
+          10
+        ],
+        "duration": 0.04,
+        "sample_dt": 0.0002,
+        "expected_velocity": [
+          0,
+          0,
+          1
+        ],
+        "expected_omega": [
+          0,
+          0,
+          9
+        ],
+        "expected_dissipation": 0.038
+      }
+    },
+    {
+      "name": "compression-weighted-reversal",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000.0,
+        "tangent_stiffness": 100000000.0,
+        "twist_stiffness": 1000000.0,
+        "effective_length": 0.02,
+        "friction": 1.0,
+        "normal_damping": 0.0,
+        "compression_exponent": 2
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -1
+        ],
+        "omega": [
+          0,
+          0,
+          1
+        ],
+        "duration": 0.04,
+        "sample_dt": 0.0002,
+        "require_spin_reversal": true
+      }
+    },
+    {
+      "name": "rapid-same-material",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000000.0,
+        "tangent_stiffness": 28571428.57142857,
+        "twist_stiffness": 400000.0,
+        "effective_length": 0.02,
+        "friction": 3.0,
+        "normal_damping": 0.0,
+        "compression_exponent": 0
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -100.0
+        ],
+        "omega": [
+          0,
+          0,
+          1000.0
+        ],
+        "duration": 0.0007,
+        "sample_dt": 5e-06,
+        "expected_velocity": [
+          0,
+          0,
+          100.0
+        ],
+        "expected_omega": [
+          0,
+          0,
+          -1000.0
+        ],
+        "step_scale": 0.01
+      }
+    },
+    {
+      "name": "weighted-high-spin-low-friction-budget",
+      "material": {
+        "mass": 1.0,
+        "radius": 0.1,
+        "normal_stiffness": 100000.0,
+        "tangent_stiffness": 100000000.0,
+        "twist_stiffness": 1000000.0,
+        "effective_length": 0.02,
+        "friction": 0.5,
+        "normal_damping": 0.0,
+        "compression_exponent": 2
+      },
+      "simulation": {
+        "position": [
+          0,
+          0,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          -1
+        ],
+        "omega": [
+          0,
+          0,
+          10
+        ],
+        "duration": 0.04,
+        "sample_dt": 0.0002,
+        "max_rhs_evaluations": 20000,
+        "retain_rejection": true
+      }
+    }
+  ],
+  "follow_up_of": "research/elastic-patch/plan.json; thresholds and material/geometry/initial conditions unchanged",
+  "change": "Numerical integration tolerances only, targeting original six failed cases. Every original failure and rejection retained."
+}

@@ -1,0 +1,5 @@
+{
+  "status": "rejected",
+  "stage": "scaled mobility symmetry validation",
+  "reason": "Fixed absolute 1e-12 symmetry tolerance rejected numerical antisymmetry in large coordinate-scaled W. Replaced with norm-relative symmetry check; initial attempt is not a pass."
+}

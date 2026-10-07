@@ -1,0 +1,7 @@
+{
+  "scope": "Isolated rounded polygon-union seam discovery. Production source/default flags unchanged. Same authored geometry, skin, mass, friction, trajectory and gates. Exact segment distance to other convex cores plus authored radius; test actual rounded surface exterior, not core. No qualification or speed claim before original full audits.",
+  "original_runner_sha256": "52ed51d8685b82eeeccf56a8e632409d2deb83bd4faf49c01855350fe99fa533",
+  "prototype_sha256": "85a8e027104a8ce8ed63ca715f13225d3b6cef7b4ecfa3e340a5221102b82ca3",
+  "output": "build/rigid_double_rounded",
+  "comparison": "default suppress false must preserve baseline state bytes; suppression true compared to existing core filter; original full physics and both adjacent accuracy edges mandatory"
+}

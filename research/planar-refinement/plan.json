@@ -1,0 +1,38 @@
+{
+  "purpose": "Finer unchanged-model convergence diagnosis for original rotating9 mixed polygons. Same fullFloat64 supported1um numerical slop and128/12 iterations, no seam suppression. Original shape/material/motion/physics/quarter-budget gates. Retain every failed edge; no performance claim.",
+  "cases": [
+    "2d_mixed_polygons"
+  ],
+  "reference_levels": [
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.00125,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.000625,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.0003125,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.00015625,
+      "primary_steps": 4000
+    }
+  ],
+  "phases": {
+    "2d_mixed_polygons": [
+      false
+    ]
+  },
+  "binary": "build/rigid_double_tight/rigid_runner",
+  "substeps": 128,
+  "position_iterations": 12,
+  "linear_slop_m": 1e-06,
+  "rule": "Execute all five levels from0.625us through0.0390625us. Replayed first level must preserve historical states byte-for-byte. Both final adjacent quarter-budget edges and all original physical gates required. Retain full histories and costs; no speed ranking."
+}

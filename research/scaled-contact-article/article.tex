@@ -1,0 +1,486 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,array,graphicx,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue,pdftitle={Rigid-body contact in combined velocity and momentum notation},pdfauthor={Viktor: notation and model}}
+\newcommand{\rw}[1]{\mathord{#1\mkern2mu\wedge}}
+\newcommand{\lwedge}[1]{\mathord{\wedge\mkern2mu#1}}
+\DeclareFontFamily{U}{articlebb}{}
+\DeclareFontShape{U}{articlebb}{m}{n}{<-6> bbold5 <6-9> bbold7 <9-> bbold10}{}
+\DeclareMathAlphabet{\matrixdigit}{U}{articlebb}{m}{n}
+\pdfmapfile{+fonts/blackboard/bbold.map}
+\newcommand{\id}{\matrixdigit{1}}
+\newcommand{\zmat}{\matrixdigit{0}}
+\newcommand{\inertia}{\mathbb I}
+\title{Rigid-body contact in combined velocity and momentum notation\\\large Symbolic mechanics, directional impulses and coupled matrix calculations}
+\author{Viktor's notation: $\rw{\mathbf{r}}$, $\ell\boldsymbol{\omega}$ and $\mathbf{L}/\ell$}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We combine linear velocity and length-scaled angular velocity in a single vector, and combine linear momentum and reciprocally scaled angular momentum in its dual. A baseline wedge denotes the cross-product matrix; moving the wedge to the other side denotes its transpose. The resulting additive matrix chains include both the moment of the linear impulse and an independent angular impulse. We derive the contact response, its two-body and simultaneous-contact assembly, kinetic-energy balance, and matrix-free evaluation in two and three dimensions. Sliding and spin directions follow the relative motions rather than an arbitrary contact basis. Numerical results are omitted pending recalculation with the intended directional contact law.
+\end{abstract}
+
+\section{Notation and scope}
+Lowercase $\mathbf{p}$ is linear momentum; uppercase $\mathbf{L}$ is angular momentum. Lowercase $\delta$ is used on the linear and angular impulses and their scalar components. The combined impulse uses uppercase $\Delta\mathbf{P}$; changes in state or global quantities also use uppercase $\Delta$. Component indices are lowercase. Uppercase $\mathbf{V}$, $\mathbf{P}$ and $\mathbf{F}$ denote combined motion, momentum and force vectors. The fixed reference length is $\ell$; it is not a material coefficient. Vectors use bold symbols; matrices and scalars retain their established notation and dimensions. A single index $k$ identifies a body when needed. Relative contact quantities need no pair index; participating body contributions are summed.
+
+The direction $\hat{\mathbf{t}}$ follows relative velocity at the collision point, and $\hat{\mathbf{s}}$ follows relative angular velocity. They are motion-defined directions, not two axes chosen to complete a tangent basis. The unit contact normal is $\hat{\mathbf{n}}$. Hats denote unit directions. Identity and zero matrix blocks use double-struck $\id$ and $\zmat$; their dimensions follow from the surrounding blocks. Ordinary numeric entries in explicit component matrices remain scalars. The allowed directional impulse components must be respected; a linear spin component $\delta p_s$ is not introduced.
+
+The scalar directional impulse labels are $\delta p_n$, $\delta p_t$, $\delta L_s$ and $\delta L_n$. The normal and sliding linear impulses are distinct from the spin and normal angular impulses.
+
+The mechanics derived here is exact for a configuration frozen during an instantaneous impulse. It maps an allowed contact impulse to motion; it does not, by itself, determine the impulse. The original directional restitution and friction equations must close that calculation. Where those equations have not been recovered, they remain symbolic rather than being replaced by a conventional force-only law.
+
+\section{A baseline wedge for the cross-product matrix}
+In three dimensions define
+\begin{equation}
+\rw{\mathbf{r}}=
+\begin{bmatrix}
+0&-r_z&r_y\\r_z&0&-r_x\\-r_y&r_x&0
+\end{bmatrix},\qquad
+\rw{\mathbf{r}}\,\mathbf{a}=\mathbf{r}\times \mathbf{a}.
+\end{equation}
+The wedge sits on the same baseline as the vector. The reversed notation denotes the transpose:
+\begin{equation}
+\lwedge{\mathbf{r}}=\rw{\mathbf{r}}^{\mathsf T}.
+\end{equation}
+Here the superscript $\mathsf T$ applies to the matrix represented by $\rw{\mathbf{r}}$. Moving the wedge from right to left denotes the transpose in both dimensions. No minus-sign replacement or operand-reversal rule is used.
+
+Matrix associativity permits chains without redundant parentheses, for example
+\begin{equation}
+\lwedge{\mathbf{r}}\,\inertia^{-1}\rw{\mathbf{r}}\,\delta \mathbf{p}.
+\end{equation}
+The factor order is retained. Transposition reverses a product's factor order; it does not make general matrices commute.
+
+In two dimensions the moment map is a row and its transpose is a column:
+\begin{equation}
+\rw{\mathbf{r}}=\begin{bmatrix}-r_y&r_x\end{bmatrix},\qquad
+\lwedge{\mathbf{r}}=\begin{bmatrix}-r_y\\r_x\end{bmatrix}.
+\end{equation}
+Thus $\rw{\mathbf{r}}\,\mathbf{a}=r_xa_y-r_ya_x$. The right-wedge map takes a planar linear vector to a scalar moment, while its left-wedge transpose takes a scalar angular velocity to a planar contact-velocity contribution. The same transpose notation therefore applies to rectangular planar maps and square spatial maps.
+
+\section{Combined body velocity, momentum and force}
+Let $m$ be mass, $\inertia$ the world-frame central inertia, $\mathbf{v}$ the centre-of-mass velocity and $\boldsymbol{\omega}$ angular velocity. Define
+\begin{equation}
+\mathbf{V}=\begin{bmatrix}\mathbf{v}\\\ell\boldsymbol{\omega}\end{bmatrix},\quad
+\mathbf{P}=\begin{bmatrix}\mathbf{p}\\\mathbf{L}/\ell\end{bmatrix},\quad
+M=\begin{bmatrix}m\id&\zmat\\\zmat&\inertia/\ell^2\end{bmatrix},\quad
+\boxed{\mathbf{P}=M\mathbf{V}}.
+\end{equation}
+The combined force and its impulse are
+\begin{equation}
+\mathbf{F}=\begin{bmatrix}\mathbf{f}\\\boldsymbol{\tau}/\ell\end{bmatrix},\qquad
+\Delta\mathbf{P}=\int \mathbf{F}\,dt,
+\end{equation}
+where $\boldsymbol{\tau}$ is the torque about the centre of mass for this body-level expression. Work and kinetic energy retain their physical values:
+\begin{equation}
+\mathbf{V}^{\mathsf T}\mathbf{F}
+=\mathbf{v}^{\mathsf T}\mathbf{f}+\boldsymbol{\omega}^{\mathsf T}\boldsymbol{\tau},\qquad
+E=\tfrac12\mathbf{V}^{\mathsf T}M\mathbf{V}.
+\end{equation}
+For a state quantity the change uses uppercase $\Delta$:
+\begin{equation}
+\Delta\mathbf{P}=\mathbf{P}^+-\mathbf{P}^-,\qquad
+\Delta\mathbf{V}=\mathbf{V}^+-\mathbf{V}^-,\qquad
+\Delta E=E^+-E^-.
+\end{equation}
+An integrated impulse and a resulting momentum change may be equal in an isolated balance, but their notation distinguishes the transferred impulse from the state change.
+
+In planar motion the vectors have three components, the angular quantities are scalars, and $M=\operatorname{diag}(m,m,\inertia/\ell^2)$.
+
+A change of fixed representation length must leave the physical velocity, impulse and energy unchanged. Changing $\ell$ during motion would require coordinate-derivative terms and is outside this presentation. For simplicity we use one common fixed length throughout the contact assembly.
+
+\section{Contact motion and the full impulse}
+Let the contact reference point be $\mathbf{x}_c$ and the body centre be $\mathbf{x}_k$. Its lever arm is $\mathbf{r}_k=\mathbf{x}_c-\mathbf{x}_k$. The contact velocity is additive:
+\begin{equation}
+\mathbf{u}_k=\mathbf{v}_k+\boldsymbol{\omega}_k\times \mathbf{r}_k
+=\mathbf{v}_k+\lwedge{\mathbf{r}_k}\,\boldsymbol{\omega}_k.
+\end{equation}
+Set
+\begin{equation}
+C_k=\begin{bmatrix}\id&\lwedge{\mathbf{r}_k}/\ell\end{bmatrix},\qquad
+B_k=\begin{bmatrix}\id&\lwedge{\mathbf{r}_k}/\ell\\\zmat&\id\end{bmatrix}.
+\end{equation}
+Then the full contact motion is
+\begin{equation}
+\mathbf{U}_k=\begin{bmatrix}\mathbf{u}_k\\\ell\boldsymbol{\omega}_k\end{bmatrix}
+=B_k\mathbf{V}_k.
+\end{equation}
+At the declared contact reference, define the linear impulse $\delta \mathbf{p}$ and the independent angular impulse $\delta \mathbf{L}$:
+\begin{equation}
+\delta \mathbf{p}=\int \mathbf{f}_c\,dt,\qquad
+\delta \mathbf{L}=\int\boldsymbol{\tau}_c\,dt,\qquad
+\Delta\mathbf{P}_c=\begin{bmatrix}\delta \mathbf{p}\\\delta \mathbf{L}/\ell\end{bmatrix}.
+\end{equation}
+The combined contact impulse is written $\Delta\mathbf{P}_c$, with lowercase $\delta$ retained on its linear and angular entries. The single subscript $c$ distinguishes this contact quantity from the body momentum increment. The independent contact angular impulse excludes the lever-arm moment, which the transpose map supplies:
+\begin{equation}
+\boxed{\Delta \mathbf{P}_k=B_k^{\mathsf T}\Delta\mathbf{P}_c}
+=\begin{bmatrix}\delta \mathbf{p}\\
+\rw{\mathbf{r}_k}\,\delta \mathbf{p}/\ell+\delta \mathbf{L}/\ell\end{bmatrix}.
+\end{equation}
+Equivalently,
+\begin{equation}
+\Delta \mathbf{p}_k=\delta \mathbf{p},\qquad
+\boxed{\Delta \mathbf{L}_k=\rw{\mathbf{r}_k}\,\delta \mathbf{p}+\delta \mathbf{L}}.
+\end{equation}
+Here $\Delta \mathbf{L}_k$ is the body angular-momentum change caused by the total angular impulse. This distinction prevents counting the force moment twice. The associated work is
+\begin{equation}
+\mathbf{V}_k^{\mathsf T}\Delta \mathbf{P}_k
+=\mathbf{U}_k^{\mathsf T}\Delta\mathbf{P}_c
+=\mathbf{u}_k^{\mathsf T}\delta \mathbf{p}
++\boldsymbol{\omega}_k^{\mathsf T}\delta \mathbf{L}.
+\end{equation}
+For distributed contact traction $\mathbf{f}_{\sigma}$ over a patch $\mathcal S$ the independent angular impulse is the traction moment about the chosen reference:
+\begin{equation}
+\delta \mathbf{p}=\int\!\int_{\mathcal S}\mathbf{f}_{\sigma}\,dA\,dt,\qquad
+\delta \mathbf{L}=\int\!\int_{\mathcal S}\rw{\mathbf{x}-\mathbf{x}_c}\,\mathbf{f}_{\sigma}\,dA\,dt.
+\end{equation}
+A reference shift $\mathbf{x}_c'=\mathbf{x}_c+\mathbf{a}$ gives
+\begin{equation}
+\mathbf{r}_k'=\mathbf{r}_k+\mathbf{a},\qquad
+\delta \mathbf{L}'=\delta \mathbf{L}-\rw{\mathbf{a}}\,\delta \mathbf{p},
+\end{equation}
+leaving the body angular-momentum change unchanged. This is reference bookkeeping, not a way to fit a collision outcome by moving the force point.
+
+\section{Two-body relative motion and contact mobility}
+Choose an orientation for the shared contact impulse. Let $\mathcal B$ contain the participating bodies and let $\sigma_k$ be $+1$ or $-1$ according to that orientation. The opposite signs give equal and opposite transfers. The relative motion is a sum:
+\begin{equation}
+\mathbf{u}=\sum_{k\in\mathcal B}\sigma_k \mathbf{u}_k,\qquad
+\boldsymbol{\Omega}=\sum_{k\in\mathcal B}\sigma_k\boldsymbol{\omega}_k,\qquad
+\mathbf{U}=\begin{bmatrix}\mathbf{u}\\\ell\boldsymbol{\Omega}\end{bmatrix}
+=\sum_{k\in\mathcal B}\sigma_k \mathbf{U}_k.
+\end{equation}
+For stacked body variables, define the block collection and mass matrix
+\begin{equation}
+G=\begin{bmatrix}\sigma_k B_k\end{bmatrix}_{k\in\mathcal B},\qquad
+M=\operatorname{diag}_{k\in\mathcal B} M_k,\qquad
+\mathbf{U}=G\mathbf{V}.
+\end{equation}
+The impulse and motion updates are
+\begin{align}
+\Delta \mathbf{P}&=G^{\mathsf T}\Delta\mathbf{P}_c,\\
+\mathbf{V}^+&=\mathbf{V}^-+M^{-1}G^{\mathsf T}\Delta\mathbf{P}_c,\\
+\boxed{\mathbf{U}^+=\mathbf{U}^-+W\Delta\mathbf{P}_c},\qquad
+W&=GM^{-1}G^{\mathsf T}.
+\end{align}
+The signs square to one in the mobility. The explicit two-body matrix is
+\begin{equation}
+\boxed{W=\sum_{k\in\mathcal B}
+\begin{bmatrix}
+\id/m_k+\lwedge{\mathbf{r}_k}\,\inertia_k^{-1}\rw{\mathbf{r}_k}
+&\ell\lwedge{\mathbf{r}_k}\,\inertia_k^{-1}\\
+\ell\inertia_k^{-1}\rw{\mathbf{r}_k}&\ell^2\inertia_k^{-1}
+\end{bmatrix}}.
+\end{equation}
+All products retain their order and the off-diagonal blocks couple linear and angular impulses. The matrix is symmetric positive semidefinite. A prescribed boundary contributes its known motion but zero inverse mass; its mass is not inserted as a large finite substitute.
+
+\section{Sliding and spin directions}
+For nonzero relative motions the definitions supplied by the model are
+\begin{equation}
+\boxed{\hat{\mathbf{t}}=\mathbf{u}/\|\mathbf{u}\|},\qquad
+\boxed{\hat{\mathbf{s}}=\boldsymbol{\Omega}/\|\boldsymbol{\Omega}\|}.
+\end{equation}
+These definitions use relative velocity \emph{at the collision point}, not centre-of-mass velocity. No projection onto a geometric tangent plane has been inserted. Consequently $\hat{\mathbf{t}}$ need not be perpendicular to $\hat{\mathbf{n}}$, and $\hat{\mathbf{s}}$ need not be perpendicular to either. If the original law specifies a projected sliding velocity, that projection must be recovered explicitly rather than assumed.
+
+The directional components are scalars. They multiply the corresponding unit vectors to form the complete impulses:
+\begin{align}
+\delta\mathbf{p}&=\delta p_n\hat{\mathbf{n}}+\delta p_t\hat{\mathbf{t}},\\
+\delta\mathbf{L}&=\delta L_s\hat{\mathbf{s}}+\delta L_n\hat{\mathbf{n}}.
+\end{align}
+No separate amplitude symbols are needed. The component map acts directly on the scaled scalar impulses:
+\begin{equation}
+D=\begin{bmatrix}
+\hat{\mathbf{n}}&\hat{\mathbf{t}}&\zmat&\zmat\\
+\zmat&\zmat&\hat{\mathbf{s}}&\hat{\mathbf{n}}
+\end{bmatrix},\qquad
+\boldsymbol{\lambda}=\begin{bmatrix}\delta p_n\\\delta p_t\\\delta L_s/\ell\\\delta L_n/\ell\end{bmatrix},\qquad
+\boxed{\Delta\mathbf{P}_c=D\boldsymbol{\lambda}}.
+\end{equation}
+This map is not assumed orthogonal, square or invertible. Its dual gives the component-conjugate motions and coupled mobility:
+\begin{equation}
+\mathbf{z}=D^{\mathsf T}\mathbf{U},\qquad
+W_d=D^{\mathsf T}WD,\qquad
+\boxed{\mathbf{z}^+=\mathbf{z}^-+W_d\boldsymbol{\lambda}}.
+\end{equation}
+The transpose is a work projection, not an assertion that nonorthogonal directions are independent coordinate axes.
+
+If a relative motion vanishes, its unit direction is undefined. Its subsequent static, sticking or onset branch must come from the contact law. Choosing an arbitrary direction and calling it sliding or spin changes the model. If $\hat{\mathbf{s}}$ aligns with $\hat{\mathbf{n}}$, the two angular columns become dependent. The law must then determine their physical sum without demanding a nonsingular four-component inverse. The same issue can occur for the linear directions.
+
+Directions evaluated before a frozen impulse give a finite matrix calculation. Directions evolving during a finite collision require state updates and force integration. Those are distinct algorithms and must not be conflated.
+
+\section{Restitution and friction as the contact closure}
+The mass and contact matrices specify how impulses change motion. Restitution and friction specify which impulses are applied. Keep their material parameters in a separate profile $\boldsymbol{\theta}$ and express the directional law symbolically as
+\begin{equation}
+\boldsymbol{\Phi}\bigl(\boldsymbol{\lambda},\mathbf{U}^-,\mathbf{U}^+,D,
+\boldsymbol{\theta},\boldsymbol{\xi}\bigr)=0,\qquad
+\boldsymbol{\lambda}\in\mathcal C\bigl(\boldsymbol{\theta},\boldsymbol{\xi}\bigr).
+\end{equation}
+Here $\boldsymbol{\xi}$ denotes contact history only if the original law retains it, and $\mathcal C$ denotes its physically specified admissibility conditions. These placeholders identify the missing constitutive specification; they are not a proposed new fitted law.
+
+For any scalar motion channel to which a signed endpoint restitution condition actually applies, its symbolic target is
+\begin{equation}
+z_i^++e_i z_i^-=0.
+\end{equation}
+For a declared set of such channels, a frozen-direction residual has the form
+\begin{equation}
+W_d\boldsymbol{\lambda}+\id \mathbf{z}^-+E\mathbf{z}^-=0,
+\end{equation}
+with $E$ containing the corresponding restitution symbols. This is a conditional matrix expression, not a statement that all four components have independently specified restitution targets. Friction limits, dependent directions or simultaneous-contact kinematics can prevent exact targets from coexisting.
+
+Normal restitution and the historical geometric-tangent restitution must not be silently applied to a different motion-defined direction. A usual signed restitution convention means $e_i=-1$ preserves the channel velocity, $e_i=0$ targets arrest, and $e_i>0$ targets reversal. That convention alone establishes neither a material property nor passive coupled motion.
+
+Sliding and angular resistance must follow the model's specified $\hat{\mathbf{t}}$, $\hat{\mathbf{s}}$ and normal angular component. A translational Coulomb cone by itself supplies no independent angular impulse. Conversely, adding independent guessed moment limits or replacing the direction map by two arbitrary tangent axes changes the constitutive model. We therefore do not retain the earlier force-only endpoint solver as a definition of this law.
+
+\subsection{Static and dynamic friction coefficients}
+The material-pair profile includes both static friction $\mu_s$ and dynamic friction $\mu_d$. In the usual two-coefficient Coulomb model, $0\le\mu_d\le\mu_s$; these values and their validity conditions come from the source data, not from matching the desired rebound\cite{drakefriction}. The subscript $s$ on $\mu_s$ means \emph{static}; the subscript $s$ on $\delta L_s$ labels the \emph{spin direction}. They are distinct uses of a conventional index, not the same parameter.
+
+At force level let $f_n\ge0$ be compressive normal load and $f_t$ the scalar sliding force. Static friction supplies a reaction up to its capacity, while ongoing sliding uses the dynamic coefficient:
+\begin{align}
+\text{static branch:}\quad &|f_t|\le\mu_s f_n,\\
+\text{sliding branch:}\quad &f_t=-\mu_d f_n,\qquad
+\mathbf f_t=f_t\hat{\mathbf t}.
+\end{align}
+In the second branch $\hat{\mathbf t}$ points along current slip, so the force opposes it. At zero slip the direction is undefined and the reaction is determined by the static constraint; it is not automatically a saturated force. For conventional Coulomb material data, the source's surface-slip direction must be identified consistently with the model's $\hat{\mathbf t}$. A relative velocity containing normal approach is not automatically the tangential slip used to measure a friction coefficient. This compatibility is part of recovering the exact original directional law, not permission to replace the supplied direction definition.
+
+For a tangential $\hat{\mathbf t}$, frozen directions, constant coefficients and a single static or sliding branch throughout the interval, the corresponding impulse relations are
+\begin{align}
+\delta p_n&\ge0,\\
+\text{static capacity:}\quad &|\delta p_t|\le\mu_s\delta p_n,\\
+\text{continued sliding:}\quad &\delta p_t+\mu_d\delta p_n=0.
+\end{align}
+These equations use the scalar impulses directly. They apply when $\hat{\mathbf t}$ is tangent; if the supplied full-contact-velocity direction contains normal approach, use the projection calculation below. A sticking trial is computed from the coupled mobility and the required no-slip constraint, then checked against static capacity. A contact already sliding uses $\mu_d$ until slip arrests; only then is the static branch reassessed. Testing static capacity does not justify applying $\mu_s$ as the friction magnitude throughout a sliding collision.
+
+In the component matrix calculation, the static capacity and frozen continued-sliding equality become
+\begin{equation}
+|\lambda_2|\le\mu_s\lambda_1,\quad \lambda_1\ge0,\qquad
+\begin{bmatrix}\mu_d&1&0&0\end{bmatrix}\boldsymbol\lambda=0.
+\end{equation}
+The entries in this row are scalar coefficients, not identity or zero matrix blocks. Use the static inequality only for its declared branch and the dynamic equality only for its declared branch. Normal restitution and the original angular response remain coupled through $W_d$. Neither friction coefficient may be discarded from the input table because a particular impact happens to exercise only one branch.
+
+If slip arrests or reverses within an impact, the whole-impact dynamic equality need not hold. The sliding contribution integrates over the actual sliding intervals $\mathcal I$:
+\begin{equation}
+\int_{\mathcal I}f_t\hat{\mathbf t}\,dt=-\int_{\mathcal I}\mu_d f_n\hat{\mathbf t}\,dt.
+\end{equation}
+This is an accumulated vector contribution; $\delta p_t$ remains a scalar. If directions evolve, integrate the force vector before expressing its endpoint components. Elastic sticking and returned shear energy require their specified history law; a positive sliding restitution target is not produced by a purely dissipative dynamic-friction branch alone.
+
+The coefficients also enter a finite-patch traction model before its angular impulse is integrated. Translational capacity alone does not determine $\delta L_s$ or $\delta L_n$: patch geometry and the original angular law must establish those moments. The coordinate length $\ell$ cannot substitute for a physical contact-patch size.
+
+\subsection{Material constraints in a nonorthogonal direction map}
+Keeping the supplied full-contact-velocity direction does not require relabeling source material data. Let $c=\hat{\mathbf n}^{\mathsf T}\hat{\mathbf t}$ and $Q=\id-\hat{\mathbf n}\hat{\mathbf n}^{\mathsf T}$. The physical normal transfer and surface-parallel transfer are
+\begin{equation}
+ \hat{\mathbf n}^{\mathsf T}\delta\mathbf p=\delta p_n+c\delta p_t,\qquad
+ Q\delta\mathbf p=\delta p_t Q\hat{\mathbf t},\qquad
+ \|Q\delta\mathbf p\|=\sqrt{1-c^2}\,|\delta p_t|.
+\end{equation}
+Consequently a frozen single-branch Coulomb capacity expressed in these components is
+\begin{equation}
+ \sqrt{1-c^2}\,|\delta p_t|\le\mu_s\,\hat{\mathbf n}^{\mathsf T}\delta\mathbf p,
+ \qquad\hat{\mathbf n}^{\mathsf T}\delta\mathbf p\ge0.
+\end{equation}
+For continued slip along $Q\hat{\mathbf t}$ the dynamic row becomes
+\begin{equation}
+ \begin{bmatrix}\mu_d&\sqrt{1-c^2}+\mu_dc&0&0\end{bmatrix}
+ \boldsymbol\lambda=0.
+\end{equation}
+At $c=0$ this reduces to the earlier row. At $|c|=1$ there is no surface slip and the linear columns are dependent. The source's tangential restitution can be tested on $Q\mathbf u$, while its normal restitution concerns $\hat{\mathbf n}^{\mathsf T}\mathbf u$. These are observable projections, not a redefinition of $\hat{\mathbf t}$ or an added linear impulse direction. This transformation establishes coefficient compatibility for the declared frozen branch; an evolving contact still requires its history and onset law.
+
+\subsection{Rolling resistance and its physical length}
+Zero tangential contact slip does not imply zero angular velocity. A rolling sphere can therefore need an independent angular impulse even while its sliding dissipation vanishes. Static friction may still supply the reaction that maintains rolling. For a declared rolling mode use dimensionless $\mu_r$ and a physical moment length $a_r$:
+\begin{equation}
+ |\delta L_s|\le\mu_r a_r\hat{\mathbf n}^{\mathsf T}\delta\mathbf p,\qquad
+ |\delta L_s/\ell|\le\mu_r\frac{a_r}{\ell}\hat{\mathbf n}^{\mathsf T}\delta\mathbf p.
+\end{equation}
+The second expression normalizes the angular impulse into the combined momentum units. The normal transfer is $\delta p_n$ when $\hat{\mathbf t}$ is tangent. Changing the representation length $\ell$ must not change the physical moment length $a_r$. Some sources instead report the dimensional product $\mu_r a_r$; its units and convention must be recorded. Published microsphere experiments explicitly distinguish radius-based and contact-radius-based rolling coefficients\cite{fuchsrolling}.
+
+For a fixed rolling direction $\hat{\mathbf s}$ perpendicular to $\hat{\mathbf n}$, a saturated dissipative branch has $\delta L_s\le0$ when $\hat{\mathbf s}$ follows the incoming rotation. Integrate only until rolling stops; continuing a saturated resistance through zero would spuriously reverse the motion. This is a declared resistance law, not an angular restitution law. Rotation around the normal is torsion and requires its separately specified normal moment response. A rolling coefficient does not supply that response. General mixed rolling and torsion still requires the original component closure.
+
+For sustained rolling on a fixed horizontal plane, let the sphere have radius $R$, central scalar inertia $\inertia=\alpha mR^2$, $a_r=R$, and no normal contact velocity. Use $v=R\omega$ along the rolling translation direction, with positive $\omega$ along $\hat{\mathbf s}$. The independent torque is $\tau_s=-\mu_r R f_n$ while moving. The static reaction $f_t$ and angular acceleration obey
+\begin{align}
+ m\dot v&=f_t,&\inertia\dot\omega&=\tau_s-Rf_t,&\dot v&=R\dot\omega,\\
+ \dot\omega&=\frac{\tau_s}{\inertia+mR^2},&
+ f_t&=\frac{mR\tau_s}{\inertia+mR^2}.&&
+\end{align}
+Thus the no-slip branch is feasible only if
+\begin{equation}
+ \frac{|f_t|}{f_n}=\frac{\mu_r}{1+\alpha}\le\mu_s.
+\end{equation}
+With $f_n=mg$, speed decreases at $\mu_r g/(1+\alpha)$ until rest. Without the independent rolling torque this ideal rolling branch has no such deceleration. Static friction has zero contact power; the dissipated power is $\tau_s\omega$. At zero slip $\hat{\mathbf t}$ is undefined, so its reaction direction comes from this constraint. This sustained-contact example does not resolve how the supplied full-contact-velocity direction is to represent friction during an approaching bounce.
+
+\begin{center}\small
+\begin{tabular}{p{40mm}p{93mm}}\hline
+Separate input field & Required specification\\\hline
+Normal restitution & Documented material-pair value and velocity convention\\
+Sliding restitution & Documented value and the exact relative-motion channel\\
+Static friction $\mu_s$ & Documented material-pair static capacity and branch convention\\
+Dynamic friction $\mu_d$ & Documented material-pair sliding coefficient and branch convention\\
+Rolling friction $\mu_r$, $a_r$ & Dimensionless resistance and physical moment length, or their dimensional product\\
+Angular contact response & Original $\hat{\mathbf{s}}$ and $\hat{\mathbf{n}}$ component laws and their parameters\\
+Geometry and state & Contact reference, normal, inertia, pose, incoming motion\\
+Validity & Surface condition, speed/size range, uncertainties and source\\\hline
+\end{tabular}\end{center}
+No numerical material value is substituted into the symbolic derivation. Documented inputs remain fixed. At the user's latest request, missing coefficients may be estimated with a small fit when the measurements constrain them. Each estimate must retain its conditions, uncertainty and calibration data; validation data must be identified separately. An unconstrained coefficient is an explicit simulation assumption, not a measured material property.
+
+\section{Energy, angular momentum and moving boundaries}
+For two dynamic bodies with no external impulsive work, the frozen-configuration kinetic-energy change is
+\begin{equation}
+\boxed{\Delta E=\Delta\mathbf{P}_c^{\mathsf T}\mathbf{U}^-
++\tfrac12\Delta\mathbf{P}_c^{\mathsf T}W\Delta\mathbf{P}_c}.
+\end{equation}
+Its linear term contains \emph{both} impulse works:
+\begin{equation}
+\Delta\mathbf{P}_c^{\mathsf T}\mathbf{U}^-
+=\delta \mathbf{p}^{\mathsf T}\mathbf{u}^-
++\delta \mathbf{L}^{\mathsf T}\boldsymbol{\Omega}^-.
+\end{equation}
+In the allowed component representation,
+\begin{equation}
+\boxed{\Delta E=\boldsymbol{\lambda}^{\mathsf T}\mathbf{z}^-
++\tfrac12\boldsymbol{\lambda}^{\mathsf T}W_d\boldsymbol{\lambda}}.
+\end{equation}
+For an initially unstrained passive impact require $\Delta E\le0$. If stored elastic energy is present, include it in the ledger instead of imposing a kinetic-energy inequality in isolation. Translation alone need not conserve energy, because rotation, deformation, dissipation and support work exchange energy.
+
+For a prescribed moving boundary the work supplied through its contact motion is
+\begin{equation}
+W_b=\delta \mathbf{p}^{\mathsf T}\mathbf{u}_b
++\delta \mathbf{L}^{\mathsf T}\boldsymbol{\omega}_b,
+\end{equation}
+and the corresponding relative-motion identity concerns $\Delta E-W_b$.
+
+Equal and opposite impulses at the shared reference conserve total linear momentum. About a world origin the angular balance uses the orbital contribution as well as central angular momentum:
+\begin{equation}
+\Delta \mathbf{J}_k=\rw{\mathbf{x}_k}\,\Delta \mathbf{p}_k+\Delta \mathbf{L}_k.
+\end{equation}
+The global changes are $\sum_k\Delta\mathbf{p}_k=0$ and $\sum_k\Delta\mathbf{J}_k=0$, including the independent opposite angular impulses. Checking only the force lever-arm moment misses this mechanism.
+
+\section{Symbolic three-dimensional examples}
+\subsection{Central normal impact with axial spin}
+Consider a homogeneous sphere of radius $R$ and central inertia $\inertia\id$, with $\mathbf{r}=-R\hat{\mathbf{n}}$. Prescribe a central linear impulse and axial incoming spin:
+\begin{equation}
+\delta \mathbf{p}=\delta p_n\hat{\mathbf{n}},\qquad
+\boldsymbol{\omega}^- =\omega^-\hat{\mathbf{n}}.
+\end{equation}
+Then
+\begin{equation}
+\rw{\mathbf{r}}\,\delta \mathbf{p}=0,\qquad
+\lwedge{\mathbf{r}}\,\boldsymbol{\omega}^-=0.
+\end{equation}
+The complete angular update is therefore
+\begin{equation}
+\boxed{\Delta \mathbf{L}_k=\delta L_s\hat{\mathbf{s}}+\delta L_n\hat{\mathbf{n}}},\qquad
+\boldsymbol{\omega}^+=\boldsymbol{\omega}^-+\inertia^{-1}\Delta \mathbf{L}_k.
+\end{equation}
+A force-only model sets these independent angular impulses to zero and cannot change this axial spin. Here $\hat{\mathbf{s}}$ is parallel or antiparallel to $\hat{\mathbf{n}}$: the component map is dependent, yet the physical total angular impulse is well defined. The contact law must determine that total. No arbitrary inversion of two collinear angular directions is required.
+
+\subsection{Rotated non-spherical body}
+Let a homogeneous cuboid have half-extents $a,b,c$, mass $m$, and attitude matrix $Q$. Its shape-frame and world inertia are
+\begin{equation}
+\inertia_0=\frac m3\operatorname{diag}(b^2+c^2,a^2+c^2,a^2+b^2),\qquad
+\inertia=Q\inertia_0Q^{\mathsf T}.
+\end{equation}
+For a supporting vertex $\mathbf{r}_0$, use $\mathbf{r}=Q\mathbf{r}_0$. A fixed plane gives
+\begin{equation}
+\mathbf{u}^- =\mathbf{v}^-+\lwedge{\mathbf{r}}\,\boldsymbol{\omega}^-,\qquad
+\boldsymbol{\Omega}^- =\boldsymbol{\omega}^-.
+\end{equation}
+Construct $\hat{\mathbf{t}}$, $\hat{\mathbf{s}}$, the direction map and the full mobility from these physical states. Once the directional law supplies $\delta \mathbf{p}$ and $\delta \mathbf{L}$, predict
+\begin{equation}
+\boxed{\mathbf{v}^+=\mathbf{v}^-+\delta \mathbf{p}/m},\qquad
+\boxed{\boldsymbol{\omega}^+=\boldsymbol{\omega}^-
++\inertia^{-1}\rw{\mathbf{r}}\,\delta \mathbf{p}
++\inertia^{-1}\delta \mathbf{L}}.
+\end{equation}
+The same formula includes spin-generated sliding, an off-centre normal force moment, and the independent angular impulse. Non-diagonal inertia couples the angular directions without adding material parameters. This is a symbolic 3D example; the earlier force-only cuboid numbers have been removed from this reading version.
+
+\section{The planar form}
+For one planar body, suppress the body index and write
+\begin{equation}
+\mathbf{V}=\begin{bmatrix}v_x\\v_y\\\ell\omega\end{bmatrix},\qquad
+B=\begin{bmatrix}1&0&-r_y/\ell\\0&1&r_x/\ell\\0&0&1\end{bmatrix}.
+\end{equation}
+The contact and body impulses are
+\begin{equation}
+\Delta\mathbf{P}_c=\begin{bmatrix}\delta p_x\\\delta p_y\\\delta L/\ell\end{bmatrix},\qquad
+\Delta \mathbf{P}_{\rm body}=B^{\mathsf T}\Delta\mathbf{P}_c,\qquad
+\Delta L_{\rm body}=\rw{\mathbf{r}}\,\delta \mathbf{p}+\delta L.
+\end{equation}
+The pair map, mobility and energy identities retain the same matrix forms with these planar block dimensions. Planar angular velocity and angular impulse are signed scalars. A three-dimensional normal-angular channel is restricted to the permitted planar rotation axis; it must not be inserted as an extra independent planar degree of freedom. Any component unavailable under that geometric restriction is omitted rather than independently solved.
+
+\section{Contact-local deformation with rigid bodies}
+Local elastic deformation can be represented by contact history without a deformable mesh for each body. Keep the body mass and inertia maps, and add a small accumulated displacement vector $\boldsymbol\eta$ conjugate to the component motion $\mathbf z$. Its angular entries use $\ell$ times angular displacement. A positive stiffness matrix $K$ and nonnegative damping matrix $C$ represent one declared elastic branch; material values remain separate inputs. Its potential is $U=\tfrac12\boldsymbol\eta^{\mathsf T}K\boldsymbol\eta$.
+
+For a frozen configuration, fixed directions and time interval $h$, define
+\begin{equation}
+ Z=\tfrac12h^2K+hC,\qquad
+ \mathbf z_m=\tfrac12\mathbf z^-+\tfrac12\mathbf z^+.
+\end{equation}
+An implicit-midpoint elastic update is a small matrix solve:
+\begin{align}
+ [W_d+2Z^{-1}]\boldsymbol\lambda&=-2\mathbf z^- -2Z^{-1}hK\boldsymbol\eta^-,\\
+ \mathbf z^+&=\mathbf z^-+W_d\boldsymbol\lambda,\\
+ \boldsymbol\eta^+&=\boldsymbol\eta^-+h\mathbf z_m.
+\end{align}
+It integrates both the linear and independent angular impulse components. On this branch the energy balance is
+\begin{equation}
+ \boxed{\Delta E+\Delta U+h\mathbf z_m^{\mathsf T}C\mathbf z_m=0}.
+\end{equation}
+The compliance term makes the small solve well posed even when allowed direction columns are dependent. It does not resolve which redundant components a physical yielding law should use. Cache the factor only while the geometry, directions, interval and material matrices stay fixed.
+
+This is an elastic sticking or bilateral branch, not a complete collision law. Opening, frictional yield, plasticity and evolving history frames require their own consistent transitions. Retained spring energy must become residual internal vibration or explicit dissipation at opening; it cannot be silently deleted. If a finite-duration model already resolves the collision, do not add another endpoint restitution impulse. Calibrate its damping and compliance against documented restitution and independent force or vibration data, and test outgoing states separately.
+
+For rocks, a local indentation or yield-history variable can represent contact crushing without changing the rigid body mesh. A pressure- or strain-scaled correction can be investigated while documented static and dynamic friction stay fixed. Unnormalized powers of impulse do not define a portable material property: mass, size and the accumulation interval matter. A small correction is adopted only if physically admissible and better on held-out data. This symbolic feature does not claim an already validated rock deformation law.
+
+\section{Simultaneous contacts and efficient evaluation}
+For many bodies, stack their combined velocities and block-diagonal masses. For each oriented contact, put each signed body block $\sigma_k B_k$ in its appropriate columns. Stack the allowed component maps into $\mathcal D$. Define
+\begin{equation}
+H=\mathcal D^{\mathsf T}G,\qquad
+\mathbf{z}=H\mathbf{V},\qquad
+W_d=HM^{-1}H^{\mathsf T}.
+\end{equation}
+The whole contact system is
+\begin{equation}
+\mathbf{z}^+=\mathbf{z}^-+W_d\boldsymbol{\lambda},\qquad
+\mathbf{V}^+=\mathbf{V}^-+M^{-1}H^{\mathsf T}\boldsymbol{\lambda}.
+\end{equation}
+Off-diagonal contact blocks carry impulses through shared bodies. Keeping only independent pair blocks changes rapid group motion. Disconnected contact islands may be solved separately.
+
+The operator need not be formed densely. For a trial component vector $\mathbf{q}$, apply
+\begin{equation}
+\boxed{W_d \mathbf{q}=HM^{-1}H^{\mathsf T}\mathbf{q}}
+\end{equation}
+through three operations: scatter $H^{\mathsf T}\mathbf{q}$ to bodies, apply each body's inverse mass and inertia solve, and gather with $H$. Rotation uses the world inertia $Q\inertia_0Q^{\mathsf T}$. Solve small inertia systems or use a rotated precomputed shape-frame inverse; avoid forming a large inverse.
+
+The directional law selects the component unknowns and active branches. Assemble small matrices for modest islands or use iterative operator evaluations for large islands. Dependent directions and redundant contacts require rank-aware solves; a failed inverse is not repaired by silently changing the physical components. Check the full-system work and energy, not independent contact energies that omit shared-body cross terms.
+
+\section{Recalculation and comparison plan}
+Numerical outputs, material-value tables and prediction-error diagrams are intentionally omitted from this rewrite. Existing results remain preserved in the repository as calculations of historical comparator models. They are not results of the directional model described here.
+
+Before new predictions, recover the exact original restitution/friction closure, its zero-motion branches, and whether directions evolve during impact. Then verify pure spin, pure sliding, mixed motion, off-centre non-spherical impacts and coupled contact groups in both dimensions. Checks must include equal/opposite impulse, total angular momentum, dual work, energy and reference-length invariance.
+
+Select documented material-pair parameters and keep them fixed. Estimate missing parameters only with identifiable, small calibration models; do not silently alter documented restitution or friction. Missing angular response data inferred from a calibration output cannot be called an independent material prediction. Public ball and rock records can then be compared using the same measured input states, with actual shape, inertia and uncertainty wherever available. Source reconstruction, calibration and held-out prediction must remain distinguishable. The separate rolling-estimation report records the first limited calculation under this policy.
+
+For the eventual visualization, compare measured and predicted outgoing motion using the previously requested two-coordinate deviation map. Define the observation signature and its metric before inspecting agreement; state which components were independently measured. Distinct collision types can share the same error point. No dots are supplied here until the corrected model has actually been evaluated.
+
+\section{Relation to prior notation}
+Combined motion and dual force/momentum, power pairing and characteristic-length normalization have established precedents\cite{featherstone,modernrobotics,angeles}. Vose and colleagues explicitly scale planar angular velocity and torque by reciprocal factors\cite{vose}; Zhang and colleagues give related deformation/moment scaling\cite{zhang}. The baseline wedge here makes the cross-product transpose and additive matrix chains explicit; matrix associativity and transpose duality are established algebra.
+
+Contact force-and-moment models and matrix-free coupled contact calculations also have prior art\cite{drakewrench,mujocowrench,siggraph}. This symbolic rewrite is a presentation of the intended notation and mechanics, not a demonstrated novelty claim or a completed validation of the directional constitutive law. The separate literature review retains the source-specific findings. A publishable predictive claim requires new, reproducible evidence after the corrected model is implemented.
+
+\begingroup
+\raggedright
+\begin{thebibliography}{20}
+\bibitem{fuchsrolling} R. Fuchs et al., \emph{Rolling, sliding \& torsion of micron-sized silica particles: Experimental, numerical and theoretical analysis}, 2014 manuscript, angular friction laws and length conventions. \url{https://www2.msm.ctw.utwente.nl/sluding/PAPERS/2014_WeinhartFuchs_GMr.pdf}.
+\bibitem{drakefriction} Drake documentation, \emph{Modeling of Dry Friction} and \emph{CoulombFriction}. Static and dynamic coefficients and slip-opposing friction. \url{https://drake.mit.edu/doxygen_cxx/group__friction__model.html}; \url{https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_coulomb_friction.html}.
+\bibitem{cornell} Cornell Grain Flow Research, impact parameter chart and experimental method. \url{https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html}; \url{https://grainflowresearch.mae.cornell.edu/impact/impact.html}.
+\bibitem{joseph} G. G. Joseph and M. L. Hunt, \emph{Oblique particle-wall collisions in a liquid}, J. Fluid Mech. 510 (2004), 71--93. Dry profiles on p78. \url{https://doi.org/10.1017/S002211200400919X}.
+\bibitem{cross} R. Cross, \emph{Enhancing the Bounce of a Ball} (2010), Table I. Author-hosted manuscript: \url{https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf}.
+\bibitem{wang} Wang et al., \emph{Effects of the impact angle on the coefficient of restitution in rockfall}, Natural Hazards and Earth System Sciences 18 (2018), 3045--3060. \url{https://doi.org/10.5194/nhess-18-3045-2018}. Publisher supplementary spreadsheet provides the impact observations.
+\bibitem{featherstone} R. Featherstone, \emph{General Comments on Coordinate Transforms}, Spatial Vector and Rigid-Body Dynamics documentation. Motion/force duality and inertia transformation. \url{https://royfeatherstone.org/spatial/v2/xforms.html}.
+\bibitem{modernrobotics} K. M. Lynch and F. C. Park, \emph{Modern Robotics}, section 3.4, Wrenches. Twist--wrench power pairing. \url{https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-4-wrenches/}.
+\bibitem{angeles} J. Angeles, \emph{On the Optimum Dimensioning of Robotic Manipulators}, author-hosted manuscript, sections 1--2. Characteristic-length normalization and homogeneous Jacobians. \url{https://cim.mcgill.ca/~rmsl/Index/Documents/MECH573/robotdes0312.pdf}.
+\bibitem{vose} T. H. Vose, P. Umbanhowar and K. M. Lynch, \emph{Sliding Manipulation of Rigid Bodies on a Controlled 6-DoF Plate}, Robotics: Science and Systems VII (2011). Appendix footnote 1, PDF p7. \url{https://www.roboticsproceedings.org/rss07/p43.pdf}.
+\bibitem{zhang} Y. Zhang, H.-J. Su and Q. Liao, \emph{Mobility criteria of compliant mechanisms based on decomposition of compliance matrices}, Mechanism and Machine Theory 79 (2014), 80--93. Section 3.3, equation 21. \url{https://doi.org/10.1016/j.mechmachtheory.2014.04.010}.
+\bibitem{siggraph} \emph{Contact and Friction Simulation for Computer Graphics}, SIGGRAPH 2022 course notes. Matrix-free tutorial, PDF pp163--164. \url{https://siggraphcontact.github.io/assets/files/SIGGRAPH22_friction_contact_notes.pdf}.
+\bibitem{acary} V. Acary and N. A. Collins-Craft, \emph{On the Moreau--Jean scheme with the Fr\'emond impact law: energy conservation and dissipation properties for elastodynamics with contact, impact and friction}, JTCAM (2025). Section 2.5. \url{https://doi.org/10.46298/jtcam.13480}.
+\bibitem{drakewrench} Drake documentation, \emph{Hydroelastic Contact User Guide}. Distributed contact force and torque. \url{https://drake.mit.edu/doxygen_cxx/group__hydroelastic__user__guide.html}.
+\bibitem{mujocowrench} MuJoCo documentation, \emph{Computation: Contact}. Torsional and rolling friction and higher-dimensional contact wrenches. \url{https://mujoco.readthedocs.io/en/stable/computation.html}.
+\end{thebibliography}
+\endgroup
+\end{document}

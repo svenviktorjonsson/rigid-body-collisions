@@ -1,0 +1,62 @@
+{
+  "lapack_enabled": false,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "before": {
+    "/usr/bin/g++": "6b3696e4dcb85e1c949c732a02befa50e3983ecf94ce7e8e58d9d503b954b79d",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "commands": {
+    "translation_combined_checks": [
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/snapshot/spatial_backend/translation_combined_checks.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "-o",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/translation_combined_checks"
+    ],
+    "coulomb_early_checks": [
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/snapshot/spatial_backend/coulomb_early_checks.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "-o",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/coulomb_early_checks"
+    ],
+    "runner": [
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "-ffp-contract=off",
+      "-DBT_USE_DOUBLE_PRECISION",
+      "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+      "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/snapshot/spatial_backend/runner.cpp",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+      "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+      "-o",
+      "/workspace/rigid-body-collisions/research/live-integration-review/run-20261005T193446Z/runner"
+    ]
+  }
+}

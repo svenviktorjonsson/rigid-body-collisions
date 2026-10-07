@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "source_binary_runtime_verified": true,
+  "records": [
+    {
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 4.406567288053445e-09,
+      "max_abs_impulse": 0.053251262308272956,
+      "reported_budget_counts_verified": true,
+      "scope": "Instantaneous original-matrix acceptance only; no production/world/performance qualification."
+    },
+    {
+      "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+      "original_gates_passed": false,
+      "original_residual_m_s": 1.2320806822837637e-07,
+      "max_abs_impulse": 0.18994719234544125,
+      "reported_budget_counts_verified": true,
+      "scope": "Instantaneous original-matrix acceptance only; no production/world/performance qualification."
+    },
+    {
+      "input": "research/large-velocity-world/results/trial_0/rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 9.950293147710327e-09,
+      "max_abs_impulse": 0.006739710252435454,
+      "reported_budget_counts_verified": true,
+      "scope": "Instantaneous original-matrix acceptance only; no production/world/performance qualification."
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 1.876831824025351e-09,
+      "max_abs_impulse": 1.7271985901867204,
+      "reported_budget_counts_verified": true,
+      "scope": "Instantaneous original-matrix acceptance only; no production/world/performance qualification."
+    }
+  ]
+}

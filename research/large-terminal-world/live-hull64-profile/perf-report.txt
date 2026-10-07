@@ -1,0 +1,170 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 248  of event 'cpu/cycles/P'
+# Event count (approx.): 20202388685
+#
+# Overhead  Command         Shared Object        Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+# ........  ..............  ...................  ..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    38.15%  spatial_runner  spatial_runner       [.] coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)::{lambda()#4}::operator()() const
+            |
+            ---coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)::{lambda()#4}::operator()() const
+               coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)
+               coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+               CoulombMLCP::solveMLCP(btContactSolverInfo const&)
+               btMLCPSolver::solveGroupCacheFriendlyIterations(btCollisionObject**, int, btPersistentManifold**, int, btTypedConstraint**, int, btContactSolverInfo const&, btIDebugDraw*)
+               CoulombMLCP::solveGroupCacheFriendlyIterations(btCollisionObject**, int, btPersistentManifold**, int, btTypedConstraint**, int, btContactSolverInfo const&, btIDebugDraw*)
+               btSequentialImpulseConstraintSolver::solveGroup(btCollisionObject**, int, btPersistentManifold**, int, btTypedConstraint**, int, btContactSolverInfo const&, btIDebugDraw*, btDispatcher*)
+               InplaceSolverIslandCallback::processIsland(btCollisionObject**, int, btPersistentManifold**, int, int)
+               btSimulationIslandManager::processIslands(btDispatcher*, btCollisionWorld*, btSimulationIslandManager::IslandCallback*)
+               btDiscreteDynamicsWorld::solveConstraints(btContactSolverInfo&)
+               btDiscreteDynamicsWorld::internalSingleStepSimulation(double)
+               btDiscreteDynamicsWorld::stepSimulation(double, int, double)
+               main
+
+     8.26%  spatial_runner  libblas.so.3.12.1    [.] dgemv_
+            |
+            ---dgemv_
+               |          
+                --6.20%--dlarf1f_
+                          |          
+                          |--2.91%--dgebd2_
+                          |          dgebrd_
+                          |          dgesdd_
+                          |          restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                          |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                          |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+                          |          null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+                          |          null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+                          |          coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+                          |          CoulombMLCP::solveMLCP(btContactSolverInfo const&)
+                          |          
+                           --2.46%--dorm2r_
+                                     dormqr_
+                                     dormbr_
+                                     dgesdd_
+                                     restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                                     projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                                     projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+                                     |          
+                                      --2.05%--null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+                                                null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+                                                coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+                                                CoulombMLCP::solveMLCP(btContactSolverInfo const&)
+
+     5.71%  spatial_runner  liblapack.so.3.12.1  [.] dlasr_
+            |          
+             --5.34%--dlasr_
+                       |          
+                       |--2.87%--dlasdq_
+                       |          dlasd0_
+                       |          dbdsdc_
+                       |          dgesdd_
+                       |          restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                       |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                       |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+                       |          |          
+                       |           --2.46%--null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+                       |                     null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+                       |                     coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+                       |          
+                        --2.46%--dbdsqr_
+                                  dlasdq_
+                                  dlasd0_
+                                  dbdsdc_
+                                  dgesdd_
+                                  restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                                  projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                                  projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+                                  |          
+                                   --2.05%--null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+                                             null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+                                             coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+
+     5.71%  spatial_runner  libblas.so.3.12.1    [.] dger_
+            |
+            ---dger_
+               |          
+                --4.06%--dlarf1f_
+
+     5.25%  spatial_runner  liblapack.so.3.12.1  [.] dbdsqr_
+            |
+            ---dbdsqr_
+               |          
+               |--2.79%--dbdsqr_
+               |          dlasdq_
+               |          dlasd0_
+               |          dbdsdc_
+               |          dgesdd_
+               |          restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+               |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+               |          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+               |          |          
+               |           --2.38%--null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+               |                     null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+               |                     coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+               |          
+                --2.46%--dlasdq_
+                          dlasd0_
+                          dbdsdc_
+                          dgesdd_
+                          restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+
+     4.93%  spatial_runner  liblapack.so.3.12.1  [.] dlasd4_
+            |
+            ---dlasd4_
+               |          
+                --3.70%--dlasd3_
+                          dlasd1_
+                          dlasd0_
+                          dbdsdc_
+                          dgesdd_
+                          restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+                          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+                          projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+                          |          
+                           --2.88%--null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)::{lambda(btVectorX<double>&)#1}::operator()(btVectorX<double>&) const
+                                     null_traction_seed::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, btVectorX<double>&, double, null_traction_seed::Stats&)
+                                     coulombSolve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*, bool, bool)
+
+     4.93%  spatial_runner  spatial_runner       [.] coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)
+            |
+            ---coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)
+               |          
+                --2.88%--0xff
+
+     3.70%  spatial_runner  libm.so.6            [.] hypot@@GLIBC_2.35
+            |          
+             --2.05%--kernel (inlined)
+                       __hypot (inlined)
+
+     2.88%  spatial_runner  liblapack.so.3.12.1  [.] lsame_
+            |
+            ---lsame_
+
+     2.87%  spatial_runner  libblas.so.3.12.1    [.] dnrm2_
+            |
+            ---dnrm2_
+
+     2.05%  spatial_runner  libblas.so.3.12.1    [.] dgemm_
+            |
+            ---dgemm_
+               dlasd3_
+               dlasd1_
+               dlasd0_
+               dbdsdc_
+               dgesdd_
+               restart_spectral::spectralMoreStep(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> > const&, int, double, double)
+               projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)::{lambda(std::vector<double, std::allocator<double> >&, double, int)#1}::operator()(std::vector<double, std::allocator<double> >&, double, int) const
+               projection_recovery_v2::solve(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btAlignedObjectArray<int> const&, double, projection_recovery_v2::Stats&, int, int, bool, bool, bool, int)
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,12 @@
+{
+  "complete": false,
+  "exit_code": 1,
+  "error": "Translation-only position projection failed; repair initial overlap or refine timestep",
+  "elapsed_s": 35.883865245006746,
+  "matrix_snapshot_available": true,
+  "scope": "Single-lane diagnostic; no trajectory or infeasibility qualification.",
+  "matrix_schema": "normal-only-position-rejection-v1",
+  "phase": "position_translation",
+  "rows": 74,
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617"
+}

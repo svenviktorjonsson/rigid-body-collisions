@@ -1,0 +1,7 @@
+{
+  "schema": "first256-original-audit-failure-v1",
+  "failure": "Original assertion largest_reduced_rows<=64 conflates visited structural rejection size with actual searched dimension.",
+  "affected": "Three early normal291 repeats retain162-row component structural declines,0helper_calls,0svd_calls; full baseline succeeds.",
+  "original_auditor_sha256": "a340fff9289913cb54c7376721f99bb2f6ed0e4ce9c324b2189509e938e28b70",
+  "original_receipts_unchanged": true
+}

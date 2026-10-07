@@ -1,0 +1,13 @@
+{
+  "source": "714ccf95a37225e75211b7768f32358f02e44c5b",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py": "ced6555d6cb8569d9c96f8feef32216be9fa46aa1286febd8f24e067977306ac",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/plan.json": "87a76f40d16a6ba5ad500a9346d59a7d1f1422317605861c748bd6eba01a9ef1",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/build-receipt.json": "c2ae5c2cee636b368bf41542dd91bfdb267aa7a4ebbb84d5ce1877ebe80888c6",
+    "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/controls-v2/summary.json": "53a12951184eb5e7aa4ab168d66d9d35824c24601355f41356a1772bd84f5ab5",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_temporal_double_hard_v2/rigid_runner": "5d8ed2f56ca7ba24d90b58aa89f6805151100c7899f26ad97d0f99b2717ec0b9",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_temporal_double_hard_v2/precision-source.json": "9f9cbe37ac89df6ff4f8d777ea14ce88ffaafd542487a0794365a303b7c5e1d5",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4"
+  }
+}

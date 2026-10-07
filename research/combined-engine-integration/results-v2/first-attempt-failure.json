@@ -1,0 +1,7 @@
+{
+  "schema": "retained-independent-control-harness-failure-v2",
+  "stage": "first-policy post-execution diagnostic schema assertion",
+  "error": "KeyError: early_component_policy",
+  "explanation": "Native emitEarly returns without this optional field when early_component_recovery=false. Old corrected-density raw result and v2 plan/launcher are preserved. No physical assertion failed.",
+  "next_attempt": "Prospective v3 reuses the exact v2 old-policy raw result and progress under hashes, verifies guards and all assertions, then executes ONLY the previously unexecuted new policy."
+}

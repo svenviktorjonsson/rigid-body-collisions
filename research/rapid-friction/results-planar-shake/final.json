@@ -1,0 +1,130 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "summary": {
+    "2d_shake9": {
+      "phases": [
+        {
+          "phase": {
+            "id": "velocity128",
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0002171100722123334,
+                "velocity_m_s": 0.033196881190393615,
+                "omega_rad_s": 0.4570192528485289,
+                "orientation_rad": 0.003645398193325406
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.00022637383341531472,
+                "velocity_m_s": 0.10402658556215236,
+                "omega_rad_s": 0.602255471953708,
+                "orientation_rad": 0.004128066084546498
+              }
+            }
+          ],
+          "qualified": false
+        },
+        {
+          "phase": {
+            "id": "velocity512",
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.00021711014459642602,
+                "velocity_m_s": 0.03319691022238827,
+                "omega_rad_s": 0.4570195566313292,
+                "orientation_rad": 0.003645426503799036
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.00022637358184189813,
+                "velocity_m_s": 0.10402657945263533,
+                "omega_rad_s": 0.6022555092853068,
+                "orientation_rad": 0.0041280589260926474
+              }
+            }
+          ],
+          "qualified": false
+        }
+      ],
+      "reference_qualified": false,
+      "benchmark": null
+    },
+    "2d_shake25": {
+      "phases": [
+        {
+          "phase": {
+            "id": "velocity128",
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0002945600660956785,
+                "velocity_m_s": 0.010508870149190254,
+                "omega_rad_s": 0.14375823137832147,
+                "orientation_rad": 0.0026764727415580503
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0003334302348244031,
+                "velocity_m_s": 0.12227563070158336,
+                "omega_rad_s": 0.7540520624652883,
+                "orientation_rad": 0.0047402027802453525
+              }
+            }
+          ],
+          "qualified": false
+        },
+        {
+          "phase": {
+            "id": "velocity512",
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.00028564412272681373,
+                "velocity_m_s": 0.010502296644358446,
+                "omega_rad_s": 0.144311414237966,
+                "orientation_rad": 0.0026922944872822953
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0003341547160756117,
+                "velocity_m_s": 0.12214186015093953,
+                "omega_rad_s": 0.7527604829924172,
+                "orientation_rad": 0.004747955335845414
+              }
+            }
+          ],
+          "qualified": false
+        }
+      ],
+      "reference_qualified": false,
+      "benchmark": null
+    }
+  }
+}

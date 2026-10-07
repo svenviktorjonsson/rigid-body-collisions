@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "controls_independently_recomputed": 8,
+  "maximum_scalar_geometry_error_m": 2.7755575615628914e-17,
+  "source_commit": "de7eead49ac732a24a3d6ffe570fe877e793d64a",
+  "source_archive_sha256": "3f8d3e684864f9ddf136808f66755c7825d1f1bc5734c62ec02ed063605e92cb",
+  "controls_sha256": "42b25936eddc886c994e3b47c5fff91adbd8538aee26c31079a68e8d35a4854f",
+  "trajectory_cause_proven": false,
+  "trajectory_qualified": false,
+  "scope": "Independently recomputed cached bounding boxes, support, and threshold formulas; native support and compound diagnostics retained, no world simulation."
+}

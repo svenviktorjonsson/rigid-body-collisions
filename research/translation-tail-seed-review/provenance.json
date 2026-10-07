@@ -1,0 +1,26 @@
+{
+  "schema": "final-rejected-tail-seed-provenance-v1",
+  "plan_sha256": "632f53743c6c1d539ddf37ad0647a51a42cf0c933eecee904ac7a27500e1cf64",
+  "driver_sha256": "234a7e6f85f69386111ced27f01f139c294ae2e95a8796ac8175a784d0adc6a6",
+  "wrapper_sha256": "46f19ae878f44fa0225bea7f63efc5d64cac1a448ea798945c7a10de85c984db",
+  "primary_source_zip_sha256": "2b2de09cc434c8a4c97c6a5a12ddf07cba96267f3320d436d9a86cb8a35ab4c9",
+  "binary_sha256": "746f3d9390b460fde726b36da365cca5fce610d1be8ca108bac18343934e18be",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-DSPATIAL_LAPACK_RECOVERY=1",
+    "-ffp-contract=off",
+    "-Werror=misleading-indentation",
+    "-Wall",
+    "-Wextra"
+  ],
+  "thread_environment": "Explicit OPENBLAS_NUM_THREADS=1 and OMP_NUM_THREADS=1; other thread environment not separately recorded",
+  "libraries": {
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895"
+  },
+  "all_accepted": true
+}

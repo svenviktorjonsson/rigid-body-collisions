@@ -1,0 +1,5 @@
+{
+  "auditor": "audit_decline_and_caps.py",
+  "sha256": "4da1f452222d4995c456dd106345aae48798f740febc0b4c28e978b72ce9964b",
+  "criterion": "All22inputs; unchanged original caps; exact baseline endpoints on every decline; account all early work in shared totals"
+}

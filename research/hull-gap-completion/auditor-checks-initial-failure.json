@@ -1,0 +1,7 @@
+{
+  "schema": "gap-auditor-controls-initial-failure-v1",
+  "failure": "Harness assumed hull-active-completion/final-independent-audit.json existed; the frozen prior receipt is independent-audit.json.",
+  "observed_before_failure": "Historical active archive audit passed: 2 histories, 4 retained rejections, 0 qualified references.",
+  "correction": "Select the actual archived receipt path by historical study; no auditor, physics gate, source archive or saved receipt was altered for this correction.",
+  "native_execution": false
+}

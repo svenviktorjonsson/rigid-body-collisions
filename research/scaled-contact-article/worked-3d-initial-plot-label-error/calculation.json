@@ -1,0 +1,331 @@
+{
+  "input_table": "worked_3d_inputs.json",
+  "input_sha256": "18c5fc8618270976d31bcbf7d7f99c1c081033e5935d2889e6b677d9f4f41219",
+  "interpretation": "Illustrative rotated-cuboid point impact; prescribed control inputs, not a measured material profile or fitted experiment.",
+  "native_replay_claimed": false,
+  "experimental_validation_claimed": false,
+  "main": {
+    "attitude": [
+      [
+        0.1111111111111111,
+        0.4444444444444444,
+        0.8888888888888888
+      ],
+      [
+        0.4444444444444444,
+        0.7777777777777778,
+        -0.4444444444444444
+      ],
+      [
+        -0.8888888888888888,
+        0.4444444444444444,
+        -0.1111111111111111
+      ]
+    ],
+    "inertia_shape_kg_m2": [
+      [
+        0.021666666666666667,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.03333333333333334,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.041666666666666664
+      ]
+    ],
+    "inertia_world_kg_m2": [
+      [
+        0.039773662551440325,
+        -0.0038683127572016426,
+        0.0003292181069958861
+      ],
+      [
+        -0.0038683127572016426,
+        0.032674897119341566,
+        0.005020576131687245
+      ],
+      [
+        0.0003292181069958861,
+        0.005020576131687245,
+        0.024218106995884774
+      ]
+    ],
+    "contact_lever_m": [
+      0.044444444444444446,
+      -0.07222222222222223,
+      -0.25555555555555554
+    ],
+    "reference_length_m": 0.2,
+    "signed_lever_operator": [
+      [
+        -0.0,
+        -1.2777777777777777,
+        0.3611111111111111
+      ],
+      [
+        1.2777777777777777,
+        -0.0,
+        0.2222222222222222
+      ],
+      [
+        -0.3611111111111111,
+        -0.2222222222222222,
+        -0.0
+      ]
+    ],
+    "contact_mobility_world_per_kg": [
+      [
+        3.0594301994301993,
+        -0.012535612535612384,
+        0.44866096866096866
+      ],
+      [
+        -0.012535612535612362,
+        2.2242165242165246,
+        -0.48945868945868953
+      ],
+      [
+        0.4486609686609686,
+        -0.48945868945868953,
+        0.7163532763532764
+      ]
+    ],
+    "contact_mobility_basis_per_kg": [
+      [
+        0.7163532763532764,
+        0.4486609686609686,
+        -0.48945868945868953
+      ],
+      [
+        0.44866096866096866,
+        3.0594301994301993,
+        -0.012535612535612384
+      ],
+      [
+        -0.48945868945868953,
+        -0.012535612535612362,
+        2.2242165242165246
+      ]
+    ],
+    "contact_basis": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "impulse_world_kg_m_s": [
+      -1.5978765391025227,
+      1.43285779416612,
+      6.670213833978701
+    ],
+    "impulse_basis_kg_m_s": [
+      6.670213833978701,
+      -1.5978765391025227,
+      1.43285779416612
+    ],
+    "incoming_contact_velocity_m_s": [
+      1.4722222222222223,
+      0.04444444444444445,
+      -2.1
+    ],
+    "outgoing_contact_velocity_m_s": [
+      -0.44166666666666654,
+      -0.013333333333333225,
+      1.2599999999999996
+    ],
+    "outgoing_velocity_m_s": [
+      0.20106173044873865,
+      0.11642889708306003,
+      1.3351069169893504
+    ],
+    "outgoing_angular_velocity_rad_s": [
+      -0.5357279720042757,
+      2.5604635867673373,
+      0.1607856546557368
+    ],
+    "energy_before_J": 5.559516460905349,
+    "energy_after_J": 1.9569652774226618,
+    "energy_change_J": -3.602551183482687,
+    "tangential_impulse_over_normal_impulse": 0.32176286745511584,
+    "checks": {
+      "incoming_contact_error_m_s": 5.551115123125783e-17,
+      "linear_update_error_m_s": 0.0,
+      "angular_update_error_rad_s": 2.6645352591003757e-15,
+      "outgoing_contact_error_m_s": 6.661338147750939e-16,
+      "endpoint_target_error_m_s": 4.440892098500626e-16,
+      "linear_impulse_error_kg_m_s": 0.0,
+      "angular_impulse_error_kg_m2_s": 6.938893903907228e-17,
+      "energy_identity_error_J": 0.0,
+      "scaled_energy_error_J": 0.0
+    },
+    "vertices_relative_com_m": [
+      [
+        -0.17777777777777778,
+        -0.1611111111111111,
+        0.12222222222222223
+      ],
+      [
+        -3.3923481307990897e-18,
+        -0.25,
+        0.1
+      ],
+      [
+        -0.044444444444444446,
+        0.07222222222222223,
+        0.25555555555555554
+      ],
+      [
+        0.13333333333333333,
+        -0.016666666666666666,
+        0.23333333333333334
+      ],
+      [
+        -0.13333333333333333,
+        0.016666666666666666,
+        -0.23333333333333334
+      ],
+      [
+        0.044444444444444446,
+        -0.07222222222222223,
+        -0.25555555555555554
+      ],
+      [
+        3.3923481307990897e-18,
+        0.25,
+        -0.1
+      ],
+      [
+        0.17777777777777778,
+        0.1611111111111111,
+        -0.12222222222222223
+      ]
+    ]
+  },
+  "reference_length_controls": [
+    {
+      "ell_m": 1e-05,
+      "max_physical_state_difference": 4.884981308350689e-15,
+      "checks": {
+        "incoming_contact_error_m_s": 5.551115123125783e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 1.7763568394002505e-15,
+        "outgoing_contact_error_m_s": 4.440892098500626e-16,
+        "endpoint_target_error_m_s": 1.3877787807814457e-15,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 4.163336342344337e-17,
+        "energy_identity_error_J": 1.7763568394002505e-15,
+        "scaled_energy_error_J": 0.0
+      }
+    },
+    {
+      "ell_m": 0.02,
+      "max_physical_state_difference": 6.217248937900877e-15,
+      "checks": {
+        "incoming_contact_error_m_s": 2.7755575615628914e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 9.992007221626409e-16,
+        "outgoing_contact_error_m_s": 2.8102520310824275e-16,
+        "endpoint_target_error_m_s": 1.7208456881689926e-15,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 2.7755575615628914e-17,
+        "energy_identity_error_J": 1.7763568394002505e-15,
+        "scaled_energy_error_J": 0.0
+      }
+    },
+    {
+      "ell_m": 0.2,
+      "max_physical_state_difference": 0.0,
+      "checks": {
+        "incoming_contact_error_m_s": 5.551115123125783e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 2.6645352591003757e-15,
+        "outgoing_contact_error_m_s": 6.661338147750939e-16,
+        "endpoint_target_error_m_s": 4.440892098500626e-16,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 6.938893903907228e-17,
+        "energy_identity_error_J": 0.0,
+        "scaled_energy_error_J": 0.0
+      }
+    },
+    {
+      "ell_m": 1000.0,
+      "max_physical_state_difference": 4.551914400963142e-15,
+      "checks": {
+        "incoming_contact_error_m_s": 2.7755575615628914e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 8.881784197001252e-16,
+        "outgoing_contact_error_m_s": 2.3592239273284576e-16,
+        "endpoint_target_error_m_s": 1.27675647831893e-15,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 4.163336342344337e-17,
+        "energy_identity_error_J": 2.6645352591003757e-15,
+        "scaled_energy_error_J": 0.0
+      }
+    }
+  ],
+  "tangent_basis_controls": [
+    {
+      "angle_rad": 0.35,
+      "max_physical_state_difference": 2.220446049250313e-16,
+      "checks": {
+        "incoming_contact_error_m_s": 5.551115123125783e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 1.3322676295501878e-15,
+        "outgoing_contact_error_m_s": 4.440892098500626e-16,
+        "endpoint_target_error_m_s": 4.440892098500626e-16,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 4.163336342344337e-17,
+        "energy_identity_error_J": 1.7763568394002505e-15,
+        "scaled_energy_error_J": 0.0
+      }
+    },
+    {
+      "angle_rad": 0.91,
+      "max_physical_state_difference": 4.440892098500626e-15,
+      "checks": {
+        "incoming_contact_error_m_s": 5.551115123125783e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 1.3322676295501878e-15,
+        "outgoing_contact_error_m_s": 5.551115123125783e-16,
+        "endpoint_target_error_m_s": 1.0547118733938987e-15,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 4.163336342344337e-17,
+        "energy_identity_error_J": 0.0,
+        "scaled_energy_error_J": 0.0
+      }
+    },
+    {
+      "angle_rad": 1.7,
+      "max_physical_state_difference": 4.440892098500626e-15,
+      "checks": {
+        "incoming_contact_error_m_s": 5.551115123125783e-17,
+        "linear_update_error_m_s": 0.0,
+        "angular_update_error_rad_s": 2.220446049250313e-15,
+        "outgoing_contact_error_m_s": 6.661338147750939e-16,
+        "endpoint_target_error_m_s": 1.3877787807814457e-15,
+        "linear_impulse_error_kg_m_s": 0.0,
+        "angular_impulse_error_kg_m2_s": 5.551115123125783e-17,
+        "energy_identity_error_J": 4.440892098500626e-15,
+        "scaled_energy_error_J": 0.0
+      }
+    }
+  ],
+  "max_invariance_difference": 6.217248937900877e-15
+}

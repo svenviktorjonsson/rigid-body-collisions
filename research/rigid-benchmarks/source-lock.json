@@ -1,0 +1,49 @@
+{
+  "dependency": "Box2D",
+  "version": "3.1.1",
+  "repository": "https://github.com/erincatto/box2d",
+  "commit": "8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
+  "archive_url": "https://codeload.github.com/erincatto/box2d/tar.gz/8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
+  "archive_sha256": "dee7bcf0f50b3dcccf67678ce14ffe3ce02583b51b8b03e447ab30a84c3436ef",
+  "release_url": "https://github.com/erincatto/box2d/releases/tag/v3.1.1",
+  "source_files": [
+    {
+      "path": "public-sources/LICENSE",
+      "upstream_path": "LICENSE",
+      "sha256": "68a3e676d7e94093b102d5cba0d4e04af812040d6f230c3db67a6664574e43d2"
+    },
+    {
+      "path": "public-sources/samples/sample_shapes.cpp",
+      "upstream_path": "samples/sample_shapes.cpp",
+      "sha256": "a741d25e31fa8f34b58f356ce4e4a790bda45fbe354396401ec0b6849102f80d"
+    },
+    {
+      "path": "public-sources/samples/sample_stacking.cpp",
+      "upstream_path": "samples/sample_stacking.cpp",
+      "sha256": "82fe8a14a738af4b0a35a5208ab9c3c11b68adaddb8cf1a2175db60c2183c430"
+    },
+    {
+      "path": "public-sources/samples/sample_robustness.cpp",
+      "upstream_path": "samples/sample_robustness.cpp",
+      "sha256": "118515a0a82bbe5d4f0d863018e23c83d43b660280f9484d69a051d2a902a3b3"
+    }
+  ],
+  "block_comparator": {
+    "version": "2.4.1",
+    "commit": "9ebbbcd960ad424e03e5de6e66a40764c16f51bc",
+    "archive_url": "https://codeload.github.com/erincatto/box2d/tar.gz/v2.4.1",
+    "archive_sha256": "d6b4650ff897ee1ead27cf77a5933ea197cbeef6705638dd181adc2e816b23c2",
+    "source_files": [
+      {
+        "path": "public-sources/block/LICENSE",
+        "upstream_path": "LICENSE",
+        "sha256": "9b77e0763d3e1f5bb34aa54be173dd34377a29baf3cc4111fb48cf758b21efd8"
+      },
+      {
+        "path": "public-sources/block/src/dynamics/b2_contact_solver.cpp",
+        "upstream_path": "src/dynamics/b2_contact_solver.cpp",
+        "sha256": "6f44c5cce24c88fab2a21829528368b73e2e186c1a0eb3683ffb0a5e1529b450"
+      }
+    ]
+  }
+}

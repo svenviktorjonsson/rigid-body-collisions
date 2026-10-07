@@ -1,0 +1,38 @@
+{
+  "simultaneous_chain": {
+    "impulses": [
+      2.0,
+      2.0
+    ],
+    "before": [
+      1.0,
+      0.0,
+      -1.0
+    ],
+    "after": [
+      -1.0,
+      0.0,
+      1.0
+    ]
+  },
+  "heterogeneous_restitution": {
+    "target": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "least_squares_target": [
+      0.3333333333333334,
+      0.33333333333333337,
+      0.3333333333333333
+    ],
+    "residual_norm": 0.816496580927726
+  },
+  "energy_counterexample": {
+    "impulse": [
+      1.1,
+      0.8
+    ],
+    "kinetic_energy_gain": 0.40000000000000036
+  }
+}

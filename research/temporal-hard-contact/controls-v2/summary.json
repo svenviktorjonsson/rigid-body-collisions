@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "case": "work_0.0_-1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.09000000000000004,
+      "observed_work_J": 0.09,
+      "work_error_J": 4.163336342344337e-17,
+      "passivity_J": -0.7506000000000002
+    },
+    {
+      "case": "work_0.0_-1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.09000000000000004,
+      "observed_work_J": 0.09,
+      "work_error_J": 4.163336342344337e-17,
+      "passivity_J": -0.7506000000000002
+    },
+    {
+      "case": "work_0.0_1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.026666666664978883,
+      "observed_work_J": 0.0266666666649788,
+      "work_error_J": 8.326672684688674e-17,
+      "passivity_J": -0.6466666666666665
+    },
+    {
+      "case": "work_0.0_1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.026666666664978883,
+      "observed_work_J": 0.0266666666649788,
+      "work_error_J": 8.326672684688674e-17,
+      "passivity_J": -0.6466666666666665
+    },
+    {
+      "case": "work_0.5_-1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.25962809887087923,
+      "observed_work_J": 0.25962809887213895,
+      "work_error_J": 1.2597145548909339e-12,
+      "passivity_J": -0.9055041717177359
+    },
+    {
+      "case": "work_0.5_-1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.25962809887087923,
+      "observed_work_J": 0.25962809887213895,
+      "work_error_J": 1.2597145548909339e-12,
+      "passivity_J": -0.9055041717177359
+    },
+    {
+      "case": "work_0.5_1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.25962809887087923,
+      "observed_work_J": 0.25962809887213895,
+      "work_error_J": 1.2597145548909339e-12,
+      "passivity_J": -0.9055041717177359
+    },
+    {
+      "case": "work_0.5_1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": 0.25962809887087923,
+      "observed_work_J": 0.25962809887213895,
+      "work_error_J": 1.2597145548909339e-12,
+      "passivity_J": -0.9055041717177359
+    },
+    {
+      "case": "work_-0.5_-1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": -0.1773245004385377,
+      "observed_work_J": -0.17732450043960699,
+      "work_error_J": 1.0692835505921039e-12,
+      "passivity_J": -0.4688374999968804
+    },
+    {
+      "case": "work_-0.5_-1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": -0.1773245004385377,
+      "observed_work_J": -0.17732450043960699,
+      "work_error_J": 1.0692835505921039e-12,
+      "passivity_J": -0.4688374999968804
+    },
+    {
+      "case": "work_-0.5_1_True",
+      "state_bytes_exact": true,
+      "expected_work_J": -0.1773245004385377,
+      "observed_work_J": -0.17732450043960699,
+      "work_error_J": 1.0692835505921039e-12,
+      "passivity_J": -0.4688374999968804
+    },
+    {
+      "case": "work_-0.5_1_False",
+      "state_bytes_exact": true,
+      "expected_work_J": -0.1773245004385377,
+      "observed_work_J": -0.17732450043960699,
+      "work_error_J": 1.0692835505921039e-12,
+      "passivity_J": -0.4688374999968804
+    }
+  ],
+  "scope": "Independent dynamic-body impulse/angular-momentum work identity, both body orders, signed translation and rotation, friction, observer on/off state parity. These controls do not qualify world trajectories."
+}

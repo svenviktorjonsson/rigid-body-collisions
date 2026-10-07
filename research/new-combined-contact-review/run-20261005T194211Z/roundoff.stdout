@@ -1,0 +1,5 @@
+seeds [(4, 30)]
+native 256 2 0.0002976359469177826 256
+native 4096 0 9.224912219477488e-09 3432
+lm {'status': 3, 'nfev': 26, 'njev': 7, 'projection_max': 0.00015393322352251845, 'first_projection_gate_function_call': None}
+trf {'status': 1, 'nfev': 1326, 'njev': 1317, 'projection_max': 1.260603996921704e-15, 'first_projection_gate_function_call': 1316}

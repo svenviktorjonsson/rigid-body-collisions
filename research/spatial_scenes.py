@@ -1,0 +1,67 @@
+"""Synthetic SI 3D validation scenes, not experimentally calibrated materials."""
+import math
+import numpy as np
+
+
+def sphere(position, radius=.1, mass=1., **kwargs):
+    return dict(position=list(position),shapes=[dict(kind='sphere',radius=radius,density=mass/(4*math.pi*radius**3/3))],**kwargs)
+
+
+def wall_impact(speed=20., restitution=1.):
+    return dict(duration=.1,gravity=[0,0,0],bodies=[dict(type='kinematic',position=[-1,0,0],velocity=[speed,0,0],friction=0,restitution=1,shapes=[dict(kind='box',half_extents=[.05,2,2])]),sphere([0,0,0],friction=0,restitution=restitution)])
+
+
+def driven_row(count=16,speed=20.,axis=0):
+    """Initially touching spheres: inelastic driven row must reach wall speed."""
+    direction=np.eye(3)[axis];bodies=[dict(type='kinematic',position=(-.15*direction).tolist(),velocity=(speed*direction).tolist(),friction=0,shapes=[dict(kind='box',half_extents=[.05 if k==axis else 1 for k in range(3)])])]
+    bodies += [sphere(.2*k*direction,friction=0) for k in range(count)]
+    return dict(duration=.04,gravity=[0,0,0],bodies=bodies)
+
+
+def container(side=3,speed=20.,shake=False,shape='sphere',seed=42,spin=0.,duration=.12):
+    """A six-wall 3D container; driven walls, independently integrated contents."""
+    radius=.1;spacing=.205;half=side*spacing/2+.045
+    walls=[]
+    for axis in range(3):
+        for sign in [-1,1]:
+            center=np.zeros(3);center[axis]=sign*(half+.025)
+            ext=np.full(3,half+.05);ext[axis]=.025
+            walls.append(dict(kind='box',half_extents=ext.tolist(),center=center.tolist()))
+    commands=[]
+    if shake: commands=[dict(time_s=.04,velocity=[-speed,0,0],omega=[0,0,-spin]),dict(time_s=.08,velocity=[speed,0,0],omega=[0,0,spin])]
+    box=dict(type='kinematic',position=[0,0,0],velocity=[speed,0,0],omega=[0,0,spin],velocity_schedule=commands,friction=math.sqrt(.4),shapes=walls)
+    rng=np.random.default_rng(seed);bodies=[box]
+    for x in range(side):
+        for y in range(side):
+            for z in range(side):
+                position=(spacing*(np.array([x,y,z])-(side-1)/2)).tolist()
+                if shape=='sphere':body=sphere(position,friction=math.sqrt(.4))
+                elif shape=='box':body=dict(position=position,friction=math.sqrt(.4),shapes=[dict(kind='box',half_extents=[.085,.095,.075],density=1/(8*.085*.095*.075))])
+                else:
+                    # Convex, asymmetric 3D polyhedra; support radius <=.1m.
+                    points=rng.normal(size=(12,3));points/=np.linalg.norm(points,axis=1)[:,None];points*=rng.uniform(.075,.1,size=(12,1))
+                    body=dict(position=position,friction=math.sqrt(.4),shapes=[dict(kind='hull',vertices=points.tolist(),density=500.)])
+                bodies.append(body)
+    return dict(duration=duration,gravity=[0,0,-9.81],bodies=bodies,container_interior_half_extents_m=[half]*3),half
+
+
+def touching_container(side=3,speed=100.,duration=.04,epsilon_m=1e-10):
+    """Closed 3D packed contact graph, zero friction/gravity: exact velocity U.
+
+    Initial overlaps <=3*epsilon_m deliberately stabilize contact discovery at
+    floating-point boundaries. This is disclosed geometry tolerance, not material
+    compliance. The velocity-only profile must keep it below the analytic gate.
+    """
+    spacing=.2-epsilon_m;half=(side-1)*spacing/2+.1-epsilon_m
+    walls=[]
+    for axis in range(3):
+        for sign in [-1,1]:
+            center=np.zeros(3);center[axis]=sign*(half+.025)
+            ext=np.full(3,half+.05);ext[axis]=.025
+            walls.append(dict(kind='box',center=center.tolist(),half_extents=ext.tolist()))
+    bodies=[dict(type='kinematic',position=[0,0,0],velocity=[speed,0,0],friction=0,shapes=walls)]
+    for x in range(side):
+        for y in range(side):
+            for z in range(side):
+                bodies.append(sphere(spacing*(np.array([x,y,z])-(side-1)/2),friction=0))
+    return dict(duration=duration,gravity=[0,0,0],container_interior_half_extents_m=[half]*3,bodies=bodies),half

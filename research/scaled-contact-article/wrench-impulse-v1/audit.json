@@ -1,0 +1,18 @@
+{
+  "random_3d_pairs": 100,
+  "planar_controls": 100,
+  "max_absolute_errors": {
+    "momentum": 3.637978807091713e-12,
+    "velocity": 3.552713678800501e-15,
+    "energy": 4.263256414560601e-14,
+    "duality": 3.552713678800501e-15,
+    "reference_shift": 3.637978807091713e-12,
+    "scale_invariance": 3.552713678800501e-15,
+    "pair_angular_balance": 5.88418203051333e-15,
+    "moving_boundary_work": 4.263256414560601e-14,
+    "planar": 4.547473508864641e-13
+  },
+  "interpretation": "Prescribed synthetic force and independent torque impulses; algebra/energy/duality checks, not a measured contact-moment law.",
+  "native_contact_moment_law_implemented": false,
+  "source_sha256": "484fae0015db28a3bfcfa5a605dbfa029e20ca4df90d1676071fbddac8bf894f"
+}

@@ -1,0 +1,9 @@
+"""Exact binary-rational validation: pressure lower bound, not infeasibility."""
+import json,hashlib
+from pathlib import Path
+from fractions import Fraction
+
+def main():
+ folder=Path(__file__).parent;cap=Path('research/translation-position-diagnostic/results/rejected-normal-system.json');d=json.loads(cap.read_text());r=json.loads((folder/'triple-null-guide.json').read_text());F=Fraction;weights=[F(x)for x in r['weights']];assert all(x>=0 for x in weights);row=[sum(weights[i]*F(d['A'][i][j])for i in range(len(weights)))for j in range(len(weights))];target=sum(weights[i]*F(d['b'][i])for i in range(len(weights)));margin=target-F(d['tolerance_m_s'])*sum(weights);maximum=max(row);assert maximum>0 and margin>0;bound=margin/maximum;out=dict(capture_sha256=hashlib.sha256(cap.read_bytes()).hexdigest(),validation='PASS using exact Fractions of stored IEEE floats',nonnegative_weights=True,weighted_target_m_s=float(target),weighted_tolerance_m_s=float(F(d['tolerance_m_s'])*sum(weights)),positive_mobility_columns=[dict(column=i,value=float(v),exact_numerator=str(v.numerator),exact_denominator=str(v.denominator)) for i,v in enumerate(row)if v>0],maximum_response=float(maximum),minimum_pressure_1_norm_Ns=float(bound),bound_exact_numerator=str(bound.numerator),bound_exact_denominator=str(bound.denominator),configured_upper_min_Ns=float(min(d['hi'])),configured_upper_max_Ns=float(max(d['hi'])),interpretation='For all p>=0 and w=A p-b>=-tolerance, sum(p)>=bound. This norm bound alone is not infeasibility; the separate exact per-column finite-upper-bound proof in translation-position-certificate proves this captured bounded system infeasible.')
+ (folder/'validated-pressure-bound.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))
+if __name__=='__main__':main()

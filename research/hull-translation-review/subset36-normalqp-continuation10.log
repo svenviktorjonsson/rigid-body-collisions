@@ -1,0 +1,12 @@
+{"alpha": 0.0, "residual_m_s": 9.02069622611639e-15, "nfev": 3, "optimality": 4.571029783970949e-14, "optimizer_success": true}
+{"alpha": 0.1, "residual_m_s": 9.02069622611639e-15, "nfev": 5, "optimality": 8.836246758654058e-14, "optimizer_success": true}
+{"alpha": 0.2, "residual_m_s": 3.383253115441581e-07, "nfev": 31, "optimality": 1.9656411184717345e-13, "optimizer_success": true}
+{"alpha": 0.30000000000000004, "residual_m_s": 2.704740431402755e-06, "nfev": 39, "optimality": 2.572818438292422e-11, "optimizer_success": true}
+{"alpha": 0.4, "residual_m_s": 5.109749211085468e-06, "nfev": 68, "optimality": 4.006965862179849e-14, "optimizer_success": true}
+{"alpha": 0.5, "residual_m_s": 7.542385813463282e-06, "nfev": 41, "optimality": 1.900459435280481e-11, "optimizer_success": true}
+{"alpha": 0.6000000000000001, "residual_m_s": 9.034407343787927e-06, "nfev": 51, "optimality": 1.9399224252624576e-12, "optimizer_success": true}
+{"alpha": 0.7000000000000001, "residual_m_s": 9.139832395588818e-06, "nfev": 39, "optimality": 3.3108298502480333e-13, "optimizer_success": true}
+{"alpha": 0.8, "residual_m_s": 9.296142740699232e-06, "nfev": 42, "optimality": 2.5097199307016076e-14, "optimizer_success": true}
+{"alpha": 0.9, "residual_m_s": 9.495670028725629e-06, "nfev": 37, "optimality": 2.0807956612237404e-12, "optimizer_success": true}
+{"alpha": 1.0, "residual_m_s": 9.73024952588632e-06, "nfev": 40, "optimality": 8.745422157700587e-14, "optimizer_success": true}
+{"result": "reference_0-fb-trf-normal-qp-10-subset.json", "original_equations_accepted": false, "residual_m_s": 9.73024952588632e-06, "passive_change_bound_J": -102.21448177273652, "passivity_scale": 192.9013632508733, "normal_min": 0.0, "elapsed_s": 0.23319711899966933}

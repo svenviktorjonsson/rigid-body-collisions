@@ -1,0 +1,14 @@
+{
+  "purpose": "Diagnose fast shaking nonmonotonic time refinement without changing the physical contact law",
+  "baseline": "research/spatial-friction/results/traces.zip:fast_shake27_spheres/reference_4.json",
+  "scene": "research/spatial-friction/results/scenes.json:fast_shake27_spheres",
+  "common": {"solver":"coulomb","kinematic_contact_phase":"start","position_stabilization":"split","iterations":4096,"contact_tolerance_m_s":1e-8,"contact_slop_m":1e-9},
+  "runs": {
+    "reproduce_finest": {"dt":0.01,"primary_steps":4,"travel_fraction":0.00375},
+    "half_output_frame": {"dt":0.005,"primary_steps":4,"travel_fraction":0.00375},
+    "half_travel": {"dt":0.01,"primary_steps":4,"travel_fraction":0.001875},
+    "fixed_5us": {"dt":0.01,"primary_steps":2000,"travel_fraction":0},
+    "fixed_2_5us": {"dt":0.01,"primary_steps":4000,"travel_fraction":0}
+  },
+  "scope": "Exploratory diagnosis only; retain all outcomes. Same geometry, friction, restitution, gravity and prescribed walls. Fixed-step trials explicitly disable heuristic travel guard while resolving travel more finely than the failed fine baseline. No retrospective reference qualification or engine timing ranking. Compare common 10ms output times. Source snapshot and binary SHA precede runs."
+}

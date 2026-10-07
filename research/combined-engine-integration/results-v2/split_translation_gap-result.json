@@ -1,0 +1,397 @@
+{
+  "boundary_work_J": 0.0,
+  "collision_updates": 1,
+  "contact_point_policy": "shared",
+  "coulomb_active_damped_steps": 0,
+  "coulomb_active_expanded_contacts": 0,
+  "coulomb_active_mode_guesses": 0,
+  "coulomb_active_pivot_calls": 0,
+  "coulomb_active_pressure_svd_calls": 0,
+  "coulomb_active_solves": 0,
+  "coulomb_active_subset_passes": 0,
+  "coulomb_active_svd_calls": 0,
+  "coulomb_cold_restarts": 0,
+  "coulomb_continuation_attempts": 0,
+  "coulomb_continuation_budget_rejections": 0,
+  "coulomb_continuation_damped_steps": 0,
+  "coulomb_continuation_newton_steps": 0,
+  "coulomb_continuation_normal_pivot_attempts": 0,
+  "coulomb_continuation_normal_pivot_guides": 0,
+  "coulomb_continuation_normal_qp_guides": 0,
+  "coulomb_continuation_solves": 0,
+  "coulomb_continuation_stages": 0,
+  "coulomb_continuation_svd_calls": 0,
+  "coulomb_fast_solves": 1,
+  "coulomb_gauge_restarts": 0,
+  "coulomb_iteration_sweeps_total": 0,
+  "coulomb_newton_steps": 0,
+  "coulomb_null_pressure_boundary_moves": 0,
+  "coulomb_null_pressure_solves": 0,
+  "coulomb_null_pressure_states": 0,
+  "coulomb_null_pressure_svd_calls": 0,
+  "coulomb_null_trial_response_max_m_s": 0.0,
+  "coulomb_opposing_restarts": 0,
+  "coulomb_passive_change_max_J": 0.0,
+  "coulomb_polish_budget_rejections": 0,
+  "coulomb_polish_solves": 0,
+  "coulomb_polish_steps": 0,
+  "coulomb_polish_svd_calls": 0,
+  "coulomb_polish_svd_rejections": 0,
+  "coulomb_pressure_solves": 0,
+  "coulomb_pressure_svd_calls": 0,
+  "coulomb_rank_restarts": 0,
+  "coulomb_residual_max_m_s": 0.0,
+  "coulomb_solves": 1,
+  "coulomb_supplemental_damped_steps": 0,
+  "coulomb_supplemental_iteration_steps": 0,
+  "coulomb_supplemental_null_response_max_m_s": 0.0,
+  "coulomb_supplemental_pivot_calls": 0,
+  "coulomb_supplemental_pressure_attempts": 0,
+  "coulomb_supplemental_pressure_svd_calls": 0,
+  "coulomb_supplemental_projector_calls": 0,
+  "coulomb_supplemental_restarts": 0,
+  "coulomb_supplemental_solves": 0,
+  "coulomb_supplemental_svd_calls": 0,
+  "coulomb_support_component_cap_rejections": 0,
+  "coulomb_support_expanded_contacts": 0,
+  "coulomb_support_helper_calls": 0,
+  "coulomb_support_iteration_steps": 0,
+  "coulomb_support_largest_rows": 0,
+  "coulomb_support_passes": 0,
+  "coulomb_support_pivot_calls": 0,
+  "coulomb_support_pressure_svd_calls": 0,
+  "coulomb_support_skipped_components": 0,
+  "coulomb_support_solves": 0,
+  "coulomb_support_svd_calls": 0,
+  "coulomb_sweeps_max": 0,
+  "coupled_fallbacks": 0,
+  "coupled_updates": 1,
+  "eliminated_tangent_rows_max": 0,
+  "lapack_contact_recovery_compiled": true,
+  "max_closing_contact_speed_m_s": 0.0,
+  "max_contact_penetration_m": 0.0005000000000000004,
+  "mobility_matrix_bytes_max": 72,
+  "mobility_rows_max": 3,
+  "normal_matrix_rows_max": 0,
+  "normal_qp_rejections": 0,
+  "normal_qp_solves": 0,
+  "position_active_pressure_svd_calls": 0,
+  "position_active_solves": 0,
+  "position_active_svd_calls": 0,
+  "position_iterative_solves": 0,
+  "position_null_pressure_boundary_moves": 0,
+  "position_null_pressure_solves": 0,
+  "position_null_pressure_states": 0,
+  "position_null_pressure_svd_calls": 0,
+  "position_null_trial_response_max_m_s": 0.0,
+  "position_pressure_solves": 0,
+  "position_pressure_svd_calls": 0,
+  "scalar_precision": "float64",
+  "sequential_updates": 0,
+  "shared_contact_rows": 3,
+  "shared_contact_transport_max_m": 0.0005000000000000004,
+  "states": [
+    [
+      [
+        -0.1095,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.111000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.95,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        -0.1095,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.111000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0010500000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.95,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "step_s": 0.000431486,
+  "tangent_gyro_correction_max_m_s": 0.0,
+  "times": [
+    0.0,
+    0.001
+  ],
+  "translation_pose_absolute_orbital_change_kg_m2_s": 0.0,
+  "translation_pose_absolute_potential_change_J": 0.0,
+  "translation_pose_displacement_max_m": 0.0001000000000000001,
+  "translation_pose_ledger_updates": 1,
+  "translation_pose_orbital_change_kg_m2_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "translation_pose_potential_change_J": 0.0,
+  "translation_split_residual_max_m_s": 0.0,
+  "translation_split_solves": 1,
+  "updates": [
+    1
+  ],
+  "wall_time_s": 0.05774937399837654,
+  "mass": [
+    0,
+    0,
+    1.0
+  ],
+  "inertia_body_kg_m2": [
+    [
+      [
+        0.05333333333333332,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.026669333333333326,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.026669333333333326
+      ]
+    ],
+    [
+      [
+        0.05333333333333332,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.026669333333333326,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.026669333333333326
+      ]
+    ],
+    [
+      [
+        0.004000000000000001,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.004000000000000001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.004000000000000001
+      ]
+    ]
+  ],
+  "body_types": [
+    "static",
+    "static",
+    "dynamic"
+  ],
+  "physical_setup_id": "5a9da8603d9a7590346fa3922dfde39dd07fdd692ba707bc53dbaeec93fd4510",
+  "numerical_model": {
+    "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+    "solver": "coulomb",
+    "contact_point_policy": "shared",
+    "primary_steps": 1,
+    "iterations": 4096,
+    "travel_fraction": 0.0,
+    "margin_m": 0.0,
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split_translation_gap",
+    "early_component_recovery": false,
+    "shape_cache_margin_order": "margin before recalc",
+    "position_clearance_target": "negative available gap over internal timestep",
+    "translation_pose_ledger": "final physical velocity, numerical gravity and orbital changes; no angular pose correction",
+    "preassembly_elimination": true,
+    "dantzig_impulse_sanity_limit": 1e+30,
+    "adaptive_policy": {
+      "contact_threshold": 12,
+      "closing_speed_threshold_m_s": 0.01,
+      "dwell_updates": 24,
+      "fast_iterations": 8
+    },
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": {
+      "active_face": {
+        "max_full_rows": 4096,
+        "max_reduced_rows": 384,
+        "max_subset_passes": 8,
+        "max_search_steps": 512,
+        "max_svd_calls": 256,
+        "max_pressure_face_attempts": 128,
+        "max_pressure_svd_calls": 128,
+        "max_damped_factorizations": 512,
+        "max_continuation_attempts": 96,
+        "final_gate": "all original equations and finite passivity",
+        "normal_pivot_guides": "at most eight calls; no exposed internal pivot limit"
+      },
+      "normal_pressure_release": {
+        "max_normals": 128,
+        "max_candidates": 128,
+        "max_release_pool": 16,
+        "max_release_depth": 3,
+        "svd_rank_cutoff": 1e-13
+      },
+      "first_iteration_phase_max": 256,
+      "normal_null_pressure": {
+        "max_normals": 384,
+        "max_active_states": 128,
+        "svd_rank_cutoff": 1e-13,
+        "null_gradient_trigger": 1e-12,
+        "max_jacobi_sweeps_per_svd": 64,
+        "trial_response": "recorded numerical search only; exact original final gate"
+      },
+      "supplemental": {
+        "compiled": true,
+        "max_rows": 64,
+        "max_nonlinear_and_projector_svd_calls": 1024,
+        "max_iteration_steps": 2048,
+        "max_pressure_svd_calls": 128,
+        "max_normal_pivot_calls": 1,
+        "normal_pivot_internal_budget": "not exposed by upstream",
+        "method": "warm/cold FB, numerical friction continuation, mobility-null traction guide and LAPACK More trust search",
+        "final_gate": "original circular law, finite passivity and bounds"
+      },
+      "support_tail": {
+        "compiled": true,
+        "max_full_rows": 4096,
+        "max_component_rows": 64,
+        "max_passes": 8,
+        "max_helper_calls": 8,
+        "max_nonlinear_and_projector_svd_calls": 1024,
+        "max_pressure_svd_calls": 1024,
+        "max_normal_pivot_calls": 8,
+        "normal_pivot_internal_budget": "not exposed by upstream",
+        "seed": "final rejected PGS",
+        "components": "exact nonzero couplings; complete contact triples",
+        "final_gate": "all original equations, normal bounds and finite passivity"
+      },
+      "early_component": {
+        "enabled": false,
+        "max_full_rows": 4096,
+        "max_component_rows": 64,
+        "max_passes": 8,
+        "max_helper_calls": 8,
+        "max_nonlinear_and_projector_svd_calls": 1024,
+        "max_pressure_svd_calls": 1024,
+        "max_normal_pivot_calls": 8,
+        "seed": "actual first256 rejected PGS",
+        "decline": "restore exact first-phase seed and continue original next lane",
+        "caps": "fresh and separate from later support tail; two calls may consume twice the helper budgets",
+        "final_gate": "all original equations, bounds and finite passivity"
+      },
+      "recovery_order": "normal null-pressure descent, normal pressure release, active contact, full continuation, existing polisher, remaining original sweep budget, optional small-system supplemental search, exact-component support tail",
+      "continuation": {
+        "max_rows": 384,
+        "max_steps": 512,
+        "max_svd_calls": 256,
+        "max_damped_factorizations": 512,
+        "max_stage_attempts": 96,
+        "normal_search_merit": "Fischer\u2013Burmeister; original projection acceptance",
+        "normal_guide": "active-set QP then at most one normal-only Dantzig call; no exposed internal pivot cap",
+        "trial_friction": "internal continuation only; original-law final gate"
+      },
+      "enabled": true,
+      "max_rows": 384,
+      "max_newton_steps_per_attempt": 64,
+      "max_svd_calls_total": 256,
+      "max_jacobi_sweeps_per_svd": 64,
+      "max_gauge_directions_per_start": 4,
+      "starts": "warm, truncated-J retry, feasible opposing-slip guesses, mechanically neutral gauges, cold",
+      "jacobian_rank_cutoffs": [
+        1e-12,
+        1e-10
+      ],
+      "max_opposing_restarts_per_start": 8,
+      "minimum_iteration_budget": 64
+    },
+    "tangent_gyro_rhs": "consistent free angular velocity",
+    "friction": "isotropic Coulomb disk; product mixing; residual-gated refinement",
+    "restitution": "product mixing; zero velocity threshold"
+  }
+}

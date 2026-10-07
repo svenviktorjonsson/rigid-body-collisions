@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "world-results-v2",
+      "historical_guards_verified": true,
+      "current_live_unchanged": false,
+      "worlds": [
+        {
+          "case": "2d_disks",
+          "full_histories": 1,
+          "physical_passes": 1,
+          "edges": [],
+          "reference_qualified": false
+        }
+      ],
+      "procedural_failure_retained": true
+    },
+    {
+      "archive": "world-results-v3",
+      "historical_guards_verified": true,
+      "current_live_unchanged": false,
+      "worlds": [
+        {
+          "case": "2d_disks",
+          "full_histories": 5,
+          "physical_passes": 5,
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.036279976627150164,
+                "velocity_m_s": 3.5904904916183726,
+                "omega_rad_s": 46.5524336440712,
+                "orientation_rad": 0.8549374094674983
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.06022536578710017,
+                "velocity_m_s": 4.064725487680426,
+                "omega_rad_s": 44.347980294438464,
+                "orientation_rad": 0.8400433980308234
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.06317592537792893,
+                "velocity_m_s": 3.2532244594937505,
+                "omega_rad_s": 45.89067915510608,
+                "orientation_rad": 0.7930163228393713
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.07797433919649732,
+                "velocity_m_s": 3.420488687616627,
+                "omega_rad_s": 31.873383510453543,
+                "orientation_rad": 0.8725226929058442
+              }
+            }
+          ],
+          "reference_qualified": false
+        }
+      ],
+      "procedural_failure_retained": true
+    },
+    {
+      "archive": "world-results-v4",
+      "historical_guards_verified": true,
+      "current_live_unchanged": true,
+      "worlds": [
+        {
+          "case": "2d_disks",
+          "full_histories": 5,
+          "physical_passes": 5,
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.05131850222954992,
+                "velocity_m_s": 3.1275300836159565,
+                "omega_rad_s": 46.9243993789747,
+                "orientation_rad": 1.0196886894998878
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.05967142340626157,
+                "velocity_m_s": 3.5688487396165214,
+                "omega_rad_s": 44.57376328937077,
+                "orientation_rad": 0.8711694386510541
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.06839117425640542,
+                "velocity_m_s": 3.3541228078650365,
+                "omega_rad_s": 47.44270473825107,
+                "orientation_rad": 0.951253465429205
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0354784447373808,
+                "velocity_m_s": 2.1093133262570474,
+                "omega_rad_s": 37.54850236599311,
+                "orientation_rad": 0.9046880070508958
+              }
+            }
+          ],
+          "reference_qualified": false
+        },
+        {
+          "case": "2d_mixed_polygons",
+          "full_histories": 5,
+          "physical_passes": 5,
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.05070556247080671,
+                "velocity_m_s": 8.704825173414697,
+                "omega_rad_s": 72.45801300392422,
+                "orientation_rad": 0.6986459175654227
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.06543101351964127,
+                "velocity_m_s": 7.873162405148662,
+                "omega_rad_s": 106.49039040027611,
+                "orientation_rad": 0.7756633337392778
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.0886795176998916,
+                "velocity_m_s": 9.605869199556407,
+                "omega_rad_s": 95.02942823794778,
+                "orientation_rad": 0.9421351487504672
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.09802185629605233,
+                "velocity_m_s": 8.15680599670905,
+                "omega_rad_s": 68.81874365769447,
+                "orientation_rad": 0.965439493309784
+              }
+            }
+          ],
+          "reference_qualified": false
+        }
+      ],
+      "procedural_failure_retained": false
+    }
+  ],
+  "controls": [
+    {
+      "archive": "controls-v2",
+      "state_bytes_exact": true,
+      "audited_runs": 12,
+      "max_independent_work_error_J": 1.2597145548909339e-12
+    },
+    {
+      "archive": "controls-v3",
+      "state_bytes_exact": true,
+      "audited_runs": 12,
+      "max_independent_work_error_J": 1.2597145548909339e-12
+    }
+  ],
+  "scope": "Archive consistency verifies original physical gates and actual failed refinement edges, not qualification. Rounded-mass initial build never qualified; approximate-angle polygon authoring failure and procedural driver failures remain retained. Exact rotation/core mass comparator stays isolated."
+}

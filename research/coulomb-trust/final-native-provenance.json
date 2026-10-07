@@ -1,0 +1,33 @@
+{
+  "source_sha256": {
+    "spatial_backend/coulomb_trust.h": "bdd688f94e082f8144cc9234141ab136a7a86e94778a5df453586fb79a7ed727",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "research/coulomb_trust_replay.cpp": "929c39c8188b01b81ce582cc5bad579b9def894a6ab178b2e1e9c2080c243868"
+  },
+  "capture_sha256": {
+    "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+    "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+    "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+    "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+    "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+    "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78"
+  },
+  "library_sha256": {
+    "build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "binary_sha256": "309ee2709cd29356f962a8e8de7bc8a40697b19acefb54480084fd3700be103f",
+  "receipt_sha256": "b9b4d7cdee36907c8aaebdcad186527a8dbe50d0354102531a40ce1944026c6d",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off"
+  ],
+  "scope": "Isolated six captured systems; no trajectory or speed qualification",
+  "source_archive_sha256": "bedbf6bf9bae7d17ba48349440f127c2ea941ca4707c296c6fdba2f2b398d9df"
+}

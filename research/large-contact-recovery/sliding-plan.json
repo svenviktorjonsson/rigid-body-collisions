@@ -1,0 +1,47 @@
+{
+  "scope": "Bounded sliding-friction face parameterization for the remaining21-row component. Selected one/two tangent pairs are parameterized exactly on their original circular cone, with free angle and original nonnegative normal pressure; all remaining original equations and full native/independent acceptance restored. No physical contact removed or coefficient/tolerance changed.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87"
+  },
+  "budgets": [
+    128,
+    512,
+    2048
+  ],
+  "execution": "Sequential single-thread. Retain declines. Stop larger budgets for an input after original-law acceptance. Native replay plus independent frozen external law audit required. Compile/run after existing larger reference driver finishes to avoid concurrent native work.",
+  "component_variant": "Exact nonzero A or transpose/dependency connectivity. Each block<=64 rows; fresh same declared128/512/2048 caps PER block. No coupling cutoff, all components execute; global native original-law/passivity gate required. Original direct1024-row variant remains isolated comparator. No runtime acceptance claim.",
+  "limits": {
+    "max_selected_sliding_contacts": 2,
+    "max_starts": 128,
+    "raw_function_evaluations_per_method_start": 2048,
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "angle_offsets_single": [
+      0,
+      3.141592653589793,
+      1.5707963267948966,
+      -1.5707963267948966
+    ],
+    "angle_offset_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        3.141592653589793,
+        0
+      ],
+      [
+        0,
+        3.141592653589793
+      ],
+      [
+        3.141592653589793,
+        3.141592653589793
+      ]
+    ]
+  },
+  "seed_policy": "Warm plus up to64 contact/direction seeds. Each contact retains its normal pressure and targets tangent traction on original circular cone using +/- current tangent response direction and four tangent axes. Minimum-norm approximate mobility-null relocation affects only search seeds; cone projection and original exact final laws mandatory."
+}

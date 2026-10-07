@@ -1,0 +1,115 @@
+{
+  "schema": "independent-large-contact-review-manifest-v1",
+  "files": [
+    {
+      "path": "research/audit_large_contact_completion.py",
+      "bytes": 4335,
+      "sha256": "06195c4540815ee235011fd325d8e8f91486b099cd64cb08bb123a6e90899d27"
+    },
+    {
+      "path": "research/completion-large-contact-review/README.md",
+      "bytes": 6294,
+      "sha256": "c354ac189abfa17a3a5346e0564b4af834e3f6014d246965431100d5d52b65d9"
+    },
+    {
+      "path": "research/completion-large-contact-review/independent-final-audit.json",
+      "bytes": 22319,
+      "sha256": "70f13e62c160de838539beb87c1d00c0333a3bce61aff357deb4998e9ab723fe"
+    },
+    {
+      "path": "research/completion-large-contact-review/independent-final-native-audit.json",
+      "bytes": 14500,
+      "sha256": "847ffcd800a8c6b2bd1c2bf21875ea35db510ee019f9f144cb70bd6d744590c1"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-fb-lm-warm-0-subset.json",
+      "bytes": 14136,
+      "sha256": "c7669155c04e3c78315c9b46d04cee8be479f11387d9e2b9c0462dcfbec6999f"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-fb-trf-normal-qp-10-subset.json",
+      "bytes": 15995,
+      "sha256": "7825cce9045df98e511ecf4ae9c29f8418a98a6d63b503b484a1ba0538a208d7"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-fb-trf-normal-qp-40-subset.json",
+      "bytes": 21348,
+      "sha256": "7d623e4e28a4d4de6acc1dcd7fbcfe6799429859772990d7d978ec9c39687b35"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-natural-trf-normal-qp-40-subset.json",
+      "bytes": 21221,
+      "sha256": "1fe7a976efec8c76ab8a4a492324f25a1a1919d97f894871093993fe764898c0"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-pressure-mode-trials.json",
+      "bytes": 214304,
+      "sha256": "200aa48cb6da8cb811b2056e44ff82f37deb1f7d7f86eee4b6bed212247326c8"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_0-sticking-mode-trials.json",
+      "bytes": 27669,
+      "sha256": "ff22bd5ae91907b66b742338ebcb266dd54848cdcdb98d0b1d505cf35786aedc"
+    },
+    {
+      "path": "research/completion-large-contact-review/reference_2-fb-trf-normal-qp-10-subset.json",
+      "bytes": 11068,
+      "sha256": "bbce39e5c6c6109ed1ff3aa21244721b1d629a2801d132f14559730ac33bfca1"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-invertible-preconditioned.json",
+      "bytes": 67716,
+      "sha256": "ef46b61028da4ce85263d5840bfdaca89909693d0c319200728af12af67cfac8"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-left-preconditioned.json",
+      "bytes": 85845,
+      "sha256": "7c36f1ebf642abc237b10153a65d66e9b92257ff6e1d303ca88929b0033041c1"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-minnorm-newton.json",
+      "bytes": 10879,
+      "sha256": "2ea2fb31975a3458368be7666b00e353c78f22907424189a5366f2e0c5abdda0"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-neutral-gauges.json",
+      "bytes": 18251,
+      "sha256": "1280786b3e14aa439b23a7f7ff97bb36d41dde424033d656fd9f2715c5278715"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-normal-release.json",
+      "bytes": 14229,
+      "sha256": "fa759a9390a8038e4ea74650436cb4061c313e5e2c85792c818b52e971fc367c"
+    },
+    {
+      "path": "research/completion-large-contact-review/seed42-reference_1-sticking-trials.json",
+      "bytes": 40265,
+      "sha256": "0810db2c790e7ff0957db47fffb92b4caa1501af51406ed3e2f7b28846bd148a"
+    },
+    {
+      "path": "research/completion_45_followup_review.py",
+      "bytes": 4704,
+      "sha256": "a44ad5c38c8d0db71c4f63ceba7f61815bfa483bf13b1b38482f441cb3523c1a"
+    },
+    {
+      "path": "research/completion_45_sticking_review.py",
+      "bytes": 3035,
+      "sha256": "e566b4128caeed9b33ed74da667cd82d29f8f32a74d5f06c84f0b3a56f3a7bb5"
+    },
+    {
+      "path": "research/large_contact_completion_review.py",
+      "bytes": 5139,
+      "sha256": "241db7a6e05f98d2e57a4368a164adffbd1943cfa0b71e007db1d19030392314"
+    },
+    {
+      "path": "research/large_contact_mode_review.py",
+      "bytes": 3590,
+      "sha256": "89d7d29ea249635e27f988a6d584373435a70f44866c3211b04053d6957f3b30"
+    },
+    {
+      "path": "research/large_contact_sticking_review.py",
+      "bytes": 3767,
+      "sha256": "0daa270cb490f2f91452cb3ecf3af5e1a05e2b728619465114534952933a8ed6"
+    }
+  ]
+}

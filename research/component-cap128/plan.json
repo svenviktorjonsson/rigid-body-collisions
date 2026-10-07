@@ -1,0 +1,18 @@
+{
+  "scope": "Isolated component cap128, justified by actual new393-row trajectory rejection whose failing exact component has126 rows. Original full source defaults64 unchanged. Same six seeds/2048iteration+SVD/search/Jacobi64 and all original laws/gates; only numerical supported component rows raised. Native original zero-budget and independent full gate required; retain all declines. Not world/refinement/performance qualification.",
+  "source": "66d0f2a6993763296ac05cf18ba752514d4f5708",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+    "research/large-velocity-world/results/trial_1/rejection.json": "a2f393e8e8c5a3edc4678817651fa3bf1b4f15c06c170deb74bcddc2cdd8b619",
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734"
+  },
+  "source_guards": {
+    "replay.cpp": "8459d2a5d963dc84aa28bc35b1b3783633240b5ea389cc353930503090a4a08b",
+    "projection128.h": "c900b5ce8d30e4e80a9ba121ff7379301acfb74f1e6b9097d2377a58a5c2260f",
+    "null_seed128.h": "46fec600a85fb2d7a0385ca14f22d2a9306ec050f828d0c68e29a268bcca7a42"
+  },
+  "binary": "/home/viktor/.cache/physics-component128-20261006/replay",
+  "execution": "Sequential single-thread instantaneous pilots, descriptive timing only."
+}

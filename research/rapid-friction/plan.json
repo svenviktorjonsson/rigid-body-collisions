@@ -1,0 +1,35 @@
+{
+  "scope": "Full 2D and 3D frictional group simulations, rapid +/-20 m/s container reversals at .04/.08 s, rotating container where declared, 0.12 s horizon. Five synthetic scenes; no friction/restitution/material changes across numerical levels.",
+  "reference_levels": [
+    {"dt": 0.01, "primary_steps": 2000, "travel_fraction": 0},
+    {"dt": 0.01, "primary_steps": 4000, "travel_fraction": 0},
+    {"dt": 0.005, "primary_steps": 4000, "travel_fraction": 0},
+    {"dt": 0.0025, "primary_steps": 4000, "travel_fraction": 0},
+    {"dt": 0.00125, "primary_steps": 4000, "travel_fraction": 0}
+  ],
+  "trajectory_budgets": {
+    "2": {"position_m": 0.02, "velocity_m_s": 0.05, "omega_rad_s": 0.05, "orientation_rad": 0.01},
+    "3": {"position_m": 0.005, "velocity_m_s": 0.05, "omega_rad_s": 0.1, "orientation_rad": 0.01}
+  },
+  "candidate_settings": {
+    "2": [
+      {"dt": 0.01, "primary_steps": 8},
+      {"dt": 0.01, "primary_steps": 32},
+      {"dt": 0.01, "primary_steps": 128},
+      {"dt": 0.01, "primary_steps": 512}
+    ],
+    "3": [
+      {"dt": 0.01, "primary_steps": 4, "travel_fraction": 0.015},
+      {"dt": 0.01, "primary_steps": 4, "travel_fraction": 0.0075},
+      {"dt": 0.01, "primary_steps": 125, "travel_fraction": 0},
+      {"dt": 0.01, "primary_steps": 500, "travel_fraction": 0},
+      {"dt": 0.01, "primary_steps": 1000, "travel_fraction": 0}
+    ]
+  },
+  "timing_repetitions": 3,
+  "qualification": "Retain every failed edge and rejection; execute further predeclared levels until BOTH adjacent quarter-budget edges of the newest three levels pass, or the ladder exhausts. Sample all comparisons on the same .01s output times; finer outputs remain archived. No benchmark ranking for unqualified references. Candidate must pass full budgets and physical gates; timing runs must pass and repeat states bitwise. One warmup per variant; alternating sequential interleaved order for three repetitions.",
+  "planar_numerics": "Explicit experimental full-Float64 Box2D2.4.1 diagnostic; analytic prescribed poses,12 position iterations,32 velocity iterations. Observer retains full normal/tangent contact work from kinematic boundaries; does not alter state. No complete all-feature upstream Float64 claim.",
+  "planar_physical_gates": {"container_surface_excess_m": 0.01, "energy_change_minus_boundary_work_J": 1.0},
+  "spatial_physical_gates": {"container_surface_excess_m": 0.002, "energy_change_minus_boundary_work_J": 1.0, "quaternion_norm_error": 1e-12, "contact_residual_m_s": 1e-8, "position_residual_m_s": 1e-8},
+  "performance_scope": "Native stepping/state recording includes full contact discovery and integration. Process/JSON elapsed time also retained. Numerical settings selected from an independent qualification pass before interleaved repetitions. Concurrent host load cannot be fully controlled; no universal performance or calibrated-material claim. No VKF/GPU claim. Publish source and plan before execution."
+}

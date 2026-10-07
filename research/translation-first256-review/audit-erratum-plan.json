@@ -1,0 +1,7 @@
+{
+  "schema": "first256-audit-erratum-v1",
+  "change": "Correct ONLY the interpretation of largest_reduced_rows: it includes inspected structural rejections. An over64 row component is allowed ONLY on early decline, with0helper_calls/0SVD and explicit cap rejection. All physical equations/gates, budgets, sourceplan and132receipts remain unchanged.",
+  "auditor_sha256": "5fd748351cbe185d6f3d3c21e4f7d5f4d5f5117665e24004f6c0bc2bf71620c2",
+  "original_auditor_sha256": "a340fff9289913cb54c7376721f99bb2f6ed0e4ce9c324b2189509e938e28b70",
+  "receipt_sha256": "3b3e8748b2a0798ff88a0818874e4b5e3cc3f1b975e5c223d2f7978b44406359"
+}

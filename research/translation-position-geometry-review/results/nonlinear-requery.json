@@ -1,0 +1,783 @@
+{
+  "before": {
+    "contact_count": 50,
+    "contacts": [
+      {
+        "body_a": 0,
+        "body_b": 3,
+        "signed_distance_m": -9.526172362735243e-10
+      },
+      {
+        "body_a": 1,
+        "body_b": 4,
+        "signed_distance_m": 3.326238712017772e-05
+      },
+      {
+        "body_a": 0,
+        "body_b": 4,
+        "signed_distance_m": 0.006404007745459406
+      },
+      {
+        "body_a": 1,
+        "body_b": 5,
+        "signed_distance_m": 5.804003994746502e-05
+      },
+      {
+        "body_a": 2,
+        "body_b": 6,
+        "signed_distance_m": 0.0029410512125155556
+      },
+      {
+        "body_a": 6,
+        "body_b": 8,
+        "signed_distance_m": 0.006034920631448314
+      },
+      {
+        "body_a": 6,
+        "body_b": 9,
+        "signed_distance_m": 0.0016338067400219868
+      },
+      {
+        "body_a": 1,
+        "body_b": 10,
+        "signed_distance_m": -3.49406323281252e-08
+      },
+      {
+        "body_a": 0,
+        "body_b": 10,
+        "signed_distance_m": 0.004333142723219885
+      },
+      {
+        "body_a": 0,
+        "body_b": 10,
+        "signed_distance_m": 9.150835544553031e-05
+      },
+      {
+        "body_a": 1,
+        "body_b": 11,
+        "signed_distance_m": 2.2795353013200032e-08
+      },
+      {
+        "body_a": 3,
+        "body_b": 12,
+        "signed_distance_m": 0.00033532784849282056
+      },
+      {
+        "body_a": 2,
+        "body_b": 12,
+        "signed_distance_m": 0.0026541613390709713
+      },
+      {
+        "body_a": 4,
+        "body_b": 13,
+        "signed_distance_m": 0.00023462721069362363
+      },
+      {
+        "body_a": 5,
+        "body_b": 13,
+        "signed_distance_m": 0.004384049480334809
+      },
+      {
+        "body_a": 8,
+        "body_b": 13,
+        "signed_distance_m": 0.0004760211495898805
+      },
+      {
+        "body_a": 11,
+        "body_b": 14,
+        "signed_distance_m": 0.000105962754254772
+      },
+      {
+        "body_a": 0,
+        "body_b": 14,
+        "signed_distance_m": 6.0796458696711614e-06
+      },
+      {
+        "body_a": 12,
+        "body_b": 15,
+        "signed_distance_m": 0.0066540668935340785
+      },
+      {
+        "body_a": 7,
+        "body_b": 16,
+        "signed_distance_m": -8.148389811369204e-09
+      },
+      {
+        "body_a": 8,
+        "body_b": 16,
+        "signed_distance_m": 0.004125532243477859
+      },
+      {
+        "body_a": 16,
+        "body_b": 17,
+        "signed_distance_m": 0.0032520099195202483
+      },
+      {
+        "body_a": 8,
+        "body_b": 17,
+        "signed_distance_m": 0.00014447734458216877
+      },
+      {
+        "body_a": 0,
+        "body_b": 18,
+        "signed_distance_m": 3.5686625936337535e-05
+      },
+      {
+        "body_a": 10,
+        "body_b": 19,
+        "signed_distance_m": 0.0005362624067219541
+      },
+      {
+        "body_a": 11,
+        "body_b": 19,
+        "signed_distance_m": 0.0005587834427846374
+      },
+      {
+        "body_a": 0,
+        "body_b": 19,
+        "signed_distance_m": 6.183112929582712e-06
+      },
+      {
+        "body_a": 0,
+        "body_b": 19,
+        "signed_distance_m": 2.9167352830825402e-05
+      },
+      {
+        "body_a": 11,
+        "body_b": 20,
+        "signed_distance_m": -1.5805469946840526e-08
+      },
+      {
+        "body_a": 0,
+        "body_b": 20,
+        "signed_distance_m": 0.0007431545386611607
+      },
+      {
+        "body_a": 0,
+        "body_b": 20,
+        "signed_distance_m": 3.8545477138768147e-07
+      },
+      {
+        "body_a": 12,
+        "body_b": 21,
+        "signed_distance_m": 0.000469418663921117
+      },
+      {
+        "body_a": 0,
+        "body_b": 21,
+        "signed_distance_m": -9.829466223506798e-10
+      },
+      {
+        "body_a": 0,
+        "body_b": 21,
+        "signed_distance_m": -1.0318982312028822e-09
+      },
+      {
+        "body_a": 13,
+        "body_b": 22,
+        "signed_distance_m": 1.2095825724321775e-05
+      },
+      {
+        "body_a": 16,
+        "body_b": 22,
+        "signed_distance_m": 0.0002276433531763903
+      },
+      {
+        "body_a": 0,
+        "body_b": 22,
+        "signed_distance_m": 1.5156587204607254e-07
+      },
+      {
+        "body_a": 12,
+        "body_b": 23,
+        "signed_distance_m": 0.001016418683216705
+      },
+      {
+        "body_a": 0,
+        "body_b": 23,
+        "signed_distance_m": 4.323071716378649e-07
+      },
+      {
+        "body_a": 15,
+        "body_b": 24,
+        "signed_distance_m": 0.0004410196686755464
+      },
+      {
+        "body_a": 0,
+        "body_b": 24,
+        "signed_distance_m": 0.0005898054139611975
+      },
+      {
+        "body_a": 0,
+        "body_b": 24,
+        "signed_distance_m": -3.6499668941193346e-09
+      },
+      {
+        "body_a": 16,
+        "body_b": 25,
+        "signed_distance_m": 2.949961895075073e-05
+      },
+      {
+        "body_a": 0,
+        "body_b": 25,
+        "signed_distance_m": -1.45210289895218e-09
+      },
+      {
+        "body_a": 17,
+        "body_b": 26,
+        "signed_distance_m": 2.8202939223964094e-05
+      },
+      {
+        "body_a": 16,
+        "body_b": 26,
+        "signed_distance_m": 7.972392872023817e-10
+      },
+      {
+        "body_a": 0,
+        "body_b": 26,
+        "signed_distance_m": 2.692496020536448e-05
+      },
+      {
+        "body_a": 18,
+        "body_b": 27,
+        "signed_distance_m": 0.0005021797694623182
+      },
+      {
+        "body_a": 9,
+        "body_b": 27,
+        "signed_distance_m": 3.371576825646538e-07
+      },
+      {
+        "body_a": 0,
+        "body_b": 27,
+        "signed_distance_m": 0.000381673177134949
+      }
+    ],
+    "max_penetration_m": 3.49406323281252e-08
+  },
+  "schema": "independent-position-geometry-requery-v1",
+  "trials": [
+    {
+      "after": {
+        "contact_count": 50,
+        "contacts": [
+          {
+            "body_a": 0,
+            "body_b": 3,
+            "signed_distance_m": 8.636862745035382e-05
+          },
+          {
+            "body_a": 1,
+            "body_b": 4,
+            "signed_distance_m": 3.3916885252197697e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 4,
+            "signed_distance_m": 0.006404062950607969
+          },
+          {
+            "body_a": 1,
+            "body_b": 5,
+            "signed_distance_m": 6.866204742597972e-05
+          },
+          {
+            "body_a": 2,
+            "body_b": 6,
+            "signed_distance_m": 0.0030910638492482436
+          },
+          {
+            "body_a": 6,
+            "body_b": 8,
+            "signed_distance_m": 0.006062914503850316
+          },
+          {
+            "body_a": 6,
+            "body_b": 9,
+            "signed_distance_m": 0.0017420434972996227
+          },
+          {
+            "body_a": 1,
+            "body_b": 10,
+            "signed_distance_m": 2.2889515655025468e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 10,
+            "signed_distance_m": 0.004409137216918657
+          },
+          {
+            "body_a": 0,
+            "body_b": 10,
+            "signed_distance_m": 0.00028789389445183785
+          },
+          {
+            "body_a": 1,
+            "body_b": 11,
+            "signed_distance_m": -4.199991436795728e-08
+          },
+          {
+            "body_a": 3,
+            "body_b": 12,
+            "signed_distance_m": 0.0004732486729382782
+          },
+          {
+            "body_a": 2,
+            "body_b": 12,
+            "signed_distance_m": 0.0028134825358913378
+          },
+          {
+            "body_a": 4,
+            "body_b": 13,
+            "signed_distance_m": 0.00024652824080017026
+          },
+          {
+            "body_a": 5,
+            "body_b": 13,
+            "signed_distance_m": 0.004384024741776717
+          },
+          {
+            "body_a": 8,
+            "body_b": 13,
+            "signed_distance_m": 0.00047606041334149877
+          },
+          {
+            "body_a": 11,
+            "body_b": 14,
+            "signed_distance_m": 0.00014228338339086386
+          },
+          {
+            "body_a": 0,
+            "body_b": 14,
+            "signed_distance_m": 6.14109790726894e-06
+          },
+          {
+            "body_a": 12,
+            "body_b": 15,
+            "signed_distance_m": 0.006653685533824019
+          },
+          {
+            "body_a": 7,
+            "body_b": 16,
+            "signed_distance_m": 0.00020463605819328944
+          },
+          {
+            "body_a": 8,
+            "body_b": 16,
+            "signed_distance_m": 0.004386718110868542
+          },
+          {
+            "body_a": 16,
+            "body_b": 17,
+            "signed_distance_m": 0.003432017493956669
+          },
+          {
+            "body_a": 8,
+            "body_b": 17,
+            "signed_distance_m": 0.0001444319068565902
+          },
+          {
+            "body_a": 0,
+            "body_b": 18,
+            "signed_distance_m": 5.200144773920279e-05
+          },
+          {
+            "body_a": 10,
+            "body_b": 19,
+            "signed_distance_m": 0.0007289764571889067
+          },
+          {
+            "body_a": 11,
+            "body_b": 19,
+            "signed_distance_m": 0.0005585411250961317
+          },
+          {
+            "body_a": 0,
+            "body_b": 19,
+            "signed_distance_m": 7.420950436120067e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 19,
+            "signed_distance_m": 2.9264334833475365e-05
+          },
+          {
+            "body_a": 11,
+            "body_b": 20,
+            "signed_distance_m": 6.176015762334095e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 20,
+            "signed_distance_m": 0.0007432095566597405
+          },
+          {
+            "body_a": 0,
+            "body_b": 20,
+            "signed_distance_m": -0.0001314329832289566
+          },
+          {
+            "body_a": 12,
+            "body_b": 21,
+            "signed_distance_m": 0.0004692810858705521
+          },
+          {
+            "body_a": 0,
+            "body_b": 21,
+            "signed_distance_m": 7.011281234185869e-08
+          },
+          {
+            "body_a": 0,
+            "body_b": 21,
+            "signed_distance_m": -5.694454485307488e-09
+          },
+          {
+            "body_a": 13,
+            "body_b": 22,
+            "signed_distance_m": 1.1955596732058523e-05
+          },
+          {
+            "body_a": 16,
+            "body_b": 22,
+            "signed_distance_m": 0.0002343534594860868
+          },
+          {
+            "body_a": 0,
+            "body_b": 22,
+            "signed_distance_m": 1.8535423862900028e-07
+          },
+          {
+            "body_a": 12,
+            "body_b": 23,
+            "signed_distance_m": 0.0010162537041325842
+          },
+          {
+            "body_a": 0,
+            "body_b": 23,
+            "signed_distance_m": 2.5373742912032706e-06
+          },
+          {
+            "body_a": 15,
+            "body_b": 24,
+            "signed_distance_m": 0.0004408043273840186
+          },
+          {
+            "body_a": 0,
+            "body_b": 24,
+            "signed_distance_m": 0.000589863343674224
+          },
+          {
+            "body_a": 0,
+            "body_b": 24,
+            "signed_distance_m": 4.424737494322456e-08
+          },
+          {
+            "body_a": 16,
+            "body_b": 25,
+            "signed_distance_m": 2.9534730378710747e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 25,
+            "signed_distance_m": 9.053746100457662e-08
+          },
+          {
+            "body_a": 17,
+            "body_b": 26,
+            "signed_distance_m": 2.82685722281638e-05
+          },
+          {
+            "body_a": 16,
+            "body_b": 26,
+            "signed_distance_m": 4.9664875244893154e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 26,
+            "signed_distance_m": 2.692922313575758e-05
+          },
+          {
+            "body_a": 18,
+            "body_b": 27,
+            "signed_distance_m": 0.000606598563375402
+          },
+          {
+            "body_a": 9,
+            "body_b": 27,
+            "signed_distance_m": 5.774779831170812e-07
+          },
+          {
+            "body_a": 0,
+            "body_b": 27,
+            "signed_distance_m": 0.0003817347986176684
+          }
+        ],
+        "max_penetration_m": 0.0001314329832289566
+      },
+      "linear_qualified": true,
+      "method": "bounded-feasibility-LP",
+      "trajectory_qualified": false
+    },
+    {
+      "after": {
+        "contact_count": 50,
+        "contacts": [
+          {
+            "body_a": 0,
+            "body_b": 3,
+            "signed_distance_m": -9.526172899811174e-10
+          },
+          {
+            "body_a": 1,
+            "body_b": 4,
+            "signed_distance_m": 3.326238712064035e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 4,
+            "signed_distance_m": 0.006404007745459628
+          },
+          {
+            "body_a": 1,
+            "body_b": 5,
+            "signed_distance_m": 5.8040499142704647e-05
+          },
+          {
+            "body_a": 2,
+            "body_b": 6,
+            "signed_distance_m": 0.0029410512125155283
+          },
+          {
+            "body_a": 6,
+            "body_b": 8,
+            "signed_distance_m": 0.006034920631420379
+          },
+          {
+            "body_a": 6,
+            "body_b": 9,
+            "signed_distance_m": 0.0016338072335491578
+          },
+          {
+            "body_a": 1,
+            "body_b": 10,
+            "signed_distance_m": -2.795250749576009e-08
+          },
+          {
+            "body_a": 0,
+            "body_b": 10,
+            "signed_distance_m": 0.004333142723220551
+          },
+          {
+            "body_a": 0,
+            "body_b": 10,
+            "signed_distance_m": 9.150835544582451e-05
+          },
+          {
+            "body_a": 1,
+            "body_b": 11,
+            "signed_distance_m": 2.279535296498138e-08
+          },
+          {
+            "body_a": 3,
+            "body_b": 12,
+            "signed_distance_m": 0.0003353278484929068
+          },
+          {
+            "body_a": 2,
+            "body_b": 12,
+            "signed_distance_m": 0.002654161339070941
+          },
+          {
+            "body_a": 4,
+            "body_b": 13,
+            "signed_distance_m": 0.00023462721091689493
+          },
+          {
+            "body_a": 5,
+            "body_b": 13,
+            "signed_distance_m": 0.004384277283442483
+          },
+          {
+            "body_a": 8,
+            "body_b": 13,
+            "signed_distance_m": 0.0004760211497704687
+          },
+          {
+            "body_a": 11,
+            "body_b": 14,
+            "signed_distance_m": 0.00010596275425477788
+          },
+          {
+            "body_a": 0,
+            "body_b": 14,
+            "signed_distance_m": 6.079645869560237e-06
+          },
+          {
+            "body_a": 12,
+            "body_b": 15,
+            "signed_distance_m": 0.00665406803217542
+          },
+          {
+            "body_a": 7,
+            "body_b": 16,
+            "signed_distance_m": -6.518713254806699e-09
+          },
+          {
+            "body_a": 8,
+            "body_b": 16,
+            "signed_distance_m": 0.004125553907154717
+          },
+          {
+            "body_a": 16,
+            "body_b": 17,
+            "signed_distance_m": 0.0032520099195191402
+          },
+          {
+            "body_a": 8,
+            "body_b": 17,
+            "signed_distance_m": 0.00014447734456528278
+          },
+          {
+            "body_a": 0,
+            "body_b": 18,
+            "signed_distance_m": 3.5686625936337535e-05
+          },
+          {
+            "body_a": 10,
+            "body_b": 19,
+            "signed_distance_m": 0.0005362677235786117
+          },
+          {
+            "body_a": 11,
+            "body_b": 19,
+            "signed_distance_m": 0.000558783661889354
+          },
+          {
+            "body_a": 0,
+            "body_b": 19,
+            "signed_distance_m": 6.183112929582711e-06
+          },
+          {
+            "body_a": 0,
+            "body_b": 19,
+            "signed_distance_m": 2.9167352830739045e-05
+          },
+          {
+            "body_a": 11,
+            "body_b": 20,
+            "signed_distance_m": -1.264437592192085e-08
+          },
+          {
+            "body_a": 0,
+            "body_b": 20,
+            "signed_distance_m": 0.0007431545386611326
+          },
+          {
+            "body_a": 0,
+            "body_b": 20,
+            "signed_distance_m": -3.58934337696885e-10
+          },
+          {
+            "body_a": 12,
+            "body_b": 21,
+            "signed_distance_m": 0.00046941912400387325
+          },
+          {
+            "body_a": 0,
+            "body_b": 21,
+            "signed_distance_m": -8.99570499048362e-10
+          },
+          {
+            "body_a": 0,
+            "body_b": 21,
+            "signed_distance_m": -8.2551855365474e-10
+          },
+          {
+            "body_a": 13,
+            "body_b": 22,
+            "signed_distance_m": 1.2095824578349406e-05
+          },
+          {
+            "body_a": 16,
+            "body_b": 22,
+            "signed_distance_m": 0.00022766090121945087
+          },
+          {
+            "body_a": 0,
+            "body_b": 22,
+            "signed_distance_m": 1.5156612187484375e-07
+          },
+          {
+            "body_a": 12,
+            "body_b": 23,
+            "signed_distance_m": 0.001016418683217052
+          },
+          {
+            "body_a": 0,
+            "body_b": 23,
+            "signed_distance_m": 4.339158120378531e-07
+          },
+          {
+            "body_a": 15,
+            "body_b": 24,
+            "signed_distance_m": 0.00044101966867572196
+          },
+          {
+            "body_a": 0,
+            "body_b": 24,
+            "signed_distance_m": 0.0005898054139611975
+          },
+          {
+            "body_a": 0,
+            "body_b": 24,
+            "signed_distance_m": -3.113853592581949e-09
+          },
+          {
+            "body_a": 16,
+            "body_b": 25,
+            "signed_distance_m": 2.951023686830643e-05
+          },
+          {
+            "body_a": 0,
+            "body_b": 25,
+            "signed_distance_m": -1.161682217791051e-09
+          },
+          {
+            "body_a": 17,
+            "body_b": 26,
+            "signed_distance_m": 2.820293922388323e-05
+          },
+          {
+            "body_a": 16,
+            "body_b": 26,
+            "signed_distance_m": 5.4499880632418525e-09
+          },
+          {
+            "body_a": 0,
+            "body_b": 26,
+            "signed_distance_m": 2.6924960205371505e-05
+          },
+          {
+            "body_a": 18,
+            "body_b": 27,
+            "signed_distance_m": 0.0005021797736477164
+          },
+          {
+            "body_a": 9,
+            "body_b": 27,
+            "signed_distance_m": 3.3717152714094853e-07
+          },
+          {
+            "body_a": 0,
+            "body_b": 27,
+            "signed_distance_m": 0.0003816731869526679
+          }
+        ],
+        "max_penetration_m": 2.795250749576009e-08
+      },
+      "linear_qualified": true,
+      "method": "bounded-minimum-pose-QP",
+      "trajectory_qualified": false
+    }
+  ]
+}

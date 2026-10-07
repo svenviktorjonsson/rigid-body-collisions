@@ -1,0 +1,56 @@
+{
+  "3d_sphere": {
+    "dimension": 3,
+    "scene_file": "research/rapid-friction/results-spatial/scenes.json",
+    "scene_key": "3d_sphere",
+    "scene_sha256": "34ee78692eb904d4749079e263aa535506a9dfd341e65d0517fda7153cc9567c",
+    "run_options": {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0,
+      "solver": "coulomb",
+      "iterations": 4096,
+      "kinematic_contact_phase": "start",
+      "position_stabilization": "split_translation_combined",
+      "contact_point_policy": "shared",
+      "contact_tolerance_m_s": 1e-08,
+      "contact_slop_m": 1e-09,
+      "contact_recovery": true,
+      "early_component_recovery": true
+    },
+    "required_linear_slop_m": null,
+    "scope": "Only this declared 0.12s scene; no unknown-scene fidelity guarantee"
+  },
+  "2d_shake9": {
+    "dimension": 2,
+    "scene_file": "research/rapid-friction/results-planar-optimized/scenes.json",
+    "scene_key": "2d_shake9",
+    "scene_sha256": "baeaa2d58f25993592e9a74d59465145916bbe3c2f00063ec66e066ab5274a89",
+    "run_options": {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "substeps": 32,
+      "position_iterations": 12,
+      "backend": "block",
+      "binary": "build/rigid_double_tight/rigid_runner"
+    },
+    "required_linear_slop_m": 1e-06,
+    "scope": "Only this declared 0.12s scene; no unknown-scene fidelity guarantee"
+  },
+  "2d_shake25": {
+    "dimension": 2,
+    "scene_file": "research/rapid-friction/results-planar-optimized/scenes.json",
+    "scene_key": "2d_shake25",
+    "scene_sha256": "2066c28071fabc566427e23b17d2220f74a80446bc71fca7e4f30b7b2781dad7",
+    "run_options": {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "substeps": 128,
+      "position_iterations": 12,
+      "backend": "block",
+      "binary": "build/rigid_double_tight/rigid_runner"
+    },
+    "required_linear_slop_m": 1e-06,
+    "scope": "Only this declared 0.12s scene; no unknown-scene fidelity guarantee"
+  }
+}

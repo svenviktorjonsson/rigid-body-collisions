@@ -1,0 +1,4 @@
+run-*/benchmark
+report/*.aux
+report/*.out
+report/*.log

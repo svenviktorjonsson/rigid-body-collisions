@@ -1,0 +1,11 @@
+{
+  "complete": false,
+  "stderr": "Coulomb residual gate failed (6.04692e-05 m/s): increase iterations or refine timestep; no friction-law fallback\n",
+  "exit": 1,
+  "setting": {
+    "dt": 0.01,
+    "primary_steps": 1000,
+    "travel_fraction": 0
+  },
+  "process_elapsed_s": 1.241396198001894
+}

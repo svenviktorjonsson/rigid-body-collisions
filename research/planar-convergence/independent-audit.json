@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "phase": "seams_off",
+      "level": 0,
+      "physical_passed": true
+    },
+    {
+      "phase": "seams_off",
+      "level": 1,
+      "physical_passed": true
+    },
+    {
+      "phase": "seams_off",
+      "level": 2,
+      "physical_passed": true
+    },
+    {
+      "phase": "seams_off",
+      "level": 3,
+      "physical_passed": true
+    },
+    {
+      "phase": "seams_off",
+      "level": 4,
+      "physical_passed": true
+    }
+  ],
+  "qualified": false,
+  "adopted": false,
+  "scope": "Audit passes by verifying retained failures, not by qualifying the prototype."
+}

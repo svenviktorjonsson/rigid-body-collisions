@@ -1,0 +1,621 @@
+{
+  "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+  "sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+  "method": "FB",
+  "start": "cold",
+  "max_nfev": 1000,
+  "nfev": 28,
+  "njev": 14,
+  "elapsed_s": 0.07955226999183651,
+  "optimizer_success": true,
+  "message": "`gtol` termination condition is satisfied.",
+  "initial": {
+    "rows": 51,
+    "contacts": 17,
+    "rank": 38,
+    "min_eigenvalue": -9.610580027900258e-15,
+    "max_eigenvalue": 41.49765456475996,
+    "singular_values": [
+      41.497654564759955,
+      34.579009905883645,
+      33.528327373505036,
+      32.944491587368496,
+      29.129431902383406,
+      26.599676577301725,
+      25.02989240498086,
+      23.379975396734455,
+      22.73591594403617,
+      21.443353926804935,
+      20.97752393189573,
+      17.264253063175463,
+      15.811457482085068,
+      15.199750243975211,
+      13.822766368750283,
+      11.684308175580203,
+      10.691059260932885,
+      9.664830396076667,
+      9.19514346006535,
+      7.126916776460316,
+      5.555007598491044,
+      5.514145503641514,
+      5.06395183483077,
+      3.885703701575746,
+      2.712970280543736,
+      2.5182756248120493,
+      2.4077854838354753,
+      1.6782870826463863,
+      1.4797454358062296,
+      1.20097904467364,
+      0.9378180455714552,
+      0.7701313968309086,
+      0.513273360075397,
+      0.49011111209077535,
+      0.39158686899506356,
+      0.13212633056903703,
+      0.059906522995738884,
+      0.0011567058320938312,
+      3.8791454735857514e-15,
+      3.402757216390299e-15,
+      2.94618333456744e-15,
+      2.7989821689489738e-15,
+      2.520185207468971e-15,
+      2.0321216531277874e-15,
+      1.7284451286042173e-15,
+      1.4527908866307397e-15,
+      1.0462570782529542e-15,
+      9.762526135893948e-16,
+      6.799388921160273e-16,
+      4.587325931322393e-16,
+      8.541985409325532e-17
+    ],
+    "normal_target_witness": null,
+    "iterate": {
+      "accepted": false,
+      "residual_m_s": 0.5851798391349519,
+      "passive_change_bound_J": 0.0,
+      "passivity_scale": 1.0,
+      "upper_bounds_ok": true,
+      "normal_min": 0.0
+    },
+    "jacobian_rank": 51,
+    "active_normal_rows": [],
+    "worst_contacts": [
+      {
+        "normal": 4,
+        "tangents": [
+          25,
+          26
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": -0.5851798391349519,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.32743380153439533,
+        "normal_residual": 0.5851798391349519,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 8,
+        "tangents": [
+          33,
+          34
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": -5.6243533745004015e-05,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.1510579621662185,
+        "normal_residual": 5.6243533745004015e-05,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 0,
+        "tangents": [
+          17,
+          18
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 1.3926321665373826,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.3740945702412746,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 1,
+        "tangents": [
+          19,
+          20
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 0.5226544238508406,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.169644439609029,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 2,
+        "tangents": [
+          21,
+          22
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 291.621524112247,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.858073613243437,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 3,
+        "tangents": [
+          23,
+          24
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 29.68060682976848,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 1.395671273721951,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 5,
+        "tangents": [
+          27,
+          28
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 0.0725504679911409,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.24085163239193352,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 6,
+        "tangents": [
+          29,
+          30
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 0.10193942453223881,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.14694110665484086,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 7,
+        "tangents": [
+          31,
+          32
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 0.010746796952457338,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 0.4576142136323547,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      },
+      {
+        "normal": 9,
+        "tangents": [
+          35,
+          36
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.0,
+        "normal_velocity": 28.81230838149431,
+        "tangential_impulse_norm": 0.0,
+        "tangential_velocity_norm": 3.508455087409966,
+        "normal_residual": 0.0,
+        "tangent_residual": 0.0
+      }
+    ]
+  },
+  "final": {
+    "rows": 51,
+    "contacts": 17,
+    "rank": 38,
+    "min_eigenvalue": -9.610580027900258e-15,
+    "max_eigenvalue": 41.49765456475996,
+    "singular_values": [
+      41.497654564759955,
+      34.579009905883645,
+      33.528327373505036,
+      32.944491587368496,
+      29.129431902383406,
+      26.599676577301725,
+      25.02989240498086,
+      23.379975396734455,
+      22.73591594403617,
+      21.443353926804935,
+      20.97752393189573,
+      17.264253063175463,
+      15.811457482085068,
+      15.199750243975211,
+      13.822766368750283,
+      11.684308175580203,
+      10.691059260932885,
+      9.664830396076667,
+      9.19514346006535,
+      7.126916776460316,
+      5.555007598491044,
+      5.514145503641514,
+      5.06395183483077,
+      3.885703701575746,
+      2.712970280543736,
+      2.5182756248120493,
+      2.4077854838354753,
+      1.6782870826463863,
+      1.4797454358062296,
+      1.20097904467364,
+      0.9378180455714552,
+      0.7701313968309086,
+      0.513273360075397,
+      0.49011111209077535,
+      0.39158686899506356,
+      0.13212633056903703,
+      0.059906522995738884,
+      0.0011567058320938312,
+      3.8791454735857514e-15,
+      3.402757216390299e-15,
+      2.94618333456744e-15,
+      2.7989821689489738e-15,
+      2.520185207468971e-15,
+      2.0321216531277874e-15,
+      1.7284451286042173e-15,
+      1.4527908866307397e-15,
+      1.0462570782529542e-15,
+      9.762526135893948e-16,
+      6.799388921160273e-16,
+      4.587325931322393e-16,
+      8.541985409325532e-17
+    ],
+    "normal_target_witness": null,
+    "iterate": {
+      "accepted": false,
+      "residual_m_s": 6.642209092084554e-06,
+      "passive_change_bound_J": -0.07953577496002485,
+      "passivity_scale": 1.133559729363874,
+      "upper_bounds_ok": true,
+      "normal_min": -2.5321121918297345e-15
+    },
+    "jacobian_rank": 45,
+    "active_normal_rows": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      14
+    ],
+    "active_normal_target_range_error_m_s": 1.3489209749195652e-14,
+    "worst_contacts": [
+      {
+        "normal": 4,
+        "tangents": [
+          25,
+          26
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.12807138535863213,
+        "normal_velocity": -1.5643586426250522e-10,
+        "tangential_impulse_norm": 0.016323869515684243,
+        "tangential_velocity_norm": 6.642209092084554e-06,
+        "normal_residual": 1.5643595186166298e-10,
+        "tangent_residual": 6.642209092084554e-06
+      },
+      {
+        "normal": 7,
+        "tangents": [
+          31,
+          32
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.02965211342587024,
+        "normal_velocity": 1.1060366331139271e-07,
+        "tangential_impulse_norm": 0.010040716761149971,
+        "tangential_velocity_norm": 4.159688584602884e-06,
+        "normal_residual": 1.1060366332098808e-07,
+        "tangent_residual": 4.159688584602884e-06
+      },
+      {
+        "normal": 5,
+        "tangents": [
+          27,
+          28
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.00450636535057075,
+        "normal_velocity": -3.4283835140258567e-07,
+        "tangential_impulse_norm": 0.000523679290494993,
+        "tangential_velocity_norm": 1.7977467263714206e-06,
+        "normal_residual": 3.428383514019963e-07,
+        "tangent_residual": 1.7977467263714206e-06
+      },
+      {
+        "normal": 6,
+        "tangents": [
+          29,
+          30
+        ],
+        "friction": 0.4,
+        "normal_impulse": 0.003211500470608316,
+        "normal_velocity": 2.3240528462808996e-07,
+        "tangential_impulse_norm": 0.0012843736962281187,
+        "tangential_velocity_norm": 6.847842830294359e-07,
+        "normal_residual": 2.3240528462844667e-07,
+        "tangent_residual": 6.847842830294359e-07
+      },
+      {
+        "normal": 16,
+        "tangents": [
+          49,
+          50
+        ],
+        "friction": 0.4,
+        "normal_impulse": 7.10648301116242e-15,
+        "normal_velocity": 691.3408859397821,
+        "tangential_impulse_norm": 2.8426162493150797e-15,
+        "tangential_velocity_norm": 0.8903285801117544,
+        "normal_residual": 5.5084844614306165e-14,
+        "tangent_residual": 4.524097267526547e-19
+      },
+      {
+        "normal": 12,
+        "tangents": [
+          41,
+          42
+        ],
+        "friction": 0.4,
+        "normal_impulse": -2.5321121918297345e-15,
+        "normal_velocity": 674.8733150697659,
+        "tangential_impulse_norm": 3.110022288062811e-22,
+        "tangential_velocity_norm": 1.6469035968825048,
+        "normal_residual": 1.811511647983803e-14,
+        "tangent_residual": 3.956258272017214e-21
+      },
+      {
+        "normal": 11,
+        "tangents": [
+          39,
+          40
+        ],
+        "friction": 0.4,
+        "normal_impulse": 1.8451145918255544e-15,
+        "normal_velocity": 336.60760679276365,
+        "tangential_impulse_norm": 7.38045481546161e-16,
+        "tangential_velocity_norm": 2.1323205605284934,
+        "normal_residual": 8.487284329300153e-15,
+        "tangent_residual": 5.803022579362082e-21
+      },
+      {
+        "normal": 13,
+        "tangents": [
+          43,
+          44
+        ],
+        "friction": 0.4,
+        "normal_impulse": -9.904179579122431e-16,
+        "normal_velocity": 182.60587153164172,
+        "tangential_impulse_norm": 1.6565097356158438e-19,
+        "tangential_velocity_norm": 0.5345665933647282,
+        "normal_residual": 8.368827484243748e-15,
+        "tangent_residual": 2.2044360220481917e-18
+      },
+      {
+        "normal": 10,
+        "tangents": [
+          37,
+          38
+        ],
+        "friction": 0.4,
+        "normal_impulse": 3.29311712314074e-16,
+        "normal_velocity": 16.82262820864007,
+        "tangential_impulse_norm": 1.3172458106764932e-16,
+        "tangential_velocity_norm": 0.702688007128261,
+        "normal_residual": 1.6669073750315493e-15,
+        "tangent_residual": 3.612609632582732e-21
+      },
+      {
+        "normal": 9,
+        "tangents": [
+          35,
+          36
+        ],
+        "friction": 0.4,
+        "normal_impulse": 2.5352012098350102e-17,
+        "normal_velocity": 28.81230838149431,
+        "tangential_impulse_norm": 1.0140717210419406e-17,
+        "tangential_velocity_norm": 3.508455087409966,
+        "normal_residual": 2.0553371207957397e-16,
+        "tangent_residual": 1.0684078814575961e-21
+      }
+    ]
+  },
+  "gate": {
+    "accepted": false,
+    "residual_m_s": 6.642209092084554e-06,
+    "passive_change_bound_J": -0.07953577496002485,
+    "passivity_scale": 1.133559729363874,
+    "upper_bounds_ok": true,
+    "normal_min": -2.5321121918297345e-15
+  },
+  "impulse": [
+    -4.8044692767313726e-32,
+    -3.9906510895122225e-18,
+    2.393871639169377e-17,
+    -1.1235158314951219e-18,
+    0.12807138535863213,
+    0.00450636535057075,
+    0.003211500470608316,
+    0.02965211342587024,
+    5.520245936293741e-06,
+    2.5352012098350102e-17,
+    3.29311712314074e-16,
+    1.8451145918255544e-15,
+    -2.5321121918297345e-15,
+    -9.904179579122431e-16,
+    0.0889646022711856,
+    -1.042416028291671e-17,
+    7.10648301116242e-15,
+    -1.4418347711496736e-22,
+    2.0152603924503957e-22,
+    -1.680205292530252e-22,
+    -1.8201706229114031e-22,
+    6.499280381606048e-18,
+    7.032450790963831e-18,
+    -1.0654760879627527e-22,
+    2.696366191157772e-22,
+    -0.0073454134498015895,
+    0.01457784679630566,
+    0.0003692405778778068,
+    -0.00037135077075697924,
+    0.00040954864391435367,
+    0.001217327277206337,
+    0.00980698177814686,
+    0.0021538573492070946,
+    1.8097254911540419e-06,
+    1.2651450818835247e-06,
+    3.990338361344942e-18,
+    -9.322625451216802e-18,
+    -4.54433603591135e-17,
+    1.2363764093802287e-16,
+    -6.912575736262296e-16,
+    2.586002701759658e-16,
+    -2.77190929259339e-22,
+    1.410233138839765e-22,
+    1.571805936023293e-19,
+    5.2292504594063244e-20,
+    0.029949202723037416,
+    -0.019219712001423108,
+    9.058163596626893e-24,
+    7.200878604598349e-23,
+    -2.002005976999573e-15,
+    -2.0180285451222234e-15
+  ],
+  "history": [
+    {
+      "residual_m_s": 0.5851798391349519,
+      "merit": 1.369741789173373
+    },
+    {
+      "residual_m_s": 0.30465064159150246,
+      "merit": 0.46811026823453267
+    },
+    {
+      "residual_m_s": 0.23186926630139945,
+      "merit": 0.14063997430492536
+    },
+    {
+      "residual_m_s": 0.06690905324176989,
+      "merit": 0.02695704234636715
+    },
+    {
+      "residual_m_s": 8.603729650604864,
+      "merit": 121.592268928262
+    },
+    {
+      "residual_m_s": 2.0981711648161214,
+      "merit": 5.9416937598691275
+    },
+    {
+      "residual_m_s": 0.4595941578248209,
+      "merit": 0.21169950512455865
+    },
+    {
+      "residual_m_s": 0.014414493974509364,
+      "merit": 0.0005336949282085215
+    },
+    {
+      "residual_m_s": 0.1481468734388775,
+      "merit": 0.022359800061614074
+    },
+    {
+      "residual_m_s": 0.025722840668775847,
+      "merit": 0.0006746220660192232
+    },
+    {
+      "residual_m_s": 0.0029690604082916448,
+      "merit": 1.8024901370392346e-05
+    },
+    {
+      "residual_m_s": 0.016238798847115238,
+      "merit": 0.0002637165699169178
+    },
+    {
+      "residual_m_s": 0.00011074891224349566,
+      "merit": 1.8099380575930726e-08
+    },
+    {
+      "residual_m_s": 0.004220682306644231,
+      "merit": 1.7814223996935654e-05
+    },
+    {
+      "residual_m_s": 0.0004025510341620615,
+      "merit": 1.6211220194318797e-07
+    },
+    {
+      "residual_m_s": 6.642210196268104e-06,
+      "merit": 6.533672932900073e-11
+    },
+    {
+      "residual_m_s": 8.18038909146349e-05,
+      "merit": 6.756714197408658e-09
+    },
+    {
+      "residual_m_s": 6.6422090922054005e-06,
+      "merit": 6.530655820422926e-11
+    },
+    {
+      "residual_m_s": 6.642209092122749e-06,
+      "merit": 6.530655816650693e-11
+    },
+    {
+      "residual_m_s": 0.0005587993508834216,
+      "merit": 3.1232155217631515e-07
+    },
+    {
+      "residual_m_s": 8.175218558846113e-05,
+      "merit": 6.748257477125151e-09
+    },
+    {
+      "residual_m_s": 6.642209092221367e-06,
+      "merit": 6.530655816257353e-11
+    },
+    {
+      "residual_m_s": 4.2010831541496494e-05,
+      "merit": 1.829747595446021e-09
+    },
+    {
+      "residual_m_s": 6.642209092165119e-06,
+      "merit": 6.530655816045283e-11
+    },
+    {
+      "residual_m_s": 2.212380035672197e-05,
+      "merit": 5.543001708663692e-10
+    },
+    {
+      "residual_m_s": 6.642209092122749e-06,
+      "merit": 6.530655815877773e-11
+    },
+    {
+      "residual_m_s": 1.2192323320910099e-05,
+      "merit": 2.1349037660405742e-10
+    },
+    {
+      "residual_m_s": 6.642209092084554e-06,
+      "merit": 6.53065581576157e-11
+    }
+  ]
+}

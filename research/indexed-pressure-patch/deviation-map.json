@@ -1,0 +1,254 @@
+[
+  {
+    "kind": "hertz",
+    "ratio": 0.1,
+    "sites": 256,
+    "force_size_error_percent": -0.0035274019251185784,
+    "moment_angle_error_degrees": 0.0028720654711108917
+  },
+  {
+    "kind": "hertz",
+    "ratio": 0.1,
+    "sites": 4096,
+    "force_size_error_percent": -8.269114911696462e-05,
+    "moment_angle_error_degrees": 8.248248280088959e-05
+  },
+  {
+    "kind": "hertz",
+    "ratio": 0.3,
+    "sites": 256,
+    "force_size_error_percent": -0.03242265854797033,
+    "moment_angle_error_degrees": 0.027912554197706392
+  },
+  {
+    "kind": "hertz",
+    "ratio": 0.3,
+    "sites": 4096,
+    "force_size_error_percent": -0.001972546475104142,
+    "moment_angle_error_degrees": 0.0017258733584299085
+  },
+  {
+    "kind": "hertz",
+    "ratio": 0.75,
+    "sites": 256,
+    "force_size_error_percent": -0.022303950389790383,
+    "moment_angle_error_degrees": 0.06511775748339764
+  },
+  {
+    "kind": "hertz",
+    "ratio": 0.75,
+    "sites": 4096,
+    "force_size_error_percent": 0.0016794609826842333,
+    "moment_angle_error_degrees": 0.004509756371396336
+  },
+  {
+    "kind": "hertz",
+    "ratio": 1.0,
+    "sites": 256,
+    "force_size_error_percent": -0.0052116093920751005,
+    "moment_angle_error_degrees": 0.03829216456812703
+  },
+  {
+    "kind": "hertz",
+    "ratio": 1.0,
+    "sites": 4096,
+    "force_size_error_percent": -0.00018676282728113947,
+    "moment_angle_error_degrees": 0.0013268386468090756
+  },
+  {
+    "kind": "hertz",
+    "ratio": 2.0,
+    "sites": 256,
+    "force_size_error_percent": -1.5432100042289676e-09,
+    "moment_angle_error_degrees": 1.4129253572763693e-07
+  },
+  {
+    "kind": "hertz",
+    "ratio": 2.0,
+    "sites": 4096,
+    "force_size_error_percent": -4.440892098500626e-14,
+    "moment_angle_error_degrees": 2.7627561798139407e-13
+  },
+  {
+    "kind": "hertz",
+    "ratio": 8.0,
+    "sites": 256,
+    "force_size_error_percent": 1.9162449405030202e-11,
+    "moment_angle_error_degrees": 7.992047630286722e-09
+  },
+  {
+    "kind": "hertz",
+    "ratio": 8.0,
+    "sites": 4096,
+    "force_size_error_percent": -3.1086244689504383e-13,
+    "moment_angle_error_degrees": 3.004869576993577e-13
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.1,
+    "sites": 256,
+    "force_size_error_percent": 0.007522599707732169,
+    "moment_angle_error_degrees": 0.004334219833577723
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.1,
+    "sites": 4096,
+    "force_size_error_percent": -0.0005335235226944235,
+    "moment_angle_error_degrees": 0.0003236065273776441
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.3,
+    "sites": 256,
+    "force_size_error_percent": -0.002250300474171407,
+    "moment_angle_error_degrees": 0.0008420913587559799
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.3,
+    "sites": 4096,
+    "force_size_error_percent": -0.0008468755761770197,
+    "moment_angle_error_degrees": 0.0007851920772399858
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.75,
+    "sites": 256,
+    "force_size_error_percent": 5.237724476359062e-07,
+    "moment_angle_error_degrees": 9.302141905165409e-06
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 0.75,
+    "sites": 4096,
+    "force_size_error_percent": 1.709743457922741e-12,
+    "moment_angle_error_degrees": 5.433072596211448e-13
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 1.0,
+    "sites": 256,
+    "force_size_error_percent": 2.0835615455183643e-07,
+    "moment_angle_error_degrees": 1.1554381216738315e-05
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 1.0,
+    "sites": 4096,
+    "force_size_error_percent": 1.687538997430238e-12,
+    "moment_angle_error_degrees": 9.548016684327379e-14
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 2.0,
+    "sites": 256,
+    "force_size_error_percent": 1.424525386539699e-07,
+    "moment_angle_error_degrees": 1.3038382665863841e-05
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 2.0,
+    "sites": 4096,
+    "force_size_error_percent": 1.6209256159527285e-12,
+    "moment_angle_error_degrees": 2.2795471958219853e-13
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 8.0,
+    "sites": 256,
+    "force_size_error_percent": 1.949214123442289e-08,
+    "moment_angle_error_degrees": 2.05816262557193e-05
+  },
+  {
+    "kind": "ellipse",
+    "ratio": 8.0,
+    "sites": 4096,
+    "force_size_error_percent": 1.865174681370263e-12,
+    "moment_angle_error_degrees": 4.652152843132939e-13
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.1,
+    "sites": 256,
+    "force_size_error_percent": -0.0020864575565604504,
+    "moment_angle_error_degrees": 0.0023935846451113
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.1,
+    "sites": 4096,
+    "force_size_error_percent": 0.00019081280320243366,
+    "moment_angle_error_degrees": 0.00022313454050408696
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.3,
+    "sites": 256,
+    "force_size_error_percent": -0.0147130993916611,
+    "moment_angle_error_degrees": 0.017074431414356713
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.3,
+    "sites": 4096,
+    "force_size_error_percent": 0.0009977143058170768,
+    "moment_angle_error_degrees": 0.0010991116308254956
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.75,
+    "sites": 256,
+    "force_size_error_percent": 0.03624341109764728,
+    "moment_angle_error_degrees": 0.09190246862321809
+  },
+  {
+    "kind": "irregular",
+    "ratio": 0.75,
+    "sites": 4096,
+    "force_size_error_percent": -0.0016964357242521544,
+    "moment_angle_error_degrees": 0.00433913614522231
+  },
+  {
+    "kind": "irregular",
+    "ratio": 1.0,
+    "sites": 256,
+    "force_size_error_percent": 0.005139802041465025,
+    "moment_angle_error_degrees": 0.025073470913376642
+  },
+  {
+    "kind": "irregular",
+    "ratio": 1.0,
+    "sites": 4096,
+    "force_size_error_percent": 0.00013257771991348477,
+    "moment_angle_error_degrees": 0.0007080332300421414
+  },
+  {
+    "kind": "irregular",
+    "ratio": 2.0,
+    "sites": 256,
+    "force_size_error_percent": 1.477361211144057e-06,
+    "moment_angle_error_degrees": 6.99646058162042e-05
+  },
+  {
+    "kind": "irregular",
+    "ratio": 2.0,
+    "sites": 4096,
+    "force_size_error_percent": 5.995204332975845e-13,
+    "moment_angle_error_degrees": 2.5146172238166984e-13
+  },
+  {
+    "kind": "irregular",
+    "ratio": 8.0,
+    "sites": 256,
+    "force_size_error_percent": 1.2991829834163582e-10,
+    "moment_angle_error_degrees": 3.035602335620387e-08
+  },
+  {
+    "kind": "irregular",
+    "ratio": 8.0,
+    "sites": 4096,
+    "force_size_error_percent": 8.881784197001252e-13,
+    "moment_angle_error_degrees": 1.493234738900704e-13
+  }
+]

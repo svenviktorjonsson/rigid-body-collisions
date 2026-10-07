@@ -1,0 +1,1098 @@
+{
+  "execution_source_commit": "7c279768f6518e66b1ee620d44bd9b37309b1b5f",
+  "plan_sha256": "dc58050947430a74b26aeb2b4536baf7b83c8fef8a42ab0325e4e135bb93a9c9",
+  "binary_sha256": "aa27af674a1b2d36d5a827758125c99456a0b0ddc6d40f8e654a04e4914c86ed",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 76,
+  "history_count": 52,
+  "scenes": {
+    "slow_shake27_spheres": {
+      "reference_qualified": true,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": true,
+          "error": {
+            "position_m": 0.00021658439646382195,
+            "velocity_m_s": 1.9060529723113935e-05,
+            "omega_rad_s": 7.432575213052173e-05,
+            "orientation_rad": 6.408549639064878e-05
+          }
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": true,
+          "error": {
+            "position_m": 0.0001180556079333737,
+            "velocity_m_s": 1.2565828786016762e-05,
+            "omega_rad_s": 0.00021374557414118243,
+            "orientation_rad": 0.00012479506964381285
+          }
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.005611698,
+          "errors": [
+            {
+              "position_m": 0.0005452843196741541,
+              "velocity_m_s": 4.228481402410762e-05,
+              "omega_rad_s": 0.0006817663866112166,
+              "orientation_rad": 0.00021477458648884245
+            },
+            {
+              "position_m": 0.0005452843196741541,
+              "velocity_m_s": 4.228481402410762e-05,
+              "omega_rad_s": 0.0006817663866112166,
+              "orientation_rad": 0.00021477458648884245
+            },
+            {
+              "position_m": 0.0005452843196741541,
+              "velocity_m_s": 4.228481402410762e-05,
+              "omega_rad_s": 0.0006817663866112166,
+              "orientation_rad": 0.00021477458648884245
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.25,
+            0.25,
+            0.25
+          ]
+        },
+        "medium": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.007012187,
+          "errors": [
+            {
+              "position_m": 0.00033013928298355544,
+              "velocity_m_s": 2.3712154053573615e-05,
+              "omega_rad_s": 0.00018757549082768028,
+              "orientation_rad": 6.66140890626749e-05
+            },
+            {
+              "position_m": 0.00033013928298355544,
+              "velocity_m_s": 2.3712154053573615e-05,
+              "omega_rad_s": 0.00018757549082768028,
+              "orientation_rad": 6.66140890626749e-05
+            },
+            {
+              "position_m": 0.00033013928298355544,
+              "velocity_m_s": 2.3712154053573615e-05,
+              "omega_rad_s": 0.00018757549082768028,
+              "orientation_rad": 6.66140890626749e-05
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.38095238095238093,
+            0.38095238095238093,
+            0.38095238095238093
+          ]
+        },
+        "fine": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.018549271,
+          "errors": [
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            },
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            },
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.3888888888888889,
+            0.3888888888888889,
+            0.3888888888888889
+          ]
+        }
+      },
+      "choice": "coarse",
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.977040705451522,
+          "max_contact_penetration_m": 0.000673886621030434,
+          "max_closing_contact_speed_m_s": 0.00023830678860562224,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0002763302324949035,
+          "container_surface_excess_m": 0.0005397074853415451
+        },
+        "reference_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.95923757041621,
+          "max_contact_penetration_m": 0.00014373986497212554,
+          "max_closing_contact_speed_m_s": 0.0001368746756722443,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 8.711386975945867e-06,
+          "container_surface_excess_m": 3.323130407700825e-05
+        },
+        "reference_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.958309067428837,
+          "max_contact_penetration_m": 0.00015315633527768213,
+          "max_closing_contact_speed_m_s": 7.342962930476771e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 2.0556295349749565e-05,
+          "container_surface_excess_m": 0.00015315633527773764
+        },
+        "coarse_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14.00540942232182,
+          "max_contact_penetration_m": 0.0016032744965108758,
+          "max_closing_contact_speed_m_s": 0.00023880235478538915,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0012826195972087118,
+          "container_surface_excess_m": 0.0016032744965109313
+        },
+        "coarse_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14.00540942232182,
+          "max_contact_penetration_m": 0.0016032744965108758,
+          "max_closing_contact_speed_m_s": 0.00023880235478538915,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0012826195972087118,
+          "container_surface_excess_m": 0.0016032744965109313
+        },
+        "coarse_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14.00540942232182,
+          "max_contact_penetration_m": 0.0016032744965108758,
+          "max_closing_contact_speed_m_s": 0.00023880235478538915,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0012826195972087118,
+          "container_surface_excess_m": 0.0016032744965109313
+        },
+        "medium_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.977040705451522,
+          "max_contact_penetration_m": 0.000673886621030434,
+          "max_closing_contact_speed_m_s": 0.00023830678860562224,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0002763302324949035,
+          "container_surface_excess_m": 0.0005397074853415451
+        },
+        "medium_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.977040705451522,
+          "max_contact_penetration_m": 0.000673886621030434,
+          "max_closing_contact_speed_m_s": 0.00023830678860562224,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0002763302324949035,
+          "container_surface_excess_m": 0.0005397074853415451
+        },
+        "medium_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.977040705451522,
+          "max_contact_penetration_m": 0.000673886621030434,
+          "max_closing_contact_speed_m_s": 0.00023830678860562224,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 0.0002763302324949035,
+          "container_surface_excess_m": 0.0005397074853415451
+        },
+        "fine_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.958309067428837,
+          "max_contact_penetration_m": 0.00015315633527768213,
+          "max_closing_contact_speed_m_s": 7.342962930476771e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 2.0556295349749565e-05,
+          "container_surface_excess_m": 0.00015315633527773764
+        },
+        "fine_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.958309067428837,
+          "max_contact_penetration_m": 0.00015315633527768213,
+          "max_closing_contact_speed_m_s": 7.342962930476771e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 2.0556295349749565e-05,
+          "container_surface_excess_m": 0.00015315633527773764
+        },
+        "fine_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -13.958309067428837,
+          "max_contact_penetration_m": 0.00015315633527768213,
+          "max_closing_contact_speed_m_s": 7.342962930476771e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 2.0556295349749565e-05,
+          "container_surface_excess_m": 0.00015315633527773764
+        }
+      }
+    },
+    "fast_translate27_spheres": {
+      "reference_qualified": true,
+      "reference": "reference_4",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": true,
+          "error": {
+            "position_m": 6.184196671037573e-06,
+            "velocity_m_s": 0.00010715050535824865,
+            "omega_rad_s": 0.001585088375516981,
+            "orientation_rad": 0.00012067780299513626
+          }
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": true,
+          "error": {
+            "position_m": 1.9657423484775775e-06,
+            "velocity_m_s": 1.4385771882998506e-05,
+            "omega_rad_s": 0.00024954624880741343,
+            "orientation_rad": 1.7651056859052993e-05
+          }
+        },
+        {
+          "left": "reference_2",
+          "right": "reference_3",
+          "passed": true,
+          "error": {
+            "position_m": 1.18587959796219e-06,
+            "velocity_m_s": 1.6447112882415594e-05,
+            "omega_rad_s": 0.000234079017922881,
+            "orientation_rad": 1.7408337239710936e-05
+          }
+        },
+        {
+          "left": "reference_3",
+          "right": "reference_4",
+          "passed": true,
+          "error": {
+            "position_m": 5.388870592155182e-07,
+            "velocity_m_s": 6.781972047479774e-06,
+            "omega_rad_s": 0.00010657697400992613,
+            "orientation_rad": 8.036706691081575e-06
+          }
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.234429994,
+          "errors": [
+            {
+              "position_m": 2.470347033802132e-05,
+              "velocity_m_s": 0.0003864093411859109,
+              "omega_rad_s": 0.005884884885400097,
+              "orientation_rad": 0.00044567499235898954
+            },
+            {
+              "position_m": 2.470347033802132e-05,
+              "velocity_m_s": 0.0003864093411859109,
+              "omega_rad_s": 0.005884884885400097,
+              "orientation_rad": 0.00044567499235898954
+            },
+            {
+              "position_m": 2.470347033802132e-05,
+              "velocity_m_s": 0.0003864093411859109,
+              "omega_rad_s": 0.005884884885400097,
+              "orientation_rad": 0.00044567499235898954
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.8496062992125984,
+            0.8496062992125984,
+            0.8496062992125984
+          ]
+        },
+        "medium": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.524047168,
+          "errors": [
+            {
+              "position_m": 9.244196919633738e-06,
+              "velocity_m_s": 0.00014199786318830972,
+              "omega_rad_s": 0.002141290486745792,
+              "orientation_rad": 0.0001621245526571954
+            },
+            {
+              "position_m": 9.244196919633738e-06,
+              "velocity_m_s": 0.00014199786318830972,
+              "omega_rad_s": 0.002141290486745792,
+              "orientation_rad": 0.0001621245526571954
+            },
+            {
+              "position_m": 9.244196919633738e-06,
+              "velocity_m_s": 0.00014199786318830972,
+              "omega_rad_s": 0.002141290486745792,
+              "orientation_rad": 0.0001621245526571954
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.8542061986084757,
+            0.8542061986084757,
+            0.8542061986084757
+          ]
+        },
+        "fine": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 1.504714188,
+          "errors": [
+            {
+              "position_m": 1.7231192931250607e-06,
+              "velocity_m_s": 2.292650589126516e-05,
+              "omega_rad_s": 0.00033783769770689184,
+              "orientation_rad": 2.540060554590048e-05
+            },
+            {
+              "position_m": 1.7231192931250607e-06,
+              "velocity_m_s": 2.292650589126516e-05,
+              "omega_rad_s": 0.00033783769770689184,
+              "orientation_rad": 2.540060554590048e-05
+            },
+            {
+              "position_m": 1.7231192931250607e-06,
+              "velocity_m_s": 2.292650589126516e-05,
+              "omega_rad_s": 0.00033783769770689184,
+              "orientation_rad": 2.540060554590048e-05
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.8564623690060337,
+            0.8564623690060337,
+            0.8564623690060337
+          ]
+        }
+      },
+      "choice": "coarse",
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905587984996,
+          "max_contact_penetration_m": 0.0006333235008287585,
+          "max_closing_contact_speed_m_s": 4.803895161385707e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.3746090639643604e-06,
+          "container_surface_excess_m": 0.0002950170398355878
+        },
+        "reference_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.9055915304725,
+          "max_contact_penetration_m": 0.0003548736356331905,
+          "max_closing_contact_speed_m_s": 2.4164944578323976e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 3.37003295824978e-08,
+          "container_surface_excess_m": 0.0003548736356331905
+        },
+        "reference_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905592642289,
+          "max_contact_penetration_m": 0.0001181697269726778,
+          "max_closing_contact_speed_m_s": 1.2054222679870508e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.555390367843586e-10,
+          "container_surface_excess_m": 2.309163587499441e-05
+        },
+        "reference_3": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905592825816,
+          "max_contact_penetration_m": 6.088096161621648e-05,
+          "max_closing_contact_speed_m_s": 6.02599272171635e-06,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.370492715099488e-10,
+          "container_surface_excess_m": 5.2894713739759514e-05
+        },
+        "reference_4": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905593201064,
+          "max_contact_penetration_m": 3.955816898279507e-05,
+          "max_closing_contact_speed_m_s": 3.0104586156913908e-06,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.428332004013384e-10,
+          "container_surface_excess_m": 2.7166448929027975e-05
+        },
+        "coarse_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905582662965,
+          "max_contact_penetration_m": 0.0013170424603334008,
+          "max_closing_contact_speed_m_s": 0.00012008245028772763,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.2219267152502322e-05,
+          "container_surface_excess_m": 0.0009216442117888635
+        },
+        "coarse_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905582662965,
+          "max_contact_penetration_m": 0.0013170424603334008,
+          "max_closing_contact_speed_m_s": 0.00012008245028772763,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.2219267152502322e-05,
+          "container_surface_excess_m": 0.0009216442117888635
+        },
+        "coarse_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905582662965,
+          "max_contact_penetration_m": 0.0013170424603334008,
+          "max_closing_contact_speed_m_s": 0.00012008245028772763,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.2219267152502322e-05,
+          "container_surface_excess_m": 0.0009216442117888635
+        },
+        "medium_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905587984996,
+          "max_contact_penetration_m": 0.0006333235008287585,
+          "max_closing_contact_speed_m_s": 4.803895161385707e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.3746090639643604e-06,
+          "container_surface_excess_m": 0.0002950170398355878
+        },
+        "medium_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905587984996,
+          "max_contact_penetration_m": 0.0006333235008287585,
+          "max_closing_contact_speed_m_s": 4.803895161385707e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.3746090639643604e-06,
+          "container_surface_excess_m": 0.0002950170398355878
+        },
+        "medium_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905587984996,
+          "max_contact_penetration_m": 0.0006333235008287585,
+          "max_closing_contact_speed_m_s": 4.803895161385707e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.3746090639643604e-06,
+          "container_surface_excess_m": 0.0002950170398355878
+        },
+        "fine_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905592642289,
+          "max_contact_penetration_m": 0.0001181697269726778,
+          "max_closing_contact_speed_m_s": 1.2054222679870508e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.555390367843586e-10,
+          "container_surface_excess_m": 2.309163587499441e-05
+        },
+        "fine_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905592642289,
+          "max_contact_penetration_m": 0.0001181697269726778,
+          "max_closing_contact_speed_m_s": 1.2054222679870508e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.555390367843586e-10,
+          "container_surface_excess_m": 2.309163587499441e-05
+        },
+        "fine_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -5413.905592642289,
+          "max_contact_penetration_m": 0.0001181697269726778,
+          "max_closing_contact_speed_m_s": 1.2054222679870508e-05,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.555390367843586e-10,
+          "container_surface_excess_m": 2.309163587499441e-05
+        }
+      }
+    },
+    "fast_shake27_spheres": {
+      "reference_qualified": false,
+      "reference": "reference_4",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": {
+            "position_m": 0.00014828562227377863,
+            "velocity_m_s": 0.005176444759869143,
+            "omega_rad_s": 0.25046888130922673,
+            "orientation_rad": 0.005758700354904256
+          }
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": {
+            "position_m": 6.169357843078273e-05,
+            "velocity_m_s": 0.0019380753352128577,
+            "omega_rad_s": 0.08172906258550362,
+            "orientation_rad": 0.001789878013518697
+          }
+        },
+        {
+          "left": "reference_2",
+          "right": "reference_3",
+          "passed": false,
+          "error": {
+            "position_m": 2.2332838154376903e-05,
+            "velocity_m_s": 0.0013545389110067236,
+            "omega_rad_s": 0.045330933269506477,
+            "orientation_rad": 0.0010070916009720526
+          }
+        },
+        {
+          "left": "reference_3",
+          "right": "reference_4",
+          "passed": false,
+          "error": {
+            "position_m": 0.00032255236262777843,
+            "velocity_m_s": 0.07900809175466117,
+            "omega_rad_s": 0.4985830812502343,
+            "orientation_rad": 0.006335847044415183
+          }
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": false,
+          "deterministic_states": true,
+          "median_step_s": 0.295720474,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": [
+            0.6769706336939721,
+            0.6769706336939721,
+            0.6769706336939721
+          ]
+        },
+        "medium": {
+          "qualified": false,
+          "deterministic_states": true,
+          "median_step_s": 0.754614708,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": [
+            0.6889996883764412,
+            0.6889996883764412,
+            0.6889996883764412
+          ]
+        },
+        "fine": {
+          "qualified": false,
+          "deterministic_states": true,
+          "median_step_s": 2.773847685,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": [
+            0.6841775620449385,
+            0.6841775620449385,
+            0.6841775620449385
+          ]
+        }
+      },
+      "choice": null,
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48590.12607849397,
+          "max_contact_penetration_m": 0.001955426872850663,
+          "max_closing_contact_speed_m_s": 0.004517715626065318,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 5.634067831716827e-07,
+          "container_surface_excess_m": 0.000931413020636318
+        },
+        "reference_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.09214844321,
+          "max_contact_penetration_m": 0.0009490418713739845,
+          "max_closing_contact_speed_m_s": 0.0021946226902245605,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.652315058339411e-10,
+          "container_surface_excess_m": 0.0003548736356331905
+        },
+        "reference_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.399393434025,
+          "max_contact_penetration_m": 0.0004503341873362543,
+          "max_closing_contact_speed_m_s": 0.0010903905608954608,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.002186218687314e-10,
+          "container_surface_excess_m": 4.680348608193663e-05
+        },
+        "reference_3": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.56830488538,
+          "max_contact_penetration_m": 0.0002419702592908468,
+          "max_closing_contact_speed_m_s": 0.000543665076976747,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.88766457599155e-10,
+          "container_surface_excess_m": 0.00011298677614673958
+        },
+        "reference_4": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.547301280785,
+          "max_contact_penetration_m": 0.00012172317523120868,
+          "max_closing_contact_speed_m_s": 0.0002480115368708268,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.70999891602986e-10,
+          "container_surface_excess_m": 6.733005784881341e-05
+        },
+        "coarse_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48587.332229537344,
+          "max_contact_penetration_m": 0.004992584998501581,
+          "max_closing_contact_speed_m_s": 0.012132272761084284,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.313832483037743e-10,
+          "container_surface_excess_m": 0.0028980053968942765
+        },
+        "coarse_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48587.332229537344,
+          "max_contact_penetration_m": 0.004992584998501581,
+          "max_closing_contact_speed_m_s": 0.012132272761084284,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.313832483037743e-10,
+          "container_surface_excess_m": 0.0028980053968942765
+        },
+        "coarse_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48587.332229537344,
+          "max_contact_penetration_m": 0.004992584998501581,
+          "max_closing_contact_speed_m_s": 0.012132272761084284,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.313832483037743e-10,
+          "container_surface_excess_m": 0.0028980053968942765
+        },
+        "medium_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48590.12607849397,
+          "max_contact_penetration_m": 0.001955426872850663,
+          "max_closing_contact_speed_m_s": 0.004517715626065318,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 5.634067831716827e-07,
+          "container_surface_excess_m": 0.000931413020636318
+        },
+        "medium_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48590.12607849397,
+          "max_contact_penetration_m": 0.001955426872850663,
+          "max_closing_contact_speed_m_s": 0.004517715626065318,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 5.634067831716827e-07,
+          "container_surface_excess_m": 0.000931413020636318
+        },
+        "medium_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48590.12607849397,
+          "max_contact_penetration_m": 0.001955426872850663,
+          "max_closing_contact_speed_m_s": 0.004517715626065318,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 5.634067831716827e-07,
+          "container_surface_excess_m": 0.000931413020636318
+        },
+        "fine_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.399393434025,
+          "max_contact_penetration_m": 0.0004503341873362543,
+          "max_closing_contact_speed_m_s": 0.0010903905608954608,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.002186218687314e-10,
+          "container_surface_excess_m": 4.680348608193663e-05
+        },
+        "fine_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.399393434025,
+          "max_contact_penetration_m": 0.0004503341873362543,
+          "max_closing_contact_speed_m_s": 0.0010903905608954608,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.002186218687314e-10,
+          "container_surface_excess_m": 4.680348608193663e-05
+        },
+        "fine_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -48591.399393434025,
+          "max_contact_penetration_m": 0.0004503341873362543,
+          "max_closing_contact_speed_m_s": 0.0010903905608954608,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.002186218687314e-10,
+          "container_surface_excess_m": 4.680348608193663e-05
+        }
+      }
+    },
+    "fast_shake8_boxes": {
+      "reference_qualified": true,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": true,
+          "error": {
+            "position_m": 7.90435122254903e-06,
+            "velocity_m_s": 0.00030096832859014184,
+            "omega_rad_s": 1.2384625050648946e-07,
+            "orientation_rad": 5.8031499409795604e-09
+          }
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": true,
+          "error": {
+            "position_m": 1.937909481549589e-06,
+            "velocity_m_s": 0.0001903740464975011,
+            "omega_rad_s": 9.155105492767068e-08,
+            "orientation_rad": 5.0631755213734166e-09
+          }
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": false,
+          "deterministic_states": true,
+          "median_step_s": 0.140508518,
+          "errors": [
+            {
+              "position_m": 0.0016993182113824552,
+              "velocity_m_s": 0.0717479445300081,
+              "omega_rad_s": 0.32378310327035337,
+              "orientation_rad": 0.007725768338687876
+            },
+            {
+              "position_m": 0.0016993182113824552,
+              "velocity_m_s": 0.0717479445300081,
+              "omega_rad_s": 0.32378310327035337,
+              "orientation_rad": 0.007725768338687876
+            },
+            {
+              "position_m": 0.0016993182113824552,
+              "velocity_m_s": 0.0717479445300081,
+              "omega_rad_s": 0.32378310327035337,
+              "orientation_rad": 0.007725768338687876
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.9936808846761453,
+            0.9936808846761453,
+            0.9936808846761453
+          ]
+        },
+        "medium": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 0.375184752,
+          "errors": [
+            {
+              "position_m": 8.18114426197893e-06,
+              "velocity_m_s": 0.0004792873518916177,
+              "omega_rad_s": 1.0305254664316024e-07,
+              "orientation_rad": 3.6755937370998893e-09
+            },
+            {
+              "position_m": 8.18114426197893e-06,
+              "velocity_m_s": 0.0004792873518916177,
+              "omega_rad_s": 1.0305254664316024e-07,
+              "orientation_rad": 3.6755937370998893e-09
+            },
+            {
+              "position_m": 8.18114426197893e-06,
+              "velocity_m_s": 0.0004792873518916177,
+              "omega_rad_s": 1.0305254664316024e-07,
+              "orientation_rad": 3.6755937370998893e-09
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.9977650063856961,
+            0.9977650063856961,
+            0.9977650063856961
+          ]
+        },
+        "fine": {
+          "qualified": true,
+          "deterministic_states": true,
+          "median_step_s": 1.438639603,
+          "errors": [
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            },
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            },
+            {
+              "position_m": 0.0,
+              "velocity_m_s": 0.0,
+              "omega_rad_s": 0.0,
+              "orientation_rad": 0.0
+            }
+          ],
+          "native_fast_solve_fraction": [
+            0.9994400447964162,
+            0.9994400447964162,
+            0.9994400447964162
+          ]
+        }
+      },
+      "choice": "medium",
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.212162469188,
+          "max_contact_penetration_m": 0.0012816128768345925,
+          "max_closing_contact_speed_m_s": 9.836782055572257e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.654623212007607e-10,
+          "container_surface_excess_m": 0.001281612876834537
+        },
+        "reference_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.21238408642,
+          "max_contact_penetration_m": 0.0007359041589508619,
+          "max_closing_contact_speed_m_s": 9.827068936374417e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.575491510815937e-10,
+          "container_surface_excess_m": 0.0007359041589509174
+        },
+        "reference_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.211946290477,
+          "max_contact_penetration_m": 0.00017809329928381024,
+          "max_closing_contact_speed_m_s": 7.1911259169610275e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.840558368168217e-10,
+          "container_surface_excess_m": 0.00017809329928386575
+        },
+        "coarse_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.136292357472,
+          "max_contact_penetration_m": 0.0011938296490775213,
+          "max_closing_contact_speed_m_s": 9.904020714657236e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.8353935149484357e-08,
+          "container_surface_excess_m": 0.0008206116615701586
+        },
+        "coarse_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.136292357472,
+          "max_contact_penetration_m": 0.0011938296490775213,
+          "max_closing_contact_speed_m_s": 9.904020714657236e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.8353935149484357e-08,
+          "container_surface_excess_m": 0.0008206116615701586
+        },
+        "coarse_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.136292357472,
+          "max_contact_penetration_m": 0.0011938296490775213,
+          "max_closing_contact_speed_m_s": 9.904020714657236e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 1.8353935149484357e-08,
+          "container_surface_excess_m": 0.0008206116615701586
+        },
+        "medium_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.212162469188,
+          "max_contact_penetration_m": 0.0012816128768345925,
+          "max_closing_contact_speed_m_s": 9.836782055572257e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.654623212007607e-10,
+          "container_surface_excess_m": 0.001281612876834537
+        },
+        "medium_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.212162469188,
+          "max_contact_penetration_m": 0.0012816128768345925,
+          "max_closing_contact_speed_m_s": 9.836782055572257e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.654623212007607e-10,
+          "container_surface_excess_m": 0.001281612876834537
+        },
+        "medium_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.212162469188,
+          "max_contact_penetration_m": 0.0012816128768345925,
+          "max_closing_contact_speed_m_s": 9.836782055572257e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.654623212007607e-10,
+          "container_surface_excess_m": 0.001281612876834537
+        },
+        "fine_0": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.211946290477,
+          "max_contact_penetration_m": 0.00017809329928381024,
+          "max_closing_contact_speed_m_s": 7.1911259169610275e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.840558368168217e-10,
+          "container_surface_excess_m": 0.00017809329928386575
+        },
+        "fine_1": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.211946290477,
+          "max_contact_penetration_m": 0.00017809329928381024,
+          "max_closing_contact_speed_m_s": 7.1911259169610275e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.840558368168217e-10,
+          "container_surface_excess_m": 0.00017809329928386575
+        },
+        "fine_2": {
+          "quaternion_norm_error": 0.0,
+          "energy_change_minus_boundary_work_J": -14401.211946290477,
+          "max_contact_penetration_m": 0.00017809329928381024,
+          "max_closing_contact_speed_m_s": 7.1911259169610275e-09,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.840558368168217e-10,
+          "container_surface_excess_m": 0.00017809329928386575
+        }
+      }
+    },
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        },
+        "medium": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        },
+        "fine": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        }
+      },
+      "choice": null,
+      "diagnostics": {}
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "candidates": {
+        "coarse": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        },
+        "medium": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        },
+        "fine": {
+          "qualified": false,
+          "deterministic_states": false,
+          "median_step_s": null,
+          "errors": [
+            null,
+            null,
+            null
+          ],
+          "native_fast_solve_fraction": []
+        }
+      },
+      "choice": null,
+      "diagnostics": {}
+    }
+  },
+  "hashes": {
+    "traces.zip": "e33d9d5273bffa6ed16d1e7effdaf7b3fe660f2c63082c4584970f3a14c4e265",
+    "scenes.json": "8f9ac659a136c96fe14527a135c0432d7f132faad56fe5ceb766b92b57a573f6",
+    "execution-source.zip": "93d9176224c8dcdca2e019679c384f00aabd50474204bb41aeb4296c381a8b26"
+  },
+  "source_hashes": {
+    "spatial_engine.py": "3a955b1b9ac6861c2c02dd6741088ab88c5e6408415cc29a0072d1d72a034ff4",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78",
+    "spatial_backend/runner.cpp": "e617a26a924604b2c71fb6e130a529a3894d8c87c51d050af63f4cd08a14b3ca",
+    "spatial_backend/coulomb.h": "87cfe2f6003da6aa21ae59bd868d28b7cfbc5012c0536f674605c02175751155",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/CMakeLists.txt": "9f020df97f5528f6c6f67f07a123c76322e258ba2a25ae625056e01038c914f1",
+    "spatial_backend/friction_checks.cpp": "9bb43045b4b509a6b48a3c5d2e08c62884ec768735237a896f77e1130831a8e7",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/run_spatial_friction.py": "7ce685b9a033565b3c6fe63040677a0d58a52aea2bc01d5b817edbef536f2d0e",
+    "research/spatial-friction/plan.json": "dc58050947430a74b26aeb2b4536baf7b83c8fef8a42ab0325e4e135bb93a9c9"
+  }
+}

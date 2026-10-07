@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "original_gate": {
+    "accepted": false,
+    "projection_m_s": 2.1663795332176836e-07,
+    "circle_violation_scaled_m_s": 0.0,
+    "sticking_m_s": 1.263796181592055e-08,
+    "support_gap_J": 7.807769260997868e-10,
+    "passive_bound_J": -12.347342123195963,
+    "passivity_scale": 15.9153346470646,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 5.684341886080802e-14
+  },
+  "native_accepted": false,
+  "policies": {
+    "mobility_continuation_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "solves": 0,
+      "stage_attempts": 0,
+      "svd_calls": 0
+    },
+    "null_traction_seed_policy": {
+      "attempts": 1,
+      "component_cap_rejections": 1,
+      "components": 2,
+      "declines": 1,
+      "iteration_steps": 0,
+      "largest_component_rows": 492,
+      "newton_steps": 0,
+      "null_svd_calls": 0,
+      "seed_attempts": 0,
+      "seed_response_change_max_m_s": 0.0,
+      "seed_svd_calls": 0,
+      "solves": 0,
+      "svd_calls": 0
+    },
+    "projection_tail_policy": {
+      "attempts": 0,
+      "compiled": true,
+      "declines": 0,
+      "iteration_steps": 0,
+      "max_iteration_steps": 2048,
+      "max_rows": 64,
+      "max_svd_calls": 2048,
+      "newton_steps": 0,
+      "solves": 0,
+      "stage": "after_all_existing_pipeline_failure",
+      "svd_calls": 0
+    },
+    "reduced_mobility_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "reduced_rows_max": 60,
+      "solves": 0,
+      "support_passes": 1,
+      "svd_calls": 15073
+    },
+    "terminal_component_polish_policy": {
+      "attempts": 1,
+      "declines": 1,
+      "iteration_steps": 0,
+      "polish_steps": 0,
+      "solves": 0,
+      "svd_calls": 0
+    }
+  },
+  "scope": "Saved-system acceptance/decline only; world remains failed."
+}

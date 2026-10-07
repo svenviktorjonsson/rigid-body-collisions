@@ -1,0 +1,6 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 research/hull-aabb-cache-review/runner.py --source-commit de7eead49ac732a24a3d6ffe570fe877e793d64a",
+  "publication_before_native_execution": true,
+  "native_engine_executed": false,
+  "workload_note": "Independent research/audits may run concurrently; timings descriptive only."
+}

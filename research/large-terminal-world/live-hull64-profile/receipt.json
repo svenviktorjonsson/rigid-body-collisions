@@ -1,0 +1,67 @@
+{
+  "source": "6414ecf",
+  "binary_sha256": "7de90dcceedc9f191840518afa100b1d68babd9860cf307a4417ab5a01bb2846",
+  "sample_s": 5,
+  "frequency_hz": 49,
+  "samples": 248,
+  "lost_samples": 0,
+  "process": 1789181,
+  "rows": [
+    {
+      "sample_self_percent": 38.15,
+      "library": "spatial_runner",
+      "symbol": "coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)::{lambda()#4}::operator()() const"
+    },
+    {
+      "sample_self_percent": 8.26,
+      "library": "libblas.so.3.12.1",
+      "symbol": "dgemv_"
+    },
+    {
+      "sample_self_percent": 5.71,
+      "library": "liblapack.so.3.12.1",
+      "symbol": "dlasr_"
+    },
+    {
+      "sample_self_percent": 5.71,
+      "library": "libblas.so.3.12.1",
+      "symbol": "dger_"
+    },
+    {
+      "sample_self_percent": 5.25,
+      "library": "liblapack.so.3.12.1",
+      "symbol": "dbdsqr_"
+    },
+    {
+      "sample_self_percent": 4.93,
+      "library": "liblapack.so.3.12.1",
+      "symbol": "dlasd4_"
+    },
+    {
+      "sample_self_percent": 4.93,
+      "library": "spatial_runner",
+      "symbol": "coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)"
+    },
+    {
+      "sample_self_percent": 3.7,
+      "library": "libm.so.6",
+      "symbol": "hypot@@GLIBC_2.35"
+    },
+    {
+      "sample_self_percent": 2.88,
+      "library": "liblapack.so.3.12.1",
+      "symbol": "lsame_"
+    },
+    {
+      "sample_self_percent": 2.87,
+      "library": "libblas.so.3.12.1",
+      "symbol": "dnrm2_"
+    },
+    {
+      "sample_self_percent": 2.05,
+      "library": "libblas.so.3.12.1",
+      "symbol": "dgemm_"
+    }
+  ],
+  "scope": "Short live search troubleshooting sample under concurrent load. Descriptive only; not frozen working-baseline or performance-gate evidence. Source/binary unchanged; external profiler did not edit simulated state."
+}

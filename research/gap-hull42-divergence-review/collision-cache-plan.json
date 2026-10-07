@@ -1,0 +1,17 @@
+{
+  "schema": "prospective-source-cache-consistency-review-v1",
+  "parent_plan": "research/gap-hull42-divergence-review/collision-config-plan.json",
+  "prior_threshold_estimates": "Historical configuration omitted constructor cached default margin; retain oldsource and output. Recalculate actualsource-ordered compound bounds and compare consistent declared-zero-margin bounds.",
+  "sources_sha256": {
+    "src/BulletCollision/CollisionShapes/btConvexInternalShape.h": "11fa3258c60b76cbbbf03e2c349d7b1fb03c0c25ade91ff7475cfb74b3bd11ee",
+    "src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp": "43423572a25396fadf324b1a6431d07d32d275548c5076f182a7c8c679cda0e6",
+    "src/BulletCollision/CollisionShapes/btCollisionMargin.h": "6206254a235292287b3d19c142d45c0d55b022a15155835be2109c43efe0b579",
+    "src/BulletCollision/CollisionShapes/btConvexHullShape.h": "209211f19fa98cc6a085d95266c4c15ee8a2bf3be5cc29403d858e8f26e97929",
+    "src/BulletCollision/CollisionShapes/btConvexHullShape.cpp": "763b3aea6d294c85a2dd0597d3ee476b81870e4a9c6638cfa68dcb3949142801",
+    "src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h": "9955326413a75fbc719f3c86316b4b0fffdc35d647067c7e739a1b8b67042cf5",
+    "src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp": "b7ef2abbbe4e055ddbb66e56d8be4c30fc4d64ea61f4b70b06afef47b717f706",
+    "src/BulletCollision/CollisionShapes/btCompoundShape.cpp": "7987b487b06dd6ec8520a64f0e645210fb98967b82179c234bd6fbbaa0540585",
+    "src/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.cpp": "5b0a5553fbf0aa3c57fd9af431775613f0a6c7da46a7efe78443d1eb2563daa6"
+  },
+  "no_native_execution": true
+}

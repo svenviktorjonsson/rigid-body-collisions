@@ -1,0 +1,966 @@
+{
+  "gauge_revision": "9e0acb70fecc0d4161660264d9a4b08d8f56d45a",
+  "scope": "All spatial impact poses imported; no impact endpoints predicted here.",
+  "downloads": [
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/1.json",
+      "bytes": 5129,
+      "sha256": "43273e6b9a11f8c0f2469b68337c39c49c6587780731ae1fbe4733f3c07fd8ae"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/10.json",
+      "bytes": 4781,
+      "sha256": "f20266d1a5fbc9be031f0d3d66e267f44dc59cac4eea80e79b1d872050085b57"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/11.json",
+      "bytes": 5490,
+      "sha256": "51f9166966c927bb5c8b362478c1cfe1039ad04cee6c84cf3f66fb5b4ba04dd2"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/12.json",
+      "bytes": 5486,
+      "sha256": "0c647912c2cfaf3e160e73c26f47c92b64abd8a98ed1ab771f8c0c4a74512fd1"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/13.json",
+      "bytes": 4421,
+      "sha256": "0f5f464bd334511fc0c6ebc2d44b5a6d78c8d473e9c21e89a89918086530a4ef"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/14.json",
+      "bytes": 5129,
+      "sha256": "92a041b19fb516ba131a7f8013f1dd50b0e6427a44b3b73b62335fe2f0294635"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/15.json",
+      "bytes": 5488,
+      "sha256": "c8b759bd0c04087ee48d2905f7a9415ad9f4ddd9520133267415fabd7b019306"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/16.json",
+      "bytes": 4416,
+      "sha256": "1807b7841714eda6538cf376ce968504013103fc3cb5e92c2b871ce1cbc81eb5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/17.json",
+      "bytes": 4775,
+      "sha256": "38bd49b55bb26b654617fea5708c4bb6307ecbd5e863901a6683dae512c30c09"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/18.json",
+      "bytes": 5126,
+      "sha256": "1166fa308b2a4966aa0d5aa3c19059e42322c4b03b7ffe1031fa886c6dbcde2a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/19.json",
+      "bytes": 4769,
+      "sha256": "03091b37da4cc8fdc5c97d75b406670f266fad34dfd20b1a3c5e5000f4a561f8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/2.json",
+      "bytes": 4407,
+      "sha256": "f554cb35b90fe7c9d0abff5884817859464ec23a1fc55752c9cc824cae18e716"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/20.json",
+      "bytes": 4423,
+      "sha256": "1e70e973e859c6b8fca84c4b64b0e97906f9658d0fc3048649c94e1f95b27ebd"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/3.json",
+      "bytes": 4413,
+      "sha256": "31a814db1d6c16b8aa4ede16abec445d18c83b1ecd25168bf0faca472a6417d9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/4.json",
+      "bytes": 4766,
+      "sha256": "ccce339a5f9a97907a7af3d6453166e119a43eaf571fa8ee7d8984318c9b2776"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/5.json",
+      "bytes": 4773,
+      "sha256": "52bca7588458d537e63bf1b03fab07ab9cbaf6700849fb83fa1c69adb0e36458"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/6.json",
+      "bytes": 4421,
+      "sha256": "abaa8c2c5f86356ea12b539b287c4da834fcb9c7d15bca4406caf087e65e2d72"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/7.json",
+      "bytes": 4777,
+      "sha256": "4ced48972d54837b9986470c93eed28c63a881aa7921bc39dfaf2b5d05456375"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/8.json",
+      "bytes": 4784,
+      "sha256": "7f59aebcbea35e7057883dbc01beea5373d214b6f9d152dc239062d4c241e2f3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-1/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-1/9.json",
+      "bytes": 4416,
+      "sha256": "ccecb6d3976a56075b0db52653f49fb5a814b5a49494d5e89398a62a501cad90"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/1.json",
+      "bytes": 5901,
+      "sha256": "e1a8592a56156f205f5ceb834bcd6414cf7d618bbc4a2c5ebc5a8fe5b47fa8fd"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/10.json",
+      "bytes": 5191,
+      "sha256": "e7ca4dd2e560727085a87afb54bc6bc77cfe10c0b7a64a8a46f6bca2343e7b58"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/11.json",
+      "bytes": 5557,
+      "sha256": "fdd477863d8a4eca217adb005464bfb3b48887c905db88f094e3ad75d8b28a8c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/12.json",
+      "bytes": 3757,
+      "sha256": "3380c7a085038b23c4a25f7b3e4032824131ab5db35fd14d10d3aecff44359a0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/13.json",
+      "bytes": 4469,
+      "sha256": "70f7fd36a32985ae657edaedd943a87a1e13097ff5b198e14e0d599a17b386bb"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/14.json",
+      "bytes": 4837,
+      "sha256": "ccbdc134d436a56665bce53f5b9f5456625d70137d5c08c8d6394d4d8be1f6b8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/15.json",
+      "bytes": 4807,
+      "sha256": "cfd8d125d435f350ae637f83f979d8e12a6e03b0f77454ad6e21e290e48be471"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/16.json",
+      "bytes": 5191,
+      "sha256": "1c79a9bf80548c2df278846446b2ad732f54d3a6304e270ab3f7c5a8156a2024"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/17.json",
+      "bytes": 4109,
+      "sha256": "1ff38898a526b54e0b4b586845e1368464696a10e4fb233c43a6fdabadcc8652"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/18.json",
+      "bytes": 4457,
+      "sha256": "d7705c802fb20e4f8553b8927682ba5cc8345d7c42cb009135faa349bf9f241a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/19.json",
+      "bytes": 4845,
+      "sha256": "bdf5c245452db690254bcc5552f3422fe72867a64817316bb250e1d42ab031ef"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/2.json",
+      "bytes": 6188,
+      "sha256": "4547eb7740701cdadadc05fe921867ec429dd710119b051ceac9b8adc9cbaaa5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/20.json",
+      "bytes": 4461,
+      "sha256": "a6bcf9d65041407fb17d16bfe24a4c05c50752325976ce2416509d8514b99d43"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/3.json",
+      "bytes": 6974,
+      "sha256": "782df7905efabb7cb003d03cece2c32f0f48a13ef6bfb5dc93fde8d57eaffaf3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/4.json",
+      "bytes": 5893,
+      "sha256": "7f12a04d7749aa5e95ad802c1971cb1244a4f17e1e4b703a055f8a9626d5eb4c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/5.json",
+      "bytes": 5184,
+      "sha256": "199a691670b76e1ea6729068ffbc908aa817f5a5eed9092a59db9d502c40034e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/6.json",
+      "bytes": 4113,
+      "sha256": "2008c872df8b97a0eaeb9dfe3848739b75716490e8f201a6c65f1d28f281dcbc"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/7.json",
+      "bytes": 5899,
+      "sha256": "6fb141dcd29eb82758cacec3f57d4ee33888bd342a4cdced4f9c6f848495f568"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/8.json",
+      "bytes": 4470,
+      "sha256": "1878e1ba37df77de75c639dd2aff4acbb825a90e7b7d9079ec9a9e8ff7071f7d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-2/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-2/9.json",
+      "bytes": 5126,
+      "sha256": "8259a9601befa664059ebe5a58008cd480a50ef755f9e4d4bb05a2d4e63801cb"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/1.json",
+      "bytes": 10836,
+      "sha256": "76102c914bb00c4c9ac5ec2ab38f90f8f6f1326c46087a013ff23b761cff18f4"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/10.json",
+      "bytes": 7991,
+      "sha256": "4746da9d36254e9878a8d4dfe2deea5bfc253a4d83a3eb79da53cb33e020e8ac"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/11.json",
+      "bytes": 8361,
+      "sha256": "f093536c048c4f5a82c55cf7c975404567d5ff3d31cbd0aa8167bffab2bc9c61"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/12.json",
+      "bytes": 8366,
+      "sha256": "6da3cd3b3e28692e204689187a1d4b8a6a14e7c47658f2820d5b22bc5471a139"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/13.json",
+      "bytes": 8356,
+      "sha256": "480effeea3e17cd74b25cd5dc8c91870ad58d66b5880bbee30a0f0e817425046"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/14.json",
+      "bytes": 8343,
+      "sha256": "0b146fb546ac987275c429a5dfe1948cac6a6f7af156acfc649a558973dbd719"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/15.json",
+      "bytes": 9050,
+      "sha256": "41ec245456a24ba1fdbef3851611efa1b5bc6112d5342ecdd68bb3a2fc5695d5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/16.json",
+      "bytes": 8298,
+      "sha256": "3292b26a16456d775aa85cf4eb9592a14765afe50d59e5c66ec04f0d3e77f274"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/17.json",
+      "bytes": 7948,
+      "sha256": "59d97885514433c381cef757df270e646b692ff78e02149945a176a574fb2315"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/18.json",
+      "bytes": 7599,
+      "sha256": "7647c27f95b5327da9dba7cf73329f1c00b25f49be3e534672446dc5c3e508e1"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/19.json",
+      "bytes": 12906,
+      "sha256": "ce4339f95baf05ee5867bc28a9a73fbb1b184ae6298c763ba418b15cc6a01d94"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/2.json",
+      "bytes": 9426,
+      "sha256": "bcab90fa4b01569a6a138d060f9d7c8a57d7c87525be1d5859539c0a45e189b7"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/20.json",
+      "bytes": 8291,
+      "sha256": "968c5b978ce11f2c48af6a940b140275a94331eb9d5c13f6d6e159f883defa7b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/3.json",
+      "bytes": 9076,
+      "sha256": "858ce845175906541f05d42e8484393e2cb95843e12dc2502af6bea62b5ccee0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/4.json",
+      "bytes": 10406,
+      "sha256": "34af69ea070f5c002fa3a5b9efb63ef44be1f1862187e9ae93c9e2aa568ff125"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/5.json",
+      "bytes": 10771,
+      "sha256": "2480bbab5b77617ec1646cd00008dc6363f95be1328cf394a9d51fc6c1fbcdef"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/6.json",
+      "bytes": 10740,
+      "sha256": "d5f87ff6e41dc4032a22a4411fa45c77411c47e613204e741aa44c9c17df46b8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/7.json",
+      "bytes": 8722,
+      "sha256": "a9c5a14e74481a7b0c4352755857468b8bd9e17396da1a62578cfacb3bf0c1c8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/8.json",
+      "bytes": 9772,
+      "sha256": "10a1ace113d49d20e405857e6700048ab6478e3c614c5fb0dab3406739ceef9c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/plastic/task-3/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/plastic/task-3/9.json",
+      "bytes": 9075,
+      "sha256": "c340a1463503898ade0a500ffe24affdd18d2d445e19e1664dd76f7532861f3f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/1.json",
+      "bytes": 4500,
+      "sha256": "716c8efc0bdd25ff735c4e864bd412721b416d128afe9e0938d796d81c5ca6a6"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/10.json",
+      "bytes": 4864,
+      "sha256": "dde7c57bb58e4f81c9412d22e429daa685acd82148a0d1e2e28c3d42102480a0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/11.json",
+      "bytes": 5228,
+      "sha256": "160b6d789b5835cf2c6e312139b1a46102abc4fbed86ce6228f0969ee418994f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/12.json",
+      "bytes": 5211,
+      "sha256": "8ac6b3ddbd611bd1ad9c127f0dd0ba5dbef131168d89f1ceefd0237e121eb0f2"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/13.json",
+      "bytes": 4857,
+      "sha256": "5b3dcd99cd3846e3229e7f86f99d43a8091eac87268c2f440e41152d98ef204a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/14.json",
+      "bytes": 4863,
+      "sha256": "894596b527c6b363affcf31c4d3cad27349c2854ec6f0771d6e1bb95985e4235"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/15.json",
+      "bytes": 5223,
+      "sha256": "55ab62867d6116fb9afb7bea1d2a173ff869a494c9e0a1734cf3d730df5a36f8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/16.json",
+      "bytes": 5232,
+      "sha256": "8724c0e1651cebcf3b7afdb497292068cfc03f705f8b7aec645cc346c490c3b3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/17.json",
+      "bytes": 4868,
+      "sha256": "1a9f75f2a0861b49f3ba351487f70b8adfc45353b406b9d94464a1413f366609"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/18.json",
+      "bytes": 4848,
+      "sha256": "2272db9014c652390f6442a064e57635a3535435b41ae98480ade878b32e84b6"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/19.json",
+      "bytes": 4510,
+      "sha256": "189a880dcb7abdad60c204e466aeb6791a2507382bc9a3758897831463b3594a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/2.json",
+      "bytes": 4874,
+      "sha256": "23d109b69f1c7ec6ecb514b302e8aea663a56addf14e3e594b14efbfb9f7916d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/20.json",
+      "bytes": 5951,
+      "sha256": "60587e513c88ac334a597074b6f0c740995789eb6a1a06dc8a8ed18da49cab07"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/3.json",
+      "bytes": 4865,
+      "sha256": "c85ebc1f2546ec3f9de1632ca56ec94bec6f4cb374fdea324f9d3375ad3cfd58"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/4.json",
+      "bytes": 5583,
+      "sha256": "45982b7ca67023d3e16857d2d518b447983a8b8d70f67cd2126ed8f92d192e3f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/5.json",
+      "bytes": 4859,
+      "sha256": "249bf973edd914bcc0d61ee8f9e9dad5f8260eb9d7583601c98560d4a8c0ba4c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/6.json",
+      "bytes": 4861,
+      "sha256": "0ca310af6a00a8e7e608237a6c5f5c8fc79ee65bcfb7a152e25b23de49f7061d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/7.json",
+      "bytes": 5579,
+      "sha256": "9523a83f1e4d82a3cf6945e4f3d09d9ae136cd5179ea3389d8ce1c967cefe963"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/8.json",
+      "bytes": 5600,
+      "sha256": "c34923e6a2c433faf392bdc109a1d6d66364e9ace24996260ffc59b9dba579ae"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-1/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-1/9.json",
+      "bytes": 5233,
+      "sha256": "07fd03f63b9ba90e33d7dcb88b539e2077ce711280bcb97c38afa261dda07cb8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/1.json",
+      "bytes": 3351,
+      "sha256": "4764d0dbcabba4fb9c45b9764cd7725ecf294f898e486f7d2e85349fbf3159c5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/10.json",
+      "bytes": 4793,
+      "sha256": "9ae4db4cc45cabc658e49867d437d19db93954563a01d332368adceca0715b42"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/11.json",
+      "bytes": 5805,
+      "sha256": "6aee1cde09b62b27ca1c8365b57451c283f1d4946e0e3536ad3ad745426c27a6"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/12.json",
+      "bytes": 4752,
+      "sha256": "404468f6d9eebb8b6fab0bb0f55a28271718fc1a8aa956b47cc7895d34f48420"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/13.json",
+      "bytes": 4397,
+      "sha256": "a494805c714e4df798da70fd341d168e48bcb79f8b424a00d276f9ec808948a3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/14.json",
+      "bytes": 5135,
+      "sha256": "963b08f3d68c2f2af0c656500c3c45e9c01635a27b67e243a9cf24bc47a6742d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/15.json",
+      "bytes": 4425,
+      "sha256": "8b08fefa1337fd153a13dff8b381aeb28d64b30e012c2cbdc6860583db040b2b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/16.json",
+      "bytes": 4418,
+      "sha256": "c0f04f5345217475d15b8336091799b8cfd331f1e5299a4dd0dedfe71ef21d2b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/17.json",
+      "bytes": 4391,
+      "sha256": "c995e44cc93ef796ca70f2aa6823bba77afb246fd74ac05fbf92ec6404ab9612"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/18.json",
+      "bytes": 5096,
+      "sha256": "b20af78a29cab557b4fca35b0f2c0470cad2cc3e9391521f30e4cadfd6986481"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/19.json",
+      "bytes": 4746,
+      "sha256": "c094d3cb9e9c4f8b96b7aa31007f06c390da518aa35e2c8e2474d6469e1118e9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/2.json",
+      "bytes": 4072,
+      "sha256": "c644fa623b89b2db42d55a28c7b9cf13f41e36d4e89937d8674bc670f60f3dbc"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/20.json",
+      "bytes": 4745,
+      "sha256": "ecfb39617dcc9f86eb27ea380ad4298489f20e88e460bdd380e9a4d6232d31f3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/3.json",
+      "bytes": 3677,
+      "sha256": "abf8f4a0834ab44e847c4ebcc00919ce99198a3b184f1df2064c45ffd01f6182"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/4.json",
+      "bytes": 4777,
+      "sha256": "1033b0a5a8a4e35982eff6d37cc13c87fd548c0f48cb8b060e56aa4559ad9b6b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/5.json",
+      "bytes": 4435,
+      "sha256": "5467bb4169b56941169d669ef42dcf334cfd48d4870661bcc9b62b2a0d47878d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/6.json",
+      "bytes": 4783,
+      "sha256": "77a8194278aee2c41d284f4d5d34c53b0c3b0f330ec3ef57b3704624a3dd9064"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/7.json",
+      "bytes": 4739,
+      "sha256": "b2a37844b02d1a26517bd88cd372dec8c9bf96c721379a188741ef6e8133cd83"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/8.json",
+      "bytes": 4423,
+      "sha256": "41d8fefae8c95615dd029c0548fd51f8a3f7e08a8b7674075df9a134cca30427"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-2/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-2/9.json",
+      "bytes": 5140,
+      "sha256": "b249bdf093337ed4fbc471235088b451f06adf1f5e9052277bb63e18ca6efb0e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/1.json",
+      "bytes": 5494,
+      "sha256": "35990ad6ae9b52717208c1bc40500703d9fe9092c9a746c5eb609f285dc06f2b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/10.json",
+      "bytes": 6869,
+      "sha256": "536acb710df29652c52840298e0e6094ff6aaf6640cfd8b5b87b9ad0143b6429"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/11.json",
+      "bytes": 6871,
+      "sha256": "27117ef6ee5937ccbc190f9c2659e3140b14ca078747b3769fc3cbaf17d68ac3"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/12.json",
+      "bytes": 6164,
+      "sha256": "75a2f0d62af23aeb536f64f0dbf2456a51d941a116445167ce50ec4403d6e4d0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/13.json",
+      "bytes": 5814,
+      "sha256": "3de1ca9c96d09f3df49ec04efa00fc83e25d0db40ce92c2de27cc09a1d8d42c9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/14.json",
+      "bytes": 6171,
+      "sha256": "7f716e0c927bce711cf7b7e7e289e3135d8907febb8d2280bd3ce96b80813b57"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/15.json",
+      "bytes": 6179,
+      "sha256": "aa6e50ccac6592c53195a2619acc3c9c78bef1012773b2cc9d227c8e84a6cb13"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/16.json",
+      "bytes": 5811,
+      "sha256": "543ba9e7b385e47c2f1d2eac663f18c8e4b4e0dc03375ff3aeaf899d45f472cf"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/17.json",
+      "bytes": 6182,
+      "sha256": "931c96aa22030727b7c897b89bec24cafb98f492cfca679cba56007d3ffbfcbd"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/18.json",
+      "bytes": 6226,
+      "sha256": "e542716fc3fd7b5fe613b02726a823e23bdd0541305816253dd345f7ba0ae2a9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/19.json",
+      "bytes": 6169,
+      "sha256": "49bf5abfc6cb01e227a712e5f04e8de293f1cbb850f5477c1ce08f4770072d08"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/2.json",
+      "bytes": 6574,
+      "sha256": "38a5afaf1a69aa8be948cbba43645d4d4f43762ecffda286e93a8f3371a1c249"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/20.json",
+      "bytes": 6204,
+      "sha256": "d18707841c2b9e1b7d358aa18330d41094b54182b3cc1471deb0161d55fef95c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/3.json",
+      "bytes": 6205,
+      "sha256": "5d45a2f11973a34f8e49eb1a7b174c01a24bc9074e71ad4256ff310685dfc422"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/4.json",
+      "bytes": 5468,
+      "sha256": "49da5d2f0c9ad060b4b2b1d6e0fb4f5a0289fb4517ab267f5d914e91fbdd494f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/5.json",
+      "bytes": 5124,
+      "sha256": "7896641b776d93678b35f16766a8b4abbb8ec5b9ca62f742515a94f7dff2e0cc"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/6.json",
+      "bytes": 6167,
+      "sha256": "b48f2374d667c182ac5e2ce05cb8182ae5c63e754bd9f859a7a556d8c41f7f43"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/7.json",
+      "bytes": 6526,
+      "sha256": "01508cd302b21e935397f55912cf9e482497c07632d072b043747367b2116c3b"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/8.json",
+      "bytes": 6191,
+      "sha256": "c8ede75f2c8c44d83bf7266c197a3981f4b75b53df2c058d7c6e29887b91dd46"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/nonsmooth%20contact/json/wood/task-3/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/nonsmooth contact/json/wood/task-3/9.json",
+      "bytes": 7602,
+      "sha256": "c8dfbaca1ac47c4d82ae5f1bc23b0514c60e02a6ca254b2d1f920e45354e291d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/1.json",
+      "bytes": 6609,
+      "sha256": "22b5b696f1120a6f71e5a756f1f4e1afb00791c3053f4126c8c1461c9676709f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/10.json",
+      "bytes": 5684,
+      "sha256": "88e25bdf0720c493bdc0ac794c57f88b78e6240dacc495a84c1d446417d61a25"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/11.json",
+      "bytes": 6193,
+      "sha256": "0f8e05dd5dfd2a95543617c4756100b2cb21532406ba977326e919ded5ac151f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/12.json",
+      "bytes": 7017,
+      "sha256": "6dd4b9738647cbf221cc7cd33cd8b0370be2ea7f905f9e5598af7ead87b6c488"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/13.json",
+      "bytes": 5469,
+      "sha256": "f33f9ce582c6f02c97daccb26b716b081329919aabcce4c4bacc4aaa428b5c72"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/14.json",
+      "bytes": 5298,
+      "sha256": "d5c4d70a96393a434f02f24183de1de9d3729eb1341045a196bf0a7d45865243"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/15.json",
+      "bytes": 4763,
+      "sha256": "2aeaf2020340616506038d03609f3e82fa46f0158624476719ec937926606a87"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/16.json",
+      "bytes": 6453,
+      "sha256": "f841c209d4affd8ef0f8da7933a02522a2bcec8171a334b595c06e104782c1c9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/17.json",
+      "bytes": 6532,
+      "sha256": "c2eb0172aab73025fce69449c2d0444c4f1facc4e5b5979a6eef626efa1d8838"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/18.json",
+      "bytes": 6054,
+      "sha256": "062e6ac7605ec8b9f6bc9d698495bb551e476d89aa595f1b76aea7b4f69c2acb"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/19.json",
+      "bytes": 5642,
+      "sha256": "11889bae214bb903f74fe1bbf6104cf3275996483758541d025238b7d34da441"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/2.json",
+      "bytes": 6366,
+      "sha256": "74f803b8f438fd024ae1f8d5f868b7ea361f1ffa3fac98ef549b33a654047546"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/20.json",
+      "bytes": 5146,
+      "sha256": "2bb1cbd4b25bb373d41981c043d0f710289f63cfa98fd25f5f5b2745af6500b7"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/3.json",
+      "bytes": 7297,
+      "sha256": "d7850f5eef2bf2a9f2b747d1d6c97bd0bc388d66a4084503de44f1906b9770f0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/4.json",
+      "bytes": 8540,
+      "sha256": "a2b98a2e28528983ce3ae436a4d319d37c665aad330555824c7383d2c9e1b8ba"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/5.json",
+      "bytes": 5499,
+      "sha256": "4d5e2691f0bee20216425814952abbb22d75b11756df346068904ce82c69da03"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/6.json",
+      "bytes": 7311,
+      "sha256": "70ab3ba19a19468a69bae6c6017d7b65a1d3b96b4b8f9db5f31389e7140563f2"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/7.json",
+      "bytes": 5717,
+      "sha256": "ba9e3bbfd6456a8b9dd6a02e4fa08eefbbe6fb25b6737159ca80cef0a3a5598f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/8.json",
+      "bytes": 6791,
+      "sha256": "e1c9d94d9139ba3bddf64e4679ab06cbca90d04df035e76dc924fa075ccdbc41"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/plastic/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/plastic/9.json",
+      "bytes": 7468,
+      "sha256": "5fcc3745bf5464706c546b6b3a4a8e914a8366fa60dad4495a6740319f8e8e1a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/1.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/1.json",
+      "bytes": 4743,
+      "sha256": "a58bd212ffceb376f8723757c1fa598d517ce61b9c19611886f9c9719bc24269"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/10.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/10.json",
+      "bytes": 4391,
+      "sha256": "9410f97b7f9e0e5304a33bb4e68ce20b606178a7ee96d0be08020bf98dcb3369"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/11.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/11.json",
+      "bytes": 4036,
+      "sha256": "cd3fa4f460b74643202f7c645652b7d432e165a64a67597e65c2b49783d92760"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/12.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/12.json",
+      "bytes": 4385,
+      "sha256": "3fc82c0530ad1dc50a402decbcf923253e996b38ee0e5c39d07c42cc8a435419"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/13.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/13.json",
+      "bytes": 4030,
+      "sha256": "b196d38e066429b84be9725fca4a0d3fe8f2e64183efdec9140f44df7a01337e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/14.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/14.json",
+      "bytes": 4211,
+      "sha256": "e68b10515fb94bd267d61a32f1ccf21add22ade7cf7fed2f9e5e8a926ac99a10"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/15.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/15.json",
+      "bytes": 4573,
+      "sha256": "aa64d4d8ee7f3ac7d6d750a872972f275ae777ff7f3431160f7a5c34f62cbe31"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/16.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/16.json",
+      "bytes": 3853,
+      "sha256": "3d668c93037fc8ac81a69ead5f16fa3c8151b397d72e98d5e00d9e3a441b1b0a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/17.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/17.json",
+      "bytes": 4045,
+      "sha256": "eb1d82cb6db9ebed49b5698f98b1fdf5181cde15f66d888679fd62a1d2c82fce"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/18.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/18.json",
+      "bytes": 4216,
+      "sha256": "16102cbdc319c7e7986518646757c823c401f67ed8c6536bb1b87d8a86f35ae5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/19.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/19.json",
+      "bytes": 3849,
+      "sha256": "cf6b4e9c77dd57544a2b9684f3e3d0d51613b94d672606c15d55959573a32d31"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/2.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/2.json",
+      "bytes": 3853,
+      "sha256": "a86742ca71004a1ee4e7b4a804735de6f28f563e3145b9801aa67f5e5358a4a0"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/20.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/20.json",
+      "bytes": 4217,
+      "sha256": "23d59e42ebf397d14e7d1a0b7f9396d10ceb5b7259f0f591a739690edbd3d3ba"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/3.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/3.json",
+      "bytes": 4405,
+      "sha256": "30d200d7d8c462d2196dee83d3f283507e143b3ea5603ac3be50c7e151c4103c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/4.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/4.json",
+      "bytes": 4040,
+      "sha256": "43f5b4585802321b90fc1b42fc60c6dc0a76438b8300755291ca7156985022c5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/5.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/5.json",
+      "bytes": 3860,
+      "sha256": "106e1731034ebdb2943d1c35743e08d579111ba83102c297057fafe8fcd23071"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/6.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/6.json",
+      "bytes": 4396,
+      "sha256": "5fad16ba87c58796c36eda4ca5a81e952cc1f7723a0713f8e8d8c4fcbdaf6510"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/7.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/7.json",
+      "bytes": 4206,
+      "sha256": "36f5bd9146b10133c94757bbf51854253673fe45961370dad6bfada8eac3bf6f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/8.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/8.json",
+      "bytes": 4218,
+      "sha256": "ef5b584f10133d3ab44c106dd9287836f31d57c9b9c1a9cc3307ef0dc34f961e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset/resolve/9e0acb70fecc0d4161660264d9a4b08d8f56d45a/data/rigid/slope%20contact/json/wood/9.json",
+      "path": "/home/viktor/.cache/physics-public-data-20261007/gauge/data/rigid/slope contact/json/wood/9.json",
+      "bytes": 4397,
+      "sha256": "647acfdf439d2ecef24e9e1d3b1643f03bc312c443fb8f2feda81240741ed106"
+    }
+  ]
+}

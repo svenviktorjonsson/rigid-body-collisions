@@ -1,0 +1,49 @@
+{
+  "repository": "getfem/getfem",
+  "commit": "3b405544c9643d72c6313dba1560220dbd88693c",
+  "checked_date": "2026-10-04",
+  "files": [
+    {
+      "path": "interface/tests/matlab-octave/demo_dynamic_contact.m",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/interface/tests/matlab-octave/demo_dynamic_contact.m",
+      "sha256": "6267869aa4ba2cea56a7fde4181671a56e5d3d970925d0d63d7dfd1ec1ae38c0",
+      "bytes": 24525
+    },
+    {
+      "path": "interface/tests/matlab-octave/plate_Impact.m",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/interface/tests/matlab-octave/plate_Impact.m",
+      "sha256": "e2b1250ce545de4aef0f7ca51f76160f30c09815137dc2d9b8265014626d3284",
+      "bytes": 28564
+    },
+    {
+      "path": "interface/tests/python/demo_static_contact.py",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/interface/tests/python/demo_static_contact.py",
+      "sha256": "18b0640a556f01bb6b269e97cddcc6aafd6c03036aa5f0c3020e761c9a36b7f9",
+      "bytes": 13558
+    },
+    {
+      "path": "contrib/static_contact_gears/static_contact_gears_2D.param",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/contrib/static_contact_gears/static_contact_gears_2D.param",
+      "sha256": "b372a093f6123ab66ecf0eba8ebc2e885004dce74656ed186543f684f010c0bc",
+      "bytes": 2436
+    },
+    {
+      "path": "COPYING",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/COPYING",
+      "sha256": "94e54787e103ed8636a9b598b6b638a8e5166b8dbd72295ccaf444aa734bd954",
+      "bytes": 1229
+    },
+    {
+      "path": "contrib/static_contact_gears/gear1_2D.msh",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/contrib/static_contact_gears/gear1_2D.msh",
+      "sha256": "87cab6a04629c1b4d15e8a6ae663c65864536e998619b5cb2a34b9d9e7c04d2a",
+      "bytes": 109100
+    },
+    {
+      "path": "contrib/static_contact_gears/gear2_2D.msh",
+      "source_url": "https://raw.githubusercontent.com/getfem/getfem/3b405544c9643d72c6313dba1560220dbd88693c/contrib/static_contact_gears/gear2_2D.msh",
+      "sha256": "5345338c6bbf40864fca880300d97c265a044da5881e45d81f6301ac667fba2f",
+      "bytes": 96255
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all_READY_sourcebytes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_native_snapshot_sourcebytes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "protected_compiler_libraries_production_executables_unchanged",
+      "passed": true
+    },
+    {
+      "name": "isolated_executables_unchanged",
+      "passed": true
+    },
+    {
+      "name": "prior22exact_and_bypassed",
+      "passed": true
+    },
+    {
+      "name": "all23_candidate_native_and_independent_accepted",
+      "passed": true
+    },
+    {
+      "name": "new42_original_decline_retained",
+      "passed": true
+    },
+    {
+      "name": "0_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "0_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "0_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "0_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "0_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "1_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "1_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "1_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "1_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "1_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "2_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "2_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "2_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "2_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "2_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "3_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "3_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "3_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "3_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "3_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "4_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "4_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "4_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "4_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "4_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "5_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "5_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "5_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "5_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "5_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "6_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "6_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "6_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "6_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "6_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "7_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "7_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "7_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "7_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "7_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "8_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "8_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "8_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "8_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "8_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "9_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "9_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "9_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "9_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "9_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "10_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "10_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "10_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "10_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "10_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "11_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "11_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "11_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "11_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "11_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "12_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "12_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "12_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "12_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "12_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "13_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "13_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "13_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "13_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "13_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "14_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "14_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "14_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "14_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "14_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "15_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "15_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "15_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "15_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "15_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "16_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "16_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "16_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "16_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "16_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "17_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "17_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "17_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "17_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "17_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "18_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "18_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "18_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "18_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "18_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "19_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "19_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "19_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "19_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "19_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "20_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "20_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "20_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "20_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "20_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "21_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "21_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "21_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "21_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "21_no_extra_helper_work",
+      "passed": true
+    },
+    {
+      "name": "22_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "22_strict_finite_energy_and_state",
+      "passed": true
+    },
+    {
+      "name": "22_strict_passivity",
+      "passed": true
+    },
+    {
+      "name": "22_full_original_physical_laws",
+      "passed": true
+    },
+    {
+      "name": "new42_fresh_finite_extra_budget",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "source_scope": "Core candidate/harness/prespectiveplan published9e546715d14a5b0468f984f3b5f18eff02dfb6dd. This supplemental auditor was added locally after publication and hashed before execution; no core source mutation.",
+  "claim_limit": "23 frozen instantaneous systems only. No trajectory/refinement/physicalmaterialvalidation or runtime superiority."
+}

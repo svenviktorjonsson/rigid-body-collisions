@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "historical_guards_verified": true,
+  "current_live_unchanged": true,
+  "records": [
+    {
+      "case": "2d_disks",
+      "full_histories": 5,
+      "physical_passes": 5,
+      "declines": [],
+      "edges": [
+        {
+          "left": 0,
+          "right": 1,
+          "passed": false,
+          "errors": {
+            "position_m": 0.013431819569323945,
+            "velocity_m_s": 0.9921926923266335,
+            "omega_rad_s": 17.395848367147686,
+            "orientation_rad": 0.3295809376185963
+          }
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "passed": false,
+          "errors": {
+            "position_m": 0.0200069671643065,
+            "velocity_m_s": 1.4782096134082323,
+            "omega_rad_s": 21.244739686924945,
+            "orientation_rad": 0.43951801387657147
+          }
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "passed": false,
+          "errors": {
+            "position_m": 0.01533425347713597,
+            "velocity_m_s": 1.186873294400951,
+            "omega_rad_s": 15.745599891887514,
+            "orientation_rad": 0.3072022171387536
+          }
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "passed": false,
+          "errors": {
+            "position_m": 0.009622800113740955,
+            "velocity_m_s": 0.9130952792671851,
+            "omega_rad_s": 9.54712491688196,
+            "orientation_rad": 0.17129229972464993
+          }
+        }
+      ],
+      "reference_qualified": false,
+      "performance_qualified": false
+    },
+    {
+      "case": "2d_mixed_polygons",
+      "full_histories": 5,
+      "physical_passes": 5,
+      "declines": [],
+      "edges": [
+        {
+          "left": 0,
+          "right": 1,
+          "passed": false,
+          "errors": {
+            "position_m": 0.027230660586392598,
+            "velocity_m_s": 2.7493326408952825,
+            "omega_rad_s": 32.99292293972849,
+            "orientation_rad": 0.4488700442153659
+          }
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "passed": false,
+          "errors": {
+            "position_m": 0.03773347048798264,
+            "velocity_m_s": 6.3551484491699055,
+            "omega_rad_s": 55.353116896040454,
+            "orientation_rad": 0.6050025536291155
+          }
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "passed": false,
+          "errors": {
+            "position_m": 0.06464174397530523,
+            "velocity_m_s": 6.67410320247238,
+            "omega_rad_s": 48.738380003971834,
+            "orientation_rad": 0.5249759651759562
+          }
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "passed": false,
+          "errors": {
+            "position_m": 0.06463732166917169,
+            "velocity_m_s": 6.219528189903721,
+            "omega_rad_s": 34.51170172075642,
+            "orientation_rad": 0.3747511652426227
+          }
+        }
+      ],
+      "reference_qualified": false,
+      "performance_qualified": false
+    }
+  ],
+  "scope": "Independent full-history physical/accuracy/archive gates. Retained actual body-gate decline is not independently reproduced without its body velocities. No qualification/performance claim."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://physics.usyd.edu.au/~cross/Gripslip.pdf",
+    "local_cache": "/home/viktor/.cache/physics-public-rubber-data-20261006/gripslip.pdf",
+    "bytes": 171108,
+    "sha256": "bf1effbc0b7b194dfd1b53d7df212f572ef247e4ea2d2ddabe16b613498dec41",
+    "redistributed": false
+  },
+  {
+    "url": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+    "local_cache": "/home/viktor/.cache/physics-public-rubber-data-20261006/enhance-bounce.pdf",
+    "bytes": 630918,
+    "sha256": "f3fb9dfc7375009c3fa96a9add9962f122d175f0b55986dacc14fce9908e5967",
+    "redistributed": false
+  }
+]

@@ -1,0 +1,3568 @@
+[
+  {
+    "id": "free_flight_hexagon",
+    "duration": 1,
+    "gravity": [
+      0,
+      0
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          3
+        ],
+        "velocity": [
+          1,
+          2
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                0.5,
+                0.0
+              ],
+              [
+                0.25000000000000006,
+                0.4330127018922193
+              ],
+              [
+                -0.2499999999999999,
+                0.43301270189221935
+              ],
+              [
+                -0.5,
+                6.123233995736766e-17
+              ],
+              [
+                -0.2500000000000002,
+                -0.4330127018922192
+              ],
+              [
+                0.25000000000000006,
+                -0.4330127018922193
+              ]
+            ]
+          }
+        ],
+        "omega": 1
+      }
+    ],
+    "split": "verification",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "normal_rebound_boxes",
+    "duration": 1.2,
+    "gravity": [
+      0,
+      0
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          -1.5,
+          0
+        ],
+        "velocity": [
+          2,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0,
+            "restitution": 0.6
+          }
+        ]
+      },
+      {
+        "position": [
+          1.5,
+          0
+        ],
+        "velocity": [
+          -2,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0,
+            "restitution": 0.6
+          }
+        ]
+      }
+    ],
+    "split": "verification",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "sliding_box",
+    "duration": 2,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          0.525
+        ],
+        "velocity": [
+          3,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "fixed_rotation": true
+      }
+    ],
+    "split": "train",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "analytic": {
+      "law": "flat_slider",
+      "speed": 3,
+      "friction": 0.3
+    }
+  },
+  {
+    "id": "incline_stick",
+    "duration": 2,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -30,
+                -0.2
+              ],
+              [
+                30,
+                -0.2
+              ],
+              [
+                30,
+                0.2
+              ],
+              [
+                -30,
+                0.2
+              ]
+            ],
+            "friction": 0.6
+          }
+        ],
+        "angle": -0.4636476090008061,
+        "type": "static"
+      },
+      {
+        "position": [
+          0.3242298567374695,
+          0.648459713474939
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0.6
+          }
+        ],
+        "angle": -0.4636476090008061,
+        "fixed_rotation": true
+      }
+    ],
+    "split": "verification",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "analytic": {
+      "law": "incline",
+      "theta": 0.4636476090008061,
+      "friction": 0.6
+    }
+  },
+  {
+    "id": "incline_slide",
+    "duration": 2,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -30,
+                -0.2
+              ],
+              [
+                30,
+                -0.2
+              ],
+              [
+                30,
+                0.2
+              ],
+              [
+                -30,
+                0.2
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "angle": -0.4636476090008061,
+        "type": "static"
+      },
+      {
+        "position": [
+          0.3242298567374695,
+          0.648459713474939
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "angle": -0.4636476090008061,
+        "fixed_rotation": true
+      }
+    ],
+    "split": "verification",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "analytic": {
+      "law": "incline",
+      "theta": 0.4636476090008061,
+      "friction": 0.3
+    }
+  },
+  {
+    "id": "triangle_drop",
+    "duration": 3,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                0.6,
+                0.0
+              ],
+              [
+                -0.2999999999999999,
+                0.5196152422706632
+              ],
+              [
+                -0.30000000000000027,
+                -0.519615242270663
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "omega": 0.5
+      }
+    ],
+    "split": "train",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "hexagon_oblique",
+    "duration": 3,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          2
+        ],
+        "velocity": [
+          2,
+          -1
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                0.6,
+                0.0
+              ],
+              [
+                0.30000000000000004,
+                0.5196152422706631
+              ],
+              [
+                -0.2999999999999999,
+                0.5196152422706632
+              ],
+              [
+                -0.6,
+                7.347880794884119e-17
+              ],
+              [
+                -0.30000000000000027,
+                -0.519615242270663
+              ],
+              [
+                0.30000000000000004,
+                -0.5196152422706631
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "omega": 2
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "concave_L_drop",
+    "duration": 3,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          2
+        ],
+        "velocity": [
+          1,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.19999999999999998
+              ],
+              [
+                -0.5,
+                -0.19999999999999998
+              ]
+            ],
+            "friction": 0.4
+          },
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.19999999999999998
+              ],
+              [
+                -0.19999999999999998,
+                -0.19999999999999998
+              ],
+              [
+                -0.19999999999999998,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "omega": 1
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "thin_bar_spin",
+    "duration": 3,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -1.5,
+                -0.1
+              ],
+              [
+                1.5,
+                -0.1
+              ],
+              [
+                1.5,
+                0.1
+              ],
+              [
+                -1.5,
+                0.1
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "omega": 2
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "thin_wall_ccd",
+    "duration": 0.2,
+    "gravity": [
+      0,
+      0
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.025,
+                -3
+              ],
+              [
+                0.025,
+                -3
+              ],
+              [
+                0.025,
+                3
+              ],
+              [
+                -0.025,
+                3
+              ]
+            ],
+            "friction": 0
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          -3,
+          0
+        ],
+        "velocity": [
+          100,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.15,
+                -0.12
+              ],
+              [
+                0.15,
+                -0.12
+              ],
+              [
+                0.15,
+                0.12
+              ],
+              [
+                -0.15,
+                0.12
+              ]
+            ],
+            "friction": 0,
+            "restitution": 0
+          }
+        ],
+        "bullet": true
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "stack_6",
+    "duration": 6,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          0.425
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          1.25
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.0749999999999997
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.8999999999999995
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          3.7249999999999996
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          4.55
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      }
+    ],
+    "split": "train",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "Box2D stacking sample; newly generated aligned variant"
+  },
+  {
+    "id": "stack_12",
+    "duration": 6,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          0.425
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          1.25
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.0749999999999997
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.8999999999999995
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          3.7249999999999996
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          4.55
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          5.374999999999999
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          6.199999999999999
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          7.0249999999999995
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          7.85
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          8.675
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          9.5
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4
+          }
+        ]
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "Box2D stacking sample; newly generated aligned variant"
+  },
+  {
+    "id": "mass_contrast_30",
+    "duration": 6,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          0.425
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          1.25
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.0749999999999997
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.8999999999999995
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          3.7249999999999996
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          4.55
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 30
+          }
+        ]
+      }
+    ],
+    "split": "train",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "Box2D robustness sample; reduced aligned variant"
+  },
+  {
+    "id": "mass_contrast_100",
+    "duration": 6,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.4
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0,
+          0.425
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          1.25
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.0749999999999997
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          2.8999999999999995
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          3.7249999999999996
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 1
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          4.55
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                -0.4
+              ],
+              [
+                0.4,
+                0.4
+              ],
+              [
+                -0.4,
+                0.4
+              ]
+            ],
+            "friction": 0.4,
+            "density": 100
+          }
+        ]
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "Box2D robustness sample; reduced aligned variant"
+  },
+  {
+    "id": "impact_chain_12",
+    "duration": 2,
+    "gravity": [
+      0,
+      0
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0.0,
+          0
+        ],
+        "velocity": [
+          3,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          0.525,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          1.05,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          1.5750000000000002,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          2.1,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          2.625,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          3.1500000000000004,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          3.6750000000000003,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          4.2,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          4.7250000000000005,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          5.25,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      },
+      {
+        "position": [
+          5.775,
+          0
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                -0.35
+              ],
+              [
+                0.25,
+                0.35
+              ],
+              [
+                -0.25,
+                0.35
+              ]
+            ],
+            "friction": 0
+          }
+        ]
+      }
+    ],
+    "split": "test",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized"
+  },
+  {
+    "id": "public_friction_slopes",
+    "duration": 12,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          -4,
+          22
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -13,
+                -0.25
+              ],
+              [
+                13,
+                -0.25
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                -13,
+                0.25
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "angle": -0.25,
+        "type": "static"
+      },
+      {
+        "position": [
+          10.5,
+          19
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -1
+              ],
+              [
+                0.25,
+                -1
+              ],
+              [
+                0.25,
+                1
+              ],
+              [
+                -0.25,
+                1
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "angle": 0,
+        "type": "static"
+      },
+      {
+        "position": [
+          4,
+          14
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -13,
+                -0.25
+              ],
+              [
+                13,
+                -0.25
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                -13,
+                0.25
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "angle": 0.25,
+        "type": "static"
+      },
+      {
+        "position": [
+          -10.5,
+          11
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.25,
+                -1
+              ],
+              [
+                0.25,
+                -1
+              ],
+              [
+                0.25,
+                1
+              ],
+              [
+                -0.25,
+                1
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "angle": 0,
+        "type": "static"
+      },
+      {
+        "position": [
+          -4,
+          6
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -13,
+                -0.25
+              ],
+              [
+                13,
+                -0.25
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                -13,
+                0.25
+              ]
+            ],
+            "friction": 0.2
+          }
+        ],
+        "angle": -0.25,
+        "type": "static"
+      },
+      {
+        "position": [
+          -15,
+          28
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "density": 25,
+            "friction": 0.75
+          }
+        ]
+      },
+      {
+        "position": [
+          -11,
+          28
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "density": 25,
+            "friction": 0.5
+          }
+        ]
+      },
+      {
+        "position": [
+          -7,
+          28
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "density": 25,
+            "friction": 0.35
+          }
+        ]
+      },
+      {
+        "position": [
+          -3,
+          28
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "density": 25,
+            "friction": 0.1
+          }
+        ]
+      },
+      {
+        "position": [
+          1,
+          28
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "density": 25,
+            "friction": 0
+          }
+        ]
+      }
+    ],
+    "split": "stress",
+    "parameter_provenance": "published_numerical_sample_inputs",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "sample_shapes.cpp Friction; segment floor represented by a solid rectangle"
+  },
+  {
+    "id": "long_tilted_stack",
+    "duration": 20,
+    "gravity": [
+      0,
+      -9.81
+    ],
+    "contact_hertz": 10,
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "position": [
+          0,
+          -0.2
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -40,
+                -0.2
+              ],
+              [
+                40,
+                -0.2
+              ],
+              [
+                40,
+                0.2
+              ],
+              [
+                -40,
+                0.2
+              ]
+            ],
+            "friction": 0.3
+          }
+        ],
+        "type": "static"
+      },
+      {
+        "position": [
+          0.0,
+          0.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.1,
+          1.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.2,
+          2.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.30000000000000004,
+          3.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.4,
+          4.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.5,
+          5.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.6000000000000001,
+          6.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.7000000000000001,
+          7.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.8,
+          8.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          0.9,
+          9.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.0,
+          10.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.1,
+          11.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.2000000000000002,
+          12.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.3,
+          13.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.4000000000000001,
+          14.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.5,
+          15.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.6,
+          16.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.7000000000000002,
+          17.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.8,
+          18.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      },
+      {
+        "position": [
+          1.9000000000000001,
+          19.505
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                -0.45
+              ],
+              [
+                0.45,
+                0.45
+              ],
+              [
+                -0.45,
+                0.45
+              ]
+            ],
+            "friction": 0.3
+          }
+        ]
+      }
+    ],
+    "split": "stress",
+    "parameter_provenance": "synthetic_declared",
+    "material_authenticity": "not experimentally characterized",
+    "source_topology": "sample_stacking.cpp TiltedStack; reduced single column variant"
+  }
+]

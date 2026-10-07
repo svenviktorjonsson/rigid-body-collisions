@@ -1,0 +1,7 @@
+{
+  "schema": "retained-independent-control-fixture-failure-v1",
+  "stage": "first-policy post-execution mass assertion",
+  "error": "ACTUAL mass [0,0,0.004188790204786391] differs from intended [0,0,1]",
+  "explanation": "Body-level density is ignored; adapter reads shape volume density. Old-policy raw result and prospective v1 plan/launcher preserved. This is a control-fixture error, not a rejected native solve.",
+  "next_attempt": "Prospective v2 moves declared density into sphere shape; all physical and geometric gates unchanged."
+}

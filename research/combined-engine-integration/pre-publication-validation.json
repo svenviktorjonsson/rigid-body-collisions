@@ -1,0 +1,20 @@
+{
+  "scope": "Integrated source pre-publication checks; native22 and independent reviews still pending; no dense-hull accuracy qualification",
+  "engine_tests": 162,
+  "engine_tests_pass": true,
+  "contact_model_tests": 10,
+  "contact_model_tests_pass": true,
+  "logs": {
+    "engine-tests.log": "ef2fcdf4e52866b4666c4754113354d79f0b3d55901ac0773d133d6666ced674",
+    "contact-tests.log": "3a6f754ca3f3a0fbcad731b9648c9b2c68b49c668f7b64640d293aa0a26afd2f",
+    "native-configure.log": "5103896c7f95290f3e2366e18d7b2f8d2af0f60e48765945e302e07115aaafe8",
+    "native-build.log": "966e973d27f8dccd7e3f1c0c5163967c489771fca6b27d5331ac616e26d55df4",
+    "additional-native-build.log": "a0fffe8c08ec7c9e30290ca04bcf001bf2640b5902e6b4943c005d66a35db385"
+  },
+  "changes": [
+    "combined physical and position normal rate",
+    "authored hull margin before cached AABB recalculation",
+    "false-default optional early component recovery"
+  ],
+  "rubber_scope": "Existing synthetic sphere/plane18 scenarios/54 histories; no measured material calibration or native arbitrary-body couple integration"
+}

@@ -1,0 +1,89 @@
+{
+  "wire_bodies": [
+    {
+      "type": "kinematic",
+      "shapes": [
+        {
+          "kind": "box",
+          "half_extents": [
+            1,
+            1,
+            0.05
+          ],
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dynamic",
+      "shapes": [
+        {
+          "kind": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "margin_m": 0,
+  "bodies": [
+    {
+      "has_original_body": true,
+      "body_id": 0,
+      "world_transform": {
+        "position": [
+          0,
+          0,
+          -0.05
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "has_original_body": true,
+      "body_id": 1,
+      "world_transform": {
+        "position": [
+          0,
+          0,
+          0.09
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    }
+  ]
+}

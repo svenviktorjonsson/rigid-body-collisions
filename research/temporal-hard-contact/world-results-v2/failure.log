@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py", line 30, in <module>
+    assert all(sha(p)==v for p,v in guards.items())
+           ^^^
+  File "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py", line 30, in <genexpr>
+    assert all(sha(p)==v for p,v in guards.items())
+               ~~~^^^
+  File "/home/viktor/.cache/vkf-physics-continuation/research/temporal-hard-contact/run.py", line 9, in <lambda>
+    sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+                                ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'

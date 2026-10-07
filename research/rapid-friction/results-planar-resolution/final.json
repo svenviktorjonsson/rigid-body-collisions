@@ -1,0 +1,130 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "summary": {
+    "2d_disks": {
+      "phases": [
+        {
+          "phase": {
+            "id": "velocity512",
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.01543887726162585,
+                "velocity_m_s": 1.2710665635508431,
+                "omega_rad_s": 21.64561797449415,
+                "orientation_rad": 0.46145769562877603
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.014525801707260274,
+                "velocity_m_s": 1.402470295542298,
+                "omega_rad_s": 19.11680583023639,
+                "orientation_rad": 0.35884703030415027
+              }
+            }
+          ],
+          "qualified": false
+        },
+        {
+          "phase": {
+            "id": "velocity2048",
+            "substeps": 2048,
+            "position_iterations": 32
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.015438877254757424,
+                "velocity_m_s": 1.2710665218884734,
+                "omega_rad_s": 21.64561811539381,
+                "orientation_rad": 0.4614576955636089
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.014525801707271354,
+                "velocity_m_s": 1.4024706144935353,
+                "omega_rad_s": 19.116807495213752,
+                "orientation_rad": 0.3588470303020088
+              }
+            }
+          ],
+          "qualified": false
+        }
+      ],
+      "reference_qualified": false,
+      "benchmark": null
+    },
+    "2d_mixed_polygons": {
+      "phases": [
+        {
+          "phase": {
+            "id": "velocity512",
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.07704307886676498,
+                "velocity_m_s": 8.025179846076863,
+                "omega_rad_s": 53.07228271812379,
+                "orientation_rad": 0.783550398823591
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.033888067965498314,
+                "velocity_m_s": 3.8525129834221628,
+                "omega_rad_s": 36.089864593780725,
+                "orientation_rad": 0.2820900416948051
+              }
+            }
+          ],
+          "qualified": false
+        },
+        {
+          "phase": {
+            "id": "velocity2048",
+            "substeps": 2048,
+            "position_iterations": 32
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.07791147861656998,
+                "velocity_m_s": 8.041952589834276,
+                "omega_rad_s": 52.59052812062873,
+                "orientation_rad": 0.8003581738755537
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 0.032095758160713396,
+                "velocity_m_s": 3.579717665623998,
+                "omega_rad_s": 34.45151102051053,
+                "orientation_rad": 0.4228570108326104
+              }
+            }
+          ],
+          "qualified": false
+        }
+      ],
+      "reference_qualified": false,
+      "benchmark": null
+    }
+  }
+}

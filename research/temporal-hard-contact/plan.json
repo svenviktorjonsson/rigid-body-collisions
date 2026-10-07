@@ -1,0 +1,37 @@
+{
+  "source": "8252e59eb8d66afcd7c67c4c9c78a3b129864462",
+  "upstream_commit": "8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
+  "archive_sha256": "dee7bcf0f50b3dcccf67678ce14ffe3ce02583b51b8b03e447ab30a84c3436ef",
+  "scope": "Isolated experimental Float64 temporal Box2D comparator. All source scalar declarations/literals/math precision transformed, portable SIMD disabled, graph forced serial overflow. Explicit hard no-bias/no-softness normal policy: hertz0 with softness massScale1/impulseScale0/bias0. Positive-gap speculative bias retained. Numerical slop1um; authored geometry/material unchanged. Actual per-applied-impulse signed boundary-work including angular lever, warm normal/tangent and solve/restitution, rolling impulses observed. Observer disabled parity and independent signed wall controls required before worlds. No production adoption or performance claim. Position policy differs from block solver and is explicitly identified.",
+  "binary": "build/rigid_temporal_double_hard_v3/rigid_runner",
+  "cases": [
+    "2d_disks",
+    "2d_mixed_polygons"
+  ],
+  "reference_levels": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.005,
+      "primary_steps": 4000
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000
+    }
+  ],
+  "temporal_substeps": 8,
+  "physics_accuracy": "All original rapid-friction gates; both newest adjacent quarter-budget edges required. No output overwritten; failed controls prevent trajectory qualification.",
+  "polygon_mass_policy": "Preserve original block-engine polygon-core mass/inertia and massless authored collision skin; upstream temporal rounded polygon mass approximation explicitly disabled. Initial unrun rounded-mass build preserved separately and cannot qualify original model.",
+  "rotation_policy": "Float64 libm sin/cos authoring/prescribed rotations; replace deterministic upstream Bhaskara approximation which changed original authored angle by1.6mrad. Original no-qualified angle-approximation history retained."
+}

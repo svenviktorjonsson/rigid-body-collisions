@@ -1,0 +1,486 @@
+{
+  "schema": 1,
+  "profiles": [
+    {
+      "id": "delrin-smallparts-binary",
+      "body_material": "Delrin Small Parts Inc.",
+      "other_material": "Delrin Small Parts Inc.",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.00635,
+      "sphere_density_kg_m3": 1440.0,
+      "normal_restitution": {
+        "value": 0.97,
+        "reported_uncertainty": 0.01,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.97\u00b10.01",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.54,
+        "reported_uncertainty": 0.1,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.54\u00b10.10",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.14,
+        "reported_uncertainty": 0.01,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.14\u00b10.01",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Delrin Small Parts Inc. / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "chrome-steel-binary",
+      "body_material": "Chrome Steel Hoover Precision",
+      "other_material": "Chrome Steel Hoover Precision",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.00318,
+      "sphere_density_kg_m3": 7830.0,
+      "normal_restitution": {
+        "value": 1.0,
+        "reported_uncertainty": 0.01,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "1.00\u00b10.01",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.54,
+        "reported_uncertainty": 0.05,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.54\u00b10.05",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.12,
+        "reported_uncertainty": 0.0,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.12\u00b10.00",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Chrome Steel Hoover Precision / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "glass-soda-binary",
+      "body_material": "Soda lime glass",
+      "other_material": "Soda lime glass",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.00318,
+      "sphere_density_kg_m3": 2500.0,
+      "normal_restitution": {
+        "value": 0.97,
+        "reported_uncertainty": 0.01,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.97\u00b10.01",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.44,
+        "reported_uncertainty": 0.07,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.44\u00b10.07",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.092,
+        "reported_uncertainty": 0.006,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.092\u00b10.006",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Soda lime glass / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "glass-fresh-binary",
+      "body_material": "Fresh Glass",
+      "other_material": "Fresh Glass",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.00297,
+      "sphere_density_kg_m3": 2550.0,
+      "normal_restitution": {
+        "value": 0.922,
+        "reported_uncertainty": 0.021,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.922\u00b10.021",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.37,
+        "reported_uncertainty": 0.07,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.37 \u00b1 0.07",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.048,
+        "reported_uncertainty": 0.006,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.048\u00b10.006",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Fresh Glass / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "glass-spent-binary",
+      "body_material": "Spent Glass",
+      "other_material": "Spent Glass",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.00297,
+      "sphere_density_kg_m3": 2550.0,
+      "normal_restitution": {
+        "value": 0.972,
+        "reported_uncertainty": 0.015,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.972\u00b10.015",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.25,
+        "reported_uncertainty": 0.08,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.25 \u00b1 0.08",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.177,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.177\u00b10.020",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Spent Glass / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "acetate-binary",
+      "body_material": "Cellulose acetate",
+      "other_material": "Cellulose acetate",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.0059900000000000005,
+      "sphere_density_kg_m3": 1319.0,
+      "normal_restitution": {
+        "value": 0.87,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.87\u00b10.02",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.43,
+        "reported_uncertainty": 0.06,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.43\u00b10.06",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.25,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.25\u00b10.02",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Cellulose acetate / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "polyurethane-binary",
+      "body_material": "Polyurethane",
+      "other_material": "Polyurethane",
+      "geometry": "sphere_sphere",
+      "sphere_diameter_m": 0.004,
+      "sphere_density_kg_m3": 1200.0,
+      "normal_restitution": {
+        "value": 0.6,
+        "reported_uncertainty": 0.05,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.6\u00b10.05",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.3,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.30\u00b10.02",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.8,
+        "reported_uncertainty": 0.19,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.80\u00b10.19",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Binary",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Polyurethane / Same",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "glass-soda-aluminum",
+      "body_material": "Soda lime glass sph.",
+      "other_material": "Smooth Aluminum",
+      "geometry": "sphere_plane",
+      "sphere_diameter_m": 0.00318,
+      "sphere_density_kg_m3": 2500.0,
+      "normal_restitution": {
+        "value": 0.831,
+        "reported_uncertainty": 0.009,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.831\u00b10.009",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.31,
+        "reported_uncertainty": 0.06,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.31\u00b10.06",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.125,
+        "reported_uncertainty": 0.007,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.125\u00b10.007",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Flat Plate",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Soda lime glass sph. / Smooth Aluminum",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "acetate-aluminum",
+      "body_material": "Cellulose acetate",
+      "other_material": "Smooth Aluminum",
+      "geometry": "sphere_plane",
+      "sphere_diameter_m": 0.0059900000000000005,
+      "sphere_density_kg_m3": 1319.0,
+      "normal_restitution": {
+        "value": 0.891,
+        "reported_uncertainty": 0.003,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.891\u00b10.003",
+        "zero_uncertainty_means_exact": false
+      },
+      "tangential_restitution": {
+        "value": 0.39,
+        "reported_uncertainty": 0.07,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.39\u00b10.07",
+        "zero_uncertainty_means_exact": false
+      },
+      "sliding_friction": {
+        "value": 0.208,
+        "reported_uncertainty": 0.007,
+        "uncertainty_type": "as printed; exact statistical coverage not supplied by summary page",
+        "reported_text": "0.208\u00b10.007",
+        "zero_uncertainty_means_exact": false
+      },
+      "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Impact%20Results.html",
+      "source_group": "Flat Plate",
+      "source_label": "Fall1999 parameter chart",
+      "origin": "published experimental characterization; no coefficients fitted by this project",
+      "convention": "u_n_after=-en*u_n_before; beta0 maps to et for nonsliding endpoint; sliding limited by mu",
+      "inertia_model": "homogeneous sphere assumption; not a measured tensor",
+      "conditions": {
+        "surface_and_supplier": "Cellulose acetate / Smooth Aluminum",
+        "temperature_K": null,
+        "humidity": null,
+        "normal_speed_range_m_s": null,
+        "unknown_conditions_are_defaults": false
+      },
+      "prediction_status": "documented coefficients available; cross-condition predictive accuracy unqualified"
+    },
+    {
+      "id": "steel-zerodur-air",
+      "body_material": "steel sphere",
+      "other_material": "Zerodur",
+      "geometry": "sphere_plane",
+      "sphere_diameter_m": 0.0127,
+      "sphere_density_kg_m3": null,
+      "normal_restitution": {
+        "value": 0.97,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "reported experimental normal spread"
+      },
+      "tangential_restitution": {
+        "value": 0.34,
+        "reported_uncertainty": 0.07,
+        "uncertainty_type": "author reported uncertainty of line fit"
+      },
+      "sliding_friction": {
+        "value": 0.11,
+        "reported_uncertainty": 0.003,
+        "uncertainty_type": "author reported uncertainty of line fit"
+      },
+      "source_url": "https://authors.library.caltech.edu/records/ks4y3-4ct92",
+      "doi": "10.1017/S002211200400919X",
+      "source_location": "p78; dry collisions in air, Figure4 discussion",
+      "origin": "author experimental characterization, not project fit",
+      "convention": "author beta maps to signed tangential restitution; mu is sliding friction",
+      "inertia_model": "homogeneous sphere assumption",
+      "conditions": {
+        "environment": "air",
+        "normal_speed_range_m_s": [
+          0.05,
+          0.38
+        ],
+        "diameter_m": 0.0127,
+        "surface_roughness": "specimen/target described by source; no universal steel/glass property claim"
+      },
+      "prediction_status": "documented coefficients available; raw per-impact files not verified"
+    },
+    {
+      "id": "glass-zerodur-air",
+      "body_material": "glass sphere",
+      "other_material": "Zerodur",
+      "geometry": "sphere_plane",
+      "sphere_diameter_m": 0.0127,
+      "sphere_density_kg_m3": null,
+      "normal_restitution": {
+        "value": 0.97,
+        "reported_uncertainty": 0.02,
+        "uncertainty_type": "reported experimental normal spread"
+      },
+      "tangential_restitution": {
+        "value": 0.39,
+        "reported_uncertainty": 0.06,
+        "uncertainty_type": "author reported uncertainty of line fit"
+      },
+      "sliding_friction": {
+        "value": 0.106,
+        "reported_uncertainty": 0.008,
+        "uncertainty_type": "author reported uncertainty of line fit"
+      },
+      "source_url": "https://authors.library.caltech.edu/records/ks4y3-4ct92",
+      "doi": "10.1017/S002211200400919X",
+      "source_location": "p78; dry collisions in air, Figure4 discussion",
+      "origin": "author experimental characterization, not project fit",
+      "convention": "author beta maps to signed tangential restitution; mu is sliding friction",
+      "inertia_model": "homogeneous sphere assumption",
+      "conditions": {
+        "environment": "air",
+        "normal_speed_range_m_s": [
+          0.05,
+          0.38
+        ],
+        "diameter_m": 0.0127,
+        "surface_roughness": "specimen/target described by source; no universal steel/glass property claim"
+      },
+      "prediction_status": "documented coefficients available; raw per-impact files not verified"
+    }
+  ],
+  "source_sha256": {
+    "cornell-results.html": "ba2a6436ee1c82f81406047ae089b7f35eebd8c785fc8d91c8a53bc0290e60a6",
+    "foerster-thesis.pdf": "7f83d7c12e3c320cd1e8e4e7b7bd98d142d938165e060f4f3efa6283997f9750",
+    "joseph-hunt.pdf": "bee17dd03741b7edaf8bd2467923a4c610e45c17e449a542ddee08691bd9ba09"
+  },
+  "unsupported_requested_pairs": [
+    {
+      "pair": "limestone / C25 concrete",
+      "reason": "Wang2018 publishes COM normal/tangential ratios and elastic properties, not complete signed contact en/et and same-pair mu; no substitute fitted values."
+    },
+    {
+      "pair": "Cross2010 Superball / granite,rubber,pad,strings",
+      "reason": "normal/tangent restitution reported but independently specified same-pair sliding friction missing; mu0.9 remains hypothesis and is excluded from documented-only profiles."
+    }
+  ],
+  "selection_policy": "Explicit specimen/surface/profile id required; no generic material-name fallback. Published uncertainties and unknown conditions retained. Numerical controls do not qualify real-world prediction."
+}

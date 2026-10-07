@@ -1,0 +1,144 @@
+Adaptive engine benchmark and calibration protocol
+
+Prepared 2026-10-04. Status: pinned public source inputs and geometry downloaded;
+no arbitrary-body reference solver or production-engine adapter has been run.
+See benchmark-catalog.json for cases, exact source links, parameter provenance,
+limitations, and suggested train/validation roles. Source manifests contain file
+hashes and upstream commits. Upstream inputs and meshes remain unmodified.
+
+1. Define a physical reference for each regime
+
+Choose the same constitutive law, contact law, geometry, initial conditions,
+boundary conditions and units for the fast and detailed representations wherever
+possible. Use a nonlinear deformable continuum reference for appreciable strain;
+use beam/plate models only where their assumptions apply. A tightly converged
+rigid contact solve cannot validate deformation that its model excludes. IPC is
+a candidate deformable reference, not an automatically exact physical oracle.
+Its shipped paper-example timesteps and meshes need convergence checks.
+
+Benchmark source parameters must retain provenance labels. A density, modulus
+or friction value in an example file is not automatically a measurement. Record
+material identity, specimen geometry, temperature, loading rate, uncertainty,
+and the actual surface pair where experimental information is available. Do not
+infer a rolling coefficient or tangential restitution from Young's modulus.
+
+2. Establish reference uncertainty before fitting
+
+For each output quantity, use at least three timestep levels at fixed fine mesh,
+three mesh levels at fixed sufficiently small timestep, and tighter nonlinear /
+contact tolerances. Keep geometry and constitutive parameters fixed. Check
+contact discretization independently of bulk deformation resolution. Preserve
+initial mass, COM, inertia and elastic state when comparing representations.
+Convergence means changes fall below a predeclared output budget; the last two
+levels alone are not a proof. Monitor contact onset, integrated impulse, outgoing
+velocity/spin, maximal deformation, elastic vibration and energy accounting.
+Store the reference uncertainty with its results. Do not fit below that noise.
+
+Run for the same physical duration in all methods. Include short collision
+windows for detailed comparisons AND long sequences to measure accumulated
+bias. Long duration is not itself increased numerical accuracy. Stiff explicit
+methods require stable timesteps; implicit methods still need temporal
+convergence and a check for artificial damping.
+
+3. Material characterization, then effective-model calibration
+
+Establish density, elastic and rate-dependent material response from published
+measurements or dedicated material tests. Preserve these physical parameters
+across fidelity levels. Derive coarse spring/beam stiffness from geometry and
+material response, then calibrate any reduced-model corrections jointly over
+multiple cases. Separate these corrections from measured material parameters.
+Fit identifiable contact parameters (surface friction, tangential history,
+rolling moment law and damping) to relevant force/motion measurements or the
+verified detailed model. If only rebound is observed, stiffness and damping
+may be nonidentifiable; contact duration and force/deformation histories help.
+
+Treat restitution as a measured/effective collision output if a compliant model
+already generates it. Do not independently impose and fit rebound plus damping
+in ways that count the same dissipation twice. Effective closures can depend on
+cell size, contact size and speed, but that dependency must be explicit, bounded
+and tested. Use shared parameters for a material/surface pair, not a new free
+parameter vector for every shape. Distinguish constitutive rate dependence from
+numerical damping introduced by the fast integrator.
+
+Use bounded joint optimization with losses normalized separately by physically
+meaningful velocity, spin, force, impulse and deformation scales. Include
+parameter uncertainty, passivity and conservation checks. A low fitting error
+cannot compensate for penetration, missing contacts or incompatible material
+behavior. Preserve elastic/contact history during fidelity changes.
+
+4. Hold out complete cases
+
+Split by geometry and impact conditions BEFORE fitting. Keep all nearly
+identical variants of a case in one split. Fit on the calibration cases, choose
+model complexity/switch thresholds on a separate validation set, then freeze
+parameters and test on unseen shapes, speeds, incidence angles, initial spin,
+mass/stiffness contrast and numbers of simultaneous contacts. Reserve an
+untouched experimental set to assess physical accuracy where data exist.
+
+The catalog roles are initial suggestions. Different published IPC scenes use
+different constitutive laws and numerical material values; do not assume one
+unconditioned parameter vector describes all of them. Use material identity as
+an input, or construct clearly labeled matched-material variants. Original
+public cases remain available for direct reproduction.
+
+5. Compare what is physically meaningful
+
+For isolated impacts: outgoing linear/angular velocity, total impulse and
+moment impulse, contact duration, peak force, maximal deformation, residual
+vibration and plastic change if modeled. Force-peak comparisons need temporal
+resolution; impulse alone does not establish force accuracy.
+
+For long runs: mechanical energy plus dissipated energy minus external work,
+linear/angular momentum balance including external reactions, resting support,
+settling time, contact loads, penetration and failure rates. In chaotic piles,
+compare ensemble distributions and aggregate observables after divergence,
+rather than demand matching every late trajectory. Record repeated runs/seeds.
+
+Do not mix velocity and spin into an arbitrary-length norm for scoring. Declare
+separate unitful tolerances or a physically justified kinetic-energy metric.
+Do not permit time shifting of curves in a way that hides incorrect impact time.
+Near-zero reference quantities require an absolute-error floor.
+
+6. Teach and evaluate the adaptive selector
+
+Run every scene with fast-only, intermediate-only, detailed-only and adaptive
+settings. Measure error and cost as a function of cell resolution, timestep,
+contact resolution and solver tolerance. Choose the lowest measured cost level
+that satisfies each required output tolerance. Use validation data to calibrate
+the selector from cheap online indicators: contact residual, estimated strain,
+contact duration versus wave transit time, friction transition margin, material
+contrast and coupled contact-island structure.
+
+Report false-safe decisions (the selector chose cheap but missed its tolerance),
+missed-contact/instability cases, escalation rate and time spent at each level.
+Use conservative fallback outside the calibrated regime. Hysteresis and a
+minimum dwell time reduce oscillatory switching, while severe new contacts may
+still require immediate escalation. A data-fit error predictor is not a proof
+of an error bound; establish held-out coverage and check selected steps with a
+more detailed solve where practical.
+
+Include explicit switch tests: loaded spring/beam before impact; spinning body
+with sticking history; changing contact normal; dense contact island; strong
+material interface. Track state-transfer cost and any changes in momentum,
+stored energy and dissipated energy. Refinement/reduction must not silently
+discard stored energy or invent unobserved fine-scale history.
+
+7. Fair performance reporting
+
+Compare methods at matched observable accuracy, with the same physical horizon,
+collision geometry, hardware, compiler/build mode and output frequency. Count
+collision detection, adaptation, state transfer and solver work. Separate
+startup/JIT from steady state, repeat timings, and report median and tail latency
+as well as memory. Show error-versus-wall-time curves rather than one FPS number.
+An optimized continuum or reduced model is a stronger comparison than an
+intentionally overresolved or unoptimized reference.
+
+Immediate implementation dependency
+
+The repository currently provides a circle prototype and local frozen-contact
+research code, not an arbitrary-shape production engine or continuum backend.
+Use this repository for the engine; define its adapter API, dimensionality and reference backend
+before implementing adapters. For 2D, specify plane stress / plane strain and
+thickness; 3D twisting and plate transverse bending cannot be substituted for
+planar collision tests. The downloaded inputs are benchmark assets, not a claim
+that an engine comparison or material validation has already succeeded.

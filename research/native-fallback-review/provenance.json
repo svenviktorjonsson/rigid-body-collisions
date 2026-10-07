@@ -1,0 +1,32 @@
+{
+  "protocol": "Independent review controls on immutable optional native LAPACK fallback helpers",
+  "source_sha256": {
+    "research/active-direct/final/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "research/active-direct/final/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "research/active-direct/final/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "research/active-direct/final/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "research/active-direct/final/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "research/active-direct/final/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "research/active-direct/final/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "research/native-fallback-review/checks.cpp": "490e79276c6ffd73557f487339ad9a1f6084d81f456d3726a7084ce6e225a40b"
+  },
+  "source_archive_sha256": "bb5090c8a7b4c51b89a74fa506699169f31b5c99555404a19459bccc4b2f7c10",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "compiler_flags": [
+    "-std=c++17",
+    "-O1",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off"
+  ],
+  "binary_sha256": "4925a62f7b1e0749b850d090638318f8f3cb415ccad346f1e3377aa83bfab143",
+  "linked_libraries_sha256": {
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  }
+}

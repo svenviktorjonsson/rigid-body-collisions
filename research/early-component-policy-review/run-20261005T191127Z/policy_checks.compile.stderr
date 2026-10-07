@@ -1,0 +1,4 @@
+/workspace/rigid-body-collisions/research/early-component-policy-review/policy_checks.cpp:2:10: fatal error: BulletDynamics/MLCPSolvers/btDantzigSolver.h: No such file or directory
+    2 | #include <BulletDynamics/MLCPSolvers/btDantzigSolver.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.

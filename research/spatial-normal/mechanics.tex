@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{Real 3D simultaneous normal contact: mechanics and exact matrix reduction}
+\author{Physics-engine research note}
+\date{5 October 2026}
+\begin{document}\maketitle
+\noindent This note supports an executable native 3D benchmark. It does not
+introduce a novel friction law, claim measured material accuracy, or qualify the
+failed frictional trajectory references. The implemented optimized profile is
+frictionless and inelastic. Friction and restitution remain available in the
+separate pinned Bullet baseline.
+
+\section{Three-dimensional bodies and point impulses}
+Positive action goes from B to A. Lever arms are relative to their respective
+centres of mass. Use the wedge matrix
+\begin{equation}
+ r^{\wedge}=\begin{pmatrix}0&-r_z&r_y\\r_z&0&-r_x\\-r_y&r_x&0\end{pmatrix},
+ \quad r^{\wedge}p=r\times p,
+ \quad v_c=v+(r^{\wedge})^{\mathsf T}\omega.
+\end{equation}
+With normal impulse magnitude $p_k\geq0$ and normal $\hat n_k$ from B to A,
+\begin{align}
+ \Delta p_A&=\hat n_k p_k,&\Delta L_A&=r_A^{\wedge}\hat n_k p_k,\\
+ \Delta p_B&=-\hat n_k p_k,&\Delta L_B&=-r_B^{\wedge}\hat n_k p_k.
+\end{align}
+The world inertia is the full tensor
+$\mathbb I_i=R_i\mathbb I_{i,\mathrm{body}}R_i^{\mathsf T}$, not a scalar
+or a world-fixed diagonal. Authored geometry determines mass, centre and tensor;
+compound fixtures include all parallel-axis terms. A principal-frame transform
+supplies Bullet with diagonal body inertia without discarding off-diagonal terms.
+
+\section{A many-body contact graph}
+For a temporary reference length $\ell>0$, stack each dynamic body's
+$V_i=(v_i,\ell\omega_i)^{\mathsf T}$ and use
+\begin{equation}
+ H_i=\begin{pmatrix}m_i&0\\0&\mathbb I_i/\ell^2\end{pmatrix},\qquad
+ \Delta P_i=\begin{pmatrix}\Delta p_i\\\Delta L_i/\ell\end{pmatrix}.
+\end{equation}
+Scalar square blocks implicitly multiply the appropriate identity. The length
+only makes the mixed velocity and work pairing convenient; consistent scaling
+leaves physical results unchanged. Stack dynamic $V_i$ and block-diagonal $H_i$.
+The normal contact row for body A is
+\begin{equation}
+ G_{k,A}=\begin{pmatrix}\hat n_k^{\mathsf T}&
+ \hat n_k^{\mathsf T}(r_A^{\wedge})^{\mathsf T}/\ell\end{pmatrix};
+\end{equation}
+body B has the negative counterpart. Bodies not participating in a contact have
+zero blocks; each contact point is a separate row. Prescribed boundaries have
+zero inverse mobility and enter the relative normal velocity explicitly:
+\begin{align}
+ u^-&=GV^-+u_{\rm prescribed},&K&=GH^{-1}G^{\mathsf T},\\
+ \Delta V&=H^{-1}G^{\mathsf T}p,&u^+&=u^-+Kp.
+\end{align}
+For a prescribed B, its contribution is
+$-\hat n_k^{\mathsf T}\bigl(v_B+(r_B^{\wedge})^{\mathsf T}\omega_B\bigr)$.
+This is an external actuator; its work must not be omitted.
+
+\section{Inelastic unilateral contact and energy}
+The zero-restitution normal solve is the convex quadratic program
+\begin{equation}
+ \min_{p\geq0}\;\tfrac12p^{\mathsf T}Kp+(u^-)^{\mathsf T}p,
+ \qquad p\geq0,\quad u^+\geq0,\quad p_k u_k^+=0.
+\end{equation}
+All incident impulses act through the same matrix, so propagation is simultaneous.
+With wall work $W_{\rm boundary}=-p^{\mathsf T}u_{\rm prescribed}$,
+\begin{align}
+ \Delta T-W_{\rm boundary}
+ &=p^{\mathsf T}u^-+\tfrac12p^{\mathsf T}Kp\\
+ &=-\tfrac12p^{\mathsf T}Kp\leq0.
+\end{align}
+This frozen-geometry statement is separate from finite-step integration,
+gravity and position stabilization. Pressure can be nonunique for redundant
+normals, while the velocity change is unique. The implementation uses Cholesky
+on positive definite active faces, an active set when bounds bind, and explicit
+feasibility/complementarity checks. Singular or failed faces disclose fallback;
+no diagonal compliance or regularization is added.
+
+\section{An exact reduction, not ignored friction}
+The Bullet baseline has one normal and two tangent rows per contact. With zero
+friction, both tangent impulses are fixed to zero. Partitioning its mobility,
+\begin{equation}
+ \begin{pmatrix}K_{nn}&K_{nt}\\K_{tn}&K_{tt}\end{pmatrix}
+ \begin{pmatrix}p_n\\0\end{pmatrix}
+ =\begin{pmatrix}K_{nn}p_n\\K_{tn}p_n\end{pmatrix}.
+\end{equation}
+Only the normal unknowns and normal inequalities remain; tangent velocity is
+allowed to slip. Eliminating fixed-zero rows \emph{before} assembly gives a
+$c\times c$ scalar mobility instead of $3c\times3c$: nine times less matrix
+payload. Eliminating after assembly gives the same physical and algebraic
+solution but retains unnecessary construction and storage work. The benchmark
+holds the algorithm, geometry, materials, step guard and integration convention
+fixed and verifies bitwise-identical state histories. The reduction cannot be
+applied to nonzero friction, where normal--tangent coupling must remain.
+
+\section{The 100 m/s wall test and its scope}
+An exactly touching row, or packed 3D grid of unit-mass spheres, starts at rest
+in zero gravity. A prescribed wall/container translates at $U$, with no friction,
+restitution or position projection. The inelastic simultaneous solution is
+\begin{equation}
+ v_i^+=U,\quad\omega_i^+=0,\quad x_i(t)=x_i(0)+Ut,\quad
+ W_{\rm boundary}=N\lVert U\rVert^2,\quad T^+=\tfrac12N\lVert U\rVert^2.
+\end{equation}
+The fixtures declare initial overlap near $10^{-10}$ m solely to make
+floating-point touching-contact discovery stable; it must stay below $10^{-8}$ m.
+Contacts use start-of-update wall poses with commanded velocities; walls then
+advance independently after dynamic integration. This avoids treating one wall
+travel increment as preexisting penetration. No contents are teleported.
+
+Native collision discovery and orientation are genuinely 3D. The benchmark has
+64-body rows along all three axes, a 128-body row, and packed 27/64-body boxes.
+Every repetition checks all-body trajectories, velocity, spin, penetration,
+containment, wall work and fallback counts before reporting timing ratios.
+This ideal normal-contact evidence does not certify chaotic frictional paths,
+arbitrary initial overlap, all concave swept collisions, experimental materials,
+or a convergence order for the full engine. Pinned Bullet mechanics and standard
+active-set QP methods are prior art; the measured change is an implementation and
+verification result.
+\end{document}

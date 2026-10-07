@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "directory": "results-sliding",
+      "attempts": 224,
+      "accepted": false,
+      "native_exit": 2,
+      "all_original_trial_laws_recomputed": true
+    },
+    {
+      "directory": "results-sliding-many",
+      "attempts": 396,
+      "accepted": false,
+      "native_exit": 2,
+      "all_original_trial_laws_recomputed": true
+    },
+    {
+      "directory": "results-reduced-faces",
+      "attempts": 249,
+      "accepted": false,
+      "native_exit": 2,
+      "all_original_trial_laws_recomputed": true
+    },
+    {
+      "directory": "results-reduced-supports",
+      "attempts": 750,
+      "accepted": false,
+      "native_exit": 2,
+      "all_original_trial_laws_recomputed": true
+    }
+  ],
+  "scope": "Candidate archive verification; no full-world or performance qualification."
+}

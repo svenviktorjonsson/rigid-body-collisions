@@ -1,0 +1,173 @@
+{
+  "2d_disks": {
+    "reference_qualified": false,
+    "phases": [
+      {
+        "phase": {
+          "id": "seams_off",
+          "suppress_internal_edges": false
+        },
+        "edges": [
+          {
+            "left": 0,
+            "right": 1,
+            "passed": false,
+            "errors": {
+              "position_m": 0.01356043933090301,
+              "velocity_m_s": 1.7021777130921034,
+              "omega_rad_s": 23.558052204777123,
+              "orientation_rad": 0.4370921137977668
+            }
+          },
+          {
+            "left": 1,
+            "right": 2,
+            "passed": false,
+            "errors": {
+              "position_m": 0.013346726831055028,
+              "velocity_m_s": 1.2339365872305934,
+              "omega_rad_s": 12.44294173618861,
+              "orientation_rad": 0.23812951807365296
+            }
+          },
+          {
+            "left": 2,
+            "right": 3,
+            "passed": false,
+            "errors": {
+              "position_m": 0.013715581714130306,
+              "velocity_m_s": 1.5712951378063325,
+              "omega_rad_s": 13.933155196191274,
+              "orientation_rad": 0.2729723705413825
+            }
+          },
+          {
+            "left": 3,
+            "right": 4,
+            "passed": false,
+            "errors": {
+              "position_m": 0.011204308671330585,
+              "velocity_m_s": 1.3130514920654068,
+              "omega_rad_s": 12.293757053626635,
+              "orientation_rad": 0.2327662793356172
+            }
+          }
+        ],
+        "qualified": false
+      }
+    ],
+    "benchmark": null
+  },
+  "2d_mixed_polygons": {
+    "reference_qualified": false,
+    "phases": [
+      {
+        "phase": {
+          "id": "seams_off",
+          "suppress_internal_edges": false
+        },
+        "edges": [
+          {
+            "left": 0,
+            "right": 1,
+            "passed": false,
+            "errors": {
+              "position_m": 0.04143790463178694,
+              "velocity_m_s": 5.638210641989808,
+              "omega_rad_s": 35.5560328083896,
+              "orientation_rad": 0.46841487937416504
+            }
+          },
+          {
+            "left": 1,
+            "right": 2,
+            "passed": false,
+            "errors": {
+              "position_m": 0.07774130528556865,
+              "velocity_m_s": 7.897171715334995,
+              "omega_rad_s": 77.28663295621398,
+              "orientation_rad": 0.9459875521499042
+            }
+          },
+          {
+            "left": 2,
+            "right": 3,
+            "passed": false,
+            "errors": {
+              "position_m": 0.07697181899650968,
+              "velocity_m_s": 7.462310407577513,
+              "omega_rad_s": 84.08149369442609,
+              "orientation_rad": 0.9417739391761315
+            }
+          },
+          {
+            "left": 3,
+            "right": 4,
+            "passed": false,
+            "errors": {
+              "position_m": 0.04615853700748696,
+              "velocity_m_s": 4.326196745716608,
+              "omega_rad_s": 64.99614999447277,
+              "orientation_rad": 0.5169460518022785
+            }
+          }
+        ],
+        "qualified": false
+      },
+      {
+        "phase": {
+          "id": "seams_on",
+          "suppress_internal_edges": true
+        },
+        "edges": [
+          {
+            "left": 0,
+            "right": 1,
+            "passed": false,
+            "errors": {
+              "position_m": 0.04143790676258674,
+              "velocity_m_s": 5.638210701825154,
+              "omega_rad_s": 35.55603220386594,
+              "orientation_rad": 0.4684148879282383
+            }
+          },
+          {
+            "left": 1,
+            "right": 2,
+            "passed": false,
+            "errors": {
+              "position_m": 0.07771411148249303,
+              "velocity_m_s": 7.897573322698258,
+              "omega_rad_s": 77.29193114469032,
+              "orientation_rad": 0.944184528004922
+            }
+          },
+          {
+            "left": 2,
+            "right": 3,
+            "passed": false,
+            "errors": {
+              "position_m": 0.0769880094916576,
+              "velocity_m_s": 7.463076418185601,
+              "omega_rad_s": 84.08584011838208,
+              "orientation_rad": 0.9399661354753795
+            }
+          },
+          {
+            "left": 3,
+            "right": 4,
+            "passed": false,
+            "errors": {
+              "position_m": 0.04379448634746495,
+              "velocity_m_s": 4.244041268716535,
+              "omega_rad_s": 63.94521853772099,
+              "orientation_rad": 0.5146415085824709
+            }
+          }
+        ],
+        "qualified": false
+      }
+    ],
+    "benchmark": null
+  }
+}

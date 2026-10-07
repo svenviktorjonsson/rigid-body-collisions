@@ -1,0 +1,9 @@
+{
+  "complete": false,
+  "error": "Rigid backend failed: Planar actual-body contact/passivity gate declined",
+  "setting": {
+    "dt": 0.01,
+    "primary_steps": 1000
+  },
+  "elapsed_s_descriptive": 0.9951421639998443
+}

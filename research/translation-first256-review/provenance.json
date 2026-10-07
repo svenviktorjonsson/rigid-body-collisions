@@ -1,0 +1,52 @@
+{
+  "schema": "first256-paired-captured-provenance-v1",
+  "primary_source": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "publication_checkpoint": "c05ce01074a932c0e9f357f5064a8fdf29a84f36",
+  "plan_sha256": "9d8c33e9301bd2aaa421f483acea6b18fe3a738eac16142132319dc7e2f900cc",
+  "driver_sha256": "6e4b53f2fd50c6e289388bf2800120c63fea8062a17474331135d1fc5d753d41",
+  "binary_sha256": "0fc649f080864d13cc4e3a2c791b1cbf0c1639474dcb3b69c6dfcebb86d307af",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-DSPATIAL_LAPACK_RECOVERY=1",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-Werror=misleading-indentation"
+  ],
+  "libraries": {
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/Bullet3Common/libBullet3Common.a": "4dbf96db8f1b6da53e09a20133acf7229e5419219f81161fa260e31432bb53e2",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletInverseDynamics/libBulletInverseDynamics.a": "60461c8a4f873f570957fd9e8622ee349125f44ba060fc73bbeeed9acdc46d9c",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletSoftBody/libBulletSoftBody.a": "1705b4224c1b5b05ea7b69e81481006e7da1d279f740a21ee723948c924f396c",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "python_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "independent_audit_dependency": {
+    "path": "research/coulomb_diagnostics.py",
+    "sha256": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84",
+    "matches_public_checkpoint_before_resume": true,
+    "added_provenance_after_run": true
+  },
+  "all132_original_physical_gates_pass": true,
+  "timing_ranking_qualified": false,
+  "pause_inflight_sample_index_zero_based": 108,
+  "selected_baseline_counter_subset_only": true,
+  "original_auditor_retained_failed": true,
+  "versioned_corrected_audit": "research/translation-first256-review/audit_v2.py"
+}

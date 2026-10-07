@@ -1,0 +1,13 @@
+{
+  "integration_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "native22_receipt_sha256": "bd4ecd2d617ffdcf1ea3aea3e00b10d0ad3d967357be6aff12ccea0599a1d4a5",
+  "native22_exact_integration_source_hashes_verified": true,
+  "original_law_retained_replays_accepted": 22,
+  "engine_regressions": 162,
+  "contact_model_regressions": 10,
+  "native_mechanics_checks_pass": true,
+  "isolated_no_lapack_checks": 17,
+  "combined_world_control": "old-gap negative and corrected-clearance actual engine test pass; independent detailed control pending",
+  "dense_hull_accuracy": "No qualified dense-hull reference; fresh six unchanged-gate lanes not yet terminal",
+  "scope": "Prepublication native22 receipt recorded parent579 with exact working-source hashes; verified here against subsequently published bca, rather than mislabeling the earlier HEAD as execution source"
+}

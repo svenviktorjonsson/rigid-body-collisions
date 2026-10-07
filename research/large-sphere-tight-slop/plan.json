@@ -1,0 +1,26 @@
+{
+  "source": "6414ecfdf38b0296f5cb4811a39154e497b4ce77",
+  "case": "3d_sphere_125",
+  "scene_sha256": "1fae88889c328df226eb186e3949f1727b8629cbe1d82e77e4bef1ffd3514532",
+  "settings": [
+    {
+      "dt": 0.005,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.0025,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.00125,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ],
+  "rule": "Prospective original125-sphere full .12s three-level1.25/.625/.3125us ladder. Tighten numerical contact slop from1nm to1pm, keeping1e-11 numerical solve tolerance. Preserve authored geometry/material/motion/horizon and ALL original full physics1e-8/2mm/1J and both quarter-budget accuracy edges including spin.025rad/s. Hypothesis: fixed slop divided by h contributes discontinuous normal target velocity as h shrinks. Joint strict numerical experiment, no performance qualification; retain every decline and full trajectory. Freeze production headers/engine/binary until all levels finish.",
+  "numerical_search_tolerance_m_s": 1e-11,
+  "physical_velocity_position_gates_m_s": 1e-08,
+  "contact_slop_m": 1e-12
+}

@@ -1,0 +1,14 @@
+{
+  "source": "8a2a7a8986e24c67dbed7805991ec467be85c799",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/rounded-boundary/world.py": "8d7cea497ed571369234a9e3e58c400665bb6f796a0412373ffd8bc9f17fc068",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rounded-boundary/world-plan.json": "ffac1b902df2f59ce5072d63c7cdbb8b8b84185a90180564f6cbed32819ed032",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_engine.py": "25808a53963defd1f3f7966f28fb0ff55ac862d6da4ee4d79033c709179a2ee4",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_rounded/rigid_runner": "3473ed4fc7c4a6262964b982b38fe40b17fe54683fb4f6d9b0d92df01202f077",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_rounded/precision-source.json": "bc58ef33dbc3708e577e364abbeb088d48a8cbd66f86dac2ba6ba8ab30111169",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rounded-boundary/build-receipt.json": "42e2481d648c8d6cc886ac6a7f2506cad7be2b956143c6e0b20ff1a177e984f0",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rounded-boundary/runner.cpp": "85a8e027104a8ce8ed63ca715f13225d3b6cef7b4ecfa3e340a5221102b82ca3"
+  },
+  "scope": "numerical discovery/slop experiment, no speed acceptance"
+}

@@ -1,0 +1,62 @@
+{
+  "purpose": "Paired unchanged-physics hull trajectory follow-up using residual-gated native pressure-gauge and cold Newton recovery",
+  "dt_s": 0.01,
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "primary_steps": 4,
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "candidate_repetitions": 0,
+  "candidates": {},
+  "scenes": [
+    {
+      "id": "fast_shake8_hulls42",
+      "side": 2,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 0,
+      "seed": 42,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    },
+    {
+      "id": "fast_rotate_shake27_hulls7301",
+      "side": 3,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 10,
+      "seed": 7301,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    }
+  ],
+  "scope": "All six full-trajectory attempts retained. Geometry, mu, zero restitution, gravity, motion, dt, travel fractions, position handling and residual/trajectory/physical gates unchanged from gyro follow-up. Recovery changes only numerical search on the same circular equations. No diagonal compliance or fallback friction law. Frozen-system recovery alone does not qualify a reference; all completed histories remain subject to unchanged trajectory refinement and energy/work/containment gates.",
+  "baseline_source_commit": "78e63313b5d13dd80170d03c54bcaffccbbf47e8"
+}

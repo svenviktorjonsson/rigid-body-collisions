@@ -1,0 +1,7 @@
+{
+  "inputs": {
+    "research/large-mobility-world/results/hull64_h10us/rejection.json": "b626f66338c557f3f0684e520a01dcd550a7e3983415790c557a3c0014a8c19e",
+    "research/large-velocity-cap192-world/results/trial_0/rejection.json": "82fc85b766a262c65664a9a040efc46290f6ad3cf2d477ac77bbf083ec5f4285"
+  },
+  "rule": "Prospective terminal-warm exact-component retry: original256 PGS iterations then one existing bounded polisher (its unchanged256 SVD cap) on the actual final rejected seed. At most192 search rows/full4096, original full native and independent law mandatory. No approximate body application; every decline retained. No world/performance claim."
+}

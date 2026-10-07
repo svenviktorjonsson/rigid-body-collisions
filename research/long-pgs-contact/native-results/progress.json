@@ -1,0 +1,68 @@
+[
+  {
+    "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+    "accepted": false,
+    "exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 1.2320806822837637e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 2.8920086012591364e-08,
+      "support_gap_J": 1.6418948721054571e-09,
+      "passive_bound_J": -0.1541385057434588,
+      "passivity_scale": 1.2219553436749169,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 2.2737367544323206e-13
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 100000,
+      "reduced_rows_max": 27,
+      "search_row_cap": 192,
+      "stage_accepts": 0,
+      "stage_attempts": 1,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 0
+    },
+    "elapsed_s_descriptive": 0.5182612990029156
+  },
+  {
+    "input": "research/large-terminal-world/results/hull125_h10us/rejection.json",
+    "accepted": false,
+    "exit": 2,
+    "independent": {
+      "accepted": false,
+      "projection_m_s": 2.1663795332208674e-07,
+      "circle_violation_scaled_m_s": 0.0,
+      "sticking_m_s": 1.2637961745057094e-08,
+      "support_gap_J": 7.807769109796876e-10,
+      "passive_bound_J": -12.347342123195967,
+      "passivity_scale": 15.9153346470646,
+      "finite": true,
+      "bounds": true,
+      "native_response_max_discrepancy": 5.684341886080802e-14
+    },
+    "policy": {
+      "final_gate": "original zero-budget projection, bounds and passivity",
+      "full_component_cap": 4096,
+      "iteration_cap_per_stage": 2048,
+      "iterations": 100000,
+      "reduced_rows_max": 60,
+      "search_row_cap": 192,
+      "stage_accepts": 0,
+      "stage_attempts": 1,
+      "stage_cap": 17,
+      "support_pass_cap": 8,
+      "support_passes": 1,
+      "svd_cap_per_stage": 2048,
+      "svds": 0
+    },
+    "elapsed_s_descriptive": 1.268689053998969
+  }
+]

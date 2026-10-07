@@ -1,0 +1,659 @@
+{
+  "case_count": 81,
+  "pass_count": 81,
+  "records": [
+    {
+      "case": "delrin-smallparts-binary_t0.03_spin-0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.419970084905799e-09,
+      "kinetic_change_minus_work_J": -1.2294129912536049e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t0.03_spin0",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 7.014899772173067e-11,
+      "kinetic_change_minus_work_J": -1.1444749976497616e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t0.03_spin0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.4199416631963686e-09,
+      "kinetic_change_minus_work_J": -1.1655193265791225e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t0.3_spin-0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.4199842957605142e-09,
+      "kinetic_change_minus_work_J": -1.5169344822887774e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t0.3_spin0",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 7.014904213065165e-10,
+      "kinetic_change_minus_work_J": -1.4926282868727813e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t0.3_spin0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.4199274523416534e-09,
+      "kinetic_change_minus_work_J": -8.779978355439491e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t1.0_spin-0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.4199842957605142e-09,
+      "kinetic_change_minus_work_J": -2.262360570157745e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t1.0_spin0",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 3.419987848474193e-09,
+      "kinetic_change_minus_work_J": -6.650189535472214e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "delrin-smallparts-binary_t1.0_spin0.3",
+      "profile": "delrin-smallparts-binary",
+      "prediction_max_error": 7.0148615805010195e-09,
+      "kinetic_change_minus_work_J": -2.1178193777082565e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.03_spin-0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866688964801142e-08,
+      "kinetic_change_minus_work_J": -7.024347047994893e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.03_spin0",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 2.797126974485309e-10,
+      "kinetic_change_minus_work_J": -2.401567303236566e-10,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.03_spin0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866632121382281e-08,
+      "kinetic_change_minus_work_J": -6.644652612871338e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.3_spin-0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866717386510572e-08,
+      "kinetic_change_minus_work_J": -8.732972006050917e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.3_spin0",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 2.797129639020568e-09,
+      "kinetic_change_minus_work_J": -2.401567303235401e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t0.3_spin0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866745808220003e-08,
+      "kinetic_change_minus_work_J": -4.936027654815298e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t1.0_spin-0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866660543091712e-08,
+      "kinetic_change_minus_work_J": -1.316274041582583e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t1.0_spin0",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 1.1866688964801142e-08,
+      "kinetic_change_minus_work_J": -3.670379540721781e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "chrome-steel-binary_t1.0_spin0.3",
+      "profile": "chrome-steel-binary",
+      "prediction_max_error": 2.7971339022769826e-08,
+      "kinetic_change_minus_work_J": -6.671020274178242e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.03_spin-0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961336561696953e-09,
+      "kinetic_change_minus_work_J": -2.0993388322287203e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.03_spin0",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 2.6155033694408303e-10,
+      "kinetic_change_minus_work_J": -2.4964828288971878e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.03_spin0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961364983406384e-09,
+      "kinetic_change_minus_work_J": -2.0077894768889552e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.3_spin-0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961279718278092e-09,
+      "kinetic_change_minus_work_J": -2.5113109312576665e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.3_spin0",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 2.615500704905571e-09,
+      "kinetic_change_minus_work_J": -3.360614991980388e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t0.3_spin0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961279718278092e-09,
+      "kinetic_change_minus_work_J": -1.5958173778600153e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t1.0_spin-0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961279718278092e-09,
+      "kinetic_change_minus_work_J": -3.579386743554922e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t1.0_spin0",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961276165564414e-09,
+      "kinetic_change_minus_work_J": -1.2906528607805295e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-binary_t1.0_spin0.3",
+      "profile": "glass-soda-binary",
+      "prediction_max_error": 8.961308139987523e-09,
+      "kinetic_change_minus_work_J": -5.277415655627555e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.03_spin-0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229452426647185e-09,
+      "kinetic_change_minus_work_J": -1.4076632967238156e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.03_spin0",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 2.8526891959756995e-10,
+      "kinetic_change_minus_work_J": -5.2516842085029114e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.03_spin0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229424004937755e-09,
+      "kinetic_change_minus_work_J": -1.3689389573591535e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.3_spin-0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229452426647185e-09,
+      "kinetic_change_minus_work_J": -1.5819228238648047e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.3_spin0",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229443544862988e-09,
+      "kinetic_change_minus_work_J": -6.138143400741646e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t0.3_spin0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229424004937755e-09,
+      "kinetic_change_minus_work_J": -1.1946794302181634e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t1.0_spin-0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229424004937755e-09,
+      "kinetic_change_minus_work_J": -2.033706783119224e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t1.0_spin0",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229432886721952e-09,
+      "kinetic_change_minus_work_J": -1.0655982993285817e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-fresh-binary_t1.0_spin0.3",
+      "profile": "glass-fresh-binary",
+      "prediction_max_error": 5.229424004937755e-09,
+      "kinetic_change_minus_work_J": -7.428954709637473e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.03_spin-0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.978506247723999e-08,
+      "kinetic_change_minus_work_J": -2.4376195692216197e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.03_spin0",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 2.602817961161463e-10,
+      "kinetic_change_minus_work_J": -1.939836301681304e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.03_spin0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.9785233007496572e-08,
+      "kinetic_change_minus_work_J": -2.2911087915030973e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.3_spin-0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.978514774236828e-08,
+      "kinetic_change_minus_work_J": -3.0969180689549647e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.3_spin0",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 2.602821069785932e-09,
+      "kinetic_change_minus_work_J": -2.7746490778565256e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t0.3_spin0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.978517616407771e-08,
+      "kinetic_change_minus_work_J": -1.6318102917697513e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t1.0_spin-0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.978511932065885e-08,
+      "kinetic_change_minus_work_J": -4.806210475671045e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t1.0_spin0",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 1.9785140636940923e-08,
+      "kinetic_change_minus_work_J": -1.143441033941273e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-spent-binary_t1.0_spin0.3",
+      "profile": "glass-spent-binary",
+      "prediction_max_error": 2.6028146749013104e-08,
+      "kinetic_change_minus_work_J": -4.273751701497519e-08,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.03_spin-0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 6.514760286790988e-09,
+      "kinetic_change_minus_work_J": -1.3487948733830173e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.03_spin0",
+      "profile": "acetate-binary",
+      "prediction_max_error": 7.320277717326462e-11,
+      "kinetic_change_minus_work_J": -3.6114626247149064e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.03_spin0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 6.51487397362871e-09,
+      "kinetic_change_minus_work_J": -1.2655252220311617e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.3_spin-0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 6.514774497645703e-09,
+      "kinetic_change_minus_work_J": -1.723508304466374e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.3_spin0",
+      "profile": "acetate-binary",
+      "prediction_max_error": 7.320277717326462e-10,
+      "kinetic_change_minus_work_J": -3.919458172024706e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t0.3_spin0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 6.514817130209849e-09,
+      "kinetic_change_minus_work_J": -8.908117909478055e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t1.0_spin-0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 6.514795813927776e-09,
+      "kinetic_change_minus_work_J": -2.6949875702380375e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t1.0_spin0",
+      "profile": "acetate-binary",
+      "prediction_max_error": 2.440096125155833e-09,
+      "kinetic_change_minus_work_J": -7.065091707960949e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-binary_t1.0_spin0.3",
+      "profile": "acetate-binary",
+      "prediction_max_error": 7.320295480894856e-09,
+      "kinetic_change_minus_work_J": -4.472536595059968e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.03_spin-0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 9.799748568184441e-09,
+      "kinetic_change_minus_work_J": -5.021055233495076e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.03_spin0",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 1.4923440261327414e-10,
+      "kinetic_change_minus_work_J": -2.5745336716526974e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.03_spin0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 1.0098204938913113e-08,
+      "kinetic_change_minus_work_J": -4.832861267154269e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.3_spin-0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 8.456623845631839e-09,
+      "kinetic_change_minus_work_J": -5.961084095390694e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.3_spin0",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 1.4923458024895808e-09,
+      "kinetic_change_minus_work_J": -2.667689685014685e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t0.3_spin0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 1.1441329661465716e-08,
+      "kinetic_change_minus_work_J": -4.079144431982626e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t1.0_spin-0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 4.974495482201746e-09,
+      "kinetic_change_minus_work_J": -9.108105421660928e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t1.0_spin0",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 4.974488376774389e-09,
+      "kinetic_change_minus_work_J": -3.619114737308843e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "polyurethane-binary_t1.0_spin0.3",
+      "profile": "polyurethane-binary",
+      "prediction_max_error": 1.4923472235750523e-08,
+      "kinetic_change_minus_work_J": -2.8349732103007077e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.03_spin-0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 1.8474111129762605e-13,
+      "kinetic_change_minus_work_J": -6.957741916153316e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.03_spin0",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 1.3010426069826053e-18,
+      "kinetic_change_minus_work_J": -2.6070606115673473e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.03_spin0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 4.263256414560601e-14,
+      "kinetic_change_minus_work_J": -6.726519683716901e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.3_spin-0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 8.526512829121202e-14,
+      "kinetic_change_minus_work_J": -7.998241962117223e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.3_spin0",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 7.105427357601002e-15,
+      "kinetic_change_minus_work_J": -2.800783097147707e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t0.3_spin0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 1.7053025658242404e-13,
+      "kinetic_change_minus_work_J": -5.686019637752988e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t1.0_spin-0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 2.842170943040401e-14,
+      "kinetic_change_minus_work_J": -1.0695834673875508e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t1.0_spin0",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 2.7755575615628914e-17,
+      "kinetic_change_minus_work_J": -4.91527886296491e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "glass-soda-aluminum_t1.0_spin0.3",
+      "profile": "glass-soda-aluminum",
+      "prediction_max_error": 5.684341886080802e-14,
+      "kinetic_change_minus_work_J": -3.148657369794826e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.03_spin-0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 4.263256414560601e-14,
+      "kinetic_change_minus_work_J": -2.5774360942950215e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.03_spin0",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 2.220446049250313e-16,
+      "kinetic_change_minus_work_J": -6.125352109816143e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.03_spin0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 8.526512829121202e-14,
+      "kinetic_change_minus_work_J": -2.4373193651958846e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.3_spin-0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 1.8474111129762605e-13,
+      "kinetic_change_minus_work_J": -3.2079613752411336e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.3_spin0",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 3.552713678800501e-15,
+      "kinetic_change_minus_work_J": -6.766130970082852e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t0.3_spin0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 1.7053025658242404e-13,
+      "kinetic_change_minus_work_J": -1.8067940842497726e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t1.0_spin-0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 5.551115123125783e-17,
+      "kinetic_change_minus_work_J": -4.842656548064396e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t1.0_spin0",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 1.4210854715202004e-13,
+      "kinetic_change_minus_work_J": -1.3397383205859852e-06,
+      "passed": true,
+      "measured_trial_replay": false
+    },
+    {
+      "case": "acetate-aluminum_t1.0_spin0.3",
+      "profile": "acetate-aluminum",
+      "prediction_max_error": 1.4210854715202004e-14,
+      "kinetic_change_minus_work_J": -7.916800079428226e-07,
+      "passed": true,
+      "measured_trial_replay": false
+    }
+  ],
+  "coefficient_values_modified": false,
+  "parameter_source": "catalog.json; published nominal values",
+  "catalog_sha256": "5824289756dd87c7685eaf4da4272167b73c82a93efd58079db77c4de3d6a990",
+  "independent_experimental_motion_validated": false,
+  "interpretation": "Integration/analytic/energy controls with documented coefficients, sizes and densities. They are not measured trial comparisons; source validity ranges are not established for every spin/speed."
+}

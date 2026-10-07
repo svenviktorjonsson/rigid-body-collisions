@@ -1,0 +1,860 @@
+{
+  "hull42": {
+    "accepted": true,
+    "residual_m_s": 2.7104331941205736e-11,
+    "passive_change_bound_J": -1.4327651932915701,
+    "contacts": [
+      {
+        "normal": 0,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "tangent_residual_m_s": 1.6552570115491878e-16,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 6.62259486926118e-18
+      },
+      {
+        "normal": 1,
+        "normal_residual_m_s": 1.163891032163189e-16,
+        "tangent_residual_m_s": 2.7104331941205736e-11,
+        "cone_excess_N_s": 2.255001740891771e-12,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 2,
+        "normal_residual_m_s": 5.828670879282072e-16,
+        "tangent_residual_m_s": 1.1624764072297716e-11,
+        "cone_excess_N_s": 1.6572160310701634e-12,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 3,
+        "normal_residual_m_s": 7.216913180695939e-22,
+        "tangent_residual_m_s": 4.907232718467492e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 9.593030128729638e-29
+      },
+      {
+        "normal": 4,
+        "normal_residual_m_s": 5.421010862427522e-20,
+        "tangent_residual_m_s": 2.5038996428867298e-20,
+        "cone_excess_N_s": 1.3552527156068805e-20,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 5,
+        "normal_residual_m_s": 3.8957737163345464e-22,
+        "tangent_residual_m_s": 2.0235884446917816e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 6,
+        "normal_residual_m_s": 3.579894828729361e-22,
+        "tangent_residual_m_s": 3.8240520272230825e-22,
+        "cone_excess_N_s": 4.3354396417672154e-23,
+        "positive_tangent_work_J": 9.251507979213025e-23
+      },
+      {
+        "normal": 7,
+        "normal_residual_m_s": 1.0061396160665481e-16,
+        "tangent_residual_m_s": 1.8867346056879167e-16,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 8,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "tangent_residual_m_s": 4.4839532527608655e-17,
+        "cone_excess_N_s": 1.3877787807814457e-17,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 9,
+        "normal_residual_m_s": 1.5362661941014018e-22,
+        "tangent_residual_m_s": 7.980298424902806e-22,
+        "cone_excess_N_s": 4.0297013705810274e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 10,
+        "normal_residual_m_s": 5.822018208106383e-22,
+        "tangent_residual_m_s": 5.258017978350864e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 2.7568777803038e-33
+      },
+      {
+        "normal": 11,
+        "normal_residual_m_s": 3.2185176978787436e-22,
+        "tangent_residual_m_s": 1.335502628901872e-22,
+        "cone_excess_N_s": 1.0601256705720235e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 12,
+        "normal_residual_m_s": 2.702925328801039e-23,
+        "tangent_residual_m_s": 5.524149330416968e-22,
+        "cone_excess_N_s": 3.938198456849507e-23,
+        "positive_tangent_work_J": 1.2127756762933808e-23
+      },
+      {
+        "normal": 13,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "tangent_residual_m_s": 9.262481704685863e-17,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 14,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 7.28686396628622e-19,
+        "cone_excess_N_s": 5.421010862427522e-20,
+        "positive_tangent_work_J": 0.0
+      }
+    ]
+  },
+  "hull7301": {
+    "accepted": true,
+    "residual_m_s": 1.9743627939908823e-12,
+    "passive_change_bound_J": -24.62030714513033,
+    "contacts": [
+      {
+        "normal": 0,
+        "normal_residual_m_s": 2.397010884358385e-26,
+        "tangent_residual_m_s": 1.3096822268584365e-22,
+        "cone_excess_N_s": 9.755041502349331e-24,
+        "positive_tangent_work_J": 1.6810775194384986e-24
+      },
+      {
+        "normal": 1,
+        "normal_residual_m_s": 1.631347179367421e-23,
+        "tangent_residual_m_s": 2.384525089592409e-22,
+        "cone_excess_N_s": 2.211364996412397e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 2,
+        "normal_residual_m_s": 3.848038975983838e-22,
+        "tangent_residual_m_s": 5.446237449989855e-22,
+        "cone_excess_N_s": 3.3899033912314174e-23,
+        "positive_tangent_work_J": 1.9944771617563018e-22
+      },
+      {
+        "normal": 3,
+        "normal_residual_m_s": 1.0406270893488296e-22,
+        "tangent_residual_m_s": 1.1470697778381768e-22,
+        "cone_excess_N_s": 1.478724012438908e-23,
+        "positive_tangent_work_J": 1.1802909147510558e-22
+      },
+      {
+        "normal": 4,
+        "normal_residual_m_s": 2.765048049539362e-22,
+        "tangent_residual_m_s": 3.0374050537079124e-22,
+        "cone_excess_N_s": 3.4744483975491196e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 5,
+        "normal_residual_m_s": 2.6501080975484124e-22,
+        "tangent_residual_m_s": 2.495926899818585e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 6,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 5.743397086685808e-20,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 7,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 8,
+        "normal_residual_m_s": 3.689796425508081e-23,
+        "tangent_residual_m_s": 1.5999047309590425e-22,
+        "cone_excess_N_s": 1.9821140278365372e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 9,
+        "normal_residual_m_s": 1.076679748904038e-22,
+        "tangent_residual_m_s": 6.240721457893133e-22,
+        "cone_excess_N_s": 6.542534388953667e-23,
+        "positive_tangent_work_J": 1.816281733928214e-22
+      },
+      {
+        "normal": 10,
+        "normal_residual_m_s": 4.571610315514995e-22,
+        "tangent_residual_m_s": 2.8399160975763716e-22,
+        "cone_excess_N_s": 1.1282638572360474e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 11,
+        "normal_residual_m_s": 7.264117182162928e-23,
+        "tangent_residual_m_s": 1.0780224357921955e-22,
+        "cone_excess_N_s": 1.593249902761839e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 12,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 13,
+        "normal_residual_m_s": 1.9186298847491237e-22,
+        "tangent_residual_m_s": 5.562484956955418e-22,
+        "cone_excess_N_s": 5.0523902121851866e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 14,
+        "normal_residual_m_s": 3.3179643131627404e-22,
+        "tangent_residual_m_s": 1.68494686223308e-22,
+        "cone_excess_N_s": 7.47300907697926e-24,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 15,
+        "normal_residual_m_s": 2.1574006426550557e-24,
+        "tangent_residual_m_s": 2.651880331861082e-22,
+        "cone_excess_N_s": 3.4408744965320293e-23,
+        "positive_tangent_work_J": 7.715739582622776e-24
+      },
+      {
+        "normal": 16,
+        "normal_residual_m_s": 1.448357949945218e-22,
+        "tangent_residual_m_s": 2.280900241173442e-22,
+        "cone_excess_N_s": 1.6142950419365313e-23,
+        "positive_tangent_work_J": 1.2069522124746435e-22
+      },
+      {
+        "normal": 17,
+        "normal_residual_m_s": 4.896700427702777e-23,
+        "tangent_residual_m_s": 1.4213433303503811e-22,
+        "cone_excess_N_s": 9.622135433103255e-24,
+        "positive_tangent_work_J": 6.6686506803876e-23
+      },
+      {
+        "normal": 18,
+        "normal_residual_m_s": 6.505213034913027e-19,
+        "tangent_residual_m_s": 8.84635236866828e-20,
+        "cone_excess_N_s": 2.710505431213761e-20,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 19,
+        "normal_residual_m_s": 2.6645352591003757e-15,
+        "tangent_residual_m_s": 1.2538939197206962e-13,
+        "cone_excess_N_s": 1.5654144647214707e-14,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 20,
+        "normal_residual_m_s": 3.888601519071907e-24,
+        "tangent_residual_m_s": 4.883310049358279e-23,
+        "cone_excess_N_s": 2.8459171589394668e-24,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 21,
+        "normal_residual_m_s": 8.73633996463946e-23,
+        "tangent_residual_m_s": 3.78284381013311e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 22,
+        "normal_residual_m_s": 8.94891195834348e-23,
+        "tangent_residual_m_s": 7.019715727038572e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 4.989586263126445e-25
+      },
+      {
+        "normal": 23,
+        "normal_residual_m_s": 2.168404344971009e-19,
+        "tangent_residual_m_s": 5.624975559734466e-20,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 24,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 1.528652973376211e-19,
+        "cone_excess_N_s": 1.3552527156068805e-20,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 25,
+        "normal_residual_m_s": 1.1752751549742868e-16,
+        "tangent_residual_m_s": 1.1956084603374098e-17,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 26,
+        "normal_residual_m_s": 9.131401270157084e-23,
+        "tangent_residual_m_s": 4.6061500608178446e-23,
+        "cone_excess_N_s": 7.575963944590368e-26,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 27,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "tangent_residual_m_s": 2.6057435125547556e-17,
+        "cone_excess_N_s": 3.469446951953614e-18,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 28,
+        "normal_residual_m_s": 5.594483210025203e-17,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 29,
+        "normal_residual_m_s": 1.3921242527998554e-22,
+        "tangent_residual_m_s": 2.1464359898537404e-22,
+        "cone_excess_N_s": 1.8758260468744197e-23,
+        "positive_tangent_work_J": 1.0477323261789208e-22
+      },
+      {
+        "normal": 30,
+        "normal_residual_m_s": 5.035034889022683e-16,
+        "tangent_residual_m_s": 1.0765790635193323e-15,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 8.696819681745277e-19
+      },
+      {
+        "normal": 31,
+        "normal_residual_m_s": 1.8388068845354155e-16,
+        "tangent_residual_m_s": 1.9743627939908823e-12,
+        "cone_excess_N_s": 2.2054580384178735e-13,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 32,
+        "normal_residual_m_s": 3.3768089824615864e-22,
+        "tangent_residual_m_s": 2.2879478736071485e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 33,
+        "normal_residual_m_s": 5.763330882910125e-22,
+        "tangent_residual_m_s": 2.6936060145190674e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 34,
+        "normal_residual_m_s": 4.459295781846349e-22,
+        "tangent_residual_m_s": 1.4018213845885321e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 35,
+        "normal_residual_m_s": 8.354128123575995e-23,
+        "tangent_residual_m_s": 3.327065956342087e-23,
+        "cone_excess_N_s": 2.81158905519455e-24,
+        "positive_tangent_work_J": 6.251013197139186e-24
+      },
+      {
+        "normal": 36,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "tangent_residual_m_s": 3.3516609717824365e-16,
+        "cone_excess_N_s": 5.551115123125783e-17,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 37,
+        "normal_residual_m_s": 3.2129309343611953e-22,
+        "tangent_residual_m_s": 6.360038828954497e-22,
+        "cone_excess_N_s": 4.8095193942852966e-23,
+        "positive_tangent_work_J": 2.212403940847146e-22
+      },
+      {
+        "normal": 38,
+        "normal_residual_m_s": 1.7763568394002505e-15,
+        "tangent_residual_m_s": 1.3744330507944149e-15,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 1.727072428862439e-15
+      },
+      {
+        "normal": 39,
+        "normal_residual_m_s": 3.599914407641359e-22,
+        "tangent_residual_m_s": 3.093554905004798e-22,
+        "cone_excess_N_s": 4.552164890597008e-23,
+        "positive_tangent_work_J": 2.987624902977876e-22
+      },
+      {
+        "normal": 40,
+        "normal_residual_m_s": 5.493673992367109e-22,
+        "tangent_residual_m_s": 1.4609224220562076e-22,
+        "cone_excess_N_s": 1.268436504781056e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 41,
+        "normal_residual_m_s": 5.434011655127733e-22,
+        "tangent_residual_m_s": 1.0115611568985397e-21,
+        "cone_excess_N_s": 4.229478702596102e-23,
+        "positive_tangent_work_J": 8.821988558269889e-23
+      },
+      {
+        "normal": 42,
+        "normal_residual_m_s": 5.031498035342707e-22,
+        "tangent_residual_m_s": 2.8133237854281834e-22,
+        "cone_excess_N_s": 2.2141205253714433e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 43,
+        "normal_residual_m_s": 1.3183898417423734e-16,
+        "tangent_residual_m_s": 8.771903849106776e-17,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 44,
+        "normal_residual_m_s": 1.0182612406951305e-22,
+        "tangent_residual_m_s": 3.594363269945788e-22,
+        "cone_excess_N_s": 3.492755462457239e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 45,
+        "normal_residual_m_s": 3.6461108073442367e-22,
+        "tangent_residual_m_s": 6.383095225225268e-25,
+        "cone_excess_N_s": 9.047287959396261e-26,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 46,
+        "normal_residual_m_s": 3.041157440408319e-22,
+        "tangent_residual_m_s": 1.857243464531374e-24,
+        "cone_excess_N_s": 2.413721782063501e-25,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 47,
+        "normal_residual_m_s": 2.7338597148963566e-22,
+        "tangent_residual_m_s": 3.526340446857999e-22,
+        "cone_excess_N_s": 1.5745071737174344e-23,
+        "positive_tangent_work_J": 1.6353399881668328e-22
+      },
+      {
+        "normal": 48,
+        "normal_residual_m_s": 1.4268718922265519e-22,
+        "tangent_residual_m_s": 8.93177732844629e-22,
+        "cone_excess_N_s": 4.9374606555184084e-23,
+        "positive_tangent_work_J": 7.784572842814166e-22
+      },
+      {
+        "normal": 49,
+        "normal_residual_m_s": 5.077351565896947e-23,
+        "tangent_residual_m_s": 1.7216535654334647e-22,
+        "cone_excess_N_s": 1.2144270503189309e-23,
+        "positive_tangent_work_J": 8.765720492605918e-23
+      },
+      {
+        "normal": 50,
+        "normal_residual_m_s": 4.1537771486655846e-22,
+        "tangent_residual_m_s": 2.7817033102683623e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 51,
+        "normal_residual_m_s": 1.164355572641275e-22,
+        "tangent_residual_m_s": 4.36365646081615e-22,
+        "cone_excess_N_s": 1.6324305129132923e-23,
+        "positive_tangent_work_J": 1.8752204770763343e-22
+      },
+      {
+        "normal": 52,
+        "normal_residual_m_s": 2.0990154059319366e-16,
+        "tangent_residual_m_s": 3.1072291189070333e-16,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 53,
+        "normal_residual_m_s": 6.109077180129303e-23,
+        "tangent_residual_m_s": 5.214819047173434e-22,
+        "cone_excess_N_s": 3.7707914398262775e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 54,
+        "normal_residual_m_s": 3.4379389278456907e-22,
+        "tangent_residual_m_s": 2.522347014757013e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 55,
+        "normal_residual_m_s": 2.583045861243969e-22,
+        "tangent_residual_m_s": 1.3006183341203765e-22,
+        "cone_excess_N_s": 1.190361767687192e-23,
+        "positive_tangent_work_J": 1.61660544958675e-22
+      },
+      {
+        "normal": 56,
+        "normal_residual_m_s": 2.6173922107597725e-22,
+        "tangent_residual_m_s": 6.496286788819148e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 57,
+        "normal_residual_m_s": 2.1458133748964245e-23,
+        "tangent_residual_m_s": 3.729495800872216e-23,
+        "cone_excess_N_s": 3.653499845856527e-24,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 58,
+        "normal_residual_m_s": 9.047024264093328e-23,
+        "tangent_residual_m_s": 1.080368183018849e-24,
+        "cone_excess_N_s": 1.079273403968637e-25,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 59,
+        "normal_residual_m_s": 2.5384597650823633e-22,
+        "tangent_residual_m_s": 2.1655658737718387e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 4.533510528270242e-25
+      },
+      {
+        "normal": 60,
+        "normal_residual_m_s": 1.1363266737633355e-22,
+        "tangent_residual_m_s": 7.131676019700682e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 61,
+        "normal_residual_m_s": 4.469820562138606e-25,
+        "tangent_residual_m_s": 1.990847848496442e-24,
+        "cone_excess_N_s": 1.4646502917787263e-25,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 62,
+        "normal_residual_m_s": 1.3825604288106332e-22,
+        "tangent_residual_m_s": 5.343086177032114e-25,
+        "cone_excess_N_s": 3.806967125291989e-26,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 63,
+        "normal_residual_m_s": 5.16384714000356e-23,
+        "tangent_residual_m_s": 2.960860680792175e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 64,
+        "normal_residual_m_s": 2.1740351826050623e-22,
+        "tangent_residual_m_s": 9.53996482358494e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 4.7045097240508857e-26
+      },
+      {
+        "normal": 65,
+        "normal_residual_m_s": 6.847680486740051e-23,
+        "tangent_residual_m_s": 9.266461122111777e-23,
+        "cone_excess_N_s": 5.113473560410936e-24,
+        "positive_tangent_work_J": 9.677923233412055e-23
+      },
+      {
+        "normal": 66,
+        "normal_residual_m_s": 6.301892040686576e-23,
+        "tangent_residual_m_s": 3.1244664643321694e-22,
+        "cone_excess_N_s": 2.129330137836007e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 67,
+        "normal_residual_m_s": 9.333172753573942e-23,
+        "tangent_residual_m_s": 1.7675130906457125e-22,
+        "cone_excess_N_s": 1.0818728101225884e-23,
+        "positive_tangent_work_J": 7.566249586870844e-23
+      },
+      {
+        "normal": 68,
+        "normal_residual_m_s": 1.5705424548616856e-22,
+        "tangent_residual_m_s": 6.579123252129776e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 69,
+        "normal_residual_m_s": 3.2026730359237665e-22,
+        "tangent_residual_m_s": 5.101629684949689e-22,
+        "cone_excess_N_s": 4.8591111998085796e-23,
+        "positive_tangent_work_J": 2.112781443395455e-22
+      },
+      {
+        "normal": 70,
+        "normal_residual_m_s": 1.9984014443252818e-15,
+        "tangent_residual_m_s": 1.6118988939273797e-15,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 71,
+        "normal_residual_m_s": 7.219458080715634e-22,
+        "tangent_residual_m_s": 1.0158145596512136e-21,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 7.390751199496386e-22
+      },
+      {
+        "normal": 72,
+        "normal_residual_m_s": 2.949029909160572e-17,
+        "tangent_residual_m_s": 4.394903455731774e-17,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 73,
+        "normal_residual_m_s": 2.534145308051304e-22,
+        "tangent_residual_m_s": 1.142051726034018e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 74,
+        "normal_residual_m_s": 2.809721271569661e-22,
+        "tangent_residual_m_s": 1.0082948965773456e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 1.072716063674169e-27
+      },
+      {
+        "normal": 75,
+        "normal_residual_m_s": 1.5860105342022912e-22,
+        "tangent_residual_m_s": 4.06881894025591e-24,
+        "cone_excess_N_s": 2.506136135271691e-25,
+        "positive_tangent_work_J": 1.2242923674663305e-24
+      },
+      {
+        "normal": 76,
+        "normal_residual_m_s": 5.854702795475565e-23,
+        "tangent_residual_m_s": 1.174534048796893e-22,
+        "cone_excess_N_s": 5.556619436057765e-24,
+        "positive_tangent_work_J": 1.4015063418270214e-23
+      },
+      {
+        "normal": 77,
+        "normal_residual_m_s": 8.772574908534551e-23,
+        "tangent_residual_m_s": 2.9441210873472247e-22,
+        "cone_excess_N_s": 8.816675992498906e-24,
+        "positive_tangent_work_J": 6.362378228592647e-23
+      },
+      {
+        "normal": 78,
+        "normal_residual_m_s": 1.2582902182059566e-22,
+        "tangent_residual_m_s": 5.1660222821205625e-22,
+        "cone_excess_N_s": 2.5279498699708416e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 79,
+        "normal_residual_m_s": 3.06721318833168e-22,
+        "tangent_residual_m_s": 9.820118034943079e-23,
+        "cone_excess_N_s": 5.400165172519498e-24,
+        "positive_tangent_work_J": 1.0375864361049802e-24
+      },
+      {
+        "normal": 80,
+        "normal_residual_m_s": 0.0,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 81,
+        "normal_residual_m_s": 2.415276953118338e-22,
+        "tangent_residual_m_s": 6.48026006296571e-22,
+        "cone_excess_N_s": 4.6625509932263897e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 82,
+        "normal_residual_m_s": 3.059709186977946e-22,
+        "tangent_residual_m_s": 1.994320013465777e-22,
+        "cone_excess_N_s": 1.0308720740758549e-23,
+        "positive_tangent_work_J": 2.1381024479285994e-23
+      },
+      {
+        "normal": 83,
+        "normal_residual_m_s": 4.605530142847477e-22,
+        "tangent_residual_m_s": 1.2260497453787233e-23,
+        "cone_excess_N_s": 1.3121394146222206e-24,
+        "positive_tangent_work_J": 1.7721210323317748e-24
+      },
+      {
+        "normal": 84,
+        "normal_residual_m_s": 1.9432192748188715e-22,
+        "tangent_residual_m_s": 1.564868476643066e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 4.3031278206641586e-24
+      },
+      {
+        "normal": 85,
+        "normal_residual_m_s": 1.0842021724855044e-19,
+        "tangent_residual_m_s": 5.657203621327907e-20,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 86,
+        "normal_residual_m_s": 2.634001363107033e-22,
+        "tangent_residual_m_s": 5.3664100783224e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 4.567390032824223e-24
+      },
+      {
+        "normal": 87,
+        "normal_residual_m_s": 2.0143229161176785e-22,
+        "tangent_residual_m_s": 1.2817214122462074e-22,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 88,
+        "normal_residual_m_s": 5.153966901476083e-23,
+        "tangent_residual_m_s": 2.3846729177482245e-22,
+        "cone_excess_N_s": 1.4902729512558727e-23,
+        "positive_tangent_work_J": 2.4015614505409067e-25
+      }
+    ]
+  },
+  "budget_rejection": {
+    "calls": 4,
+    "accepted": false
+  },
+  "rotated_hull42": {
+    "accepted": true,
+    "residual_m_s": 2.7104354838408825e-11,
+    "passive_change_bound_J": -1.43276519329157,
+    "contacts": [
+      {
+        "normal": 0,
+        "normal_residual_m_s": 4.440892098500626e-16,
+        "tangent_residual_m_s": 3.986386771355727e-16,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 1.2279773560897409e-17
+      },
+      {
+        "normal": 1,
+        "normal_residual_m_s": 6.087795198506107e-17,
+        "tangent_residual_m_s": 2.7104354838408825e-11,
+        "cone_excess_N_s": 2.255001740891771e-12,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 2,
+        "normal_residual_m_s": 3.608224830031759e-16,
+        "tangent_residual_m_s": 1.1624711477737343e-11,
+        "cone_excess_N_s": 1.6572160310701634e-12,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 3,
+        "normal_residual_m_s": 1.3099639773277497e-23,
+        "tangent_residual_m_s": 9.5246733325409e-22,
+        "cone_excess_N_s": 7.766692030416962e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 4,
+        "normal_residual_m_s": 5.421010862427522e-20,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 5,
+        "normal_residual_m_s": 2.992601263066676e-22,
+        "tangent_residual_m_s": 4.850482652670992e-22,
+        "cone_excess_N_s": 4.2975626616452604e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 6,
+        "normal_residual_m_s": 1.2589518617018496e-22,
+        "tangent_residual_m_s": 1.1772292712772835e-22,
+        "cone_excess_N_s": 1.3346592603371312e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 7,
+        "normal_residual_m_s": 1.0061396160665481e-16,
+        "tangent_residual_m_s": 8.515656994795415e-17,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 8,
+        "normal_residual_m_s": 1.1102230246251565e-16,
+        "tangent_residual_m_s": 0.0,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 9,
+        "normal_residual_m_s": 9.315987290968148e-23,
+        "tangent_residual_m_s": 4.47783104215672e-22,
+        "cone_excess_N_s": 2.852011313769184e-23,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 10,
+        "normal_residual_m_s": 1.0925638282564678e-22,
+        "tangent_residual_m_s": 9.867231681592196e-23,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 2.4938725104754854e-34
+      },
+      {
+        "normal": 11,
+        "normal_residual_m_s": 1.1832143708096173e-23,
+        "tangent_residual_m_s": 9.209234856751765e-22,
+        "cone_excess_N_s": 7.16503126343246e-23,
+        "positive_tangent_work_J": 2.359988506527209e-22
+      },
+      {
+        "normal": 12,
+        "normal_residual_m_s": 2.808254725791111e-22,
+        "tangent_residual_m_s": 3.838819648210832e-22,
+        "cone_excess_N_s": 2.914980153116217e-23,
+        "positive_tangent_work_J": 7.551694366880124e-24
+      },
+      {
+        "normal": 13,
+        "normal_residual_m_s": 8.881784197001252e-16,
+        "tangent_residual_m_s": 3.7049926818743453e-16,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      },
+      {
+        "normal": 14,
+        "normal_residual_m_s": 8.673617379884035e-19,
+        "tangent_residual_m_s": 3.64343198314311e-19,
+        "cone_excess_N_s": 0.0,
+        "positive_tangent_work_J": 0.0
+      }
+    ]
+  }
+}

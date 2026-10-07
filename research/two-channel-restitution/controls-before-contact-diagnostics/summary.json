@@ -1,0 +1,1689 @@
+{
+  "passed": true,
+  "case_count": 144,
+  "records": [
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 9.453060556552373e-11,
+      "kinetic_change_J": -0.6462499999979343,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.8905552678916138e-09,
+      "kinetic_change_J": -2.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 9.452616467342523e-11,
+      "kinetic_change_J": -0.5462500000001087,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.1004353811804322e-10,
+      "kinetic_change_J": -0.6666666666714975,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 9.451639471080853e-11,
+      "kinetic_change_J": -0.5462499999979347,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.0501963743081433e-09,
+      "kinetic_change_J": -0.6666666666570047,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.6825651982799172e-10,
+      "kinetic_change_J": -0.4509184999964746,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 9.388543276145356e-10,
+      "kinetic_change_J": -1.3356499999999993,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.6826806614744783e-10,
+      "kinetic_change_J": -0.2729185000003441,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.1296565339289373e-10,
+      "kinetic_change_J": -0.32245000000367097,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.6825651982799172e-10,
+      "kinetic_change_J": -0.2729184999964749,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.564785634400323e-09,
+      "kinetic_change_J": -0.3224499999926582,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.8906121113104746e-10,
+      "kinetic_change_J": -0.2849999999960864,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.7811105357832275e-09,
+      "kinetic_change_J": -8.697020881243134e-11,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.8905232934685046e-10,
+      "kinetic_change_J": -0.08500000000043462,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 4.2008707623608643e-10,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.8904700027633226e-10,
+      "kinetic_change_J": -0.08499999999608687,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.1003927486162866e-09,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 5.945821612840518e-11,
+      "kinetic_change_J": -0.6462499999983622,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1892069551322493e-09,
+      "kinetic_change_J": -2.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 5.946310110971353e-11,
+      "kinetic_change_J": -0.5462500000000861,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.3211831628723303e-10,
+      "kinetic_change_J": -0.6666666666704981,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 5.945821612840518e-11,
+      "kinetic_change_J": -0.5462499999983623,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 6.605915814361651e-10,
+      "kinetic_change_J": -0.666666666659004,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.0582823506410932e-10,
+      "kinetic_change_J": -0.45091849999720424,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 5.905604893996497e-10,
+      "kinetic_change_J": -1.3356499999999996,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.0583622866988662e-10,
+      "kinetic_change_J": -0.27291850000027307,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.9685586494233576e-10,
+      "kinetic_change_J": -0.32245000000291146,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.0584244591882452e-10,
+      "kinetic_change_J": -0.2729184999972043,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 9.842793247116788e-10,
+      "kinetic_change_J": -0.322449999994177,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1890932682945277e-10,
+      "kinetic_change_J": -0.2849999999968964,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.3784139102644986e-09,
+      "kinetic_change_J": -6.89783785645659e-11,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1892620221942707e-10,
+      "kinetic_change_J": -0.08500000000034469,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.6423663257446606e-10,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1892353768416797e-10,
+      "kinetic_change_J": -0.08499999999689622,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.321168952017615e-09,
+      "kinetic_change_J": -4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.000888343900442e-11,
+      "kinetic_change_J": -0.6462499999990494,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 4.000639819423668e-10,
+      "kinetic_change_J": -2.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.0003332323881295e-11,
+      "kinetic_change_J": -0.54625000000005,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 4.444622447863367e-11,
+      "kinetic_change_J": -0.666666666668889,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.000888343900442e-11,
+      "kinetic_change_J": -0.5462499999990498,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.2221513518161373e-10,
+      "kinetic_change_J": -0.6666666666622221,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 3.560529648893862e-11,
+      "kinetic_change_J": -0.45091849999837796,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.986393272090936e-10,
+      "kinetic_change_J": -1.3356499999999993,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 3.560396422130907e-11,
+      "kinetic_change_J": -0.2729185000001584,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 6.622258297284134e-11,
+      "kinetic_change_J": -0.3224500000016888,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 3.560529648893862e-11,
+      "kinetic_change_J": -0.27291849999837803,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.311093621505279e-10,
+      "kinetic_change_J": -0.3224499999966224,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.001776687800884e-11,
+      "kinetic_change_J": -0.2849999999981989,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 8.001279638847336e-10,
+      "kinetic_change_J": -4.001021736144139e-11,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.000666464776259e-11,
+      "kinetic_change_J": -0.08500000000019992,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 8.889244895726733e-11,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.001066145065124e-11,
+      "kinetic_change_J": -0.08499999999819963,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 4.4443737579058507e-10,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 2,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.842170943040401e-14,
+      "kinetic_change_J": -0.6456249999999994,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -1.7857142857142858,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.509903313490213e-14,
+      "kinetic_change_J": -0.5456249999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.6428571428571428,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.545625,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.642857142857143,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.44893824999999965,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -1.1728142857142858,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 3.197442310920451e-14,
+      "kinetic_change_J": -0.2709382499999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.30435714285714277,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.263256414560601e-14,
+      "kinetic_change_J": -0.2709382499999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.304357142857143,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.263256414560601e-14,
+      "kinetic_change_J": -0.2824999999999991,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.842170943040401e-14,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 3.019806626980426e-14,
+      "kinetic_change_J": -0.0824999999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 4.263256414560601e-14,
+      "kinetic_change_J": -0.0824999999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.023,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.6456249999999994,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -1.7857142857142856,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.2434497875801753e-14,
+      "kinetic_change_J": -0.5456249999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.6428571428571428,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.5456249999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.6428571428571428,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.44893824999999965,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.220446049250313e-16,
+      "kinetic_change_J": -1.1728142857142856,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.6645352591003757e-14,
+      "kinetic_change_J": -0.2709382499999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.30435714285714277,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.2709382499999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.30435714285714277,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.842170943040401e-14,
+      "kinetic_change_J": -0.2824999999999991,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 2.842170943040401e-14,
+      "kinetic_change_J": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.4868995751603507e-14,
+      "kinetic_change_J": -0.0824999999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 2.1316282072803006e-14,
+      "kinetic_change_J": -0.08250000000000002,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.029,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999984,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.6456249999999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -1.785714285714286,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 7.549516567451064e-15,
+      "kinetic_change_J": -0.5456249999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.7763568394002505e-15,
+      "kinetic_change_J": -0.6428571428571428,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.545625,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.0,
+      "tangential_restitution": 0.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -0.6428571428571432,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 7.105427357601002e-15,
+      "kinetic_change_J": -0.44893824999999987,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -1.1728142857142863,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.509903313490213e-14,
+      "kinetic_change_J": -0.2709382499999997,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.3043571428571429,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.27093824999999994,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.78,
+      "tangential_restitution": 0.49,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -0.304357142857143,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.2824999999999993,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 0.0,
+      "kinetic_change_J": -8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.509903313490213e-14,
+      "kinetic_change_J": -0.0824999999999998,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": 0.0,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.4210854715202004e-14,
+      "kinetic_change_J": -0.08250000000000002,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 1.0,
+      "tangential_restitution": 1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 3.552713678800501e-15,
+      "kinetic_change_J": -2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": -2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 0.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.31999999999999995,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 0.05,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    },
+    {
+      "dimension": 3,
+      "radius_m": 0.05,
+      "normal_restitution": 0.6,
+      "tangential_restitution": -1.0,
+      "peripheral_spin_m_s": 2.0,
+      "mu": 1.0,
+      "max_velocity_spin_error": 1.1102230246251565e-16,
+      "kinetic_change_J": -0.32000000000000006,
+      "passed": true
+    }
+  ],
+  "default_parity": [
+    {
+      "case": "2d_r0.023_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.023_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.023_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.023_s2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.029_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.029_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.029_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.029_s2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.05_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.05_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.05_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "2d_r0.05_s2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.023_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.023_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.023_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.023_s2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.029_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.029_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.029_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.029_s2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.05_s-2.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.05_s0.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.05_s1.0.json",
+      "default_state_bytes_exact": true
+    },
+    {
+      "case": "3d_r0.05_s2.0.json",
+      "default_state_bytes_exact": true
+    }
+  ],
+  "scope": "Native two-channel restitution synthetic controls. No many-body trajectory qualification or independent measured material validation."
+}

@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "historical_guards_verified": true,
+  "current_live_unchanged": true,
+  "records": [
+    {
+      "trial": 0,
+      "setting": {
+        "dt": 0.0025,
+        "primary_steps": 4000,
+        "travel_fraction": 0
+      },
+      "metrics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -225033.22129236805,
+        "container_surface_excess_m": 2.4959050242912006e-05,
+        "sampled_container_surface_excess_m": 4.5927235792220245e-08,
+        "contact_residual_m_s": 9.626897497030815e-12,
+        "position_residual_m_s": 9.999391876361756e-12
+      },
+      "physical_passed": true
+    },
+    {
+      "trial": 1,
+      "setting": {
+        "dt": 0.00125,
+        "primary_steps": 4000,
+        "travel_fraction": 0
+      },
+      "metrics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -225033.2286534956,
+        "container_surface_excess_m": 1.2459118860164153e-05,
+        "sampled_container_surface_excess_m": 3.3909541841126156e-12,
+        "contact_residual_m_s": 9.048149764744785e-12,
+        "position_residual_m_s": 9.99375693119765e-12
+      },
+      "physical_passed": true
+    },
+    {
+      "trial": 2,
+      "setting": {
+        "dt": 0.000625,
+        "primary_steps": 4000,
+        "travel_fraction": 0
+      },
+      "metrics": {
+        "quaternion_norm_error": 0.0,
+        "energy_change_minus_boundary_work_J": -225033.2468420274,
+        "container_surface_excess_m": 6.209157372594198e-06,
+        "sampled_container_surface_excess_m": 9.96425164601078e-13,
+        "contact_residual_m_s": 9.794700269830114e-12,
+        "position_residual_m_s": 9.966751852111166e-12
+      },
+      "physical_passed": true
+    }
+  ],
+  "edges": [
+    {
+      "left": 0,
+      "right": 1,
+      "errors": {
+        "position_m": 2.1517778887436194e-05,
+        "velocity_m_s": 0.0016431388465436895,
+        "omega_rad_s": 0.021693084643895563,
+        "orientation_rad": 0.0004295626510740132
+      },
+      "quarter_budget_limits": {
+        "position_m": 0.00125,
+        "velocity_m_s": 0.0125,
+        "omega_rad_s": 0.025,
+        "orientation_rad": 0.0025
+      },
+      "passed": true
+    },
+    {
+      "left": 1,
+      "right": 2,
+      "errors": {
+        "position_m": 2.9295000511710682e-05,
+        "velocity_m_s": 0.001970332928740935,
+        "omega_rad_s": 0.02840871226181845,
+        "orientation_rad": 0.0005629800912196339
+      },
+      "quarter_budget_limits": {
+        "position_m": 0.00125,
+        "velocity_m_s": 0.0125,
+        "omega_rad_s": 0.025,
+        "orientation_rad": 0.0025
+      },
+      "passed": false
+    }
+  ],
+  "reference_qualified": false,
+  "performance_qualified": false,
+  "scope": "Three full unchanged125-sphere histories pass independent original physical gates. BOTH adjacent quarter-budget edges required; actual failed spin edge remains retained. Timing descriptive only."
+}

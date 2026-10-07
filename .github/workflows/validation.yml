@@ -1,0 +1,139 @@
+name: Physics and benchmark validation
+
+on: [push, pull_request]
+
+concurrency:
+  group: physics-validation-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: false # Retain running diagnostic evidence across live checkpoints.
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install numerical dependencies
+        run: python -m pip install 'numpy>=2.1,<3' 'scipy>=1.14,<2' 'matplotlib>=3.9,<4' 'cmake>=3.22' ninja
+      - name: Install native difficult-contact SVD dependency
+        run: sudo apt-get update && sudo apt-get install -y liblapack-dev libblas-dev
+      - name: Build pinned rigid contact comparators
+        run: |
+          cmake -S rigid_backend -B build/rigid_block -G Ninja -DCMAKE_BUILD_TYPE=Release -DRIGID_BLOCK_BACKEND=ON
+          cmake --build build/rigid_block -j 2
+          cmake -S rigid_backend -B build/rigid_backend -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build/rigid_backend -j 2
+      - name: Build pinned Float64 3D contact backend
+        run: |
+          cmake -S spatial_backend -B build/spatial -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build/spatial --target spatial_runner spatial_qp_checks spatial_friction_checks spatial_coulomb_replay shared_contact_checks translation_split_checks active_contact_checks normal_null_checks coulomb_restart_checks support_restart_checks translation_combined_checks coulomb_early_checks projection_tail_checks spatial_position_replay spatial_null_traction_replay -j 2
+          build/spatial/spatial_qp_checks
+          build/spatial/spatial_friction_checks
+          build/spatial/shared_contact_checks
+          build/spatial/translation_split_checks
+          build/spatial/active_contact_checks
+          build/spatial/normal_null_checks
+          build/spatial/coulomb_restart_checks
+          build/spatial/support_restart_checks
+          build/spatial/translation_combined_checks
+          build/spatial/coulomb_early_checks
+          build/spatial/projection_tail_checks
+          build/spatial/spatial_position_replay research/rapid-friction/results-large-irregular/3d_hull_125/reference_4.rejection.json
+          build/spatial/spatial_null_traction_replay research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json
+          build/spatial/spatial_null_traction_replay research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json
+          build/spatial/spatial_coulomb_replay research/large-velocity-world/results/trial_1/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-velocity-cap128-world/results/trial_0/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-velocity-cap192-world/results/trial_0/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-velocity-world/results/trial_0/rejection.json
+          build/spatial/spatial_coulomb_replay research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull125_h10us/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull125_h5us/rejection.json
+          build/spatial/spatial_coulomb_replay research/large-mobility-world/results/hull64_h10us/rejection.json
+          python research/component-recovery-integration/audit.py
+          python research/component-recovery-integration/checks.py
+          python -m research.verify_native_contact_replays
+      - name: Build the explicitly experimental Float64 precision diagnostic
+        run: python -m research.build_precision_backend
+      - name: Engine and benchmark-tool regressions
+        run: python -m unittest discover -s tests -v
+      - name: Contact-model regressions
+        run: python -m unittest discover -s research -p 'test_*.py' -v
+      - name: Verify public source integrity and provenance
+        run: |
+          python research/translation-gap-position-review/audit.py
+          python research/translation-gap-position-review/audit_native.py
+          python research/translation-first256-review/audit_v2.py
+          python -m research.audit_hull_gap_completion --source-commit 108a9bb4c7899f75d760b27b179cc56557904a08 --receipt-prefix ci-final-gap
+          python research/hull-aabb-cache-review/audit.py
+          early_audit_dir=$(mktemp -d)
+          cp -R research/early-component-policy-review/run-20261005T191156Z/. "$early_audit_dir/"
+          rm "$early_audit_dir/decline-budget-audit-launch.json"
+          python research/early-component-policy-review/audit_isolated.py "$early_audit_dir"
+          python research/early-component-policy-review/audit_decline_and_caps.py "$early_audit_dir"
+          python -m research.audit_hull_combined_completion --plan-only
+          python -m research.hull-combined-completion.auditor_checks
+          python -m research.hull-gap-completion.auditor_checks
+          python research/translation-position-certificate/verify.py
+          python -m unittest discover -s research/translation-position-certificate -p 'test_*.py' -v
+          python -m research.benchmark_tools audit
+          python -m research.audit_rigid_study
+          python -m research.audit_container_study
+          python -m research.audit_sparse_study
+          python -m research.audit_random_shape_study
+          python -m research.audit_shape_resolution
+          python -m research.audit_spatial_study
+          python -m research.audit_spatial_normal
+          python -m research.audit_spatial_friction
+          python -m research.audit_spatial_gyro
+          python -m research.audit_spatial_recovery
+          python -m research.audit_spatial_recovery384
+          python -m research.audit_fast_shake_diagnostic
+          python -m research.audit_predictive_contact_review
+          python -m research.audit_shake_performance
+          python -m research.audit_shared_shake
+          python -m research.audit_shared_hulls
+          python -m research.audit_shared_hulls --directory research/shared-hull-rank-followup --source-commit 0862e30736af34b3736e53154f0679a790113f9f
+          python -m research.audit_elastic_patch
+          python -m research.audit_elastic_patch --directory research/elastic-patch-refined
+          python -m research.audit_elastic_completion
+          python -m research.audit_contact_completion
+          python -m research.audit_interrupted_hulls
+          python -m research.audit_coulomb_trust_recovery
+          python -m research.audit_large_contact_completion --final-native
+          python -m research.audit_new_hull_contacts
+          python -m research.audit_hull_active_completion --source-commit 95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb
+          python -m research.audit_hull_translation_completion --source-commit 52f7e6d244e92a8405134e0222ce14fc3eda0ef6 --receipt-prefix ci-independent
+      - name: Exercise the explicitly synthetic comparison fixtures
+        run: |
+          python -m research.benchmark_tools compare --reference research/adaptive-benchmarks/examples/fine.json --candidate research/adaptive-benchmarks/examples/fast.json --budget research/adaptive-benchmarks/examples/budget.json
+          python -m research.benchmark_tools convergence --axis dt_s --runs research/adaptive-benchmarks/examples/coarse.json research/adaptive-benchmarks/examples/medium.json research/adaptive-benchmarks/examples/fine.json --budget research/adaptive-benchmarks/examples/budget.json
+
+      - name: Isolated hosted contact portability controls
+        if: always() && matrix.python-version == '3.12'
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.ci-contact-portability.run build/ci-contact-portability
+      - name: Isolated hosted mobility continuation control
+        if: always() && matrix.python-version == '3.12'
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+        run: python -m research.mobility-continuation.portable_native_run build/ci-contact-portability/mobility-continuation
+      - name: Retain hosted contact portability artifacts
+        if: always() && matrix.python-version == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: contact-portability-${{ github.run_id }}
+          path: build/ci-contact-portability
+          if-no-files-found: warn

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/spatial-analytic-clock/controls.py", line 19, in <module>
+    if refs:assert state.tobytes()==refs[0].tobytes()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

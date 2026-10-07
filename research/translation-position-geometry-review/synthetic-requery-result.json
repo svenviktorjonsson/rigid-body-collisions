@@ -1,0 +1,41 @@
+{
+  "before": {
+    "contact_count": 4,
+    "contacts": [
+      {
+        "body_a": 0,
+        "body_b": 1,
+        "signed_distance_m": -0.009999999999999995
+      },
+      {
+        "body_a": 0,
+        "body_b": 1,
+        "signed_distance_m": -0.009999999999999995
+      },
+      {
+        "body_a": 0,
+        "body_b": 1,
+        "signed_distance_m": -0.009999999999999995
+      },
+      {
+        "body_a": 0,
+        "body_b": 1,
+        "signed_distance_m": -0.009999999999999995
+      }
+    ],
+    "max_penetration_m": 0.009999999999999995
+  },
+  "schema": "independent-position-geometry-requery-v1",
+  "trials": [
+    {
+      "after": {
+        "contact_count": 0,
+        "contacts": [],
+        "max_penetration_m": 0.0
+      },
+      "linear_qualified": true,
+      "method": "synthetic geometry translation control",
+      "trajectory_qualified": false
+    }
+  ]
+}

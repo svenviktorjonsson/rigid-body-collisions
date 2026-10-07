@@ -1,0 +1,17 @@
+{
+  "purpose": "Prospective additional same-law numerical controls after first five diagnostic trials",
+  "frozen_backend": "provenance.json and execution-source.zip; copied binary/adapter unchanged",
+  "runs": {
+    "fixed_1_25us": {"dt":0.01,"primary_steps":8000,"travel_fraction":0},
+    "quarter_travel": {"dt":0.01,"primary_steps":4,"travel_fraction":0.0009375},
+    "eighth_travel": {"dt":0.01,"primary_steps":4,"travel_fraction":0.00046875}
+  },
+  "references": {
+    "fixed": ["fixed_5us","fixed_2_5us","fixed_1_25us"],
+    "travel": ["half_travel","quarter_travel","eighth_travel"]
+  },
+  "trajectory_budget": {"position_m":0.005,"velocity_m_s":0.05,"omega_rad_s":0.1,"orientation_rad":0.01},
+  "physical_gates": {"quaternion_norm_error":1e-12,"energy_change_minus_boundary_work_J":1.0,"container_surface_excess_m":0.002},
+  "rule": "Both adjacent edges of each three-level reference must meet one quarter trajectory budgets and all physical gates. Retain every preceding guard ladder edge, including failed .00375 baseline; no rejected level may be skipped. Exploratory reference qualification does not establish material authenticity or general engine accuracy.",
+  "erratum_to_original_plan": "Minimum feature is .025m wall half-thickness. The failed .00375 guard averaged 2.21 microseconds, so original fixed5/2.5 microsecond controls are coarser/comparable, not finer as stated in the initial scope sentence. This extension adds fixed1.25 microseconds. Original parameters, results and archived plan remain untouched."
+}

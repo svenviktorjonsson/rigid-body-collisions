@@ -1,0 +1,22 @@
+{
+  "numpy_version": "2.3.5",
+  "scipy_version": "1.17.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "input_hashes": {
+    "research/spatial-friction/results/scenes.json": "8f9ac659a136c96fe14527a135c0432d7f132faad56fe5ceb766b92b57a573f6",
+    "research/spatial-friction/results/traces.zip": "e33d9d5273bffa6ed16d1e7effdaf7b3fe660f2c63082c4584970f3a14c4e265",
+    "research/spatial-friction/results/execution-source.zip": "93d9176224c8dcdca2e019679c384f00aabd50474204bb41aeb4296c381a8b26",
+    "research/spatial-friction/results/summary.json": "25d583a6066f2e47b775fd0958f53d4be62ad296bbf1500ff014fd1dd833f60a",
+    "spatial_backend/CMakeLists.txt": "9f020df97f5528f6c6f67f07a123c76322e258ba2a25ae625056e01038c914f1"
+  },
+  "scene_sha256": "c9bd95631c49bf7064c8ea3a6ef6f51e45464384b4f24f8ce710740c488af1bd",
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "native_precision": "float64",
+  "adapter_compile_flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-ffp-contract=off"
+  ],
+  "baseline_source": "7c279768f6518e66b1ee620d44bd9b37309b1b5f",
+  "capture_scope": "Supplement recorded before three additional trials; first two already executing against unchanged published baseline inputs."
+}

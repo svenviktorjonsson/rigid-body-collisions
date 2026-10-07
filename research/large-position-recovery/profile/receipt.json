@@ -1,0 +1,9 @@
+{
+  "source": "88438b8",
+  "case": "3d_hull_125 original finest reference",
+  "frequency_hz": 49,
+  "duration_s": 5,
+  "samples": 256,
+  "lost_samples": 0,
+  "scope": "Late running correctness diagnostic with unchanged production source/binary. Concurrent numerical discovery and sampling overhead; not a timing sample or performance ranking. Normal QP31.64%, Coulomb iteration20.01%, MLCPassembly9.59%, memset9.59%; 256 samples descriptive only."
+}

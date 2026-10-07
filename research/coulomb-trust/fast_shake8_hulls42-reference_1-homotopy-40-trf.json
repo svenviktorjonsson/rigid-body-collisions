@@ -1,0 +1,352 @@
+{
+  "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+  "sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+  "method": "trf",
+  "continuation_steps": 40,
+  "elapsed_s": 1.8760364320041845,
+  "final_residual": 0.00030821744808040563,
+  "passive_change_bound_J": -3.7785301811162557,
+  "passivity_scale": 5.399583457181957,
+  "history": [
+    {
+      "alpha": 0.0,
+      "residual": 0.0003088221774352193,
+      "nfev": 11,
+      "optimality": 9.987828948511512e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.025,
+      "residual": 0.0003088025561934771,
+      "nfev": 45,
+      "optimality": 1.2985935011442683e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.05,
+      "residual": 0.00030878303178960564,
+      "nfev": 35,
+      "optimality": 2.7714399328531216e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.07500000000000001,
+      "residual": 0.0003087636188257026,
+      "nfev": 45,
+      "optimality": 4.1189950312164635e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.1,
+      "residual": 0.00030874431202043695,
+      "nfev": 42,
+      "optimality": 5.2196958237322964e-11,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.125,
+      "residual": 0.00030872515195912165,
+      "nfev": 45,
+      "optimality": 6.734223147579869e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.15000000000000002,
+      "residual": 0.0003087061113364875,
+      "nfev": 47,
+      "optimality": 8.041447281592553e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.17500000000000002,
+      "residual": 0.00030868720875698585,
+      "nfev": 55,
+      "optimality": 9.291498037533149e-13,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.2,
+      "residual": 0.00030866845186872105,
+      "nfev": 47,
+      "optimality": 1.0453722583208777e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.225,
+      "residual": 0.0003086498487614442,
+      "nfev": 43,
+      "optimality": 1.1583006257108983e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.25,
+      "residual": 0.0003086314079934205,
+      "nfev": 57,
+      "optimality": 1.2770847794320232e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.275,
+      "residual": 0.0003086131386189628,
+      "nfev": 45,
+      "optimality": 1.384342545695052e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.30000000000000004,
+      "residual": 0.00030859505020375266,
+      "nfev": 52,
+      "optimality": 1.4889844340394432e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.325,
+      "residual": 0.0003085771528550385,
+      "nfev": 57,
+      "optimality": 1.595047424608462e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.35000000000000003,
+      "residual": 0.00030855945724450606,
+      "nfev": 51,
+      "optimality": 1.6960583067065839e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.375,
+      "residual": 0.00030854197462959476,
+      "nfev": 45,
+      "optimality": 1.7871909123994647e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.4,
+      "residual": 0.0003085247168743699,
+      "nfev": 50,
+      "optimality": 1.8848944834843235e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.42500000000000004,
+      "residual": 0.0003085076533484443,
+      "nfev": 61,
+      "optimality": 1.9363776913694276e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.45,
+      "residual": 0.0003084908814312559,
+      "nfev": 47,
+      "optimality": 2.0215041083630194e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.47500000000000003,
+      "residual": 0.00030847437388148435,
+      "nfev": 58,
+      "optimality": 2.1024641405873066e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.5,
+      "residual": 0.0003084581940941966,
+      "nfev": 45,
+      "optimality": 2.2297285735781064e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.525,
+      "residual": 0.00030844226116277795,
+      "nfev": 38,
+      "optimality": 2.3109122787158443e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.55,
+      "residual": 0.00030842658560970015,
+      "nfev": 46,
+      "optimality": 2.319455861687892e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.5750000000000001,
+      "residual": 0.00030841128712189025,
+      "nfev": 75,
+      "optimality": 2.3827449744522376e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.6000000000000001,
+      "residual": 0.000308396387725951,
+      "nfev": 51,
+      "optimality": 2.532589496517591e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.625,
+      "residual": 0.0003083817387647958,
+      "nfev": 43,
+      "optimality": 2.4948747864748647e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.65,
+      "residual": 0.00030836758356378446,
+      "nfev": 42,
+      "optimality": 2.672124809096758e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.675,
+      "residual": 0.0003083537109220824,
+      "nfev": 50,
+      "optimality": 2.587248214914495e-10,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.7000000000000001,
+      "residual": 0.0003083403760668624,
+      "nfev": 48,
+      "optimality": 2.803407331893388e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.7250000000000001,
+      "residual": 0.00030832742070119323,
+      "nfev": 48,
+      "optimality": 2.865564197972597e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.75,
+      "residual": 0.0003083149251097428,
+      "nfev": 42,
+      "optimality": 2.9253249583969696e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.775,
+      "residual": 0.00030830291049355196,
+      "nfev": 47,
+      "optimality": 2.986721139679975e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8,
+      "residual": 0.0003082913984306934,
+      "nfev": 43,
+      "optimality": 3.0442257733566933e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8250000000000001,
+      "residual": 0.0003082804108003323,
+      "nfev": 51,
+      "optimality": 3.1059037798571925e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8500000000000001,
+      "residual": 0.000308269969721664,
+      "nfev": 54,
+      "optimality": 3.16395549421058e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.875,
+      "residual": 0.00030826009746331984,
+      "nfev": 49,
+      "optimality": 3.220952901455948e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9,
+      "residual": 0.00030825081636898233,
+      "nfev": 43,
+      "optimality": 3.278279763858821e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.925,
+      "residual": 0.000308242148777893,
+      "nfev": 57,
+      "optimality": 3.335626072993293e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9500000000000001,
+      "residual": 0.0003082341169453606,
+      "nfev": 47,
+      "optimality": 3.394553533757728e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9750000000000001,
+      "residual": 0.00030822674296482333,
+      "nfev": 51,
+      "optimality": 3.4520306458080096e-12,
+      "message": "`xtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 1.0,
+      "residual": 0.00030821744808040563,
+      "nfev": 60,
+      "optimality": 3.831099940455685e-10,
+      "message": "`xtol` termination condition is satisfied."
+    }
+  ],
+  "p": [
+    0.0,
+    0.0,
+    0.35504368779743384,
+    0.31990581728983386,
+    7.070446665648546e-12,
+    -8.546084153009147e-05,
+    -6.65292311771756e-21,
+    -1.041715502079569e-20,
+    -5.435529829000851e-21,
+    2.7092972240407866e-21,
+    -1.5251432344718717e-22,
+    5.661892218941765e-21,
+    5.4507550235627785e-21,
+    -4.099473342458719e-21,
+    -5.2995664652505255e-21,
+    -1.4879434893275337e-21,
+    0.2642201437848495,
+    3.374668847805804e-22,
+    1.265826643091893e-21,
+    -3.503837704201656e-21,
+    8.001161130456389e-22,
+    -0.13189811387991043,
+    0.052648369400190805,
+    -0.12131929779782526,
+    0.040693796699170136,
+    -3.4095006395793984e-11,
+    -4.793104532031466e-12,
+    -3.774007778922222e-11,
+    -1.838026169463369e-11,
+    -1.4714463511532707e-21,
+    -2.8590839491814075e-21,
+    1.130581249270904e-22,
+    -7.440821912004562e-23,
+    -4.0368091190233768e-22,
+    -1.5582960290903614e-21,
+    6.405798661352499e-21,
+    1.5653934518784748e-21,
+    2.2892582008449998e-21,
+    -1.3722191389202555e-21,
+    6.48727611182324e-22,
+    -8.133090356658185e-22,
+    1.8093024447451502e-21,
+    -3.3505061022794886e-21,
+    1.0596147648545456e-23,
+    3.580888904640059e-24,
+    1.0322063402087506e-25,
+    1.4250617981794038e-25,
+    1.4686778212635417e-21,
+    -1.875802063304624e-21,
+    -0.07764647484529043,
+    -0.0709326908728471
+  ]
+}

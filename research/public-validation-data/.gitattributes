@@ -1,0 +1,2 @@
+# Python csv emits valid CRLF; retain exact evidence hashes.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

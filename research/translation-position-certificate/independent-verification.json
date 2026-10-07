@@ -1,0 +1,29 @@
+{
+  "certified": true,
+  "rows": 74,
+  "support": [
+    11,
+    54,
+    55
+  ],
+  "weighted_target_m_s": 4.938634278004134e-05,
+  "maximum_bounded_response_m_s": 1.747159137441547e-05,
+  "residual_lower_bound_m_s": 3.191475140562587e-05,
+  "tolerance_m_s": 1e-08,
+  "strict_margin_m_s": 3.190475140562587e-05,
+  "exact_lower_bound": {
+    "numerator": "285385889171919081699380548372184218311275108709657",
+    "denominator": "8942131039805367450440551591959487439385875495455293440"
+  },
+  "exact_margin": {
+    "numerator": "299155029084362273480250721619097992008543506662681725077",
+    "denominator": "9376503997194952979713151826090511501241483783522529774141440"
+  },
+  "positive_response_columns": [
+    11,
+    53,
+    54,
+    55
+  ],
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617"
+}

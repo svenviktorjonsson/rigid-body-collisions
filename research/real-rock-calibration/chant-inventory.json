@@ -1,0 +1,1739 @@
+{
+  "source": "https://doi.org/10.16904/envidat.174",
+  "specimens": "reinforced concrete ideal EOTA shapes; not natural rocks",
+  "file_count": 82,
+  "files_with_finite_gyro_energy": 41,
+  "unverified_inputs": [
+    "sensor/body/world orientation transforms",
+    "full attitude",
+    "per-impact contact point and ground normal",
+    "density distribution",
+    "independent inertia measurement",
+    "soil deformation/contact law"
+  ],
+  "friction_fit_performed": false,
+  "records": [
+    {
+      "file": "RF16W200r1.txt",
+      "sha256": "391ab5393a2e9507e9b0935f12bbf1961a68d8044deeb4f76862c00c703985c9",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999716,
+        210.00000000000244
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.1855,
+          5.740899999999986,
+          5.740900000000006
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 5.4569682106375694e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W200r2.txt",
+      "sha256": "7b10e3a0e726545cc8fe6a2a7e368540212d8d3fa13d6c9a03fa17dc3ab55126",
+      "rows": 765,
+      "finite_gyro_energy_rows": 765,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.9999999999977,
+        210.0000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185499999999994,
+          5.740900000000002,
+          5.740900000000015
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.382431946694851e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W200r3.txt",
+      "sha256": "6e9743ce95ff88f90fef04b26c6d5a5a7b82765cf61b923f2d57e9bae3d6856e",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999753,
+        210.0000000000024
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308233,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.1855,
+          5.7409000000000106,
+          5.740899999999931
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.418811734765768e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W200r4.txt",
+      "sha256": "c2397fe8769be6c5d48e2765e4620eacfa8c3ce2c19b126bd88f28293d35d866",
+      "rows": 969,
+      "finite_gyro_energy_rows": 969,
+      "energy_implied_mass_kg_median": 209.99999999999997,
+      "energy_implied_mass_range_kg": [
+        209.9999999999976,
+        210.00000000000253
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185500000000001,
+          5.740900000000011,
+          5.740899999999996
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.382431946694851e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W800r1.txt",
+      "sha256": "adeeecbcf90c0480f45881f6ee4fa13790a20a1f8afe7b08a14d8971eb2b08e2",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 780.0000000000001,
+      "energy_implied_mass_range_kg": [
+        779.999999999992,
+        780.0000000000075
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000004,
+          52.1944,
+          52.19439999999997
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.2741809263825417e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W800r2.txt",
+      "sha256": "529b398ee188fbb6f8d47dd2c7373d81398e9b9c56e9d0810ad49e0f760473dd",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 780.0000000000002,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.0000000000078
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000001,
+          52.19439999999999,
+          52.19439999999995
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.346940502524376e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W800r4.txt",
+      "sha256": "2e749a117ce558aa134e2636efd2e2e09c462be8f6b39cab1da157bfea40e406",
+      "rows": 1173,
+      "finite_gyro_energy_rows": 1173,
+      "energy_implied_mass_kg_median": 780.0000000000001,
+      "energy_implied_mass_range_kg": [
+        779.9999999999925,
+        780.0000000000088
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308233,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000008,
+          52.1943999999998,
+          52.19440000000008
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.0745362639427185e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W800r5.txt",
+      "sha256": "b9a0c2680999125b7838901aaf138849572c2906c64c8bf895ab643dc8c4c0f0",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 780.0000000000001,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.0000000000076
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308231,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.5111,
+          52.19439999999983,
+          52.194399999999966
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.7834979593753815e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF16W800r6.txt",
+      "sha256": "71fb5f45863f513c21ef881a1b24cb86494906a014cf0f5226c122b40c1c237d",
+      "rows": 918,
+      "finite_gyro_energy_rows": 918,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999919,
+        780.0000000000082
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308233,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000006,
+          52.1943999999997,
+          52.194399999999995
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.656612873077393e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r1.txt",
+      "sha256": "f998dca9cdc1930db05406029deb2a70b28552bfff9ca60e884aba863c5b24b4",
+      "rows": 1326,
+      "finite_gyro_energy_rows": 1326,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999739,
+        210.0000000000024
+      ],
+      "linear_speed_vector_consistency_max_m_s": 7.993605777301127e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185499999999998,
+          5.740900000000011,
+          5.7409000000000034
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.729372449219227e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r2.txt",
+      "sha256": "afb9fd26c61e22d48d2bdb2092baaa510def9c250efae7002bdf2f7211efa436",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999764,
+        210.00000000000273
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185500000000006,
+          5.740900000000009,
+          5.7408999999999875
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 6.548361852765083e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r3.txt",
+      "sha256": "e5596083af5b2e6812572bb3bfc4101ac240338e2fe8090fae8b41f286203857",
+      "rows": 1173,
+      "finite_gyro_energy_rows": 1173,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.9999999999978,
+        210.0000000000018
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185499999999998,
+          5.740899999999998,
+          5.740899999999965
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.5279510989785194e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r4.txt",
+      "sha256": "a85395ee54978ed9ee1f252ca55864c341284dbac4ef13934d9ab619b5b18e97",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 1122,
+      "energy_implied_mass_kg_median": 210.00000000000003,
+      "energy_implied_mass_range_kg": [
+        209.9999999999974,
+        210.00000000000284
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.526512829121202e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185500000000006,
+          5.7409,
+          5.740899999999999
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.0913936421275139e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r6.txt",
+      "sha256": "a1f23341458ac1c1771c6440cfe35819defcaba8984639b59089d7dbf67f8c63",
+      "rows": 1224,
+      "finite_gyro_energy_rows": 1224,
+      "energy_implied_mass_kg_median": 209.99999999999997,
+      "energy_implied_mass_range_kg": [
+        209.9999999999974,
+        210.00000000000247
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185500000000008,
+          5.740899999999998,
+          5.7408999999999955
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.4551915228366852e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r7.txt",
+      "sha256": "8a5cfa04efc848d33a1c7ff9a9dee19498524d58e059a77a3f1b603fd4849301",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999724,
+        210.00000000000267
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.704148513061227e-14,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185500000000008,
+          5.7409,
+          5.740899999999997
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 6.184563972055912e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W200r8.txt",
+      "sha256": "860d9a8bdeb04c2df9776d452ac0d1abc61c1a30249113b2f2805e2c817c494c",
+      "rows": 1224,
+      "finite_gyro_energy_rows": 1224,
+      "energy_implied_mass_kg_median": 210.0,
+      "energy_implied_mass_range_kg": [
+        209.99999999999739,
+        210.0000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 7.638334409421077e-14,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          9.185499999999998,
+          5.740900000000002,
+          5.740899999999997
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.3655745685100555e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r1.txt",
+      "sha256": "9c831f56b119e8a876bf69d38de07f9cbb27a5db875fb6beff302699b09e5dcc",
+      "rows": 969,
+      "finite_gyro_energy_rows": 969,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.000000000008
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308234,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000001,
+          52.19439999999979,
+          52.1944000000002
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.2014213502407074e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r10.txt",
+      "sha256": "db7f962e49b7d33b48dceb689fe533bdf3c8e0a32f86978936420011b01510c1",
+      "rows": 918,
+      "finite_gyro_energy_rows": 918,
+      "energy_implied_mass_kg_median": 779.9999999999999,
+      "energy_implied_mass_range_kg": [
+        779.9999999999928,
+        780.0000000000078
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1723955140041653e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51109999999997,
+          52.19440000000024,
+          52.19439999999984
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.346940502524376e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r11.txt",
+      "sha256": "0aff647fcdc8385ec80be8eff81040490dd78ea8ff237cd88d5291f37cfc2d28",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999919,
+        780.0000000000072
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308233,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51109999999997,
+          52.19439999999997,
+          52.194399999999916
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.0745362639427185e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r12.txt",
+      "sha256": "5bf566c3d8168a3c6feadb7b525f04ab0862f9847036867d92cabba309c1c441",
+      "rows": 969,
+      "finite_gyro_energy_rows": 969,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.000000000007
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51109999999996,
+          52.19440000000037,
+          52.19439999999989
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.511093720793724e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r14.txt",
+      "sha256": "c42f3043640c05cc9d33d481a75351810a25ff4a577ee6308d6fd5d977b17df4",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 779.9999999999999,
+      "energy_implied_mass_range_kg": [
+        779.9999999999926,
+        780.000000000008
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51109999999996,
+          52.19439999999996,
+          52.19440000000011
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.4924596548080444e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r15.txt",
+      "sha256": "7c759d08b3f0d1ae92281953505fb90f23590502f5d43854260bc3d4371adf01",
+      "rows": 612,
+      "finite_gyro_energy_rows": 612,
+      "energy_implied_mass_kg_median": 780.0000000000002,
+      "energy_implied_mass_range_kg": [
+        779.9999999999928,
+        780.0000000000077
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000004,
+          52.19440000000003,
+          52.194400000000115
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.637978807091713e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r2.txt",
+      "sha256": "592d4c9614f3fcdf28b17d638763b8a2314203d199c7718155755cdd8d82cd26",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 1122,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.999999999992,
+        780.0000000000078
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000008,
+          52.19439999999996,
+          52.194400000000066
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.220055416226387e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r3.txt",
+      "sha256": "f941e8be04af97eb8bed8c1f51efc222908da1e2874b92607520539b792a97d0",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.000000000008
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51109999999994,
+          52.19439999999999,
+          52.194400000000016
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.0745362639427185e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r4.txt",
+      "sha256": "6d2b1bd1709ca07aab8ce0192e45141b3f8ab42619fc041bbfaec0448d0856b8",
+      "rows": 969,
+      "finite_gyro_energy_rows": 969,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999919,
+        780.0000000000081
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.5111,
+          52.19439999999989,
+          52.1944000000003
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.0745362639427185e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r5.txt",
+      "sha256": "e70f875bacfd16b77d4cea3a5d651540303c8ffab3a5daa296b36478fa8d820d",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999925,
+        780.0000000000076
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000003,
+          52.19440000000013,
+          52.1944
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.637978807091713e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r6.txt",
+      "sha256": "3c313dd0509c8c8405c71afc8e2abcfdf28e88ec37760391ef4170a6ee1115e4",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999923,
+        780.0000000000072
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000003,
+          52.19440000000003,
+          52.19440000000001
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.4924596548080444e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF18W800r7.txt",
+      "sha256": "798c15919877140c9413fac4dd936b5a84811b22780a7ebc91b3b9f530c94e08",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 780.0,
+      "energy_implied_mass_range_kg": [
+        779.9999999999924,
+        780.0000000000074
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.414691248821327e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          83.51110000000003,
+          52.19440000000026,
+          52.194399999999916
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 3.7834979593753815e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e200r1.txt",
+      "sha256": "c2e6a0e578e9d5c4cc4e54466c898f01986360350094cf8c05ffb99500a7c239",
+      "rows": 765,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 250.0,
+      "energy_implied_mass_range_kg": [
+        249.9999999999975,
+        250.0000000000032
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e200r10.txt",
+      "sha256": "1e05e14e75bfb679b31389199e65f1e2a7e1b0756c1fdd50d117464863ad534b",
+      "rows": 918,
+      "finite_gyro_energy_rows": 918,
+      "energy_implied_mass_kg_median": 250.0,
+      "energy_implied_mass_range_kg": [
+        249.99999999999716,
+        250.00000000000287
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          5.441400000000001,
+          5.441399999999997,
+          5.4414
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.2369127944111824e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e200r2.txt",
+      "sha256": "d9c5857f4815c22f91e512701acb47232ead1d2028f5a562a280877b9af41f63",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 250.0,
+      "energy_implied_mass_range_kg": [
+        249.99999999999724,
+        250.00000000000284
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e200r3.txt",
+      "sha256": "fde6e0cdaadd61519a6aaab2b55afc04fe8465691b51e353e18572244a1b77ae",
+      "rows": 918,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 250.0,
+      "energy_implied_mass_range_kg": [
+        249.9999999999971,
+        250.00000000000293
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e200r4.txt",
+      "sha256": "82979884d1571aa7273e78116bdc746cd1750e7538824188fb3de5b6fb944704",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 250.00000000000003,
+      "energy_implied_mass_range_kg": [
+        249.99999999999702,
+        250.00000000000287
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e200r5.txt",
+      "sha256": "ffe604841bd86afc4c17602eaf9fdbf9c4f63f0f6ef205eda15d6f86bfc9b957",
+      "rows": 918,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 249.99999999999997,
+      "energy_implied_mass_range_kg": [
+        249.99999999999724,
+        250.00000000000276
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e200r6.txt",
+      "sha256": "eacf109a6f8a2478432ca9cf74ea32408404d0ca4ec3954fceb0ece8b286f84e",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 250.0,
+      "energy_implied_mass_range_kg": [
+        249.9999999999969,
+        250.00000000000287
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          5.441399999999998,
+          5.441400000000006,
+          5.441399999999991
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.418811734765768e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e200r7.txt",
+      "sha256": "bd75d7f858b11ae740264c093be1a0b00acc8ac306132ec484470cfc9349c0fd",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 250.00000000000003,
+      "energy_implied_mass_range_kg": [
+        249.9999999999971,
+        250.00000000000261
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          5.441399999999999,
+          5.441399999999995,
+          5.441399999999996
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.729372449219227e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e200r8.txt",
+      "sha256": "f5129ce6fea8991d49b8c2cf50e9170293cd2f818dc60f1faa81d9f50110bf6d",
+      "rows": 765,
+      "finite_gyro_energy_rows": 765,
+      "energy_implied_mass_kg_median": 249.99999999999994,
+      "energy_implied_mass_range_kg": [
+        249.9999999999971,
+        250.000000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          5.4414000000000025,
+          5.441399999999999,
+          5.441399999999998
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.9112713895738125e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e200r9.txt",
+      "sha256": "2e0cd4225c9aa29ad3332026ec488a1e5f80cbc4b6f4aa8462ee4b5a89c46cfa",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 249.99999999999997,
+      "energy_implied_mass_range_kg": [
+        249.999999999997,
+        250.0000000000032
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.526512829121202e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          5.4414,
+          5.441400000000002,
+          5.441400000000004
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 5.275069270282984e-11,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e2670r1.txt",
+      "sha256": "e1b168f79c381e204359b9e122e8ca358ed10025f204eda147fe1aecf2b968a1",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.999999999999,
+      "energy_implied_mass_range_kg": [
+        2669.999999999968,
+        2670.000000000025
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r2.txt",
+      "sha256": "7f8d35c94e5ad010f2e8bad42dd9c019342ed4cb19adfdee7954bfd73184027c",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.99999999997,
+        2670.0000000000264
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r3.txt",
+      "sha256": "69177e58e4f676f7e277df48ad73395191b2165bda8cb0c69ad83e7625a59c53",
+      "rows": 765,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999695,
+        2670.000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r4.txt",
+      "sha256": "5d2a14bcce069279d04480a0e8c1bf329f2990210e47a8cdbc10a6401c1c81b4",
+      "rows": 765,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999704,
+        2670.0000000000296
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r5.txt",
+      "sha256": "13b404340e08aaa14741492bf770530e57388eeaab4d360528fdf2b2b7c501f4",
+      "rows": 663,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.999999999976,
+        2670.000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r6.txt",
+      "sha256": "2b489c1928d61084eae843056786b8549c867ac30a17e01bf104de0e4136bbba",
+      "rows": 918,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999673,
+        2670.0000000000323
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.059419880941277e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r7.txt",
+      "sha256": "1e7a5e7923cd17e8900e250e3dc7f3cf2bd8240086c6930f4cc50a6752bc72ae",
+      "rows": 663,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.999999999971,
+        2670.0000000000296
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e2670r8.txt",
+      "sha256": "81de07d293aa315334d8b525dfe5466b1b4cfe8ce815b3d646740ec6d6da6240",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.999999999968,
+        2670.0000000000296
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r1.txt",
+      "sha256": "87fb227bfa8528bec0895e4c25cb2b00987d93b0fb60266b293fdb5653696733",
+      "rows": 765,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0,
+      "energy_implied_mass_range_kg": [
+        839.9999999999919,
+        840.0000000000083
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r10.txt",
+      "sha256": "c93d482086dcd89473272dcd57d2565a2cf62974d9d5582de11d8edcb6f16ec8",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 839.9999999999998,
+      "energy_implied_mass_range_kg": [
+        839.9999999999917,
+        840.0000000000077
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r2.txt",
+      "sha256": "bcc54bc3cb9b445013c4ea51168d612801f234818dc5f117a87f386db9979f97",
+      "rows": 612,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0,
+      "energy_implied_mass_range_kg": [
+        839.9999999999917,
+        840.0000000000077
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r3.txt",
+      "sha256": "718588eaf129a764801e04ec21564ddb9f8ddf7ccba7e78c2ca4ca305c6b57de",
+      "rows": 612,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0000000000001,
+      "energy_implied_mass_range_kg": [
+        839.9999999999926,
+        840.0000000000086
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r4.txt",
+      "sha256": "585ddce058fc90574948051fbd9e21acb652fcb33857bbaf818ae223752c7e6b",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 839.9999999999998,
+      "energy_implied_mass_range_kg": [
+        839.9999999999918,
+        840.0000000000074
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r5.txt",
+      "sha256": "ab21dc35bbe8c85c3a54f21bcef0e4ce2af139ca5ba0bcb2ce602baa065b5a6a",
+      "rows": 969,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0,
+      "energy_implied_mass_range_kg": [
+        839.9999999999917,
+        840.000000000009
+      ],
+      "linear_speed_vector_consistency_max_m_s": 7.815970093361102e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r6.txt",
+      "sha256": "d92ccac3be9638578a405533edcf41cf29923b73b7c7bc3fa518a806452f02ce",
+      "rows": 663,
+      "finite_gyro_energy_rows": 663,
+      "energy_implied_mass_kg_median": 839.9999999999999,
+      "energy_implied_mass_range_kg": [
+        839.9999999999925,
+        840.0000000000083
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          60.535000000000075,
+          60.53499999999998,
+          60.53500000000004
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 4.802132025361061e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF20e800r7.txt",
+      "sha256": "e9b37d16ebab8b798e66767b5c0f8ae7376c1013564e7eaddb74f3a67e1caeb4",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0000000000001,
+      "energy_implied_mass_range_kg": [
+        839.9999999999916,
+        840.0000000000076
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r8.txt",
+      "sha256": "21b32c21c119c676077501fdff00c5eec90f19c2c9aff12785e2e06c6cf4839b",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 840.0,
+      "energy_implied_mass_range_kg": [
+        839.9999999999909,
+        840.0000000000084
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20e800r9.txt",
+      "sha256": "038682ec3ec98aed7a842f58638b83dfb7f55f74fd0a83a6331e5d1e9188d107",
+      "rows": 663,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 839.9999999999997,
+      "energy_implied_mass_range_kg": [
+        839.9999999999909,
+        840.0000000000085
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r1.txt",
+      "sha256": "75424a64f6299d67e535235d264b8ee0b7ac986e447507c9a6ae0d6cf902cc2f",
+      "rows": 867,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999686,
+        2670.000000000024
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r2.txt",
+      "sha256": "986db10fd7ee7949ec05cf3d01d1568feb12b4c0e17acaf6695defb36cf8245d",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.000000000001,
+      "energy_implied_mass_range_kg": [
+        2669.999999999971,
+        2670.000000000029
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r3.txt",
+      "sha256": "b90a7233c3765ee4d26b29a28f96190145b6bf95bfb161e8b7e0adb037687768",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999654,
+        2670.000000000033
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r4.txt",
+      "sha256": "18e378151885f3100ce8c81644f4b3d2e3f1ccabfe09e9a4d50b68a7e7182df1",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.999999999968,
+        2670.00000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r5.txt",
+      "sha256": "ae4135f87dd557f020da2e6b63dd01fe5f7cb29a0419de921549b1474f0e45c7",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999736,
+        2670.0000000000205
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r6.txt",
+      "sha256": "a1be0b233166de7bbe1d180a7165741110e39daf38932c48832868495cdf12fb",
+      "rows": 714,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.000000000001,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999727,
+        2670.000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r7.txt",
+      "sha256": "bad80b6965bd8a282cebe68a1d81c67f8e6ffad21ae0548e4056e33e5a9fab61",
+      "rows": 816,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.999999999975,
+        2670.000000000031
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r8.txt",
+      "sha256": "79dce30acebd661987a25f7149c4597e5f94278c622310a8bbde8c2f755f5524",
+      "rows": 765,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.999999999974,
+        2670.0000000000286
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF20w2670r9.txt",
+      "sha256": "a86faa52f32655b9b0547a446c2bc414d1a6de1e74d646f12c9aad22110bf641",
+      "rows": 612,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999786,
+        2670.000000000028
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25e2670r1.txt",
+      "sha256": "d389eb527e96b07c83a3ffe5784704d369bb498d1b6156e4806a57163b32c33d",
+      "rows": 867,
+      "finite_gyro_energy_rows": 867,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999663,
+        2670.000000000035
+      ],
+      "linear_speed_vector_consistency_max_m_s": 8.881784197001252e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          416.3530000000002,
+          416.3530000000002,
+          416.35299999999995
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.775333657860756e-09,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF25e2670r2.txt",
+      "sha256": "e7d27deee27a05478b49b8c4c3dc874caf6e104389a49bbf20e07db80a1e75a0",
+      "rows": 867,
+      "finite_gyro_energy_rows": 867,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999714,
+        2670.000000000027
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          416.3530000000001,
+          416.3529999999978,
+          416.3530000000004
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.862645149230957e-09,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF25e2670r3.txt",
+      "sha256": "a7095a91dafb2839f95e10b2ea83a95bdc19e15479efb5247bf44a705614cffe",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 1071,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.999999999968,
+        2670.00000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          416.3530000000006,
+          416.3530000000002,
+          416.35299999999995
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 2.270098775625229e-09,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF25e2670r4.txt",
+      "sha256": "9f26918f2e7341c61948ec86a3da82b8b16ce42ff155d6f7ff6bcdfab90fe43c",
+      "rows": 867,
+      "finite_gyro_energy_rows": 867,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999686,
+        2670.000000000029
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.947598300641403e-14,
+      "resultant_to_component_omega_ratio_median": 57.295779513082316,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          416.35300000000024,
+          416.35300000000024,
+          416.3530000000039
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 1.862645149230957e-09,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF25e2670r5.txt",
+      "sha256": "70cfca6c3c83ef6f2eb71c3008db5f5b831135241802db20cdfed3d81d6e5125",
+      "rows": 816,
+      "finite_gyro_energy_rows": 816,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999677,
+        2670.0000000000286
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1013412404281553e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          416.35300000000007,
+          416.35300000000007,
+          416.3529999999999
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 2.5029294192790985e-09,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF25e2670r6.txt",
+      "sha256": "2b1bbf0d2cf1a0e2e41def7488d9beaae0bdb3fb300c197068edd43c5538c0e3",
+      "rows": 918,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999723,
+        2670.000000000027
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25e2670r7.txt",
+      "sha256": "ecb9dd8c9a3827b4bf65d1a9585d5b2cf087fcfba6102f6889cf6891e506d80d",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999677,
+        2670.000000000035
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25e2670r8.txt",
+      "sha256": "2ad2768868a55d343331489b50c81fc37e51d48eace3c0634f1758ea73c7d6a4",
+      "rows": 1071,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2669.9999999999995,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999723,
+        2670.0000000000314
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r1.txt",
+      "sha256": "49d2bd673cf3b7b0dffac2e8cd9bf1d25a8e21117a6d4563051454788aaeeb44",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.999999999965,
+        2670.00000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r2.txt",
+      "sha256": "43f597bb106af055cf86211469d225645b014a6446714ff433401b4aa01e7a57",
+      "rows": 1326,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999704,
+        2670.0000000000286
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r3.txt",
+      "sha256": "9bace1dd17fbfc4a6094f6cc76606151b01afbeb84696c0a611657deb518c1c4",
+      "rows": 918,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.000000000001,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999736,
+        2670.0000000000296
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r5.txt",
+      "sha256": "f2418db81899eab424fa14186441b9b687b4fd00312463d7e710487204702376",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999686,
+        2670.00000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.237055564881302e-14,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r6.txt",
+      "sha256": "fabb79ea9e0d62489436ed372301450c7737f56879e8b1c548bb35f5ba6ea445",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999663,
+        2670.00000000003
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0302869668521453e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r7.txt",
+      "sha256": "39dd16c9c926522de24cfb86f589c390263cbb4b775344810c2f81308d291351",
+      "rows": 1173,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0000000000005,
+      "energy_implied_mass_range_kg": [
+        2669.99999999997,
+        2670.0000000000323
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF25w2670r8.txt",
+      "sha256": "46a985fcd594b6c422fadbf31f85e45c0dd17fa54115249cb57aab7c24d38177",
+      "rows": 1224,
+      "finite_gyro_energy_rows": 0,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.999999999969,
+        2670.000000000034
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.0658141036401503e-13,
+      "resultant_to_component_omega_ratio_median": null,
+      "rad_to_degree_ratio_agrees_1e_minus_8": false,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false
+    },
+    {
+      "file": "RF29w2670r1.txt",
+      "sha256": "65d6c242590339b8746f5bd74d32c07392bf7b5fd80312cf7a9386f96a28634b",
+      "rows": 1122,
+      "finite_gyro_energy_rows": 1122,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999695,
+        2670.000000000029
+      ],
+      "linear_speed_vector_consistency_max_m_s": 1.1368683772161603e-13,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          635.3130000000033,
+          397.0701999999999,
+          397.07020000000136
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 8.731149137020111e-10,
+        "coordinate_basis_verified": false
+      }
+    },
+    {
+      "file": "RF29w2670r2.txt",
+      "sha256": "9d984c289ba58352f925b85f0c347eb80637c4378a065b620fa9837d1c7b0a22",
+      "rows": 1020,
+      "finite_gyro_energy_rows": 1020,
+      "energy_implied_mass_kg_median": 2670.0,
+      "energy_implied_mass_range_kg": [
+        2669.9999999999714,
+        2670.0000000000286
+      ],
+      "linear_speed_vector_consistency_max_m_s": 9.592326932761353e-14,
+      "resultant_to_component_omega_ratio_median": 57.29577951308232,
+      "rad_to_degree_ratio_agrees_1e_minus_8": true,
+      "inertia_status": "inferred author energy formula; not independently measured",
+      "full_3d_replay_qualified": false,
+      "energy_diagonal_fit": {
+        "values_kg_m2_if_components_rad_s": [
+          635.3130000000039,
+          397.07020000000017,
+          397.07019999999756
+        ],
+        "rank": 3,
+        "max_energy_equation_residual_J": 7.712515071034431e-10,
+        "coordinate_basis_verified": false
+      }
+    }
+  ]
+}

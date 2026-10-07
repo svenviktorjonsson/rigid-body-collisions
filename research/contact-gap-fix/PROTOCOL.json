@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-07",
+  "request": "Find missing model features and fix them",
+  "definite_gaps": [
+    "Native 3D adapter refuses measured mass/COM/inertia, so experimental inputs cannot be reproduced without a homogeneous-density assumption.",
+    "No active sustained-contact primitive combines distinct static/dynamic friction with independent rolling and axial spin couples and event-based arrest. The old rolling study excludes axial spin and sliding transitions."
+  ],
+  "implementation": "Explicit authoritative mass_properties input, plus an exact sphere/disk supported-contact branch in supported_contact.py. Separate linear and angular impulses, no double-counting lever moment, physical moment lengths independent of ell. Static/onset reactions are constrained, not arbitrary t/s directions.",
+  "scope": "One supported sphere/disk, scalar central inertia, planar rolling/translation with optional axial spin, constant load/drive, translating fixed-orientation plane. Reject normal impacts and noncollinear spatial states. This fixes qualified branches; it does not supply elastic restitution, general 3D memory, interacting contact groups or all scene qualification.",
+  "verification": "Analytic rolling/stopping, slide-to-roll, static/dynamic distinction, pure spin, drive/onset, frame rotation, lever-plus-couple/angular momentum, energy/work and exact-step composition; randomized mechanical controls and native measured-mass/inertia checks. Independent high-accuracy contact-motion integration where possible.",
+  "empirical_policy": "No measured outcomes used to change coefficients. Re-run existing public comparisons unchanged and report their limitations. Missing matched angular resistance parameters are not supplied by unrelated coefficients or outcome residuals. No claim that mechanical fixes alone have improved measured accuracy."
+}

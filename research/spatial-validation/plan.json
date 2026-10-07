@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "purpose": "Verify real 3D rigid mechanics and fast prescribed walls driving many bodies; qualify accuracy before timing claims",
+  "units": "m, s, kg, rad; volumetric density kg/m^3",
+  "dt_s": 0.01,
+  "scenes": [
+    {
+      "id": "row64_100ms",
+      "kind": "row",
+      "count": 64,
+      "speed": 100
+    },
+    {
+      "id": "translate64_spheres",
+      "kind": "container",
+      "side": 4,
+      "shape": "sphere",
+      "speed": 20,
+      "shake": false,
+      "spin": 0,
+      "seed": 42,
+      "duration": 1.0
+    },
+    {
+      "id": "shake27_spheres",
+      "kind": "container",
+      "side": 3,
+      "shape": "sphere",
+      "speed": 20,
+      "shake": true,
+      "spin": 0,
+      "seed": 42
+    },
+    {
+      "id": "translate27_boxes",
+      "kind": "container",
+      "side": 3,
+      "shape": "box",
+      "speed": 20,
+      "shake": false,
+      "spin": 0,
+      "seed": 42
+    },
+    {
+      "id": "shake_rotate27_hulls42",
+      "kind": "container",
+      "side": 3,
+      "shape": "hull",
+      "speed": 20,
+      "shake": true,
+      "spin": 10,
+      "seed": 42
+    },
+    {
+      "id": "shake_rotate27_hulls7301",
+      "kind": "container",
+      "side": 3,
+      "shape": "hull",
+      "speed": 20,
+      "shake": true,
+      "spin": 10,
+      "seed": 7301
+    }
+  ],
+  "reference_modes": {
+    "travel06": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 128,
+      "travel_fraction": 0.06
+    },
+    "travel03": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 128,
+      "travel_fraction": 0.03
+    },
+    "travel015": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 128,
+      "travel_fraction": 0.015
+    },
+    "iterations64": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 64,
+      "travel_fraction": 0.015
+    },
+    "reference": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 256,
+      "travel_fraction": 0.015
+    }
+  },
+  "reference_edges": [
+    [
+      "travel06",
+      "travel03"
+    ],
+    [
+      "travel03",
+      "travel015"
+    ],
+    [
+      "iterations64",
+      "travel015"
+    ],
+    [
+      "travel015",
+      "reference"
+    ]
+  ],
+  "candidate_modes": {
+    "fast": {
+      "solver": "sequential",
+      "primary_steps": 1,
+      "iterations": 8,
+      "travel_fraction": 0.15
+    },
+    "standard": {
+      "solver": "sequential",
+      "primary_steps": 4,
+      "iterations": 64,
+      "travel_fraction": 0.15
+    },
+    "coupled": {
+      "solver": "coupled",
+      "primary_steps": 4,
+      "iterations": 64,
+      "travel_fraction": 0.15
+    },
+    "adaptive": {
+      "solver": "adaptive",
+      "primary_steps": 4,
+      "iterations": 64,
+      "travel_fraction": 0.15
+    }
+  },
+  "candidate_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_budget_fraction": 0.25,
+  "physical_checks": {
+    "container_surface_excess_m": 0.002,
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "row_final_velocity_max_error_m_s": 0.015
+  },
+  "timing": {
+    "candidate_warmups": 1,
+    "candidate_retained_repetitions": 3,
+    "reference_retained_repetitions": 1,
+    "measure": "native step_s including solver selection, collision guard and mechanical diagnostics; no startup/serialization"
+  },
+  "rules": [
+    "All four reference edges and finest-reference physical checks must pass; otherwise no accuracy-certified candidate or speed claim for that scene",
+    "Candidate trajectory and physical checks must pass before selection",
+    "A fastest passing mode is selected offline by median step time; this certifies only these finite scenes, samples and observables",
+    "All fallback counts are retained; coupled means MLCP with disclosed sequential fallback, never pure direct if fallback count is nonzero",
+    "Pair friction is 0.4 with product mixing; e=0; parameters are synthetic, not fitted to experiments",
+    "No budgets, horizons, shapes, seeds or refinement axes change after execution begins",
+    "Containment checks actual vertices and sphere support, not only centers; orientation error is quaternion geodesic RMS",
+    "The travel guard is a heuristic rather than certified swept CCD for every shape"
+  ]
+}

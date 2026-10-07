@@ -1,0 +1,9 @@
+{
+  "source": "/home/viktor/.cache/physics-public-data-20261007/RockMasonry1.rar",
+  "preserved_copy": "/tmp/physics-public-cache-preserved-20261007/RockMasonry1.rar",
+  "bytes": 156426196,
+  "sha256": "a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4",
+  "reason": "Host filesystem full; only archive downloaded by this task moved to tmpfs after checksum verification.",
+  "redownload_url": "https://experiments.builtenvdata.eu/api/v1/datasets/92/download/?filename=RockMasonry1.rar",
+  "temporary_storage": true
+}

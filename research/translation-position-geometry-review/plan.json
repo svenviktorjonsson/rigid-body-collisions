@@ -1,0 +1,27 @@
+{
+  "schema": "prospective-position-geometry-diagnostic-v1",
+  "capture": "research/translation-position-diagnostic/results/rejected-normal-system.json",
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "metadata_observer": "spatial_backend/position_geometry.h",
+  "execution_rule": "Freeze observer/driver before replay; diagnostic matrix original bytes retained separately. Never apply a rejected solver pressure or mutate production bodies during independent diagnosis.",
+  "source_sha256": {
+    "spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "research/translation-position-geometry-review/analyze.py": "5bf4b6f1a8c6c2406a4c4fd540980ceffa2503ec519b16f64bd8274a570d91dd",
+    "research/translation-position-geometry-review/requery.cpp": "9c011710747592f26f55a6df326db930dabcf9d9897d5006039384648ffa4147"
+  },
+  "guide": {
+    "component_translation_bound_m": 0.0001,
+    "component_rotation_bound_rad": 0.001,
+    "QP_max_iterations": 2000,
+    "physical_targets": "Unchanged bSplit*h",
+    "acceptance": "Linear normal residual <= original1e-8m/s; then actual convex geometry re-query. No trajectory qualification from either diagnostic alone."
+  },
+  "scope": "Full-pose numerical repair is a changed position discretization, not a root of the rejected translation-only problem. Actual angular pose applications require energy/momentum accounting or transactional retry instead.",
+  "baseline_execution_source_commit": "52f7e6d244e92a8405134e0222ce14fc3eda0ef6",
+  "baseline_study": "research/hull-translation-completion",
+  "scene": "fast_rotate_shake27_hulls7301",
+  "lane": "reference_2",
+  "travel_fraction": 0.015,
+  "change": "Observer-only companion geometry: original failure/matrix dump retains original schema separately; no physical or numerical solver change. New native source may include independently frozen numerical recoveries; runtime is pinned.",
+  "acceptance": "Diagnostic completeness and exact source/binary/library guard; retain any result. No full trajectory or physical geometric infeasibility qualification."
+}

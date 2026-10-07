@@ -1,0 +1,17 @@
+{
+  "schema": "elastic-recorded-viewer-validation-v1",
+  "renderer": "Playwright with Chromium headless shell153.0.8010.12",
+  "tested_case_count": 6,
+  "javascript_errors": [],
+  "replay_at_end_checked": true,
+  "viewport_px": [
+    1100,
+    1020
+  ],
+  "preview_case": "vertical-floor-ceiling",
+  "preview_time_s": 0.09,
+  "script_sha256": "56ec55fe6f78f97495e66570df133dbb4455280748a593c6417d94870eeb119c",
+  "html_sha256": "ed22a4d67373d7ba19f14007e21524657ff5fda5744ba7a3f1b2e0b00efd2bd5",
+  "preview_sha256": "d26e7f728968e8adcbac68ba77a84f2268c6b595a7339dfea0ea237c61a6d972",
+  "scope": "Display of recorded qualified fine traces; no new physics simulation or experimental material validation."
+}

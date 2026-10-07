@@ -1,0 +1,10 @@
+{
+  "scope": "Isolated original-projection finite-forward-difference scaled trust search, at most2048 actual residual calls including Jacobian samples percomponent/seed. Jacobian sign/max(1,abs(x)) steps and matrix-vector-sum-before-target arithmetic affect numerical search only. Original full native eager-cone gate mandatory. Exact A/b/material/tolerance fixed; preserve declines; no world/integration/performance claim.",
+  "source": "66d0f2a",
+  "source_sha256": "51adee15ddb2d873c4be2c6210406e05510a5be12777731bea95ecefdb2789eb",
+  "seed_archive": "research/large-contact-recovery/results-null-seeds/summary.json",
+  "seed_archive_sha256": "979b4882b45331ae27d994901b1f0e77e1b8d11f45ed3adade10280ac46477fe",
+  "binary": "/home/viktor/.cache/physics-native-finite-trust-20261006/replay",
+  "execution": "Single-thread isolated pilots concurrent with untimed world correctness diagnostics; cost descriptive.",
+  "linear_solver": "existing bounded LAPACK spectral trust subproblem; no CMINPACK dependency"
+}

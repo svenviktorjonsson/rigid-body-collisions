@@ -1,0 +1,68 @@
+{
+  "backend_commit": "0f17e758c731da1cf7d32f4e5f7ba6233d539951",
+  "bullet_commit": "2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "compile_flags": [
+    "-std=c++17",
+    "-O3",
+    "-DNDEBUG",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-ffp-contract=off"
+  ],
+  "dependency_sha256": {
+    "build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6",
+    "/tmp/fast-shake-diagnostic-runner": "854958ef6bb6fbbff2eed572ee202ddae5455c34b6028fb3dbda7ce66f13ce05",
+    "research/fast-shake-diagnostic/execution-source.zip": "037f1cb96d58159bac4b5844a69d4a142a2c79bba4bcb8030ffec2b37c2a6264",
+    "build/spatial/CMakeCache.txt": "45cac64fcf4a599b780bf2f32c91414282a1215f7a6b383c920cd92ffa096e47",
+    "bullet/src/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.cpp": "5b0a5553fbf0aa3c57fd9af431775613f0a6c7da46a7efe78443d1eb2563daa6",
+    "bullet/src/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp": "9196d824cb7bdd496d9cdeba4e5da0f82344ab6b2a40f76cf9326073fc88e932",
+    "bullet/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp": "0b0c940e72b84913356965915342e0ee82ef9779c7a58451fe2eced13204afb6",
+    "bullet/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp": "7b02cbe1ce4d7024b37129905fffeffc68110923de3de6308e1d93b61d88760c"
+  },
+  "compiler_warnings": "",
+  "physical_parameters": {
+    "mass_each_kg": 1,
+    "radius_m": 0.1,
+    "sphere_inertia_kg_m2": 0.004,
+    "box_half_extents_m": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "box_inertia_kg_m2": 0.006666666666666667,
+    "velocity_A_m_s": [
+      1,
+      0,
+      -1
+    ],
+    "velocity_B_m_s": [
+      -1,
+      0,
+      1
+    ],
+    "initial_omega_rad_s": [
+      0,
+      0,
+      0
+    ],
+    "gravity_m_s2": [
+      0,
+      0,
+      0
+    ],
+    "external_forces": false,
+    "external_torques": false,
+    "restitution": 0,
+    "rolling_twisting_law": false
+  },
+  "limitations": [
+    "Supplied positive-gap manifold is a solver test, not default CCD discovery.",
+    "Common-point rows change contact mobility; this is a harness comparator, not an engine fix.",
+    "No claim of calibrated material parameters, long-time convergence, or generic shape accuracy."
+  ]
+}

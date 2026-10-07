@@ -1,0 +1,8 @@
+{
+  "old_path": "research/hull-translation-completion/results/progress/fast_rotate_shake27_hulls7301/reference_2.json",
+  "old_sha256": "10f7cd4dcd27018bf103a388e91e8a57047d263a49b2c290f930aea77d061164",
+  "new_path": "research/translation-position-diagnostic/results/progress.json",
+  "new_sha256": "10f7cd4dcd27018bf103a388e91e8a57047d263a49b2c290f930aea77d061164",
+  "byte_identical": true,
+  "scope": "Observer-only diagnostic reproduces the original accepted five-frame prefix exactly; no completed trajectory qualification."
+}

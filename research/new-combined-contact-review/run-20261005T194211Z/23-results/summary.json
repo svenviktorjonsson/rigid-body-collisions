@@ -1,0 +1,1227 @@
+{
+  "results": [
+    {
+      "index": 0,
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.06870916699699592,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.370204850999851e-11,
+            "circle_violation_scaled_m_s": 8.579436726208106e-19,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 1.3877787807814457e-17,
+            "passive_bound_J": -0.4408359281079845,
+            "passivity_scale": 1.4420760090466276,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.053697279989137314,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.370204850999851e-11,
+            "circle_violation_scaled_m_s": 8.579436726208106e-19,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 1.3877787807814457e-17,
+            "passive_bound_J": -0.4408359281079845,
+            "passivity_scale": 1.4420760090466276,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 1,
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.048662980989320204,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.085128761655274e-14,
+            "circle_violation_scaled_m_s": 3.897572176310807e-16,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 6.661338147750939e-16,
+            "passive_bound_J": -0.9002257220852357,
+            "passivity_scale": 1.9116166104591445,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.2737367544323206e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.09796200500568375,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.085128761655274e-14,
+            "circle_violation_scaled_m_s": 3.897572176310807e-16,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 6.661338147750939e-16,
+            "passive_bound_J": -0.9002257220852357,
+            "passivity_scale": 1.9116166104591445,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.2737367544323206e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 2,
+      "input": "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.021850019998964854,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.9576812368827152e-10,
+            "circle_violation_scaled_m_s": 1.7869646524317945e-10,
+            "sticking_m_s": 9.049605298586575e-16,
+            "support_gap_J": 3.190754327420109e-10,
+            "passive_bound_J": -11.25652612069504,
+            "passivity_scale": 14.013371501030372,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.04942549699626397,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.9576812368827152e-10,
+            "circle_violation_scaled_m_s": 1.7869646524317945e-10,
+            "sticking_m_s": 9.049605298586575e-16,
+            "support_gap_J": 3.190754327420109e-10,
+            "passive_bound_J": -11.25652612069504,
+            "passivity_scale": 14.013371501030372,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 3,
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.01308666099794209,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.0742877117184984e-12,
+            "circle_violation_scaled_m_s": 3.1277894807364297e-13,
+            "sticking_m_s": 2.220446049250313e-16,
+            "support_gap_J": 4.738431869100168e-13,
+            "passive_bound_J": -6.879004838134495,
+            "passivity_scale": 9.553944930327017,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 3.552713678800501e-15
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.013571791001595557,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.0742877117184984e-12,
+            "circle_violation_scaled_m_s": 3.1277894807364297e-13,
+            "sticking_m_s": 2.220446049250313e-16,
+            "support_gap_J": 4.738431869100168e-13,
+            "passive_bound_J": -6.879004838134495,
+            "passivity_scale": 9.553944930327017,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 3.552713678800501e-15
+          }
+        }
+      }
+    },
+    {
+      "index": 4,
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "7e52bea9db4c4965995924d2c945081f53a55847a31adc4fc3ea67e9077fe1ab",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.013727994009968825,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 5.553458871593134e-09,
+            "circle_violation_scaled_m_s": 1.2168760143963509e-11,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 4.2429558130829825e-12,
+            "passive_bound_J": -0.04173723843740849,
+            "passivity_scale": 1.0419149140106096,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.006888941003126092,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 5.553458871593134e-09,
+            "circle_violation_scaled_m_s": 1.2168760143963509e-11,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 4.2429558130829825e-12,
+            "passive_bound_J": -0.04173723843740849,
+            "passivity_scale": 1.0419149140106096,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 5,
+      "input": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.008127189008519053,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 6.703097369696766e-11,
+            "circle_violation_scaled_m_s": 2.55509799591093e-11,
+            "sticking_m_s": 1.1886755154768025e-12,
+            "support_gap_J": 1.6134538149970012e-11,
+            "passive_bound_J": -0.6351133500425815,
+            "passivity_scale": 1.693018511526232,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 3.552713678800501e-15
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.008685961001901887,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 6.703097369696766e-11,
+            "circle_violation_scaled_m_s": 2.55509799591093e-11,
+            "sticking_m_s": 1.1886755154768025e-12,
+            "support_gap_J": 1.6134538149970012e-11,
+            "passive_bound_J": -0.6351133500425815,
+            "passivity_scale": 1.693018511526232,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 3.552713678800501e-15
+          }
+        }
+      }
+    },
+    {
+      "index": 6,
+      "input": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.025102946994593367,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.149265754414005e-13,
+            "circle_violation_scaled_m_s": 7.287962161454629e-17,
+            "sticking_m_s": 6.784872571695153e-13,
+            "support_gap_J": 1.3754613615295616e-13,
+            "passive_bound_J": -3.7797870810654226,
+            "passivity_scale": 5.393161276169741,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.7763568394002505e-15
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.03425323600822594,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.149265754414005e-13,
+            "circle_violation_scaled_m_s": 7.287962161454629e-17,
+            "sticking_m_s": 6.784872571695153e-13,
+            "support_gap_J": 1.3754613615295616e-13,
+            "passive_bound_J": -3.7797870810654226,
+            "passivity_scale": 5.393161276169741,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.7763568394002505e-15
+          }
+        }
+      }
+    },
+    {
+      "index": 7,
+      "input": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "a8f6601cc02e4d3b266250ece2d49440228ff8da867a8c9d62e5c1b0b7b08cdd",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 1.8265086019964656,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.314784762054179e-12,
+            "circle_violation_scaled_m_s": 2.836769367899438e-18,
+            "sticking_m_s": 6.452426354032848e-18,
+            "support_gap_J": 1.0758061108617767e-12,
+            "passive_bound_J": -1.2604320828491253,
+            "passivity_scale": 2.6591504430509247,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 1.5593696430005366,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.314784762054179e-12,
+            "circle_violation_scaled_m_s": 2.836769367899438e-18,
+            "sticking_m_s": 6.452426354032848e-18,
+            "support_gap_J": 1.0758061108617767e-12,
+            "passive_bound_J": -1.2604320828491253,
+            "passivity_scale": 2.6591504430509247,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 8,
+      "input": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "b50ea9a0f145e4878ba1f8e6683ab125b4fb9418cc138de61d29c2f76abfbefd",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.08625225401192438,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 8.868568375544756e-14,
+            "circle_violation_scaled_m_s": 2.2498862249764487e-14,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 4.354155924701786e-16,
+            "passive_bound_J": -0.7733431971857938,
+            "passivity_scale": 1.9269183789446078,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.1174370470107533,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 8.868568375544756e-14,
+            "circle_violation_scaled_m_s": 2.2498862249764487e-14,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 4.354155924701786e-16,
+            "passive_bound_J": -0.7733431971857938,
+            "passivity_scale": 1.9269183789446078,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 9,
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "d0e991d48d9d5f5fc2cb6a88bc9a3000275c78a348d94a011b636e35bfdb4152",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.00732625400996767,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.0735088488216964e-17,
+            "circle_violation_scaled_m_s": 0.0,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 0.0,
+            "passive_bound_J": -0.00023251004383264596,
+            "passivity_scale": 1.0004650200876652,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 6.288372600415926e-18
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.00805787900753785,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.0735088488216964e-17,
+            "circle_violation_scaled_m_s": 0.0,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 0.0,
+            "passive_bound_J": -0.00023251004383264596,
+            "passivity_scale": 1.0004650200876652,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 6.288372600415926e-18
+          }
+        }
+      }
+    },
+    {
+      "index": 10,
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "f1ea856559056073a0a9f29869c7580fea4690024b1bf720c200c18fbc6e2fbf",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.03381666100176517,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.7519491334130247e-09,
+            "circle_violation_scaled_m_s": 1.2970551066621477e-10,
+            "sticking_m_s": 2.628611441793944e-16,
+            "support_gap_J": 5.731359831173677e-12,
+            "passive_bound_J": -1.2048600160402605,
+            "passivity_scale": 3.2384431735631525,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.037295714995707385,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.7519491334130247e-09,
+            "circle_violation_scaled_m_s": 1.2970551066621477e-10,
+            "sticking_m_s": 2.628611441793944e-16,
+            "support_gap_J": 5.731359831173677e-12,
+            "passive_bound_J": -1.2048600160402605,
+            "passivity_scale": 3.2384431735631525,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 11,
+      "input": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "de11d75a836b8c87ea7b1ce3bce11835acf16dd9eff03f5ed343cf9f1e4dacfd",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.013744128998951055,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.393902494316418e-15,
+            "circle_violation_scaled_m_s": 2.4885693505297685e-15,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 1.0148132334464322e-16,
+            "passive_bound_J": -0.28204601797245415,
+            "passivity_scale": 1.2928383076010543,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.010791865992359817,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.393902494316418e-15,
+            "circle_violation_scaled_m_s": 2.4885693505297685e-15,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 1.0148132334464322e-16,
+            "passive_bound_J": -0.28204601797245415,
+            "passivity_scale": 1.2928383076010543,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 12,
+      "input": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "f4531a5b928532c0d73f1c8da398269749a4f158262e46c4730e193dd1f8a37c",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.12687211101001594,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 7.382119881991728e-17,
+            "circle_violation_scaled_m_s": 0.0,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 0.0,
+            "passive_bound_J": -0.00640215725843664,
+            "passivity_scale": 1.0128043145168732,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 8.326672684688674e-17
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.12543454799742904,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 7.382119881991728e-17,
+            "circle_violation_scaled_m_s": 0.0,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 0.0,
+            "passive_bound_J": -0.00640215725843664,
+            "passivity_scale": 1.0128043145168732,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 8.326672684688674e-17
+          }
+        }
+      }
+    },
+    {
+      "index": 13,
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "67af61746edf2360b7264d36909fb2b6c9b33359b7aeba489989bdefee751554",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 1.1179638399917167,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 2.346795284085842e-09,
+            "circle_violation_scaled_m_s": 2.3448028782334078e-09,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 2.1822403909951826e-13,
+            "passive_bound_J": -16.94659737385222,
+            "passivity_scale": 35.06777480167072,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.7763568394002505e-15
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 1.057430642991676,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 2.346795284085842e-09,
+            "circle_violation_scaled_m_s": 2.3448028782334078e-09,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 2.1822403909951826e-13,
+            "passive_bound_J": -16.94659737385222,
+            "passivity_scale": 35.06777480167072,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.7763568394002505e-15
+          }
+        }
+      }
+    },
+    {
+      "index": 14,
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "ba80bbe35cb56243259ed1cc60ad85d85a404c342834adfb2bf51be037d66fce",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.5094356109912042,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.92288212167501e-09,
+            "circle_violation_scaled_m_s": 2.0942572322748667e-09,
+            "sticking_m_s": 9.92288213002679e-09,
+            "support_gap_J": 6.534616499570035e-10,
+            "passive_bound_J": -0.4899048985872777,
+            "passivity_scale": 1.7369086730343453,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.5218455409922171,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 9.92288212167501e-09,
+            "circle_violation_scaled_m_s": 2.0942572322748667e-09,
+            "sticking_m_s": 9.92288213002679e-09,
+            "support_gap_J": 6.534616499570035e-10,
+            "passive_bound_J": -0.4899048985872777,
+            "passivity_scale": 1.7369086730343453,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 15,
+      "input": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "37553040631f4f8f4963f6cc0d77511587897b613aeabed9e64b70e83ca66fcf",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.6242287729983218,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.580383600955801e-09,
+            "circle_violation_scaled_m_s": 1.5757698172322444e-09,
+            "sticking_m_s": 1.274802106242436e-13,
+            "support_gap_J": 8.43307200472468e-15,
+            "passive_bound_J": -0.07953588167001699,
+            "passivity_scale": 1.134582505509326,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.6306604559940752,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.580383600955801e-09,
+            "circle_violation_scaled_m_s": 1.5757698172322444e-09,
+            "sticking_m_s": 1.274802106242436e-13,
+            "support_gap_J": 8.43307200472468e-15,
+            "passive_bound_J": -0.07953588167001699,
+            "passivity_scale": 1.134582505509326,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 16,
+      "input": "research/coulomb-diagnostics/hull42-rejected.json",
+      "sha256": "4bca254efa2ba77ee71c999935f8c81c32025549b5ccb3343ce635a948b23978",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.0067358509986661375,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull42-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 2.2407948772503345e-11,
+            "circle_violation_scaled_m_s": 1.3965385490774925e-11,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 8.311129562343922e-13,
+            "passive_bound_J": -1.7702098387916876,
+            "passivity_scale": 4.260025245227085,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 6.661338147750939e-16
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.007904693993623368,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull42-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 2.2407948772503345e-11,
+            "circle_violation_scaled_m_s": 1.3965385490774925e-11,
+            "sticking_m_s": 0.0,
+            "support_gap_J": 8.311129562343922e-13,
+            "passive_bound_J": -1.7702098387916876,
+            "passivity_scale": 4.260025245227085,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 6.661338147750939e-16
+          }
+        }
+      }
+    },
+    {
+      "index": 17,
+      "input": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "sha256": "af25204c1e2ee0381797a26b0ccaa824e66d0e4994f780bb3b75b28b8b309d5f",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 2.6630073970009107,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull7301-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.5318363176651745e-10,
+            "circle_violation_scaled_m_s": 6.987447454429917e-11,
+            "sticking_m_s": 2.3914935841127266e-15,
+            "support_gap_J": 7.460698725481052e-14,
+            "passive_bound_J": -44.1847547182151,
+            "passivity_scale": 82.42658361664014,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 2.5868464989907807,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull7301-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.5318363176651745e-10,
+            "circle_violation_scaled_m_s": 6.987447454429917e-11,
+            "sticking_m_s": 2.3914935841127266e-15,
+            "support_gap_J": 7.460698725481052e-14,
+            "passive_bound_J": -44.1847547182151,
+            "passivity_scale": 82.42658361664014,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 18,
+      "input": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "sha256": "ccd10a635622b90b61d39f3676d827dc3fdbee989eca616dd79fabe6b4430765",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 28.02168704700307,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull7301-later-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.9745651372517765e-12,
+            "circle_violation_scaled_m_s": 1.9642268726799496e-12,
+            "sticking_m_s": 1.790180836524724e-15,
+            "support_gap_J": 3.766084666345648e-15,
+            "passive_bound_J": -24.620307145130315,
+            "passivity_scale": 47.18801482173537,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 28.93437808100134,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/coulomb-diagnostics/hull7301-later-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.9745651372517765e-12,
+            "circle_violation_scaled_m_s": 1.9642268726799496e-12,
+            "sticking_m_s": 1.790180836524724e-15,
+            "support_gap_J": 3.766084666345648e-15,
+            "passive_bound_J": -24.620307145130315,
+            "passivity_scale": 47.18801482173537,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 19,
+      "input": "research/coulomb-followup/hull42-second-rejected.json",
+      "sha256": "c263492b847ec70be8c0ce25b59cc36f1074b3383945007da488903869bfb031",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.24150057398946956,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/coulomb-followup/hull42-second-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 3.6319434460190556e-09,
+            "circle_violation_scaled_m_s": 3.6310562070879817e-09,
+            "sticking_m_s": 1.8190625018674647e-16,
+            "support_gap_J": 6.3551841240756216e-15,
+            "passive_bound_J": -1.4327651932916066,
+            "passivity_scale": 3.5568725783568422,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.4210854715202004e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 0.20770799300225917,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/coulomb-followup/hull42-second-rejected.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 3.6319434460190556e-09,
+            "circle_violation_scaled_m_s": 3.6310562070879817e-09,
+            "sticking_m_s": 1.8190625018674647e-16,
+            "support_gap_J": 6.3551841240756216e-15,
+            "passive_bound_J": -1.4327651932916066,
+            "passivity_scale": 3.5568725783568422,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.4210854715202004e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 20,
+      "input": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "7b7a7649645426d21030a51310cdc235a417cbc830f0a13cfa951d4581c018d6",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 35.80360835799365,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.4373954376549585e-10,
+            "circle_violation_scaled_m_s": 3.7431295799397714e-11,
+            "sticking_m_s": 6.261424251251612e-15,
+            "support_gap_J": 3.120126379485555e-11,
+            "passive_bound_J": -100.9525565570755,
+            "passivity_scale": 190.29965974641925,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 34.97861080999428,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 1.4373954376549585e-10,
+            "circle_violation_scaled_m_s": 3.7431295799397714e-11,
+            "sticking_m_s": 6.261424251251612e-15,
+            "support_gap_J": 3.120126379485555e-11,
+            "passive_bound_J": -100.9525565570755,
+            "passivity_scale": 190.29965974641925,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 2.842170943040401e-14
+          }
+        }
+      }
+    },
+    {
+      "index": 21,
+      "input": "research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "87c8637e8df9bbcbe085c184b27e012808afcc897d26547bdf53ae5312c49d7b",
+      "default_endpoint_and_old_counters_exact": true,
+      "prior22_helper_bypassed": true,
+      "variants": {
+        "baseline": {
+          "returncode": 0,
+          "seconds_descriptive_only": 81.10620210999332,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 7.661296406183847e-11,
+            "circle_violation_scaled_m_s": 7.661056390077909e-11,
+            "sticking_m_s": 3.479993855942603e-16,
+            "support_gap_J": 9.322953600771521e-12,
+            "passive_bound_J": -0.871982311188769,
+            "passivity_scale": 2.745791675179448,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 85.6871590110095,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-translation-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 7.661296406183847e-11,
+            "circle_violation_scaled_m_s": 7.661056390077909e-11,
+            "sticking_m_s": 3.479993855942603e-16,
+            "support_gap_J": 9.322953600771521e-12,
+            "passive_bound_J": -0.871982311188769,
+            "passivity_scale": 2.745791675179448,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 1.1368683772161603e-13
+          }
+        }
+      }
+    },
+    {
+      "index": 22,
+      "input": "research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c",
+      "default_endpoint_and_old_counters_exact": false,
+      "prior22_helper_bypassed": false,
+      "variants": {
+        "baseline": {
+          "returncode": 2,
+          "seconds_descriptive_only": 0.9344090120139299,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+            "/workspace/rigid-body-collisions/research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": false,
+          "external": {
+            "accepted": false,
+            "projection_m_s": 3.102141818461103e-05,
+            "circle_violation_scaled_m_s": 0.0,
+            "sticking_m_s": 1.0743583556295202e-05,
+            "support_gap_J": 6.814338678843281e-06,
+            "passive_bound_J": -3.601423593556804,
+            "passivity_scale": 8.285062324042514,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        },
+        "candidate": {
+          "returncode": 0,
+          "seconds_descriptive_only": 1.388073369002086,
+          "command": [
+            "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_candidate",
+            "/workspace/rigid-body-collisions/research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+            "4096"
+          ],
+          "accepted": true,
+          "external": {
+            "accepted": true,
+            "projection_m_s": 2.4245394090201066e-09,
+            "circle_violation_scaled_m_s": 6.642887859839953e-10,
+            "sticking_m_s": 1.710211994351385e-14,
+            "support_gap_J": 3.5789255072198626e-14,
+            "passive_bound_J": -3.60146099568911,
+            "passivity_scale": 8.28510662412308,
+            "finite": true,
+            "bounds": true,
+            "native_response_max_discrepancy": 5.684341886080802e-14
+          }
+        }
+      }
+    }
+  ],
+  "prior22_exact": true,
+  "all23_candidate_native_and_external": true,
+  "new42_baseline_decline": true,
+  "no_runtime_or_world_claim": true
+}

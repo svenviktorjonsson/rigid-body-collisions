@@ -1,0 +1,47 @@
+{
+  "purpose": "Paired large hull follow-up after evidence-based recovery row limit increase256to384",
+  "dt_s": 0.01,
+  "common": {
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "primary_steps": 4,
+    "iterations": 4096,
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "trajectory_budget": {
+    "position_m": 0.005,
+    "velocity_m_s": 0.05,
+    "omega_rad_s": 0.1,
+    "orientation_rad": 0.01
+  },
+  "reference_rule": "Both adjacent edges of the three finest declared levels must meet one quarter of each trajectory budget and all physical gates. Earlier ladder edges remain visible but need not pass. Never skip a rejected level.",
+  "physical_gates": {
+    "quaternion_norm_error": 1e-12,
+    "energy_change_minus_boundary_work_J": 1.0,
+    "container_surface_excess_m": 0.002
+  },
+  "candidate_repetitions": 0,
+  "candidates": {},
+  "scenes": [
+    {
+      "id": "fast_rotate_shake27_hulls7301",
+      "side": 3,
+      "speed": 20,
+      "shape": "hull",
+      "shake": true,
+      "spin": 10,
+      "seed": 7301,
+      "duration": 0.12,
+      "fractions": [
+        0.06,
+        0.03,
+        0.015
+      ]
+    }
+  ],
+  "scope": "All three large rotating/shaking27-hull attempts retained. Same authored scene, controls, trajectory/physical gates and circular law as prior6attemptstudy. Recovery cap256to384 is numerical capacity, supported by267-row independently verified frozen system. Workbudget unchanged. Finiteenergy hardening also rejects nonfinite ledgers, with no change to finite mechanics. Original failed archives untouched; no accuracy preset without full refinements.",
+  "baseline_source_commit": "f6d03878e7d187b18be8d590c6e66f976232e020"
+}

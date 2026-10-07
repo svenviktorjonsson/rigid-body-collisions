@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "case": "2_box_13.0_0.3_0.2",
+    "dimension": 2,
+    "shape": "box",
+    "passed": false,
+    "error": "ValueError('Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.')"
+  }
+}

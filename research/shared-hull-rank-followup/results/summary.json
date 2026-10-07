@@ -1,0 +1,138 @@
+{
+  "execution_source_commit": "0862e30736af34b3736e53154f0679a790113f9f",
+  "plan_sha256": "acedd08ea849d26cdebf79ed522ac2b3397bdf65921efc7072274d3dc3c0f50e",
+  "binary_sha256": "f46461d5be76895025672efb8d38561ccae71f58df5ff6dee61c6dddc75d826d",
+  "source_hashes": {
+    "research/shared-hull-rank-followup/plan.json": "acedd08ea849d26cdebf79ed522ac2b3397bdf65921efc7072274d3dc3c0f50e",
+    "research/shared-hull-rank-followup/runner.py": "8546633b237dfa1f9626e05275634b6305b4f28841520c446e39354bc6b301d8",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "spatial_backend/CMakeLists.txt": "cde63138e28dc49b5dc52e5038e5973bafc78061d4c42a50d801df599467b64b",
+    "spatial_backend/coulomb.h": "882cf6f362be340faa6589fe341cd5e09d2764e0b57f47d048d117b40d60a8d2",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/runner.cpp": "22f49a16acd70a1675bc1fa131e3448a270a912f044eed579b135199d933e963",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_engine.py": "26f59675636a6106dc611b8c21dc6b0fc8889d8f46d37b04e2bc2c8493a717f6",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78"
+  },
+  "workload_note": "Timing study completed before these launches; independent archive audits/docs may run concurrently; timings descriptive only",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "attempt_count": 6,
+  "planned_attempt_count": 6,
+  "complete": true,
+  "history_count": 0,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "diagnostics": {},
+      "candidates": {},
+      "choice": null
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": false
+      },
+      "diagnostics": {},
+      "candidates": {},
+      "choice": null
+    }
+  },
+  "rejection_diagnostics": {
+    "fast_shake8_hulls42/reference_0.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_0.json",
+      "sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+      "phase": "velocity",
+      "rows": 48,
+      "residual_m_s": 1.1475683256657652e-06,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+      "phase": "velocity",
+      "rows": 51,
+      "residual_m_s": 0.000628978584597181,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_shake8_hulls42/reference_2.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_2.json",
+      "sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+      "phase": "velocity",
+      "rows": 30,
+      "residual_m_s": 1.7766607656808651e-06,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_0.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+      "phase": "velocity",
+      "rows": 216,
+      "residual_m_s": 4.4907070551831005e-07,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_1.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+      "phase": "velocity",
+      "rows": 192,
+      "residual_m_s": 1.9651417266622153e-05,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_2.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+      "phase": "velocity",
+      "rows": 123,
+      "residual_m_s": 0.005970881137765776,
+      "tolerance_m_s": 1e-08
+    }
+  },
+  "changed_discretization": "One shared world contact point: midpoint of surface endpoints for two finite dynamic bodies; finite-body surface endpoint against static/kinematic bodies. Full Jacobian, angular mobility, free-velocity and split RHS, warm angular-impulse transport, and boundary-work accounting use that same point.",
+  "hashes": {
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "traces.zip": "2a667ecda9d1ed2a37fe020f4562b533a86aebe18ba5723397773242d5a04e24",
+    "execution-source.zip": "b2a765fa0a6c76327850be80c3904255d05b8d9e77a64b51f1f56429871c7ee7"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "scene": {
+    "duration": 1e-06,
+    "gravity": [
+      0,
+      0
+    ],
+    "collision_skin_m": 0.01,
+    "bodies": [
+      {
+        "type": "kinematic",
+        "position": [
+          0,
+          -0.1
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                -2,
+                -0.1
+              ],
+              [
+                2,
+                -0.1
+              ],
+              [
+                2,
+                0.1
+              ],
+              [
+                -2,
+                0.1
+              ]
+            ],
+            "friction": 2.0
+          }
+        ]
+      },
+      {
+        "position": [
+          0,
+          0.07034952009304189
+        ],
+        "velocity": [
+          0.3,
+          -1.0
+        ],
+        "polygons": [
+          {
+            "vertices": [
+              [
+                0.08,
+                0.0
+              ],
+              [
+                0.05656854249492381,
+                0.035355339059327376
+              ],
+              [
+                4.898587196589413e-18,
+                0.05
+              ],
+              [
+                -0.056568542494923796,
+                0.03535533905932738
+              ],
+              [
+                -0.08,
+                6.123233995736766e-18
+              ],
+              [
+                -0.05656854249492382,
+                -0.035355339059327376
+              ],
+              [
+                -1.4695761589768237e-17,
+                -0.05
+              ],
+              [
+                0.05656854249492379,
+                -0.03535533905932738
+              ]
+            ],
+            "density": 88.38834764831843,
+            "friction": 2.0
+          }
+        ],
+        "angle": -0.29670597283903605
+      }
+    ]
+  },
+  "result": {
+    "states": [
+      [
+        [
+          2.626708652788287e-19,
+          0.07034952009304189,
+          -0.29670597283903616,
+          0.3,
+          -1,
+          0
+        ]
+      ],
+      [
+        [
+          -5.074694238528884e-07,
+          0.07034988264263776,
+          -0.2967005466248202,
+          -0.5074694238531512,
+          0.3625495958780798,
+          5.426214215880645
+        ]
+      ]
+    ],
+    "scalar_precision": "float64",
+    "mass": [
+      0.9999999999999999
+    ],
+    "inertia": [
+      0.0020077708627133563
+    ],
+    "boundary_work_J": 0,
+    "absolute_boundary_work_J": 0,
+    "friction_impulse_abs_kg_m_s": 0.8074694238531509,
+    "boundary_impulse_points": 1,
+    "contact_restitution": {
+      "normal": 0.6,
+      "tangential": 0.6
+    },
+    "global_contact_calls": 1,
+    "global_contact_solves": 1,
+    "global_contact_declines": 0,
+    "global_native_residual_max_m_s": 2.0571802994245518e-12,
+    "global_actual_body_residual_max_m_s": 2.0571802994245518e-12,
+    "step_s": 4.2311e-05,
+    "controller_s": 0,
+    "reported_max_penetration_fraction": 0,
+    "internal_contact_points_removed": 0,
+    "solver_work_total": 1,
+    "switches": 0,
+    "level_frames": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "selected_levels": [
+      -1
+    ],
+    "kinematic_states": [
+      [
+        [
+          0,
+          -0.1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          -0.1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "schema_version": 1,
+    "case_id": "unnamed",
+    "physical_setup_id": "6c4ae3166fa34c7eb859e865b86ba1bd5918b3e44d8baaf26694cbab1a802473",
+    "numerical_model": {
+      "backend": "block",
+      "commit": "9ebbbcd960ad424e03e5de6e66a40764c16f51bc",
+      "contact_hertz": null,
+      "contact_damping_ratio": null,
+      "max_contact_push_speed": null,
+      "position_iterations": 12,
+      "sleep": false,
+      "continuous_collision": true,
+      "suppress_internal_edges": false,
+      "scalar_precision": "float64",
+      "analytic_kinematics": false,
+      "precision_source_sha256": "31b6c7acd490813bdcac7cae838c8052ad9816a77be7a15fedd404497607967b",
+      "linear_slop_m": 0.005,
+      "implementation_note": "Locally transformed Float64 Box2D diagnostic; not an upstream Float64 release"
+    },
+    "observables": {
+      "kinetic_energy_final": {
+        "value": 0.22404191539179344,
+        "unit": "J"
+      },
+      "com_height_final": {
+        "value": 0.07034988264263776,
+        "unit": "m"
+      },
+      "body_0_vx": {
+        "value": -0.5074694238531512,
+        "unit": "m/s"
+      },
+      "body_0_vy": {
+        "value": 0.3625495958780798,
+        "unit": "m/s"
+      },
+      "body_0_omega": {
+        "value": 5.426214215880645,
+        "unit": "rad/s"
+      }
+    },
+    "evidence_kind": "numerical_simulation",
+    "parameter_provenance": "synthetic_declared",
+    "wall_time_s": 0.0029963769993628375,
+    "engine_and_controller_s": 4.2311e-05,
+    "times": [
+      0.0,
+      1e-06
+    ],
+    "fidelity": {
+      "output_dt_s": 1e-06,
+      "selection": "fixed",
+      "primary_steps": 1,
+      "solver_steps": 1,
+      "solver_steps_meaning": "velocity_iterations",
+      "policy": null
+    }
+  },
+  "checks": {
+    "case": "2_hull_-17.0_0.3_2.0",
+    "dimension": 2,
+    "shape": "hull",
+    "angle_deg": -17.0,
+    "velocity": [
+      0.3,
+      -1.0
+    ],
+    "mu": 2.0,
+    "normal_restitution": 0.6,
+    "tangential_restitution": 0.6,
+    "contact_count": 1,
+    "contact_point_world_m": [
+      0.043759865473966784,
+      0.01
+    ],
+    "normal_target_error": 2.05702122002549e-12,
+    "tangent_target_error": 2.7135516056375764e-12,
+    "capacity_limited": false,
+    "friction_bound_passed": true,
+    "angular_impulse_error": 4.037672973744577e-13,
+    "kinetic_change_minus_work_J": -0.3209580846082065,
+    "outgoing_angular_speed_rad_s": 5.426214215880645,
+    "passed": true
+  }
+}

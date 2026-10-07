@@ -1,0 +1,13 @@
+{
+  "source": "e3b3d037ed9a9b8544bd495b0169d94027eb4a83",
+  "guards": {
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/results-planar-shake/adapter.py": "6218f4c70aff0828d42f138fcc960fc40c2fb648b18242c10ce0861ecac043c7",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/planar-shake-plan.json": "d42b823102d13cbf9e16451783da9d20b501931bb41e336dd5e24ba5ef99bb78",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/plan.json": "26f803be1d027a6283c2d810d9b3071ae7a688ab54ec7e1233c1a64e605b8af8",
+    "/home/viktor/.cache/vkf-physics-continuation/research/rapid-friction/run.py": "016b50307575b4e8395ccf2f8037025f36d65a2fa1213f8527f89c0f09941dd4",
+    "/home/viktor/.cache/vkf-physics-continuation/build/rigid_double_friction/rigid_runner": "6ef7c20401af13f1bc445312e2f93cc00509737975f15c49b56503cca0b9d453",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/runner.cpp": "52ed51d8685b82eeeccf56a8e632409d2deb83bd4faf49c01855350fe99fa533",
+    "/home/viktor/.cache/vkf-physics-continuation/rigid_backend/compat2.h": "d44db56ca09ac0379df6764b51be1e530eab323eae90e66b6c25b8cea5d30f68"
+  },
+  "scene_source_sha256": "52073c6119f74166ddc31f03a92a3709c21260297fa6caa8e06a0fbb5ae47b3c"
+}

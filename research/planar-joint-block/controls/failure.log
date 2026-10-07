@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/planar-joint-block/controls.py", line 30, in <module>
+    error=float(np.max(abs(last[3:6]-expected)));assert error<=1e-8,(scene['id'],last[3:6],expected,error)
+                                                        ^^^^^^^^^^^
+AssertionError: ('circle_-1_False', array([ 1., -1.,  0.]), [0.6399999999999999, -0.1, -7.199999999999999], 7.199999999999999)

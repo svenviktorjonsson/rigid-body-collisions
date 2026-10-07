@@ -1,0 +1,23 @@
+{
+  "plan_sha256": "9d8c33e9301bd2aaa421f483acea6b18fe3a738eac16142132319dc7e2f900cc",
+  "binary_sha256": "0fc649f080864d13cc4e3a2c791b1cbf0c1639474dcb3b69c6dfcebb86d307af",
+  "pid": 68031,
+  "started_utc": "2026-10-05T18:09:48Z",
+  "libraries": {
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "7efae004d2cafae3d37c7690bbf3c1ad9e4cd01db01c125755d2db74f7a565b1",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "2b3fdbf8e9daa85ce62e449b9738cad4c8b50ba220342f51501c9ade19670895",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/Bullet3Common/libBullet3Common.a": "4dbf96db8f1b6da53e09a20133acf7229e5419219f81161fa260e31432bb53e2",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletInverseDynamics/libBulletInverseDynamics.a": "60461c8a4f873f570957fd9e8622ee349125f44ba060fc73bbeeed9acdc46d9c",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletSoftBody/libBulletSoftBody.a": "1705b4224c1b5b05ea7b69e81481006e7da1d279f740a21ee723948c924f396c",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "complete": false
+}

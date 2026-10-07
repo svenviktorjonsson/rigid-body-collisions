@@ -1,0 +1,8 @@
+{
+  "source": "14f9bcd556fbc5c356cf3bd1e8006665d6ee29db",
+  "original_precision_inventory_sha256": "bc58ef33dbc3708e577e364abbeb088d48a8cbd66f86dac2ba6ba8ab30111169",
+  "prototype_sha256": "85a8e027104a8ce8ed63ca715f13225d3b6cef7b4ecfa3e340a5221102b82ca3",
+  "transformed_runner_sha256": "77a4572a684dbe7b827ca790e3d20ff5d371bbfa1b40b76a9ed385e452385e0c",
+  "binary_sha256": "3473ed4fc7c4a6262964b982b38fe40b17fe54683fb4f6d9b0d92df01202f077",
+  "scope": "Isolated override; original precision inventory preserved, production source and old binaries untouched."
+}

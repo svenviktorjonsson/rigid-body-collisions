@@ -1,0 +1,721 @@
+{
+  "schema": "independent-completion-review-v1",
+  "structure": {
+    "cases": [
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+        "capture_sha256": "0fd0e143eeb7794e7753ddf09ca1f05dfde9f6e90668cc8493a8d7047da68a78",
+        "rows": 216,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -1.0420128793271372e-14,
+        "maximum_eigenvalue": 65.34078615722652,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          0,
+          11,
+          25,
+          26,
+          27,
+          28,
+          47,
+          48,
+          55,
+          60,
+          68
+        ],
+        "active_normal_target_rank": 11
+      },
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+        "capture_sha256": "308edb5a545135e8f0394f92c9e88aaf90a928a3ac1f85aba4f6871655771d52",
+        "rows": 192,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -9.088583550432638e-15,
+        "maximum_eigenvalue": 48.57630519675521,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          1,
+          6,
+          9,
+          29,
+          30,
+          31,
+          52
+        ],
+        "active_normal_target_rank": 7
+      },
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+        "capture_sha256": "efd6129cb2bda20c3f19cd746fd1048978f295320478fc703d176cd315ed2c19",
+        "rows": 123,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -8.272974378070003e-15,
+        "maximum_eigenvalue": 50.414372688236014,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          1,
+          2,
+          3,
+          5,
+          13,
+          21,
+          34,
+          35
+        ],
+        "active_normal_target_rank": 8
+      },
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+        "capture_sha256": "904babcc80c48115bea143f2727a905996fdad139d411ad6ae7165196b675ff1",
+        "rows": 48,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -7.971361077630119e-15,
+        "maximum_eigenvalue": 34.06158924324194,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          2,
+          3,
+          4,
+          15
+        ],
+        "active_normal_target_rank": 4
+      },
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+        "capture_sha256": "9b374a73d249e7d3105a2df44e61dfbb1c31f693176575aebd785f74b2362ff9",
+        "rows": 51,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -8.100371779992123e-15,
+        "maximum_eigenvalue": 42.72447592641066,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          2,
+          3,
+          5,
+          16
+        ],
+        "active_normal_target_rank": 4
+      },
+      {
+        "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+        "capture_sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+        "rows": 30,
+        "symmetry_error": 0.0,
+        "minimum_eigenvalue": -2.4537510687077487e-15,
+        "maximum_eigenvalue": 37.48974016993872,
+        "normal_only_inequality_feasible": true,
+        "active_normal_rows": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "active_normal_target_rank": 6
+      }
+    ],
+    "interpretation": "No mobility asymmetry, non-PSD physics, or inconsistent warm active-normal equalities found. Normal-only LP is not a certificate of a complete frictional solution. Mode-search failure is not an infeasibility certificate."
+  },
+  "elastic_events": {
+    "before_commit": "2f5ffc38dd69db72442d6c9972703092bfa91d3b",
+    "before_source_sha256": "fb3390f632bd869d7404290bd9d7faf2b24a6d3916912ade4250e0313a24b142",
+    "after_source_sha256": "d088556fdff08effdd3c1214265bdc27ae5f873d21d12503bad1017b73361973",
+    "cases": [
+      {
+        "version": "before",
+        "name": "rest",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "side_with_floor_grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "corner_inward",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          -1
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 894,
+        "contact_events": 2,
+        "energy_residual_max_J": 7.327471962526033e-15,
+        "final_state": [
+          0.09813069192291031,
+          0.0,
+          0.09813069192291031,
+          -0.806578409885071,
+          0.0,
+          -0.806578409885071,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "before",
+        "name": "rest",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "side_with_floor_grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": false,
+        "error": "elastic prototype exceeded RHS evaluation budget; no accepted result"
+      },
+      {
+        "version": "before",
+        "name": "corner_inward",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          -1
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 894,
+        "contact_events": 2,
+        "energy_residual_max_J": 7.327471962526033e-15,
+        "final_state": [
+          0.09813069192291031,
+          0.0,
+          0.09813069192291031,
+          -0.806578409885071,
+          0.0,
+          -0.806578409885071,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "rest",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 0,
+        "contact_events": 0,
+        "energy_residual_max_J": 0.0,
+        "final_state": [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 0,
+        "contact_events": 0,
+        "energy_residual_max_J": 0.0,
+        "final_state": [
+          0.002,
+          0.0,
+          0.1,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "side_with_floor_grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 302,
+        "contact_events": 0,
+        "energy_residual_max_J": 3.552713678800501e-15,
+        "final_state": [
+          0.09813069192291034,
+          0.0,
+          0.1,
+          -0.8065784098850771,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "corner_inward",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 0
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          -1
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 632,
+        "contact_events": 0,
+        "energy_residual_max_J": 7.327471962526033e-15,
+        "final_state": [
+          0.09813069192291031,
+          0.0,
+          0.09813069192291031,
+          -0.806578409885071,
+          0.0,
+          -0.806578409885071,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "rest",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 0,
+        "contact_events": 0,
+        "energy_residual_max_J": 0.0,
+        "final_state": [
+          0.0,
+          0.0,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0,
+          0,
+          0.1
+        ],
+        "velocity": [
+          1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 0,
+        "contact_events": 0,
+        "energy_residual_max_J": 0.0,
+        "final_state": [
+          0.002,
+          0.0,
+          0.1,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "side_with_floor_grazing",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          0
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 302,
+        "contact_events": 0,
+        "energy_residual_max_J": 3.552713678800501e-15,
+        "final_state": [
+          0.09813069192291034,
+          0.0,
+          0.1,
+          -0.8065784098850771,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "version": "after",
+        "name": "corner_inward",
+        "material": {
+          "mass": 1.0,
+          "radius": 0.1,
+          "normal_stiffness": 100000.0,
+          "tangent_stiffness": 0,
+          "twist_stiffness": 0,
+          "effective_length": 0.02,
+          "friction": 1.0,
+          "normal_damping": 0.0,
+          "compression_exponent": 2
+        },
+        "position": [
+          0.1,
+          0,
+          0.1
+        ],
+        "velocity": [
+          -1,
+          0,
+          -1
+        ],
+        "duration_s": 0.002,
+        "rhs_budget": 3000,
+        "accepted": true,
+        "rhs_evaluations": 632,
+        "contact_events": 0,
+        "energy_residual_max_J": 7.327471962526033e-15,
+        "final_state": [
+          0.09813069192291031,
+          0.0,
+          0.09813069192291031,
+          -0.806578409885071,
+          0.0,
+          -0.806578409885071,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  }
+}

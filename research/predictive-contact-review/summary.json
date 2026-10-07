@@ -1,0 +1,8 @@
+{
+  "native_cases": 42,
+  "discovery_cases": 30,
+  "maximum_endpoint_identity_error": 4.607859233063394e-17,
+  "maximum_linear_momentum_error": 0.0,
+  "maximum_common_point_angular_error": 2.7755575615628914e-17,
+  "maximum_energy_increase_J": 0.0
+}

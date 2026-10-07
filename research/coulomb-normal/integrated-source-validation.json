@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "spatial_backend/coulomb.h": "9d23d1b3ec51d5e2e9db78bbd24a403ad3a1ede5348b215b67462dd8356cc114",
+    "spatial_backend/coulomb_active.h": "9c0c5c49e3c0f0eae5b449fe9316104fb458d50e9c0562bb2bb8cd84aa2fee87",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/coulomb_replay.cpp": "65654c8eda6f00f01dce6f2d7228434ca4bbc3465101055d522ae9360f63376f",
+    "spatial_backend/runner.cpp": "5d8c9e771edb416565496c45747e4276dec000ddbe42e301d22367ad34b2bf5d",
+    "spatial_engine.py": "d686d83b21b895698b1bd4d6e761be5eb14435b2ebe7ab95a8d9b20731f92664"
+  },
+  "binary_sha256": "ef0474b58937b44718b42800b59df7966f691c11c3ab9e5ed9fbc9f81e1702bc",
+  "captured_systems": 16,
+  "all_independent_contact_and_passivity_checks_passed": true,
+  "scope": "Captured systems; full trajectory qualification remains separate"
+}

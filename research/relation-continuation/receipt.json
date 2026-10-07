@@ -1,0 +1,14 @@
+{
+  "prior22_exact": true,
+  "all23_candidate_native_and_external": true,
+  "new42_baseline_decline": true,
+  "no_runtime_or_world_claim": true,
+  "archive_sha256": "06a45d78495fb71ff2e3a70a875e1bc2f1d942cab89bf87dd92d00be1aa6cc3e",
+  "python_regressions": {
+    "passed": 109,
+    "skipped": 53,
+    "subtests_passed": 31
+  },
+  "controls": 9,
+  "production_files_unchanged": true
+}

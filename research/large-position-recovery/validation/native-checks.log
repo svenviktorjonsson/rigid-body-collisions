@@ -1,0 +1,14 @@
+spatial_qp_checks 0 Normal QP analytic checks PASS 
+spatial_friction_checks 0 Circular Coulomb analytic checks PASS (8 cases + gyroscopic free-slip regression + 3 Newton linear checks + energy overflow rejection) 
+shared_contact_checks 0 Shared contact checks PASS (full inertia, rotated/swapped rows, normal/tangent targets, split RHS, warm start, gyro, P/L/energy, endpoint selection, unsupported flags) 
+translation_split_checks 0 Translation split checks PASS (Gram, isolated pushes, redundant and infeasible constraints) 
+active_contact_checks 0 PASS pressure release/redundancy/infeasibility/failed-output; full450-row inactive-contact expansion 
+normal_null_checks 0 9 normal-null controls passed (including translation recovery enable/disable) 
+coulomb_restart_checks 0 PASS: rank-deficient and weak-direction TRF; invalid shape/radius/nonfinite; analytical contact; budget/dependency/output preservation 
+support_restart_checks 0 PASS exact component triples, independent support66, untouched tiny couplings, no-work cap rejection, invalid dependency/nonfinite and failure-output preservation 
+translation_combined_checks 0 PASS actual upstream parity: warm normal/two tangents/fixed and rotating kinematic slots/rotated anisotropic inertia/external force and gyro/nonunit factors; originals unchanged
+PASS full angular physical normal rate; fake push/turn excluded
+PASS finite/dimension/index/alias rejection and output preservation; normal-order target bookkeeping
+PASS all 15 distance/rate branches, signed remaining clearance and opposing-face zero-push control 
+coulomb_early_checks 0 Optional scheduling local checks passed; captured/trajectory checks remain separate. 
+projection_tail_checks 0 {"controls":[{"accepted":true,"name":"diagonal-stick","passed":true,"svd_calls":2,"unchanged_on_decline":true},{"accepted":true,"name":"separating","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"zero-budget","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"negative-budget","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"cap-66","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"negative-friction","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"nan-matrix","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"invalid-dependency","passed":true,"svd_calls":0,"unchanged_on_decline":true},{"accepted":false,"name":"inconsistent-PSD-normal-targets","passed":true,"svd_calls":64,"unchanged_on_decline":true}],"passed":true} 

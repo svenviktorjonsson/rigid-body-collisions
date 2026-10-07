@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "archived_source_binary_and_runtime_hashes_verified": true,
+  "current_live_source_and_binary_unchanged": false,
+  "source": "6b63cb23726b175bc1440b73fe18a768a500bdbf",
+  "independent_rejection_count": 10,
+  "rejections": [
+    {
+      "record": "results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "sha256": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+      "rows": 423,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_125/reference_1.rejection.json",
+      "sha256": "1c7b486702b882947cec3a2a8c86488ffccbaed8d343a7cea4441186a2729821",
+      "rows": 693,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.1503381559372503e-05,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.1503381559426722e-05,
+        "support_gap_J": 1.2400995067752097e-05,
+        "passive_bound_J": -74.65611571597529,
+        "passivity_scale": 148.01041005940087,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_125/reference_2.rejection.json",
+      "sha256": "70c6421f79f6a96214222a87f4aca45e3bda62befdf32196906f35dd53edd479",
+      "rows": 789,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 0.00032515082572452013,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 3.683898534802627e-05,
+        "support_gap_J": 2.538276823960887e-05,
+        "passive_bound_J": -5.779887944666506,
+        "passivity_scale": 10.703498171150306,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_125/reference_3.rejection.json",
+      "sha256": "4c5db647330fccfb23c3588766da397379fe87188211a0695afcbaea2240df25",
+      "rows": 843,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 5.553034153868632e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 5.449816859705921e-09,
+        "support_gap_J": 2.8174401900002003e-10,
+        "passive_bound_J": -0.6183755441150255,
+        "passivity_scale": 1.7809600078699201,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_125/reference_4.rejection.json",
+      "sha256": "8ce3890f4787cdda31c6d455ca0a8f7e314636ae1f7836d9514b61897d3a5f18",
+      "rows": 390,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 3.354290072891282e-07,
+        "phase": "position_translation"
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "sha256": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+      "rows": 162,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.3488661492675957e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.3488661492316735e-08,
+        "support_gap_J": 4.559643492309045e-12,
+        "passive_bound_J": -0.0809855726534944,
+        "passivity_scale": 1.081142388387037,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_64/reference_1.rejection.json",
+      "sha256": "d7417c7d5ecd4e57a3003fea2552874bd5947adf4f2654e662480aa208192240",
+      "rows": 249,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 7.09099875353462e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 4.4776696636453344e-08,
+        "support_gap_J": 5.8698392158070665e-09,
+        "passive_bound_J": -2.8494044565158836,
+        "passivity_scale": 5.001928508655267,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_64/reference_2.rejection.json",
+      "sha256": "ef5d4efff25f33957a72f191dab102e27efe4be2606af82a9f3164a070824383",
+      "rows": 294,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.5426846478577063e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.542684648479067e-07,
+        "support_gap_J": 2.6941046962413364e-08,
+        "passive_bound_J": -7.801208465817561,
+        "passivity_scale": 13.596159030503209,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "rows": 297,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    },
+    {
+      "record": "results-large-irregular/3d_hull_64/reference_4.rejection.json",
+      "sha256": "c2514400e335a074e3a3fce36be85b07e0ab5785abdc07fc3ffd0aea612ed754",
+      "rows": 180,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 8.57967075596078e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 8.579670754932608e-07,
+        "support_gap_J": 6.9287589658032364e-09,
+        "passive_bound_J": -1.5996972852108344,
+        "passivity_scale": 2.959106158141579,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 0.0
+      }
+    }
+  ]
+}

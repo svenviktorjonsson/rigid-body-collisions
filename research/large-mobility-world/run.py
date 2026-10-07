@@ -1,0 +1,12 @@
+"""Fresh unchanged irregular worlds with guarded production numerical tail."""
+import hashlib,json,os,re,subprocess,sys,time
+from pathlib import Path
+from importlib import import_module
+from spatial_engine import run
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];plan=json.loads((H/'plan.json').read_text());case=plan['cases'][int(sys.argv[1])];D=H/'results'/case['name'];D.mkdir(parents=True,exist_ok=False);save=lambda p,x:p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+assert os.environ['OMP_NUM_THREADS']=='1' and os.environ['OPENBLAS_NUM_THREADS']=='1';entry=json.loads((ROOT/'research/rapid-friction/results-large-irregular/scenes.json').read_text())[case['case']];assert hashlib.sha256(json.dumps(entry['scene'],sort_keys=True,separators=(',',':')).encode()).hexdigest()==case['scene_sha256'];save(D/'scene.json',entry)
+paths=[Path(__file__),H/'plan.json',ROOT/'spatial_engine.py',ROOT/'build/spatial/spatial_runner',*[p for p in (ROOT/'spatial_backend').glob('*') if p.is_file()]];guards={str(p):sha(p) for p in paths};libs=re.findall(r'(/\S+)\s+\(',subprocess.check_output(['ldd',str(ROOT/'build/spatial/spatial_runner')],text=True));save(D/'provenance.json',{'integrated_source':plan['source'],'execution_source':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'guards':guards,'runtime':{str(Path(p).resolve()):sha(Path(p).resolve()) for p in libs}});start=time.perf_counter()
+try:
+ result=run(entry['scene'],solver='coulomb',iterations=4096,kinematic_contact_phase='start',position_stabilization='split_translation_combined',contact_point_policy='shared',contact_tolerance_m_s=1e-8,contact_slop_m=1e-9,contact_recovery=True,early_component_recovery=True,rejected_contact_path=D/'rejection.json',progress_checkpoint_path=D/'progress.json',**case['setting']);base=import_module('research.rapid-friction.run');gates=json.loads((ROOT/'research/rapid-friction/plan.json').read_text());record={'complete':True,'result':result,'physical':base.physical(entry,result,gates)}
+except (RuntimeError,subprocess.CalledProcessError) as e:record={'complete':False,'error':str(e),'stderr':getattr(e,'stderr',None)}
+record.update(setting=case['setting'],elapsed_s_descriptive=time.perf_counter()-start,source_binary_unchanged=all(sha(p)==digest for p,digest in guards.items()));assert record['source_binary_unchanged'];save(D/'final.json',record);print({k:v for k,v in record.items() if k!='result'},flush=True)

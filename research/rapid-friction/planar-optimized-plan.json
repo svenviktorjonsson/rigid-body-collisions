@@ -1,0 +1,11 @@
+{
+  "purpose": "Expand the candidate grid after the unchanged tight-slop 9/25-disk references qualify. Preserve all earlier attempts; reuse sealed full reference histories and BOTH passing final refinement edges.",
+  "reference_archive": "results-planar-tight",
+  "binary": "build/rigid_double_tight/rigid_runner",
+  "primary_steps": [1000, 2000, 4000],
+  "velocity_iterations": [8, 32, 128],
+  "dt": 0.01,
+  "position_iterations": 12,
+  "timing_repetitions": 3,
+  "rule": "The supported build must reproduce prototype histories bitwise first. Every candidate must pass unchanged physical/full trajectory gates and show positive friction impulses. Select cheapest observed passing setting; warm each variant once, then execute three alternating interleaved repetitions. Each warmup/timed result must pass and states must repeat bitwise. Native and adapter-process costs disclosed. No model/material/gate changes and no claim for arbitrary polygons or rotating groups. Publish exact source/plan before execution."
+}

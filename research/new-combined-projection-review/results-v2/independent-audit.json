@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "source_commit": "170d798b113863dc4bee3df515bb8ab63175ea21",
+  "capture_sha256": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c",
+  "controls_passed": 9,
+  "accepted_trials": 1,
+  "rejected_trials": 1,
+  "records": [
+    {
+      "label": "projection-jac-scaled-2048",
+      "svd_calls": 1283,
+      "original_returned_gate": {
+        "accepted": true,
+        "residual_m_s": 7.605968580938948e-09,
+        "passivity_J": -3.6014609840943814,
+        "passivity_scale": 8.285106606828878
+      },
+      "last_numerical_candidate": {
+        "accepted": true,
+        "residual_m_s": 7.605968580938948e-09,
+        "passivity_J": -3.6014609840943814,
+        "passivity_scale": 8.285106606828878
+      },
+      "output_unchanged_on_decline": true
+    },
+    {
+      "label": "exact-components-global-1024",
+      "svd_calls": 1024,
+      "original_returned_gate": {
+        "accepted": false,
+        "residual_m_s": 3.102141818461103e-05,
+        "passivity_J": -3.601423593556805,
+        "passivity_scale": 8.285062324042514
+      },
+      "last_numerical_candidate": {
+        "accepted": false,
+        "residual_m_s": 1.4976114066585054e-06,
+        "passivity_J": -3.6014575843439656,
+        "passivity_scale": 8.285101462982546
+      },
+      "output_unchanged_on_decline": true
+    }
+  ],
+  "physical_law_unchanged": true,
+  "strict_original_tolerance_m_s": 1e-08,
+  "trajectory_qualified": false
+}

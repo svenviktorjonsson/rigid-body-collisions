@@ -1,0 +1,54 @@
+{
+  "2d_disks": {
+    "full_histories": 5,
+    "physical_passes": 5,
+    "edges": [
+      {
+        "left": 0,
+        "right": 1,
+        "passed": false,
+        "errors": {
+          "position_m": 0.036279976627150164,
+          "velocity_m_s": 3.5904904916183726,
+          "omega_rad_s": 46.5524336440712,
+          "orientation_rad": 0.8549374094674983
+        }
+      },
+      {
+        "left": 1,
+        "right": 2,
+        "passed": false,
+        "errors": {
+          "position_m": 0.06022536578710017,
+          "velocity_m_s": 4.064725487680426,
+          "omega_rad_s": 44.347980294438464,
+          "orientation_rad": 0.8400433980308234
+        }
+      },
+      {
+        "left": 2,
+        "right": 3,
+        "passed": false,
+        "errors": {
+          "position_m": 0.06317592537792893,
+          "velocity_m_s": 3.2532244594937505,
+          "omega_rad_s": 45.89067915510608,
+          "orientation_rad": 0.7930163228393713
+        }
+      },
+      {
+        "left": 3,
+        "right": 4,
+        "passed": false,
+        "errors": {
+          "position_m": 0.07797433919649732,
+          "velocity_m_s": 3.420488687616627,
+          "omega_rad_s": 31.873383510453543,
+          "orientation_rad": 0.8725226929058442
+        }
+      }
+    ],
+    "reference_qualified": false,
+    "performance_qualified": false
+  }
+}

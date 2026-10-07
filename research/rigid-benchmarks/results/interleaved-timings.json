@@ -1,0 +1,3659 @@
+{
+  "seed": 20261004,
+  "repeats": 20,
+  "cases": [
+    {
+      "case_id": "concave_L_drop",
+      "round_order": [
+        [
+          "temporal_standard",
+          "temporal_accurate",
+          "block_adaptive",
+          "block_high",
+          "block_accurate",
+          "block_fast",
+          "block_standard"
+        ],
+        [
+          "block_accurate",
+          "temporal_standard",
+          "block_fast",
+          "block_high",
+          "block_standard",
+          "temporal_accurate",
+          "block_adaptive"
+        ],
+        [
+          "block_high",
+          "temporal_accurate",
+          "block_fast",
+          "block_adaptive",
+          "block_standard",
+          "block_accurate",
+          "temporal_standard"
+        ],
+        [
+          "block_adaptive",
+          "temporal_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_high",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "temporal_standard",
+          "block_accurate",
+          "block_high",
+          "block_adaptive",
+          "block_fast",
+          "block_standard",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "temporal_accurate",
+          "block_high",
+          "block_adaptive",
+          "block_fast",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "block_fast",
+          "block_standard",
+          "block_high",
+          "temporal_standard",
+          "block_adaptive",
+          "block_accurate",
+          "temporal_accurate"
+        ],
+        [
+          "block_standard",
+          "temporal_standard",
+          "block_high",
+          "block_accurate",
+          "block_adaptive",
+          "block_fast",
+          "temporal_accurate"
+        ],
+        [
+          "block_adaptive",
+          "temporal_accurate",
+          "block_fast",
+          "block_high",
+          "temporal_standard",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "block_fast",
+          "block_adaptive",
+          "temporal_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "block_accurate",
+          "block_high",
+          "temporal_standard",
+          "block_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_adaptive"
+        ],
+        [
+          "block_fast",
+          "block_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_accurate",
+          "temporal_standard",
+          "block_adaptive"
+        ],
+        [
+          "block_fast",
+          "block_standard",
+          "temporal_accurate",
+          "block_accurate",
+          "temporal_standard",
+          "block_adaptive",
+          "block_high"
+        ],
+        [
+          "block_high",
+          "block_fast",
+          "block_adaptive",
+          "block_accurate",
+          "temporal_standard",
+          "block_standard",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_accurate",
+          "block_adaptive",
+          "block_standard",
+          "block_accurate",
+          "block_high",
+          "block_fast",
+          "temporal_standard"
+        ],
+        [
+          "block_accurate",
+          "block_high",
+          "block_adaptive",
+          "block_standard",
+          "block_fast",
+          "temporal_standard",
+          "temporal_accurate"
+        ],
+        [
+          "block_fast",
+          "block_high",
+          "block_standard",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_standard",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "block_adaptive",
+          "block_fast",
+          "block_standard",
+          "block_accurate",
+          "temporal_accurate",
+          "block_high"
+        ],
+        [
+          "block_standard",
+          "block_fast",
+          "block_accurate",
+          "temporal_standard",
+          "block_adaptive",
+          "block_high",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "block_accurate",
+          "temporal_accurate",
+          "block_adaptive",
+          "block_high",
+          "block_fast",
+          "block_standard"
+        ]
+      ],
+      "samples": {
+        "block_fast": [
+          {
+            "solver_controller_s": 0.00048489,
+            "controller_s": 0,
+            "end_to_end_s": 0.0045576400007121265
+          },
+          {
+            "solver_controller_s": 0.00058987,
+            "controller_s": 0,
+            "end_to_end_s": 0.0056446830021741334
+          },
+          {
+            "solver_controller_s": 0.000498571,
+            "controller_s": 0,
+            "end_to_end_s": 0.006662227999186143
+          },
+          {
+            "solver_controller_s": 0.000479755,
+            "controller_s": 0,
+            "end_to_end_s": 0.00448365299962461
+          },
+          {
+            "solver_controller_s": 0.000479485,
+            "controller_s": 0,
+            "end_to_end_s": 0.004336387999501312
+          },
+          {
+            "solver_controller_s": 0.000579689,
+            "controller_s": 0,
+            "end_to_end_s": 0.00524308099920745
+          },
+          {
+            "solver_controller_s": 0.000795615,
+            "controller_s": 0,
+            "end_to_end_s": 0.005893483001273125
+          },
+          {
+            "solver_controller_s": 0.0005239,
+            "controller_s": 0,
+            "end_to_end_s": 0.0050354070008324925
+          },
+          {
+            "solver_controller_s": 0.00050276,
+            "controller_s": 0,
+            "end_to_end_s": 0.005017969000618905
+          },
+          {
+            "solver_controller_s": 0.000661467,
+            "controller_s": 0,
+            "end_to_end_s": 0.005634588000248186
+          },
+          {
+            "solver_controller_s": 0.000497985,
+            "controller_s": 0,
+            "end_to_end_s": 0.004617488997610053
+          },
+          {
+            "solver_controller_s": 0.000591148,
+            "controller_s": 0,
+            "end_to_end_s": 0.005573118000029353
+          },
+          {
+            "solver_controller_s": 0.000554048,
+            "controller_s": 0,
+            "end_to_end_s": 0.005701174999558134
+          },
+          {
+            "solver_controller_s": 0.00048387,
+            "controller_s": 0,
+            "end_to_end_s": 0.004863453999860212
+          },
+          {
+            "solver_controller_s": 0.001022653,
+            "controller_s": 0,
+            "end_to_end_s": 0.005345792000298388
+          },
+          {
+            "solver_controller_s": 0.000482071,
+            "controller_s": 0,
+            "end_to_end_s": 0.004707954998593777
+          },
+          {
+            "solver_controller_s": 0.000646336,
+            "controller_s": 0,
+            "end_to_end_s": 0.00483908599926508
+          },
+          {
+            "solver_controller_s": 0.000600522,
+            "controller_s": 0,
+            "end_to_end_s": 0.005509278998943046
+          },
+          {
+            "solver_controller_s": 0.000597919,
+            "controller_s": 0,
+            "end_to_end_s": 0.005560229001275729
+          },
+          {
+            "solver_controller_s": 0.000500166,
+            "controller_s": 0,
+            "end_to_end_s": 0.004751160999148851
+          }
+        ],
+        "block_standard": [
+          {
+            "solver_controller_s": 0.000803571,
+            "controller_s": 0,
+            "end_to_end_s": 0.0053351479982666206
+          },
+          {
+            "solver_controller_s": 0.000745607,
+            "controller_s": 0,
+            "end_to_end_s": 0.005901355001697084
+          },
+          {
+            "solver_controller_s": 0.000667433,
+            "controller_s": 0,
+            "end_to_end_s": 0.0055857379993540235
+          },
+          {
+            "solver_controller_s": 0.000656425,
+            "controller_s": 0,
+            "end_to_end_s": 0.004671773000154644
+          },
+          {
+            "solver_controller_s": 0.000622816,
+            "controller_s": 0,
+            "end_to_end_s": 0.004482082000322407
+          },
+          {
+            "solver_controller_s": 0.000605783,
+            "controller_s": 0,
+            "end_to_end_s": 0.005215871999098454
+          },
+          {
+            "solver_controller_s": 0.000607266,
+            "controller_s": 0,
+            "end_to_end_s": 0.005458327999804169
+          },
+          {
+            "solver_controller_s": 0.000626983,
+            "controller_s": 0,
+            "end_to_end_s": 0.004657339999539545
+          },
+          {
+            "solver_controller_s": 0.000642884,
+            "controller_s": 0,
+            "end_to_end_s": 0.007033221001620404
+          },
+          {
+            "solver_controller_s": 0.000693703,
+            "controller_s": 0,
+            "end_to_end_s": 0.005177844999707304
+          },
+          {
+            "solver_controller_s": 0.000826078,
+            "controller_s": 0,
+            "end_to_end_s": 0.0067923919996246696
+          },
+          {
+            "solver_controller_s": 0.000691503,
+            "controller_s": 0,
+            "end_to_end_s": 0.004648288999305805
+          },
+          {
+            "solver_controller_s": 0.000863493,
+            "controller_s": 0,
+            "end_to_end_s": 0.005518939000467071
+          },
+          {
+            "solver_controller_s": 0.000601936,
+            "controller_s": 0,
+            "end_to_end_s": 0.004538238001259742
+          },
+          {
+            "solver_controller_s": 0.000612805,
+            "controller_s": 0,
+            "end_to_end_s": 0.005170239001017762
+          },
+          {
+            "solver_controller_s": 0.000662615,
+            "controller_s": 0,
+            "end_to_end_s": 0.005072953998023877
+          },
+          {
+            "solver_controller_s": 0.000689426,
+            "controller_s": 0,
+            "end_to_end_s": 0.00471339100113255
+          },
+          {
+            "solver_controller_s": 0.000606967,
+            "controller_s": 0,
+            "end_to_end_s": 0.006852926999272313
+          },
+          {
+            "solver_controller_s": 0.000732969,
+            "controller_s": 0,
+            "end_to_end_s": 0.005031819000578253
+          },
+          {
+            "solver_controller_s": 0.000755739,
+            "controller_s": 0,
+            "end_to_end_s": 0.0054279120013234206
+          }
+        ],
+        "block_accurate": [
+          {
+            "solver_controller_s": 0.003267158,
+            "controller_s": 0,
+            "end_to_end_s": 0.007576580002933042
+          },
+          {
+            "solver_controller_s": 0.003042996,
+            "controller_s": 0,
+            "end_to_end_s": 0.007344308000028832
+          },
+          {
+            "solver_controller_s": 0.00328593,
+            "controller_s": 0,
+            "end_to_end_s": 0.010231193999061361
+          },
+          {
+            "solver_controller_s": 0.003222648,
+            "controller_s": 0,
+            "end_to_end_s": 0.007181869001215091
+          },
+          {
+            "solver_controller_s": 0.003600067,
+            "controller_s": 0,
+            "end_to_end_s": 0.008144037001329707
+          },
+          {
+            "solver_controller_s": 0.003709726,
+            "controller_s": 0,
+            "end_to_end_s": 0.008098495000012917
+          },
+          {
+            "solver_controller_s": 0.004089734,
+            "controller_s": 0,
+            "end_to_end_s": 0.008307885000249371
+          },
+          {
+            "solver_controller_s": 0.003245871,
+            "controller_s": 0,
+            "end_to_end_s": 0.007439024000632344
+          },
+          {
+            "solver_controller_s": 0.004152899,
+            "controller_s": 0,
+            "end_to_end_s": 0.010007443997892551
+          },
+          {
+            "solver_controller_s": 0.003311453,
+            "controller_s": 0,
+            "end_to_end_s": 0.007178206000389764
+          },
+          {
+            "solver_controller_s": 0.003786244,
+            "controller_s": 0,
+            "end_to_end_s": 0.008248598001955543
+          },
+          {
+            "solver_controller_s": 0.003523254,
+            "controller_s": 0,
+            "end_to_end_s": 0.007546590000856668
+          },
+          {
+            "solver_controller_s": 0.004702091,
+            "controller_s": 0,
+            "end_to_end_s": 0.010654585999873234
+          },
+          {
+            "solver_controller_s": 0.003107001,
+            "controller_s": 0,
+            "end_to_end_s": 0.007933647000754718
+          },
+          {
+            "solver_controller_s": 0.003376272,
+            "controller_s": 0,
+            "end_to_end_s": 0.008685687997058267
+          },
+          {
+            "solver_controller_s": 0.003880328,
+            "controller_s": 0,
+            "end_to_end_s": 0.00838742700216244
+          },
+          {
+            "solver_controller_s": 0.003549508,
+            "controller_s": 0,
+            "end_to_end_s": 0.007707135999226011
+          },
+          {
+            "solver_controller_s": 0.003794199,
+            "controller_s": 0,
+            "end_to_end_s": 0.009020872999826679
+          },
+          {
+            "solver_controller_s": 0.003173998,
+            "controller_s": 0,
+            "end_to_end_s": 0.007513260003179312
+          },
+          {
+            "solver_controller_s": 0.003236785,
+            "controller_s": 0,
+            "end_to_end_s": 0.007387239002127899
+          }
+        ],
+        "block_high": [
+          {
+            "solver_controller_s": 0.010752405,
+            "controller_s": 0,
+            "end_to_end_s": 0.015699826999480138
+          },
+          {
+            "solver_controller_s": 0.017645561,
+            "controller_s": 0,
+            "end_to_end_s": 0.023284858998522395
+          },
+          {
+            "solver_controller_s": 0.008855079,
+            "controller_s": 0,
+            "end_to_end_s": 0.013795479000691557
+          },
+          {
+            "solver_controller_s": 0.009327893,
+            "controller_s": 0,
+            "end_to_end_s": 0.013666291000845376
+          },
+          {
+            "solver_controller_s": 0.009494582,
+            "controller_s": 0,
+            "end_to_end_s": 0.014653294001618633
+          },
+          {
+            "solver_controller_s": 0.008966797,
+            "controller_s": 0,
+            "end_to_end_s": 0.01348395699824323
+          },
+          {
+            "solver_controller_s": 0.010470418,
+            "controller_s": 0,
+            "end_to_end_s": 0.017750672002875945
+          },
+          {
+            "solver_controller_s": 0.010347722,
+            "controller_s": 0,
+            "end_to_end_s": 0.014816419999988284
+          },
+          {
+            "solver_controller_s": 0.009518486,
+            "controller_s": 0,
+            "end_to_end_s": 0.014451545001065824
+          },
+          {
+            "solver_controller_s": 0.009174868,
+            "controller_s": 0,
+            "end_to_end_s": 0.015526240000326652
+          },
+          {
+            "solver_controller_s": 0.010130218,
+            "controller_s": 0,
+            "end_to_end_s": 0.014442530999076553
+          },
+          {
+            "solver_controller_s": 0.008753809,
+            "controller_s": 0,
+            "end_to_end_s": 0.01275934099976439
+          },
+          {
+            "solver_controller_s": 0.039684925,
+            "controller_s": 0,
+            "end_to_end_s": 0.047939082000084454
+          },
+          {
+            "solver_controller_s": 0.008747443,
+            "controller_s": 0,
+            "end_to_end_s": 0.013100828000460751
+          },
+          {
+            "solver_controller_s": 0.009373257,
+            "controller_s": 0,
+            "end_to_end_s": 0.013499347998731537
+          },
+          {
+            "solver_controller_s": 0.012934994,
+            "controller_s": 0,
+            "end_to_end_s": 0.017867684000520967
+          },
+          {
+            "solver_controller_s": 0.008936991,
+            "controller_s": 0,
+            "end_to_end_s": 0.013394656998571008
+          },
+          {
+            "solver_controller_s": 0.011499933,
+            "controller_s": 0,
+            "end_to_end_s": 0.016053622999606887
+          },
+          {
+            "solver_controller_s": 0.009644691,
+            "controller_s": 0,
+            "end_to_end_s": 0.014449420999881113
+          },
+          {
+            "solver_controller_s": 0.012521089,
+            "controller_s": 0,
+            "end_to_end_s": 0.018064126001263503
+          }
+        ],
+        "temporal_standard": [
+          {
+            "solver_controller_s": 0.001215261,
+            "controller_s": 0,
+            "end_to_end_s": 0.00561992699658731
+          },
+          {
+            "solver_controller_s": 0.001753829,
+            "controller_s": 0,
+            "end_to_end_s": 0.006866310999612324
+          },
+          {
+            "solver_controller_s": 0.001128343,
+            "controller_s": 0,
+            "end_to_end_s": 0.005073379001260037
+          },
+          {
+            "solver_controller_s": 0.001093806,
+            "controller_s": 0,
+            "end_to_end_s": 0.006012474001181545
+          },
+          {
+            "solver_controller_s": 0.00125426,
+            "controller_s": 0,
+            "end_to_end_s": 0.00609133599937195
+          },
+          {
+            "solver_controller_s": 0.001227222,
+            "controller_s": 0,
+            "end_to_end_s": 0.007017682000878267
+          },
+          {
+            "solver_controller_s": 0.001184211,
+            "controller_s": 0,
+            "end_to_end_s": 0.005524039999727393
+          },
+          {
+            "solver_controller_s": 0.001524724,
+            "controller_s": 0,
+            "end_to_end_s": 0.006417123000574065
+          },
+          {
+            "solver_controller_s": 0.0016582,
+            "controller_s": 0,
+            "end_to_end_s": 0.007899678999820026
+          },
+          {
+            "solver_controller_s": 0.001314684,
+            "controller_s": 0,
+            "end_to_end_s": 0.00612799399823416
+          },
+          {
+            "solver_controller_s": 0.001067159,
+            "controller_s": 0,
+            "end_to_end_s": 0.005346099002053961
+          },
+          {
+            "solver_controller_s": 0.001160364,
+            "controller_s": 0,
+            "end_to_end_s": 0.00530652499946882
+          },
+          {
+            "solver_controller_s": 0.001256787,
+            "controller_s": 0,
+            "end_to_end_s": 0.00963385599970934
+          },
+          {
+            "solver_controller_s": 0.001792167,
+            "controller_s": 0,
+            "end_to_end_s": 0.006433984002796933
+          },
+          {
+            "solver_controller_s": 0.001643979,
+            "controller_s": 0,
+            "end_to_end_s": 0.0060045490026823245
+          },
+          {
+            "solver_controller_s": 0.001540044,
+            "controller_s": 0,
+            "end_to_end_s": 0.005904777000978356
+          },
+          {
+            "solver_controller_s": 0.001060907,
+            "controller_s": 0,
+            "end_to_end_s": 0.005523397001525154
+          },
+          {
+            "solver_controller_s": 0.001119655,
+            "controller_s": 0,
+            "end_to_end_s": 0.00532084900260088
+          },
+          {
+            "solver_controller_s": 0.001239551,
+            "controller_s": 0,
+            "end_to_end_s": 0.005472289998579072
+          },
+          {
+            "solver_controller_s": 0.001070277,
+            "controller_s": 0,
+            "end_to_end_s": 0.005476025999087142
+          }
+        ],
+        "temporal_accurate": [
+          {
+            "solver_controller_s": 0.011922049,
+            "controller_s": 0,
+            "end_to_end_s": 0.016102404999401188
+          },
+          {
+            "solver_controller_s": 0.01101813,
+            "controller_s": 0,
+            "end_to_end_s": 0.016003490996808978
+          },
+          {
+            "solver_controller_s": 0.012522732,
+            "controller_s": 0,
+            "end_to_end_s": 0.017649935001827544
+          },
+          {
+            "solver_controller_s": 0.014669223,
+            "controller_s": 0,
+            "end_to_end_s": 0.019092008002189687
+          },
+          {
+            "solver_controller_s": 0.012379184,
+            "controller_s": 0,
+            "end_to_end_s": 0.016315581000526436
+          },
+          {
+            "solver_controller_s": 0.012726111,
+            "controller_s": 0,
+            "end_to_end_s": 0.017044395000993973
+          },
+          {
+            "solver_controller_s": 0.011822233,
+            "controller_s": 0,
+            "end_to_end_s": 0.0164754739998898
+          },
+          {
+            "solver_controller_s": 0.012190999,
+            "controller_s": 0,
+            "end_to_end_s": 0.017089102002501022
+          },
+          {
+            "solver_controller_s": 0.01271279,
+            "controller_s": 0,
+            "end_to_end_s": 0.017496223001217004
+          },
+          {
+            "solver_controller_s": 0.011331255,
+            "controller_s": 0,
+            "end_to_end_s": 0.01666499500061036
+          },
+          {
+            "solver_controller_s": 0.011692127,
+            "controller_s": 0,
+            "end_to_end_s": 0.015869245002249954
+          },
+          {
+            "solver_controller_s": 0.01111698,
+            "controller_s": 0,
+            "end_to_end_s": 0.015253675002895761
+          },
+          {
+            "solver_controller_s": 0.012860154,
+            "controller_s": 0,
+            "end_to_end_s": 0.017587028996786103
+          },
+          {
+            "solver_controller_s": 0.011511001,
+            "controller_s": 0,
+            "end_to_end_s": 0.015920537000056356
+          },
+          {
+            "solver_controller_s": 0.0118194,
+            "controller_s": 0,
+            "end_to_end_s": 0.01595001600071555
+          },
+          {
+            "solver_controller_s": 0.016776796,
+            "controller_s": 0,
+            "end_to_end_s": 0.022561450001376215
+          },
+          {
+            "solver_controller_s": 0.011227803,
+            "controller_s": 0,
+            "end_to_end_s": 0.015775015999679454
+          },
+          {
+            "solver_controller_s": 0.012674201,
+            "controller_s": 0,
+            "end_to_end_s": 0.017451689000154147
+          },
+          {
+            "solver_controller_s": 0.012233197,
+            "controller_s": 0,
+            "end_to_end_s": 0.017562007997184992
+          },
+          {
+            "solver_controller_s": 0.011645349,
+            "controller_s": 0,
+            "end_to_end_s": 0.016264994999801274
+          }
+        ],
+        "block_adaptive": [
+          {
+            "solver_controller_s": 0.000997782,
+            "controller_s": 8.604e-05,
+            "end_to_end_s": 0.005433857000753051
+          },
+          {
+            "solver_controller_s": 0.001082304,
+            "controller_s": 0.000160065,
+            "end_to_end_s": 0.005910627001867397
+          },
+          {
+            "solver_controller_s": 0.0015265740000000002,
+            "controller_s": 0.000318047,
+            "end_to_end_s": 0.006028778996551409
+          },
+          {
+            "solver_controller_s": 0.0009078560000000001,
+            "controller_s": 8.8156e-05,
+            "end_to_end_s": 0.005061749001470162
+          },
+          {
+            "solver_controller_s": 0.001032118,
+            "controller_s": 0.00020257,
+            "end_to_end_s": 0.005498821999935899
+          },
+          {
+            "solver_controller_s": 0.001190559,
+            "controller_s": 0.000101139,
+            "end_to_end_s": 0.0056345099983445834
+          },
+          {
+            "solver_controller_s": 0.001039928,
+            "controller_s": 0.000102682,
+            "end_to_end_s": 0.0064709540019975975
+          },
+          {
+            "solver_controller_s": 0.001061724,
+            "controller_s": 0.000103492,
+            "end_to_end_s": 0.005725885002902942
+          },
+          {
+            "solver_controller_s": 0.001045073,
+            "controller_s": 0.000100333,
+            "end_to_end_s": 0.005668949001119472
+          },
+          {
+            "solver_controller_s": 0.0010054439999999999,
+            "controller_s": 8.644e-05,
+            "end_to_end_s": 0.00496400799966068
+          },
+          {
+            "solver_controller_s": 0.000902322,
+            "controller_s": 0.000107164,
+            "end_to_end_s": 0.005359891998523381
+          },
+          {
+            "solver_controller_s": 0.001303774,
+            "controller_s": 0.000121041,
+            "end_to_end_s": 0.006204350000189152
+          },
+          {
+            "solver_controller_s": 0.000942221,
+            "controller_s": 8.6625e-05,
+            "end_to_end_s": 0.007747175000986317
+          },
+          {
+            "solver_controller_s": 0.000869847,
+            "controller_s": 8.6805e-05,
+            "end_to_end_s": 0.004733525998744881
+          },
+          {
+            "solver_controller_s": 0.001022598,
+            "controller_s": 8.8061e-05,
+            "end_to_end_s": 0.00487346299996716
+          },
+          {
+            "solver_controller_s": 0.001015977,
+            "controller_s": 0.000109131,
+            "end_to_end_s": 0.0057468759987386875
+          },
+          {
+            "solver_controller_s": 0.001009246,
+            "controller_s": 9.9816e-05,
+            "end_to_end_s": 0.005610281998087885
+          },
+          {
+            "solver_controller_s": 0.0011978269999999998,
+            "controller_s": 8.6613e-05,
+            "end_to_end_s": 0.005665462998877047
+          },
+          {
+            "solver_controller_s": 0.000860128,
+            "controller_s": 8.5042e-05,
+            "end_to_end_s": 0.004907304999505868
+          },
+          {
+            "solver_controller_s": 0.000889113,
+            "controller_s": 8.8643e-05,
+            "end_to_end_s": 0.005950505998043809
+          }
+        ]
+      },
+      "median_solver_controller_s": {
+        "block_fast": 0.000538974,
+        "block_standard": 0.000665024,
+        "block_accurate": 0.003449763,
+        "block_high": 0.0095815885,
+        "temporal_standard": 0.0012333865000000001,
+        "temporal_accurate": 0.012056523999999999,
+        "block_adaptive": 0.0010192875
+      },
+      "original_cheapest_passing_fixed": "block_standard",
+      "adaptive_over_original_best_fixed": 1.5327078421229912,
+      "physics_settings_and_policy_unchanged": true
+    },
+    {
+      "case_id": "thin_bar_spin",
+      "round_order": [
+        [
+          "block_adaptive",
+          "block_high",
+          "block_accurate",
+          "block_standard",
+          "temporal_standard",
+          "block_fast",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_accurate",
+          "block_high",
+          "temporal_standard",
+          "block_accurate",
+          "block_adaptive",
+          "block_standard",
+          "block_fast"
+        ],
+        [
+          "block_standard",
+          "block_adaptive",
+          "block_fast",
+          "temporal_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_accurate"
+        ],
+        [
+          "temporal_accurate",
+          "block_high",
+          "block_standard",
+          "block_fast",
+          "temporal_standard",
+          "block_adaptive",
+          "block_accurate"
+        ],
+        [
+          "block_high",
+          "temporal_standard",
+          "block_adaptive",
+          "block_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_accurate"
+        ],
+        [
+          "temporal_accurate",
+          "block_standard",
+          "block_accurate",
+          "temporal_standard",
+          "block_adaptive",
+          "block_high",
+          "block_fast"
+        ],
+        [
+          "block_fast",
+          "block_standard",
+          "block_high",
+          "temporal_standard",
+          "block_adaptive",
+          "block_accurate",
+          "temporal_accurate"
+        ],
+        [
+          "block_fast",
+          "block_adaptive",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_high",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "temporal_standard",
+          "block_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_accurate",
+          "block_high",
+          "block_adaptive"
+        ],
+        [
+          "temporal_standard",
+          "temporal_accurate",
+          "block_accurate",
+          "block_standard",
+          "block_adaptive",
+          "block_high",
+          "block_fast"
+        ],
+        [
+          "block_fast",
+          "block_accurate",
+          "block_high",
+          "temporal_standard",
+          "temporal_accurate",
+          "block_adaptive",
+          "block_standard"
+        ],
+        [
+          "block_high",
+          "block_adaptive",
+          "block_standard",
+          "temporal_accurate",
+          "block_accurate",
+          "block_fast",
+          "temporal_standard"
+        ],
+        [
+          "temporal_standard",
+          "block_adaptive",
+          "temporal_accurate",
+          "block_fast",
+          "block_standard",
+          "block_high",
+          "block_accurate"
+        ],
+        [
+          "block_high",
+          "block_standard",
+          "block_adaptive",
+          "temporal_standard",
+          "block_accurate",
+          "block_fast",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "block_standard",
+          "block_fast",
+          "block_high",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_accurate"
+        ],
+        [
+          "block_fast",
+          "block_accurate",
+          "temporal_accurate",
+          "block_high",
+          "block_standard",
+          "block_adaptive",
+          "temporal_standard"
+        ],
+        [
+          "block_adaptive",
+          "temporal_standard",
+          "block_high",
+          "block_fast",
+          "temporal_accurate",
+          "block_standard",
+          "block_accurate"
+        ],
+        [
+          "temporal_accurate",
+          "temporal_standard",
+          "block_fast",
+          "block_adaptive",
+          "block_accurate",
+          "block_standard",
+          "block_high"
+        ],
+        [
+          "temporal_accurate",
+          "block_standard",
+          "block_adaptive",
+          "block_fast",
+          "block_accurate",
+          "block_high",
+          "temporal_standard"
+        ],
+        [
+          "block_adaptive",
+          "block_standard",
+          "block_fast",
+          "block_accurate",
+          "temporal_standard",
+          "block_high",
+          "temporal_accurate"
+        ]
+      ],
+      "samples": {
+        "block_fast": [
+          {
+            "solver_controller_s": 0.000826526,
+            "controller_s": 0,
+            "end_to_end_s": 0.005346291000023484
+          },
+          {
+            "solver_controller_s": 0.000578229,
+            "controller_s": 0,
+            "end_to_end_s": 0.009823922999203205
+          },
+          {
+            "solver_controller_s": 0.000467915,
+            "controller_s": 0,
+            "end_to_end_s": 0.004808010999113321
+          },
+          {
+            "solver_controller_s": 0.000445706,
+            "controller_s": 0,
+            "end_to_end_s": 0.00469846200212487
+          },
+          {
+            "solver_controller_s": 0.000453666,
+            "controller_s": 0,
+            "end_to_end_s": 0.0049055720010073856
+          },
+          {
+            "solver_controller_s": 0.000445833,
+            "controller_s": 0,
+            "end_to_end_s": 0.004483519001951208
+          },
+          {
+            "solver_controller_s": 0.000448529,
+            "controller_s": 0,
+            "end_to_end_s": 0.005066626999905566
+          },
+          {
+            "solver_controller_s": 0.000446692,
+            "controller_s": 0,
+            "end_to_end_s": 0.0043016340023314115
+          },
+          {
+            "solver_controller_s": 0.000444677,
+            "controller_s": 0,
+            "end_to_end_s": 0.0041856119969452266
+          },
+          {
+            "solver_controller_s": 0.000542996,
+            "controller_s": 0,
+            "end_to_end_s": 0.0054122400033520535
+          },
+          {
+            "solver_controller_s": 0.00045058,
+            "controller_s": 0,
+            "end_to_end_s": 0.004699357999925269
+          },
+          {
+            "solver_controller_s": 0.000466224,
+            "controller_s": 0,
+            "end_to_end_s": 0.004702404999989085
+          },
+          {
+            "solver_controller_s": 0.000563146,
+            "controller_s": 0,
+            "end_to_end_s": 0.004565903000184335
+          },
+          {
+            "solver_controller_s": 0.000447374,
+            "controller_s": 0,
+            "end_to_end_s": 0.004383563998999307
+          },
+          {
+            "solver_controller_s": 0.000448537,
+            "controller_s": 0,
+            "end_to_end_s": 0.004547213997284416
+          },
+          {
+            "solver_controller_s": 0.000482354,
+            "controller_s": 0,
+            "end_to_end_s": 0.004503086001932388
+          },
+          {
+            "solver_controller_s": 0.000451872,
+            "controller_s": 0,
+            "end_to_end_s": 0.004376158998638857
+          },
+          {
+            "solver_controller_s": 0.000447209,
+            "controller_s": 0,
+            "end_to_end_s": 0.004839922999963164
+          },
+          {
+            "solver_controller_s": 0.002773972,
+            "controller_s": 0,
+            "end_to_end_s": 0.006891968001582427
+          },
+          {
+            "solver_controller_s": 0.000446511,
+            "controller_s": 0,
+            "end_to_end_s": 0.004691308000474237
+          }
+        ],
+        "block_standard": [
+          {
+            "solver_controller_s": 0.000678605,
+            "controller_s": 0,
+            "end_to_end_s": 0.007054466997942654
+          },
+          {
+            "solver_controller_s": 0.000585457,
+            "controller_s": 0,
+            "end_to_end_s": 0.005386851997172926
+          },
+          {
+            "solver_controller_s": 0.000818862,
+            "controller_s": 0,
+            "end_to_end_s": 0.004999712000426371
+          },
+          {
+            "solver_controller_s": 0.000666699,
+            "controller_s": 0,
+            "end_to_end_s": 0.004503557000134606
+          },
+          {
+            "solver_controller_s": 0.000650027,
+            "controller_s": 0,
+            "end_to_end_s": 0.004739959997095866
+          },
+          {
+            "solver_controller_s": 0.000773149,
+            "controller_s": 0,
+            "end_to_end_s": 0.005019883999921149
+          },
+          {
+            "solver_controller_s": 0.000803658,
+            "controller_s": 0,
+            "end_to_end_s": 0.00536264499896788
+          },
+          {
+            "solver_controller_s": 0.000579935,
+            "controller_s": 0,
+            "end_to_end_s": 0.004707600000983803
+          },
+          {
+            "solver_controller_s": 0.000604892,
+            "controller_s": 0,
+            "end_to_end_s": 0.004523934003373142
+          },
+          {
+            "solver_controller_s": 0.000672395,
+            "controller_s": 0,
+            "end_to_end_s": 0.005139919998327969
+          },
+          {
+            "solver_controller_s": 0.000714954,
+            "controller_s": 0,
+            "end_to_end_s": 0.004929070000798674
+          },
+          {
+            "solver_controller_s": 0.000764725,
+            "controller_s": 0,
+            "end_to_end_s": 0.005115126001328463
+          },
+          {
+            "solver_controller_s": 0.000635154,
+            "controller_s": 0,
+            "end_to_end_s": 0.00556560099721537
+          },
+          {
+            "solver_controller_s": 0.000644675,
+            "controller_s": 0,
+            "end_to_end_s": 0.005221805000473978
+          },
+          {
+            "solver_controller_s": 0.000946925,
+            "controller_s": 0,
+            "end_to_end_s": 0.005376613000407815
+          },
+          {
+            "solver_controller_s": 0.000628873,
+            "controller_s": 0,
+            "end_to_end_s": 0.004532261998974718
+          },
+          {
+            "solver_controller_s": 0.000857676,
+            "controller_s": 0,
+            "end_to_end_s": 0.0057821059999696445
+          },
+          {
+            "solver_controller_s": 0.000670697,
+            "controller_s": 0,
+            "end_to_end_s": 0.005087075001938501
+          },
+          {
+            "solver_controller_s": 0.00072366,
+            "controller_s": 0,
+            "end_to_end_s": 0.00482148000082816
+          },
+          {
+            "solver_controller_s": 0.000639988,
+            "controller_s": 0,
+            "end_to_end_s": 0.0051053759998467285
+          }
+        ],
+        "block_accurate": [
+          {
+            "solver_controller_s": 0.00389211,
+            "controller_s": 0,
+            "end_to_end_s": 0.00801212599981227
+          },
+          {
+            "solver_controller_s": 0.003527847,
+            "controller_s": 0,
+            "end_to_end_s": 0.008520903000317048
+          },
+          {
+            "solver_controller_s": 0.00303422,
+            "controller_s": 0,
+            "end_to_end_s": 0.007193862002168316
+          },
+          {
+            "solver_controller_s": 0.003124288,
+            "controller_s": 0,
+            "end_to_end_s": 0.006925105997652281
+          },
+          {
+            "solver_controller_s": 0.003160471,
+            "controller_s": 0,
+            "end_to_end_s": 0.0071662939990346786
+          },
+          {
+            "solver_controller_s": 0.003796834,
+            "controller_s": 0,
+            "end_to_end_s": 0.011000333000993123
+          },
+          {
+            "solver_controller_s": 0.003611026,
+            "controller_s": 0,
+            "end_to_end_s": 0.00760991100105457
+          },
+          {
+            "solver_controller_s": 0.003209171,
+            "controller_s": 0,
+            "end_to_end_s": 0.018211220001830952
+          },
+          {
+            "solver_controller_s": 0.003238463,
+            "controller_s": 0,
+            "end_to_end_s": 0.007303517999389442
+          },
+          {
+            "solver_controller_s": 0.003280265,
+            "controller_s": 0,
+            "end_to_end_s": 0.008228396000049543
+          },
+          {
+            "solver_controller_s": 0.003304752,
+            "controller_s": 0,
+            "end_to_end_s": 0.009549369002343155
+          },
+          {
+            "solver_controller_s": 0.003044731,
+            "controller_s": 0,
+            "end_to_end_s": 0.007049324001854984
+          },
+          {
+            "solver_controller_s": 0.004732889,
+            "controller_s": 0,
+            "end_to_end_s": 0.010974273001920665
+          },
+          {
+            "solver_controller_s": 0.00323436,
+            "controller_s": 0,
+            "end_to_end_s": 0.007494195000617765
+          },
+          {
+            "solver_controller_s": 0.003063968,
+            "controller_s": 0,
+            "end_to_end_s": 0.0073404739996476565
+          },
+          {
+            "solver_controller_s": 0.003345011,
+            "controller_s": 0,
+            "end_to_end_s": 0.00791964900054154
+          },
+          {
+            "solver_controller_s": 0.003290683,
+            "controller_s": 0,
+            "end_to_end_s": 0.00731391400040593
+          },
+          {
+            "solver_controller_s": 0.003047662,
+            "controller_s": 0,
+            "end_to_end_s": 0.007117191998986527
+          },
+          {
+            "solver_controller_s": 0.003262063,
+            "controller_s": 0,
+            "end_to_end_s": 0.009228789000189863
+          },
+          {
+            "solver_controller_s": 0.003160523,
+            "controller_s": 0,
+            "end_to_end_s": 0.007241559997055447
+          }
+        ],
+        "block_high": [
+          {
+            "solver_controller_s": 0.009101468,
+            "controller_s": 0,
+            "end_to_end_s": 0.01370631399913691
+          },
+          {
+            "solver_controller_s": 0.008816812,
+            "controller_s": 0,
+            "end_to_end_s": 0.01321474699943792
+          },
+          {
+            "solver_controller_s": 0.010272935,
+            "controller_s": 0,
+            "end_to_end_s": 0.014271226998971542
+          },
+          {
+            "solver_controller_s": 0.010058138,
+            "controller_s": 0,
+            "end_to_end_s": 0.014548602001013933
+          },
+          {
+            "solver_controller_s": 0.008737389,
+            "controller_s": 0,
+            "end_to_end_s": 0.012890476999018574
+          },
+          {
+            "solver_controller_s": 0.008872417,
+            "controller_s": 0,
+            "end_to_end_s": 0.013041981997957919
+          },
+          {
+            "solver_controller_s": 0.008772278,
+            "controller_s": 0,
+            "end_to_end_s": 0.01329657899987069
+          },
+          {
+            "solver_controller_s": 0.009642731,
+            "controller_s": 0,
+            "end_to_end_s": 0.014984073000960052
+          },
+          {
+            "solver_controller_s": 0.012735528,
+            "controller_s": 0,
+            "end_to_end_s": 0.01768642399838427
+          },
+          {
+            "solver_controller_s": 0.008682301,
+            "controller_s": 0,
+            "end_to_end_s": 0.013897983000788372
+          },
+          {
+            "solver_controller_s": 0.010051051,
+            "controller_s": 0,
+            "end_to_end_s": 0.014490025998384226
+          },
+          {
+            "solver_controller_s": 0.009433429,
+            "controller_s": 0,
+            "end_to_end_s": 0.01365527999951155
+          },
+          {
+            "solver_controller_s": 0.010296086,
+            "controller_s": 0,
+            "end_to_end_s": 0.015371050998510327
+          },
+          {
+            "solver_controller_s": 0.009442098,
+            "controller_s": 0,
+            "end_to_end_s": 0.013596314998721937
+          },
+          {
+            "solver_controller_s": 0.009775026,
+            "controller_s": 0,
+            "end_to_end_s": 0.014427425998292165
+          },
+          {
+            "solver_controller_s": 0.012506489,
+            "controller_s": 0,
+            "end_to_end_s": 0.018535068000346655
+          },
+          {
+            "solver_controller_s": 0.009484485,
+            "controller_s": 0,
+            "end_to_end_s": 0.014376916999026434
+          },
+          {
+            "solver_controller_s": 0.008472081,
+            "controller_s": 0,
+            "end_to_end_s": 0.012273276999621885
+          },
+          {
+            "solver_controller_s": 0.012180687,
+            "controller_s": 0,
+            "end_to_end_s": 0.018603350999910617
+          },
+          {
+            "solver_controller_s": 0.008862658,
+            "controller_s": 0,
+            "end_to_end_s": 0.013724634998652618
+          }
+        ],
+        "temporal_standard": [
+          {
+            "solver_controller_s": 0.001554844,
+            "controller_s": 0,
+            "end_to_end_s": 0.005632664997392567
+          },
+          {
+            "solver_controller_s": 0.00139563,
+            "controller_s": 0,
+            "end_to_end_s": 0.006117726999946171
+          },
+          {
+            "solver_controller_s": 0.001085435,
+            "controller_s": 0,
+            "end_to_end_s": 0.005453663998196134
+          },
+          {
+            "solver_controller_s": 0.001071314,
+            "controller_s": 0,
+            "end_to_end_s": 0.005067432000942063
+          },
+          {
+            "solver_controller_s": 0.001182776,
+            "controller_s": 0,
+            "end_to_end_s": 0.005229086000326788
+          },
+          {
+            "solver_controller_s": 0.003942489,
+            "controller_s": 0,
+            "end_to_end_s": 0.013487449003150687
+          },
+          {
+            "solver_controller_s": 0.001137792,
+            "controller_s": 0,
+            "end_to_end_s": 0.005029954998462927
+          },
+          {
+            "solver_controller_s": 0.001315552,
+            "controller_s": 0,
+            "end_to_end_s": 0.005723256999772275
+          },
+          {
+            "solver_controller_s": 0.001154005,
+            "controller_s": 0,
+            "end_to_end_s": 0.005505774999619462
+          },
+          {
+            "solver_controller_s": 0.001259383,
+            "controller_s": 0,
+            "end_to_end_s": 0.006567395997990388
+          },
+          {
+            "solver_controller_s": 0.001462524,
+            "controller_s": 0,
+            "end_to_end_s": 0.006784561002859846
+          },
+          {
+            "solver_controller_s": 0.001410685,
+            "controller_s": 0,
+            "end_to_end_s": 0.0057310529991809744
+          },
+          {
+            "solver_controller_s": 0.001227363,
+            "controller_s": 0,
+            "end_to_end_s": 0.006161803001305088
+          },
+          {
+            "solver_controller_s": 0.001091925,
+            "controller_s": 0,
+            "end_to_end_s": 0.005072959000244737
+          },
+          {
+            "solver_controller_s": 0.001543986,
+            "controller_s": 0,
+            "end_to_end_s": 0.006562308997672517
+          },
+          {
+            "solver_controller_s": 0.001453966,
+            "controller_s": 0,
+            "end_to_end_s": 0.006463084002461983
+          },
+          {
+            "solver_controller_s": 0.001450951,
+            "controller_s": 0,
+            "end_to_end_s": 0.005762855998909799
+          },
+          {
+            "solver_controller_s": 0.001170379,
+            "controller_s": 0,
+            "end_to_end_s": 0.005424835002486361
+          },
+          {
+            "solver_controller_s": 0.005715084,
+            "controller_s": 0,
+            "end_to_end_s": 0.013282047999382485
+          },
+          {
+            "solver_controller_s": 0.001240346,
+            "controller_s": 0,
+            "end_to_end_s": 0.006719476001308067
+          }
+        ],
+        "temporal_accurate": [
+          {
+            "solver_controller_s": 0.013024535,
+            "controller_s": 0,
+            "end_to_end_s": 0.017275207999773556
+          },
+          {
+            "solver_controller_s": 0.012456016,
+            "controller_s": 0,
+            "end_to_end_s": 0.01668559199970332
+          },
+          {
+            "solver_controller_s": 0.011333802,
+            "controller_s": 0,
+            "end_to_end_s": 0.01537409199954709
+          },
+          {
+            "solver_controller_s": 0.011616129,
+            "controller_s": 0,
+            "end_to_end_s": 0.015613063002092531
+          },
+          {
+            "solver_controller_s": 0.012889729,
+            "controller_s": 0,
+            "end_to_end_s": 0.017371605998050654
+          },
+          {
+            "solver_controller_s": 0.012893316,
+            "controller_s": 0,
+            "end_to_end_s": 0.01764039999761735
+          },
+          {
+            "solver_controller_s": 0.011449717,
+            "controller_s": 0,
+            "end_to_end_s": 0.015852201999223325
+          },
+          {
+            "solver_controller_s": 0.012395077,
+            "controller_s": 0,
+            "end_to_end_s": 0.016392278997955145
+          },
+          {
+            "solver_controller_s": 0.011547276,
+            "controller_s": 0,
+            "end_to_end_s": 0.01575923099881038
+          },
+          {
+            "solver_controller_s": 0.012526265,
+            "controller_s": 0,
+            "end_to_end_s": 0.017226125000888715
+          },
+          {
+            "solver_controller_s": 0.011805463,
+            "controller_s": 0,
+            "end_to_end_s": 0.016436244997748872
+          },
+          {
+            "solver_controller_s": 0.012694493,
+            "controller_s": 0,
+            "end_to_end_s": 0.017754780001268955
+          },
+          {
+            "solver_controller_s": 0.016704542,
+            "controller_s": 0,
+            "end_to_end_s": 0.02223139799752971
+          },
+          {
+            "solver_controller_s": 0.013587794,
+            "controller_s": 0,
+            "end_to_end_s": 0.017957269999897107
+          },
+          {
+            "solver_controller_s": 0.011952495,
+            "controller_s": 0,
+            "end_to_end_s": 0.016309626000293065
+          },
+          {
+            "solver_controller_s": 0.014338195,
+            "controller_s": 0,
+            "end_to_end_s": 0.0189919930016913
+          },
+          {
+            "solver_controller_s": 0.011912047,
+            "controller_s": 0,
+            "end_to_end_s": 0.01623600300081307
+          },
+          {
+            "solver_controller_s": 0.011318258,
+            "controller_s": 0,
+            "end_to_end_s": 0.015290883999114158
+          },
+          {
+            "solver_controller_s": 0.012250009,
+            "controller_s": 0,
+            "end_to_end_s": 0.01636244099790929
+          },
+          {
+            "solver_controller_s": 0.011996572,
+            "controller_s": 0,
+            "end_to_end_s": 0.015949792999890633
+          }
+        ],
+        "block_adaptive": [
+          {
+            "solver_controller_s": 0.014540753,
+            "controller_s": 0.000102726,
+            "end_to_end_s": 0.020229257999744732
+          },
+          {
+            "solver_controller_s": 0.009440954,
+            "controller_s": 0.000121294,
+            "end_to_end_s": 0.013558638998802053
+          },
+          {
+            "solver_controller_s": 0.008499671,
+            "controller_s": 9.3569e-05,
+            "end_to_end_s": 0.012899896999442717
+          },
+          {
+            "solver_controller_s": 0.008897756,
+            "controller_s": 9.5537e-05,
+            "end_to_end_s": 0.013503565998689737
+          },
+          {
+            "solver_controller_s": 0.008983555,
+            "controller_s": 0.000107697,
+            "end_to_end_s": 0.013069581000308972
+          },
+          {
+            "solver_controller_s": 0.008636948,
+            "controller_s": 9.1119e-05,
+            "end_to_end_s": 0.013058527998509817
+          },
+          {
+            "solver_controller_s": 0.008432677999999999,
+            "controller_s": 9.6912e-05,
+            "end_to_end_s": 0.012686485002632253
+          },
+          {
+            "solver_controller_s": 0.008576814,
+            "controller_s": 9.2603e-05,
+            "end_to_end_s": 0.013058652999461628
+          },
+          {
+            "solver_controller_s": 0.009879869,
+            "controller_s": 9.1212e-05,
+            "end_to_end_s": 0.014358620999701088
+          },
+          {
+            "solver_controller_s": 0.008404553,
+            "controller_s": 8.9225e-05,
+            "end_to_end_s": 0.013142350999260088
+          },
+          {
+            "solver_controller_s": 0.009163343000000001,
+            "controller_s": 0.000101719,
+            "end_to_end_s": 0.016795027997432044
+          },
+          {
+            "solver_controller_s": 0.008404935,
+            "controller_s": 9.1038e-05,
+            "end_to_end_s": 0.012247582999407314
+          },
+          {
+            "solver_controller_s": 0.011610144999999999,
+            "controller_s": 9.8372e-05,
+            "end_to_end_s": 0.018260792003275128
+          },
+          {
+            "solver_controller_s": 0.011481416000000001,
+            "controller_s": 0.000124383,
+            "end_to_end_s": 0.01603628100201604
+          },
+          {
+            "solver_controller_s": 0.00894732,
+            "controller_s": 9.0607e-05,
+            "end_to_end_s": 0.01322687499850872
+          },
+          {
+            "solver_controller_s": 0.00918558,
+            "controller_s": 0.000116378,
+            "end_to_end_s": 0.013694397999643115
+          },
+          {
+            "solver_controller_s": 0.010611243,
+            "controller_s": 9.1499e-05,
+            "end_to_end_s": 0.015733750999061158
+          },
+          {
+            "solver_controller_s": 0.008960471,
+            "controller_s": 9.2176e-05,
+            "end_to_end_s": 0.013219742999353912
+          },
+          {
+            "solver_controller_s": 0.008838726,
+            "controller_s": 9.0809e-05,
+            "end_to_end_s": 0.013223225003457628
+          },
+          {
+            "solver_controller_s": 0.008950940000000001,
+            "controller_s": 0.000125948,
+            "end_to_end_s": 0.013127097001415677
+          }
+        ]
+      },
+      "median_solver_controller_s": {
+        "block_fast": 0.000451226,
+        "block_standard": 0.0006715460000000001,
+        "block_accurate": 0.0032502629999999998,
+        "block_high": 0.0094632915,
+        "temporal_standard": 0.0012874675,
+        "temporal_accurate": 0.012322542999999998,
+        "block_adaptive": 0.008955705500000001
+      },
+      "original_cheapest_passing_fixed": "block_accurate",
+      "adaptive_over_original_best_fixed": 2.755378718583697,
+      "physics_settings_and_policy_unchanged": true
+    },
+    {
+      "case_id": "thin_wall_ccd",
+      "round_order": [
+        [
+          "temporal_accurate",
+          "block_accurate",
+          "temporal_standard",
+          "block_high",
+          "block_fast",
+          "block_adaptive",
+          "block_standard"
+        ],
+        [
+          "block_standard",
+          "block_accurate",
+          "block_high",
+          "block_fast",
+          "temporal_standard",
+          "block_adaptive",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "temporal_accurate",
+          "block_accurate",
+          "block_standard",
+          "block_adaptive",
+          "block_high",
+          "block_fast"
+        ],
+        [
+          "block_standard",
+          "block_adaptive",
+          "block_fast",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_accurate",
+          "block_high"
+        ],
+        [
+          "block_fast",
+          "block_high",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_standard",
+          "block_adaptive",
+          "block_accurate"
+        ],
+        [
+          "block_fast",
+          "block_standard",
+          "block_high",
+          "block_adaptive",
+          "temporal_standard",
+          "block_accurate",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "block_adaptive",
+          "block_accurate",
+          "block_fast",
+          "block_high",
+          "block_standard",
+          "temporal_accurate"
+        ],
+        [
+          "block_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_fast",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_standard"
+        ],
+        [
+          "block_accurate",
+          "block_fast",
+          "temporal_accurate",
+          "block_adaptive",
+          "temporal_standard",
+          "block_standard",
+          "block_high"
+        ],
+        [
+          "temporal_standard",
+          "block_standard",
+          "block_adaptive",
+          "block_accurate",
+          "temporal_accurate",
+          "block_high",
+          "block_fast"
+        ],
+        [
+          "block_high",
+          "block_standard",
+          "block_fast",
+          "block_adaptive",
+          "temporal_standard",
+          "temporal_accurate",
+          "block_accurate"
+        ],
+        [
+          "block_standard",
+          "temporal_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_fast",
+          "block_accurate",
+          "block_adaptive"
+        ],
+        [
+          "block_fast",
+          "block_accurate",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_high",
+          "block_standard",
+          "block_adaptive"
+        ],
+        [
+          "block_adaptive",
+          "block_high",
+          "temporal_standard",
+          "block_fast",
+          "block_accurate",
+          "temporal_accurate",
+          "block_standard"
+        ],
+        [
+          "block_high",
+          "block_accurate",
+          "temporal_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_standard",
+          "block_adaptive"
+        ],
+        [
+          "block_high",
+          "block_standard",
+          "temporal_standard",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_accurate",
+          "block_fast"
+        ],
+        [
+          "block_adaptive",
+          "block_fast",
+          "temporal_standard",
+          "block_high",
+          "block_standard",
+          "temporal_accurate",
+          "block_accurate"
+        ],
+        [
+          "block_accurate",
+          "block_fast",
+          "block_adaptive",
+          "temporal_accurate",
+          "block_standard",
+          "block_high",
+          "temporal_standard"
+        ],
+        [
+          "block_high",
+          "block_fast",
+          "temporal_accurate",
+          "block_standard",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_standard"
+        ],
+        [
+          "block_adaptive",
+          "block_fast",
+          "block_high",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_accurate",
+          "block_standard"
+        ]
+      ],
+      "samples": {
+        "block_fast": [
+          {
+            "solver_controller_s": 8.5116e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002658342000358971
+          },
+          {
+            "solver_controller_s": 4.8189e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003295228998467792
+          },
+          {
+            "solver_controller_s": 4.5935e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003012794000824215
+          },
+          {
+            "solver_controller_s": 5.2113e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0032896789998630993
+          },
+          {
+            "solver_controller_s": 4.5835e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.00281276899841032
+          },
+          {
+            "solver_controller_s": 5.0971e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004492468000535155
+          },
+          {
+            "solver_controller_s": 4.5767e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031183880018943455
+          },
+          {
+            "solver_controller_s": 7.2366e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0032874709977477323
+          },
+          {
+            "solver_controller_s": 4.6126e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028733439976349473
+          },
+          {
+            "solver_controller_s": 4.586e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003077681001741439
+          },
+          {
+            "solver_controller_s": 4.5737e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034061160004057456
+          },
+          {
+            "solver_controller_s": 4.7993e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028440959977160674
+          },
+          {
+            "solver_controller_s": 4.5893e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028126700017310213
+          },
+          {
+            "solver_controller_s": 4.5993e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004256579999491805
+          },
+          {
+            "solver_controller_s": 4.5605e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002738368002610514
+          },
+          {
+            "solver_controller_s": 4.6842e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002903579999838257
+          },
+          {
+            "solver_controller_s": 8.2797e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002806587002851302
+          },
+          {
+            "solver_controller_s": 8.3773e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031711749979876913
+          },
+          {
+            "solver_controller_s": 4.6377e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002979343000333756
+          },
+          {
+            "solver_controller_s": 4.5764e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002728232000663411
+          }
+        ],
+        "block_standard": [
+          {
+            "solver_controller_s": 5.4055e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004240424001181964
+          },
+          {
+            "solver_controller_s": 5.2147e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0026682720017561223
+          },
+          {
+            "solver_controller_s": 5.2421e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034857479986385442
+          },
+          {
+            "solver_controller_s": 5.2521e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0030194399987522047
+          },
+          {
+            "solver_controller_s": 5.4878e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003872126999340253
+          },
+          {
+            "solver_controller_s": 5.3125e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.006270436002523638
+          },
+          {
+            "solver_controller_s": 0.000179376,
+            "controller_s": 0,
+            "end_to_end_s": 0.003738097999303136
+          },
+          {
+            "solver_controller_s": 5.3051e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002668588000233285
+          },
+          {
+            "solver_controller_s": 5.6998e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003201412000635173
+          },
+          {
+            "solver_controller_s": 5.2935e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002908088998083258
+          },
+          {
+            "solver_controller_s": 5.2582e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002794760999677237
+          },
+          {
+            "solver_controller_s": 5.2981e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002550428001995897
+          },
+          {
+            "solver_controller_s": 5.243e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0029690080009459052
+          },
+          {
+            "solver_controller_s": 5.3869e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004430830998899182
+          },
+          {
+            "solver_controller_s": 5.2792e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003582872002880322
+          },
+          {
+            "solver_controller_s": 5.4903e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002823020000505494
+          },
+          {
+            "solver_controller_s": 5.2254e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028104599987273104
+          },
+          {
+            "solver_controller_s": 5.3812e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031920229994284455
+          },
+          {
+            "solver_controller_s": 5.2885e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002839384000253631
+          },
+          {
+            "solver_controller_s": 5.356e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0029770069995720405
+          }
+        ],
+        "block_accurate": [
+          {
+            "solver_controller_s": 0.00020894,
+            "controller_s": 0,
+            "end_to_end_s": 0.00274855199677404
+          },
+          {
+            "solver_controller_s": 0.000187759,
+            "controller_s": 0,
+            "end_to_end_s": 0.004496695000852924
+          },
+          {
+            "solver_controller_s": 0.000217813,
+            "controller_s": 0,
+            "end_to_end_s": 0.0030902830003469717
+          },
+          {
+            "solver_controller_s": 0.000188712,
+            "controller_s": 0,
+            "end_to_end_s": 0.002823137001541909
+          },
+          {
+            "solver_controller_s": 0.000513316,
+            "controller_s": 0,
+            "end_to_end_s": 0.004995684001187328
+          },
+          {
+            "solver_controller_s": 0.00023046,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031305140000768006
+          },
+          {
+            "solver_controller_s": 0.000213732,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031371530021715444
+          },
+          {
+            "solver_controller_s": 0.000242775,
+            "controller_s": 0,
+            "end_to_end_s": 0.003798238998570014
+          },
+          {
+            "solver_controller_s": 0.000186388,
+            "controller_s": 0,
+            "end_to_end_s": 0.0032473440005560406
+          },
+          {
+            "solver_controller_s": 0.000187854,
+            "controller_s": 0,
+            "end_to_end_s": 0.0029463639984896872
+          },
+          {
+            "solver_controller_s": 0.000192048,
+            "controller_s": 0,
+            "end_to_end_s": 0.00284018499951344
+          },
+          {
+            "solver_controller_s": 0.000189356,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028251260009710677
+          },
+          {
+            "solver_controller_s": 0.000187736,
+            "controller_s": 0,
+            "end_to_end_s": 0.002822604998073075
+          },
+          {
+            "solver_controller_s": 0.000189487,
+            "controller_s": 0,
+            "end_to_end_s": 0.002914310000051046
+          },
+          {
+            "solver_controller_s": 0.000194968,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034666709980228916
+          },
+          {
+            "solver_controller_s": 0.000188258,
+            "controller_s": 0,
+            "end_to_end_s": 0.0033864920005726162
+          },
+          {
+            "solver_controller_s": 0.000186916,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028441949980333447
+          },
+          {
+            "solver_controller_s": 0.000189529,
+            "controller_s": 0,
+            "end_to_end_s": 0.003170151998347137
+          },
+          {
+            "solver_controller_s": 0.000229017,
+            "controller_s": 0,
+            "end_to_end_s": 0.003672132999781752
+          },
+          {
+            "solver_controller_s": 0.000187603,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031574690001434647
+          }
+        ],
+        "block_high": [
+          {
+            "solver_controller_s": 0.000565254,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031555690002278425
+          },
+          {
+            "solver_controller_s": 0.000760872,
+            "controller_s": 0,
+            "end_to_end_s": 0.0042078079968632665
+          },
+          {
+            "solver_controller_s": 0.00054281,
+            "controller_s": 0,
+            "end_to_end_s": 0.0035444200002530124
+          },
+          {
+            "solver_controller_s": 0.00064083,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034175609980593435
+          },
+          {
+            "solver_controller_s": 0.000581312,
+            "controller_s": 0,
+            "end_to_end_s": 0.003299903000879567
+          },
+          {
+            "solver_controller_s": 0.000572327,
+            "controller_s": 0,
+            "end_to_end_s": 0.003924519998690812
+          },
+          {
+            "solver_controller_s": 0.0007292,
+            "controller_s": 0,
+            "end_to_end_s": 0.003547488999174675
+          },
+          {
+            "solver_controller_s": 0.000564657,
+            "controller_s": 0,
+            "end_to_end_s": 0.003360607999638887
+          },
+          {
+            "solver_controller_s": 0.000571817,
+            "controller_s": 0,
+            "end_to_end_s": 0.003738600000360748
+          },
+          {
+            "solver_controller_s": 0.000570962,
+            "controller_s": 0,
+            "end_to_end_s": 0.0033590589991945308
+          },
+          {
+            "solver_controller_s": 0.000544643,
+            "controller_s": 0,
+            "end_to_end_s": 0.0036209489990142174
+          },
+          {
+            "solver_controller_s": 0.00057045,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034576639991428237
+          },
+          {
+            "solver_controller_s": 0.000914132,
+            "controller_s": 0,
+            "end_to_end_s": 0.004132436999498168
+          },
+          {
+            "solver_controller_s": 0.000582613,
+            "controller_s": 0,
+            "end_to_end_s": 0.0033693510013108607
+          },
+          {
+            "solver_controller_s": 0.000579892,
+            "controller_s": 0,
+            "end_to_end_s": 0.004367580000689486
+          },
+          {
+            "solver_controller_s": 0.000571634,
+            "controller_s": 0,
+            "end_to_end_s": 0.003266193001763895
+          },
+          {
+            "solver_controller_s": 0.000803994,
+            "controller_s": 0,
+            "end_to_end_s": 0.003748115002963459
+          },
+          {
+            "solver_controller_s": 0.000563404,
+            "controller_s": 0,
+            "end_to_end_s": 0.0035927300014009234
+          },
+          {
+            "solver_controller_s": 0.000645691,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034172410014434718
+          },
+          {
+            "solver_controller_s": 0.000567927,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031152019982982893
+          }
+        ],
+        "temporal_standard": [
+          {
+            "solver_controller_s": 8.4648e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031329480007116217
+          },
+          {
+            "solver_controller_s": 8.5261e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004234320000250591
+          },
+          {
+            "solver_controller_s": 8.4163e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031000800008769147
+          },
+          {
+            "solver_controller_s": 8.2289e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.003372398001374677
+          },
+          {
+            "solver_controller_s": 0.000104309,
+            "controller_s": 0,
+            "end_to_end_s": 0.0029000940012338106
+          },
+          {
+            "solver_controller_s": 0.000123889,
+            "controller_s": 0,
+            "end_to_end_s": 0.00331776299935882
+          },
+          {
+            "solver_controller_s": 8.2885e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002884367000660859
+          },
+          {
+            "solver_controller_s": 8.8331e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0031057619999046437
+          },
+          {
+            "solver_controller_s": 0.000255203,
+            "controller_s": 0,
+            "end_to_end_s": 0.004394137999042869
+          },
+          {
+            "solver_controller_s": 8.3131e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034873280019382946
+          },
+          {
+            "solver_controller_s": 8.2409e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0027223049983149394
+          },
+          {
+            "solver_controller_s": 8.8561e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034573320008348674
+          },
+          {
+            "solver_controller_s": 8.3642e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002740279996942263
+          },
+          {
+            "solver_controller_s": 8.3541e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.004388580000522779
+          },
+          {
+            "solver_controller_s": 8.5209e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.005502599000465125
+          },
+          {
+            "solver_controller_s": 8.3859e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.0030374870002560783
+          },
+          {
+            "solver_controller_s": 8.3495e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002658194996911334
+          },
+          {
+            "solver_controller_s": 0.000109478,
+            "controller_s": 0,
+            "end_to_end_s": 0.0028322039979684632
+          },
+          {
+            "solver_controller_s": 8.5526e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.00286712900197017
+          },
+          {
+            "solver_controller_s": 8.3316e-05,
+            "controller_s": 0,
+            "end_to_end_s": 0.002918766000220785
+          }
+        ],
+        "temporal_accurate": [
+          {
+            "solver_controller_s": 0.000733418,
+            "controller_s": 0,
+            "end_to_end_s": 0.003436147999309469
+          },
+          {
+            "solver_controller_s": 0.000759064,
+            "controller_s": 0,
+            "end_to_end_s": 0.0038680680008837953
+          },
+          {
+            "solver_controller_s": 0.000773106,
+            "controller_s": 0,
+            "end_to_end_s": 0.0044790130014007445
+          },
+          {
+            "solver_controller_s": 0.001212156,
+            "controller_s": 0,
+            "end_to_end_s": 0.003916519999620505
+          },
+          {
+            "solver_controller_s": 0.000759092,
+            "controller_s": 0,
+            "end_to_end_s": 0.0037776259996462613
+          },
+          {
+            "solver_controller_s": 0.00076287,
+            "controller_s": 0,
+            "end_to_end_s": 0.004156011000304716
+          },
+          {
+            "solver_controller_s": 0.000770004,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034344849991612136
+          },
+          {
+            "solver_controller_s": 0.000751614,
+            "controller_s": 0,
+            "end_to_end_s": 0.0034537850006017834
+          },
+          {
+            "solver_controller_s": 0.001036987,
+            "controller_s": 0,
+            "end_to_end_s": 0.004199939001409803
+          },
+          {
+            "solver_controller_s": 0.000798051,
+            "controller_s": 0,
+            "end_to_end_s": 0.003342459000123199
+          },
+          {
+            "solver_controller_s": 0.000779674,
+            "controller_s": 0,
+            "end_to_end_s": 0.0033216259980690666
+          },
+          {
+            "solver_controller_s": 0.000753436,
+            "controller_s": 0,
+            "end_to_end_s": 0.0036454670007515233
+          },
+          {
+            "solver_controller_s": 0.000759619,
+            "controller_s": 0,
+            "end_to_end_s": 0.004114167000807356
+          },
+          {
+            "solver_controller_s": 0.000760146,
+            "controller_s": 0,
+            "end_to_end_s": 0.0039044820005074143
+          },
+          {
+            "solver_controller_s": 0.000853429,
+            "controller_s": 0,
+            "end_to_end_s": 0.0042510029998084065
+          },
+          {
+            "solver_controller_s": 0.001188052,
+            "controller_s": 0,
+            "end_to_end_s": 0.004118166001717327
+          },
+          {
+            "solver_controller_s": 0.00095508,
+            "controller_s": 0,
+            "end_to_end_s": 0.004327160997490864
+          },
+          {
+            "solver_controller_s": 0.000866654,
+            "controller_s": 0,
+            "end_to_end_s": 0.00398790100007318
+          },
+          {
+            "solver_controller_s": 0.000925212,
+            "controller_s": 0,
+            "end_to_end_s": 0.004247166001732694
+          },
+          {
+            "solver_controller_s": 0.000751345,
+            "controller_s": 0,
+            "end_to_end_s": 0.0038065929984441027
+          }
+        ],
+        "block_adaptive": [
+          {
+            "solver_controller_s": 0.000630586,
+            "controller_s": 7.061e-06,
+            "end_to_end_s": 0.003735775000677677
+          },
+          {
+            "solver_controller_s": 0.000580017,
+            "controller_s": 6.796e-06,
+            "end_to_end_s": 0.003455361998931039
+          },
+          {
+            "solver_controller_s": 0.0005555099999999999,
+            "controller_s": 6.871e-06,
+            "end_to_end_s": 0.003595949998270953
+          },
+          {
+            "solver_controller_s": 0.00055094,
+            "controller_s": 6.782e-06,
+            "end_to_end_s": 0.004060798000864452
+          },
+          {
+            "solver_controller_s": 0.000555502,
+            "controller_s": 6.612e-06,
+            "end_to_end_s": 0.004714550999779021
+          },
+          {
+            "solver_controller_s": 0.000574904,
+            "controller_s": 6.597e-06,
+            "end_to_end_s": 0.00465318200076581
+          },
+          {
+            "solver_controller_s": 0.0026114009999999997,
+            "controller_s": 7.162e-06,
+            "end_to_end_s": 0.005597490002401173
+          },
+          {
+            "solver_controller_s": 0.000550969,
+            "controller_s": 7.052e-06,
+            "end_to_end_s": 0.0037411319972306956
+          },
+          {
+            "solver_controller_s": 0.000592965,
+            "controller_s": 6.981e-06,
+            "end_to_end_s": 0.0033807159998104908
+          },
+          {
+            "solver_controller_s": 0.0006253890000000001,
+            "controller_s": 6.901e-06,
+            "end_to_end_s": 0.003431986999203218
+          },
+          {
+            "solver_controller_s": 0.000550598,
+            "controller_s": 6.756e-06,
+            "end_to_end_s": 0.0035130370015394874
+          },
+          {
+            "solver_controller_s": 0.000613154,
+            "controller_s": 7e-06,
+            "end_to_end_s": 0.0031229339983838145
+          },
+          {
+            "solver_controller_s": 0.000554081,
+            "controller_s": 6.757e-06,
+            "end_to_end_s": 0.0036257060019124765
+          },
+          {
+            "solver_controller_s": 0.00099964,
+            "controller_s": 6.999e-06,
+            "end_to_end_s": 0.004193783999653533
+          },
+          {
+            "solver_controller_s": 0.000554255,
+            "controller_s": 7.32e-06,
+            "end_to_end_s": 0.0031908109995129053
+          },
+          {
+            "solver_controller_s": 0.0005769470000000001,
+            "controller_s": 6.875e-06,
+            "end_to_end_s": 0.003368772002431797
+          },
+          {
+            "solver_controller_s": 0.000555919,
+            "controller_s": 6.9e-06,
+            "end_to_end_s": 0.004357587000413332
+          },
+          {
+            "solver_controller_s": 0.000578189,
+            "controller_s": 6.789e-06,
+            "end_to_end_s": 0.0037239689991110936
+          },
+          {
+            "solver_controller_s": 0.0005710450000000001,
+            "controller_s": 6.779e-06,
+            "end_to_end_s": 0.0031308270008594263
+          },
+          {
+            "solver_controller_s": 0.000555235,
+            "controller_s": 7.029e-06,
+            "end_to_end_s": 0.0035488280009303708
+          }
+        ]
+      },
+      "median_solver_controller_s": {
+        "block_fast": 4.6251499999999996e-05,
+        "block_standard": 5.3015999999999995e-05,
+        "block_accurate": 0.00018950800000000002,
+        "block_high": 0.000572072,
+        "temporal_standard": 8.44055e-05,
+        "temporal_accurate": 0.0007715549999999999,
+        "block_adaptive": 0.0005729745
+      },
+      "original_cheapest_passing_fixed": "block_fast",
+      "adaptive_over_original_best_fixed": 12.388236057208957,
+      "physics_settings_and_policy_unchanged": true
+    },
+    {
+      "case_id": "impact_chain_12",
+      "round_order": [
+        [
+          "temporal_standard",
+          "block_high",
+          "temporal_accurate",
+          "block_standard",
+          "block_accurate",
+          "block_fast",
+          "block_adaptive"
+        ],
+        [
+          "block_adaptive",
+          "temporal_accurate",
+          "block_high",
+          "block_accurate",
+          "temporal_standard",
+          "block_standard",
+          "block_fast"
+        ],
+        [
+          "block_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_standard",
+          "block_high"
+        ],
+        [
+          "temporal_standard",
+          "block_high",
+          "block_standard",
+          "block_adaptive",
+          "temporal_accurate",
+          "block_accurate",
+          "block_fast"
+        ],
+        [
+          "block_adaptive",
+          "block_standard",
+          "block_accurate",
+          "temporal_standard",
+          "temporal_accurate",
+          "block_high",
+          "block_fast"
+        ],
+        [
+          "temporal_standard",
+          "block_fast",
+          "block_standard",
+          "block_accurate",
+          "block_adaptive",
+          "block_high",
+          "temporal_accurate"
+        ],
+        [
+          "block_standard",
+          "block_fast",
+          "block_high",
+          "block_accurate",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_adaptive"
+        ],
+        [
+          "temporal_standard",
+          "block_accurate",
+          "block_high",
+          "block_fast",
+          "block_standard",
+          "block_adaptive",
+          "temporal_accurate"
+        ],
+        [
+          "temporal_standard",
+          "block_fast",
+          "temporal_accurate",
+          "block_adaptive",
+          "block_high",
+          "block_accurate",
+          "block_standard"
+        ],
+        [
+          "block_fast",
+          "temporal_standard",
+          "block_adaptive",
+          "temporal_accurate",
+          "block_standard",
+          "block_high",
+          "block_accurate"
+        ],
+        [
+          "temporal_standard",
+          "temporal_accurate",
+          "block_fast",
+          "block_high",
+          "block_adaptive",
+          "block_standard",
+          "block_accurate"
+        ],
+        [
+          "block_standard",
+          "block_high",
+          "block_fast",
+          "temporal_standard",
+          "block_accurate",
+          "block_adaptive",
+          "temporal_accurate"
+        ],
+        [
+          "block_fast",
+          "block_accurate",
+          "temporal_accurate",
+          "block_high",
+          "temporal_standard",
+          "block_adaptive",
+          "block_standard"
+        ],
+        [
+          "block_fast",
+          "block_accurate",
+          "block_high",
+          "temporal_accurate",
+          "block_adaptive",
+          "block_standard",
+          "temporal_standard"
+        ],
+        [
+          "temporal_accurate",
+          "block_accurate",
+          "block_standard",
+          "block_adaptive",
+          "block_fast",
+          "temporal_standard",
+          "block_high"
+        ],
+        [
+          "block_adaptive",
+          "temporal_accurate",
+          "block_accurate",
+          "block_fast",
+          "temporal_standard",
+          "block_high",
+          "block_standard"
+        ],
+        [
+          "block_high",
+          "temporal_accurate",
+          "block_accurate",
+          "temporal_standard",
+          "block_standard",
+          "block_adaptive",
+          "block_fast"
+        ],
+        [
+          "block_standard",
+          "block_fast",
+          "block_accurate",
+          "block_high",
+          "temporal_accurate",
+          "temporal_standard",
+          "block_adaptive"
+        ],
+        [
+          "block_fast",
+          "temporal_accurate",
+          "block_standard",
+          "block_accurate",
+          "block_high",
+          "temporal_standard",
+          "block_adaptive"
+        ],
+        [
+          "block_high",
+          "block_fast",
+          "block_standard",
+          "block_adaptive",
+          "temporal_standard",
+          "block_accurate",
+          "temporal_accurate"
+        ]
+      ],
+      "samples": {
+        "block_fast": [
+          {
+            "solver_controller_s": 0.001661786,
+            "controller_s": 0,
+            "end_to_end_s": 0.01844930199877126
+          },
+          {
+            "solver_controller_s": 0.001143386,
+            "controller_s": 0,
+            "end_to_end_s": 0.012906878997455351
+          },
+          {
+            "solver_controller_s": 0.001723051,
+            "controller_s": 0,
+            "end_to_end_s": 0.01702733600177453
+          },
+          {
+            "solver_controller_s": 0.002083444,
+            "controller_s": 0,
+            "end_to_end_s": 0.020051329000125406
+          },
+          {
+            "solver_controller_s": 0.001301385,
+            "controller_s": 0,
+            "end_to_end_s": 0.014260724998166552
+          },
+          {
+            "solver_controller_s": 0.00158637,
+            "controller_s": 0,
+            "end_to_end_s": 0.01735705099781626
+          },
+          {
+            "solver_controller_s": 0.001245476,
+            "controller_s": 0,
+            "end_to_end_s": 0.014240205000533024
+          },
+          {
+            "solver_controller_s": 0.001561083,
+            "controller_s": 0,
+            "end_to_end_s": 0.018676957999559818
+          },
+          {
+            "solver_controller_s": 0.001485109,
+            "controller_s": 0,
+            "end_to_end_s": 0.028879950998089043
+          },
+          {
+            "solver_controller_s": 0.001586304,
+            "controller_s": 0,
+            "end_to_end_s": 0.016502204998687375
+          },
+          {
+            "solver_controller_s": 0.00198699,
+            "controller_s": 0,
+            "end_to_end_s": 0.018552844998339424
+          },
+          {
+            "solver_controller_s": 0.001178166,
+            "controller_s": 0,
+            "end_to_end_s": 0.013337200998648768
+          },
+          {
+            "solver_controller_s": 0.001293864,
+            "controller_s": 0,
+            "end_to_end_s": 0.014124434997938806
+          },
+          {
+            "solver_controller_s": 0.002311523,
+            "controller_s": 0,
+            "end_to_end_s": 0.01879482499862206
+          },
+          {
+            "solver_controller_s": 0.001503029,
+            "controller_s": 0,
+            "end_to_end_s": 0.016960421002295334
+          },
+          {
+            "solver_controller_s": 0.001437571,
+            "controller_s": 0,
+            "end_to_end_s": 0.01410676899831742
+          },
+          {
+            "solver_controller_s": 0.001212703,
+            "controller_s": 0,
+            "end_to_end_s": 0.015015311000752263
+          },
+          {
+            "solver_controller_s": 0.001341231,
+            "controller_s": 0,
+            "end_to_end_s": 0.01468974499948672
+          },
+          {
+            "solver_controller_s": 0.002255752,
+            "controller_s": 0,
+            "end_to_end_s": 0.017952223999600392
+          },
+          {
+            "solver_controller_s": 0.001199774,
+            "controller_s": 0,
+            "end_to_end_s": 0.01329837800221867
+          }
+        ],
+        "block_standard": [
+          {
+            "solver_controller_s": 0.002090986,
+            "controller_s": 0,
+            "end_to_end_s": 0.016217836000578245
+          },
+          {
+            "solver_controller_s": 0.002146162,
+            "controller_s": 0,
+            "end_to_end_s": 0.014296432997070951
+          },
+          {
+            "solver_controller_s": 0.00175602,
+            "controller_s": 0,
+            "end_to_end_s": 0.01793379700029618
+          },
+          {
+            "solver_controller_s": 0.002607571,
+            "controller_s": 0,
+            "end_to_end_s": 0.02054528799999389
+          },
+          {
+            "solver_controller_s": 0.002319563,
+            "controller_s": 0,
+            "end_to_end_s": 0.01862900800188072
+          },
+          {
+            "solver_controller_s": 0.002722106,
+            "controller_s": 0,
+            "end_to_end_s": 0.019895804001862416
+          },
+          {
+            "solver_controller_s": 0.004450815,
+            "controller_s": 0,
+            "end_to_end_s": 0.0169470930013631
+          },
+          {
+            "solver_controller_s": 0.001866007,
+            "controller_s": 0,
+            "end_to_end_s": 0.014667283998278435
+          },
+          {
+            "solver_controller_s": 0.001858391,
+            "controller_s": 0,
+            "end_to_end_s": 0.013752922997809947
+          },
+          {
+            "solver_controller_s": 0.001880876,
+            "controller_s": 0,
+            "end_to_end_s": 0.01869026200074586
+          },
+          {
+            "solver_controller_s": 0.003178545,
+            "controller_s": 0,
+            "end_to_end_s": 0.020816091000597226
+          },
+          {
+            "solver_controller_s": 0.001779101,
+            "controller_s": 0,
+            "end_to_end_s": 0.031635857001674594
+          },
+          {
+            "solver_controller_s": 0.001806465,
+            "controller_s": 0,
+            "end_to_end_s": 0.014831255000899546
+          },
+          {
+            "solver_controller_s": 0.002351563,
+            "controller_s": 0,
+            "end_to_end_s": 0.020021167998493183
+          },
+          {
+            "solver_controller_s": 0.001739229,
+            "controller_s": 0,
+            "end_to_end_s": 0.014494041999569163
+          },
+          {
+            "solver_controller_s": 0.003001694,
+            "controller_s": 0,
+            "end_to_end_s": 0.019671972000651294
+          },
+          {
+            "solver_controller_s": 0.002126599,
+            "controller_s": 0,
+            "end_to_end_s": 0.018017539001448313
+          },
+          {
+            "solver_controller_s": 0.001796777,
+            "controller_s": 0,
+            "end_to_end_s": 0.016125775000546128
+          },
+          {
+            "solver_controller_s": 0.001808762,
+            "controller_s": 0,
+            "end_to_end_s": 0.01360690900037298
+          },
+          {
+            "solver_controller_s": 0.002277963,
+            "controller_s": 0,
+            "end_to_end_s": 0.017654658000537893
+          }
+        ],
+        "block_accurate": [
+          {
+            "solver_controller_s": 0.008157757,
+            "controller_s": 0,
+            "end_to_end_s": 0.020695357001386583
+          },
+          {
+            "solver_controller_s": 0.014624031,
+            "controller_s": 0,
+            "end_to_end_s": 0.033944620001420844
+          },
+          {
+            "solver_controller_s": 0.007721588,
+            "controller_s": 0,
+            "end_to_end_s": 0.018440715000906494
+          },
+          {
+            "solver_controller_s": 0.008651726,
+            "controller_s": 0,
+            "end_to_end_s": 0.020794320000277366
+          },
+          {
+            "solver_controller_s": 0.007795962,
+            "controller_s": 0,
+            "end_to_end_s": 0.01890229300261126
+          },
+          {
+            "solver_controller_s": 0.008116063,
+            "controller_s": 0,
+            "end_to_end_s": 0.018633838000823744
+          },
+          {
+            "solver_controller_s": 0.007546907,
+            "controller_s": 0,
+            "end_to_end_s": 0.019060515998717165
+          },
+          {
+            "solver_controller_s": 0.007384615,
+            "controller_s": 0,
+            "end_to_end_s": 0.01826716099822079
+          },
+          {
+            "solver_controller_s": 0.008972871,
+            "controller_s": 0,
+            "end_to_end_s": 0.020982285001082346
+          },
+          {
+            "solver_controller_s": 0.008517338,
+            "controller_s": 0,
+            "end_to_end_s": 0.021820324000145774
+          },
+          {
+            "solver_controller_s": 0.010342434,
+            "controller_s": 0,
+            "end_to_end_s": 0.03259733300001244
+          },
+          {
+            "solver_controller_s": 0.00796745,
+            "controller_s": 0,
+            "end_to_end_s": 0.019209971000236692
+          },
+          {
+            "solver_controller_s": 0.008947238,
+            "controller_s": 0,
+            "end_to_end_s": 0.02087566199770663
+          },
+          {
+            "solver_controller_s": 0.007841034,
+            "controller_s": 0,
+            "end_to_end_s": 0.019734257999516558
+          },
+          {
+            "solver_controller_s": 0.007971231,
+            "controller_s": 0,
+            "end_to_end_s": 0.02190155299831531
+          },
+          {
+            "solver_controller_s": 0.008178635,
+            "controller_s": 0,
+            "end_to_end_s": 0.01928665399827878
+          },
+          {
+            "solver_controller_s": 0.00816556,
+            "controller_s": 0,
+            "end_to_end_s": 0.019261325000115903
+          },
+          {
+            "solver_controller_s": 0.008459643,
+            "controller_s": 0,
+            "end_to_end_s": 0.019462641997961327
+          },
+          {
+            "solver_controller_s": 0.008727165,
+            "controller_s": 0,
+            "end_to_end_s": 0.022373413998138858
+          },
+          {
+            "solver_controller_s": 0.008128005,
+            "controller_s": 0,
+            "end_to_end_s": 0.019408192001719726
+          }
+        ],
+        "block_high": [
+          {
+            "solver_controller_s": 0.022381242,
+            "controller_s": 0,
+            "end_to_end_s": 0.03434685400134185
+          },
+          {
+            "solver_controller_s": 0.0213419,
+            "controller_s": 0,
+            "end_to_end_s": 0.032679582000127994
+          },
+          {
+            "solver_controller_s": 0.021910329,
+            "controller_s": 0,
+            "end_to_end_s": 0.0330679879989475
+          },
+          {
+            "solver_controller_s": 0.021569904,
+            "controller_s": 0,
+            "end_to_end_s": 0.03419697299977997
+          },
+          {
+            "solver_controller_s": 0.022935152,
+            "controller_s": 0,
+            "end_to_end_s": 0.03682615399884526
+          },
+          {
+            "solver_controller_s": 0.025021983,
+            "controller_s": 0,
+            "end_to_end_s": 0.03866217899849289
+          },
+          {
+            "solver_controller_s": 0.021309947,
+            "controller_s": 0,
+            "end_to_end_s": 0.03251984599774005
+          },
+          {
+            "solver_controller_s": 0.029837547,
+            "controller_s": 0,
+            "end_to_end_s": 0.044379983002727386
+          },
+          {
+            "solver_controller_s": 0.0221946,
+            "controller_s": 0,
+            "end_to_end_s": 0.034600005001266254
+          },
+          {
+            "solver_controller_s": 0.028279166,
+            "controller_s": 0,
+            "end_to_end_s": 0.040538373999879695
+          },
+          {
+            "solver_controller_s": 0.025746265,
+            "controller_s": 0,
+            "end_to_end_s": 0.037565488997643115
+          },
+          {
+            "solver_controller_s": 0.022337502,
+            "controller_s": 0,
+            "end_to_end_s": 0.034143820997996954
+          },
+          {
+            "solver_controller_s": 0.022887699,
+            "controller_s": 0,
+            "end_to_end_s": 0.03561469900159864
+          },
+          {
+            "solver_controller_s": 0.021346704,
+            "controller_s": 0,
+            "end_to_end_s": 0.032384763999289135
+          },
+          {
+            "solver_controller_s": 0.022556392,
+            "controller_s": 0,
+            "end_to_end_s": 0.0355809769971529
+          },
+          {
+            "solver_controller_s": 0.021986702,
+            "controller_s": 0,
+            "end_to_end_s": 0.03451342700282112
+          },
+          {
+            "solver_controller_s": 0.030382432,
+            "controller_s": 0,
+            "end_to_end_s": 0.04409166899858974
+          },
+          {
+            "solver_controller_s": 0.027492174,
+            "controller_s": 0,
+            "end_to_end_s": 0.039719904998491984
+          },
+          {
+            "solver_controller_s": 0.021887569,
+            "controller_s": 0,
+            "end_to_end_s": 0.03370079399974202
+          },
+          {
+            "solver_controller_s": 0.022117455,
+            "controller_s": 0,
+            "end_to_end_s": 0.033534980000695214
+          }
+        ],
+        "temporal_standard": [
+          {
+            "solver_controller_s": 0.002374456,
+            "controller_s": 0,
+            "end_to_end_s": 0.01583483800277463
+          },
+          {
+            "solver_controller_s": 0.002790004,
+            "controller_s": 0,
+            "end_to_end_s": 0.018276057999173645
+          },
+          {
+            "solver_controller_s": 0.002817176,
+            "controller_s": 0,
+            "end_to_end_s": 0.01758745799816097
+          },
+          {
+            "solver_controller_s": 0.002737585,
+            "controller_s": 0,
+            "end_to_end_s": 0.015556153000943596
+          },
+          {
+            "solver_controller_s": 0.002151495,
+            "controller_s": 0,
+            "end_to_end_s": 0.014813485002378002
+          },
+          {
+            "solver_controller_s": 0.002373661,
+            "controller_s": 0,
+            "end_to_end_s": 0.014746696997463005
+          },
+          {
+            "solver_controller_s": 0.003116035,
+            "controller_s": 0,
+            "end_to_end_s": 0.020783789997949498
+          },
+          {
+            "solver_controller_s": 0.002222427,
+            "controller_s": 0,
+            "end_to_end_s": 0.014880389997415477
+          },
+          {
+            "solver_controller_s": 0.002080067,
+            "controller_s": 0,
+            "end_to_end_s": 0.015421066000271821
+          },
+          {
+            "solver_controller_s": 0.002887288,
+            "controller_s": 0,
+            "end_to_end_s": 0.01945952299865894
+          },
+          {
+            "solver_controller_s": 0.002765434,
+            "controller_s": 0,
+            "end_to_end_s": 0.020111172998440452
+          },
+          {
+            "solver_controller_s": 0.002649033,
+            "controller_s": 0,
+            "end_to_end_s": 0.018426794002152747
+          },
+          {
+            "solver_controller_s": 0.002963373,
+            "controller_s": 0,
+            "end_to_end_s": 0.019382851998670958
+          },
+          {
+            "solver_controller_s": 0.002164938,
+            "controller_s": 0,
+            "end_to_end_s": 0.01610884299952886
+          },
+          {
+            "solver_controller_s": 0.00243397,
+            "controller_s": 0,
+            "end_to_end_s": 0.01750674700087984
+          },
+          {
+            "solver_controller_s": 0.002047532,
+            "controller_s": 0,
+            "end_to_end_s": 0.01618244500059518
+          },
+          {
+            "solver_controller_s": 0.002021569,
+            "controller_s": 0,
+            "end_to_end_s": 0.014209296001354232
+          },
+          {
+            "solver_controller_s": 0.002335132,
+            "controller_s": 0,
+            "end_to_end_s": 0.015277167000022018
+          },
+          {
+            "solver_controller_s": 0.002061211,
+            "controller_s": 0,
+            "end_to_end_s": 0.0168549969966989
+          },
+          {
+            "solver_controller_s": 0.002411446,
+            "controller_s": 0,
+            "end_to_end_s": 0.01591353899857495
+          }
+        ],
+        "temporal_accurate": [
+          {
+            "solver_controller_s": 0.020972014,
+            "controller_s": 0,
+            "end_to_end_s": 0.03438579599969671
+          },
+          {
+            "solver_controller_s": 0.022698325,
+            "controller_s": 0,
+            "end_to_end_s": 0.03604856900346931
+          },
+          {
+            "solver_controller_s": 0.026967356,
+            "controller_s": 0,
+            "end_to_end_s": 0.047627699001168367
+          },
+          {
+            "solver_controller_s": 0.021293587,
+            "controller_s": 0,
+            "end_to_end_s": 0.035580225001467625
+          },
+          {
+            "solver_controller_s": 0.025286301,
+            "controller_s": 0,
+            "end_to_end_s": 0.04361668099954841
+          },
+          {
+            "solver_controller_s": 0.026324774,
+            "controller_s": 0,
+            "end_to_end_s": 0.04954336200171383
+          },
+          {
+            "solver_controller_s": 0.022808765,
+            "controller_s": 0,
+            "end_to_end_s": 0.03627858900290448
+          },
+          {
+            "solver_controller_s": 0.022776351,
+            "controller_s": 0,
+            "end_to_end_s": 0.03754091600058018
+          },
+          {
+            "solver_controller_s": 0.025296691,
+            "controller_s": 0,
+            "end_to_end_s": 0.04016734100150643
+          },
+          {
+            "solver_controller_s": 0.022164779,
+            "controller_s": 0,
+            "end_to_end_s": 0.035739557999477256
+          },
+          {
+            "solver_controller_s": 0.024145433,
+            "controller_s": 0,
+            "end_to_end_s": 0.03964705200269236
+          },
+          {
+            "solver_controller_s": 0.021579907,
+            "controller_s": 0,
+            "end_to_end_s": 0.03593948299749172
+          },
+          {
+            "solver_controller_s": 0.021775907,
+            "controller_s": 0,
+            "end_to_end_s": 0.03653655200105277
+          },
+          {
+            "solver_controller_s": 0.025282655,
+            "controller_s": 0,
+            "end_to_end_s": 0.040399728997726925
+          },
+          {
+            "solver_controller_s": 0.022330813,
+            "controller_s": 0,
+            "end_to_end_s": 0.03700715400191257
+          },
+          {
+            "solver_controller_s": 0.028267335,
+            "controller_s": 0,
+            "end_to_end_s": 0.0446745489971363
+          },
+          {
+            "solver_controller_s": 0.022741915,
+            "controller_s": 0,
+            "end_to_end_s": 0.03692965099980938
+          },
+          {
+            "solver_controller_s": 0.022694932,
+            "controller_s": 0,
+            "end_to_end_s": 0.03675038200162817
+          },
+          {
+            "solver_controller_s": 0.022439514,
+            "controller_s": 0,
+            "end_to_end_s": 0.03610464900339139
+          },
+          {
+            "solver_controller_s": 0.021719128,
+            "controller_s": 0,
+            "end_to_end_s": 0.03434962399842334
+          }
+        ],
+        "block_adaptive": [
+          {
+            "solver_controller_s": 0.02158139,
+            "controller_s": 0.000425672,
+            "end_to_end_s": 0.034889332000602735
+          },
+          {
+            "solver_controller_s": 0.019954143,
+            "controller_s": 0.000427189,
+            "end_to_end_s": 0.03339027499896474
+          },
+          {
+            "solver_controller_s": 0.021857145999999997,
+            "controller_s": 0.000592086,
+            "end_to_end_s": 0.03591139399941312
+          },
+          {
+            "solver_controller_s": 0.022337265000000002,
+            "controller_s": 0.000590612,
+            "end_to_end_s": 0.03807805700125755
+          },
+          {
+            "solver_controller_s": 0.020660624,
+            "controller_s": 0.000882064,
+            "end_to_end_s": 0.03788635999808321
+          },
+          {
+            "solver_controller_s": 0.019303748,
+            "controller_s": 0.000442091,
+            "end_to_end_s": 0.03174672499881126
+          },
+          {
+            "solver_controller_s": 0.019288509,
+            "controller_s": 0.00041962,
+            "end_to_end_s": 0.031908573997498024
+          },
+          {
+            "solver_controller_s": 0.020420854,
+            "controller_s": 0.000705383,
+            "end_to_end_s": 0.036874925001029624
+          },
+          {
+            "solver_controller_s": 0.026589105,
+            "controller_s": 0.001073938,
+            "end_to_end_s": 0.04296958099803305
+          },
+          {
+            "solver_controller_s": 0.022115609,
+            "controller_s": 0.000463014,
+            "end_to_end_s": 0.0389566339981684
+          },
+          {
+            "solver_controller_s": 0.019734899,
+            "controller_s": 0.000592978,
+            "end_to_end_s": 0.035652075999678345
+          },
+          {
+            "solver_controller_s": 0.019974984999999997,
+            "controller_s": 0.000418797,
+            "end_to_end_s": 0.03299585000058869
+          },
+          {
+            "solver_controller_s": 0.023457319,
+            "controller_s": 0.000844977,
+            "end_to_end_s": 0.04310113900282886
+          },
+          {
+            "solver_controller_s": 0.020512482,
+            "controller_s": 0.000581531,
+            "end_to_end_s": 0.03425210500063258
+          },
+          {
+            "solver_controller_s": 0.019963897999999997,
+            "controller_s": 0.000771782,
+            "end_to_end_s": 0.03486595999856945
+          },
+          {
+            "solver_controller_s": 0.018996274,
+            "controller_s": 0.000597978,
+            "end_to_end_s": 0.033074220998969395
+          },
+          {
+            "solver_controller_s": 0.021258795,
+            "controller_s": 0.000726825,
+            "end_to_end_s": 0.03564365100100986
+          },
+          {
+            "solver_controller_s": 0.022863190999999998,
+            "controller_s": 0.000691135,
+            "end_to_end_s": 0.04033259099742281
+          },
+          {
+            "solver_controller_s": 0.019601244,
+            "controller_s": 0.000571399,
+            "end_to_end_s": 0.03444998699706048
+          },
+          {
+            "solver_controller_s": 0.019759667999999998,
+            "controller_s": 0.000653893,
+            "end_to_end_s": 0.03553210500103887
+          }
+        ]
+      },
+      "median_solver_controller_s": {
+        "block_fast": 0.001494069,
+        "block_standard": 0.0021087924999999997,
+        "block_accurate": 0.0081616585,
+        "block_high": 0.022359372,
+        "temporal_standard": 0.002392951,
+        "temporal_accurate": 0.02272012,
+        "block_adaptive": 0.020466668
+      },
+      "original_cheapest_passing_fixed": "block_accurate",
+      "adaptive_over_original_best_fixed": 2.507660422204629,
+      "physics_settings_and_policy_unchanged": true
+    }
+  ],
+  "scope": "Follow-up after initial results. Randomized mode order within each round on one machine; no policy retuning or new accuracy claims. End-to-end includes shared output/diagnostic overhead."
+}

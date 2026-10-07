@@ -1,0 +1,24 @@
+{
+  "scope": "Remaining21-row failing component in the297-row capture: mobility-null traction seeds directed toward friction-cone surfaces. All physical rows and material unchanged; native and independent full-system acceptance mandatory.",
+  "inputs": {
+    "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87"
+  },
+  "budgets": [
+    128,
+    512,
+    2048
+  ],
+  "execution": "Sequential single-thread. Retain declines. Stop larger budgets for an input after original-law acceptance. Native replay plus independent frozen external law audit required. Compile/run after existing larger reference driver finishes to avoid concurrent native work.",
+  "component_variant": "Exact nonzero A or transpose/dependency connectivity. Each block<=64 rows; fresh same declared128/512/2048 caps PER block. No coupling cutoff, all components execute; global native original-law/passivity gate required. Original direct1024-row variant remains isolated comparator. No runtime acceptance claim.",
+  "limits": {
+    "raw_function_evaluations_per_method_seed": 2048,
+    "maximum_targeted_contact_seeds_per_failed_component": 64,
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "mobility_null_relative_singular_cutoff": 1e-12,
+    "maximum_targeted_contact_pairs_per_failed_component": 36
+  },
+  "seed_policy": "Warm plus up to64 contact/direction seeds. Each contact retains its normal pressure and targets tangent traction on original circular cone using +/- current tangent response direction and four tangent axes. Minimum-norm approximate mobility-null relocation affects only search seeds; cone projection and original exact final laws mandatory."
+}

@@ -1,0 +1,18 @@
+....F
+======================================================================
+FAIL: test_updated_raw_response_does_not_bypass_physics (__main__.ReceiptChecks.test_updated_raw_response_does_not_bypass_physics)
+----------------------------------------------------------------------
+AssertionError: Original finite passivity gate failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/rigid-body-collisions/research/component-recovery-integration/checks.py", line 54, in test_updated_raw_response_does_not_bypass_physics
+    with self.assertRaisesRegex(AssertionError, 'Original full-row projection'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "Original full-row projection" does not match "Original finite passivity gate failed"
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.088s
+
+FAILED (failures=1)

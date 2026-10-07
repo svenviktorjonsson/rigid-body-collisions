@@ -1,0 +1,16 @@
+{
+  "schema": "frozen-combined-translation-native-controls-v1",
+  "execution_source_commit": "f66193fc8cfa0329cbdad0eb2854ecaedce8ab4a",
+  "native_world_execution": false,
+  "controls_passed": true,
+  "files": {
+    "compile.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "completion.json": "6bd356e29631d5895407053b20054bb0fe1ee5c41f2f2b636f698b3a0a60a0f2",
+    "independent-audit.json": "c87d318f0630708e9af4d1c96ba5ad6f200fe0e33e2617d16a5d38fc411dd997",
+    "provenance.json": "eb8ae89db3ea6474b58b0d8feab23d0b5401ce544cf8e6e31e4a878d1818e07e",
+    "source.zip": "89d29cbf0ba9862cdf4a5d44942b19c679d495c579e4d68d295f4d4454eba6a1",
+    "test.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test.stdout.log": "eef21f5977edddc53b041855c87df61d0a3fb670e789d3ea6b72fc4cad299083"
+  }
+}

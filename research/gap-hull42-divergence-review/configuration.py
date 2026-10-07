@@ -1,0 +1,30 @@
+"""Read-only source evidence and independently calculated initial travel bounds."""
+import hashlib,json,zipfile
+from pathlib import Path
+import numpy as np
+from scipy.spatial import ConvexHull
+from scipy.spatial.transform import Rotation
+P=Path(__file__).parent;ROOT=P.parents[1];plan=json.loads((P/'collision-config-plan.json').read_text());sha=lambda raw:hashlib.sha256(raw).hexdigest();cache_plan=json.loads((P/'collision-cache-plan.json').read_text())
+for path,h in cache_plan['sources_sha256'].items():assert sha((ROOT/'build/bullet-inspect'/path).read_bytes())==h
+for p,h in plan['progress_hashes'].items():assert sha((ROOT/p).read_bytes())==h
+B=ROOT/'build/bullet-inspect'
+for p,h in plan['upstream_sha256'].items():assert sha((B/p).read_bytes())==h
+wire=json.loads((ROOT/list(plan['progress_hashes'])[0]).read_text())['wire_bodies'];assert all(json.loads((ROOT/p).read_text())['wire_bodies']==wire for p in plan['progress_hashes'])
+scene=json.loads((ROOT/'research/hull-gap-completion/results/scenes.json').read_text())['fast_shake8_hulls42'];features=[];radii=[];toi=[]
+for ident,body in enumerate(wire):
+ mins=[];maxs=[];consistent_mins=[];consistent_maxs=[];world=[]
+ for s in body['shapes']:
+  R=Rotation.from_quat(s['orientation']).as_matrix();center=np.array(s['center'])
+  if s['kind']=='box':e=np.array(s['half_extents']);c=np.zeros(3);features.append(float(np.min(e)))
+  else:
+   verts=np.array(s['vertices']);c=.5*(np.min(verts,axis=0)+np.max(verts,axis=0));e=.5*np.ptp(verts,axis=0);hull=ConvexHull(verts);features.append(float(np.min(np.ptp(verts@hull.equations[:,:3].T,axis=0))/2));world.extend((np.array(body['position'])+(verts@R.T+center)@Rotation.from_quat(body['orientation']).as_matrix().T).tolist())
+  local_center=R@c+center;consistent_extent=abs(R)@e;extent=abs(R)@(e+(.04 if s['kind']=='hull'else 0.));mins.append(local_center-extent);maxs.append(local_center+extent);consistent_mins.append(local_center-consistent_extent);consistent_maxs.append(local_center+consistent_extent)
+ low=np.min(mins,axis=0);high=np.max(maxs,axis=0);disc=float(.5*np.linalg.norm(high-low)+np.linalg.norm(.5*(high+low)));clow=np.min(consistent_mins,axis=0);chigh=np.max(consistent_maxs,axis=0);cdisc=float(.5*np.linalg.norm(chigh-clow)+np.linalg.norm(.5*(chigh+clow)));radii.append(dict(body_id=ident,compound_angular_motion_disc_m=disc,relative_contact_breaking_threshold_m=.02*disc,consistent_declared_margin_threshold_m=.02*cdisc,travel_guard_radius_m=body['radius']))
+ if ident>0:toi.append(dict(body_id=ident,initial_negative_x_wall_gap_m=float(np.min(np.array(world)[:,0])+scene['half']),free_motion_first_negative_x_wall_time_s=float((np.min(np.array(world)[:,0])+scene['half'])/20),scope='Only initial free horizontal motion with Ω0=0; excludes earlier interactions with other bodies.'))
+feature=min(features);first_h=[]
+for f in [.06,.03,.015]:first_h.append(dict(travel_fraction=f,feature_m=feature,initial_surface_speed_bound_m_s=20,initial_h_s=f*feature/(40+np.sqrt(2*9.81*f*feature))))
+upstream={p:(B/p).read_text()for p in plan['upstream_sha256']}
+with zipfile.ZipFile(ROOT/'research/hull-gap-completion/results/execution-source.zip')as z:runner=z.read('spatial_backend/runner.cpp').decode()
+assert 'setCcdMotionThreshold'not in runner and 'setCcdSweptSphereRadius'not in runner and 'make_unique<btCompoundShape>'in runner
+out=dict(bullet_commit=plan['bullet_commit'],source_sha256=sha(Path(__file__).read_bytes()),upstream_source_sha256=plan['upstream_sha256'],all_bodies_wrapped_in_compound_shapes=True,CCD_motion_threshold_default=0,CCD_swept_sphere_radius_default=0,dispatcher_useContinuous_default=True,default_CCD_requires_nonzero_motion_threshold=True,predictive_and_clamping_CCD_require_convex_top_level_shape=True,default_relative_contact_breaking_factor=.02,declared_narrow_phase_margin_m=0.,hull_cached_margin_at_recalc_m=.04,constructor_cache_inconsistency='recalcLocalAabb before setting margin; inherited setMargin does not invalidate/recalculate cached bounds',cache_evidence_sha256=cache_plan['sources_sha256'],relative_compound_threshold_estimates=radii,first_travel_bounds=first_h,initial_free_motion_wall_contacts=toi,actual_internal_event_times_available=False,source_facts=[dict(path='spatial_backend/runner.cpp',lines=[77,81,140,151],fact='Every shape wrapped in a compound; state-speed travel guard and schedule clipping precede one Bullet stepSimulation(h,0,h).'),dict(path='src/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp',lines=[452,473,486,863,865,965,968],fact='Discrete collision discovery before velocity constraints and transform integration; both predictive and clamping CCD require nonzero body threshold and isConvex().'),dict(path='src/BulletCollision/CollisionDispatch/btCollisionObject.cpp',lines=[48,49],fact='Default swept sphere radius and motion threshold are zero; adapter does not override them.'),dict(path='src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp',lines=[32,74,75],fact='Default relative contact-breaking threshold uses minimum of both shapes angular motion discs times0.02, not fixed0.02m for every body.'),dict(path='src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp',lines=[26,261,264,281],fact='Persistent points/normals/impulses are retained until distance or tangential displacement thresholds remove them; endpoint distances refreshed using stored normal.')],limitations=['Threshold estimates use independently reconstructed compound localAABB formula; no native threshold observer was run.','Enabling per-body CCD settings alone would still skip top-level compound shapes; sphere motion clamping is not exact arbitrary-polyhedron contact timing.','Finite-step discovery/cache sensitivity is plausible but not proven by these output-sampled trajectories.'])
+(P/'collision-config.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(dict(first_h=first_h,threshold_range_m=[min(v['relative_contact_breaking_threshold_m']for v in radii[1:]),max(v['relative_contact_breaking_threshold_m']for v in radii[1:])],initial_contacts=toi),indent=2))

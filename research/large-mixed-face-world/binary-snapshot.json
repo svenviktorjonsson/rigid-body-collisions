@@ -1,0 +1,13 @@
+{
+  "source": "5c75fa9f80bb80442fe006c0071b27f4be581dec",
+  "binaries": {
+    "spatial_runner": {
+      "path": "/home/viktor/.cache/physics-mixed-face-world-binaries-20261006/spatial_runner",
+      "sha256": "e7c27f7a69267324795bd9e028bddc629e9f85f2f8783c60d0a888f34c922607"
+    },
+    "spatial_coulomb_replay": {
+      "path": "/home/viktor/.cache/physics-mixed-face-world-binaries-20261006/spatial_coulomb_replay",
+      "sha256": "52d13e484ea134ca85fe5bc61c3dfb9e999b6ec9b3d5fb1880fdce963e01e8bf"
+    }
+  }
+}

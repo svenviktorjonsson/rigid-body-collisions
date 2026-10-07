@@ -1,0 +1,20 @@
+# Signed-gap position-repair trial
+
+The original 74-row translation-only position problem remains exactly certified infeasible under its original finite bounds. This experiment changes the numerical position rule explicitly: separated persistent contact rows may consume their available signed gap, retaining the declared 1e-9 m slop. Their target becomes `−max(distance − slop, 0) / h`. Penetrating and within-slop original targets, all 74 mobility rows, masses, inertia, friction, impulse bounds and the 1e-8 m/s mechanical gate remain unchanged. No rotation is applied.
+
+The geometry observer identified rows 11, 54 and 55 as contacts between container 0 and hull 20. Row 11 has 0.743 mm clearance; row 54 penetrates 1.91 nm; row 55 has 1.29 nm clearance. Giving every separated row a zero position target incorrectly prohibited use of that clearance. Their nearly cancelling positive normal combination caused the bounded translation-repair contradiction.
+
+The trial was frozen and published before execution at `c465f8556ae905f69908eb3fb1427db50737d244`. Both predeclared attempts are retained:
+
+| Attempt | All-row residual (m/s) | Geometry | Qualified trial |
+|---|---:|---|---|
+| Cold pressure QP | 0.01338 | Increased penetration | No |
+| Cold Fischer–Burmeister trust search | 2.28e-16 | No body-pair gap worsened | Yes |
+
+The successful pressure is bounded by 0.04573 N s. A separate Bullet geometry clone independently re-discovers all contacts after the proposed translations: maximum penetration falls from 3.494e-8 m to 2.795e-8 m. The largest body translation is 3.017e-7 m, without changing orientation or velocity. `audit.py` independently recomputes targets, all-row normal/passivity/bounds, pressure-to-pose mapping, geometry gates and provenance; it confirms one qualified trial and one retained failure.
+
+For the frozen captured velocities, COM changes by approximately `(−2.336e-9, −6.161e-10, 0)` m. Linear momentum, spin angular momentum and kinetic energy are unchanged by this translation-only pose operation. Orbital angular momentum changes by approximately `(4.402e-7, 6.374e-7, −2.382e-7)` kg m²/s; the gravity potential change is approximately −2.22e-17 J. This is an explicit numerical-pose ledger at the captured state, before Bullet applies the physical collision impulse. It does not establish whole-trajectory momentum conservation or qualify every later contact.
+
+A native extension is prepared separately in `native-plan.json`, `native_runner.py`, `native_replay.cpp` and `frozen-c465/`. It uses the exact existing C++ `translationSplitSolve` headers extracted byte-for-byte from c465, allowing ongoing production work to remain independent. Its protocol requires the original targets to decline and the new targets to pass, then repeats the full independent normal/passivity/bounds and actual geometry gates. The native extension was committed and published at `984ee6d0c9bfb356646ee042f897769ed34607cb` before execution. The exact existing C++ solver declines the original targets at residual 1.06071e-4 m/s and accepts the declared signed-gap targets at independently recomputed residual **1.78826e-12 m/s**. Its passive correction bound is −0.00368155 J; no SVD recovery is needed. A fresh geometry re-query gives the same 20% maximum penetration reduction, without worsening any body-pair gap. `audit_native.py` verifies every archived source entry, including the duplicate identical runner entry, every frozen c465 header, all 74 physical gates, pose mapping and actual geometry. This native replay still does not qualify a complete trajectory.
+
+`manifest.json` pins the source/data artifacts. Generated local executables are excluded from that manifest; their SHA-256 and compile/static/runtime provenance are recorded in the execution receipts. The earlier exploratory probe is retained separately under the geometry review and does not qualify this prospective trial. The original source, matrix rejection and exact certificate are untouched. Complete random-hull shaking trajectories still require a new frozen integration and refinement study.

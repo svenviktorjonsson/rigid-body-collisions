@@ -1,0 +1,442 @@
+{
+  "plan_commit": "d0da9dcda3c80ec59be40076b651b18d8881fcef",
+  "plan_sha256": "ccc011d2455dddcf858fff5d756e0b56c18c94c03ae2abf8960163a679e41acd",
+  "build_provenance_sha256": "61649b82d138025e692fe75ff981e8957a7b381b179ce7d214705d952c0ad074",
+  "phase": "validation",
+  "runner_sha256": "9fc93f3a30f1325b373d72b1199318dc0ce003faf392a369b49e9c5e46d93b85",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "affinity_cpu": 4,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "timing_scope": "Descriptive paired native solver costs under observed shared collaborative workload; CPU affinity does not establish full machine isolation.",
+  "complete": true,
+  "attempt_count": 40,
+  "cases": [
+    {
+      "capture": "research/coulomb-diagnostics/hull42-rejected.json",
+      "rows": 18,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 2.2407948772503345e-11
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 2.240785906989784e-11
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-rejected.json",
+      "rows": 108,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.5318363176651745e-10
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.5318363176651745e-10
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/coulomb-diagnostics/hull7301-later-rejected.json",
+      "rows": 267,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.9745651372517765e-12
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.9745651372517765e-12
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/coulomb-followup/hull42-second-rejected.json",
+      "rows": 45,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 3.6319434460190556e-09
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 3.6319434460190556e-09
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 48,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 5.553458871593134e-09
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 5.553458872457202e-09
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 216,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.370204850999851e-11
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.494464653862071e-11
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "rows": 192,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.085128761655274e-14
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.084930058658002e-14
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "rows": 123,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.9576812368827152e-10
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.957686520884428e-10
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "rows": 48,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.0742877117184984e-12
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.0740587293293808e-12
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 51,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.149265754414005e-13
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.149265754414005e-13
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "rows": 30,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 6.703097369696766e-11
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 6.703090353108564e-11
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 321,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.314784762054179e-12
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 2.1567768702787216e-15
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+      "rows": 231,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 8.868568375544756e-14
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 8.873508122601568e-14
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "rows": 54,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 5.74020778461482e-09
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 5.74020778461482e-09
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 45,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.7519491334130247e-09
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.4094452874541362e-08
+        }
+      },
+      "functional_regression": true
+    },
+    {
+      "capture": "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "rows": 48,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.393902494316418e-15
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 9.41170463108968e-15
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+      "rows": 60,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 0.0001989680153840156
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 0.0001989680153840156
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+      "rows": 39,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.399159126620584e-06
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.399159126620584e-06
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+      "rows": 51,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.4455619775442352e-06
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 0,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.4455619775442352e-06
+        }
+      },
+      "functional_regression": false
+    },
+    {
+      "capture": "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "rows": 291,
+      "variants": {
+        "baseline": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.328781578758511e-15
+        },
+        "qr": {
+          "attempts": 1,
+          "accepted": 1,
+          "median_s": null,
+          "range_s": null,
+          "maximum_residual_m_s": 1.328781578758511e-15
+        }
+      },
+      "functional_regression": false
+    }
+  ],
+  "accepted": 33,
+  "functional_regressions": 1
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "production-exact-component-tail-qualification-v1",
+  "capture_plan": "research/qr-minnorm-review/plan.json",
+  "extension_plan": "research/translation-native-review/v3/plan.json",
+  "expected_count": 22,
+  "seed": "Final rejected PGS vector produced by this actual production call, not original caller warm start",
+  "stage": "After all existing solver stages reject; no early performance adoption",
+  "gates": "Unchanged every original row circular projection and normal bounds, finite passivity, plus independent physical law bookkeeping",
+  "tolerance_m_s": 1e-08,
+  "preserve_old20": "Existing accepted solutions must remain byte-identical",
+  "source_hashes": {
+    "spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "spatial_backend/coulomb.h": "f86750a72f5dd20af9ae991bd70ceb5756854236e6563b7d24bb3255ced1efde",
+    "spatial_backend/coulomb_replay.cpp": "2bb01361d54a0a6b36566a60bdb3f175b19345c36d54438bcc82b0c2dc0434ea",
+    "spatial_backend/runner.cpp": "04e4d9047df6ec6adb95b05d479160d29b3328eec3c02e1ca066c087036413a5",
+    "spatial_backend/CMakeLists.txt": "f758799b5704fab8c7af853356c387e59a13ca9a26083835db3fcb74e88bfbc9",
+    "research/verify_native_contact_replays.py": "c7e5fd4778d7cc4489c300df86d94c51d4e79171417dd5a330cee34afb651e78"
+  },
+  "scope": "Captured contact roots only; no trajectory/material qualification",
+  "controls": "Exact components/triples/tiny coupling/caps/nonfinite/overflow/asymmetry/indefinite tangents/failure unchanged"
+}

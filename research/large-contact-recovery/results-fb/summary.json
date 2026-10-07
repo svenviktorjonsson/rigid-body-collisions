@@ -1,0 +1,438 @@
+{
+  "complete": true,
+  "prototype_source_unchanged": true,
+  "source": "5fd184ef5ffd30aeefbae5f6be54374671b0cfe2",
+  "records": [
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.1686459504936614e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.1686459504928304e-08,
+        "support_gap_J": 7.309438773219045e-12,
+        "passive_bound_J": -0.0809855884213543,
+        "passivity_scale": 1.08114239878403,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "input_sha256": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+      "budget_per_component_or_direct": 128,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.3488661492675957e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.3488661492316735e-08,
+        "support_gap_J": 4.559643492309045e-12,
+        "passive_bound_J": -0.0809855726534944,
+        "passivity_scale": 1.081142388387037,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 128,
+        "newton_steps": 5,
+        "residual_m_s": 1.1686459505033942e-08,
+        "svd_calls": 128
+      },
+      "component_policy": {
+        "attempts": 16,
+        "coupling_threshold": 0,
+        "largest_rows": 21,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.011491984005260747,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.1686459504936614e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.1686459504928304e-08,
+        "support_gap_J": 7.309438773219045e-12,
+        "passive_bound_J": -0.0809855884213543,
+        "passivity_scale": 1.08114239878403,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "input_sha256": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+      "budget_per_component_or_direct": 512,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.3488661492675957e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.3488661492316735e-08,
+        "support_gap_J": 4.559643492309045e-12,
+        "passive_bound_J": -0.0809855726534944,
+        "passivity_scale": 1.081142388387037,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 512,
+        "newton_steps": 5,
+        "residual_m_s": 1.1686459505033942e-08,
+        "svd_calls": 512
+      },
+      "component_policy": {
+        "attempts": 16,
+        "coupling_threshold": 0,
+        "largest_rows": 21,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.02307628899870906,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.1686459504936614e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.1686459504928304e-08,
+        "support_gap_J": 7.309438773219045e-12,
+        "passive_bound_J": -0.0809855884213543,
+        "passivity_scale": 1.08114239878403,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_0.rejection.json",
+      "input_sha256": "3c4c2dafed8d9b23fc6ac8b6ec6c50dd69a9df2ac117000920a81ca0ab1325d5",
+      "budget_per_component_or_direct": 2048,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.3488661492675957e-08,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.3488661492316735e-08,
+        "support_gap_J": 4.559643492309045e-12,
+        "passive_bound_J": -0.0809855726534944,
+        "passivity_scale": 1.081142388387037,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 3.552713678800501e-15
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 2048,
+        "newton_steps": 5,
+        "residual_m_s": 1.1686459505033942e-08,
+        "svd_calls": 2048
+      },
+      "component_policy": {
+        "attempts": 16,
+        "coupling_threshold": 0,
+        "largest_rows": 21,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.0708352610017755,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 9.115300955224036e-07,
+        "circle_violation_scaled_m_s": 1.7429940079838096e-09,
+        "sticking_m_s": 9.11530095550934e-07,
+        "support_gap_J": 2.853218989784742e-07,
+        "passive_bound_J": -2.173203930768147,
+        "passivity_scale": 4.2950747571475585,
+        "finite": true,
+        "bounds": false,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "input_sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "budget_per_component_or_direct": 128,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 128,
+        "newton_steps": 81,
+        "residual_m_s": 9.11530095591526e-07,
+        "svd_calls": 128
+      },
+      "component_policy": {
+        "attempts": 17,
+        "coupling_threshold": 0,
+        "largest_rows": 27,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.021069909002108034,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 9.036299361931664e-07,
+        "circle_violation_scaled_m_s": 1.7233186718876337e-09,
+        "sticking_m_s": 9.03629936179612e-07,
+        "support_gap_J": 2.8033378460845684e-07,
+        "passive_bound_J": -2.1732039385792623,
+        "passivity_scale": 4.293046776171764,
+        "finite": true,
+        "bounds": false,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "input_sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "budget_per_component_or_direct": 512,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 512,
+        "newton_steps": 337,
+        "residual_m_s": 9.036299361348282e-07,
+        "svd_calls": 512
+      },
+      "component_policy": {
+        "attempts": 17,
+        "coupling_threshold": 0,
+        "largest_rows": 27,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.04413820699846838,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 8.61956834596059e-07,
+        "circle_violation_scaled_m_s": 1.6636201894511848e-09,
+        "sticking_m_s": 8.619568345786327e-07,
+        "support_gap_J": 2.5741026763282005e-07,
+        "passive_bound_J": -2.1732039733393496,
+        "passivity_scale": 4.288978383293254,
+        "finite": true,
+        "bounds": false,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_64/reference_3.rejection.json",
+      "input_sha256": "ce7f41cfd8fae5d09704578d7b3f784e895524f388b2fa7435c2c11e0284ab87",
+      "budget_per_component_or_direct": 2048,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.3528087879476806e-06,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.352808787946826e-06,
+        "support_gap_J": 4.2298316286973494e-07,
+        "passive_bound_J": -2.1732039487758836,
+        "passivity_scale": 4.295834459769264,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 2048,
+        "newton_steps": 1361,
+        "residual_m_s": 8.619568348987475e-07,
+        "svd_calls": 2048
+      },
+      "component_policy": {
+        "attempts": 17,
+        "coupling_threshold": 0,
+        "largest_rows": 27,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.136462472997664,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.3007946232037064e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.3007946232967157e-07,
+        "support_gap_J": 3.165746862521436e-09,
+        "passive_bound_J": -14.642739547010047,
+        "passivity_scale": 32.03334925578666,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "input_sha256": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+      "budget_per_component_or_direct": 128,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 128,
+        "newton_steps": 3,
+        "residual_m_s": 1.300794623192168e-07,
+        "svd_calls": 128
+      },
+      "component_policy": {
+        "attempts": 21,
+        "coupling_threshold": 0,
+        "largest_rows": 60,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.02863505300047109,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.3007946232037064e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.3007946232967157e-07,
+        "support_gap_J": 3.165746862521436e-09,
+        "passive_bound_J": -14.642739547010047,
+        "passivity_scale": 32.03334925578666,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "input_sha256": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+      "budget_per_component_or_direct": 512,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 512,
+        "newton_steps": 3,
+        "residual_m_s": 1.300794623192168e-07,
+        "svd_calls": 512
+      },
+      "component_policy": {
+        "attempts": 21,
+        "coupling_threshold": 0,
+        "largest_rows": 60,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.05235382100363495,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    },
+    {
+      "trial_independent": {
+        "accepted": false,
+        "projection_m_s": 1.3007946232037064e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.3007946232967157e-07,
+        "support_gap_J": 3.165746862521436e-09,
+        "passive_bound_J": -14.642739547010047,
+        "passivity_scale": 32.03334925578666,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "variant": "components_fb",
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "input_sha256": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40",
+      "budget_per_component_or_direct": 2048,
+      "exit": 2,
+      "accepted": false,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 2.751384414145013e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.7513844147529504e-07,
+        "support_gap_J": 2.5890935572134872e-08,
+        "passive_bound_J": -14.642739527211077,
+        "passivity_scale": 32.01192811991272,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.842170943040401e-14
+      },
+      "stats": {
+        "budget_rejections": 1,
+        "iteration_steps": 2048,
+        "newton_steps": 3,
+        "residual_m_s": 1.300794623192168e-07,
+        "svd_calls": 2048
+      },
+      "component_policy": {
+        "attempts": 21,
+        "coupling_threshold": 0,
+        "largest_rows": 60,
+        "max_rows_per_component": 64
+      },
+      "elapsed_s_descriptive": 0.14846669400139945,
+      "binary_sha256": "208d1621140aa4e9031c897fae987224a457d2fd2e998c14fa81583738616e48"
+    }
+  ],
+  "libraries": {
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "ee9693aadd9792e3a91f28b8dae5202f5a427a724f49245d995046fef57f5386",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "e309079bf5cb52994d47972f879bb1517a2c186ab65be4605a1b5e0fddae1b64",
+    "/home/viktor/.cache/vkf-physics-continuation/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "c910fdbc39ceabba4863b93715f55c3aae309c4456302d117f0d5cd3c6e8a240",
+    "/usr/lib/x86_64-linux-gnu/liblapack.so.3": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libblas.so.3": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340"
+  },
+  "scope": "Instantaneous-system evidence only; neither production nor trajectory acceptance."
+}

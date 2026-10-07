@@ -1,0 +1,19 @@
+{
+  "analytic_bounce_events": 24,
+  "max_analytic_bounce_velocity_error_m_s": 1.4654943925052066e-14,
+  "max_ballistic_fit_error": 1.3322676295501878e-15,
+  "gravity_projection_controls": 9,
+  "bounce_evaluation_events": 42,
+  "bounce_error_zero_inside_one_frame_bracket": 42,
+  "maximum_bounce_flight_fit_rmse_m": 0.003160973762853101,
+  "primary_rocking_ratios_over_one": 22,
+  "primary_rocking_ratios_negative": 0,
+  "primary_rocking_ratio_range": [
+    0.8514135,
+    1.038861
+  ],
+  "unique_finite_rocking_events": 7519,
+  "unique_finite_rocking_ratios_over_one": 2820,
+  "caveat": "Synthetic controls validate extraction under instantaneous fixed-height ideal ballistic assumptions. One-frame brackets are sensitivity envelopes, not statistical confidence intervals. Source rocking ratios >1 are retained estimates, not certified active material restitution.",
+  "audit_sha256": "a03a29bb8ff10377ce06abb6a6e2285f00b2a80a2671289d87ebd13f6787f76d"
+}

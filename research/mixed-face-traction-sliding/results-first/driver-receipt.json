@@ -1,0 +1,4 @@
+{
+  "original_driver_sha256": "1957ca5b0d2ce257fd9b0ace4ae722aad35ac118cd77345786f550c2e5420ceb",
+  "reason": "Native accepted proof and candidate saved, but progress JSON failed on NumPy int64 dropped-contact IDs. Preserve all first proof files. Only convert reported IDs to ordinary int; repeat original numerical search."
+}

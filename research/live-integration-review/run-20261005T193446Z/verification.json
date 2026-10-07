@@ -1,0 +1,23 @@
+{
+  "passed": [
+    "translation_combined_checks",
+    "coulomb_early_checks",
+    "native noLAPACK optin rejects",
+    "native incompatible solver rejects",
+    "native disabled recovery rejects",
+    "native nonbool option rejects",
+    "native combined incompatible solver rejects",
+    "native omitted vs explicit false exact default receipts",
+    "Python nonbool rejects",
+    "Python noncoulomb rejects",
+    "Python disabled rejects",
+    "Python combined_non_coulomb rejects",
+    "Python combined wire and metadata accepted noLAPACK",
+    "oneframe rotating kinematic contact combined preserves physical endpoint",
+    "CMake noLAPACK includes new targets and correct definitions",
+    "snapshot source guards",
+    "compiler libraries executable guards"
+  ],
+  "failures": [],
+  "cost_claim": "None; correctness checks only; standalone executables use existing read-only libs."
+}

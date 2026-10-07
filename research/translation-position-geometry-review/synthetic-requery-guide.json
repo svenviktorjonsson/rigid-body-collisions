@@ -1,0 +1,21 @@
+{
+  "finite_body_ids": [
+    1
+  ],
+  "attempts": [
+    {
+      "method": "synthetic geometry translation control",
+      "pose_increment": [
+        [
+          0,
+          0,
+          0.02,
+          0,
+          0,
+          0
+        ]
+      ],
+      "linear_qualified": true
+    }
+  ]
+}

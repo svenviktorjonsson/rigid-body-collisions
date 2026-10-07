@@ -1,0 +1,9 @@
+{
+  "rejected": "Invalid primary_steps",
+  "rejection_stage": "adapter_input_validation",
+  "settings": {
+    "dt": 0.01,
+    "primary_steps": 8000,
+    "travel_fraction": 0
+  }
+}

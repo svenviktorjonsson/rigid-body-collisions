@@ -1,0 +1,25 @@
+{
+  "source": "286c8fda6a6fc4601fd3b47ab4e53f330822b69a",
+  "rule": "Prospective isolated fixed integer-primary clock and analytic prescribed rigid COM poses from INITIAL authored segment velocities/orientations. Current spatial runner incrementally accumulates left/time/position/quaternions; common output boundary poses differ1e-14 to1e-13 across levels, potentially perturbing highly sensitive simultaneous contacts. Hypothesis only. Prototype requires travel_fraction0 and frame-aligned schedule; original contact/position equations/tolerances/material/gravity/horizon unchanged. Disabled route must preserve old output states, enabled analytic trajectory/reversal/one-step physical controls mandatory. Full original physics and BOTH quarter-budget refinement edges remain required. No production/performance qualification.",
+  "cases": {
+    "3d_box": "c498580e5477ec8480336335a8501f7967e666d32aa68e95a2ee8e74c574e364",
+    "3d_hull": "ac2d37915065039e0142320fd2c43aabfdaee041e2663d1bdce4c96ddbd53843"
+  },
+  "settings": [
+    {
+      "dt": 0.01,
+      "primary_steps": 1000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 2000,
+      "travel_fraction": 0
+    },
+    {
+      "dt": 0.01,
+      "primary_steps": 4000,
+      "travel_fraction": 0
+    }
+  ]
+}

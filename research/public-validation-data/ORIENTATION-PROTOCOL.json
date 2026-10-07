@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-07",
+  "purpose": "Exploratory measured-input correction, not constitutive fitting",
+  "prior_exposure": "Nominal-angle prediction outcomes have already been inspected. The first three board quaternions of pilot 1 for each material have been inspected. No candidate forecast outcomes have been computed before this protocol.",
+  "fixed": "Published friction, g=9.81, nominal downhill measurement axis, all baseline trial roles, onset, prefix and forecast frames remain unchanged.",
+  "candidate": "Average the world normals obtained by applying source xyzw board quaternions to local +z over the same four conditioning frames; normalize and require positive z. Assume the released board xy plane is its support surface. Use projected gravity minus mu*g*normal_z times its unit downhill direction, projected onto the baseline measurement axis. Hold that acceleration constant during the forecast.",
+  "audit": "Quaternion versus source ZYX Euler agreement; plane stability and normal-motion residual are diagnostics, never tuned corrections.",
+  "selection": "Keep every baseline/candidate error and all regressions. No material updates or candidate selection by outcome; report improvement or rejection separately per material.",
+  "scope": "Single sliding branch conditioned on a four-frame motion prefix. Does not validate the full impulse/spin contact model, static friction or independent material characterization."
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "prospective-projection-merit-recovery-v2",
+  "baseline_source": "3ce80f6e429ae5c9d5c0cf5f0022748e7f705fe4",
+  "capture_sha256": {
+    "research/hull-combined-completion/results/rejections/fast_shake8_hulls42/reference_1.json": "53e45c4004be16d58ab921cc6ed360af93342d06170fc5e28e519231f381914c"
+  },
+  "source_sha256": {
+    "research/new-combined-projection-review/projection_more_v2.h": "03c8dd2c92a932ed8616a27a113fda3079cc7a78e67ff7a29e89960922ad1dba",
+    "research/new-combined-projection-review/replay_v2.cpp": "caa2d0ade1ecfd40298702911afa9e9b0ae9c29f6bcc07b70dcd0d0a538a57ca",
+    "research/new-combined-projection-review/controls_v2.cpp": "a78fb2c7c3f04dff12a6b50c9206602bd13827c904a16045e8285c45a5765e99",
+    "research/new-combined-projection-review/runner_v2.py": "e790e8c3799f70a75802b4bf5f6b45a9385b637a3ccfd06b385185c583370920"
+  },
+  "variants": [
+    [
+      "projection-jac-scaled-2048",
+      0,
+      0
+    ],
+    [
+      "exact-components-global-1024",
+      1,
+      0
+    ]
+  ],
+  "budgets": {
+    "projection-jac-scaled-2048": 2048,
+    "exact-components-global-1024": 1024
+  },
+  "controls": 9,
+  "execution_rule": "Parent publishes checkpoint before isolated research compilation/execution. Mandatory frozen SHA; read-only production/library/header guards. Native executables in ownresults only; no production builds/source/binary edits.",
+  "hypothesis": "Original failed1024trials retained; increase declared numerical warm-tail effort to2048SVD/steps, not material or physical tolerance. Separate exactA!=0 component grouping closes dependencies, shares1024SVD/steps globally and requires unchangedfull-systemgate.",
+  "acceptance": "Original all-row normal/circular projection norm <= captured tolerance, nonnegative finite normal impulses below originalhi, finite original passivity bound; independently recomputed. Failed search leaves caller unchanged and retains last numerical candidate.",
+  "integration_rule": "Only after existing accepted stages all decline, so old22 accepted outputs stay unchanged. Research controls do not qualify trajectories; critic owns prospective23corpus wrapper tests.",
+  "timing_scope": "Collaborative workload; no performance ranking.",
+  "limitations": "Trust proposal may exhaust budget; retain every failure. No row deletion, physical regularization, larger friction capacity or relaxed gates.",
+  "stats_contract": "Fresh per-call Stats and local1024caps; aggregate externally only after return. Nonempty/reused counter stats reject unchanged.",
+  "prior_failed_study": "research/new-combined-projection-review/results/summary.json"
+}

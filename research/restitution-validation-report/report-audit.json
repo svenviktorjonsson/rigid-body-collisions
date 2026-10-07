@@ -1,0 +1,24 @@
+{
+  "training_count": 50,
+  "heldout_count": 25,
+  "native_checks_passed": 75,
+  "geometry_checks_passed": 96,
+  "rubber_native_checks_passed": 36,
+  "rubber_surfaces_overlap": 3,
+  "pooled_angle_cv": {
+    "fixed": 0.11967895077174871,
+    "size": 0.12036637481619324,
+    "angle": 0.13062474987267705
+  },
+  "all_13_case_baseline_qualified": false,
+  "twofold_performance_gate_status": "removed_by_user",
+  "independent_material_friction_validated": false,
+  "actual_rock_geometry_validated": false,
+  "input_sha256": {
+    "plan.json": "c89b3d5aa16edc3da7b3af781ba8f3af38cd27703bf349fa34cb99fa2d016567",
+    "fits.json": "5e3b2a8717136f0c6d926b55a09059b8939c714543c032a14214d799b02e7127",
+    "native-heldout/summary.json": "921cc1be280e8dc2f29a404cbc7c853e98711da59140c0ac5fea941026790f41",
+    "geometry-sweep/summary.json": "8de4fceda5073d99f2e2ef710496c205d5bb9efd14883075166437b8e0488391",
+    "rubber-surfaces/summary.json": "01d8ab4055ceba38cc8b49c984a2d6bcb0c6b8839fdc720ddd1a0489ffcfce5e"
+  }
+}

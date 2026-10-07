@@ -1,0 +1,15 @@
+test_coupled_total_energy_accounting (test_compliant_contact.CompliantTests.test_coupled_total_energy_accounting) ... ok
+test_invalid_mobility_is_rejected (test_compliant_contact.CompliantTests.test_invalid_mobility_is_rejected) ... ok
+test_normal_restitution_is_calibrated (test_compliant_contact.CompliantTests.test_normal_restitution_is_calibrated) ... ok
+test_retained_slip_modes_and_transition_convergence (test_compliant_contact.CompliantTests.test_retained_slip_modes_and_transition_convergence) ... ok
+test_slider_local_passivity (test_compliant_contact.CompliantTests.test_slider_local_passivity) ... ok
+test_global_chain_coupling (test_contact_solver.ContactTests.test_global_chain_coupling) ... ok
+test_internal_momentum_and_global_energy (test_contact_solver.ContactTests.test_internal_momentum_and_global_energy) ... ok
+test_projection_passivity_and_normal_target (test_contact_solver.ContactTests.test_projection_passivity_and_normal_target) ... ok
+test_projection_reference_length_invariance (test_contact_solver.ContactTests.test_projection_reference_length_invariance) ... ok
+test_static_resting_contacts (test_contact_solver.ContactTests.test_static_resting_contacts) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.423s
+
+OK

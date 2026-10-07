@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "records": [
+    {
+      "input": "research/large-mobility-world/results/hull125_h5us/rejection.json",
+      "accepted": true,
+      "exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 6.861773232113748e-09,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 9.213218712482937e-10,
+        "support_gap_J": 1.7088478990164546e-09,
+        "passive_bound_J": -74.65611857860726,
+        "passivity_scale": 148.01076363778645,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.1368683772161603e-13
+      },
+      "policy": {
+        "final_gate": "original zero-budget projection, bounds and passivity",
+        "full_component_cap": 4096,
+        "iteration_cap_per_stage": 2048,
+        "iterations": 1277,
+        "reduced_rows_max": 93,
+        "search_row_cap": 192,
+        "stage_accepts": 17,
+        "stage_attempts": 17,
+        "stage_cap": 17,
+        "support_pass_cap": 8,
+        "support_passes": 1,
+        "svd_cap_per_stage": 2048,
+        "svds": 1277
+      },
+      "elapsed_s_descriptive": 1.3352834710021853
+    }
+  ],
+  "scope": "Instantaneous native research comparator only; all original gates, no world/performance qualification."
+}

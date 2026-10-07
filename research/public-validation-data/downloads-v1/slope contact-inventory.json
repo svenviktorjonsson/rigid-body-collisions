@@ -1,0 +1,254 @@
+[
+  {
+    "type": "directory",
+    "oid": "ea1ef2b88d6358651c2e20edab73ddd3b9d91999",
+    "size": 0,
+    "path": "data/rigid/slope contact/json/plastic"
+  },
+  {
+    "type": "directory",
+    "oid": "5e2690b532bbfb5cab13df47073c1c3724171070",
+    "size": 0,
+    "path": "data/rigid/slope contact/json/wood"
+  },
+  {
+    "type": "file",
+    "oid": "d24284d8b77c6c3638bebbab803c33d54c88484f",
+    "size": 6609,
+    "path": "data/rigid/slope contact/json/plastic/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "68d8ce42872e41ea7374e0fdabde9e4e0bfbfa2c",
+    "size": 5684,
+    "path": "data/rigid/slope contact/json/plastic/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "5f0d17c9f6d86e1608d1a22e88cd7c53a4268b53",
+    "size": 6193,
+    "path": "data/rigid/slope contact/json/plastic/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "67d15bc366591d13fe69fe21dc28efabbd93854f",
+    "size": 7017,
+    "path": "data/rigid/slope contact/json/plastic/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "1792c8d1ffbca66435508e761a8da813f4b04026",
+    "size": 5469,
+    "path": "data/rigid/slope contact/json/plastic/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "2141eec16c39a6ed7c074391a259869d5af3b7e9",
+    "size": 5298,
+    "path": "data/rigid/slope contact/json/plastic/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "4bfb12db94ad87296130ecae50fdb8017e83ad43",
+    "size": 4763,
+    "path": "data/rigid/slope contact/json/plastic/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "7bef823487ed6b148160c53e06b92dc02918e968",
+    "size": 6453,
+    "path": "data/rigid/slope contact/json/plastic/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "81ed17c7e642f10b01c3681b8cafc8c115e51b8f",
+    "size": 6532,
+    "path": "data/rigid/slope contact/json/plastic/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "70ab48f906fc110d0b9fde8b0294d88614320f1f",
+    "size": 6054,
+    "path": "data/rigid/slope contact/json/plastic/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "2f75784de90db3c8455f6fddfc51c61e252e959a",
+    "size": 5642,
+    "path": "data/rigid/slope contact/json/plastic/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "6a0a3b1890e8135cf7e092990b23da3304388b3c",
+    "size": 6366,
+    "path": "data/rigid/slope contact/json/plastic/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "5ff453c73938f730f3124d0698ba318b3178027f",
+    "size": 5146,
+    "path": "data/rigid/slope contact/json/plastic/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "794a6c43fc368bc23819930154a9ad83f4ef347a",
+    "size": 7297,
+    "path": "data/rigid/slope contact/json/plastic/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "b544bb559fdc0587a0b6030e95c168a4bc0f90fd",
+    "size": 8540,
+    "path": "data/rigid/slope contact/json/plastic/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "cf33800280dd8a1c65a0a50e648b8dbf9685d6bb",
+    "size": 5499,
+    "path": "data/rigid/slope contact/json/plastic/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "c40e0c391f3cbb54fde17dc94a8109bee99f140c",
+    "size": 7311,
+    "path": "data/rigid/slope contact/json/plastic/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "59387cdf28493e8143f79753743e032e3b9ab0b5",
+    "size": 5717,
+    "path": "data/rigid/slope contact/json/plastic/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "25f26da3246ecf9fb712d5ffc5c62c51f864d3fb",
+    "size": 6791,
+    "path": "data/rigid/slope contact/json/plastic/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "b66171b29cc5a79ba070729146d4e08916eaa7a0",
+    "size": 7468,
+    "path": "data/rigid/slope contact/json/plastic/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "3d0b8f0090fd456033cb0c8a09d7c5ba5f7eecaf",
+    "size": 4743,
+    "path": "data/rigid/slope contact/json/wood/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "6a23936b861c14fcfca5f49da5168b14afab1bdd",
+    "size": 4391,
+    "path": "data/rigid/slope contact/json/wood/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "c419f9306546045ac63a41d7c86aa55d47cb3a84",
+    "size": 4036,
+    "path": "data/rigid/slope contact/json/wood/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "fb89045f732108977a1aa405800fd27d6170d8dd",
+    "size": 4385,
+    "path": "data/rigid/slope contact/json/wood/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "42f6d82cfc6eea285fa0405bac302616c1d89fbe",
+    "size": 4030,
+    "path": "data/rigid/slope contact/json/wood/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "213c458c596444dda8161683dced4b15d00de0a2",
+    "size": 4211,
+    "path": "data/rigid/slope contact/json/wood/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "5526a8a2f3cdbfff70eb0e358800f645b4a7fe39",
+    "size": 4573,
+    "path": "data/rigid/slope contact/json/wood/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "8ccaae0ff8f528080e6d23805a56a490268f3a09",
+    "size": 3853,
+    "path": "data/rigid/slope contact/json/wood/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "82c5a5e2a8e4e618e0c68105fde69b71b70f8644",
+    "size": 4045,
+    "path": "data/rigid/slope contact/json/wood/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "c5dd6399958348cb8a723c47a2bece2d8bbd5a19",
+    "size": 4216,
+    "path": "data/rigid/slope contact/json/wood/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "f6d8df0977c0acdc5886897f8b76825aacd5938a",
+    "size": 3849,
+    "path": "data/rigid/slope contact/json/wood/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "6426f822c9f62a64e621b8efffa67662d21f82a9",
+    "size": 3853,
+    "path": "data/rigid/slope contact/json/wood/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "ac590fd5e81a2921dc4f030729c9fef54c4c0c4d",
+    "size": 4217,
+    "path": "data/rigid/slope contact/json/wood/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "d7be64cb935032f3fd94cfaffce6934616580f0c",
+    "size": 4405,
+    "path": "data/rigid/slope contact/json/wood/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "03eb43cd0a30acf3094ad98f1a1304ddcaed095a",
+    "size": 4040,
+    "path": "data/rigid/slope contact/json/wood/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "52bdf33b8c4cc4611e395ddfb295c13acc638899",
+    "size": 3860,
+    "path": "data/rigid/slope contact/json/wood/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "32059a9e0eca6ae812117faf0d360d22fae7bc5d",
+    "size": 4396,
+    "path": "data/rigid/slope contact/json/wood/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "da8c3773905baa4d3742ea68257654c8df76cdd5",
+    "size": 4206,
+    "path": "data/rigid/slope contact/json/wood/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "cd07b3c4589659209903e6d7350ed6506cb54e7b",
+    "size": 4218,
+    "path": "data/rigid/slope contact/json/wood/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "8599088e87eb37f6670f11e06dd0db425bbbde82",
+    "size": 4397,
+    "path": "data/rigid/slope contact/json/wood/9.json"
+  }
+]

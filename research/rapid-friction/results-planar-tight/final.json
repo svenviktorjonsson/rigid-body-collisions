@@ -1,0 +1,598 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "summary": {
+    "2d_shake9": {
+      "phases": [
+        {
+          "phase": {
+            "id": "tight_velocity128",
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 4.683750429120076e-06,
+                "velocity_m_s": 0.0002627314609793908,
+                "omega_rad_s": 0.014804179703707232,
+                "orientation_rad": 0.0003366877201023424
+              }
+            },
+            {
+              "passed": true,
+              "errors": {
+                "position_m": 6.415092490220039e-06,
+                "velocity_m_s": 0.0002726113305647636,
+                "omega_rad_s": 0.0070265120123792005,
+                "orientation_rad": 0.00018380169491787095
+              }
+            },
+            {
+              "passed": true,
+              "errors": {
+                "position_m": 2.709064583838683e-06,
+                "velocity_m_s": 0.00014548554699325442,
+                "omega_rad_s": 0.006316989417209743,
+                "orientation_rad": 0.00015172687699387715
+              }
+            },
+            {
+              "passed": true,
+              "errors": {
+                "position_m": 1.5547442377654423e-06,
+                "velocity_m_s": 6.674355691336969e-05,
+                "omega_rad_s": 0.0018805669975702599,
+                "orientation_rad": 4.970668577555587e-05
+              }
+            }
+          ],
+          "qualified": true
+        }
+      ],
+      "reference_qualified": true,
+      "benchmark": {
+        "qualified": true,
+        "samples_s": {
+          "reference": [
+            4.9588396669999995,
+            4.8996222629999995,
+            4.846559436999999
+          ],
+          "candidate": [
+            1.237759974,
+            1.2198945899999998,
+            1.233964267
+          ]
+        },
+        "states_bitwise_repeated": true,
+        "settings": {
+          "reference": {
+            "dt": 0.0025,
+            "primary_steps": 4000,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "candidate": {
+            "dt": 0.01,
+            "primary_steps": 4000,
+            "substeps": 128,
+            "position_iterations": 12
+          }
+        },
+        "median_s": {
+          "reference": 4.8996222629999995,
+          "candidate": 1.233964267
+        },
+        "reference_over_candidate": 3.970635450337558
+      },
+      "candidates": [
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.023678459692232517,
+            "velocity_m_s": 0.6897591304302032,
+            "omega_rad_s": 9.40351417002906,
+            "orientation_rad": 0.23488544866278424
+          },
+          "native_s": 0.002078967
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.014123191567396163,
+            "velocity_m_s": 0.452088722390406,
+            "omega_rad_s": 9.747498012984005,
+            "orientation_rad": 0.22466661757863557
+          },
+          "native_s": 0.004432438
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.014123248306118443,
+            "velocity_m_s": 0.45208830273236206,
+            "omega_rad_s": 9.747472216822986,
+            "orientation_rad": 0.22466616729878686
+          },
+          "native_s": 0.013815182
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0011707818970657863,
+            "velocity_m_s": 0.27271502764396827,
+            "omega_rad_s": 2.7387312759363627,
+            "orientation_rad": 0.061957372303509534
+          },
+          "native_s": 0.004717325
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0008239075604179307,
+            "velocity_m_s": 0.2699930452676835,
+            "omega_rad_s": 1.89037733499707,
+            "orientation_rad": 0.03780600905001883
+          },
+          "native_s": 0.011938226000000001
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0008239080093907943,
+            "velocity_m_s": 0.2699930475797124,
+            "omega_rad_s": 1.8903774786030032,
+            "orientation_rad": 0.0378060114894995
+          },
+          "native_s": 0.03918576099999999
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.00020071611986012872,
+            "velocity_m_s": 0.09950529398210387,
+            "omega_rad_s": 0.6991139127371088,
+            "orientation_rad": 0.012121273783237933
+          },
+          "native_s": 0.015186071
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0001065242312991539,
+            "velocity_m_s": 0.025712027662111295,
+            "omega_rad_s": 0.31738191120716597,
+            "orientation_rad": 0.00675993843107472
+          },
+          "native_s": 0.04225140699999999
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.00010652450815197125,
+            "velocity_m_s": 0.02571203141141908,
+            "omega_rad_s": 0.3173819548783755,
+            "orientation_rad": 0.006759938950654524
+          },
+          "native_s": 0.141234331
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 7.374072397520609e-05,
+            "velocity_m_s": 0.006484155736650733,
+            "omega_rad_s": 0.16406982343552184,
+            "orientation_rad": 0.0034746504198261974
+          },
+          "native_s": 0.056409271
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 3.353699099037397e-05,
+            "velocity_m_s": 0.0018517924466746108,
+            "omega_rad_s": 0.08584677318300514,
+            "orientation_rad": 0.0020095682192191587
+          },
+          "native_s": 0.16438773899999998
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 3.353723568047052e-05,
+            "velocity_m_s": 0.0018518083407336036,
+            "omega_rad_s": 0.08584679042429907,
+            "orientation_rad": 0.002009568211401922
+          },
+          "native_s": 0.544958938
+        }
+      ],
+      "selected": {
+        "setting": {
+          "dt": 0.01,
+          "primary_steps": 4000,
+          "substeps": 128,
+          "position_iterations": 12
+        },
+        "passed": true,
+        "errors": {
+          "position_m": 4.160813096833547e-06,
+          "velocity_m_s": 0.00021004943503396804,
+          "omega_rad_s": 0.008183962463144685,
+          "orientation_rad": 0.0002010884917962522
+        },
+        "native_s": 1.2855898479999999
+      }
+    },
+    "2d_shake25": {
+      "phases": [
+        {
+          "phase": {
+            "id": "tight_velocity128",
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "edges": [
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 3.025869977202199e-05,
+                "velocity_m_s": 0.0018881800932995304,
+                "omega_rad_s": 0.023067936837083813,
+                "orientation_rad": 0.00040252313840873625
+              }
+            },
+            {
+              "passed": false,
+              "errors": {
+                "position_m": 2.1636607572245706e-05,
+                "velocity_m_s": 0.0012815500582979275,
+                "omega_rad_s": 0.014928714139721633,
+                "orientation_rad": 0.00019670025291360503
+              }
+            },
+            {
+              "passed": true,
+              "errors": {
+                "position_m": 1.1102819077487003e-05,
+                "velocity_m_s": 0.0006892830469077656,
+                "omega_rad_s": 0.008660659689962297,
+                "orientation_rad": 0.0001277667094122581
+              }
+            },
+            {
+              "passed": true,
+              "errors": {
+                "position_m": 5.24394240091339e-06,
+                "velocity_m_s": 0.0003185079980427868,
+                "omega_rad_s": 0.0037057854382535455,
+                "orientation_rad": 4.935998727848654e-05
+              }
+            }
+          ],
+          "qualified": true
+        }
+      ],
+      "reference_qualified": true,
+      "benchmark": {
+        "qualified": true,
+        "samples_s": {
+          "reference": [
+            12.975638294000003,
+            13.026660374999995,
+            13.212355577999997
+          ],
+          "candidate": [
+            3.2290758850000003,
+            3.253299496999999,
+            3.3171923369999994
+          ]
+        },
+        "states_bitwise_repeated": true,
+        "settings": {
+          "reference": {
+            "dt": 0.0025,
+            "primary_steps": 4000,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "candidate": {
+            "dt": 0.01,
+            "primary_steps": 4000,
+            "substeps": 128,
+            "position_iterations": 12
+          }
+        },
+        "median_s": {
+          "reference": 13.026660374999995,
+          "candidate": 3.253299496999999
+        },
+        "reference_over_candidate": 4.0041380718290505
+      },
+      "candidates": [
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.05779928620820803,
+            "velocity_m_s": 1.3152083881245864,
+            "omega_rad_s": 17.35891565330258,
+            "orientation_rad": 0.39355141857258163
+          },
+          "native_s": 0.007830218
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.043168766092596136,
+            "velocity_m_s": 1.606130117233833,
+            "omega_rad_s": 16.414739467775654,
+            "orientation_rad": 0.363140543460653
+          },
+          "native_s": 0.013028013000000001
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 8,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.04534909267898759,
+            "velocity_m_s": 1.6741204882387017,
+            "omega_rad_s": 17.383646775624268,
+            "orientation_rad": 0.3808225820654537
+          },
+          "native_s": 0.04188783100000001
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.007277460853488449,
+            "velocity_m_s": 0.49740992235088816,
+            "omega_rad_s": 2.5856998286291204,
+            "orientation_rad": 0.039001433302937163
+          },
+          "native_s": 0.011687046
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.003803029276637933,
+            "velocity_m_s": 0.3538737163568244,
+            "omega_rad_s": 2.539610403028846,
+            "orientation_rad": 0.04717740062044803
+          },
+          "native_s": 0.037052133999999994
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 32,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.00380599132293893,
+            "velocity_m_s": 0.3538059297482821,
+            "omega_rad_s": 2.5377740668391713,
+            "orientation_rad": 0.04709475336074322
+          },
+          "native_s": 0.116908704
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.007643589107757573,
+            "velocity_m_s": 0.3923937252169922,
+            "omega_rad_s": 1.4298722095195116,
+            "orientation_rad": 0.023475462450525435
+          },
+          "native_s": 0.032646638000000006
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0007480405684381948,
+            "velocity_m_s": 0.06693158733706675,
+            "omega_rad_s": 0.6219632805270209,
+            "orientation_rad": 0.009569007913581883
+          },
+          "native_s": 0.11187930999999998
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 128,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.0007328519518558836,
+            "velocity_m_s": 0.1276253560838772,
+            "omega_rad_s": 1.0163876849272042,
+            "orientation_rad": 0.009432491313411779
+          },
+          "native_s": 0.394539795
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 32,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.006933011502970316,
+            "velocity_m_s": 0.30516129973208483,
+            "omega_rad_s": 1.1938308564089117,
+            "orientation_rad": 0.020553129806414827
+          },
+          "native_s": 0.116078744
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 128,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 0.00014696477618460335,
+            "velocity_m_s": 0.010493156551153376,
+            "omega_rad_s": 0.11303729964148439,
+            "orientation_rad": 0.0014800494071405422
+          },
+          "native_s": 0.43249950299999995
+        },
+        {
+          "setting": {
+            "dt": 0.01,
+            "primary_steps": 512,
+            "substeps": 512,
+            "position_iterations": 12
+          },
+          "passed": false,
+          "errors": {
+            "position_m": 9.801150804400344e-05,
+            "velocity_m_s": 0.005717987605642505,
+            "omega_rad_s": 0.06670922481317385,
+            "orientation_rad": 0.0007813151046964436
+          },
+          "native_s": 1.5313338570000001
+        }
+      ],
+      "selected": {
+        "setting": {
+          "dt": 0.01,
+          "primary_steps": 4000,
+          "substeps": 128,
+          "position_iterations": 12
+        },
+        "passed": true,
+        "errors": {
+          "position_m": 1.6180103646319342e-05,
+          "velocity_m_s": 0.0009953017157510596,
+          "omega_rad_s": 0.012257263043724416,
+          "orientation_rad": 0.00017509997667277164
+        },
+        "native_s": 3.3781106780000005
+      }
+    }
+  }
+}

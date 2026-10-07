@@ -1,0 +1,19 @@
+{
+  "schema": "integrated-native-recovery-validation-v1",
+  "python_tests": 155,
+  "python_passed": true,
+  "native_controls_passed": [
+    "coulomb_restart_checks",
+    "spatial_friction_checks",
+    "normal_null_checks",
+    "translation_split_checks"
+  ],
+  "independent_reviewer_controls": 16,
+  "captured_systems": 20,
+  "accepted_captured_systems": 20,
+  "elastic_cases": 18,
+  "elastic_histories": 54,
+  "elastic_rejections": 0,
+  "replay_receipt_sha256": "ffaae601b336a2bfab945b2a1f40836faee3567610df69b5bb4ce394f8de32a7",
+  "scope": "Captured contact systems and existing regressions only; fresh dense full-trajectory qualification remains pending."
+}

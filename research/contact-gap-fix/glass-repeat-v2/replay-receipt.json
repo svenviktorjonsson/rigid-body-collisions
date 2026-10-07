@@ -1,0 +1,6 @@
+{
+  "source": "research/documented-materials/compare_glass_worksheet.py",
+  "source_sha256": "41b780106f854234174bad5f7ffce695a13dcb77e755bb7009c92be83c3489b3",
+  "change": "Output directory only; no input, coefficient or metric change.",
+  "output": "/home/viktor/.cache/vkf-physics-continuation/research/contact-gap-fix/glass-repeat-v2"
+}

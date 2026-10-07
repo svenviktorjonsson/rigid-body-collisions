@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/structural_seed.py", line 7, in <module>
+    spec={};exec((p/'search.py').read_text().split('from scipy.sparse.csgraph')[0],spec);fj=spec['fj'];seeds=[]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in <module>
+NameError: name '__file__' is not defined. Did you mean: '__name__'?

@@ -1,0 +1,34 @@
+{
+  "case_id": "normal_rebound_boxes",
+  "policy": {
+    "travel_threshold": 0.15,
+    "penetration_threshold": 0.02,
+    "island_threshold": 8,
+    "mass_ratio_threshold": 50,
+    "dwell_frames": 12,
+    "minimum_level": 0,
+    "high_primary_steps": 8,
+    "high_substeps": 32
+  },
+  "analytic": {
+    "observable": "symmetric_restitution",
+    "velocity_error_m_s": 2.86000000127018e-07,
+    "spin_error_rad_s": 0.0,
+    "tolerances": {
+      "velocity_m_s": 0.02,
+      "spin_rad_s": 0.02
+    },
+    "passed": true
+  },
+  "diagnostics": {
+    "linear_momentum_change_max_kg_m_s": 0.0,
+    "angular_momentum_change_max_kg_m2_s": 0.0,
+    "momentum_is_internal_invariant": true,
+    "mechanical_energy_increase_above_initial_J": 0.0,
+    "kinetic_energy_final_J": 1.440000686400082,
+    "late_com_height_mean_m": 0.0,
+    "late_kinetic_mean_J": 2.5169659148800476,
+    "reported_max_penetration_fraction": 0.0199980922
+  },
+  "note": "Correct outgoing velocities and zero spin do not imply accurate impact timing or full-history agreement."
+}

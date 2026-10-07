@@ -1,0 +1,9 @@
+fast_shake8_hulls42 reference_0 REJECT Coulomb residual gate failed (0.000198968 m/s): increase iterations or refine timestep; no friction-law fallback
+fast_shake8_hulls42 reference_1 REJECT Coulomb residual gate failed (1.39916e-06 m/s): increase iterations or refine timestep; no friction-law fallback
+fast_shake8_hulls42 reference_2 REJECT Coulomb residual gate failed (1.44556e-06 m/s): increase iterations or refine timestep; no friction-law fallback
+REFERENCE fast_shake8_hulls42 False
+fast_rotate_shake27_hulls7301 reference_0 REJECT Normal-only position projection residual failed; repair initial overlap or refine timestep
+fast_rotate_shake27_hulls7301 reference_1 503.4896s residual=1e-08
+fast_rotate_shake27_hulls7301 reference_2 220.6362s residual=1e-08
+REFERENCE fast_rotate_shake27_hulls7301 False
+DONE 95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb 6 2

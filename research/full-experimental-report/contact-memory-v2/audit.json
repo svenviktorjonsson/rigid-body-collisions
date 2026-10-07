@@ -1,0 +1,24 @@
+{
+  "pass_": true,
+  "planar_controls": 100,
+  "spatial_controls": 100,
+  "singular_direction_controls": 20,
+  "maximum_relative_total_energy_error": 1.4703967127633235e-15,
+  "maximum_relative_length_scale_error": 1.454837907072778e-14,
+  "oscillator_refinement_errors": [
+    0.000388547479323468,
+    9.715923741796388e-05,
+    2.4291207732627847e-05
+  ],
+  "second_order_convergence_pass": true,
+  "median_python_cached_4channel_step_microseconds": 45.3815225046128,
+  "timing_scope": "Local linear elastic branch with cached factor, Python/NumPy; not engine end-to-end benchmark or speedup claim",
+  "host": {
+    "machine": "x86_64",
+    "python": "3.14.4"
+  },
+  "source_sha256": "39901ee4c0bace4d57bc2bd4aaeb7fc543a8f563df759fa5c1b3135e382f138d",
+  "empirical_accuracy_demonstrated": false,
+  "friction_and_unilateral_branches_implemented": false,
+  "production_adopted": false
+}

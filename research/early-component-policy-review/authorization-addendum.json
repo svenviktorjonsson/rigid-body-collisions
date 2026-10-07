@@ -1,0 +1,10 @@
+{
+  "schema": "isolated-execution-authorization-addendum-v1",
+  "published_prospective_source": "e2b60a525058cbbc344cc972d684dff31ecbaf35",
+  "original_plan_sha256": "77c16f70c0acd934430c893f65f931416469816201184c072b8cfd959293a051",
+  "recorded_utc": "2026-10-05T19:10:18.560673+00:00",
+  "authorization": "Root explicitly authorizes isolated research compilation and planned controls/all22 identical-start replays while old study continues. This supersedes execution timing restriction only; original frozen plan unchanged.",
+  "restrictions": "Outputs only this new research directory or /tmp; existing Bullet/LAPACK libraries read-only; no production guarded source, binaries, library modifications; no duplicate fullstudy; root alone commits/pushes.",
+  "timing": "Concurrent runtime costs descriptive only; no speed ranking.",
+  "failure_policy": "Retain every compiler/native failure and original source version. Any correction must be a new source version; no overwriting frozen candidate."
+}

@@ -1,0 +1,22 @@
+[
+  "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+  "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+  "research/shared-hull-followup/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+  "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_0.json",
+  "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+  "research/shared-hull-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+  "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_1.json",
+  "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+  "research/hull-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_2.json",
+  "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+  "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+  "research/hull-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+  "research/hull-active-completion/results/rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+  "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+  "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_1.json",
+  "research/hull-active-completion/results/rejections/fast_shake8_hulls42/reference_2.json",
+  "research/coulomb-diagnostics/hull42-rejected.json",
+  "research/coulomb-diagnostics/hull7301-rejected.json",
+  "research/coulomb-diagnostics/hull7301-later-rejected.json",
+  "research/coulomb-followup/hull42-second-rejected.json"
+]

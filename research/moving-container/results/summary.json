@@ -1,0 +1,1977 @@
+{
+  "schema_version": 1,
+  "evidence": "Synthetic numerical verification, not material validation",
+  "plan_sha256": "6e43d7f1f5328f45db84e3a6ccbcb11ee0e0cdd53ed057c4fd241cff47aaf55f",
+  "source_commit": "6a805dbbf940b2ba448c006d031db4f201a4e1ff",
+  "machine": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "backend_commits": {
+    "temporal": "8c661469c9507d3ad6fbd2fea3f1aa71669c2fe3",
+    "block": "9ebbbcd960ad424e03e5de6e66a40764c16f51bc"
+  },
+  "repeats": 3,
+  "records": [
+    {
+      "trace": "packed_row_4__block_p1_s1",
+      "scene": "packed_row_4",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        2.0281e-05,
+        2.1117e-05,
+        1.8446e-05
+      ],
+      "median_engine_controller_s": 2.0281e-05,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 2.026799994503392e-08,
+        "observed_max_disk_overlap_m": 0.008333315000000008,
+        "kinetic_final_J": 0.5,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 1.0,
+        "inferred_dissipation_final_J": 0.5,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_4__block_p8_s32",
+      "scene": "packed_row_4",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        6.8801e-05,
+        6.8086e-05,
+        6.7245e-05
+      ],
+      "median_engine_controller_s": 6.8086e-05,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00026037336799999977,
+        "observed_max_disk_overlap_m": 0.001039055000000011,
+        "kinetic_final_J": 2.005330385540166,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 4.005324959999999,
+        "inferred_dissipation_final_J": 1.9999945744598335,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 0.002584099999999978,
+      "analytic_passed": true
+    },
+    {
+      "trace": "packed_row_4__block_p32_s128",
+      "scene": "packed_row_4",
+      "label": "block_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.000632599,
+        0.000631157,
+        0.000640743
+      ],
+      "median_engine_controller_s": 0.000632599,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 1.4133099990321085e-07,
+        "observed_max_disk_overlap_m": 0.00026063319999997114,
+        "kinetic_final_J": 2.0000042920025587,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 4.000004292,
+        "inferred_dissipation_final_J": 1.9999999999974412,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.4310000000516965e-06,
+      "analytic_passed": true
+    },
+    {
+      "trace": "packed_row_4__temporal_p8_s32",
+      "scene": "packed_row_4",
+      "label": "temporal_p8_s32",
+      "backend": "temporal",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.00025797,
+        0.000259063,
+        0.000257878
+      ],
+      "median_engine_controller_s": 0.00025797,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 3.334113099995317e-05,
+        "observed_max_disk_overlap_m": 0.00019348118000001024,
+        "kinetic_final_J": 2.0000294451499774,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 4.000029445,
+        "inferred_dissipation_final_J": 1.9999999998500226,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.2517000000045186e-05,
+      "analytic_passed": true
+    },
+    {
+      "trace": "packed_row_16__block_p1_s1",
+      "scene": "packed_row_16",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        3.1674e-05,
+        2.9925e-05,
+        0.000244049
+      ],
+      "median_engine_controller_s": 3.1674e-05,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00833333376800005,
+        "observed_max_disk_overlap_m": 7.200000001761353e-08,
+        "kinetic_final_J": 0.0,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 0.0,
+        "inferred_dissipation_final_J": 0.0,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_16__block_p8_s32",
+      "scene": "packed_row_16",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.000194689,
+        0.000545197,
+        0.000227319
+      ],
+      "median_engine_controller_s": 0.000227319,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0010417787680001567,
+        "observed_max_disk_overlap_m": 0.0010816498999999813,
+        "kinetic_final_J": 3.8316812844134773,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 9.948699890799999,
+        "inferred_dissipation_final_J": 6.117018606386521,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 0.5909951329,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_16__block_p32_s128",
+      "scene": "packed_row_16",
+      "label": "block_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.003006137,
+        0.003055333,
+        0.00281419
+      ],
+      "median_engine_controller_s": 0.003006137,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00025869463099992274,
+        "observed_max_disk_overlap_m": 0.00022699390000008313,
+        "kinetic_final_J": 9.023403024400789,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 16.984222768,
+        "inferred_dissipation_final_J": 7.96081974359921,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 0.103714466,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_16__temporal_p8_s32",
+      "scene": "packed_row_16",
+      "label": "temporal_p8_s32",
+      "backend": "temporal",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.000384884,
+        0.00040291,
+        0.000672743
+      ],
+      "median_engine_controller_s": 0.00040291,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 3.613063099994207e-05,
+        "observed_max_disk_overlap_m": 0.0008354900000001053,
+        "kinetic_final_J": 6.114963215402646,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 13.949279188799999,
+        "inferred_dissipation_final_J": 7.834315973397352,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 0.20912253859999996,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_64__block_p1_s1",
+      "scene": "packed_row_64",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        7.2783e-05,
+        7.3555e-05,
+        7.1676e-05
+      ],
+      "median_engine_controller_s": 7.2783e-05,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 3.187679995519943e-07,
+        "observed_max_disk_overlap_m": 0.0083329199999998,
+        "kinetic_final_J": 0.5,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 1.0,
+        "inferred_dissipation_final_J": 0.5,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_64__block_p8_s32",
+      "scene": "packed_row_64",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.000570179,
+        0.000514963,
+        0.000665934
+      ],
+      "median_engine_controller_s": 0.000570179,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0005195937679998153,
+        "observed_max_disk_overlap_m": 0.001073551000000006,
+        "kinetic_final_J": 7.908667437764196,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 15.070417463300004,
+        "inferred_dissipation_final_J": 7.161750025535808,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_64__block_p32_s128",
+      "scene": "packed_row_64",
+      "label": "block_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.009513876,
+        0.008693858,
+        0.010892013
+      ],
+      "median_engine_controller_s": 0.009513876,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 2.2276309987745435e-06,
+        "observed_max_disk_overlap_m": 0.00028009399999967544,
+        "kinetic_final_J": 30.18671847063907,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 59.17193520199998,
+        "inferred_dissipation_final_J": 28.985216731360907,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_64__temporal_p8_s32",
+      "scene": "packed_row_64",
+      "label": "temporal_p8_s32",
+      "backend": "temporal",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.001486144,
+        0.001361316,
+        0.001203304
+      ],
+      "median_engine_controller_s": 0.001361316,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0008939126309988055,
+        "observed_max_disk_overlap_m": 0.0016095160000000885,
+        "kinetic_final_J": 4.052291091778751,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 14.327049253389,
+        "inferred_dissipation_final_J": 10.274758161610247,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 0.996492052451,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_100__block_p1_s1",
+      "scene": "packed_row_100",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.000106988,
+        9.9008e-05,
+        0.000108536
+      ],
+      "median_engine_controller_s": 0.000106988,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.008332952768000723,
+        "observed_max_disk_overlap_m": 1.9100000053784427e-07,
+        "kinetic_final_J": 0.0,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 0.0,
+        "inferred_dissipation_final_J": 0.0,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_100__block_p8_s32",
+      "scene": "packed_row_100",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.001049074,
+        0.001059084,
+        0.000877041
+      ],
+      "median_engine_controller_s": 0.001049074,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0010430657680000621,
+        "observed_max_disk_overlap_m": 0.001175117999999753,
+        "kinetic_final_J": 9.062270192142087,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 17.9571486422,
+        "inferred_dissipation_final_J": 8.894878450057913,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_100__block_p32_s128",
+      "scene": "packed_row_100",
+      "label": "block_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.012437106,
+        0.014819348,
+        0.015438179
+      ],
+      "median_engine_controller_s": 0.014819348,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00026200863100100946,
+        "observed_max_disk_overlap_m": 0.0003413680000002306,
+        "kinetic_final_J": 23.448226392233153,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 55.4761888384,
+        "inferred_dissipation_final_J": 32.027962446166846,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0,
+      "analytic_passed": false
+    },
+    {
+      "trace": "packed_row_100__temporal_p8_s32",
+      "scene": "packed_row_100",
+      "label": "temporal_p8_s32",
+      "backend": "temporal",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.00250681,
+        0.002296576,
+        0.002467449
+      ],
+      "median_engine_controller_s": 0.002467449,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 3.5626310008751716e-06,
+        "observed_max_disk_overlap_m": 0.0009881969999988027,
+        "kinetic_final_J": 4.791599828820949,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 16.308409365137404,
+        "inferred_dissipation_final_J": 11.516809536316455,
+        "minimum_inferred_dissipation_J": 0.0
+      },
+      "analytic_max_velocity_error_m_s": 1.0000000199048724,
+      "analytic_passed": false
+    },
+    {
+      "trace": "grid_100_translate__reference_p16_s128",
+      "scene": "grid_100_translate",
+      "label": "reference_p16_s128",
+      "backend": "block",
+      "primary": 16,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        3.734981737,
+        3.67495339,
+        3.799246634
+      ],
+      "median_engine_controller_s": 3.734981737,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00031240201000004575,
+        "observed_max_disk_overlap_m": 0.0005713058561672146,
+        "kinetic_final_J": 17.999338248009717,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__reference_p32_s128",
+      "scene": "grid_100_translate",
+      "label": "reference_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        6.802772258,
+        7.420498022,
+        7.044334867
+      ],
+      "median_engine_controller_s": 7.044334867,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0003672890000001594,
+        "observed_max_disk_overlap_m": 0.0002729603130550984,
+        "kinetic_final_J": 18.002825060210114,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__reference_p64_s128",
+      "scene": "grid_100_translate",
+      "label": "reference_p64_s128",
+      "backend": "block",
+      "primary": 64,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        13.6169799,
+        14.57425098,
+        15.03441374
+      ],
+      "median_engine_controller_s": 14.57425098,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00020242200000009092,
+        "observed_max_disk_overlap_m": 0.00016699482136817156,
+        "kinetic_final_J": 17.999225244696706,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__reference_p64_s32",
+      "scene": "grid_100_translate",
+      "label": "reference_p64_s32",
+      "backend": "block",
+      "primary": 64,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        4.041450041,
+        4.041330499,
+        4.082600056
+      ],
+      "median_engine_controller_s": 4.041450041,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00020266100000032594,
+        "observed_max_disk_overlap_m": 0.00020029960964818017,
+        "kinetic_final_J": 18.01316311545031,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__reference_p64_s64",
+      "scene": "grid_100_translate",
+      "label": "reference_p64_s64",
+      "backend": "block",
+      "primary": 64,
+      "solver": 64,
+      "policy": null,
+      "engine_controller_samples_s": [
+        6.908641808,
+        7.399034294,
+        7.861169269
+      ],
+      "median_engine_controller_s": 7.399034294,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00020242200000009092,
+        "observed_max_disk_overlap_m": 0.00020430439269228384,
+        "kinetic_final_J": 17.998202295866772,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__block_p1_s1",
+      "scene": "grid_100_translate",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.032387331,
+        0.035717409,
+        0.0369742
+      ],
+      "median_engine_controller_s": 0.035717409,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.01335421680000004,
+        "observed_max_disk_overlap_m": 0.022544443973540135,
+        "kinetic_final_J": 17.929340963079895,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__block_p1_s8",
+      "scene": "grid_100_translate",
+      "label": "block_p1_s8",
+      "backend": "block",
+      "primary": 1,
+      "solver": 8,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.040706179,
+        0.049703592,
+        0.050785449
+      ],
+      "median_engine_controller_s": 0.049703592,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.005936478100000198,
+        "observed_max_disk_overlap_m": 0.006832888214030802,
+        "kinetic_final_J": 17.999999139544215,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__block_p4_s16",
+      "scene": "grid_100_translate",
+      "label": "block_p4_s16",
+      "backend": "block",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.228890872,
+        0.221865739,
+        0.248616345
+      ],
+      "median_engine_controller_s": 0.228890872,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.001255306500000053,
+        "observed_max_disk_overlap_m": 0.002167765385920839,
+        "kinetic_final_J": 17.999996851025752,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__block_p8_s32",
+      "scene": "grid_100_translate",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.648115541,
+        0.69712715,
+        0.631851545
+      ],
+      "median_engine_controller_s": 0.648115541,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0006251569199999807,
+        "observed_max_disk_overlap_m": 0.0010315361612562024,
+        "kinetic_final_J": 17.993103348768653,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__temporal_p4_s16",
+      "scene": "grid_100_translate",
+      "label": "temporal_p4_s16",
+      "backend": "temporal",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.31065206,
+        0.309307634,
+        0.301924478
+      ],
+      "median_engine_controller_s": 0.309307634,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.020965580900000003,
+        "observed_max_disk_overlap_m": 0.02906141483259239,
+        "kinetic_final_J": 18.05997079244964,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__block_adaptive",
+      "scene": "grid_100_translate",
+      "label": "block_adaptive",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": {},
+      "engine_controller_samples_s": [
+        0.326103321,
+        0.31338030299999997,
+        0.259184605
+      ],
+      "median_engine_controller_s": 0.31338030299999997,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.005018633870000011,
+        "observed_max_disk_overlap_m": 0.0022932769433974265,
+        "kinetic_final_J": 18.000001356540178,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__reference_p16_s128",
+      "scene": "grid_100_shake",
+      "label": "reference_p16_s128",
+      "backend": "block",
+      "primary": 16,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        3.290146548,
+        3.575305693,
+        3.312378771
+      ],
+      "median_engine_controller_s": 3.312378771,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.000627164399999991,
+        "observed_max_disk_overlap_m": 0.0007067186556551919,
+        "kinetic_final_J": 19.989758261159437,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__reference_p32_s128",
+      "scene": "grid_100_shake",
+      "label": "reference_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        6.599247387,
+        6.604652457,
+        6.478018958
+      ],
+      "median_engine_controller_s": 6.599247387,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.000317160900000113,
+        "observed_max_disk_overlap_m": 0.00034605856372599275,
+        "kinetic_final_J": 18.68772496629016,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__reference_p64_s128",
+      "scene": "grid_100_shake",
+      "label": "reference_p64_s128",
+      "backend": "block",
+      "primary": 64,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        13.26831355,
+        12.73246172,
+        12.82142015
+      ],
+      "median_engine_controller_s": 12.82142015,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0002990710300001531,
+        "observed_max_disk_overlap_m": 0.00019191183414643542,
+        "kinetic_final_J": 19.496284141589676,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__reference_p64_s32",
+      "scene": "grid_100_shake",
+      "label": "reference_p64_s32",
+      "backend": "block",
+      "primary": 64,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        3.945059246,
+        4.229378418,
+        3.843662033
+      ],
+      "median_engine_controller_s": 3.945059246,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.000188027900000165,
+        "observed_max_disk_overlap_m": 0.0001719555344451562,
+        "kinetic_final_J": 18.14320724680394,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__reference_p64_s64",
+      "scene": "grid_100_shake",
+      "label": "reference_p64_s64",
+      "backend": "block",
+      "primary": 64,
+      "solver": 64,
+      "policy": null,
+      "engine_controller_samples_s": [
+        6.787392821,
+        6.382209298,
+        6.280824329
+      ],
+      "median_engine_controller_s": 6.382209298,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0002398240300001131,
+        "observed_max_disk_overlap_m": 0.00015962918495909806,
+        "kinetic_final_J": 18.93292701752216,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__block_p1_s1",
+      "scene": "grid_100_shake",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.034144968,
+        0.034096348,
+        0.033922504
+      ],
+      "median_engine_controller_s": 0.034096348,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.015188669000000043,
+        "observed_max_disk_overlap_m": 0.040981674533526385,
+        "kinetic_final_J": 21.294488385386845,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__block_p1_s8",
+      "scene": "grid_100_shake",
+      "label": "block_p1_s8",
+      "backend": "block",
+      "primary": 1,
+      "solver": 8,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.041637181,
+        0.043966934,
+        0.040029288
+      ],
+      "median_engine_controller_s": 0.041637181,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.013245438200000015,
+        "observed_max_disk_overlap_m": 0.01545087520781177,
+        "kinetic_final_J": 18.059010924101777,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__block_p4_s16",
+      "scene": "grid_100_shake",
+      "label": "block_p4_s16",
+      "backend": "block",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.170937115,
+        0.169319934,
+        0.173933862
+      ],
+      "median_engine_controller_s": 0.170937115,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.002099280389999958,
+        "observed_max_disk_overlap_m": 0.0030566605582720008,
+        "kinetic_final_J": 19.52325046321028,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__block_p8_s32",
+      "scene": "grid_100_shake",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.515964627,
+        0.518011822,
+        0.518065701
+      ],
+      "median_engine_controller_s": 0.518011822,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.001498436000000103,
+        "observed_max_disk_overlap_m": 0.0015811183767900916,
+        "kinetic_final_J": 18.00000672171517,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__temporal_p4_s16",
+      "scene": "grid_100_shake",
+      "label": "temporal_p4_s16",
+      "backend": "temporal",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.274248252,
+        0.281352581,
+        0.270448575
+      ],
+      "median_engine_controller_s": 0.274248252,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.013536100400000084,
+        "observed_max_disk_overlap_m": 0.029687264632412835,
+        "kinetic_final_J": 21.70076839016201,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_shake__block_adaptive",
+      "scene": "grid_100_shake",
+      "label": "block_adaptive",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": {},
+      "engine_controller_samples_s": [
+        0.204912709,
+        0.207965278,
+        0.204163497
+      ],
+      "median_engine_controller_s": 0.204912709,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.005018633870000011,
+        "observed_max_disk_overlap_m": 0.0030389144150734793,
+        "kinetic_final_J": 18.979883096036797,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__reference_p16_s128",
+      "scene": "grid_100_rotate",
+      "label": "reference_p16_s128",
+      "backend": "block",
+      "primary": 16,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        3.55268257,
+        3.493879112,
+        3.497842948
+      ],
+      "median_engine_controller_s": 3.497842948,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00036112023864376397,
+        "observed_max_disk_overlap_m": 0.0005194609450455689,
+        "kinetic_final_J": 9.397943485152277,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__reference_p32_s128",
+      "scene": "grid_100_rotate",
+      "label": "reference_p32_s128",
+      "backend": "block",
+      "primary": 32,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        7.109409068,
+        6.651235933,
+        6.697890445
+      ],
+      "median_engine_controller_s": 6.697890445,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00020747415395616642,
+        "observed_max_disk_overlap_m": 0.0002481402801101651,
+        "kinetic_final_J": 8.405209832779903,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__reference_p64_s128",
+      "scene": "grid_100_rotate",
+      "label": "reference_p64_s128",
+      "backend": "block",
+      "primary": 64,
+      "solver": 128,
+      "policy": null,
+      "engine_controller_samples_s": [
+        14.6385339,
+        13.6594784,
+        13.96358115
+      ],
+      "median_engine_controller_s": 13.96358115,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00014064771172184187,
+        "observed_max_disk_overlap_m": 0.00012616496554163081,
+        "kinetic_final_J": 8.546003175141744,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__reference_p64_s32",
+      "scene": "grid_100_rotate",
+      "label": "reference_p64_s32",
+      "backend": "block",
+      "primary": 64,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        4.473057426,
+        4.901484706,
+        6.460591712
+      ],
+      "median_engine_controller_s": 4.901484706,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.000133144651589312,
+        "observed_max_disk_overlap_m": 0.0001167774999999982,
+        "kinetic_final_J": 8.650657802928128,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__reference_p64_s64",
+      "scene": "grid_100_rotate",
+      "label": "reference_p64_s64",
+      "backend": "block",
+      "primary": 64,
+      "solver": 64,
+      "policy": null,
+      "engine_controller_samples_s": [
+        7.587132679,
+        7.729075398,
+        7.445327001
+      ],
+      "median_engine_controller_s": 7.587132679,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.00013654003375718204,
+        "observed_max_disk_overlap_m": 0.0001205323720271656,
+        "kinetic_final_J": 8.53582909638896,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__block_p1_s1",
+      "scene": "grid_100_rotate",
+      "label": "block_p1_s1",
+      "backend": "block",
+      "primary": 1,
+      "solver": 1,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.043475515,
+        0.042966739,
+        0.043714119
+      ],
+      "median_engine_controller_s": 0.043475515,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.014450466320151234,
+        "observed_max_disk_overlap_m": 0.030707077839584512,
+        "kinetic_final_J": 12.050189605719718,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__block_p1_s8",
+      "scene": "grid_100_rotate",
+      "label": "block_p1_s8",
+      "backend": "block",
+      "primary": 1,
+      "solver": 8,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.045553954,
+        0.04735293,
+        0.047468645
+      ],
+      "median_engine_controller_s": 0.04735293,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.005755324805395201,
+        "observed_max_disk_overlap_m": 0.009478758164157414,
+        "kinetic_final_J": 8.094843360671058,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__block_p4_s16",
+      "scene": "grid_100_rotate",
+      "label": "block_p4_s16",
+      "backend": "block",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.200971613,
+        0.195139728,
+        0.201419397
+      ],
+      "median_engine_controller_s": 0.200971613,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.001577931989018344,
+        "observed_max_disk_overlap_m": 0.0018826345683736756,
+        "kinetic_final_J": 8.387449544449954,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__block_p8_s32",
+      "scene": "grid_100_rotate",
+      "label": "block_p8_s32",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.591582767,
+        0.575804292,
+        0.563196045
+      ],
+      "median_engine_controller_s": 0.575804292,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0007355210394262013,
+        "observed_max_disk_overlap_m": 0.001019733163267228,
+        "kinetic_final_J": 8.461480173090477,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__temporal_p4_s16",
+      "scene": "grid_100_rotate",
+      "label": "temporal_p4_s16",
+      "backend": "temporal",
+      "primary": 4,
+      "solver": 16,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.275881549,
+        0.282461822,
+        0.274816925
+      ],
+      "median_engine_controller_s": 0.275881549,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.022499976412728717,
+        "observed_max_disk_overlap_m": 0.03159928807923423,
+        "kinetic_final_J": 11.084306883098906,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_rotate__block_adaptive",
+      "scene": "grid_100_rotate",
+      "label": "block_adaptive",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": {},
+      "engine_controller_samples_s": [
+        0.248871998,
+        0.282221671,
+        0.263179424
+      ],
+      "median_engine_controller_s": 0.263179424,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.005546024605338706,
+        "observed_max_disk_overlap_m": 0.002105039772743844,
+        "kinetic_final_J": 8.389614730404961,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof"
+      }
+    },
+    {
+      "trace": "grid_100_translate__frame_control",
+      "scene": "grid_100_translate",
+      "label": "frame_control",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.036093334,
+        0.027641563,
+        0.026593807
+      ],
+      "median_engine_controller_s": 0.027641563,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0006249175899999404,
+        "observed_max_disk_overlap_m": 0.0006112053700000064,
+        "kinetic_final_J": 19.066742508581548,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 37.04886910968002,
+        "inferred_dissipation_final_J": 17.98212660109847,
+        "minimum_inferred_dissipation_J": 0.0
+      }
+    },
+    {
+      "trace": "grid_100_translate_boosted__frame_control",
+      "scene": "grid_100_translate_boosted",
+      "label": "frame_control",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.035334307,
+        0.029495097,
+        0.027889484
+      ],
+      "median_engine_controller_s": 0.029495097,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0006278652000000218,
+        "observed_max_disk_overlap_m": 0.0006248176000000494,
+        "kinetic_final_J": 53.76594755996664,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 61.748074172000116,
+        "inferred_dissipation_final_J": 17.98212691203348,
+        "minimum_inferred_dissipation_J": 0.0
+      }
+    },
+    {
+      "trace": "grid_100_stationary_comoving__free_comoving",
+      "scene": "grid_100_stationary_comoving",
+      "label": "free_comoving",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.014613594,
+        0.013441041,
+        0.014327196
+      ],
+      "median_engine_controller_s": 0.014327196,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0,
+        "observed_max_disk_overlap_m": 0.0,
+        "kinetic_final_J": 20.000001488000024,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 0.0,
+        "inferred_dissipation_final_J": 0.0,
+        "minimum_inferred_dissipation_J": 0.0
+      }
+    },
+    {
+      "trace": "grid_100_translate_reverse_body_order__order_control",
+      "scene": "grid_100_translate_reverse_body_order",
+      "label": "order_control",
+      "backend": "block",
+      "primary": 8,
+      "solver": 32,
+      "policy": null,
+      "engine_controller_samples_s": [
+        0.052721039,
+        0.026862148,
+        0.031610516
+      ],
+      "median_engine_controller_s": 0.031610516,
+      "diagnostics": {
+        "observed_max_wall_violation_m": 0.0006249175899999404,
+        "observed_max_disk_overlap_m": 0.0006083444200000176,
+        "kinetic_final_J": 19.09177988200961,
+        "geometry_scope": "Observed frames, not a continuous-time no-tunneling proof",
+        "actuator_work_final_J": 37.07333493239997,
+        "inferred_dissipation_final_J": 17.981555050390362,
+        "minimum_inferred_dissipation_J": 0.0
+      }
+    }
+  ],
+  "global_frozen_projection": [
+    {
+      "count": 4,
+      "max_velocity_error_m_s": 4.440892098500626e-16,
+      "residual": {
+        "normal_velocity": [
+          4.440892098500626e-16,
+          -8.881784197001252e-16,
+          2.220446049250313e-16,
+          2.220446049250313e-16,
+          0.0
+        ],
+        "complementarity_residual": 2.6645352716870407e-15
+      },
+      "wall_impulse_kg_m_s": 3.9999999999999996
+    },
+    {
+      "count": 16,
+      "max_velocity_error_m_s": 3.552713678800501e-15,
+      "residual": {
+        "normal_velocity": [
+          0.0,
+          -1.7763568394002505e-15,
+          0.0,
+          -1.7763568394002505e-15,
+          3.552713678800501e-15,
+          -3.552713678800501e-15,
+          1.7763568394002505e-15,
+          -1.7763568394002505e-15,
+          8.881784197001252e-16,
+          0.0,
+          0.0,
+          1.7763568394002505e-15,
+          4.440892098500626e-16,
+          -4.440892098500626e-16,
+          6.661338147750939e-16,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "complementarity_residual": 4.263276127042506e-14
+      },
+      "wall_impulse_kg_m_s": 15.999999999999973
+    },
+    {
+      "count": 64,
+      "max_velocity_error_m_s": 2.842170943040401e-14,
+      "residual": {
+        "normal_velocity": [
+          7.105427357601002e-15,
+          -1.4210854715202004e-14,
+          0.0,
+          -7.105427357601002e-15,
+          0.0,
+          7.105427357601002e-15,
+          -7.105427357601002e-15,
+          7.105427357601002e-15,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          0.0,
+          7.105427357601002e-15,
+          -7.105427357601002e-15,
+          0.0,
+          -7.105427357601002e-15,
+          1.4210854715202004e-14,
+          7.105427357601002e-15,
+          -7.105427357601002e-15,
+          1.4210854715202004e-14,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          0.0,
+          -7.105427357601002e-15,
+          7.105427357601002e-15,
+          0.0,
+          0.0,
+          -1.4210854715202004e-14,
+          0.0,
+          -7.105427357601002e-15,
+          7.105427357601002e-15,
+          -3.552713678800501e-15,
+          0.0,
+          -3.552713678800501e-15,
+          0.0,
+          0.0,
+          0.0,
+          -3.552713678800501e-15,
+          0.0,
+          3.552713678800501e-15,
+          -7.105427357601002e-15,
+          3.552713678800501e-15,
+          -3.552713678800501e-15,
+          3.552713678800501e-15,
+          -3.552713678800501e-15,
+          3.552713678800501e-15,
+          3.552713678800501e-15,
+          -5.329070518200751e-15,
+          1.7763568394002505e-15,
+          -1.7763568394002505e-15,
+          0.0,
+          1.7763568394002505e-15,
+          -1.7763568394002505e-15,
+          0.0,
+          0.0,
+          8.881784197001252e-16,
+          -8.881784197001252e-16,
+          -1.7763568394002505e-15,
+          8.881784197001252e-16,
+          -8.881784197001252e-16,
+          0.0,
+          4.440892098500626e-16,
+          -4.440892098500626e-16,
+          0.0
+        ],
+        "complementarity_residual": 8.952977684114237e-13
+      },
+      "wall_impulse_kg_m_s": 64.00000000000033
+    },
+    {
+      "count": 100,
+      "max_velocity_error_m_s": 5.684341886080802e-14,
+      "residual": {
+        "normal_velocity": [
+          0.0,
+          1.4210854715202004e-14,
+          -1.4210854715202004e-14,
+          0.0,
+          -1.4210854715202004e-14,
+          1.4210854715202004e-14,
+          0.0,
+          1.4210854715202004e-14,
+          -1.4210854715202004e-14,
+          0.0,
+          2.842170943040401e-14,
+          -2.842170943040401e-14,
+          0.0,
+          -1.4210854715202004e-14,
+          2.842170943040401e-14,
+          -2.842170943040401e-14,
+          1.4210854715202004e-14,
+          0.0,
+          -1.4210854715202004e-14,
+          0.0,
+          0.0,
+          0.0,
+          -1.4210854715202004e-14,
+          -2.842170943040401e-14,
+          0.0,
+          1.4210854715202004e-14,
+          0.0,
+          -1.4210854715202004e-14,
+          0.0,
+          0.0,
+          2.842170943040401e-14,
+          0.0,
+          1.4210854715202004e-14,
+          -1.4210854715202004e-14,
+          1.4210854715202004e-14,
+          -1.4210854715202004e-14,
+          -7.105427357601002e-15,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          0.0,
+          7.105427357601002e-15,
+          0.0,
+          7.105427357601002e-15,
+          1.4210854715202004e-14,
+          -1.4210854715202004e-14,
+          7.105427357601002e-15,
+          0.0,
+          0.0,
+          -7.105427357601002e-15,
+          0.0,
+          -7.105427357601002e-15,
+          7.105427357601002e-15,
+          -7.105427357601002e-15,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          -1.4210854715202004e-14,
+          7.105427357601002e-15,
+          -7.105427357601002e-15,
+          7.105427357601002e-15,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          3.552713678800501e-15,
+          0.0,
+          3.552713678800501e-15,
+          -3.552713678800501e-15,
+          3.552713678800501e-15,
+          -3.552713678800501e-15,
+          3.552713678800501e-15,
+          0.0,
+          -3.552713678800501e-15,
+          0.0,
+          0.0,
+          7.105427357601002e-15,
+          -3.552713678800501e-15,
+          3.552713678800501e-15,
+          0.0,
+          -3.552713678800501e-15,
+          1.7763568394002505e-15,
+          -3.552713678800501e-15,
+          -1.7763568394002505e-15,
+          3.552713678800501e-15,
+          0.0,
+          1.7763568394002505e-15,
+          -1.7763568394002505e-15,
+          1.7763568394002505e-15,
+          8.881784197001252e-16,
+          0.0,
+          8.881784197001252e-16,
+          -8.881784197001252e-16,
+          2.220446049250313e-15,
+          4.440892098500626e-16,
+          4.440892098500626e-16,
+          8.881784197001252e-16,
+          4.440892098500626e-16
+        ],
+        "complementarity_residual": 2.5702782405313803e-12
+      },
+      "wall_impulse_kg_m_s": 99.99999999999858
+    }
+  ],
+  "reference_qualification": {
+    "grid_100_translate": {
+      "qualified": false,
+      "refinement": [
+        {
+          "from": [
+            16,
+            128
+          ],
+          "to": [
+            32,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.018914715832932423,
+            "rms_velocity_m_s": 0.04237554816809411,
+            "rms_spin_rad_s": 0.39616300160459195,
+            "max_position_m": 0.0483287781876353,
+            "final_velocity_max_m_s": 0.003290863096610324,
+            "final_spin_max_rad_s": 0.0662875553516
+          }
+        },
+        {
+          "from": [
+            32,
+            128
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.024083359721641565,
+            "rms_velocity_m_s": 0.04628186331171011,
+            "rms_spin_rad_s": 0.5044569797525722,
+            "max_position_m": 0.07084320809333401,
+            "final_velocity_max_m_s": 0.01374449815460689,
+            "final_spin_max_rad_s": 0.06588231114251
+          }
+        },
+        {
+          "from": [
+            64,
+            32
+          ],
+          "to": [
+            64,
+            64
+          ],
+          "errors": {
+            "rms_position_m": 0.023376554570302098,
+            "rms_velocity_m_s": 0.06287303107096555,
+            "rms_spin_rad_s": 0.5649415475781734,
+            "max_position_m": 0.05488905040419744,
+            "final_velocity_max_m_s": 0.0025604120715929162,
+            "final_spin_max_rad_s": 0.02239249554
+          }
+        },
+        {
+          "from": [
+            64,
+            64
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.015760383439831837,
+            "rms_velocity_m_s": 0.038213771721903725,
+            "rms_spin_rad_s": 0.4402503053430612,
+            "max_position_m": 0.06853157421215579,
+            "final_velocity_max_m_s": 0.013771776505009407,
+            "final_spin_max_rad_s": 0.021593541368999998
+          }
+        }
+      ]
+    },
+    "grid_100_shake": {
+      "qualified": false,
+      "refinement": [
+        {
+          "from": [
+            16,
+            128
+          ],
+          "to": [
+            32,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.009969704326439309,
+            "rms_velocity_m_s": 0.13132542514640658,
+            "rms_spin_rad_s": 1.019224794786651,
+            "max_position_m": 0.06688727043879236,
+            "final_velocity_max_m_s": 0.22404675385290027,
+            "final_spin_max_rad_s": 3.3552078009
+          }
+        },
+        {
+          "from": [
+            32,
+            128
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.015164194173534724,
+            "rms_velocity_m_s": 0.15863831695086686,
+            "rms_spin_rad_s": 1.1516031110728557,
+            "max_position_m": 0.07000009185650725,
+            "final_velocity_max_m_s": 0.23423478856510344,
+            "final_spin_max_rad_s": 3.968323756569
+          }
+        },
+        {
+          "from": [
+            64,
+            32
+          ],
+          "to": [
+            64,
+            64
+          ],
+          "errors": {
+            "rms_position_m": 0.0174443256989544,
+            "rms_velocity_m_s": 0.17656895529093522,
+            "rms_spin_rad_s": 1.1959206652627548,
+            "max_position_m": 0.07635419991672035,
+            "final_velocity_max_m_s": 0.3060376358812535,
+            "final_spin_max_rad_s": 3.5370311656851
+          }
+        },
+        {
+          "from": [
+            64,
+            64
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.0171274592209013,
+            "rms_velocity_m_s": 0.15190862049207945,
+            "rms_spin_rad_s": 1.2087615961134222,
+            "max_position_m": 0.0698876360485963,
+            "final_velocity_max_m_s": 0.3058846123198475,
+            "final_spin_max_rad_s": 5.894135952
+          }
+        }
+      ]
+    },
+    "grid_100_rotate": {
+      "qualified": false,
+      "refinement": [
+        {
+          "from": [
+            16,
+            128
+          ],
+          "to": [
+            32,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.009864104432963693,
+            "rms_velocity_m_s": 0.05312426141687528,
+            "rms_spin_rad_s": 0.46526364276468407,
+            "max_position_m": 0.05643526633032212,
+            "final_velocity_max_m_s": 0.4414318161879134,
+            "final_spin_max_rad_s": 2.9442714456
+          }
+        },
+        {
+          "from": [
+            32,
+            128
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.01178622436725102,
+            "rms_velocity_m_s": 0.06231517073501949,
+            "rms_spin_rad_s": 0.4926757180321088,
+            "max_position_m": 0.06341549089081928,
+            "final_velocity_max_m_s": 0.08435982460343457,
+            "final_spin_max_rad_s": 1.4423394204
+          }
+        },
+        {
+          "from": [
+            64,
+            32
+          ],
+          "to": [
+            64,
+            64
+          ],
+          "errors": {
+            "rms_position_m": 0.008823153451070969,
+            "rms_velocity_m_s": 0.056157723784491013,
+            "rms_spin_rad_s": 0.5090487699101165,
+            "max_position_m": 0.05289956007624758,
+            "final_velocity_max_m_s": 0.26624138678886367,
+            "final_spin_max_rad_s": 2.9010778962
+          }
+        },
+        {
+          "from": [
+            64,
+            64
+          ],
+          "to": [
+            64,
+            128
+          ],
+          "errors": {
+            "rms_position_m": 0.004853502219323254,
+            "rms_velocity_m_s": 0.046897031316764606,
+            "rms_spin_rad_s": 0.3971757020613908,
+            "max_position_m": 0.03736962226858363,
+            "final_velocity_max_m_s": 0.12966683900274992,
+            "final_spin_max_rad_s": 1.4838537873000002
+          }
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "scene": "grid_100_translate",
+      "label": "block_p1_s1",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.12402201782752614,
+        "rms_velocity_m_s": 0.3281178199141023,
+        "rms_spin_rad_s": 1.39806110747568,
+        "max_position_m": 0.2680086807046793,
+        "final_velocity_max_m_s": 0.017099512912067183,
+        "final_spin_max_rad_s": 0.130627138565
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_translate",
+      "label": "block_p1_s8",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.06286861275954408,
+        "rms_velocity_m_s": 0.1726803779315207,
+        "rms_spin_rad_s": 1.0707641228129758,
+        "max_position_m": 0.12488420487341467,
+        "final_velocity_max_m_s": 0.013804209203835332,
+        "final_spin_max_rad_s": 0.0192846375007111
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_translate",
+      "label": "block_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.03521275536703576,
+        "rms_velocity_m_s": 0.09399605924569268,
+        "rms_spin_rad_s": 0.736079465185209,
+        "max_position_m": 0.07256606329369603,
+        "final_velocity_max_m_s": 0.013804396351429672,
+        "final_spin_max_rad_s": 0.019279220218359
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_translate",
+      "label": "block_p8_s32",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.02783545744872399,
+        "rms_velocity_m_s": 0.07779193131846744,
+        "rms_spin_rad_s": 0.7241401311666682,
+        "max_position_m": 0.06327172157618335,
+        "final_velocity_max_m_s": 0.013804357829933464,
+        "final_spin_max_rad_s": 0.1243131252467
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_translate",
+      "label": "temporal_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.0865024250789662,
+        "rms_velocity_m_s": 0.12572171859735098,
+        "rms_spin_rad_s": 1.0649998815983164,
+        "max_position_m": 0.2245728643064841,
+        "final_velocity_max_m_s": 0.05092460586102704,
+        "final_spin_max_rad_s": 0.439608620452
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_translate",
+      "label": "block_adaptive",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.03616930129771621,
+        "rms_velocity_m_s": 0.11064227422494784,
+        "rms_spin_rad_s": 0.9370338159661655,
+        "max_position_m": 0.09069987810141072,
+        "final_velocity_max_m_s": 0.013804661431466938,
+        "final_spin_max_rad_s": 0.0192845530494953
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "block_p1_s1",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.12433977876701222,
+        "rms_velocity_m_s": 0.48262835437082796,
+        "rms_spin_rad_s": 2.2759812887870194,
+        "max_position_m": 0.36428890268660413,
+        "final_velocity_max_m_s": 0.4740802682528399,
+        "final_spin_max_rad_s": 7.78062582
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "block_p1_s8",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.05911892799073989,
+        "rms_velocity_m_s": 0.29654593365551773,
+        "rms_spin_rad_s": 1.862694294628113,
+        "max_position_m": 0.1800361251481444,
+        "final_velocity_max_m_s": 0.2331085147161763,
+        "final_spin_max_rad_s": 2.876517498991
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "block_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.02256476882247236,
+        "rms_velocity_m_s": 0.20547371132410142,
+        "rms_spin_rad_s": 1.397154408915876,
+        "max_position_m": 0.09666828416406818,
+        "final_velocity_max_m_s": 0.21538709127581507,
+        "final_spin_max_rad_s": 4.29495547371115
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "block_p8_s32",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.023780173926933143,
+        "rms_velocity_m_s": 0.16869110304529547,
+        "rms_spin_rad_s": 1.3444500708616296,
+        "max_position_m": 0.0798128296612939,
+        "final_velocity_max_m_s": 0.2353537537851082,
+        "final_spin_max_rad_s": 2.8672761811701495
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "temporal_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.07095572695691293,
+        "rms_velocity_m_s": 0.18820241449498037,
+        "rms_spin_rad_s": 1.251486628739076,
+        "max_position_m": 0.1741133691752855,
+        "final_velocity_max_m_s": 0.3157633008321026,
+        "final_spin_max_rad_s": 3.4254346486999996
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_shake",
+      "label": "block_adaptive",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.028415264433213502,
+        "rms_velocity_m_s": 0.20488194603672083,
+        "rms_spin_rad_s": 1.402326725942069,
+        "max_position_m": 0.09113590991976096,
+        "final_velocity_max_m_s": 0.23588001242289824,
+        "final_spin_max_rad_s": 3.786700249
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "block_p1_s1",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.13367640353648486,
+        "rms_velocity_m_s": 0.29023878204932513,
+        "rms_spin_rad_s": 1.7013535199939993,
+        "max_position_m": 0.34953498655588283,
+        "final_velocity_max_m_s": 0.5890982419044142,
+        "final_spin_max_rad_s": 6.601773113399999
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "block_p1_s8",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.05091574950060032,
+        "rms_velocity_m_s": 0.1515887454545363,
+        "rms_spin_rad_s": 0.972291358079026,
+        "max_position_m": 0.130465020547539,
+        "final_velocity_max_m_s": 0.11572902198959382,
+        "final_spin_max_rad_s": 1.4514745474000001
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "block_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.015196106628778922,
+        "rms_velocity_m_s": 0.08126668986847037,
+        "rms_spin_rad_s": 0.6194491461900152,
+        "max_position_m": 0.06777500668425832,
+        "final_velocity_max_m_s": 0.14617380168686434,
+        "final_spin_max_rad_s": 2.1728398203
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "block_p8_s32",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.015802115806108148,
+        "rms_velocity_m_s": 0.07316906423618745,
+        "rms_spin_rad_s": 0.594354737922688,
+        "max_position_m": 0.06804825360011209,
+        "final_velocity_max_m_s": 0.0849092864242267,
+        "final_spin_max_rad_s": 1.4318343997
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "temporal_p4_s16",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.097540832317147,
+        "rms_velocity_m_s": 0.13509635581029894,
+        "rms_spin_rad_s": 1.0212108356626515,
+        "max_position_m": 0.4584066256058596,
+        "final_velocity_max_m_s": 0.6748819342419548,
+        "final_spin_max_rad_s": 5.128907561
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    },
+    {
+      "scene": "grid_100_rotate",
+      "label": "block_adaptive",
+      "reference_qualified": false,
+      "errors": {
+        "rms_position_m": 0.0216825352960889,
+        "rms_velocity_m_s": 0.08344342222396278,
+        "rms_spin_rad_s": 0.6574702940268358,
+        "max_position_m": 0.06941887921826881,
+        "final_velocity_max_m_s": 0.08834150164013323,
+        "final_spin_max_rad_s": 1.469311297
+      },
+      "within_budget_against_candidate_reference": false,
+      "passed_qualified_reference": false
+    }
+  ],
+  "controls": [
+    {
+      "control": "galilean_100",
+      "max_position_error_m": 0.0012539222094767625,
+      "max_velocity_error_m_s": 0.002916372000001488,
+      "max_spin_error_rad_s": 0.0
+    },
+    {
+      "control": "comoving_100",
+      "max_position_error_m": 3.6240000000492545e-06,
+      "max_velocity_error_m_s": 2.3799999970819385e-08,
+      "max_spin_error_rad_s": 0.0
+    },
+    {
+      "control": "reverse_body_order_100",
+      "max_position_error_m": 0.0009751319999999897,
+      "max_velocity_error_m_s": 0.006165146800000021,
+      "max_spin_error_rad_s": 0.0
+    }
+  ],
+  "traces_zip_sha256": "a96c4e19d500b043abdb52b8571b65cc22f8c501362290e80b02bd08bf44098d",
+  "end_of_run_repository_head": "da4a62f9c783434670bbfc6ece2398e841c07d32",
+  "provenance_note": "Process launched from source commit 6a805db. Concurrent published documentation, audit and crash-checkpoint changes did not change the running Python process. The original runner recorded repository HEAD at completion; retain that value separately."
+}

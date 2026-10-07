@@ -1,0 +1,19 @@
+{
+  "physics_code_revision": "1997226fda1d9e27e7000ab23691cc2930ccd0bf",
+  "zip_verified_members": 97,
+  "all_member_hashes_verified": true,
+  "artifacts": [
+    {
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/measured-inertia-and-contact-repair-report.pdf",
+      "bytes": 215918,
+      "sha256": "13b2e84c6435f88eb4f95243a71422524be4550c82b4279f691b3f772a649aa2"
+    },
+    {
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-contact-repair-20261007-v2.zip",
+      "bytes": 759648,
+      "sha256": "d8e2e404f077bb6c4f174dc7b8dd33eeb4a39d4111f3d28ef4022f3c498ec44a"
+    }
+  ],
+  "bundle_is_standalone_engine": false,
+  "package_metadata_correction": "v2 clarifies that original third-party dataset files are excluded; source-derived numerical comparisons are included. v1 artifact preserved locally, numerical member hashes unchanged."
+}

@@ -1,0 +1,60 @@
+{
+  "plan_sha256": "740242c7d80502facb803b7d51e8964109d4e7e17ef564a1d7ad3ecf408a882b",
+  "script_sha256": "c6c827431f2124611163192f6e057ef3b4560d8249f4288e3b01305380a64ceb",
+  "pid": 75548,
+  "binary_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+  "started_utc": "2026-10-05T19:12:34.978620+00:00",
+  "observations": [
+    {
+      "sample": 0,
+      "attempt_utc": "2026-10-05T19:12:34.978636+00:00",
+      "instruction_pointer": 94101525086070,
+      "stop_signal": 19,
+      "detach_succeeded": true,
+      "attach_read_detach_elapsed_s": 0.0008293410064652562,
+      "module": "/workspace/rigid-body-collisions/build/spatial/spatial_runner",
+      "relative_pc": 237430,
+      "module_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+      "symbol_lookup_exit_code": 0,
+      "nearest_symbol": {
+        "name": "_ZZZN14circular_trust5solveERK9btMatrixXIdERK9btVectorXIdERS5_S7_RK20btAlignedObjectArrayIiEdRNS_5StatsEENKUlRSt6vectorIdSaIdEEdE1_clESI_dENKUlRKSH_E_clESL_",
+        "offset_bytes": 534
+      }
+    },
+    {
+      "sample": 1,
+      "attempt_utc": "2026-10-05T19:12:34.979682+00:00",
+      "instruction_pointer": 94101525086062,
+      "stop_signal": 19,
+      "detach_succeeded": true,
+      "attach_read_detach_elapsed_s": 0.000256571001955308,
+      "module": "/workspace/rigid-body-collisions/build/spatial/spatial_runner",
+      "relative_pc": 237422,
+      "module_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+      "symbol_lookup_exit_code": 0,
+      "nearest_symbol": {
+        "name": "_ZZZN14circular_trust5solveERK9btMatrixXIdERK9btVectorXIdERS5_S7_RK20btAlignedObjectArrayIiEdRNS_5StatsEENKUlRSt6vectorIdSaIdEEdE1_clESI_dENKUlRKSH_E_clESL_",
+        "offset_bytes": 526
+      }
+    },
+    {
+      "sample": 2,
+      "attempt_utc": "2026-10-05T19:12:34.980352+00:00",
+      "instruction_pointer": 94101525142230,
+      "stop_signal": 19,
+      "detach_succeeded": true,
+      "attach_read_detach_elapsed_s": 0.0005815399927087128,
+      "module": "/workspace/rigid-body-collisions/build/spatial/spatial_runner",
+      "relative_pc": 293590,
+      "module_sha256": "ec3cfd8a0a02e66d31e620df3cc0b5e1762b8c3d9d276115680b305fc00da7a1",
+      "symbol_lookup_exit_code": 0,
+      "nearest_symbol": {
+        "name": "_ZZN14circular_trust5solveERK9btMatrixXIdERK9btVectorXIdERS5_S7_RK20btAlignedObjectArrayIiEdRNS_5StatsEENKUlRSt6vectorIdSaIdEEdE1_clESI_d",
+        "offset_bytes": 2326
+      }
+    }
+  ],
+  "register_or_memory_writes": false,
+  "timing_ranking_qualified": false,
+  "finished_utc": "2026-10-05T19:12:35.009201+00:00"
+}

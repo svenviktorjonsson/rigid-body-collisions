@@ -1,0 +1,51 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 240  of event 'cpu/cycles/P'
+# Event count (approx.): 20363428713
+#
+# Overhead  Command         Shared Object        Symbol                                                                                                                                                                                                                                                                                                                                  
+# ........  ..............  ...................  ........................................................................................................................................................................................................................................................................................................................................
+#
+    31.00%  spatial_runner  spatial_runner       [.] coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)
+            |          
+             --27.71%--coulombIterate(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double>&, btVectorX<double> const&, btVectorX<double> const&, btAlignedObjectArray<int> const&, int, double, CoulombStats&, std::vector<double, std::allocator<double> >*)
+
+    12.39%  spatial_runner  spatial_runner       [.] normalQP(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double>&)
+            |
+            ---normalQP(btMatrixX<double> const&, btVectorX<double> const&, btVectorX<double> const&, btVectorX<double>&)
+
+     9.19%  spatial_runner  libc.so.6            [.] __memset_avx2_unaligned_erms
+            |
+            ---__memset_avx2_unaligned_erms
+
+     8.40%  spatial_runner  spatial_runner       [.] btMLCPSolver::createMLCPFast(btContactSolverInfo const&)
+            |
+            ---btMLCPSolver::createMLCPFast(btContactSolverInfo const&)
+
+     5.02%  spatial_runner  spatial_runner       [.] btCompoundCompoundCollisionAlgorithm::processCollision(btCollisionObjectWrapper const*, btCollisionObjectWrapper const*, btDispatcherInfo const&, btManifoldResult*)
+            |          
+             --3.76%--btCompoundCompoundCollisionAlgorithm::processCollision(btCollisionObjectWrapper const*, btCollisionObjectWrapper const*, btDispatcherInfo const&, btManifoldResult*)
+
+     4.76%  spatial_runner  spatial_runner       [.] CoulombMLCP::solveMLCP(btContactSolverInfo const&)
+            |
+            ---CoulombMLCP::solveMLCP(btContactSolverInfo const&)
+               btMLCPSolver::solveGroupCacheFriendlyIterations(btCollisionObject**, int, btPersistentManifold**, int, btTypedConstraint**, int, btContactSolverInfo const&, btIDebugDraw*)
+               0x7ffc3d4731e055
+
+     3.32%  spatial_runner  spatial_runner       [.] btVoronoiSimplexSolver::reduceVertices(btUsageBitfield const&)
+            |
+            ---btPersistentManifold::btPersistentManifold()
+               0x55dc393ffd681000
+
+     2.92%  spatial_runner  spatial_runner       [.] btConvexShape::localGetSupportVertexWithoutMarginNonVirtual(btVector3 const&) const
+     2.50%  spatial_runner  spatial_runner       [.] btGjkPairDetector::getClosestPointsNonVirtual(btDiscreteCollisionDetectorInterface::ClosestPointInput const&, btDiscreteCollisionDetectorInterface::Result&, btIDebugDraw*)
+     2.07%  spatial_runner  spatial_runner       [.] btPersistentManifold::btPersistentManifold()
+     2.04%  spatial_runner  libm.so.6            [.] hypot@@GLIBC_2.35
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

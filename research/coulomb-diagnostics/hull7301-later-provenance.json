@@ -1,0 +1,18 @@
+{
+  "capture_backend_source_commit": "aebc4f4341fd776618e376e456f9e6d97b99658f",
+  "input_sha256": "ccd10a635622b90b61d39f3676d827dc3fdbee989eca616dd79fabe6b4430765",
+  "scene": "research/spatial-friction-recovery/results/scenes.json:fast_rotate_shake27_hulls7301",
+  "controls": {
+    "dt": 0.01,
+    "primary_steps": 4,
+    "travel_fraction": 0.06,
+    "iterations": 4096,
+    "solver": "coulomb",
+    "kinematic_contact_phase": "start",
+    "position_stabilization": "split",
+    "contact_tolerance_m_s": 1e-08,
+    "contact_slop_m": 1e-09,
+    "contact_recovery": true
+  },
+  "scope": "Later267-row rejected matrix from unchanged authored physical scene; original384-cap whole trajectories not yet qualified. Explicit append-only fixture; earlier manifest and two frozen-system receipts unchanged."
+}

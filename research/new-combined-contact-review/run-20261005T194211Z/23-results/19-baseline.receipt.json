@@ -1,0 +1,22 @@
+{
+  "returncode": 0,
+  "seconds_descriptive_only": 0.24150057398946956,
+  "command": [
+    "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+    "/workspace/rigid-body-collisions/research/coulomb-followup/hull42-second-rejected.json",
+    "4096"
+  ],
+  "accepted": true,
+  "external": {
+    "accepted": true,
+    "projection_m_s": 3.6319434460190556e-09,
+    "circle_violation_scaled_m_s": 3.6310562070879817e-09,
+    "sticking_m_s": 1.8190625018674647e-16,
+    "support_gap_J": 6.3551841240756216e-15,
+    "passive_bound_J": -1.4327651932916066,
+    "passivity_scale": 3.5568725783568422,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 1.4210854715202004e-14
+  }
+}

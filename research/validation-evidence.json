@@ -1,0 +1,39 @@
+{
+  "scope": "Local regression and source-integrity checks; not physical material validation or arbitrary-shape reference runs.",
+  "tested_code_commit": "bcb7fcdfca1445c9aa224b9e3b4fe18678139531",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 30,
+      "result": "passed"
+    },
+    {
+      "command": "python -m unittest discover -s research -p 'test_*.py' -v",
+      "tests": 10,
+      "result": "passed"
+    },
+    {
+      "command": "python -m research.benchmark_tools audit",
+      "result": {
+        "source_files_verified": 29,
+        "catalog_cases": 10,
+        "physically_validated_cases": 0,
+        "source_integrity_passed": true,
+        "scope": "File integrity and provenance records; no physics accuracy claim."
+      }
+    },
+    {
+      "command": "compare and convergence CLI examples from research/VALIDATION.md",
+      "result": "passed",
+      "evidence_kind": "synthetic_fixture"
+    }
+  ],
+  "arbitrary_shape_reference_runs_completed": false,
+  "calibration_against_measurements_completed": false
+}

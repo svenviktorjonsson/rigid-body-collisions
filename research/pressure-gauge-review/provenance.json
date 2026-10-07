@@ -1,0 +1,16 @@
+{
+  "production_source_commit": "95d224f1cfb36ec5e34bf4e5bd1a1e8484f9e8eb",
+  "protocol": "Numerical captured-system initializations; original all-row and finite-passivity gates",
+  "sources": {
+    "research/pressure-gauge-review/canonical_positive.py": "10e1d1508bd9f001a61889d944ebaf4d32d60e6e2c51c2c91cd8a9325e7cc8a3",
+    "research/pressure-gauge-review/canonical_probe.py": "8cd49ab3fa98c9005790eca24ce7e4b2dfcf110a3a096077b1b85d425b347fed",
+    "research/pressure-gauge-review/neutral_restart.py": "a308aefa1b520ef8f45dc6b71f47c7719aad7bca6385fad5c5b2dc2f90223292",
+    "research/pressure-gauge-review/native_base_restart.py": "76ed672b04a1e0e4ee3e8d1f3cc3200c2f47f163b2657283d98cf94e30f3d354",
+    "research/coulomb_diagnostics.py": "784b2b218bec57d10d6dac8a628e2836834102fe9235cf36de5fff711ab42f84"
+  },
+  "input_receipts": {
+    "research/active-direct/39-native-homotopy-stalled-base.jsonl": "841625df606b8779fe8800670485f063af0d6ab4005a78649b38eae9e1dd9e1a",
+    "research/active-direct/39-candidate-more-v2-lapack-native.jsonl": "89ce12ad0f9b64c62046fea237f9c0c5880d77750a2ea78e9b50de22573c3655",
+    "research/new-hull-contact-review/fast_shake8_hulls42-reference_1.json": "f3679d94080afaf9fbb5e6a12d37f522d65701188f1313caf0a78fb0e9f27b39"
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-04",
+  "status": "source assets collected; no arbitrary-body reference/fast simulations run",
+  "reference_projects": {
+    "IPC": {
+      "commit": "573d2c7e04104d3f9baf526bdaee7745891a571a",
+      "project_page": "https://ipc-sim.github.io/",
+      "implementation_dimension": "3D"
+    },
+    "GetFEM": {
+      "commit": "3b405544c9643d72c6313dba1560220dbd88693c",
+      "repository": "https://github.com/getfem/getfem"
+    }
+  },
+  "cases": [
+    {
+      "id": "incline_threshold_049",
+      "description": "Elastic cube on incline near the Coulomb slip threshold",
+      "proposed_role": "calibration",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 1000000000.0,
+        "poisson_ratio": 0.4,
+        "surface_friction": 0.49,
+        "plane_normal": [
+          1,
+          2,
+          0
+        ],
+        "source_duration_s": 2.5,
+        "source_dt_s": 0.025
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.49.txt",
+      "local_input": "sources/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.49.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "The paired 0.5 case is part of the same calibration family, not independent held-out validation.",
+        "Source requests fricIterAmt -1; the README warns unrestricted friction iterations need not converge."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.49.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "incline_threshold_050",
+      "description": "Same incline at the nominal threshold tan(angle)=0.5",
+      "proposed_role": "calibration",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 1000000000.0,
+        "poisson_ratio": 0.4,
+        "surface_friction": 0.5,
+        "plane_normal": [
+          1,
+          2,
+          0
+        ],
+        "source_duration_s": 2.5,
+        "source_dt_s": 0.025
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.5.txt",
+      "local_input": "sources/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.5.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Do not assume the source timestep or mesh is a converged solution."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/otherExamples/friction/slopeTest_highSchoolPhysics_0.5.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "pencil_stick_slip",
+      "description": "Pushed slender body with compliant stick-slip contact",
+      "proposed_role": "calibration",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 100000.0,
+        "poisson_ratio": 0.4,
+        "surface_friction": 0.35,
+        "source_duration_s": 2,
+        "source_dt_s": 0.001
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/20_pencilStickSlip.txt",
+      "local_input": "sources/input/paperExamples/20_pencilStickSlip.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Scripted forcing must be imported from AnimScripter.cpp; the input alone does not define the complete motion.",
+        "This source coefficient is not a separately measured static/dynamic pair."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/20_pencilStickSlip.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "cube_stack",
+      "description": "Five deformable cubes falling onto a frictionless plane",
+      "proposed_role": "held_out_geometry_and_multicontact",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 100000.0,
+        "poisson_ratio": 0.4,
+        "source_duration_s": 5,
+        "source_dt_s": 0.025,
+        "elastic_energy": "fixed corotational"
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/10_cubeStack.txt",
+      "local_input": "sources/input/paperExamples/10_cubeStack.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "The size command rescales the scene bounding box; size=1 is not a 1 m cube side."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/10_cubeStack.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "large_mass_ratio",
+      "description": "Two contacting bodies with a large geometric/density contrast",
+      "proposed_role": "held_out_material_contrast",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "default_density_kg_m3": 1000,
+        "default_young_modulus_Pa": 1000000.0,
+        "poisson_ratio": 0.4,
+        "large_body_density_kg_m3": 10000.0,
+        "large_body_young_modulus_Pa": 100000000.0,
+        "contact_friction": 0.5,
+        "source_duration_s": 3,
+        "source_dt_s": 0.025
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/12_largeMassRatio.txt",
+      "local_input": "sources/input/paperExamples/12_largeMassRatio.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Preserve per-shape material overrides and the solver-specific section."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/12_largeMassRatio.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "rods_twist",
+      "description": "Four rods undergoing prescribed twisting and mutual contact",
+      "proposed_role": "held_out_elastic_history",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 10000.0,
+        "poisson_ratio": 0.4,
+        "source_duration_s": 100,
+        "source_dt_s": 0.025
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/4_rodsTwist.txt",
+      "local_input": "sources/input/paperExamples/4_rodsTwist.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "This is a genuinely 3D torsion test; it cannot validate a planar rod model.",
+        "Include external work from prescribed motion in the energy balance."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/4_rodsTwist.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "irregular_squeeze",
+      "description": "Irregular deformable bodies compressed through an obstacle",
+      "proposed_role": "held_out_irregular_shapes_and_dense_contact",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1000,
+        "young_modulus_Pa": 50000.0,
+        "poisson_ratio": 0.4,
+        "plane_friction": 0.1,
+        "source_duration_s": 15,
+        "source_dt_s": 0.01
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/1_squeezeOut.txt",
+      "local_input": "sources/input/paperExamples/1_squeezeOut.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Preserve scene rescaling, moving obstacles, self-contact, and script-defined boundary conditions."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/1_squeezeOut.txt",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "foam_impact_anchor",
+      "description": "Foam practice ball impact compared with high-speed video on the IPC project page",
+      "proposed_role": "experimental_anchor_pending_quantification",
+      "dimension": "3D",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "density_kg_m3": 1150,
+        "young_modulus_Pa": 10000000.0,
+        "poisson_ratio": 0.45,
+        "diameter_m": 0.04,
+        "initial_speed_m_s": 67,
+        "source_duration_s": 0.004,
+        "source_dt_s": 2e-05,
+        "time_integration": "Newmark",
+        "source_dampingStiff": 4e-16
+      },
+      "source_url": "https://github.com/ipc-sim/IPC/blob/573d2c7e04104d3f9baf526bdaee7745891a571a/input/paperExamples/19_golfBall.txt",
+      "local_input": "sources/input/paperExamples/19_golfBall.txt",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Project page reports material properties and a video comparison; uncertainty and independently measured dissipation were not established here.",
+        "Original reference is a ball baseline, not evidence of transfer to arbitrary shapes.",
+        "dampingStiff is a solver input; do not reinterpret it as a measured contact dashpot coefficient."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "reported_material_properties_and_simulation_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://ipc-sim.github.io/",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "planar_gears",
+      "description": "Two elastic gears in planar static contact",
+      "proposed_role": "planar_shape_verification",
+      "dimension": "2D continuum / plate as specified",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "lame_mu_N_mm2": 83000.0,
+        "lame_lambda_N_mm2": 118000.0,
+        "prescribed_rotation_rad": -0.015,
+        "friction": 0
+      },
+      "source_url": "https://github.com/getfem/getfem/blob/3b405544c9643d72c6313dba1560220dbd88693c/contrib/static_contact_gears/static_contact_gears_2D.param",
+      "local_input": "getfem-sources/contrib/static_contact_gears/static_contact_gears_2D.param",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Numerical steel-like elastic coefficients; no measured specimen data established.",
+        "Static, frictionless test: useful for shape/contact pressure verification, not restitution or dynamic friction validation.",
+        "Preserve the source plane formulation and record out-of-plane thickness when reporting resultants."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/getfem/getfem/blob/3b405544c9643d72c6313dba1560220dbd88693c/contrib/static_contact_gears/static_contact_gears_2D.param",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    },
+    {
+      "id": "plate_obstacle",
+      "description": "Kirchhoff-Love plate dynamics with obstacles",
+      "proposed_role": "elastic_plate_verification",
+      "dimension": "2D continuum / plate as specified",
+      "parameter_provenance": "published numerical input; not established as a measured material characterization",
+      "parameters": {
+        "length_x": 0.4,
+        "length_y": 1.2,
+        "thickness": 0.01,
+        "young_modulus": 210000000000.0,
+        "density": 7770,
+        "poisson_ratio": 0.3,
+        "source_dt": 2e-05,
+        "source_duration": 3
+      },
+      "source_url": "https://github.com/getfem/getfem/blob/3b405544c9643d72c6313dba1560220dbd88693c/interface/tests/matlab-octave/plate_Impact.m",
+      "local_input": "getfem-sources/interface/tests/matlab-octave/plate_Impact.m",
+      "reference_status": "not computed",
+      "engine_adapter_status": "not implemented",
+      "notes": [
+        "Steel-like published coefficients; not independently verified material characterization.",
+        "A 2D mid-surface with transverse bending is not a planar rigid-body collision model.",
+        "Default NX=NY=2 must not be treated as a refined reference."
+      ],
+      "authenticity": {
+        "status": "not_experimentally_validated",
+        "parameter_evidence": "published_numerical_inputs",
+        "measurement_uncertainty_available": false,
+        "quantitative_experimental_validation_completed": false,
+        "source": "https://github.com/getfem/getfem/blob/3b405544c9643d72c6313dba1560220dbd88693c/interface/tests/matlab-octave/plate_Impact.m",
+        "missing_evidence": [
+          "independent material/contact characterization",
+          "quantitative experimental observations with uncertainty",
+          "converged reference and held-out engine comparison"
+        ]
+      }
+    }
+  ],
+  "suggested_planar_extensions": {
+    "provenance": "new synthetic tests, not reproductions of public experiments",
+    "shapes": [
+      "rectangle",
+      "convex polygon",
+      "concave L shape",
+      "slender bar",
+      "gear"
+    ],
+    "conditions": [
+      "central impact",
+      "off-center impact",
+      "oblique impact with spin",
+      "simultaneous contact chain",
+      "stack under load",
+      "moving contact frame"
+    ],
+    "requirements": [
+      "Declare plane stress or plane strain and thickness.",
+      "Separate material characterization from contact calibration.",
+      "Use a planar continuum reference and demonstrate its convergence."
+    ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "scope": "Exploratory comparison of preserved first-study histories against newly qualified higher-work references. No policy retuning; original held-out evaluation unchanged.",
+  "records": [
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "block_fast",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.012013987930419872,
+        "rms_velocity_m_s": 0.2657455592830369,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 5.314911185660738,
+      "within_budget": false
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "block_standard",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.012013987930419872,
+        "rms_velocity_m_s": 0.2657455592829751,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 5.3149111856595015,
+      "within_budget": false
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "block_accurate",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.001810162197087391,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 0.09050810985436955,
+      "within_budget": true
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "block_high",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.0017984634532670965,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 0.08992317266335483,
+      "within_budget": true
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "block_adaptive",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.012013987930419872,
+        "rms_velocity_m_s": 0.2657455592829751,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 5.3149111856595015,
+      "within_budget": false
+    },
+    {
+      "case_id": "normal_rebound_boxes",
+      "mode": "reference_block",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.0005144534971137058,
+        "rms_velocity_m_s": 0.0,
+        "rms_spin_rad_s": 0.0
+      },
+      "normalized_error": 0.025722674855685287,
+      "within_budget": true
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "block_fast",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.3736554309975615,
+        "rms_velocity_m_s": 0.6004583196808349,
+        "rms_spin_rad_s": 1.3974801630856561
+      },
+      "normalized_error": 27.949603261713122,
+      "within_budget": false
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "block_standard",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.009358231293368206,
+        "rms_velocity_m_s": 0.28747168558383085,
+        "rms_spin_rad_s": 0.23007980247823367
+      },
+      "normalized_error": 5.749433711676617,
+      "within_budget": false
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "block_accurate",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.004121884654733898,
+        "rms_velocity_m_s": 0.044801419454143954,
+        "rms_spin_rad_s": 0.08151936428745953
+      },
+      "normalized_error": 1.6303872857491903,
+      "within_budget": false
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "block_high",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.002597952180879066,
+        "rms_velocity_m_s": 0.0006673342728187339,
+        "rms_spin_rad_s": 0.002462147473540371
+      },
+      "normalized_error": 0.12989760904395328,
+      "within_budget": true
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "block_adaptive",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.372580910317274,
+        "rms_velocity_m_s": 0.5956964854356003,
+        "rms_spin_rad_s": 1.4097742282499508
+      },
+      "normalized_error": 28.195484564999013,
+      "within_budget": false
+    },
+    {
+      "case_id": "triangle_drop",
+      "mode": "reference_block",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.0016488468091685974,
+        "rms_velocity_m_s": 0.0005046019525414717,
+        "rms_spin_rad_s": 0.0014977466359015561
+      },
+      "normalized_error": 0.08244234045842987,
+      "within_budget": true
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "block_fast",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.2743167370111272,
+        "rms_velocity_m_s": 0.23516606065104256,
+        "rms_spin_rad_s": 0.04889575287673213
+      },
+      "normalized_error": 13.715836850556359,
+      "within_budget": false
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "block_standard",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.017403411110539446,
+        "rms_velocity_m_s": 0.06247404718241053,
+        "rms_spin_rad_s": 1.9208932749071677e-07
+      },
+      "normalized_error": 1.2494809436482106,
+      "within_budget": false
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "block_accurate",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.004481262165224086,
+        "rms_velocity_m_s": 0.022314052125354155,
+        "rms_spin_rad_s": 6.635742861824481e-07
+      },
+      "normalized_error": 0.44628104250708306,
+      "within_budget": true
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "block_high",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.003230888802666707,
+        "rms_velocity_m_s": 0.0185104303271722,
+        "rms_spin_rad_s": 1.0290473418045155e-07
+      },
+      "normalized_error": 0.370208606543444,
+      "within_budget": true
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "block_adaptive",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.018190416663436865,
+        "rms_velocity_m_s": 0.04752566364638379,
+        "rms_spin_rad_s": 5.4748892025708854e-08
+      },
+      "normalized_error": 0.9505132729276757,
+      "within_budget": true
+    },
+    {
+      "case_id": "stack_12",
+      "mode": "reference_block",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.0010167957873711126,
+        "rms_velocity_m_s": 0.002890966405364195,
+        "rms_spin_rad_s": 2.7148908358730895e-08
+      },
+      "normalized_error": 0.05781932810728389,
+      "within_budget": true
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "block_fast",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.07287360997772917,
+        "rms_velocity_m_s": 0.31173905195455864,
+        "rms_spin_rad_s": 0.008121377635287865
+      },
+      "normalized_error": 6.234781039091173,
+      "within_budget": false
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "block_standard",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.01512328004225255,
+        "rms_velocity_m_s": 0.0726297223853649,
+        "rms_spin_rad_s": 1.168986183302314e-05
+      },
+      "normalized_error": 1.4525944477072978,
+      "within_budget": false
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "block_accurate",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.000996206655991142,
+        "rms_velocity_m_s": 0.028813681960779613,
+        "rms_spin_rad_s": 7.271889023565043e-07
+      },
+      "normalized_error": 0.5762736392155923,
+      "within_budget": true
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "block_high",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.0003885726597531638,
+        "rms_velocity_m_s": 0.017755812332528834,
+        "rms_spin_rad_s": 3.187153190076716e-07
+      },
+      "normalized_error": 0.3551162466505767,
+      "within_budget": true
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "block_adaptive",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.03702260616647278,
+        "rms_velocity_m_s": 0.062300635005297623,
+        "rms_spin_rad_s": 1.2544464471401816e-05
+      },
+      "normalized_error": 1.851130308323639,
+      "within_budget": false
+    },
+    {
+      "case_id": "mass_contrast_30",
+      "mode": "reference_block",
+      "reference": "exploratory_64_primary_128_velocity_iterations",
+      "errors": {
+        "rms_position_m": 0.00020045344770341564,
+        "rms_velocity_m_s": 0.01286077141702109,
+        "rms_spin_rad_s": 1.4879473079518074e-07
+      },
+      "normalized_error": 0.25721542834042177,
+      "within_budget": true
+    }
+  ]
+}

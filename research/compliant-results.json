@@ -1,0 +1,17 @@
+{
+  "scope": "synthetic local frozen-geometry compliant contact, not calibrated material",
+  "isolated_normal_restitution_target": 0.6,
+  "calibrated_normal_damping": 36.171661396359006,
+  "coupled_effective_normal_restitution": 0.4938603365038736,
+  "contact_duration": 0.02227183957110969,
+  "post_velocity": [
+    0.4938603365038736,
+    -0.26116878527051307,
+    2.1857673913171936
+  ],
+  "initial_kinetic_energy": 0.8990966964900206,
+  "final_kinetic_energy": 0.6343797981468304,
+  "remaining_elastic_energy": 0.0025263893556609677,
+  "dissipated_energy": 0.26219050848377146,
+  "maximum_energy_accounting_residual": 5.037577022193318e-10
+}

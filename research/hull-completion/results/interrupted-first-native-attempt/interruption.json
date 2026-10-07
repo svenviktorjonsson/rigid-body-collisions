@@ -1,0 +1,7 @@
+{
+  "reason": "Unified exec server transport disconnected; previous Python orchestrator45242 and parallel ref1 helper47974 disappeared; orphaned native children defunct, result stdout unavailable. Ref0 capture survives, ref1 did not produce rejection dump or checkpoint. Ref2 helper completed checkpoint.",
+  "source": "f2097b00e7e539f05b5c48daced46f2e58e122bf",
+  "binary_sha256": "9030d603bdd74c38165d507477648ce79377acacf2b0f61e88731cbead8468df",
+  "recovery": "Preserve abandoned native ref0 capture and rerun missing ref0/ref1 from frozen source. Retain all completed checkpoints. No inferred timing/exitcode/rejection stderr.",
+  "unix_time": 1791214367.9467251
+}

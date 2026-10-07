@@ -1,0 +1,73 @@
+{
+  "schema": "combined-final-protocol-preparation-v1",
+  "status": "READY_FOR_ROOT_SOURCE_FREEZE",
+  "native_execution": false,
+  "combined_trajectory_executed": false,
+  "predecessor_source_commit": "108a9bb4c7899f75d760b27b179cc56557904a08",
+  "predecessor_archive_publication_commit": "579ae11365e87a84bfcb39ce14568282398299c3",
+  "five_preceding_artifact_hashes": {
+    "research/hull-gap-completion/results/summary.json": "1c2cfd56d73f6ca6014c0f799b088a81863207762b3549544a77bd608717109d",
+    "research/hull-gap-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-gap-completion/results/traces.zip": "af7d694e3546e8c83ac598fabe40487c3a9c56e8aecd879e83e8b7a68f012800",
+    "research/hull-gap-completion/results/execution-source.zip": "d3341eddf5809e5d5e61eb619e8de4bc17eef79c43367de58ee382fe9e6ed028",
+    "research/hull-gap-completion/plan.json": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737"
+  },
+  "declared_numerical_change": {
+    "position_stabilization": {
+      "baseline": "split_translation_gap",
+      "candidate": "split_translation_combined"
+    },
+    "early_component_recovery": {
+      "baseline": false,
+      "candidate": true
+    },
+    "shape_cache_margin_order": {
+      "baseline": "recalc before margin",
+      "candidate": "margin before recalc"
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "research/hull-combined-completion/runner.py",
+        "--check-plan"
+      ],
+      "exit_code": 0,
+      "path": "research/hull-combined-completion/final-freeze-preparation-20261005T193455Z-5c77f8-0.log",
+      "sha256": "624fb07618cc7d56c77892114f041fa0feb36a135da4378bd3b65c065dc6999d"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "research.audit_hull_combined_completion",
+        "--plan-only"
+      ],
+      "exit_code": 0,
+      "path": "research/hull-combined-completion/final-freeze-preparation-20261005T193455Z-5c77f8-1.log",
+      "sha256": "1faa274d1e55c08490609e37b7ff5643de8237ce8282706976ae1970ff86859d"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "research.hull-combined-completion.auditor_checks"
+      ],
+      "exit_code": 0,
+      "path": "research/hull-combined-completion/final-freeze-preparation-20261005T193455Z-5c77f8-2.log",
+      "sha256": "c4eaa3902e8bad3d6cac918ebdb05dd3f65654c1859679db93b7bb41d14fd1c5"
+    }
+  ],
+  "controls_group_count": 11,
+  "historical_receipts_byte_identical": true,
+  "prior_verification_command_issue": "An initial AST-only preparation check targeted AUDIT.md after a local variable was reused; code was unaffected. All three Python files subsequently passed AST checks; 11 controls passed before and in these receipts. No native execution resulted.",
+  "files": {
+    "research/hull-combined-completion/plan.json": "f4a8c159348b3e601e75991cfcc9433c6288dcb293bd7fe7550ba4b57721a2d0",
+    "research/hull-combined-completion/runner.py": "90a484b4b8b8bcd87c7ecd82c4f5123dfb6b3b2df22fa3140b8a6a97154c6a2a",
+    "research/hull-combined-completion/README.md": "df52eedef541747a8e6799c9acb2d48ca47b0115e798c6fd49465c3ac8c68403",
+    "research/hull-combined-completion/auditor_checks.py": "e83a6be7e575e76f66c1f7a84b34ff0ba17dde8e065ded764079d05ef32e52da",
+    "research/audit_hull_combined_completion.py": "2a0a6e7e20d6974a3a1445e691019f2b1749b25932d861b649e1fa416d13be72",
+    "research/hull-combined-completion/AUDIT.md": "9729e5700930b2aca9d618d1bed7a2a71642d67513ca51e908b6c93d339877f8"
+  }
+}

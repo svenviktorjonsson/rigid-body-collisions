@@ -1,0 +1,22 @@
+{
+  "returncode": 0,
+  "seconds_descriptive_only": 0.00732625400996767,
+  "command": [
+    "/workspace/rigid-body-collisions/research/new-combined-contact-review/run-20261005T194211Z/replay_baseline",
+    "/workspace/rigid-body-collisions/research/hull-completion/results/rejections/fast_shake8_hulls42/reference_0.json",
+    "4096"
+  ],
+  "accepted": true,
+  "external": {
+    "accepted": true,
+    "projection_m_s": 1.0735088488216964e-17,
+    "circle_violation_scaled_m_s": 0.0,
+    "sticking_m_s": 0.0,
+    "support_gap_J": 0.0,
+    "passive_bound_J": -0.00023251004383264596,
+    "passivity_scale": 1.0004650200876652,
+    "finite": true,
+    "bounds": true,
+    "native_response_max_discrepancy": 6.288372600415926e-18
+  }
+}

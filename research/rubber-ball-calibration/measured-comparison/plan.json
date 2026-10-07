@@ -1,0 +1,11 @@
+{
+  "scope": "Native rigid-model adequacy diagnostic against Cross2010 Superball/granite summary; no independent material prediction claimed",
+  "source": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+  "normal_restitution": 0.78,
+  "normal_restitution_provenance": "same comparison experiment; prescribed, not independently predicted",
+  "friction_hypotheses": [0, 0.05, 0.1, 0.2, 0.4, 0.9, 1.5],
+  "friction_independent_measurement": null,
+  "preserve_all_results": true,
+  "success_criterion": "Report model spin/restitution errors and missing inputs; do not select a fitted friction or declare independent validation",
+  "production_solver": "coupled; nonzero restitution supported; Coulomb solver remains zero-restitution only"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "native-combined-six-study-launch-v1",
+  "pid": 80917,
+  "execution_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "started_utc": "2026-10-05T19:40:09Z",
+  "command": [
+    "python",
+    "/workspace/rigid-body-collisions/research/hull-combined-completion/runner.py",
+    "--source-commit",
+    "bca35c3103a78c731b37ea8a467e5fc71d13e8aa"
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "binary_sha256": "89c990c922b03bf8a8f865333518a434d0b335f0703cbc5db35b9c97a95d0a4e",
+  "detached_orchestrator_count": 1
+}

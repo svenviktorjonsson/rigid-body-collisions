@@ -1,0 +1,331 @@
+{
+  "capture": "research/shared-hull-rank-followup/results/rejections/fast_shake8_hulls42/reference_2.json",
+  "sha256": "e40accfff18e5020ca1abb8305dbac22e744c501647e87fd8a056e8b44a66505",
+  "method": "trf",
+  "continuation_steps": 40,
+  "elapsed_s": 0.3727870450093178,
+  "final_residual": 1.1886035578334796e-12,
+  "passive_change_bound_J": -0.6351133500144851,
+  "passivity_scale": 1.6930185220815792,
+  "history": [
+    {
+      "alpha": 0.0,
+      "residual": 3.199062570577215e-16,
+      "nfev": 4,
+      "optimality": 3.2832513726826454e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.025,
+      "residual": 1.7974245485200653e-16,
+      "nfev": 4,
+      "optimality": 1.1644728060135993e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.05,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 1.169026598408218e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.07500000000000001,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 5.16960452344361e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.1,
+      "residual": 1.2294778512495708e-16,
+      "nfev": 4,
+      "optimality": 1.0889502574530823e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.125,
+      "residual": 1.2294778512495708e-16,
+      "nfev": 4,
+      "optimality": 8.067928389251079e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.15000000000000002,
+      "residual": 1.2294778512495708e-16,
+      "nfev": 4,
+      "optimality": 7.723523541121625e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.17500000000000002,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 6.942933046398248e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.2,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 1.1649215909232533e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.225,
+      "residual": 1.844216776874356e-16,
+      "nfev": 4,
+      "optimality": 1.6555348749529553e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.25,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 9.292306598828417e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.275,
+      "residual": 1.844216776874356e-16,
+      "nfev": 4,
+      "optimality": 1.6180628518633044e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.30000000000000004,
+      "residual": 1.844216776874356e-16,
+      "nfev": 4,
+      "optimality": 1.2862396565347112e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.325,
+      "residual": 6.147389256247854e-17,
+      "nfev": 4,
+      "optimality": 7.045009714450216e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.35000000000000003,
+      "residual": 2.533901064434023e-16,
+      "nfev": 4,
+      "optimality": 1.6508363683928277e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.375,
+      "residual": 8.987122742600326e-17,
+      "nfev": 4,
+      "optimality": 7.432721594513228e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.4,
+      "residual": 8.987122742600326e-17,
+      "nfev": 4,
+      "optimality": 9.077063545722244e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.42500000000000004,
+      "residual": 2.533901064434023e-16,
+      "nfev": 4,
+      "optimality": 1.6506012885045043e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.45,
+      "residual": 2.533901064434023e-16,
+      "nfev": 4,
+      "optimality": 2.200456982894363e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.47500000000000003,
+      "residual": 1.7974245485200653e-16,
+      "nfev": 4,
+      "optimality": 1.3745661104087265e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.5,
+      "residual": 1.2294778512495708e-16,
+      "nfev": 4,
+      "optimality": 1.4650485957137636e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.525,
+      "residual": 2.533901064434023e-16,
+      "nfev": 4,
+      "optimality": 8.2422502121013895e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.55,
+      "residual": 2.533901064434023e-16,
+      "nfev": 4,
+      "optimality": 2.260908830344212e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.5750000000000001,
+      "residual": 8.987122742600326e-17,
+      "nfev": 4,
+      "optimality": 7.64403523568952e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.6000000000000001,
+      "residual": 6.147389256247854e-17,
+      "nfev": 4,
+      "optimality": 1.1652539396765247e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.625,
+      "residual": 1.7147289093859553e-16,
+      "nfev": 4,
+      "optimality": 1.8306849808935415e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.65,
+      "residual": 1.2669505322170115e-16,
+      "nfev": 4,
+      "optimality": 1.3892055239032009e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.675,
+      "residual": 1.1148253796335819e-16,
+      "nfev": 4,
+      "optimality": 1.0121356585652802e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.7000000000000001,
+      "residual": 1.212496439723422e-16,
+      "nfev": 4,
+      "optimality": 1.2678246797949444e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.7250000000000001,
+      "residual": 3.073694628123927e-16,
+      "nfev": 4,
+      "optimality": 1.8267875769254686e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.75,
+      "residual": 1.7974245485200653e-16,
+      "nfev": 4,
+      "optimality": 2.3847562075214697e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.775,
+      "residual": 2.4589557024991416e-16,
+      "nfev": 4,
+      "optimality": 1.6212239333218239e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8,
+      "residual": 6.147389256247854e-17,
+      "nfev": 4,
+      "optimality": 3.798705510794205e-16,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8250000000000001,
+      "residual": 3.073694628123927e-16,
+      "nfev": 4,
+      "optimality": 2.930631428346701e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.8500000000000001,
+      "residual": 3.073694628123927e-16,
+      "nfev": 4,
+      "optimality": 2.610435477176652e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.875,
+      "residual": 1.212496439723422e-16,
+      "nfev": 4,
+      "optimality": 1.2181323033141081e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9,
+      "residual": 1.7974245485200653e-16,
+      "nfev": 5,
+      "optimality": 2.3935982806903807e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.925,
+      "residual": 1.1885447433659067e-12,
+      "nfev": 10,
+      "optimality": 2.864591799840154e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9500000000000001,
+      "residual": 1.1886035578334796e-12,
+      "nfev": 9,
+      "optimality": 2.668982942633612e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 0.9750000000000001,
+      "residual": 1.188472619695647e-12,
+      "nfev": 10,
+      "optimality": 4.454682767819014e-15,
+      "message": "`gtol` termination condition is satisfied."
+    },
+    {
+      "alpha": 1.0,
+      "residual": 1.1886035578334796e-12,
+      "nfev": 9,
+      "optimality": 2.292261180581404e-15,
+      "message": "`gtol` termination condition is satisfied."
+    }
+  ],
+  "p": [
+    0.0037383685617883764,
+    -1.0641297650431718e-19,
+    0.0026137596900087296,
+    0.06805654278282622,
+    -1.5013490762344686e-20,
+    -6.659773434164732e-20,
+    0.22421545429624093,
+    -2.2203324105111297e-29,
+    0.12625203550827765,
+    -1.2152803899221984e-19,
+    0.0014839940092700825,
+    -0.00018391764747662925,
+    6.076401959034381e-20,
+    6.076401953704479e-20,
+    1.162165663523834e-05,
+    -0.0009438604629906382,
+    0.018395771330799976,
+    0.020027635646722334,
+    -5.4695220887900825e-21,
+    7.806584584514319e-20,
+    7.63844567149471e-21,
+    1.0314737569349202e-19,
+    0.06008842382877291,
+    0.04503070114254593,
+    1.1974523292836203e-29,
+    -2.2862047233433842e-36,
+    -0.05023961704215747,
+    0.005129631044695713,
+    3.733809166716685e-60,
+    -1.2446030555722283e-60
+  ]
+}

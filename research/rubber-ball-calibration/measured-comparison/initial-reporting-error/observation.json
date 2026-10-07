@@ -1,0 +1,17 @@
+{
+  "source": "https://physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+  "table": "I",
+  "diameter_m": 0.058,
+  "mass_kg": 0.103,
+  "incident_speed_m_s_approximate": 4.0,
+  "incident_angle_deg_to_vertical": 25,
+  "incident_angle_uncertainty_deg": 1,
+  "normal_restitution": 0.78,
+  "tangential_restitution": 0.49,
+  "normal_and_tangential_restitution_error": 0.01,
+  "outgoing_spin_factor_rad_per_m": 14.9,
+  "spin_factor_error_rad_per_m": 0.1,
+  "independently_measured_pair_friction": null,
+  "inertia_status": "homogeneous solid-sphere assumption; independent measurement absent",
+  "rigid_wall_status": "fixed-plane approximation to reported14kg granite block"
+}

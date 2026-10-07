@@ -1,0 +1,41 @@
+{
+  "source": "https://physics.usyd.edu.au/~cross/Gripslip.pdf",
+  "source_tables": [
+    "I",
+    "II"
+  ],
+  "case": "Superball on smooth finite-mass instrumented block",
+  "diameter_m": 0.046,
+  "mass_kg": 0.0464,
+  "inertia_kg_m2": 9.81824e-06,
+  "inertia_status": "author-tabulated homogeneous-sphere model",
+  "experimental_relative_errors_typical": [
+    0.02,
+    0.03
+  ],
+  "velocity_before_m_s": [
+    2.1762557148686086,
+    -1.5811423286667527
+  ],
+  "velocity_after_m_s": [
+    1.283990871772479,
+    1.4388395190867451
+  ],
+  "spin_before_rad_s": 0.0,
+  "spin_after_rad_s": 98.4,
+  "translation_before_J": 0.16787752,
+  "translation_after_J": 0.08627828791515517,
+  "rotation_before_J": 0.0,
+  "rotation_after_J": 0.0475328489472,
+  "ball_total_energy_change_J": -0.03406638313764482,
+  "bottom_velocity_before_m_s": 2.1762557148686086,
+  "bottom_velocity_after_lab_m_s": -0.9792091282275208,
+  "rigid_replay_qualified": false,
+  "cautions": [
+    "Velocity components reconstructed from rounded tabulated speed/angle/ratios.",
+    "Support block moves; include its kinetic energy and velocity for system-energy/contact comparisons.",
+    "Ball energy loss alone is not whole-system dissipation.",
+    "No unique sliding friction coefficient follows from a gripping impact.",
+    "This is an experimental observation, not an exact synthetic rigid-Coulomb oracle."
+  ]
+}

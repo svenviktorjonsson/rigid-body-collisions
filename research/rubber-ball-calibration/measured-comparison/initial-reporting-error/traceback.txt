@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/viktor/.cache/vkf-physics-continuation/research/rubber-ball-calibration/measured-comparison/run.py", line 47, in <module>
+    'predicted':predicted,'errors':{k:predicted[k]-observed[k] for k in predicted},
+                                                   ~~~~~~~~^^^
+KeyError: 'spin_factor_rad_per_m'

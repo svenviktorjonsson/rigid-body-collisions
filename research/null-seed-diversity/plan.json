@@ -1,0 +1,19 @@
+{
+  "source": "bc770939abddf8907b6eec28989dc2a5841968d9",
+  "inputs": {
+    "research/large-velocity-world/results/trial_0/rejection.json": "e64bc56ee52a71e4d4ba0da6229e073fc44fc4b50d7a0912b46868703f41a734",
+    "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json": "8f2e67edae40a1d9f925710df41482c853d8ac6d15dad7a5483925ff52b16e40"
+  },
+  "limits": {
+    "mobility_null_relative_singular_cutoff": 1e-12,
+    "maximum_targeted_contact_seeds_per_failed_component": 16,
+    "methods": [
+      "lm",
+      "trf"
+    ],
+    "raw_function_evaluations_per_method_seed": 4096,
+    "random_seed": 730142,
+    "random_null_seeds": 36
+  },
+  "scope": "Two unresolved saved276/423 systems. Warm plus at most16 exact contact-drop and36 deterministic numerical-nullspace cone-clipped seeds, LM/TRF4096 actual residual calls each. Seed relocation is search only; never applied to bodies. Same original equations, friction, absolute tolerance, finite/passivity/support/bounds and native production zero-budget gate. Record every decline. Instantaneous evidence only; no history or performance claim. All full component dimensions retained in output."
+}

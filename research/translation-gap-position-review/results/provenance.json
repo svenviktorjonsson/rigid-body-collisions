@@ -1,0 +1,41 @@
+{
+  "execution_source_commit": "c465f8556ae905f69908eb3fb1427db50737d244",
+  "source_hashes": {
+    "research/translation-gap-position-review/plan.json": "67edba700970e468a6efaad1fc7187f5011a9b580186883ab457bced0f0c05ff",
+    "research/translation-gap-position-review/runner.py": "375ddf5aa4201a5aa8923a5afcb7156b7f4a090959ae75324a39d16b946f9d95",
+    "research/translation-position-geometry-review/requery.cpp": "9c011710747592f26f55a6df326db930dabcf9d9897d5006039384648ffa4147"
+  },
+  "capture_sha256": "c26bc4e45377fdd7fa069b41f355065c6deed9d112de0fdb58fd26c173a3d617",
+  "geometry_sha256": "ee20bdc321693a9dc929b6bd2cde5ad16a8b06a1d18f1f1958ee1ff76c0fa775",
+  "compiler_command": [
+    "c++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-DBT_USE_DOUBLE_PRECISION",
+    "-I/workspace/rigid-body-collisions/build/bullet-inspect/src",
+    "-I/workspace/rigid-body-collisions/build/spatial/_deps/json-src/single_include",
+    "/workspace/rigid-body-collisions/research/translation-position-geometry-review/requery.cpp",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a",
+    "-o",
+    "/workspace/rigid-body-collisions/research/translation-gap-position-review/results/geometry_requery"
+  ],
+  "compiler_version": "c++ (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "binary_sha256": "d3578a493243e037260878c53240d3ed58780acb4b5ee22aa3920c324e0c29a0",
+  "runtime_library_hashes": {
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+  },
+  "static_library_hashes": {
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletDynamics/libBulletDynamics.a": "26ddff9934f9e556ec799630049fd0db4ce83cbaea218e56856e5f92f4efea50",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/BulletCollision/libBulletCollision.a": "8f031a26c6e41d99f026f77c363908ec861ddba67aace6542593c5e60c86542e",
+    "/workspace/rigid-body-collisions/build/spatial/_deps/bullet-build/src/LinearMath/libLinearMath.a": "e789039ab9f35559e4238f42dcd30f2b746c2732c508225fab5ce247458563b6"
+  },
+  "numpy_version": "2.3.5"
+}

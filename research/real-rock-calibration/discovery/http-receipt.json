@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://www.envidat.ch/api/3/action/package_show?id=induced-rockfall-dataset-chant-sura",
+    "status": 200,
+    "bytes": 13382
+  },
+  {
+    "url": "https://www.envidat.ch/api/3/action/package_show?id=tschamut2014",
+    "status": 200,
+    "bytes": 10923
+  },
+  {
+    "url": "https://www.envidat.ch/api/3/action/package_show?id=10-16904-envidat-174",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "url": "https://data.mendeley.com/public-api/datasets/55hr73zc4y/versions/1",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

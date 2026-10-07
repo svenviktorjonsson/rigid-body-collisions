@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "input": "research/large-velocity-world/results/trial_1/rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 2.2124621514669493e-09,
+      "max_abs_impulse": 0.0532512712672013,
+      "search_stages_audited": 17,
+      "world_qualified": false,
+      "performance_qualified": false
+    },
+    {
+      "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+      "original_gates_passed": false,
+      "original_residual_m_s": 1.2320806822837637e-07,
+      "max_abs_impulse": 0.18994719234544125,
+      "search_stages_audited": 17,
+      "world_qualified": false,
+      "performance_qualified": false
+    },
+    {
+      "input": "research/large-velocity-world/results/trial_0/rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 1.8392070815343328e-17,
+      "max_abs_impulse": 0.006739711550175586,
+      "search_stages_audited": 17,
+      "world_qualified": false,
+      "performance_qualified": false
+    },
+    {
+      "input": "research/rapid-friction/results-large-irregular/3d_hull_125/reference_0.rejection.json",
+      "original_gates_passed": true,
+      "original_residual_m_s": 1.4210447329402258e-15,
+      "max_abs_impulse": 1.727198590576696,
+      "search_stages_audited": 17,
+      "world_qualified": false,
+      "performance_qualified": false
+    }
+  ],
+  "scope": "Independent exact original-matrix final gates and retained search-only intermediate matrices. Actual native zero-budget outputs verified. No integrated recovery/world/performance claim."
+}

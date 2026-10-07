@@ -1,0 +1,1 @@
+{"elapsed_s":5.933009884000057,"exit_code":1,"rejected":"Normal-only position projection residual failed; repair initial overlap or refine timestep","rejection_dump":"rejections/fast_shake8_hulls42/reference_0.json","rejection_dump_status":"captured"}

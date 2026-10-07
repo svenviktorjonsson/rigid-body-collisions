@@ -1,0 +1,145 @@
+{
+  "cold": {
+    "3d_sphere": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 1.3432200762934819e-05,
+            "velocity_m_s": 0.0006260815775715621,
+            "omega_rad_s": 0.03183832736996508,
+            "orientation_rad": 0.0007451838626221403
+          }
+        },
+        {
+          "passed": true,
+          "errors": {
+            "position_m": 8.272134742668933e-06,
+            "velocity_m_s": 0.00045479990273736764,
+            "omega_rad_s": 0.014680736691355287,
+            "orientation_rad": 0.00033672483764362763
+          }
+        }
+      ],
+      "histories": 3
+    },
+    "3d_box": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.0422538324674859,
+            "velocity_m_s": 1.5605901326638512,
+            "omega_rad_s": 12.204610061025491,
+            "orientation_rad": 0.20513316364198836
+          }
+        },
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.05403568036528612,
+            "velocity_m_s": 2.370104166290859,
+            "omega_rad_s": 16.58182558500128,
+            "orientation_rad": 0.29763180248669263
+          }
+        }
+      ],
+      "histories": 3
+    },
+    "3d_hull": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": null
+        },
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.07101371423239516,
+            "velocity_m_s": 4.525589829218675,
+            "omega_rad_s": 79.26322944561085,
+            "orientation_rad": 1.422154164337587
+          }
+        }
+      ],
+      "histories": 2
+    }
+  },
+  "tight": {
+    "3d_sphere": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 1.3412970749060319e-05,
+            "velocity_m_s": 0.0006242475629432513,
+            "omega_rad_s": 0.03183800971902808,
+            "orientation_rad": 0.0007453502250033557
+          }
+        },
+        {
+          "passed": true,
+          "errors": {
+            "position_m": 5.491460129028167e-06,
+            "velocity_m_s": 0.00041145407020327045,
+            "omega_rad_s": 0.01069311684817129,
+            "orientation_rad": 0.00022736000912972182
+          }
+        }
+      ],
+      "histories": 3
+    },
+    "3d_box": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.0331892009156141,
+            "velocity_m_s": 1.7218617903784412,
+            "omega_rad_s": 14.710992026130361,
+            "orientation_rad": 0.2552655662359963
+          }
+        },
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.051755432817668624,
+            "velocity_m_s": 1.8448999021651158,
+            "omega_rad_s": 13.117445440174537,
+            "orientation_rad": 0.19423680554920636
+          }
+        }
+      ],
+      "histories": 3
+    },
+    "3d_hull": {
+      "qualified": false,
+      "edges": [
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.04879286756938403,
+            "velocity_m_s": 3.6792138070543454,
+            "omega_rad_s": 62.6587784953469,
+            "orientation_rad": 0.8552999355620217
+          }
+        },
+        {
+          "passed": false,
+          "errors": {
+            "position_m": 0.054605945325857067,
+            "velocity_m_s": 4.559246793138868,
+            "omega_rad_s": 71.73347208233663,
+            "orientation_rad": 0.9407180244773194
+          }
+        }
+      ],
+      "histories": 3
+    }
+  }
+}

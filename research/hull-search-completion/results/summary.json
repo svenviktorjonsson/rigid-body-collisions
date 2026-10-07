@@ -1,0 +1,271 @@
+{
+  "build_ready_attested": true,
+  "numerical_recovery": {
+    "status": "ROOT_APPROVED_FROZEN_NATIVE_CONFIG",
+    "enabled": true,
+    "stage": "after_all_existing_pipeline_failure",
+    "installed_helper": "spatial_backend/projection_more.h",
+    "wire_flag": null,
+    "default_enabled": true,
+    "numerical_model_key": "projection_tail_policy",
+    "approved_caps": {
+      "max_rows": 64,
+      "max_svd_calls": 2048,
+      "max_iteration_steps": 2048
+    },
+    "method": "original projection residual, analytic Jacobian, monotonically updated column scaling and bounded LAPACK trust search",
+    "final_gate": "original unmodified circular law projection residual, normal bounds and finite passivity at authored tolerance",
+    "build_ready": true,
+    "strategy": "full_system_projection_merit_v2",
+    "selection_note": "Root-selected v2 candidate frozen170d798b113863dc4bee3df515bb8ab63175ea21 accepted the captured42-row system at1283iterations/SVDs and residual7.60596893e-9. That is frozen-system evidence only, not a new full trajectory or qualification.",
+    "prior_endpoint_controls": "research/projection-tail-integration/live-validation/receipt.json: live23 original-law checks pass; prior22 response bytes including signed zero and original counters exact",
+    "preexecution_checks": {
+      "published_integration_source": true,
+      "native_build_ready": true,
+      "23_default_controls_and_22_endpoint_preservation": true
+    }
+  },
+  "execution_source_commit": "8c7065eb8219cb0735aa3e742aa82b99521a26c1",
+  "plan_sha256": "32610be253ab48f2d16f80a08e431206881d2cb592f4719b56ecc58a60de3f1c",
+  "binary_sha256": "2fc75ac7fcec3c429b86d67eb397046d59666b756a68654d5b2fdb05350000fc",
+  "source_hashes": {
+    "research/audit_hull_active_completion.py": "cf352db58c186589baef9e8aabf9f586d919d24a2e4b178024cf26beac03adfb",
+    "research/audit_hull_search_completion.py": "52cd13c5afdc3195f80f2c6581a028c4e389e3b412e9c5612e0cfa326cf7be30",
+    "research/audit_shared_hulls.py": "614e531c0717a883f95df15b46c580816b53f4af0680588f621759bd417ff9e9",
+    "research/hull-search-completion/README.md": "b13e3e97efe0c9640fc0f4a47c044cfbebd860944d36f9adfbd4f952520a4e84",
+    "research/hull-search-completion/auditor_checks.py": "8d5b392cdb184182bd5dd811cb706f8222e3b02124b27690e3f34bc43387e0a4",
+    "research/hull-search-completion/plan.json": "32610be253ab48f2d16f80a08e431206881d2cb592f4719b56ecc58a60de3f1c",
+    "research/hull-search-completion/runner.py": "a58ff96f47ac69422485bcf6295be3904b79c4e4725d2b3e46960b07c6fa073d",
+    "research/spatial_metrics.py": "1e9f162e62e7bf2bd11d585833c7246886b6cceaa01e515008d210525e473277",
+    "research/spatial_scenes.py": "6b8e371995c9504d70ef3a6fb0c6c2a94dfc1cdf3dfe67a26c585495f5c72c47",
+    "spatial_backend/CMakeLists.txt": "1b747273ea09823f5f9990b4c250c998db4847e9a6da76fc50d61d5bcf787db8",
+    "spatial_backend/active_contact_checks.cpp": "ee5adacad3a9eac6a7fd979c386891e95c626408e83daf96a73e368d37e2265f",
+    "spatial_backend/coulomb.h": "a8f8d84b7778a71446d6638c31485ba7bf64b8cfdf0af8b358afbef19fde70e5",
+    "spatial_backend/coulomb_active.h": "5d16832503a4c8b0ff95ed50f569297f988e16df7fc5d1214977b2b9c1b7ce3b",
+    "spatial_backend/coulomb_active_trust.h": "1c23c18c3d7415e35e50955853f66565cb5ffd45338521bb1a3e3e619ab1c791",
+    "spatial_backend/coulomb_early_checks.cpp": "9345a07f94883101ca93a6b95e5988eaa1939cbb0d935686876e7b60b9f9a50f",
+    "spatial_backend/coulomb_fb_direct.h": "cf279a598ff05f167752ccc00b7211f3e373b20c6a2a19a5a07ce2428a3c8f66",
+    "spatial_backend/coulomb_homotopy_guide.h": "f02e4789837b36c3e0159588d01ea94ad80ed38248e375e453a99eda0f2e7913",
+    "spatial_backend/coulomb_more.h": "8c3ff2c5724a889c037c48cf4a9fd0f1bd26017d2cba2e2673b2b563d5f2fff4",
+    "spatial_backend/coulomb_neutral.h": "0c339b381a3535f12e306b1f1c0f849067ebe181c6aa4a2c4424b1c983bf3f6e",
+    "spatial_backend/coulomb_polish.h": "1c18a133d3752b573860864369a828ada4d8944bf01ecdc72859203605514b00",
+    "spatial_backend/coulomb_replay.cpp": "8879ba6be304b90844c14d7a1b3bb0b652f323da06002e82114c5b0d44022881",
+    "spatial_backend/coulomb_restart.h": "c39a718bc8b18658a3c24f03feea3fe9d859f9df75767bc4417d05d6517716fe",
+    "spatial_backend/coulomb_restart_checks.cpp": "03a6c623592fc0ab1d8d48f91cf985cb6d80d4e74343442d71c74600225e629f",
+    "spatial_backend/coulomb_trust.h": "a01e21558151fedf1bff3d0a88da9cef0df2b28552b170cd006eed3625459409",
+    "spatial_backend/friction_checks.cpp": "e95f38048aaa57931620a8fba7441c55065769edb6f80af5339ceae00a046f94",
+    "spatial_backend/newton_linear.h": "f3ef2c2f02372853a093dafa0c4b545d8aba82bba39fcdc9b0b3a8266c4914d2",
+    "spatial_backend/normal_null.h": "dc8a7bcd46cdf803a68ef70aa4fff60dcc1baf1d32b303030424e7c886c7bcaa",
+    "spatial_backend/normal_null_checks.cpp": "0c7b357664f89bf91f8e83a2d189435c1b2847f6ba723a8388ab268f34390384",
+    "spatial_backend/normal_qp.h": "1e1c90a45af391d6ec1747a0f6677327f416f2c76c8d120ef76ace7e134bac63",
+    "spatial_backend/position_geometry.h": "d9fe7f403a4354d63529f123ae502d13c42bcde6100809be9bc7843df12f36dc",
+    "spatial_backend/pressure_release.h": "a37dc8eb99c01864ac769c6f7ed7628cf368601e96950c71fbef1544101a2aa8",
+    "spatial_backend/projection_more.h": "784773028b2c5c7312adb4bc5b6d1d1fdd21f8b23a29a58b5596446bc5e4d895",
+    "spatial_backend/projection_tail_checks.cpp": "c6841481b13b5f6b4ed48cfef485c070926bea0b1bf0a311492785ec50b47012",
+    "spatial_backend/qp_checks.cpp": "1b52fc661a9998d6aee24f335b56edb92236161c8a2baa43795c7b1a13923bbb",
+    "spatial_backend/restart_validate.h": "c0777ecc773a03530f9b00efa42c4694cb068bd7414081ab8a6a227b2d2c7f77",
+    "spatial_backend/runner.cpp": "a47e4eb2f272d5ccf69fa713df11ee3a718ca86b7110b50642e385be828d5af2",
+    "spatial_backend/shared_contact.h": "4419b0a432c14bb120a40775e566cd67a81fbb1b1f26c8df228844495dd6d44a",
+    "spatial_backend/shared_contact_checks.cpp": "c37e21eb206bbde951a63934d81d7aa4cabe5de247f0c36272034b19ac7391d5",
+    "spatial_backend/spectral_more.h": "cbe3103d80cb85876c62d44f790c7aeb4c09730ac389491e36c57641245694a7",
+    "spatial_backend/support_restart.h": "ff092bc6aab39b159a72db3b395fcbbf327ed1ba22832c5f4697a3fe0d50a988",
+    "spatial_backend/support_restart_checks.cpp": "33c27c31812f8d94be55771c1b45829a00f68a815ce8eeadd970e9880045998e",
+    "spatial_backend/translation_combined.h": "42f1408561f156a5edd5ada01e68f95e19893281b97ecb825ec767c24f3c9fbd",
+    "spatial_backend/translation_combined_checks.cpp": "eb060fd993aff9c71e27427a5b6db9196a9f06669bfc915a319ff6165dcd875a",
+    "spatial_backend/translation_split.h": "d5fec76446519e9d225ebf7432e79462c2cbfd8ebab9020759b37a93231b8282",
+    "spatial_backend/translation_split_checks.cpp": "6dbb4249fddda9d25b48d703408c249e170813db3cd43e0c3746d915a09c20c5",
+    "spatial_engine.py": "e7be1fd4afb5ac8379156e43ef271e2f691b5fce5629f553d122df4f1606f495",
+    "spatial_fidelity.py": "06dd9207e316f3801d6c008a7781cc0edb11c2522d456ae756d8fdd484f08b78"
+  },
+  "runtime_library_hashes": {
+    "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1": "3037aa528bd93990919f3f1b3d2a42e56bd1ff24ff7fb837ffe4eb604c25e1f0",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+    "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1": "4be5ab222fc4061b5d7ceac873a91b2b7e7d6a8e5506b30f45f8196082aae340",
+    "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0": "67faab0feef3cc4b20d98daffda4de59f6816ab565b044da096487f4075fccdf",
+    "/usr/lib/x86_64-linux-gnu/libmvec.so.1": "2f2e7f4ad88e1b13f2f8345c826b25f85ba61c93527d91e59dd0d2943eac6e80",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+  },
+  "workload_note": "Sequential physics driver on Ubuntu host; other workspace CPU workloads may run; timings descriptive",
+  "baseline_artifact_hashes": {
+    "research/hull-translation-completion/plan.json": "2d921b75a62190f84e02c2e3caaaebd511660e012819ad97bdbc4cac81c595c3",
+    "research/hull-translation-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-translation-completion/results/traces.zip": "576bbb9112854614f75e4c7070a08f062d3d964bd0f6c8841a4513c61fb6ce7f",
+    "research/hull-translation-completion/results/execution-source.zip": "2b2de09cc434c8a4c97c6a5a12ddf07cba96267f3320d436d9a86cb8a35ab4c9",
+    "research/hull-gap-completion/results/summary.json": "1c2cfd56d73f6ca6014c0f799b088a81863207762b3549544a77bd608717109d",
+    "research/hull-gap-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-gap-completion/results/traces.zip": "af7d694e3546e8c83ac598fabe40487c3a9c56e8aecd879e83e8b7a68f012800",
+    "research/hull-gap-completion/results/execution-source.zip": "d3341eddf5809e5d5e61eb619e8de4bc17eef79c43367de58ee382fe9e6ed028",
+    "research/hull-gap-completion/plan.json": "950ef5bb27e4c5464150bbcd237c09054c1e8a1dbdac1c2023641f4948ded737",
+    "research/hull-combined-completion/results/summary.json": "e406f75eb169a1754f6e4baaa1ac5a38bb080945e08ab23579825e6bb0738482",
+    "research/hull-combined-completion/results/scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "research/hull-combined-completion/results/traces.zip": "09d41a8f01423ac379b3028502dc705cb583b5a2d2ea127be75fc528aff67442",
+    "research/hull-combined-completion/results/execution-source.zip": "f311b0b3e752f1e25ae3958fe0b9803c31c446126f215ab3a677b8df4f4515d0",
+    "research/hull-combined-completion/plan.json": "f4a8c159348b3e601e75991cfcc9433c6288dcb293bd7fe7550ba4b57721a2d0"
+  },
+  "declared_numerical_change": {
+    "bounded_projection_merit_tail": {
+      "baseline": false,
+      "candidate": true
+    }
+  },
+  "preceding_protocol_source_commit": "bca35c3103a78c731b37ea8a467e5fc71d13e8aa",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "attempt_count": 6,
+  "planned_attempt_count": 6,
+  "complete": true,
+  "interruption_count": 0,
+  "history_count": 3,
+  "scenes": {
+    "fast_shake8_hulls42": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": true,
+        "reference_1": false,
+        "reference_2": true
+      },
+      "diagnostics": {
+        "reference_0": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8108.77125159454,
+          "max_contact_penetration_m": 0.0009987015221859935,
+          "max_closing_contact_speed_m_s": 0.04248748578117017,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 7.342605097404586e-05,
+          "container_surface_excess_m": 0.0009987015221858964
+        },
+        "reference_2": {
+          "quaternion_norm_error": 1.1102230246251565e-16,
+          "energy_change_minus_boundary_work_J": -8137.768486773201,
+          "max_contact_penetration_m": 9.125172521909364e-05,
+          "max_closing_contact_speed_m_s": 0.010724516102766224,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 7.044476224571383e-09,
+          "container_surface_excess_m": 9.125172521906588e-05
+        }
+      },
+      "candidates": {},
+      "choice": null
+    },
+    "fast_rotate_shake27_hulls7301": {
+      "reference_qualified": false,
+      "reference": "reference_2",
+      "edges": [
+        {
+          "left": "reference_0",
+          "right": "reference_1",
+          "passed": false,
+          "error": null
+        },
+        {
+          "left": "reference_1",
+          "right": "reference_2",
+          "passed": false,
+          "error": null
+        }
+      ],
+      "physical_eligible": {
+        "reference_0": false,
+        "reference_1": false,
+        "reference_2": true
+      },
+      "diagnostics": {
+        "reference_2": {
+          "quaternion_norm_error": 2.220446049250313e-16,
+          "energy_change_minus_boundary_work_J": -28042.027412545645,
+          "max_contact_penetration_m": 0.0007695523653321603,
+          "max_closing_contact_speed_m_s": 0.023678203787120575,
+          "coupled_fallbacks": 0,
+          "sampled_container_surface_excess_m": 9.335678737454334e-06,
+          "container_surface_excess_m": 9.172496950982101e-05
+        }
+      },
+      "candidates": {},
+      "choice": null
+    }
+  },
+  "rejection_diagnostics": {
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "rejections/fast_shake8_hulls42/reference_1.json",
+      "sha256": "12605e74ceb81a841f8e3e56911f9280e64f46d4f7cbb201b21198ce61e0b2dd",
+      "phase": "velocity",
+      "rows": 36,
+      "residual_m_s": 1.8884891044489275e-05,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_0.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "bc111425179fb46c42b4659d68b9ff8b7d7ac3ce44618f5d5510243cd2e8c14c",
+      "phase": "velocity",
+      "rows": 225,
+      "residual_m_s": 0.00010520230518361064,
+      "tolerance_m_s": 1e-08
+    },
+    "fast_rotate_shake27_hulls7301/reference_1.json": {
+      "path": "rejections/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "087593a42b391eb286a1428ec0a043b851c3739d76e47eddda23a1ac8592380c",
+      "phase": "velocity",
+      "rows": 243,
+      "residual_m_s": 8.170959203077996e-07,
+      "tolerance_m_s": 1e-08
+    }
+  },
+  "changed_discretization": "Retain all three bca numerical policies and physical contact equations. A root-selected verified bounded numerical search may run only after ALL existing recovery methods decline, preserving earlier accepted endpoints; original residual, normal bounds, finite passivity and original-law acceptance remain authoritative. Exact strategy, helper, caps and native metadata are pending.",
+  "accuracy_scope": "Only complete lanes passing original physical gates and BOTH quarter-trajectory edges qualify; solver gates alone confer no accuracy",
+  "interpretation": "Prior three numerical policies retained; added declared bounded post-failure numerical-search tail; no law/gate relaxation, candidate-cost trials, causal attribution or speed ranking",
+  "native_ledger_receipts": {
+    "fast_shake8_hulls42/reference_0.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_0.json",
+      "sha256": "946a3cb5fa0e332e0283c0740a09a87ca12871060794c24c132badc98266acc1"
+    },
+    "fast_shake8_hulls42/reference_1.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_1.json",
+      "sha256": "18a00248b7ee2eebb943c34d6dab4fbbd2af8176cc6202ba3218f9444e077582"
+    },
+    "fast_shake8_hulls42/reference_2.json": {
+      "path": "ledgers/fast_shake8_hulls42/reference_2.json",
+      "sha256": "58f1d80f44c53bed066a842ee90ecf97133a08c836ef86ba478c9173acd44845"
+    },
+    "fast_rotate_shake27_hulls7301/reference_0.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_0.json",
+      "sha256": "3dc098a68071c97e8b4cca00ec2db44d160760aa0673d496f83ad21314ebaa68"
+    },
+    "fast_rotate_shake27_hulls7301/reference_1.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_1.json",
+      "sha256": "b5139e859c9defa0070f47837c0a8d85750858429f2c1f8bd61f9cbbd51c0c51"
+    },
+    "fast_rotate_shake27_hulls7301/reference_2.json": {
+      "path": "ledgers/fast_rotate_shake27_hulls7301/reference_2.json",
+      "sha256": "3c1deb04eee863db519b92cbe71ec476a3431cdfa36cad09fe361a5bc551e50d"
+    }
+  },
+  "hashes": {
+    "scenes.json": "b3ad1a4311062c744b7a8ccd667cac03f7eebe228aaf617d827b3f76a2c82510",
+    "traces.zip": "c34460e554d8103374f76bc978e9060dfaed2d42f506584f5d173008e8030b99",
+    "execution-source.zip": "a3ed903c69955f197992acd403c1c18601b2d962e3c41399367d34020753831f"
+  }
+}

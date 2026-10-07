@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-07",
+  "downloaded_primary_sources": [
+    {
+      "name": "rolling1999",
+      "source_url": "https://arxiv.org/pdf/cond-mat/0203343",
+      "byte_count": 79304,
+      "sha256": "a0b43fe7209671dbc0995e6f77a46177f1d57b30c03031f4279e1211e2b9b49a",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    },
+    {
+      "name": "viscoelastic2008",
+      "source_url": "https://arxiv.org/pdf/0708.1434",
+      "byte_count": 323150,
+      "sha256": "6f23829d93351d7139fba1bb7f4ec3b8e0c3aa4b8fdfa23c438826497c206e3b",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    },
+    {
+      "name": "cross2002",
+      "source_url": "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/21.%20GripSlip.PDF",
+      "byte_count": 172032,
+      "sha256": "177b899e812558c1936baab1ef2b87d89422fd7bfa482979c0cfd634fcf38988",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    },
+    {
+      "name": "cross2010compliance",
+      "source_url": "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/47.%20MoreSpin.pdf",
+      "byte_count": 335068,
+      "sha256": "cc058df6e5e123b29dae39010e3dbe68de3e6f3fb1f279b80329b5c73c15d991",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    },
+    {
+      "name": "becker2007",
+      "source_url": "https://arxiv.org/pdf/0708.3401v1",
+      "byte_count": 1326922,
+      "sha256": "ae9f89b9cbcba928772fadc241d1f522e56d1e855e2cdd93977e79b7e2984a8e",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    },
+    {
+      "name": "ray2015",
+      "source_url": "https://arxiv.org/pdf/1502.07728v2",
+      "byte_count": 1254080,
+      "sha256": "7d51beeb3036fe3458981c34c877d43b72ce1707844e015d9fb6265ab4977458",
+      "accessed": "2026-10-07",
+      "third_party_pdf_committed": false
+    }
+  ],
+  "additional_primary_sources_and_inferences": {
+    "pressure_field": {
+      "source": "https://arxiv.org/abs/1904.11433",
+      "reviewed_full_pdf": "https://arxiv.org/pdf/1904.11433v2",
+      "finding": "Precomputed pressure fields and contact-surface traction integration supply net forces/moments for nominally rigid shapes. Does not resolve wave dynamics of shells. Comparator, not run or adopted."
+    },
+    "hydroelastic_implementation": {
+      "source": "https://drake.mit.edu/doxygen_cxx/group__hydroelastic__user__guide.html",
+      "finding": "Official implementation reference; material/pressure modulus and resolution require characterization. No Drake run or empirical claim in this checkpoint."
+    },
+    "reduced_plastic": {
+      "sources": [
+        "https://arxiv.org/abs/2309.07300",
+        "https://arxiv.org/abs/2309.07317"
+      ],
+      "finding": "Mechanically derived elastic-perfectly-plastic contact histories; brittle concrete/rock crushing and missing facet attitude are not validated by adopting a plastic powder model."
+    },
+    "rock_damage": {
+      "source": "https://nhess.copernicus.org/articles/18/3045/2018/",
+      "figure_source": "https://nhess.copernicus.org/articles/18/3045/2018/nhess-18-3045-2018-f12.pdf",
+      "finding": "Sections2.2/5.1 document damage and proposed indentation/rim and rapid secondary-contact explanation. Photograph dimensions are not matched to collision rows."
+    },
+    "tangential_unloading": {
+      "source": "https://docs.lammps.org/pair_granular.html",
+      "finding": "Compare force-based Mindlin unloading history; naive variable-stiffness/displacement rescaling can misaccount energy. No general shear branch added."
+    }
+  },
+  "new_mechanics_priority_claimed": false
+}

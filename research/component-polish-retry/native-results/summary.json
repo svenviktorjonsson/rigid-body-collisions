@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "guards_unchanged": true,
+  "records": [
+    {
+      "input": "research/large-mobility-world/results/hull64_h10us/rejection.json",
+      "accepted": true,
+      "exit": 0,
+      "independent": {
+        "accepted": true,
+        "projection_m_s": 1.5308397123703538e-12,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 1.6115578981164006e-13,
+        "support_gap_J": 3.737853172235125e-16,
+        "passive_bound_J": -0.032082397879391614,
+        "passivity_scale": 1.03215821862592,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 1.4210854715202004e-14
+      },
+      "policy": {
+        "iteration_cap_per_component": 256,
+        "iteration_steps": 256,
+        "polish_steps": 46,
+        "polish_svd_cap_per_component": 256,
+        "search_row_cap": 192,
+        "svd_calls": 55
+      },
+      "elapsed_s_descriptive": 0.04019695700117154
+    },
+    {
+      "input": "research/large-velocity-cap192-world/results/trial_0/rejection.json",
+      "accepted": false,
+      "exit": 2,
+      "independent": {
+        "accepted": false,
+        "projection_m_s": 1.2320806822837637e-07,
+        "circle_violation_scaled_m_s": 0.0,
+        "sticking_m_s": 2.8920086012591364e-08,
+        "support_gap_J": 1.6418948721054571e-09,
+        "passive_bound_J": -0.1541385057434588,
+        "passivity_scale": 1.2219553436749169,
+        "finite": true,
+        "bounds": true,
+        "native_response_max_discrepancy": 2.2737367544323206e-13
+      },
+      "policy": {
+        "iteration_cap_per_component": 256,
+        "iteration_steps": 256,
+        "polish_steps": 256,
+        "polish_svd_cap_per_component": 256,
+        "search_row_cap": 192,
+        "svd_calls": 256
+      },
+      "elapsed_s_descriptive": 0.11354702999960864
+    }
+  ],
+  "scope": "Instantaneous native research comparator only; all original gates, no world/performance qualification."
+}
