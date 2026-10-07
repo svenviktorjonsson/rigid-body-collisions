@@ -1,0 +1,35 @@
+{
+  "glass_worksheet": {
+    "source_url": "https://grainflowresearch.mae.cornell.edu/impact/data/Results-3mmglass-binary",
+    "http_status": 200,
+    "byte_count": 106948,
+    "sha256": "e137cdc0033f534939b1326f672421fc5a8a565db6193a5266578b178ba1ba14"
+  },
+  "cross2010": {
+    "source_url": "https://www.physics.usyd.edu.au/~cross/PUBLICATIONS/48.%20EnhanceBounce.pdf",
+    "http_status": 200,
+    "byte_count": 630918,
+    "sha256": "f3fb9dfc7375009c3fa96a9add9962f122d175f0b55986dacc14fce9908e5967"
+  },
+  "tennis2008": {
+    "source_url": "https://arxiv.org/pdf/0809.4823v2",
+    "http_status": 200,
+    "byte_count": 193838,
+    "sha256": "cf133e2ca8474747230f38fd7163059c6d0fc871a4ecffb1fe5e4fe63169438d"
+  },
+  "rock_supplement": {
+    "source_url": "https://nhess.copernicus.org/articles/18/3045/2018/nhess-18-3045-2018-supplement.zip",
+    "http_status": 200,
+    "byte_count": 78953,
+    "sha256": "8b94d34eb18b9aa70af1134bd74cb1e7436a1f57d7894172fddea417f7b702d0",
+    "xlsx_sha256": {
+      "data set of nhess-2018-108.xlsx": "328d727800aba8a00f1ec6c6ef46b85f440f0bad9335c395d88727ca1963e77f"
+    }
+  },
+  "verification": {
+    "glass_worksheet_matches_calculated_source": true,
+    "tennis_pdf_matches_digitized_source": true,
+    "rock_xlsx_matches_calculated_source": true,
+    "checked_on": "2026-10-07"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "pass_": true,
+  "source_hashes_pass": true,
+  "source_snapshots_pass": true,
+  "ball_direct_momentum_and_energy_pass_count": 8,
+  "nonorthogonal_t_reconstruction_pass": true,
+  "leave_one_surface_out_direct_spin_fit_separation_pass": true,
+  "ball_inputs_include_outcome_derived_restitution": true,
+  "fixed_author_tennis_curves_were_fitted_to_same_measurements": true,
+  "tennis_data_and_split_pass_count": 17,
+  "collision_records": 107,
+  "rolling_points": 17,
+  "rolling_mechanics": {
+    "case_count": 200,
+    "length_scales_per_case": 3,
+    "pass_count": 200,
+    "errors": {
+      "relative_motion_error": 1.0985324800805384e-15,
+      "relative_energy_error": 9.154745365111795e-16,
+      "relative_scale_error": 1.0298538508392088e-15
+    },
+    "independent_planar_balance_pass": true,
+    "zero_rolling_torque_preserves_motion": true,
+    "insufficient_static_capacity_rejected": true,
+    "scope": "Synthetic isolated rolling controls, not empirical collision or native group validation"
+  },
+  "scientific_scope_labels_pass": true,
+  "full_engine_empirical_validation_claimed": false
+}

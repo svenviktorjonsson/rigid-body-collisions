@@ -1,5 +1,13 @@
 # Model fidelity audit — 6 October 2026
 
+## Latest continuation — 7 October 2026
+
+The user now permits small fits for missing material/contact parameters while documented inputs stay fixed. That supersedes the previous blanket prohibition on fitting. The user also asks to encapsulate deformation in rigid-body contact features rather than deformable meshes for every body.
+
+The active article derives the projection of conventional material constraints into the user's full-velocity n/t map, without changing t. Scalar directional p_n is not the entire physical normal transfer when t contains normal approach. Rolling resistance uses the physical normal transfer and physical moment length, normalized separately by ell. A new small contact-memory elastic branch includes the independent angular impulse and exact midpoint energy accounting; it passes isolated 2D/3D controls but does not implement opening/friction/yield transitions or authentic material calibration.
+
+The full experimental report is `../full-experimental-report/report.pdf`, with 107 collision records and 17 rolling measurements, all limitations and row tables. It does not validate the complete directional production model. Target-supplied restitution, reconstructed spin and fitted spherical rock proxies remain distinct from independent prediction. A shared signed-moment fit worsens the ball comparison; its failure is retained. No full experimental agreement is claimed.
+
 The user identified a substantive mismatch: existing force-only contact calculations and their comparisons do not validate the requested directional force-and-angular-impulse model. Their results are retained as historical comparator evidence. Correct mechanics identities do not imply the correct constitutive model.
 
 ## Confirmed requirements

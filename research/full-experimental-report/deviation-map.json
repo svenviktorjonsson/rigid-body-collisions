@@ -1,0 +1,229 @@
+{
+  "points": [
+    {
+      "label": "Glass row 2",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 3.357610212804564,
+      "signature_size_error_percent": 2.5926465887530448
+    },
+    {
+      "label": "Glass row 13",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 3.3980252155844197,
+      "signature_size_error_percent": -2.3380904111321876
+    },
+    {
+      "label": "Glass row 24",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5806613811213737,
+      "signature_size_error_percent": 0.07281830767460473
+    },
+    {
+      "label": "Glass row 35",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.8716968461592098,
+      "signature_size_error_percent": 3.4440365210459456
+    },
+    {
+      "label": "Glass row 46",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 3.0815928489870466,
+      "signature_size_error_percent": -0.08769154911176802
+    },
+    {
+      "label": "Glass row 57",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5250051541359415,
+      "signature_size_error_percent": -1.341906765289591
+    },
+    {
+      "label": "Glass row 68",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 2.8698788679570404,
+      "signature_size_error_percent": -5.312582068172633
+    },
+    {
+      "label": "Glass row 79",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.4852993909441808,
+      "signature_size_error_percent": 0.6603826910253519
+    },
+    {
+      "label": "Glass row 90",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.49075348650911266,
+      "signature_size_error_percent": -0.9189359464841451
+    },
+    {
+      "label": "Glass row 101",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 2.361862100576639,
+      "signature_size_error_percent": -0.32043683831861625
+    },
+    {
+      "label": "Glass row 112",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.8216144361922942,
+      "signature_size_error_percent": -4.451048843134242
+    },
+    {
+      "label": "Glass row 123",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.8882269069253491,
+      "signature_size_error_percent": 4.3699032654807235
+    },
+    {
+      "label": "Glass row 134",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.6312520966195139,
+      "signature_size_error_percent": 1.4927448870155846
+    },
+    {
+      "label": "Glass row 145",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.001690212521103004,
+      "signature_size_error_percent": 1.5904827968888702
+    },
+    {
+      "label": "Glass row 156",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5946910250223506,
+      "signature_size_error_percent": 1.251798162063622
+    },
+    {
+      "label": "Glass row 167",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.1279575030990569,
+      "signature_size_error_percent": -4.698185116876474
+    },
+    {
+      "label": "Glass row 178",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5937979781021285,
+      "signature_size_error_percent": 2.456299919933236
+    },
+    {
+      "label": "Glass row 189",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.853568663737846,
+      "signature_size_error_percent": -3.578551422141485
+    },
+    {
+      "label": "Glass row 200",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5490744987434589,
+      "signature_size_error_percent": 0.8954469976177437
+    },
+    {
+      "label": "Glass row 211",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.5350278262315789,
+      "signature_size_error_percent": -3.332512721490999
+    },
+    {
+      "label": "Glass row 222",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.18165393904228366,
+      "signature_size_error_percent": 0.05390555730675484
+    },
+    {
+      "label": "Glass row 233",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.7409469982149112,
+      "signature_size_error_percent": -1.5516517240412253
+    },
+    {
+      "label": "Glass row 244",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.4087892184581191,
+      "signature_size_error_percent": -2.6169860372293963
+    },
+    {
+      "label": "Glass row 255",
+      "group": "Glass: fixed inputs, no free couple",
+      "color": "#2467b3",
+      "signature_angle_error_deg": 0.176169332692025,
+      "signature_size_error_percent": 0.25495468949845446
+    },
+    {
+      "label": "golf / granite",
+      "group": "Golf: held-out moment hypothesis",
+      "color": "#478447",
+      "signature_angle_error_deg": 0.8162378994392053,
+      "signature_size_error_percent": 0.809636917776313
+    },
+    {
+      "label": "golf / rubber",
+      "group": "Golf: held-out moment hypothesis",
+      "color": "#478447",
+      "signature_angle_error_deg": 2.8957343844386347,
+      "signature_size_error_percent": 4.580548007128082
+    },
+    {
+      "label": "golf / superball_disk",
+      "group": "Golf: held-out moment hypothesis",
+      "color": "#478447",
+      "signature_angle_error_deg": 2.3332711786883777,
+      "signature_size_error_percent": -2.8115618323359626
+    },
+    {
+      "label": "golf / tennis_strings",
+      "group": "Golf: held-out moment hypothesis",
+      "color": "#478447",
+      "signature_angle_error_deg": 0.887734102772911,
+      "signature_size_error_percent": -0.8392988731119266
+    },
+    {
+      "label": "superball / granite",
+      "group": "Superball: held-out moment hypothesis",
+      "color": "#d47912",
+      "signature_angle_error_deg": 2.280826692754977,
+      "signature_size_error_percent": 2.712320291182735
+    },
+    {
+      "label": "superball / rubber",
+      "group": "Superball: held-out moment hypothesis",
+      "color": "#d47912",
+      "signature_angle_error_deg": 1.0108732335057262,
+      "signature_size_error_percent": 1.1905868322719115
+    },
+    {
+      "label": "superball / superball_disk",
+      "group": "Superball: held-out moment hypothesis",
+      "color": "#d47912",
+      "signature_angle_error_deg": 4.711234622022431,
+      "signature_size_error_percent": -5.810704401390554
+    },
+    {
+      "label": "superball / tennis_strings",
+      "group": "Superball: held-out moment hypothesis",
+      "color": "#d47912",
+      "signature_angle_error_deg": 1.708229349162308,
+      "signature_size_error_percent": 1.5080405140729392
+    }
+  ],
+  "definition": "Glass signature: abs(normal velocity), abs(COM tangent velocity). Ball signature: abs(normal velocity), abs(COM tangent velocity), R*abs(spin); normal/tangent values use source restitution. Angle is not a spatial direction; no pooled accuracy score across signatures. Rocks excluded because this map is not validation of actual rock geometry."
+}

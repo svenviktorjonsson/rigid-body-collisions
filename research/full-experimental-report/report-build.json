@@ -1,0 +1,8 @@
+{
+  "authoritative_evidence": "evidence-v3",
+  "sections": 19,
+  "independent_audit_pass": true,
+  "collision_records": 107,
+  "rolling_points": 17,
+  "model_reproduces_all_experiments": false
+}

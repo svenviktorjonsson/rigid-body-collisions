@@ -240,13 +240,13 @@ At force level let $f_n\ge0$ be compressive normal load and $f_t$ the scalar sli
 \end{align}
 In the second branch $\hat{\mathbf t}$ points along current slip, so the force opposes it. At zero slip the direction is undefined and the reaction is determined by the static constraint; it is not automatically a saturated force. For conventional Coulomb material data, the source's surface-slip direction must be identified consistently with the model's $\hat{\mathbf t}$. A relative velocity containing normal approach is not automatically the tangential slip used to measure a friction coefficient. This compatibility is part of recovering the exact original directional law, not permission to replace the supplied direction definition.
 
-With frozen normal and sliding directions, constant coefficients and a single static or sliding branch throughout the interval, the corresponding impulse relations are
+For a tangential $\hat{\mathbf t}$, frozen directions, constant coefficients and a single static or sliding branch throughout the interval, the corresponding impulse relations are
 \begin{align}
 \delta p_n&\ge0,\\
 \text{static capacity:}\quad &|\delta p_t|\le\mu_s\delta p_n,\\
 \text{continued sliding:}\quad &\delta p_t+\mu_d\delta p_n=0.
 \end{align}
-These equations use the scalar impulses directly. A sticking trial is computed from the coupled mobility and the required no-slip constraint, then checked against static capacity. A contact already sliding uses $\mu_d$ until slip arrests; only then is the static branch reassessed. Testing static capacity does not justify applying $\mu_s$ as the friction magnitude throughout a sliding collision.
+These equations use the scalar impulses directly. They apply when $\hat{\mathbf t}$ is tangent; if the supplied full-contact-velocity direction contains normal approach, use the projection calculation below. A sticking trial is computed from the coupled mobility and the required no-slip constraint, then checked against static capacity. A contact already sliding uses $\mu_d$ until slip arrests; only then is the static branch reassessed. Testing static capacity does not justify applying $\mu_s$ as the friction magnitude throughout a sliding collision.
 
 In the component matrix calculation, the static capacity and frozen continued-sliding equality become
 \begin{equation}
@@ -263,13 +263,32 @@ This is an accumulated vector contribution; $\delta p_t$ remains a scalar. If di
 
 The coefficients also enter a finite-patch traction model before its angular impulse is integrated. Translational capacity alone does not determine $\delta L_s$ or $\delta L_n$: patch geometry and the original angular law must establish those moments. The coordinate length $\ell$ cannot substitute for a physical contact-patch size.
 
+\subsection{Material constraints in a nonorthogonal direction map}
+Keeping the supplied full-contact-velocity direction does not require relabeling source material data. Let $c=\hat{\mathbf n}^{\mathsf T}\hat{\mathbf t}$ and $Q=\id-\hat{\mathbf n}\hat{\mathbf n}^{\mathsf T}$. The physical normal transfer and surface-parallel transfer are
+\begin{equation}
+ \hat{\mathbf n}^{\mathsf T}\delta\mathbf p=\delta p_n+c\delta p_t,\qquad
+ Q\delta\mathbf p=\delta p_t Q\hat{\mathbf t},\qquad
+ \|Q\delta\mathbf p\|=\sqrt{1-c^2}\,|\delta p_t|.
+\end{equation}
+Consequently a frozen single-branch Coulomb capacity expressed in these components is
+\begin{equation}
+ \sqrt{1-c^2}\,|\delta p_t|\le\mu_s\,\hat{\mathbf n}^{\mathsf T}\delta\mathbf p,
+ \qquad\hat{\mathbf n}^{\mathsf T}\delta\mathbf p\ge0.
+\end{equation}
+For continued slip along $Q\hat{\mathbf t}$ the dynamic row becomes
+\begin{equation}
+ \begin{bmatrix}\mu_d&\sqrt{1-c^2}+\mu_dc&0&0\end{bmatrix}
+ \boldsymbol\lambda=0.
+\end{equation}
+At $c=0$ this reduces to the earlier row. At $|c|=1$ there is no surface slip and the linear columns are dependent. The source's tangential restitution can be tested on $Q\mathbf u$, while its normal restitution concerns $\hat{\mathbf n}^{\mathsf T}\mathbf u$. These are observable projections, not a redefinition of $\hat{\mathbf t}$ or an added linear impulse direction. This transformation establishes coefficient compatibility for the declared frozen branch; an evolving contact still requires its history and onset law.
+
 \subsection{Rolling resistance and its physical length}
 Zero tangential contact slip does not imply zero angular velocity. A rolling sphere can therefore need an independent angular impulse even while its sliding dissipation vanishes. Static friction may still supply the reaction that maintains rolling. For a declared rolling mode use dimensionless $\mu_r$ and a physical moment length $a_r$:
 \begin{equation}
- |\delta L_s|\le\mu_r a_r\delta p_n,\qquad
- |\delta L_s/\ell|\le\mu_r\frac{a_r}{\ell}\delta p_n.
+ |\delta L_s|\le\mu_r a_r\hat{\mathbf n}^{\mathsf T}\delta\mathbf p,\qquad
+ |\delta L_s/\ell|\le\mu_r\frac{a_r}{\ell}\hat{\mathbf n}^{\mathsf T}\delta\mathbf p.
 \end{equation}
-The second expression normalizes the angular impulse into the combined momentum units. Changing the representation length $\ell$ must not change the physical moment length $a_r$. Some sources instead report the dimensional product $\mu_r a_r$; its units and convention must be recorded. Published microsphere experiments explicitly distinguish radius-based and contact-radius-based rolling coefficients\cite{fuchsrolling}.
+The second expression normalizes the angular impulse into the combined momentum units. The normal transfer is $\delta p_n$ when $\hat{\mathbf t}$ is tangent. Changing the representation length $\ell$ must not change the physical moment length $a_r$. Some sources instead report the dimensional product $\mu_r a_r$; its units and convention must be recorded. Published microsphere experiments explicitly distinguish radius-based and contact-radius-based rolling coefficients\cite{fuchsrolling}.
 
 For a fixed rolling direction $\hat{\mathbf s}$ perpendicular to $\hat{\mathbf n}$, a saturated dissipative branch has $\delta L_s\le0$ when $\hat{\mathbf s}$ follows the incoming rotation. Integrate only until rolling stops; continuing a saturated resistance through zero would spuriously reverse the motion. This is a declared resistance law, not an angular restitution law. Rotation around the normal is torsion and requires its separately specified normal moment response. A rolling coefficient does not supply that response. General mixed rolling and torsion still requires the original component closure.
 
@@ -383,6 +402,30 @@ The contact and body impulses are
 \Delta L_{\rm body}=\rw{\mathbf{r}}\,\delta \mathbf{p}+\delta L.
 \end{equation}
 The pair map, mobility and energy identities retain the same matrix forms with these planar block dimensions. Planar angular velocity and angular impulse are signed scalars. A three-dimensional normal-angular channel is restricted to the permitted planar rotation axis; it must not be inserted as an extra independent planar degree of freedom. Any component unavailable under that geometric restriction is omitted rather than independently solved.
+
+\section{Contact-local deformation with rigid bodies}
+Local elastic deformation can be represented by contact history without a deformable mesh for each body. Keep the body mass and inertia maps, and add a small accumulated displacement vector $\boldsymbol\eta$ conjugate to the component motion $\mathbf z$. Its angular entries use $\ell$ times angular displacement. A positive stiffness matrix $K$ and nonnegative damping matrix $C$ represent one declared elastic branch; material values remain separate inputs. Its potential is $U=\tfrac12\boldsymbol\eta^{\mathsf T}K\boldsymbol\eta$.
+
+For a frozen configuration, fixed directions and time interval $h$, define
+\begin{equation}
+ Z=\tfrac12h^2K+hC,\qquad
+ \mathbf z_m=\tfrac12\mathbf z^-+\tfrac12\mathbf z^+.
+\end{equation}
+An implicit-midpoint elastic update is a small matrix solve:
+\begin{align}
+ [W_d+2Z^{-1}]\boldsymbol\lambda&=-2\mathbf z^- -2Z^{-1}hK\boldsymbol\eta^-,\\
+ \mathbf z^+&=\mathbf z^-+W_d\boldsymbol\lambda,\\
+ \boldsymbol\eta^+&=\boldsymbol\eta^-+h\mathbf z_m.
+\end{align}
+It integrates both the linear and independent angular impulse components. On this branch the energy balance is
+\begin{equation}
+ \boxed{\Delta E+\Delta U+h\mathbf z_m^{\mathsf T}C\mathbf z_m=0}.
+\end{equation}
+The compliance term makes the small solve well posed even when allowed direction columns are dependent. It does not resolve which redundant components a physical yielding law should use. Cache the factor only while the geometry, directions, interval and material matrices stay fixed.
+
+This is an elastic sticking or bilateral branch, not a complete collision law. Opening, frictional yield, plasticity and evolving history frames require their own consistent transitions. Retained spring energy must become residual internal vibration or explicit dissipation at opening; it cannot be silently deleted. If a finite-duration model already resolves the collision, do not add another endpoint restitution impulse. Calibrate its damping and compliance against documented restitution and independent force or vibration data, and test outgoing states separately.
+
+For rocks, a local indentation or yield-history variable can represent contact crushing without changing the rigid body mesh. A pressure- or strain-scaled correction can be investigated while documented static and dynamic friction stay fixed. Unnormalized powers of impulse do not define a portable material property: mass, size and the accumulation interval matter. A small correction is adopted only if physically admissible and better on held-out data. This symbolic feature does not claim an already validated rock deformation law.
 
 \section{Simultaneous contacts and efficient evaluation}
 For many bodies, stack their combined velocities and block-diagonal masses. For each oriented contact, put each signed body block $\sigma_k B_k$ in its appropriate columns. Stack the allowed component maps into $\mathcal D$. Define

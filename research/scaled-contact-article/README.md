@@ -1,3 +1,5 @@
+Latest 7 October update: added material-capacity projection in the unchanged full-relative-velocity direction map, and a small contact-memory elastic matrix that encapsulates local deformation with rigid bodies. The separate [experimental report](../full-experimental-report/report.pdf) contains all current comparisons, failed fits and physical qualification limits. It does not claim full experimental agreement or a native rolling/deformation implementation.
+
 Latest update: dimensionless rolling friction mu_r is paired with physical moment length a_r; the coordinate length ell only normalizes it. Sustained rolling has an independent torque and a coupled static reaction. Missing coefficients may now be estimated in a small, explicitly labeled calibration while documented values stay fixed. New experimental recalculations belong in the separate experimental report; historical figures below remain inactive.
 
 # Symbolic article rewrite — 6 October 2026
