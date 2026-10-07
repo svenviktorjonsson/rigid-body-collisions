@@ -24,7 +24,8 @@ Freeze the current `contact_history.py` before editing. Retain its midpoint
 spring/slider law, separate static/dynamic capacities, exact singleton intervals,
 opening-energy ledger and final finite/passivity checks. Improve only numerical
 work: prepare the at-most-27 active sets and small factors once; optionally try a
-caller-owned previous active set before exhaustive search. Current geometry,+mobility and capacities remain authoritative; hints cannot bypass KKT checks.
+caller-owned previous active set before exhaustive search. Current geometry,
+mobility and capacities remain authoritative; hints cannot bypass KKT checks.
 
 Compare frozen and candidate results on seeded one/two/three-mode cases, changing
 loads/capacities, reversals, zero capacities, opening/recontact, coupled positive
@@ -39,6 +40,21 @@ preparation separately; disclose that these are Python local updates, not full
 world steps. Benchmark both no-hint and coherent caller-hint execution, mixed
 sliding directions and sizes 100/1,000/10,000. No universal 2x gate is reinstated.
 Retain regressions as well as gains.
+
+First numerical audit: 1,500 seeded cases agree with the frozen implementation
+to 6.67e-16 scaled error. The initial SLSQP oracle stopped with a 2.72e-6 impulse
+error on one scaled quadratic; its failure is retained in `history-v1.stderr`.
+The independent check now transforms the SPD quadratic into bounded least
+squares and uses SciPy BVLS, explicitly eliminating zero-capacity coordinates.
+It does not start from the candidate result or relax the mechanics gates.
+
+The first candidate and `run-v2` are preserved. Optional previous-face hints
+sometimes add overhead, especially when all signs reverse or cold enumeration
+already starts at the right face. Before the final run, add a second numerical
+guess from the current unconstrained solution. Validate it with the same KKT
+conditions; if both hints fail, keep the complete original exhaustive search.
+Extend the final benchmark with coherent upper-bound and mixed-sign cases, while
+retaining every original scenario and count. No material inputs change.
 
 ## Next structural experiment
 

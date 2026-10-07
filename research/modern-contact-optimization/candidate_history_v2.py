@@ -113,22 +113,15 @@ class ContactHistory:
             # 2 means fixed zero capacity; no sign condition is meaningful on
             # a singleton feasible interval. Other statuses are lower/free/upper.
             zero=tuple(bool(cap==0) for cap in cd)
-            # Current unconstrained direction is often a better predictor than
-            # yesterday's active set after a reversal. It is only a trial face;
-            # coupled corrections must still satisfy every current KKT condition.
-            predicted=tuple(2 if zero[i] else (-1 if j[i]<-cd[i] else (1 if j[i]>cd[i] else 0)) for i in range(self.n))
             hint=None
             if active_set is not None:
                 hint=tuple(2 if zero[i] else (0 if s==2 else s) for i,s in enumerate(active_set))
                 j=self._candidate(self._sets[hint],b,cd)
                 if j is not None:accepted_set=hint
             else:j=None
-            if j is None and predicted!=hint:
-                j=self._candidate(self._sets[predicted],b,cd)
-                if j is not None:accepted_set=predicted
             if j is None:
                 for entry in self._sets_by_zero[zero]:
-                    if entry[0]==hint or entry[0]==predicted:continue
+                    if entry[0]==hint:continue
                     j=self._candidate(entry,b,cd)
                     if j is not None:accepted_set=entry[0];break
             if j is None:raise RuntimeError('No admissible spring/slider active set; no fallback')

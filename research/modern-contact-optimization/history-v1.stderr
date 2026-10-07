@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/viktor/.cache/vkf-physics-continuation/research/modern-contact-optimization/history_experiment.py", line 105, in <module>
+    receipt['verification']=verification()
+                            ~~~~~~~~~~~~^^
+  File "/home/viktor/.cache/vkf-physics-continuation/research/modern-contact-optimization/history_experiment.py", line 56, in verification
+    np.testing.assert_allclose(result.x,candidate.impulse,rtol=2e-5,atol=2e-6)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/viktor/.cache/vkf-physics-venv/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         verbose=verbose, header=header, equal_nan=equal_nan,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         strict=strict)
+                         ^^^^^^^^^^^^^^
+  File "/home/viktor/.cache/vkf-physics-venv/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=2e-05, atol=2e-06
+
+Mismatched elements: 1 / 2 (50%)
+Mismatch at index:
+ [1]: -0.010727844307969884 (ACTUAL), -0.010730567596069851 (DESIRED)
+Max absolute difference among violations: 2.7232881e-06
+Max relative difference among violations: 0.00025379
+ ACTUAL: array([ 0.      , -0.010728])
+ DESIRED: array([ 0.      , -0.010731])
