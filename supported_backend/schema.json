@@ -143,5 +143,6 @@
   "body_failure": "first failing body index; discard entire output",
   "ownership": "caller-owned disjoint synchronous buffers; no retained pointers",
   "scope": "independent supported scalar-inertia sphere/disk; constant normal load/drive; no impact restitution, detection, contact groups or experimental history update",
-  "source_header": "supported_backend/batch.h"
+  "source_header": "supported_backend/batch.h",
+  "output_direction_semantics": "Signed integrals along fixed declared translation/rolling/normal axes; not coefficients on changing motion-defined t/s. Resolve branch directions before vector accumulation; no final-direction relabeling."
 }

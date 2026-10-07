@@ -80,10 +80,14 @@ No material value or restitution coefficient is fitted or changed.
 \textbf{Impulse identity.} Independent angular impulse remains separate from the
 linear-impulse lever moment. The scalar branch satisfies
 \[
-I(\omega^+-\omega^-)=-R\,\delta p_t+\delta L.
+\Delta\boldsymbol L=\mathord{\boldsymbol r\mkern2mu\wedge}\,\delta\boldsymbol p+
+\delta\boldsymbol L.
 \]
 The output rolling moment channel is a physical independent impulse, not a
 replacement for the lever term or a new definition of the full spin direction.
+Native scalar outputs are signed fixed-axis integrals. They are not automatically
+coefficients on a changing motion-defined t/s basis: apply each branch direction
+before accumulating vectors, rather than multiplying by an endpoint direction.
 The user's full contact-relative $\hat{\boldsymbol t}$ and full angular
 $\hat{\boldsymbol s}$ remain binding in allowed spatial embeddings. Their
 general static/partial-arrest closure is still unresolved.

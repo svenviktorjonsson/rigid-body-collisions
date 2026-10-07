@@ -70,7 +70,7 @@ written responses. There is no fallback contact law or partially accepted batch.
 | 1 | outgoing rolling speed | rad/s |
 | 2 | outgoing axial spin | rad/s |
 | 3 | traveled displacement | m |
-| 4 | contact tangential impulse δpt | N s |
+| 4 | contact impulse along declared translation axis | N s |
 | 5 | independent rolling angular impulse | N m s |
 | 6 | independent axial angular impulse | N m s |
 | 7 | sliding loss | J |
@@ -78,11 +78,17 @@ written responses. There is no fallback contact law or partially accepted batch.
 | 9 | axial spin loss | J |
 | 10 | energy/work residual | J |
 
+These scalar planar channels are signed integrals on fixed declared axes, not
+the coefficients on the user's changing motion-defined directions. In particular,
+offset 4 is not automatically δpt: on a nonzero-slip branch its contribution
+along t has the slip-direction sign applied. Static reactions have no defined t.
+Apply the branch directions before accumulating physical vectors; do not multiply
+an integrated fixed-axis output by a final t or s to recover its physical impulse.
 These scalar planar channels are not a redefinition of full motion directions.
 In an allowed spatial embedding, resolve **t** from the full contact-relative
 velocity and **s** from full relative angular velocity. The body angular transfer
 includes the lever moment **plus** the independent impulse: in the scalar branch,
-`I*(omega_after-omega_before) = -R*delta_p_t + independent_rolling_impulse`.
+`I*(omega_after-omega_before) = -R*output[4] + output[5]` on the declared rolling axis.
 Normal support impulse is `N*duration`; it is balanced by external support load
 and is not an inferred normal-impact restitution impulse.
 
