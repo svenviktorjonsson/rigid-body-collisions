@@ -65,12 +65,16 @@ def benchmark(sizes,scenarios):
     rows=[]
     for n in (1,2,3):
         for scenario in scenarios:
+            if scenario=='coupled_face' and n==1:continue
             G=np.eye(n)*1.5+np.ones((n,n))*.2;K=np.linspace(200.,1000.,n);h=.02
+            if scenario=='coupled_face':
+                G=np.eye(n);G[:2,:2]=[[1.,.8],[.8,1.]];K[:]=4.;h=1.
             start=time.perf_counter();old=frozen.ContactHistory(G,K,h);old_prep=time.perf_counter()-start
             start=time.perf_counter();new=ContactHistory(G,K,h);new_prep=time.perf_counter()-start
             cd=np.full(n,.002);cs=cd*1.5
             if scenario=='stick':cd[:]=cs[:]=100
             u=np.arange(1,n+1,dtype=float)*2;eta=np.zeros(n)
+            if scenario=='coupled_face':cd[:]=.1;cs[:]=.15;u[:]=.05;u[:2]=[1.,.1]
             if scenario=='coherent_upper':u=-u
             if scenario=='coherent_mixed':u[::2]*=-1
             hint=new.step(u,eta,cs,cd).active_set
@@ -103,8 +107,8 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--candidate',type=Path,default=ROOT/'contact_history.py')
     parser.add_argument('--sizes',type=int,nargs='+',default=[100,1000,10000])
-    parser.add_argument('--scenarios',nargs='+',choices=['stick','coherent_slide','reversing_slide','coherent_upper','coherent_mixed'],
-                        default=['stick','coherent_slide','reversing_slide','coherent_upper','coherent_mixed'])
+    parser.add_argument('--scenarios',nargs='+',choices=['stick','coherent_slide','reversing_slide','coherent_upper','coherent_mixed','coupled_face'],
+                        default=['stick','coherent_slide','reversing_slide','coherent_upper','coherent_mixed','coupled_face'])
     args=parser.parse_args()
     args.candidate=args.candidate.resolve()
     if args.candidate!=ROOT/'contact_history.py':

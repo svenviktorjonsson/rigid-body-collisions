@@ -56,6 +56,14 @@ conditions; if both hints fail, keep the complete original exhaustive search.
 Extend the final benchmark with coherent upper-bound and mixed-sign cases, while
 retaining every original scenario and count. No material inputs change.
 
+Declare an additional `coupled_face` case before its timing: a two-mode coupled
+matrix whose unconstrained solution predicts lower/upper bounds, but whose
+constrained solution is lower/free. The three-mode variant adds an independent
+free mode. This specifically tests when a valid previous-face hint is useful
+even after current-solution prediction is added. Run it separately after the
+five-scenario `run-v3`; no one-mode coupling case is fabricated. The explicit
+fallback regression already checks the exact impulse [-0.1, -0.06].
+
 ## Next structural experiment
 
 Prepare a dimension-independent contact schedule from flat body indices and an
