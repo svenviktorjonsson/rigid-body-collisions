@@ -1,0 +1,8 @@
+{
+  "candidate_sha256": "a6ef57181841f341d2a63a4116f0a39abc128f4cce1bab541bd90842bde53b3e",
+  "seed": 20261007,
+  "cases": 100,
+  "static_threshold_branch_flips": 9,
+  "largest_motion_difference": 6.515213614520816,
+  "status": "FAIL; original exact static branch must be preserved"
+}

@@ -1,9 +1,28 @@
 import unittest
+import importlib.util
+from pathlib import Path
+import sys
 import numpy as np
 from contact_history import ContactHistory
 
 
 class ContactHistoryWarmStartTests(unittest.TestCase):
+    def test_exact_static_threshold_and_neighbor_floats_keep_original_branch(self):
+        source=Path(__file__).resolve().parents[1]/'research/modern-contact-optimization/frozen_contact_history.py'
+        spec=importlib.util.spec_from_file_location('threshold_reference',source)
+        reference=importlib.util.module_from_spec(spec);sys.modules[spec.name]=reference;spec.loader.exec_module(reference)
+        rng=np.random.default_rng(20261007)
+        for _ in range(100):
+            R=rng.normal(size=(3,3));G=R@R.T;K=10**rng.uniform(0,4,3);h=.01
+            u=rng.normal(size=3);eta=rng.normal(size=3)*.02
+            old=reference.ContactHistory(G,K,h);new=ContactHistory(G,K,h)
+            required=old._solve(np.arange(3),-(h*u+2*eta))
+            for cs in [np.abs(required),np.nextafter(np.abs(required),0.),np.nextafter(np.abs(required),np.inf)]:
+                cd=cs*.1;a=old.step(u,eta,cs,cd);b=new.step(u,eta,cs,cd,active_set=(1,1,1))
+                self.assertEqual(a.sliding,b.sliding)
+                np.testing.assert_allclose(a.motion,b.motion,atol=1e-11,rtol=1e-11)
+                if not a.sliding:np.testing.assert_array_equal(a.impulse,b.impulse)
+
     def test_changing_loads_reversals_and_zero_capacities_revalidate_hint(self):
         law=ContactHistory([[2.,.7,.1],[.7,1.,-.2],[.1,-.2,1.]],[1000.,200.,500.],.02)
         hint=(1,1,1)

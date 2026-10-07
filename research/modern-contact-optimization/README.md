@@ -64,6 +64,17 @@ even after current-solution prediction is added. Run it separately after the
 five-scenario `run-v3`; no one-mode coupling case is fabricated. The explicit
 fallback regression already checks the exact impulse [-0.1, -0.06].
 
+An additional exact-static-limit audit invalidated the first fast candidate:
+9 of 100 cases changed static/dynamic branches solely from triangular-solve
+roundoff, with up to 6.52 difference in a modal motion. Its source and failed
+audit are retained. The correction uses the original full unconstrained solve
+for every static-capacity decision. Specialized triangular substitution remains
+only inside the continuous constrained-face problem after yielding. No static
+limit is expanded by a tolerance and no material parameter is changed. Static
+steps return no dynamic-face hint. The final audit includes exact limits and
+both adjacent representable limits; final timings must use this corrected code.
+Runs v2/v3/v4 are preliminary evidence, not qualified current performance.
+
 ## Next structural experiment
 
 Prepare a dimension-independent contact schedule from flat body indices and an

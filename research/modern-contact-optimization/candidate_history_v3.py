@@ -57,7 +57,6 @@ class ContactHistory:
                 self.factors[tuple(free)]=factor
                 self._triangles[tuple(free)]=tuple(float(factor[i,j]) for i in range(len(free)) for j in range(i+1))
         self._all_modes=np.arange(self.n)
-        self._full_factor=self.factors[tuple(self._all_modes)]
         self._sets={};self._sets_by_zero={}
         for zero in itertools.product([False,True],repeat=self.n):
             entries=[]
@@ -107,14 +106,9 @@ class ContactHistory:
             # kinetic energy without a body/mode coupling law.
             return HistoryResult(u.copy(),np.zeros(self.n),np.zeros(self.n),False,0.,0.,initial,0.)
         b=self.h*u+2*eta
-        # Static/dynamic switching is discontinuous when their capacities
-        # differ. Keep the original unbounded trial arithmetic, even at an
-        # exact Float64 threshold. Faster triangular substitutions are confined
-        # to the continuous constrained-face solve after this decision.
-        factor=self._full_factor
-        j=np.linalg.solve(factor.T,np.linalg.solve(factor,-b))
+        j=self._solve(self._all_modes,-b)
         sticking=bool(np.all(np.abs(j)<=cs))
-        accepted_set=None # No dynamic-face hint is useful in the static branch.
+        accepted_set=tuple(0 for _ in range(self.n))
         if not sticking:
             # 2 means fixed zero capacity; no sign condition is meaningful on
             # a singleton feasible interval. Other statuses are lower/free/upper.

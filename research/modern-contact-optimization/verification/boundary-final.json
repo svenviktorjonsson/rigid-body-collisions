@@ -1,0 +1,9 @@
+{
+  "seed": 20261007,
+  "cases": 300,
+  "branch_flips": 0,
+  "largest_motion_difference": 0.0,
+  "max_scaled_physical_difference": 0.0,
+  "candidate_sha256": "4fc4ce17ef231364caa60f4633e49871a6913465bf52c21cd4cf7a8568c3646f",
+  "status": "PASS"
+}
