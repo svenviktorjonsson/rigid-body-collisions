@@ -50,8 +50,23 @@ at a contact. For a desired pair coefficient mu between identical bodies set eac
 body coefficient to sqrt(mu); a wall coefficient one retains the object's value.
 One friction coefficient supports sticking and sliding; separate static/dynamic,
 rolling/twisting and elastic tangential history are **not implemented here**.
-Nonzero rolling/twisting fields, explicit mass/inertia overrides and per-fixture
-material fields are rejected so authored physics cannot be silently ignored.
+Nonzero rolling/twisting fields and per-fixture material fields are rejected so
+authored physics cannot be silently ignored. Measured mass properties are now
+supported explicitly through a body `mass_properties` object containing
+`mass_kg`, `center_of_mass_m` in authored body coordinates and
+`inertia_body_kg_m2`, a symmetric tensor about that COM in authored body axes.
+This replaces density-derived aggregate mass/COM/inertia while keeping collision
+geometry. Position remains the physical COM. Principal moments must be positive,
+obey the inertia triangle inequalities and fit a conservative shape-extent bound.
+Direct unqualified `mass`/`inertia` keys remain rejected to avoid ambiguous units.
+Measured properties pass through the existing native principal-axis/gyroscopic
+path; this input fix does not add native angular contact resistance.
+
+The separate public [supported-contact primitive](../supported_contact.py)
+implements distinct static/dynamic friction, rolling and axial-spin impulses
+with exact arrest events for a sphere/disk under constant supported load. It
+rejects normal impacts and noncollinear spatial states. It is an explicit
+sustained-contact path, not an automatic replacement of this backend's contacts.
 Restitution is a normal velocity rule with zero velocity threshold. Prescribed-wall
 work is summed from normal and tangential impulses, including positive-gap predictive contacts,
 at wall point velocities;

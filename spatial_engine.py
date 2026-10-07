@@ -4,7 +4,9 @@ Authored position is the physical COM. Shape coordinates are recentered to their
 aggregate COM; output orientation refers to authored body axes, not inertia axes.
 Friction is the upstream pyramid or the project circular Coulomb lane;
 coefficients use product mixing (upstream clamps pair friction to 10).
-Restitution also uses product mixing. No calibrated material/rolling law claimed.
+Restitution also uses product mixing. Explicit mass_properties can supply measured
+mass, body-frame COM and inertia instead of a uniform-density approximation.
+No calibrated material/rolling law claimed.
 """
 import hashlib
 from restitution import coefficients
@@ -104,6 +106,20 @@ def prepare(scene):
         com=first/mass; I=np.zeros((3,3))
         for _,m,c,J,_,_,_ in parts:
             d=c-com; I+=J+m*(np.dot(d,d)*np.eye(3)-np.outer(d,d))
+        if 'mass_properties' in authored:
+            properties=authored['mass_properties']
+            if not isinstance(properties,dict) or set(properties)!={'mass_kg','center_of_mass_m','inertia_body_kg_m2'}:
+                raise ValueError('mass_properties requires mass_kg, center_of_mass_m and inertia_body_kg_m2')
+            mass=positive(properties['mass_kg'],'measured mass')
+            com=vector(properties['center_of_mass_m'],3,'body-frame center of mass')
+            I=np.asarray(properties['inertia_body_kg_m2'],dtype=float)
+            if I.shape!=(3,3) or not np.isfinite(I).all():raise ValueError('Finite 3x3 inertia about the specified COM required')
+            scale=np.max(np.abs(I))
+            if scale==0 or np.max(np.abs(I-I.T))>1e-12*scale:raise ValueError('Symmetric inertia about the specified COM required')
+            I=.5*(I+I.T)
+            principal=np.linalg.eigvalsh(I)
+            if principal[0]<=0 or principal[-1]>principal[:2].sum()+1e-12*principal.sum():
+                raise ValueError('Positive, physically realizable principal inertia moments required')
         values, Q = np.linalg.eigh(I)
         if np.linalg.det(Q)<0: Q[:,0]*=-1
         if np.min(values)<=0: raise ValueError('Positive definite inertia required')
@@ -118,6 +134,8 @@ def prepare(scene):
             elif s['kind']=='box': tip=np.linalg.norm(s['half_extents'])
             else: tip=np.max(np.linalg.norm(np.asarray(s['vertices']),axis=1))
             radius=max(radius,np.linalg.norm(local)+tip)
+        if 'mass_properties' in authored and .5*np.trace(I)>mass*radius**2*(1+1e-12):
+            raise ValueError('Measured inertia exceeds the conservative shape-extent bound; check units and COM')
         velocity=vector(authored.get('velocity',[0,0,0]),3,'velocity')
         omega=vector(authored.get('omega',[0,0,0]),3,'omega')
         if kind=='static' and (np.any(velocity) or np.any(omega)):

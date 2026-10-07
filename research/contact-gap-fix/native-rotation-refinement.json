@@ -1,0 +1,26 @@
+{
+  "initial_64_step_gate_failed": true,
+  "bound": 1e-07,
+  "rows": [
+    {
+      "primary_steps": 32,
+      "angular_momentum_error_Nms": 6.588965724494395e-07,
+      "energy_drift_J": 6.822231318898142e-07
+    },
+    {
+      "primary_steps": 64,
+      "angular_momentum_error_Nms": 3.29466676277386e-07,
+      "energy_drift_J": 3.410727549418846e-07
+    },
+    {
+      "primary_steps": 128,
+      "angular_momentum_error_Nms": 1.647379341741763e-07,
+      "energy_drift_J": 1.7052667145023293e-07
+    },
+    {
+      "primary_steps": 256,
+      "angular_momentum_error_Nms": 8.237011583399741e-08,
+      "energy_drift_J": 8.5260908819218e-08
+    }
+  ]
+}
