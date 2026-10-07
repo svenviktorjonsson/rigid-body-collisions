@@ -6,6 +6,13 @@ two concrete gaps, not the full authentic collision model. First code checkpoint
 commit identified by git history. No missing remote pushes at task start. Do not
 spawn new agents under current developer instructions; no language repo edits.
 
+Code/evidence/report checkpoint1997226fda1d9e27e7000ab23691cc2930ccd0bf pushed.
+Verified downloadable5pagePDF and97memberZIP in Physics Reports/2026-10-07/
+are recorded in research/contact-gap-fix/downloads.json. ZIPv2 corrects package
+metadata wording only: originaldatasetfiles excluded; source-derivedcomparisons
+included. v1 locallypreserved; numericalmemberhashes unchanged. Fullclone needed
+for execution; bundle is not a standalone engine. Latestartifactcommit follows.
+
 spatial_engine.py accepts explicit mass_properties with all three SI keys:
 mass_kg, center_of_mass_m, inertia_body_kg_m2 (about supplied local COM, body axes).
 Maps full measured tensor into native principal axes, preserves collision geometry

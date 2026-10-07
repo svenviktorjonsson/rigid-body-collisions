@@ -9,6 +9,12 @@ The [report](report/report.pdf) includes mechanics, synthetic motion traces,
 the unchanged 24-case glass experimental comparison, and a scoped native cost
 measurement. No restitution/friction coefficient was fitted or changed.
 
+Code/evidence checkpoint: `1997226fda1d9e27e7000ab23691cc2930ccd0bf` (pushed).
+Local downloadable PDF and verified 97-member ZIP are recorded in
+[downloads.json](downloads.json), under `Physics Reports/2026-10-07/` in the
+Vektor Flow project folder. The ZIP contains this repair and source-derived
+comparisons; running it requires the full repository and its dependencies.
+
 ## Measured mass properties
 
 `spatial_engine.prepare` accepts the body field below. All three keys are
