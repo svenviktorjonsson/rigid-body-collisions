@@ -1,0 +1,1363 @@
+{
+  "archive": {
+    "url": "https://experiments.builtenvdata.eu/api/v1/datasets/92/download/?filename=RockMasonry1.rar",
+    "path": "/home/viktor/.cache/physics-public-data-20261007/RockMasonry1.rar",
+    "bytes": 156426196,
+    "sha256": "a2423df131acf78692a18f8732d4054b1e87b5d798f8d322adb5d96d773952f4"
+  },
+  "doi": "10.60756/uminho-jh25",
+  "license": "CC BY 4.0",
+  "selected_files": [
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 65709,
+      "sha256": "5a2b8776e65b93883a611e3be27c381abf40588b3e5225d8b5d72fa465a2ac50"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n1/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "036d9695812b93634605c550664955f294e3845d3020668470c28c584ff3eaf7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 97925,
+      "sha256": "442f094f43eb95c5e873f82c746753df49dcc1696b0eedd983df4dbb0eb9dd65"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n10/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "c195f0891b43b83aa487464fb4830f64f7a612561cf38d1f8235cbd135cd5c3c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 74829,
+      "sha256": "c479ba04392b00bc53db4cfd661b07f9577baad6c3b78b30e583975203968f39"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n11/Singular_data.txt",
+      "bytes": 811,
+      "sha256": "ab0db8769ba32ab4e86653372c6cbfb9c4b5cb17ffc9cc2ee4ac300e9bbb415f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 116157,
+      "sha256": "64879eab7eed7560b59580a46312d8b915c4421bb01f8fbdb27bb7497598687d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n12/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "c3b4aa80f706e1a42a2b3a74eb273be1711facddac2c8c6d8f129a068566876b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n13/HalfCycle_and_Impact_data.txt",
+      "bytes": 116178,
+      "sha256": "4175168f78b6c01517efcc9afdc901a2868bdf708c7ead4c193e2370dff6ea4e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n13/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "20f5ab9e1f5663439db27704ef1b338ed2e44bd84408c07e49a40e08c9888924"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 38915,
+      "sha256": "a53d985d82b98aca3606847da03e8fad599a4e58a535c123f73ddf36aa34bab7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "041c62e153ad9fa0e65e839b3960e7039851351f6425a37a0372eda0dd7e2f2c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 22315,
+      "sha256": "5f67d519f7f9abfb323fb302843df91eb74b0b6ce9c009c6907c0c0b70233c32"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n3/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "f8bb5b26ad77748495e4cde484a76f0ac9f55db79ab1b928fad019a9c8496b52"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 35490,
+      "sha256": "91b72c0eba20038df1edc954c8fd626ca6af263d5b4b8f146d508d9abd4ddb3a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "62fd1f73ded5d6f833459c10014fd7cd8885cff4c4ad849c94c05b4924066a08"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 84060,
+      "sha256": "7f40eed7438e3b3a29f33f8cf573a4a816337ae0c0e7c55bd3b238df7e5d6dbc"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n5/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "27f3756d5bba0986ce046f93a237fd74b2fbdcf8cbe0f7d7f2fc69f069b8cf27"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 140386,
+      "sha256": "f35547ef77524d4452b5365e9ce74a25fa9195e281887ed91379b1b50ea6d8ff"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n6/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "d5754f911bb94afdfd63f1a5f874d2e8dd574acb672eaa57b7ee41bb6a8b2f91"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 83697,
+      "sha256": "6915a9f639ee278c3036f51b5ed62204954c227fe2d92241c44e94836199c2b4"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "967fa0c95b2ef8d5c3bc23da3209f41aa339a1ddd269dcbc6090625b93ed91bb"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 32128,
+      "sha256": "f63093b0427375dbfd727b8c7f8578217d79d076ef505440c628636655953c3f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n8/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "e14b46f02a30e5091fa499cb4dbd8ea1dc2aed23ae626c636c49847a7cc06fe2"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 73841,
+      "sha256": "4e7cff2864810d5aba8b91d82abf99b7067ba3ca52c8deb7bab2fe3d20a463df"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_10_n9/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "900bb58ad333026bdce1ab1671c6b339216d9cd5a2f415a4be1082816a55e4ef"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 59326,
+      "sha256": "ede774d05aa8a6b0fe011fb813d5a38ac180ab18a932196889b866f71e5c4f5e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n1/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "f7fba3f123a87dedfdb8d8afd90196a0aef5d2375d5ed83dfd06396d3d3b2675"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 53231,
+      "sha256": "a7025c49143e6be0ff1732929e6d3ec77ac92f1dda870e76a5bcc6f3cc54b508"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n10/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "9c96e1281926932d09e30b5eed6749e9a362b5d16a1b1e0e9dd66ae1f0a715f1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 52389,
+      "sha256": "5a9f3ec5859d0971bb3a43026bf0983d091b6ee3a6d286c4b5c4f1f139e98d5a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n11/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "ba0fc717b9c75522f941043fbedc557ea5505e3670c6f35d4cec9e12b9f4ea13"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 41190,
+      "sha256": "2852aba71c73ea8183560216303fbdfb12c04a2e77333e8a794979e6f3e32928"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n12/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "19166e49d88b43ad7ea0ede2b05d22b59a546f81e1f9c9e8b9d04a8c5c41e277"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n13/HalfCycle_and_Impact_data.txt",
+      "bytes": 74813,
+      "sha256": "bc9841689bbd0789195b5eeaaada924639ddb2edcb17de7508786bb9814e2f3c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n13/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "59d7bb3a651a3af5d517cff58b11c6a3dbbeeeb6ef776e9f9999b15123bbe6a5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 95043,
+      "sha256": "57487157a50573746bf3b57d930c4ae19c820130554029896be67542878da2be"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n2/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "e4f677583ab97d07b667fabbd8cb90424aec595f94e58278a964a9327ee79517"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 55127,
+      "sha256": "5c5e97a40d6f1ceae7e3fbbe3aae5bba5bc71adaeb4b9fa1b80868198a642828"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n3/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "85830cf92b686118646a6cbe64e505382946e67ce2102677ac9f881ef7eada0f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 47944,
+      "sha256": "e0f4015f8f4873cf4972a92abced5969c31f0403a77f370eafaf7eec7fbce764"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "4be1ad876308f05d1077832cef2b9820d8674394342749b3af6da20ce0945a6e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 42413,
+      "sha256": "91096c41037f53a6b5302dcdfc9fd9827ca488455505fd4ea6deba025b4d308a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n5/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "47743053760e945c370983dc07dae07516827b8dcc2920d2ac1e6b79cb87d006"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 63583,
+      "sha256": "e65e8dab0a9d01487d8a2c60e75507000ea5ecdfbc7f8c4df62981b23307d0d5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n6/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "b473f08faf249ee476aaa3ccd7c4da4e39524dfd505e34f3c46b9ad9fd09d213"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 57828,
+      "sha256": "93e34265f5407984cb1b7a990282341584eb4556a623c0d055e6ef4bda1494cb"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "1e3d2719c76ae47e22b8c02c18c34fa7bee4e72d4db823f3f294abd7b88d6f33"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 70920,
+      "sha256": "7f1626121f525fbfe01684a0d53d3dd61143e37a7e6bab078260afb233fd50ee"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n8/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "f51e37ea504bb534fd6cb6dd7e46434a7076e3636ee3eeda326df68cdce2fc37"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 50154,
+      "sha256": "3197f8c45744d4a15b49bdfeb03a78cb8558d77d574a4c93d0534e0fbbc0b552"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_11_n9/Singular_data.txt",
+      "bytes": 811,
+      "sha256": "b82eb1f22869e2d1c56140bf843a1854e92381f0991f7ed5c3941eccd177debd"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 82896,
+      "sha256": "dc5fdd8d36cc8300754ef585af67bb5d8c4eff00abaf276dc9abdcfa277c5ce5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n1/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "00c993c7060b5347df80475163f39ccd03349d4062797f4cbb4482c2e6d58673"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 40380,
+      "sha256": "07a323614fbe1263a32b6299a2a25c7f57fb6b520289c7bde109c2871ba5f19e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n10/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "35846f2ae41c7f599d4248ce00885b9de0d53424a159e3ebc18e2612147ff43b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 131163,
+      "sha256": "2f07fcfd013a56e918278d3af588f575064430304d7335ef80748f56b7db2a9e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n11/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "d47dce2200288500167915339f789ec21b0aa19f1ba4af2acaa065fb0358205f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 54825,
+      "sha256": "4e219ef7951b5cb676ef78a976dad4cf8d8b82b8e100b846e678d5616143266d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "c53f08684f9e8a56efc84854e435e5df15efe1a54fce16243ccbb00d462d77ad"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 97816,
+      "sha256": "1959e8f85383b50b28e992267611c8c1f2e17a019948ba37291b48f09334940c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n3/Singular_data.txt",
+      "bytes": 811,
+      "sha256": "939e4d7ff3791df173d94c43f54d8f7ba13c713e8a987fb61df3ba51e143b57f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 47859,
+      "sha256": "50dc23d066fdd3cd588abba812da12f9592937cdea1888f2694f76f53c774cc0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "0e28f55f8f3da588fd0819521b1d4cbff25624d5fae8bd61fc437ab6f0d222f9"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 108012,
+      "sha256": "e05774c68c137514701b23a87c365a5a53a1e5fb807f07a68167a4acb170e3ce"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n5/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "0d28df60fb0c63c0d433b761ff6145379dd71bcca267dbb3bef62ba002340128"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 89531,
+      "sha256": "070951ebd4ee2a3d77dc8277549fa306e6b27fbe68f079e95db00e2a60803210"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n6/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "e5d06f2be1da998b88428c4e40840a509f6fbd000eef77ade30a7d269b69a0ee"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 35726,
+      "sha256": "4132a7558729cc465581ab71b892208972697821283fd73460495c3f1636200d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n7/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "38612a2876bf9f22b33faa7efcc7b5c20ef38d027f87049d6dea1593c429bb77"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 55954,
+      "sha256": "bf6e05f085775a7fbe40078352de59b0c2eca83fda014b9c911b107fbf193db1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n8/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "8b34c6f852c4936e17a083eaba78d62a37d3a72fac0c31b5611aa21903a31603"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 49111,
+      "sha256": "115257a20e65bea67f86002dc177bfa183c96868bc0cae17b4b5135621bdfa3a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_12_n9/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "9dc5cd4e664154d88aaea43045e0dfac0de806d691ab5c8ad4e92128bdd8dcf8"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 26491,
+      "sha256": "ff35942178231452f20f9be441fc9c06c9503979066fec5dd61c5764b8fdd985"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n1/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "2b4767c028bf168e6b35680f961309b83877748384b285ecd45db0fc6a60c00f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 34076,
+      "sha256": "4f42ce2e0dfe8c1bd9a41b28377e0f66bae1a75759654de3e7d382994bff663e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n10/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "e2d53f9a377e7f25e45a594e78120e803000b4d94cbf4af7197a015cb3453920"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 29917,
+      "sha256": "7653f45f39a0915d5673de65afe4f9466c89d347eb31e4d213ea032d7584e755"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n11/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "1e725b235df07ab91ace7fe467e89b6e738220773feb77eebdaf3afaefdb7247"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 34212,
+      "sha256": "f2fd3a1905ebb2fd7bca0125c930e2696f0ceddcbb5d9fbdf57422dc5826b6f0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n12/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "73a8855e6fb434e6b2ac1bbcdee10e7c911ac73c7316f57d6779dc60c2b3787a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n13/HalfCycle_and_Impact_data.txt",
+      "bytes": 34149,
+      "sha256": "04cc796bb31d36cebc4bdd8287fa37416731d1b75610580e480378478c0b4d51"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n13/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "4496f2c033747b776f12898adf8b7ce9e0ed8953a47299eae65faf57b124e2fe"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 56649,
+      "sha256": "2d0a3ef7acd32bd1f19d2b6263dd8242f08a01280ec975ee85b31c83a2ceb10d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "bfda05cc381ae483e3c3dfd2ba5465e9c3239b156f3a3c2cbc94bf2342b4eb66"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 41923,
+      "sha256": "f08e11765846af3e89bfe4f78884f7222da11fe36aaa256d028b892b9d720b6c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n3/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "1e93e98c05d1e9db602d69bcda87b6d1c8aea1b4e0724095ccb90867ffe295da"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 55385,
+      "sha256": "4442c370f5769d671784114b1fa009eeaed931fcd83cf3b6d8346c5c2be72cee"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n4/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "1685474ab6ceec1e26ba12fa8d2e026930aeb3d16f9bd36b24287abe72941135"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 27467,
+      "sha256": "1bae01adda77b9c446deb216a934d27da43d07cb2e48ba4771a1b99b7fc373f8"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n5/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "b738af460ff6b1f7c12d38b3189773cb11fdbed67c22e11ecb9f3fa194d96e91"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 26373,
+      "sha256": "6a35881d4ee9523fc73eead9dbd9934224b3e58d4aca00e4b03e93209e865702"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n6/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "b98e3131eb9f7d78f282ae1241cd6d59a0ab08baabf40d2fbe9c46e94c7ef843"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 34149,
+      "sha256": "04cc796bb31d36cebc4bdd8287fa37416731d1b75610580e480378478c0b4d51"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n7/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "4496f2c033747b776f12898adf8b7ce9e0ed8953a47299eae65faf57b124e2fe"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 35269,
+      "sha256": "aac0d0044463b1d88df94bb6ebec97ae945a5784e5ebd813417bf63857292e89"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "bb7f7e7003d48bf83703e44794d0ac0f1dd13786de910ecd334a99db30f5a55d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 28589,
+      "sha256": "c44854e06a4c97a318bef1641f8fb3b88bcc9a0739cfe16425aed12706908563"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_1_n9/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "5c243c41c72c6ca0646fcf94eaa083138fa2ea904be33f5ec3f90106e79552eb"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 66252,
+      "sha256": "32a02f39399ddb70813b4d90cdb5e7c261532ff252ff0366a76406d2807aff49"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n1/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "4016cf29e7411c5f77b6cea9d519e4197b9141bb2d965cab8da84bc748001596"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 33017,
+      "sha256": "99e238cfacd8f02222750f781f3186bfbbea4c424306187c913d5c52e8100183"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n10/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "5aa9b72b3da4a87d6b99b0b1122c9dab8431c19c92c75891fcd633735f48f4d7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 42942,
+      "sha256": "b0b40219c64b61b018d0734d0a32fda655cab715589300c3f3021f7de10ca204"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "b57448282c8bddcdaeafcb0f8979e0eebfb1d0c2bb87e6e2c7d07bb43a4a91ac"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 24338,
+      "sha256": "3a4c0ebd334689673e24097a1314be4ba4712dbf0b8ab3cf93ba209cc2b2939c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n3/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "4b322c4256aa2151be0699859e863d10e1049ebafddc6e8b31b0e7e83c55fb58"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 20941,
+      "sha256": "9b9e2e4b0ebfd5b1696f6151c0c726199347e778d252012b9da66a08f73c8a54"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n4/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "9f8d216e4a49c44f6ef9424c493a3e6a35ac758719365e6ab59951a67937471d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 37548,
+      "sha256": "ee1d6bfa01a1af394ab94cedfb31315e849a164bb40013c24aab0384c6db40bc"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n5/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "2e12f984b6a9bf5f4ebf5dda9267a769c34b5e45bfed1b103eddc0f5b8d45e32"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 30843,
+      "sha256": "3f32ad476ac41d6fc1dc552498c82134bf17af497e65253e84f61b0179646d95"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n6/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "6afcf18e76b13ce0a894e4d445f852d96cf853338adedc691439c241e44a5c8a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 24155,
+      "sha256": "1ba8564f09b306299e05b3e3d64804ff9ea1cfc5d77780b25f536d2312c52e81"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n7/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "a89b2e4233cb98d339ae4158d1bd8c2bbb267ccd75044490fa2df51716957dac"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 58873,
+      "sha256": "07dfa1092329426be4fb109a17393ac7d2bc67634d231678fc428f963a698f4d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n8/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "1c963206a302079aca3a49634f805e7865a3696739355175e98ed19658227ccb"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 52076,
+      "sha256": "7a19cbee734ddb10e46f081ab2c8729a9e26b5099c0833e0d0f61cb6bbd5ec5c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_2_n9/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "3f5b339b401f0aab02490f886e721932d498de9ee39da3c0e3264bde4c22c3af"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 31903,
+      "sha256": "63f0d26e1a19dd6f798a5c6e77c896ba5b756d6c03080646e58817f863411d95"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n1/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "d08c5c6396dd3e27aac2b0aeb9467b20202e62a3f59f8b70886d6e273f3e136b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 65269,
+      "sha256": "ed9bbe94f5bf13d72e68cddb0840e5433a8d33615f72463ee90669bfcb0e122a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n10/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "c27d25a95855c9b6666152e3c50fd4c3ca449e95142c15a60481145549a807d1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 54579,
+      "sha256": "ba7a0db7cbdab8616950b15ffe38b729143304a8f1688a15a27d437bcf9aeeef"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n11/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "e3c92a93550d51db412cd3e5f1c8e63417050f3158304db8b1ea88d1d4144b13"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 37698,
+      "sha256": "13c5d198fe9ebfdf851b0a7b4889d8d1131688b9f26fc2364f559174cc6416db"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n12/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "10d2baf12c687613e2ed0dd84bd114b8799f4186cee252f769b459a91d446be3"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 65574,
+      "sha256": "25f3d48cbde0f2f6bb9aab22cac94c1645ee63ce1ade9ee13111f9f20c60da21"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n2/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "c4efe4b16f86cf08cedc36e0f1bb97e69e8c709e087a86e70a03bbb3d87a1691"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 45543,
+      "sha256": "989a6d34c4569bf7c09cb3f03675a54d7f688cdadfb68d9056d0d4b071812418"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n3/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "5bcbfd6a6b36d44255e1646077ff82b603e7c22e3c8b6bfabfc9a2d8e24b0e45"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 24194,
+      "sha256": "dd202d74f5f100f45437cb395cb8d3f18f3e96f7af8b9378fdfe80be67ff292c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "56092b07501550a9de01719c8847e82b655a7bb8bae7a9b82eef157fe0657688"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 39702,
+      "sha256": "a4364095c3a4281b653fbbe90a367f98df0817b170874bdc11fbff3d92d2e7ce"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n5/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "7d1bd5b7b9893c57c01f64eb0e222ac8a13c844b7562a81be967d60c255585e0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 26475,
+      "sha256": "b4ad993b66c7ba330adcf06001de113ed64ff970a7542f878d0df4a0222fcd8e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n6/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "9ef82a6b83d38f238573a9d5b821939df2eefb52a1361de1312193e8d5fbb498"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 26510,
+      "sha256": "e6fc1e5f6da8b6e279a0822f70b3ad8a37a66e5ece329502090434d544687604"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "92ca1661885d78f73b4c645ad0d6d49628be1cea8da17ae85cd66a03840a26f6"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 18738,
+      "sha256": "ddca1b52e3abd87fdb41e190fdc14e56045d98f82e9bfff6bd5a6450068bc219"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "ca4282f49675da5434eefa7a1cb5fdf533cadebd93459751214b86b59c8fdd8a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 35528,
+      "sha256": "50d25c0ada4f56efe76820c47c46cc9e7af72d03fd346bc874b3361ecff41be7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_3_n9/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "807d6f00076300fc487578af5d1099880ff6c3a13aaa5df6f2dcf6b35dabc2a4"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 21174,
+      "sha256": "c2b2a887530af22cd37096081042ebce02cc35c99b19489676207940de68ad59"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n1/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "fce57c92490df93359f2cae40588c7c126bea46e713663afe113f0c64d4b6ac2"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 17648,
+      "sha256": "07588d5f893cedc0623d58bb86a3c628ffb363c9ea7b3aa5b615fceb4b6e6088"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n2/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "001d2f88b6e9b08d9714cecd9cd27be77ac15e39a6508f3d8756e34b534c9aac"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 139833,
+      "sha256": "d635625a746e3223e07e01f8a0c8a1bde2b25751cd30a46f3fecd644d34e96fd"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n3/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "f3dbe8471b2483951ace621e0fdb01bbffac89eba940a4e6599aee01245c57c1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 49954,
+      "sha256": "4a4a6f36bcc13ff1f5b7dc762b8f3c06b8e2ea548654e41a997b9a6a4b9b66de"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n4/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "c882d856aa6c5e36a17d23f624aa9f3b80536c0c0e825c97deb0c100efaf924d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 32191,
+      "sha256": "f11014884f16ac8dfaff33f93f965bb8945635c65599acd8329b0293cf2cbb51"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n5/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "342216475092459945d724075bb186a074fffc598b250f6496df3005ec368960"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 47583,
+      "sha256": "59afc47dfb9ea03947b9326b26a25fb2fc496e7a2154aafc65986f54f8f384c1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n6/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "433c8f26b0abe2e019638f500b4cd6fb393340bcf1dd5caccfe4c1572e8f8c58"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 31292,
+      "sha256": "aa698e4602eb319f89e582aa9eded35e1b200ae6a2f6be26e621a574a613cf18"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n7/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "3525fac95d5724f41629d4a6d0f0bfb394481b68858a65de6fafc9dac13c3d08"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 22057,
+      "sha256": "182d8f95e7bd8959f3464c38f13e3f7562347f1e3ae16b4de17cd6abfc50ed42"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "d37fd46c2fe80767048d37efc1a0380756b54add2c5b8b4523c1d16e4d1e14c9"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 31933,
+      "sha256": "40d929776858085465821509c1059f1565659819675fb5cefe4652898e06ecac"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_4_n9/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "df51b925ba5550512be1cd48b93d0fa9fb9083ea969b66e175e82dc6a72c5387"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 49425,
+      "sha256": "b5868d6ecece5665874f1c3fd6cc30b0dd4f697deda6c4a3dc551c286bb87427"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n1/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "84cb13a1d5c8088676366ae7a6364d1c0f15650534a7500ab7b8c9559009c777"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 92509,
+      "sha256": "67d87656c836bc0c8caf87e35e5b9b82a7639bba272a1ca17f6dd01ada164be5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n10/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "41269956f9e34f5fc349cb6984a45634d290915dc3135392b88e0f6bdd44ed2a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 64400,
+      "sha256": "33c8b557c6f84f61bc3b7b82c04869aa5bfa29c00cd8e72248ca2c3e149d9bf0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n11/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "f651eaa01fb93939f80520a65ba83ba155829de788f8ab148ee2c83833bb012e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 133304,
+      "sha256": "919a3949e4b9ed81b0fc46292834d2f9d9f4575e9327a2031d4c8c9ecc5f976b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n2/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "2985f1cd32cfd13ba3cf9a40778ef801a3ca7afafb5f4d50a5c6947572780367"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 78869,
+      "sha256": "3228dbc7e373bec64dca15f53fbb9e0ad72dd6ed92a60a490c4338bbc517fea5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n3/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "932039a9b2b99b9c259c96de4a0ff0b52aa5fa37bee08dd55953276258ea4313"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 35469,
+      "sha256": "85d2857e34e3d746ccb0764d5e77bc305dc9ebb86737416f0f06d852cf929415"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "532006fe848a41b389df992af356ae326b8506e19756b63edce4043adad24663"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 58869,
+      "sha256": "8a6780d3a6c570b4d8207b2822e6bc5f11e17206d2f199af72e4d940bfcb36e0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n5/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "3e86eb821d4b5efaff769745dee38a5f90c0db5df9080840c66059c068ad2390"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 42570,
+      "sha256": "2c71316ec3b425ff1a96a998f7b2869b7dc2b9c5129db0815acc74f2e829b947"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n6/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "5369b640287dbadc2c9f129218d34c221892ca44af12e1dd89e8c8e0417ad152"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 47026,
+      "sha256": "fa0aeea0c6267184b362a5788ce96ede70c5d6548b4768fcb85daa7cfa5c29e2"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "5506b18b0aae813bf2b5ed303aef20fef067c7335a6a96576253ecddf015abc4"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 60159,
+      "sha256": "455073864269bdc738cea09147fece10923aa74cb0ee8af0fc80dc54ffb429de"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "9b09e0da45c57526847249c88a72d202de73a06784e768361599ba63787239a4"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 33317,
+      "sha256": "acac3408afa64b5f506a1ccf4adaa3ee340a84d1357a0bfac0236bcaf95929c1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_5_n9/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "77ffa62ea0f6a740068114664239fd239150f3cbe191446cc95b492048c75eb7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 116467,
+      "sha256": "513e66dc21b76b4e60f5f5e51aa91679ba27f5c89e2b38697e9226cac45b4a38"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n1/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "dd3173c013a36db50e115ad19fc19674c039584bbf91a502d0f8ca6cdde6f4dd"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 61239,
+      "sha256": "1374e670d6250056baec0024d5769fe63ba8c2e2e0836be1be5676807b29da96"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n10/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "53f5be7c386f05e445f643c41ac5e48636a3414f4c33961a04586a8d0f961436"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 92431,
+      "sha256": "da6451e076c14f1702b17cc86bb28bee5a6e1d46c29e0c20c006d51f707a71f7"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n11/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "cad5e90b558906df340e925fbe5b46559dbbe5d18be0cc180a797725efad7bb5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 52751,
+      "sha256": "b5ffeb16396b9d64d4e68a062d5e66802493ccc446768f3948d7b3f0d1fd498e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n12/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "59883d6abe67eb9ec302aeba7f6c484f5060fa6cf266fd0a114a4aa42c0df127"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 121190,
+      "sha256": "1c8a4da5f8c5b7f146f587289dea520fd4a53731a66adcd20217faddcbd0d361"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "fa8e5bcc8dcf660000ea22daa3b6e79c2dd13597cd0cf0a78fc238891e18488c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 176317,
+      "sha256": "c0f1da082280e674bf8db7f0f626ce78a32880113824421bbbd22f588eea653b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n3/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "aadf46c19929a0e74030b620c4ee95945d5832991da2816c9c3e59c91067ac0f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 205905,
+      "sha256": "1b642dd1622d23b6775ec1f6dd50653a80de122681100931c3c314c997123cb6"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n4/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "3ef9fb0b3dc028c7023993b01dd46ad0e8a9c86133aefe58866bf824967b92c5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 158741,
+      "sha256": "4d96af6e570f9499bf67ed269df2a5d0e3b6cccf137c50deba00e35d0f67a448"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n5/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "d8b4dbd15ca594c4e49c1c2b3ea900cb75f9b8179a809aef44b8f8ea795e2806"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 31167,
+      "sha256": "4d608d96a8e24a98a2eae9c2bb3ef07e6bf52a377a3451cce6870767760ddc5d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n6/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "72253498d60f929a2d5e1951b33793559e22ccdf0301dea13828f5e2ac5e0d17"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 79121,
+      "sha256": "afd6e47b51a76e9268cd6de4d5668d8f7dacc01bc2e004583f6014e40ec7ce73"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n7/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "b57df6e2a30a1c44b512a2bcbe11f1d6e5c4b96576fba70fc82db85b765c7b97"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 120449,
+      "sha256": "4cba0f23c13350f2c0222286e3fc91c5083e23574b499763621f72c07010e1cc"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "1f6b068fd701c66956fbcc538781ea966fe7ab417e6d39776c06593fb2177999"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 94401,
+      "sha256": "8cf7fa072b8cb5c3c5f3762558a4b714cbac757b42bbb2e5796dd8229ea66214"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_6_n9/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "50f689662c12a6aa1c783c477b24d305ae050f04659c2faeb5224ed715daefaa"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 118197,
+      "sha256": "98d8d281ff927449b69ed247568a8e0239b74f03b8513657a99071639dc32a3f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n1/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "c19a9d5346fdee3141df004200f013ae9d42cfb7c35ed541fa53ebf097df6b9c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 53862,
+      "sha256": "e6faef835a98dba738872cc9a6ffc8547ff5eb0b37a10ae36b98c6a360e7c38f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n10/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "4418a09c3feae5afea443fa1f7ff2707b6214beec860f16bcc6569819301b075"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n11/HalfCycle_and_Impact_data.txt",
+      "bytes": 76838,
+      "sha256": "9c4c09d117a0b6b1ddc15f12439659a2a4b5c44e98d009433d20bbd233dc316d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n11/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "b4cfd0d6682d7bec967488a2973d613727094d0f32cc3200642ec54f186fcfbf"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n12/HalfCycle_and_Impact_data.txt",
+      "bytes": 85681,
+      "sha256": "653de4aa12cc6f50850f7089d7f84489bca78d99ea5892f7827b3916060c503d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n12/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "c72da32c89a093baa1d96ee39f5f9566f965251e6d68be59b1b801d220711c75"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n13/HalfCycle_and_Impact_data.txt",
+      "bytes": 119517,
+      "sha256": "0a6a4cf62e3707851f06ba0c6bbe50ac978d0c311b5fc37fd8aaf92c03500b84"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n13/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "4556e9e43ee0f9f6c910b4c8912b260edaaa8841d165164cdabddaed7ee4808c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 56383,
+      "sha256": "8dbe7ceac258edf1bebcf99f54a8233153f31ca17f3e8cc020bcab6c62a65fc1"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "4a664853a5ea9e0ebf7e953ff28caf33d07923125ebf8dc9200afac1dc825100"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 157886,
+      "sha256": "ec76d57c94608d5451e73899ac26d81528b5ae4dfbdb965a6aee01fc12e1b35b"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n3/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "383edf07182008e05ecc31c745bb3bb013b1f4490f1e07f6f25c5e1cb92078bd"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 99397,
+      "sha256": "fedf9dbb5329731ae4cc51ad01c1342af500db2984ce5f2de61e0d01226add73"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n4/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "84cf16ae1233039019d1b3b7fd4f6fc0db9b46f3ef3fe9a0bee731e72e2f0c7a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 110733,
+      "sha256": "bbecbc00223c7cd56ab7e747168f17068f8f79f2d0e00b2bd7a0fdf64e703b8d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n5/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "bcd078ac2f0d4d0a92fde8b0841b7c2d9fc4706aebd7f0d26b8e3e5ed05169df"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 104905,
+      "sha256": "8e7887234ff34dae2f593d69b4cfc9394dd1f08771e61936e0c27aef5089fa26"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n6/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "c3efe00bf776cd3a6170d900b078bac50625d2295f48d7445cffade3ba1c9055"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 82888,
+      "sha256": "1c5e1268e17fb1375e2bf081c0b0fdcee4830cf75c9cab9cd679be1ebb471b36"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n7/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "224bfab657f5f97d29084e7d6338b26cee0a482396a750575227eea651d59979"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 174358,
+      "sha256": "404c8590ea14bc7b6de5bae4289d3047f153b933c24aed5959a6e5383d2d7ec0"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n8/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "3a6dbe141d5b1abf0f4d2cec10bd1f0a7d449a0a08cdb205071c25b3db5f1b74"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 98735,
+      "sha256": "b3592d3f383a91e3389c067e42a49fabc340e40edc1f32e230f0a986daa86bc2"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_7_n9/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "1d46af1bfa0f30033eabb8c84604c7b6423a5ad3fc7cfcd8f8cf09e7b56aef49"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 133197,
+      "sha256": "6421868892710eb53e89e81910746f3fd3d9bdbfd7007889f5d8d7c420d56e3e"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n1/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "2ff551ff90a6cd9ae50f3e8938db6b99d36e0bb605739162cb1976c7b83f6fe9"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n10/HalfCycle_and_Impact_data.txt",
+      "bytes": 142741,
+      "sha256": "7bbb09cc72e594f5a39ff8449f646db241fa520eebb5b0b19548661a27fc48d8"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n10/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "e8065b1ab4ccc9c8527d8ec4c81abd73dafa46885bcad71fdb3b1dfe14d4b576"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 41413,
+      "sha256": "2551a0dbb7a5b4a01e7f1edf0998d85c73c91897ec9a777caa0bfeab1e3210ba"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n2/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "c2d6ce4e116ae876c9e32e68ad0c8eba4a1265d64755d5686bb05ff46cc2a994"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 99322,
+      "sha256": "b1d00c3991d49eca2a4c4beaf50d06a647fe79a47fd27548d660403b51fbd68f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n3/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "44f3ed30c050b25b6c02329c45e0014360732029ebb30172be7821b08da786d8"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 32061,
+      "sha256": "bab3d98daaa642da597ffbb70efec61e355f3e83f2fc8f92b3cdf5308cdd8790"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n4/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "b2e175b43ed47d97a9042551793041b31d929f673c434b9d6ab51fa3a5d7d92f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 47925,
+      "sha256": "cd52a0449d2fac57ffe6ff9a5ab18c9ac912fe3def1fe402ae49e09f4f7bd2b5"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n5/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "51e82068a12617087f0c58e1e50a8263a3b75d071b37cb9c238304e965b204c6"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 158975,
+      "sha256": "f7972ae9c046cf095eed127898f6e2459185817182de05de885e7660b29d0a5d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n6/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "88462865906197975a01e6c41ab91ebbf58ad3ccd3472f9196091c01e3b2a90c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 137498,
+      "sha256": "25cf606536e557d443ef18d92159d2e8fd0c13c8e2ca3809c846ee2db84fc733"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "c4be4eca33430ab11603dc5801836928b871fb6526eb08f5e28cf4fecae92418"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 53525,
+      "sha256": "ff48ed9c1a49420f6a2b9ef296687e071ef53fe94c7a3ceef742d6745ee12f2c"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n8/Singular_data.txt",
+      "bytes": 808,
+      "sha256": "46621750eeec197fa8b6629c82327b2807c319d6cc5608060ed254ed2c25cb5d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n9/HalfCycle_and_Impact_data.txt",
+      "bytes": 113877,
+      "sha256": "0fbd5f8b59203f6859d37958e4145bbadb9d49a4aa356977749121850f67ef09"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_8_n9/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "c988907273d65901997de2e1af81a16f25ae9b93e407c41d8aa6699fe1625504"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n1/HalfCycle_and_Impact_data.txt",
+      "bytes": 81310,
+      "sha256": "fb047c5f627c1a772dff412f26ec5d80929378f45711b5f4080f84b734b0b68a"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n1/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "0ba51ea4322f00e405c77102693ad185baca5ecd18b0f99884ad54e8f371a405"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n2/HalfCycle_and_Impact_data.txt",
+      "bytes": 61477,
+      "sha256": "2794a28ea6d1ae9419427f37a328ebd180948c435657fe835215c35f9f958852"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n2/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "b73ba0c53810d88a18722369f65003f22b5441331d6c76ba0f77a0eea299f8ab"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n3/HalfCycle_and_Impact_data.txt",
+      "bytes": 85478,
+      "sha256": "1b01259e94f813ab609f5ecc0b43b1abafb01d129dba866fae00b407854f5ab9"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n3/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "31ef225a6e4a888c239fbd1b753b05bc66e012735f45a0c20f44dff928e28cee"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n4/HalfCycle_and_Impact_data.txt",
+      "bytes": 107399,
+      "sha256": "6a8d42a9b5bc3d18e43e521a4d7347ce5fb9aa6da4e77f658de7082fa24c2ace"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n4/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "52b8f477b80aa19655bec3c971f50cde2e65df1fba7c5f10f3a86b70567602be"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n5/HalfCycle_and_Impact_data.txt",
+      "bytes": 55602,
+      "sha256": "3ab9e57651e444f65fe0981598987fafc75d64a75ec3a694d26142e38d56b79d"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n5/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "434b4bfeb6479ded456fcdbc5a9b32fa6c9a8cada6546f61e3d7381180aad42f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n6/HalfCycle_and_Impact_data.txt",
+      "bytes": 60972,
+      "sha256": "8a793edd4ee6768cc0d45f109d38b21731f8479e1a5d0b8988a705c1ef27fd73"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n6/Singular_data.txt",
+      "bytes": 810,
+      "sha256": "3d7bc824b571b83aed147ab3ce92a8df9f5a4079fae9499a49e1e7e81ab058eb"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n7/HalfCycle_and_Impact_data.txt",
+      "bytes": 53301,
+      "sha256": "e3cf6d8049e7d40f1e851417cf9a8574863f64e795516d13bcc7f5926d8c055f"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n7/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "86fbe855e0f2aaa215cd22d25a6c5ec29ee14465265061dc4833873aa63a6ded"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n8/HalfCycle_and_Impact_data.txt",
+      "bytes": 98202,
+      "sha256": "526059fbef585c21a6f10eb5424571cce6b3c220b14751dc452b06ad13262de8"
+    },
+    {
+      "path": "DATA_FreeRocking/BlockGroup_9_n8/Singular_data.txt",
+      "bytes": 809,
+      "sha256": "f6833d5ff58e8bbc5d1b0404284896497e033db519504e495149f8dfd163fc16"
+    }
+  ],
+  "interpretation": "Processed angular ratios are outcomes; energy correction fc=.7 is not an independent friction input."
+}

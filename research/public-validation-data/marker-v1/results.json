@@ -1,0 +1,14 @@
+{
+  "evaluation_events": 42,
+  "outgoing_speed_rmse_m_s": 0.3807326042698419,
+  "mean_signed_error_m_s": -0.350345776651418,
+  "max_absolute_error_m_s": 0.6714616016813901,
+  "measured_ratio_median": 0.7572269013228026,
+  "errors_with_zero_inside_sensitivity_envelope": 35,
+  "one_frame_sensitivity_halfwidth_m_s": 0.515591691,
+  "scope": "Conditional on observed impact marker, incoming fit independent of outgoing arc. Not blind impact timing or full-model prediction. Sampling envelope is not a confidence interval.",
+  "sha256": {
+    "marker.py": "8385bb551253b3151e3bb2e4d9c0c930cce0693eaeb65c06515f1a25a9395281",
+    "MEASUREMENT-ERRATUM.md": "ba7641022e72da427067db0141348443bbc1b3d37bddb3f00731125325471ca8"
+  }
+}

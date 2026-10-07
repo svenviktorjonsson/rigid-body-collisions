@@ -1,0 +1,1154 @@
+[
+  {
+    "type": "directory",
+    "oid": "adafafedb3769bb7852187f0c9ce17092c432b49",
+    "size": 0,
+    "path": "data/rigid/turntable/json/metal"
+  },
+  {
+    "type": "directory",
+    "oid": "7265cd827307ecde44a1e05f74fbad3a10af6e3d",
+    "size": 0,
+    "path": "data/rigid/turntable/json/metal/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "92d758eef1fbb532ff32e61539d89259ce355c46",
+    "size": 0,
+    "path": "data/rigid/turntable/json/metal/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "6337c556126c7f11cc5bcb46017c932b1b25d2b4",
+    "size": 0,
+    "path": "data/rigid/turntable/json/metal/task-3"
+  },
+  {
+    "type": "directory",
+    "oid": "05a3174195a020ba943eeff2ceb26e4364eec720",
+    "size": 0,
+    "path": "data/rigid/turntable/json/plastic"
+  },
+  {
+    "type": "directory",
+    "oid": "d509bda0cf3cfe2b9cf9b694952442ec338b325a",
+    "size": 0,
+    "path": "data/rigid/turntable/json/plastic/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "bd9456ab0ad1e4a10fe448438144c9fa5b9997f1",
+    "size": 0,
+    "path": "data/rigid/turntable/json/plastic/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "d566098fb3178ec36c4d67ffa1702c8a5ed41618",
+    "size": 0,
+    "path": "data/rigid/turntable/json/plastic/task-3"
+  },
+  {
+    "type": "directory",
+    "oid": "3e93f8e731f3709df1e4133efa91e87dda7322f6",
+    "size": 0,
+    "path": "data/rigid/turntable/json/wood"
+  },
+  {
+    "type": "directory",
+    "oid": "bf8e695a4426e581fd60a883e4e418ee36ca2410",
+    "size": 0,
+    "path": "data/rigid/turntable/json/wood/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "7c7285a06919ba4b57f62285ddc33131d1cbd616",
+    "size": 0,
+    "path": "data/rigid/turntable/json/wood/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "ab523ba7c6c0c6de0ff9ebdc2272c464487a5be9",
+    "size": 0,
+    "path": "data/rigid/turntable/json/wood/task-3"
+  },
+  {
+    "type": "file",
+    "oid": "047f20e4cdd0d550bfcdad9c6698a23a67f8cb66",
+    "size": 67968,
+    "path": "data/rigid/turntable/json/metal/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "102147226541c74501390d8920d9fd65e9ee8016",
+    "size": 69696,
+    "path": "data/rigid/turntable/json/metal/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "ab2d6ef48075a2dc82fba751371e31bbc92d3b1c",
+    "size": 70763,
+    "path": "data/rigid/turntable/json/metal/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "259dc39d12fbf74685ccf538b7019cae4d58ad66",
+    "size": 69722,
+    "path": "data/rigid/turntable/json/metal/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "e383a9e35c00865637d197b1f82c99b3b77cd11e",
+    "size": 69707,
+    "path": "data/rigid/turntable/json/metal/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "0ba8a22b43877e1d1339ae48bab1c880fc352e75",
+    "size": 70069,
+    "path": "data/rigid/turntable/json/metal/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "e84f3803efadf76a29f7b7fea3b101c34572f0fb",
+    "size": 70062,
+    "path": "data/rigid/turntable/json/metal/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "6eb40a19aadf28c807186477a1f59e7d961f5adb",
+    "size": 70435,
+    "path": "data/rigid/turntable/json/metal/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "7900758c970d60e729e3230bdc782893f6f618c5",
+    "size": 70076,
+    "path": "data/rigid/turntable/json/metal/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "1d40150fa6a9c7a059f549f0a5928b8263ffebaf",
+    "size": 69654,
+    "path": "data/rigid/turntable/json/metal/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "2a9d3a6fd65881f38bda1ed3a23e54f67c679d4a",
+    "size": 71485,
+    "path": "data/rigid/turntable/json/metal/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "2f970742114fca5355b27305afb3727c7ba05f3e",
+    "size": 69022,
+    "path": "data/rigid/turntable/json/metal/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "dfa8e1f8b4db81f851d1b85f81e23f9be1664d43",
+    "size": 69360,
+    "path": "data/rigid/turntable/json/metal/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "4ea4d2a9f8700c0c83c62a0229785532c508ea0a",
+    "size": 67908,
+    "path": "data/rigid/turntable/json/metal/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "789901669796002682ffaf385d55b00c121f500d",
+    "size": 70411,
+    "path": "data/rigid/turntable/json/metal/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "700f9757331e23221e83b536f14e94baf5cc7fa0",
+    "size": 70431,
+    "path": "data/rigid/turntable/json/metal/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "4e9da713dd8fe1910d7fa587829262d344326775",
+    "size": 69713,
+    "path": "data/rigid/turntable/json/metal/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "cf2c6bf46114a207950ce031ddfef391e05797e2",
+    "size": 71100,
+    "path": "data/rigid/turntable/json/metal/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "3e22eb3f4b924307ac5873d44809ad593ee42ea1",
+    "size": 68285,
+    "path": "data/rigid/turntable/json/metal/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "67eb878f894f62a259d7957ec1d49005d80366ed",
+    "size": 70102,
+    "path": "data/rigid/turntable/json/metal/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "af971b5fe512710167160835d91cfb450becb157",
+    "size": 6975,
+    "path": "data/rigid/turntable/json/metal/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "b369c9d101ce6ca9a09fa0a90c0d5b81a32bd340",
+    "size": 7330,
+    "path": "data/rigid/turntable/json/metal/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "10a15a177f6b6969b18f2743dcf8f2a33212b9e7",
+    "size": 6971,
+    "path": "data/rigid/turntable/json/metal/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "0627bb16084a6dd113db8c4071b68de19ac61779",
+    "size": 6979,
+    "path": "data/rigid/turntable/json/metal/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "b19245d7817bb931cf5b89e7ecccc6f79a7ebd5f",
+    "size": 7325,
+    "path": "data/rigid/turntable/json/metal/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "abc71ae75c4e535ad5e666e98778986dd33d1c91",
+    "size": 6607,
+    "path": "data/rigid/turntable/json/metal/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "395efcb2e6f15f816c9e1e0146e680001f0b1a44",
+    "size": 6956,
+    "path": "data/rigid/turntable/json/metal/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "2864dbd2828c86757004965e29087fe378233b44",
+    "size": 6956,
+    "path": "data/rigid/turntable/json/metal/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "1fb3618c0ae902df20a2ea1da382742b4df2a040",
+    "size": 7334,
+    "path": "data/rigid/turntable/json/metal/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "cf9050ad1a2915c3b54d993ddca03a20f6bc0cb0",
+    "size": 6961,
+    "path": "data/rigid/turntable/json/metal/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "8837ee7a542583d4dcfb4d352ddca144fb3d442a",
+    "size": 6981,
+    "path": "data/rigid/turntable/json/metal/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "8f3bd3b4a99ceba793bf3c1f0fc066b2f7e45f6e",
+    "size": 6969,
+    "path": "data/rigid/turntable/json/metal/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "6e6879089c95d71b42782df24bd92514c2138edd",
+    "size": 7318,
+    "path": "data/rigid/turntable/json/metal/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "ab54c4fad1c95e4bc46372bf2e1b8a51fab59275",
+    "size": 7331,
+    "path": "data/rigid/turntable/json/metal/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "26e4b5ff8c1295bb9e0fdb3bf8a26244932c1153",
+    "size": 6976,
+    "path": "data/rigid/turntable/json/metal/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "c6c782a8edb935cc9a8ddcf4021bda91fcbe91a3",
+    "size": 6622,
+    "path": "data/rigid/turntable/json/metal/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "bda0618cfd71fd82bc4e2809fa1261c5ea862b0c",
+    "size": 6959,
+    "path": "data/rigid/turntable/json/metal/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "8c60367c8a00b08a2d2c9f4519b1e9bd91bcdac8",
+    "size": 6963,
+    "path": "data/rigid/turntable/json/metal/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "b7f74184ff04e3c962b6178de4b1c7c5ef60f59c",
+    "size": 6603,
+    "path": "data/rigid/turntable/json/metal/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "d6062ff38d12ca1b82dd74e97be01b4df479ba35",
+    "size": 6969,
+    "path": "data/rigid/turntable/json/metal/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "21a9c1e18abaecf20df16ffd20a31a3314c379e5",
+    "size": 63465,
+    "path": "data/rigid/turntable/json/metal/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "84495e0a31d08ccd57f512a4d38417a1a0e4b677",
+    "size": 61704,
+    "path": "data/rigid/turntable/json/metal/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "3aacc98f62cddc6d4c624c3cdf9ed26d209a39e6",
+    "size": 65257,
+    "path": "data/rigid/turntable/json/metal/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "14c0d80d68db627f78d793162e8d225149190358",
+    "size": 64978,
+    "path": "data/rigid/turntable/json/metal/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "8e6591fdd0494901d1a78759608e355a420f4c0f",
+    "size": 62414,
+    "path": "data/rigid/turntable/json/metal/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "d636c8b97b22eed938bba0b06eaea25027f7b7d9",
+    "size": 63455,
+    "path": "data/rigid/turntable/json/metal/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "be114d2d7253261835647e382c7754cab93da619",
+    "size": 61297,
+    "path": "data/rigid/turntable/json/metal/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "ae502eb82d99a26e85a37bef81ae370b1bcde84f",
+    "size": 63870,
+    "path": "data/rigid/turntable/json/metal/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "417b6d5e84571e07e1df1eb75ccdc70ab6a5b343",
+    "size": 63823,
+    "path": "data/rigid/turntable/json/metal/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "c6c6b54c61755407619ceb8ce5255c2dbd2212b8",
+    "size": 61320,
+    "path": "data/rigid/turntable/json/metal/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "920cd47d06464cfdc4cf14bca5d10fe54e193844",
+    "size": 62425,
+    "path": "data/rigid/turntable/json/metal/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "61b44b2065251d02b9983306745d0fa5533d1d8f",
+    "size": 63138,
+    "path": "data/rigid/turntable/json/metal/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "2a4cf6d503056a9656924a11b7c98534b46b9380",
+    "size": 59878,
+    "path": "data/rigid/turntable/json/metal/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "c8d88ce258d12f3238ce523abec1e7dceadcebfc",
+    "size": 62790,
+    "path": "data/rigid/turntable/json/metal/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "aa190c19880aa171c63d59ce59a22e19faf178c6",
+    "size": 63481,
+    "path": "data/rigid/turntable/json/metal/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "60afd5712cc64dc7193086b06f1b3f8670ec7328",
+    "size": 64928,
+    "path": "data/rigid/turntable/json/metal/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "157b373e2e7dd4826f8ae4420ef0efdb606ca8af",
+    "size": 63161,
+    "path": "data/rigid/turntable/json/metal/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "75578e3b9d6e47b63e10d5a4f304f970bbd7db0f",
+    "size": 63454,
+    "path": "data/rigid/turntable/json/metal/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "6d962921f44e6a19bba05bb38bc5b223720dac7b",
+    "size": 63445,
+    "path": "data/rigid/turntable/json/metal/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "d4d24a4a6954d3addd75a0af42a9e870d547c919",
+    "size": 65296,
+    "path": "data/rigid/turntable/json/metal/task-3/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "bdcd0436a3d491618d12b356c10d62753083e9bf",
+    "size": 78150,
+    "path": "data/rigid/turntable/json/plastic/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "10f927c234ef722f9851485aaf7ce51de29c6089",
+    "size": 69939,
+    "path": "data/rigid/turntable/json/plastic/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "d578e6c2edaed0307784091535e8fc68b846f5e5",
+    "size": 71714,
+    "path": "data/rigid/turntable/json/plastic/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "4430a5dfd1ed266340178116da544889f9080bd6",
+    "size": 69557,
+    "path": "data/rigid/turntable/json/plastic/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "24fb80e3b6a589aa615d213f97bb7f56b620061c",
+    "size": 70286,
+    "path": "data/rigid/turntable/json/plastic/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "664f817ed671232ab6149011724b6c646de0a51b",
+    "size": 71307,
+    "path": "data/rigid/turntable/json/plastic/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "f95bb4b9b234eaa1ba02f14aac8c9a5eff2637eb",
+    "size": 69224,
+    "path": "data/rigid/turntable/json/plastic/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "66121fbfdd5670daf6c4e641426b3d18e803e80d",
+    "size": 70964,
+    "path": "data/rigid/turntable/json/plastic/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "24844f82d8479592fd5efce2a97f6c535607a5f0",
+    "size": 70632,
+    "path": "data/rigid/turntable/json/plastic/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "5705bcf0a91b1261521f482dff1cd4cdae9eed90",
+    "size": 69613,
+    "path": "data/rigid/turntable/json/plastic/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "16b3c15dedb02fdb0bb7f8bbdb9c12c4603a04ff",
+    "size": 72058,
+    "path": "data/rigid/turntable/json/plastic/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "5a9654048cc22b5e1555a20fb3a9521ed754c7b7",
+    "size": 71416,
+    "path": "data/rigid/turntable/json/plastic/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "1c64dbf48633e603262f116c5eecb18ea247e10a",
+    "size": 73850,
+    "path": "data/rigid/turntable/json/plastic/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "6cad36a5276943550d9df88422006692f777152a",
+    "size": 70634,
+    "path": "data/rigid/turntable/json/plastic/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "538df482b8c58a6545480cabe1cf00bc9f7bb88f",
+    "size": 71737,
+    "path": "data/rigid/turntable/json/plastic/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "98b0a90b79b7efa3d6de99f9bb2ebbc7d9320e9d",
+    "size": 73108,
+    "path": "data/rigid/turntable/json/plastic/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "500c9b4fc33ceb56765b810191201c9f5f64fb8e",
+    "size": 72083,
+    "path": "data/rigid/turntable/json/plastic/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "c78f0eea230c50dcb088f2dfc59061fa8993b82c",
+    "size": 69912,
+    "path": "data/rigid/turntable/json/plastic/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "3315090ce7e7abe5e50a9aaa056d82547970f456",
+    "size": 69925,
+    "path": "data/rigid/turntable/json/plastic/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "49ff4948f210470330b3b13e0b04606f46535aaa",
+    "size": 69956,
+    "path": "data/rigid/turntable/json/plastic/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "69bd03222239856fd8c6490fda4f29a9f7abe6e6",
+    "size": 6893,
+    "path": "data/rigid/turntable/json/plastic/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "f4179a154124b396c30d3661073d263c9833ecaf",
+    "size": 6902,
+    "path": "data/rigid/turntable/json/plastic/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "38fab37098ece5825810a66a7f5372f63a4616fb",
+    "size": 7244,
+    "path": "data/rigid/turntable/json/plastic/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "c3abac886ae9f3214fc67fe95f1b878b1f4ed282",
+    "size": 6883,
+    "path": "data/rigid/turntable/json/plastic/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "edc6ca7510f74022342982fe6604fc7bb3eafc94",
+    "size": 6894,
+    "path": "data/rigid/turntable/json/plastic/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "9675c9190295f9377bc6ca976f548bcba836a6c6",
+    "size": 7241,
+    "path": "data/rigid/turntable/json/plastic/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "5053303e3996a97f0253d9a726c9174d73b4ab08",
+    "size": 6876,
+    "path": "data/rigid/turntable/json/plastic/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "74b392b68bb692033dc457d2cf96235ff6336877",
+    "size": 7602,
+    "path": "data/rigid/turntable/json/plastic/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "e056936376a7c731b179922f773a8a73ef478e13",
+    "size": 6908,
+    "path": "data/rigid/turntable/json/plastic/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "630edc17bb48211e321f65ba801eb50e3fddd18e",
+    "size": 6905,
+    "path": "data/rigid/turntable/json/plastic/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "9602e0d10ad0d64e1afc2986ded7c636f08a6bdc",
+    "size": 7254,
+    "path": "data/rigid/turntable/json/plastic/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "d0b3caa0791efec68f0298b9a4ef560cb78444e3",
+    "size": 6897,
+    "path": "data/rigid/turntable/json/plastic/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "7dc3a8934e2caf93e690b982b0d0116fbd863917",
+    "size": 6894,
+    "path": "data/rigid/turntable/json/plastic/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "c94f55f2e801c5962c995ed8d711c6995f09b0aa",
+    "size": 6890,
+    "path": "data/rigid/turntable/json/plastic/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "3db8ea25e7fe7663e181b3fe80cd197635406b58",
+    "size": 6911,
+    "path": "data/rigid/turntable/json/plastic/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "43979836c52429e3a6880c2b6fc429a5e0f31525",
+    "size": 6867,
+    "path": "data/rigid/turntable/json/plastic/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "fce30702cebd975221ab7088c82c3afe8bfeb175",
+    "size": 6884,
+    "path": "data/rigid/turntable/json/plastic/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "e88c7ea54f795307ec25749aa5e18af6ebad0bca",
+    "size": 6563,
+    "path": "data/rigid/turntable/json/plastic/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "a75ced22dfc0659f9abfdac351d23929fc618544",
+    "size": 6900,
+    "path": "data/rigid/turntable/json/plastic/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "d5096183f0b19b471720a39ec3fb4319a75a5f23",
+    "size": 6897,
+    "path": "data/rigid/turntable/json/plastic/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "c49493097c51dbb2b5b63ed147720166f69312dd",
+    "size": 60033,
+    "path": "data/rigid/turntable/json/plastic/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "38097aac5def1875419436cd1d20b0dfdc370b28",
+    "size": 59304,
+    "path": "data/rigid/turntable/json/plastic/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "c77f9fcb28caae35295c76b516785f073b4392f5",
+    "size": 61825,
+    "path": "data/rigid/turntable/json/plastic/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "ab3ee95c16633de18b6c60b664dc9cc65d5d5a1e",
+    "size": 62127,
+    "path": "data/rigid/turntable/json/plastic/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "120d2e196d8b859b405b8d715808a8b10d698ad4",
+    "size": 62498,
+    "path": "data/rigid/turntable/json/plastic/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "6f6eef8e26a111e87fff56735c6f48b6a9a2d768",
+    "size": 62912,
+    "path": "data/rigid/turntable/json/plastic/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "4f3ed787686348640a39f42f67db0019d678592a",
+    "size": 62493,
+    "path": "data/rigid/turntable/json/plastic/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "1cb47bc3dad2da410b721aa2146b4414b468a953",
+    "size": 64340,
+    "path": "data/rigid/turntable/json/plastic/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "700cc5094db5c4d792fd5dc615640930bdaff3f6",
+    "size": 62136,
+    "path": "data/rigid/turntable/json/plastic/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "c6ef6075a07df318f46cd69ef7cbc1212034188f",
+    "size": 61443,
+    "path": "data/rigid/turntable/json/plastic/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "1182a6cb76e9b88270ebadfec2e80e2bc29bf1a0",
+    "size": 60715,
+    "path": "data/rigid/turntable/json/plastic/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "3435b036de912dd10c583d0b45d6d2bed61926a4",
+    "size": 61064,
+    "path": "data/rigid/turntable/json/plastic/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "7b161936a2e78abe16501bdc02642304c280865e",
+    "size": 62863,
+    "path": "data/rigid/turntable/json/plastic/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "37ecbf410112b4c36f88268506d99b4062570037",
+    "size": 63188,
+    "path": "data/rigid/turntable/json/plastic/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "2c92f2eedfc4c03c077c36ad7118bfae83a1e8a9",
+    "size": 63601,
+    "path": "data/rigid/turntable/json/plastic/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "ff2b3f99a8fe01b3298749399fd12f247755c818",
+    "size": 63598,
+    "path": "data/rigid/turntable/json/plastic/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "07208e956d7b05a72917637b779aa0c2b058faae",
+    "size": 62162,
+    "path": "data/rigid/turntable/json/plastic/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "f3bfd01bafb25316b6c246c962a69d7100cc5bfb",
+    "size": 61426,
+    "path": "data/rigid/turntable/json/plastic/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "23f83f0c7dcec0ae8d761e30c8f03ac8c3207190",
+    "size": 61748,
+    "path": "data/rigid/turntable/json/plastic/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "74e7268ffbcb593eaf6a017cdb6b74accc558c65",
+    "size": 63578,
+    "path": "data/rigid/turntable/json/plastic/task-3/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "184bc3373e2664367e836b97264119ce647ee195",
+    "size": 68078,
+    "path": "data/rigid/turntable/json/wood/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "afcb411b0c0fd077ba4ff75870af5a959b6d1e8d",
+    "size": 68100,
+    "path": "data/rigid/turntable/json/wood/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "ce797ccbe1828673384d98c88c91fee4f24c12c2",
+    "size": 69142,
+    "path": "data/rigid/turntable/json/wood/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "5a43f0a765a34129ca9e1d089c6d29ed83f0a124",
+    "size": 69883,
+    "path": "data/rigid/turntable/json/wood/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "9b7426dad0e5d1d990b190b82d9b7c1ddb838a74",
+    "size": 67711,
+    "path": "data/rigid/turntable/json/wood/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "0d5803ac29008acc63453f756fa85c89b0121866",
+    "size": 68795,
+    "path": "data/rigid/turntable/json/wood/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "b2657e8c172a8d3c1fef82132a60e13267e0c8e4",
+    "size": 68741,
+    "path": "data/rigid/turntable/json/wood/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "44a590daa5a9d32af3489d186f92223b6c63ac43",
+    "size": 68786,
+    "path": "data/rigid/turntable/json/wood/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "2dfe57d9d55ba5599cc95d6b7d0b5b7f423237b7",
+    "size": 69125,
+    "path": "data/rigid/turntable/json/wood/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "31b5674946892c8f41abd21e5ce2d6de8c445063",
+    "size": 70154,
+    "path": "data/rigid/turntable/json/wood/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "64c556636d9dda56a1e3b08731c39fcabc171823",
+    "size": 69827,
+    "path": "data/rigid/turntable/json/wood/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "91a5d73658388fe398ca252a5343e383c2f206fd",
+    "size": 70161,
+    "path": "data/rigid/turntable/json/wood/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "2ee0de4bf40808aa0bd112f112d4b00c7fa74b5c",
+    "size": 70862,
+    "path": "data/rigid/turntable/json/wood/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "6c3c02d6109e86c1c647cd40e20faf8b06d06e6c",
+    "size": 69088,
+    "path": "data/rigid/turntable/json/wood/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "ed412e78f7e208feb53869e8ccb6191886c95b9d",
+    "size": 66980,
+    "path": "data/rigid/turntable/json/wood/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "ce163674bfe554f8600003867f0040489012a00b",
+    "size": 69477,
+    "path": "data/rigid/turntable/json/wood/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "d1b25fcf0c4b227f94555e232651c7e774c6c7fd",
+    "size": 69847,
+    "path": "data/rigid/turntable/json/wood/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "270ec83f0929e0e041dc42e8fc4a07af6d8d179a",
+    "size": 69857,
+    "path": "data/rigid/turntable/json/wood/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "6fe6dba779d5c93a0d2a0a4ff590ebd525f5c59a",
+    "size": 68455,
+    "path": "data/rigid/turntable/json/wood/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "7cd4124a0db4ae2a1fa6e8a3e63ce8ed5d3d18d6",
+    "size": 69094,
+    "path": "data/rigid/turntable/json/wood/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "16120c6c0592b995e98dae38359fd6fb9e4cc797",
+    "size": 7238,
+    "path": "data/rigid/turntable/json/wood/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "1d38b4e02aa9d05e5ea86e3724d61750736a1e1c",
+    "size": 6903,
+    "path": "data/rigid/turntable/json/wood/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "08f2fa2054d06ac67e9dc1e22e32077ac00ea905",
+    "size": 7246,
+    "path": "data/rigid/turntable/json/wood/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "0cac7f70437b4384713e3d93f4e1274b1622801f",
+    "size": 7570,
+    "path": "data/rigid/turntable/json/wood/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "d6b4770921ff59ba11225b34eb03fe58501ff3c2",
+    "size": 7588,
+    "path": "data/rigid/turntable/json/wood/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "c29f073f65982a16ac7abeb54aeb00b1df2f2dba",
+    "size": 7232,
+    "path": "data/rigid/turntable/json/wood/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "30eaa88bdadfa6bd737fb77513669864d82a88ba",
+    "size": 7577,
+    "path": "data/rigid/turntable/json/wood/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "53dfba30b3208aa20f81879b10945674cd94e4c8",
+    "size": 7584,
+    "path": "data/rigid/turntable/json/wood/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "6fae24a2004c35fddc07c77e3611e7ff5dd64cf6",
+    "size": 7225,
+    "path": "data/rigid/turntable/json/wood/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "5e737d6a5fd9b47d31b5351f36c35d41d181c3e8",
+    "size": 7959,
+    "path": "data/rigid/turntable/json/wood/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "7b0c8b496ee7631f1dda996507598a759d3b3e61",
+    "size": 6883,
+    "path": "data/rigid/turntable/json/wood/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "d98c064f5eea5b2b9459a8278b927abc706f6db3",
+    "size": 7248,
+    "path": "data/rigid/turntable/json/wood/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "514200f2e3cf1d9dcfd95ad662f04def0b21e347",
+    "size": 7228,
+    "path": "data/rigid/turntable/json/wood/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "b2b8a93108913cb17526b5b5885671b760a290ce",
+    "size": 7240,
+    "path": "data/rigid/turntable/json/wood/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "1045f6526baf80b35fba3fc5d1b874ff366d67f2",
+    "size": 7236,
+    "path": "data/rigid/turntable/json/wood/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "352dfab85ef98564c827713a997e64626598cb10",
+    "size": 7240,
+    "path": "data/rigid/turntable/json/wood/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "48ad3332d9391965a9acc41cc97befc6b07c6d24",
+    "size": 6882,
+    "path": "data/rigid/turntable/json/wood/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "26da0178024d832d6d494f399727fc0e4b19065b",
+    "size": 6859,
+    "path": "data/rigid/turntable/json/wood/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "e7baf45d2fe9b1db033103046bd96882b6eb9bb4",
+    "size": 7230,
+    "path": "data/rigid/turntable/json/wood/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "907aa8aa5e4937e0f7ceae41f64e349756382579",
+    "size": 7220,
+    "path": "data/rigid/turntable/json/wood/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "08b15eb525fffb4d3a05c15cfb40e46546ddc7a3",
+    "size": 77754,
+    "path": "data/rigid/turntable/json/wood/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "0d55a124fe0b430ea9a778e0bb8c0e6fc3241dd6",
+    "size": 64799,
+    "path": "data/rigid/turntable/json/wood/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "ae519ab56d8c6c2697bb200fd856b734f1de5d9d",
+    "size": 71404,
+    "path": "data/rigid/turntable/json/wood/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "5fe54c40fbdf0f77a4e672c01f17c1885e26cc32",
+    "size": 61588,
+    "path": "data/rigid/turntable/json/wood/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "2ccc584560d3c5723abed8f0a965303f459492f9",
+    "size": 62991,
+    "path": "data/rigid/turntable/json/wood/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "b7d46f3e06e93dd668c3fb8c08ba8f7c66afd42b",
+    "size": 63674,
+    "path": "data/rigid/turntable/json/wood/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "661ab7d5b03494e148fd3986f0a4a484b7a3a208",
+    "size": 61873,
+    "path": "data/rigid/turntable/json/wood/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "eba65bba11c15c32bb9d371b1c2645ec0abf2347",
+    "size": 61196,
+    "path": "data/rigid/turntable/json/wood/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "f14b32ea2bfe90e779d9e5a8b897f96ce6b78edf",
+    "size": 64443,
+    "path": "data/rigid/turntable/json/wood/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "6ecd6587dce3dc1f676b2d05fdf87e591ef34130",
+    "size": 62591,
+    "path": "data/rigid/turntable/json/wood/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "921eb1918b43ad20369e440d8f264035780cf41a",
+    "size": 66532,
+    "path": "data/rigid/turntable/json/wood/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "6d9fa616e997db0b1b4ac84b3c36eaac3a0afaa7",
+    "size": 65490,
+    "path": "data/rigid/turntable/json/wood/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "a04be156aac72805ec19b43cd4ac218e7254134b",
+    "size": 64767,
+    "path": "data/rigid/turntable/json/wood/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "fbf8da76589728c4f9374a7f448bcd64015b15d9",
+    "size": 66553,
+    "path": "data/rigid/turntable/json/wood/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "6ea6ce596e0d2917ee359582266a20a408dd3cb5",
+    "size": 65557,
+    "path": "data/rigid/turntable/json/wood/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "0478c3cd9d981f892e6b77f746d74133d209888e",
+    "size": 64734,
+    "path": "data/rigid/turntable/json/wood/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "95da2d13da94182d1c1b4d7835c711cbcf6d99c4",
+    "size": 61252,
+    "path": "data/rigid/turntable/json/wood/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "a04743d5c12834776e19ee01e2a5ecd194de7bcb",
+    "size": 63394,
+    "path": "data/rigid/turntable/json/wood/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "e3e0aa3f69722d876fff8140a36ab79735b66dd0",
+    "size": 63379,
+    "path": "data/rigid/turntable/json/wood/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "e024f6d071f2e5d9d73e211269e25428b881f16c",
+    "size": 64753,
+    "path": "data/rigid/turntable/json/wood/task-3/9.json"
+  }
+]

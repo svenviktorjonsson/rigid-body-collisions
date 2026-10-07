@@ -1,0 +1,46 @@
+{
+  "max_quaternion_Euler_angle_error_rad": 1.7370726071647677e-06,
+  "evaluation": {
+    "wood": {
+      "trials": 19,
+      "forecast_rmse_m": 0.009009703336595492,
+      "improved_trials": 0,
+      "regressed_trials": 19,
+      "measured_angle_range_deg": [
+        29.561165690899955,
+        29.66564041771365
+      ],
+      "max_board_normal_drift_rad": 0.0018110028710973823,
+      "maximum_normal_distance_range_m": 0.0009852504654551918
+    },
+    "plastic": {
+      "trials": 19,
+      "forecast_rmse_m": 0.012709475853323939,
+      "improved_trials": 0,
+      "regressed_trials": 19,
+      "measured_angle_range_deg": [
+        29.563107330503524,
+        29.671184841324948
+      ],
+      "max_board_normal_drift_rad": 0.0019137963972990417,
+      "maximum_normal_distance_range_m": 0.0013452325473243681
+    },
+    "metal": {
+      "trials": 18,
+      "forecast_rmse_m": 0.004572860567524936,
+      "improved_trials": 0,
+      "regressed_trials": 18,
+      "measured_angle_range_deg": [
+        29.5753170919501,
+        29.674941441770432
+      ],
+      "max_board_normal_drift_rad": 0.0022519413462404212,
+      "maximum_normal_distance_range_m": 0.004553845144911885
+    }
+  },
+  "scope": "Exploratory input correction; same source material values, trials, windows and measurement coordinate. All regressions retained.",
+  "sha256": {
+    "orientation.py": "45a819be576123ac124eb6bf5c3abc72d8a5b25c751bd247695291003a8f0f7c",
+    "ORIENTATION-PROTOCOL.json": "8aca4977918b072864f214feb3a28f95f8dd7fc0d730eb01ff65af2f62fe4f07"
+  }
+}

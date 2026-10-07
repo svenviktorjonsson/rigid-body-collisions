@@ -1,0 +1,177 @@
+{
+  "bounce": {
+    "trials": 22,
+    "events": 44,
+    "accepted_events": 44,
+    "evaluation_events": 42,
+    "source_restitution": 0.576733,
+    "outgoing_speed_rmse_m_s": 0.3822544291559504,
+    "mean_signed_error_m_s": -0.374184569027638,
+    "maximum_absolute_error_m_s": 0.46416697822054087,
+    "measured_restitution_median": 0.7339747432349848,
+    "measured_restitution_range": [
+      0.7127456992612852,
+      0.742662782979172
+    ],
+    "declines": []
+  },
+  "sliding": {
+    "trials": 59,
+    "accepted": 59,
+    "evaluation": {
+      "wood": {
+        "trials": 19,
+        "mu_source": 0.273673,
+        "forecast_points": 167,
+        "forecast_rmse_m": 0.0069619794143041735,
+        "maximum_forecast_error_m": 0.015423837598689122,
+        "mean_acceleration_error": -0.16703858127347634
+      },
+      "plastic": {
+        "trials": 19,
+        "mu_source": 0.275018,
+        "forecast_points": 153,
+        "forecast_rmse_m": 0.01082413926913358,
+        "maximum_forecast_error_m": 0.031244713191389772,
+        "mean_acceleration_error": -0.3469831934434022
+      },
+      "metal": {
+        "trials": 18,
+        "mu_source": 0.262758,
+        "forecast_points": 158,
+        "forecast_rmse_m": 0.0028795223862268307,
+        "maximum_forecast_error_m": 0.007770736868139172,
+        "mean_acceleration_error": 0.002404517167271722
+      }
+    },
+    "declines": []
+  },
+  "ellipse_readiness": {
+    "records": 1718,
+    "source_mass_kg": 0.0364,
+    "source_radius_of_gyration_m": 0.0192,
+    "inertia_kg_m2": 1.3418495999999998e-05,
+    "maximum_geometry_Jacobian_error_m": 0.001719617221811244,
+    "inferred_free_angular_impulse_rmse_Nms": 0.001180226857321721,
+    "note": "Momentum reconstruction only; finite contact/pose changes, glass guide reactions and measurement uncertainty can explain residual. Not an independent torque measurement or constitutive prediction."
+  },
+  "limestone_rocking": {
+    "source_trials": 135,
+    "unique_paired_trial_files": 134,
+    "exact_duplicate_pairs": [
+      {
+        "trial": "BlockGroup_1_n13",
+        "duplicate_of": "BlockGroup_1_n7"
+      }
+    ],
+    "processed_event_rows": 7545,
+    "primary_events": 134,
+    "first_event_ratio_rmse": 0.039012925982567094,
+    "first_event_max_error": 0.12587058680203045,
+    "groups": {
+      "1": {
+        "trials": 12,
+        "height_width_ratio": 4.0,
+        "predicted_ratio": 0.9117647058823529,
+        "measured_mean": 0.9401470583333333,
+        "rmse": 0.04542074009299902,
+        "max_error": 0.09657129411764698
+      },
+      "2": {
+        "trials": 10,
+        "height_width_ratio": 5.0,
+        "predicted_ratio": 0.9423076923076923,
+        "measured_mean": 0.9397220300000001,
+        "rmse": 0.046138139999283886,
+        "max_error": 0.0811106923076923
+      },
+      "3": {
+        "trials": 12,
+        "height_width_ratio": 5.999999999999999,
+        "predicted_ratio": 0.9594594594594594,
+        "measured_mean": 0.93186905,
+        "rmse": 0.048718970496561154,
+        "max_error": 0.10804595945945938
+      },
+      "4": {
+        "trials": 9,
+        "height_width_ratio": 6.999999999999999,
+        "predicted_ratio": 0.97,
+        "measured_mean": 0.961618388888889,
+        "rmse": 0.033364647215561684,
+        "max_error": 0.05113400000000001
+      },
+      "5": {
+        "trials": 11,
+        "height_width_ratio": 8.0,
+        "predicted_ratio": 0.9769230769230769,
+        "measured_mean": 0.9538902727272728,
+        "rmse": 0.03704134767166723,
+        "max_error": 0.08965147692307684
+      },
+      "6": {
+        "trials": 12,
+        "height_width_ratio": 9.0,
+        "predicted_ratio": 0.9817073170731707,
+        "measured_mean": 0.9729140833333334,
+        "rmse": 0.026874060294327255,
+        "max_error": 0.0702253170731707
+      },
+      "7": {
+        "trials": 13,
+        "height_width_ratio": 10.0,
+        "predicted_ratio": 0.9851485148514851,
+        "measured_mean": 0.9827403692307694,
+        "rmse": 0.01848009472808128,
+        "max_error": 0.03790601485148515
+      },
+      "8": {
+        "trials": 10,
+        "height_width_ratio": 11.0,
+        "predicted_ratio": 0.9877049180327869,
+        "measured_mean": 0.96774316,
+        "rmse": 0.03953838626423609,
+        "max_error": 0.09001891803278694
+      },
+      "9": {
+        "trials": 8,
+        "height_width_ratio": 11.999999999999998,
+        "predicted_ratio": 0.9896551724137931,
+        "measured_mean": 0.996031575,
+        "rmse": 0.015707052519832013,
+        "max_error": 0.030889827586206953
+      },
+      "10": {
+        "trials": 13,
+        "height_width_ratio": 13.0,
+        "predicted_ratio": 0.9911764705882353,
+        "measured_mean": 0.9963811538461538,
+        "rmse": 0.02769056207176102,
+        "max_error": 0.048961270588235295
+      },
+      "11": {
+        "trials": 13,
+        "height_width_ratio": 13.999999999999998,
+        "predicted_ratio": 0.9923857868020305,
+        "measured_mean": 0.9465621846153845,
+        "rmse": 0.06162447196151156,
+        "max_error": 0.12587058680203045
+      },
+      "12": {
+        "trials": 11,
+        "height_width_ratio": 15.0,
+        "predicted_ratio": 0.9933628318584071,
+        "measured_mean": 0.9711965181818183,
+        "rmse": 0.03600775362763698,
+        "max_error": 0.08695963185840716
+      }
+    },
+    "note": "Geometry-only ideal rocking comparator, not full directional model; measured source angular ratios are outcomes, never material inputs. Source nominal inertias are geometric."
+  },
+  "source_sha256": {
+    "study.py": "02f7c9b3187c40c9d7c410dd856f07580322bce461054c8fe93aa8e54294f5bf",
+    "PROTOCOL.json": "dd65e8d1921cda61b3d6f01cadaec91537e0e2e6e82ca0c9740959004a7c9655",
+    "ROCKING-PROTOCOL.json": "b51225ce4fcb2c9b66374a1f040ebe53beff1187a30c50fc9a63f95389ba0eb6"
+  },
+  "scope": "Fixed published-metadata branch checks / ideal rocking comparator / full-state import; not full model or independent universal material validation."
+}

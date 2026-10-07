@@ -1,0 +1,998 @@
+[
+  {
+    "type": "directory",
+    "oid": "cc4425c12dca3bfae39f6cc5dd4032f6698e64cc",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/plastic"
+  },
+  {
+    "type": "directory",
+    "oid": "c42583749a46408715f9a690d517b4c356d15067",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "5cc631e9dc3dd093b8b254f5c6ec3f4f95ef3dad",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "a247c232d8b4e2c8a8c67d0519a99ad1c21cc85e",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3"
+  },
+  {
+    "type": "directory",
+    "oid": "87f706791c5ac2cfb767f7332ac48691355338c8",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/wood"
+  },
+  {
+    "type": "directory",
+    "oid": "4081d23b4cf1b49acbdbd302452b40735ea0e190",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1"
+  },
+  {
+    "type": "directory",
+    "oid": "c0a3bcff55f0edbfc277ac06dbb90e6021071165",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2"
+  },
+  {
+    "type": "directory",
+    "oid": "aac9ff6a329d876ff1ff1bbbe64325de5e8bf99f",
+    "size": 0,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3"
+  },
+  {
+    "type": "file",
+    "oid": "12011a9a2cce8b5ad83b1253433306c3874c568a",
+    "size": 5129,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "6bee4d15cfbb7a80be7f1d1af78103e82a4caa46",
+    "size": 4781,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "7243d7b6d69ba3f447884ae7fe2959c1727a0ca4",
+    "size": 5490,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "f25791929bb54202ab48f948aa553990c764d14d",
+    "size": 5486,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "76d79cecdd46fb14cb1f011243b3286dbaa66c0f",
+    "size": 4421,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "13ffd6865fea3b13a372ccf93309ea9e408001a7",
+    "size": 5129,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "db472e623aef270c7a595bc9f75b19b9b6382622",
+    "size": 5488,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "bbb79f76e6a77d50f93906ebadcdb5ae38d936b7",
+    "size": 4416,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "ac8ef7d2d5b24e57adc903726fa315654d4dd6f9",
+    "size": 4775,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "e027399d5435d66bc9d8773350da714e36cfae14",
+    "size": 5126,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "f7855792bc2c1652dbc7d8a4eaf166b832773b34",
+    "size": 4769,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "a9c25094ef97b124e659c80468d7b34fdd3210da",
+    "size": 4407,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "d7bf7d225ed2e85d722dd80a85572a1de018de1e",
+    "size": 4423,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "6f2d192c827154cce5cded4a3ea1a268ebd7d22d",
+    "size": 4413,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "b17fe694dc5a9456da25d9ef1410b000b32c6f0d",
+    "size": 4766,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "12b9e47fd91a1805cb748647305c27177ce61536",
+    "size": 4773,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "753ea71b8f366ec0d360c051723763542c315622",
+    "size": 4421,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "5dc1fa9fd518e3062c9393191bf257b799fdf3d3",
+    "size": 4777,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "e3d15e2a2f543c81f49df835a1de7f9d4c2a3eae",
+    "size": 4784,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "39a1c76596b3550c4b52bb93ef1a8d106b1522ae",
+    "size": 4416,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "5bf8b40415ae36b8a7774638725b06b500233125",
+    "size": 1360071,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/ball-14.obj"
+  },
+  {
+    "type": "file",
+    "oid": "96400adf69363cacdcf53ee0d4a599db2e0d247b",
+    "size": 1330819,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/ball-2.obj"
+  },
+  {
+    "type": "file",
+    "oid": "717a5ed2ee92c7016259e85b53d5e291cfedcbb0",
+    "size": 1289002,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/ball-20.obj"
+  },
+  {
+    "type": "file",
+    "oid": "6d63db18b31dbc70c6b852752b348c3a69e2bf05",
+    "size": 1435108,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/ball-6.obj"
+  },
+  {
+    "type": "file",
+    "oid": "a297d008f71f96b56c0c953ede0666d90793e667",
+    "size": 652,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/base.obj"
+  },
+  {
+    "type": "file",
+    "oid": "7d7df7d653f80a4305efe8ef5d22f9a9f5b6596e",
+    "size": 41093,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/billiard.obj"
+  },
+  {
+    "type": "file",
+    "oid": "c277c92b528e616b5672b454d037854bce871325",
+    "size": 653,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/board.obj"
+  },
+  {
+    "type": "file",
+    "oid": "f46dd6eee9ec39ff5da437e4fa6fab6d2514bada",
+    "size": 653,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/brick.obj"
+  },
+  {
+    "type": "file",
+    "oid": "2ecb28d8a227ad3b95fdf923b0dc393978c722b2",
+    "size": 775114,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/cube.obj"
+  },
+  {
+    "type": "file",
+    "oid": "fa4bdb64b98b08f2db8145df812dbe2d274e9eaf",
+    "size": 6155778,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/foam.obj"
+  },
+  {
+    "type": "file",
+    "oid": "e8f3d817a99f08ab90bffea7b7e6a1707f8df660",
+    "size": 24525,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/frame.obj"
+  },
+  {
+    "type": "file",
+    "oid": "4e9711d7147e58460e9a83bfadd2c6012a34672d",
+    "size": 6179,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/holeboard.obj"
+  },
+  {
+    "type": "file",
+    "oid": "812b1db35e27a200114a2c97abc589758d27db0a",
+    "size": 1132,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/pedestal.obj"
+  },
+  {
+    "type": "file",
+    "oid": "bfa98b44b867102948c00258394164361c084989",
+    "size": 5626,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/plate.obj"
+  },
+  {
+    "type": "file",
+    "oid": "b2d2496d29824e015487d1724aac56b39908aa05",
+    "size": 435,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/pyramid.obj"
+  },
+  {
+    "type": "file",
+    "oid": "819468444971b3b50cf8221a73d151319568f21f",
+    "size": 166272,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/rod-15.obj"
+  },
+  {
+    "type": "file",
+    "oid": "548f64f8c4d13d1bb6c30353d43a939b9ae834ac",
+    "size": 6377,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/rod-20.obj"
+  },
+  {
+    "type": "file",
+    "oid": "9ae4a6b3146d5dbae1a3096356a8b83c7fdcfe9f",
+    "size": 200226,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/rod-34.obj"
+  },
+  {
+    "type": "file",
+    "oid": "22e8c263ccda6be020cdaaaa28ae0611ed534227",
+    "size": 588368,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/rod-40.obj"
+  },
+  {
+    "type": "file",
+    "oid": "32ec90bdfaf83b836b3f564147a3fa8131017211",
+    "size": 1209,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase.obj"
+  },
+  {
+    "type": "file",
+    "oid": "ef3d56118aa9d219b7e6a1ae382f6a93fb1a7493",
+    "size": 998,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase_0.obj"
+  },
+  {
+    "type": "file",
+    "oid": "e8c6023fa9393176ebfd4e54d9ddd3b14ee66a88",
+    "size": 994,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase_1.obj"
+  },
+  {
+    "type": "file",
+    "oid": "90671f460d00b276e2856518e583bfb2bcb76428",
+    "size": 1002,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase_2.obj"
+  },
+  {
+    "type": "file",
+    "oid": "9147e352ff1d68926b487682556d4412f852b57c",
+    "size": 1002,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase_3.obj"
+  },
+  {
+    "type": "file",
+    "oid": "da6fcbd58ea22eaecce4dcb1674f642d114b3d5e",
+    "size": 994,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/squarebase_4.obj"
+  },
+  {
+    "type": "file",
+    "oid": "db546fae8cedcfd9538dbaf284431fa3a402462d",
+    "size": 102382,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/support.obj"
+  },
+  {
+    "type": "file",
+    "oid": "ff431c77b06e5ebda76fe7459e2415e8846f839a",
+    "size": 653,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/table.obj"
+  },
+  {
+    "type": "file",
+    "oid": "a43d28d1aa4c7db8d95e532bc40bab54c057bdac",
+    "size": 11602,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/tablecloth.obj"
+  },
+  {
+    "type": "file",
+    "oid": "5e9f539b87ba69228bd0bc3e32fdacef2b32b8e8",
+    "size": 337,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/teh.obj"
+  },
+  {
+    "type": "file",
+    "oid": "a3b2d3d5aff39e74f11556b9c8a8c0d9d5086438",
+    "size": 673,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/tehC.obj"
+  },
+  {
+    "type": "file",
+    "oid": "5a043374c1a8e362cf652814d7e6766fe2c8d367",
+    "size": 808494,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/textile-40_40.obj"
+  },
+  {
+    "type": "file",
+    "oid": "9c40a4459ef2925f1e153c6e0859a498ed95087f",
+    "size": 647702,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/textile-50_40.obj"
+  },
+  {
+    "type": "file",
+    "oid": "845a868e5bc4a2b6704bae93f9a68228504850b3",
+    "size": 11602,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/textile-60_60.obj"
+  },
+  {
+    "type": "file",
+    "oid": "17697b33a95def2e8b390feca7dcab70f12a40f0",
+    "size": 11657,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/textile-80_80.obj"
+  },
+  {
+    "type": "file",
+    "oid": "32d4e50743b8035c963b12b4d6405f2cf2bc8aa2",
+    "size": 1119,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/tribase.obj"
+  },
+  {
+    "type": "file",
+    "oid": "d6176f29918c8dfcb171e89aeebf67f3a01480e1",
+    "size": 997,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/tribase_0.obj"
+  },
+  {
+    "type": "file",
+    "oid": "28eaad32dcf7dbb5d467a2f40ccb9cea6e7efb94",
+    "size": 999,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/tribase_1.obj"
+  },
+  {
+    "type": "file",
+    "oid": "6b9684673bec05efd04655a9d8da2908e561b6d6",
+    "size": 498,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-1/wedge.obj"
+  },
+  {
+    "type": "file",
+    "oid": "6169897300e46035e80beb8368fcd1f803cec6d1",
+    "size": 5901,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "5a0f56886c97fb9dbaee930e52d546e206bbf0d7",
+    "size": 5191,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "ec377c7d5fe7333671e9395f8da6bad34c893d4c",
+    "size": 5557,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "0ebd2be8a286cc60f16fb9819eb4fa91dfb11217",
+    "size": 3757,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "0017c7d2b223fe24a5a873e4f8894aa35ced6432",
+    "size": 4469,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "c7429477bc9c7d88d20eb56d38fe7bd58fac3027",
+    "size": 4837,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "11447068a581e049379faa9a1cfff2dbc845d8d1",
+    "size": 4807,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "3a12fa7b465a64d1403bb022a57248a33a28f70b",
+    "size": 5191,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "9d0a35d9c1829da160b44f6b0d233b08337a74a9",
+    "size": 4109,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "9b491c1a6a99deabee7bdeda272ddb6d0c0cbfc4",
+    "size": 4457,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "326abb8a3e45b5e483e5e46e17285948e8e9a715",
+    "size": 4845,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "7f97358688a3fedec4b258734fe0e8dc6a1f367f",
+    "size": 6188,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "488df247dcbd71af52b9412bd8f47c6950c86a9a",
+    "size": 4461,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "a654452ca223e132ab0f93e524583352b16ae73d",
+    "size": 6974,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "1cad75a53b9042d248f32c90098ae3ce0a77832c",
+    "size": 5893,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "71e9cef72217104d35882f2efe50f6479d110f25",
+    "size": 5184,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "c1d8df0f00eec1463d35a3d8015fe17aed2d130b",
+    "size": 4113,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "6222b4dd34818cc9d04863d9b736b4d9751c84ec",
+    "size": 5899,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "c496d87671b7375ac502f84d0831d75a8a15d441",
+    "size": 4470,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "aa7ee8ed34407e59c2be974961db5f215fdc896a",
+    "size": 5126,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "ebaf5549ef7c1d7998ea5c4fa0d34df1e17bc482",
+    "size": 10836,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "44c680710cf2c3e1469e180d8a2aad8a61f40799",
+    "size": 7991,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "0bac3d419a1bb25a28e46beb59f26a2fbc7d91dc",
+    "size": 8361,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "d0c03c047f13053a9026bf90b7618561740556eb",
+    "size": 8366,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "14b25be897119059b78babedda6066ef0ecdab23",
+    "size": 8356,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "4c538f69621ca8c3c44ad8e63fc01b09100e93d1",
+    "size": 8343,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "41d3424a1440f2d66bc6c2c3b1e6cc06ec2401a2",
+    "size": 9050,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "34485b6a0d9cc107d9ee14bdcf699c3382eb640a",
+    "size": 8298,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "4e49e78543e549064082651e256260aa29449174",
+    "size": 7948,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "cc90a36d8ba91aaf1c57736fb4aaa4154c6b189c",
+    "size": 7599,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "794356c98db1c90d74b84a32ff69238ff40569be",
+    "size": 12906,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "8d01d4c70fea993918cd754fcdd0d8488fe546f7",
+    "size": 9426,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "851c745be86584ee1602b94634e2a09e8a21c1e0",
+    "size": 8291,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "00bc6a9a5bf6cc12e3ac6084da1d16e936e26983",
+    "size": 9076,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "6b9f7682c16148cef9482d8d816cac62deb526e3",
+    "size": 10406,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "e66f7d93e5790c0c961f79827f7b449ec17fa361",
+    "size": 10771,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "6c7cf9fd58c69ae797259ddb80c6b1c8816b502d",
+    "size": 10740,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "b4c3bb690669c5834fa73f707d9da7b354fbed78",
+    "size": 8722,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "47f4d55c7f4b5da9d5ca76f65fa488a32938d386",
+    "size": 9772,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "dea970f4e52cc65be4eb256858562b15dc79f718",
+    "size": 9075,
+    "path": "data/rigid/nonsmooth contact/json/plastic/task-3/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "0c019b0239621c2065b6e1483064c17b76d1658f",
+    "size": 4500,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "f5704024f023142d8213b39750bf329b594ac76d",
+    "size": 4864,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "0cab517421eb3d589c2ecd8ff6c91ba2bcaa5aee",
+    "size": 5228,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "eaf0af988d7a303c2ab7a4e05a133a21fe718961",
+    "size": 5211,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "42cc87259f0736a3ec87a2d0be8c79f4b98cadb7",
+    "size": 4857,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "c2bf5b47f71d423bb5b5ead6e38ea441458c0bc3",
+    "size": 4863,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "17090ce2c7061645486d2eb5e68e14d9cf2f9603",
+    "size": 5223,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "e025da8bed6ca60243b7a7ebd6a1e6dcb69ae144",
+    "size": 5232,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "1d9afc158fa4417fc94091da0850ff0dbf10dd85",
+    "size": 4868,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "0d24bd9a41a5a30bd82bdf5f4cc20315843a10d9",
+    "size": 4848,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "9fdeed345111ccafe1fe1109d8132f712197a352",
+    "size": 4510,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "b65ab3340a312510978919dd2e53efee3cf64f87",
+    "size": 4874,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "678b2f65d5721dff88aabae68d536e2f0c9b759a",
+    "size": 5951,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "002a5a667a9b568d85435970d9d8e78120137324",
+    "size": 4865,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "46551e57bd8b071b0cc7644e3c085bc5edd078a8",
+    "size": 5583,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "ae0c05e090cb55d2c921eaf91ab0a480a3fdc31a",
+    "size": 4859,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "982b659b7a564e04134ad1b1480b018244f29e08",
+    "size": 4861,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "7249cfa9f93e3488c7fe855eaeb0d6864dae5dcb",
+    "size": 5579,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "e61294ec86527b580a725512ca993cd990aa9867",
+    "size": 5600,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "2f47bfee79280e0b627907f734cca8c9717cdaed",
+    "size": 5233,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-1/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "d492a0cf96696f1d7aa3f0b663beeafabccbbdcb",
+    "size": 3351,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "d34665c50b60499579b6a7d060360817fbfa4d30",
+    "size": 4793,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "beb40d18011fdda3c18e7095315015c9e3feaf67",
+    "size": 5805,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "f28541d317eb085a771892d13b71b835f41a7d33",
+    "size": 4752,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "f412d6e85e11d4bbf3a8d348e5495fcdcaf50c3d",
+    "size": 4397,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "0d115fb79aa3cc073679e57fc61ca6aa522349db",
+    "size": 5135,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "2add1af66342db5e14c1e4d6d0543029c57829ca",
+    "size": 4425,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "648ecc2954c5f409b673ce7a0cfc8f9f81adef86",
+    "size": 4418,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "4592de59cd63f37f2d26f8435ceda5fd21a7bd23",
+    "size": 4391,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "ec8f64e243d455eb8dfb3700f597fedec6080f9a",
+    "size": 5096,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "cacbbb4ed8116db67b24e9fd26ab37884ca268a4",
+    "size": 4746,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "d946d4d460ee7363ab8f128a5644b456b07d3d39",
+    "size": 4072,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "39dc1f6b5a767d6f2fa4c78694495b3de9d06740",
+    "size": 4745,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "b279e4cac42838afa634106964c6ec1353ce5710",
+    "size": 3677,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "a1177458731159a739448a61e06df35253188d2a",
+    "size": 4777,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "a33b55db4ae25df0892c824c0e03feb8793010c2",
+    "size": 4435,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "79324eb0bb3de5875f57e1f4eae0dd796c7ca9f7",
+    "size": 4783,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "98f016f978f0d3827a20026b199d3a07d136eff8",
+    "size": 4739,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "b7a6b5d1210edb7965cf6a01bf72e451456ebd29",
+    "size": 4423,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "8b3e8b0f8b5c768727ab7a06c6ec9cf52e8612c5",
+    "size": 5140,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-2/9.json"
+  },
+  {
+    "type": "file",
+    "oid": "d875a367ec3233319dc91a76b3594b524486a878",
+    "size": 5494,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/1.json"
+  },
+  {
+    "type": "file",
+    "oid": "982b2b851e06493ed34c72f7a97a770385b0d641",
+    "size": 6869,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/10.json"
+  },
+  {
+    "type": "file",
+    "oid": "68e934a600e386f0bb1e850be327095b3c9b3515",
+    "size": 6871,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/11.json"
+  },
+  {
+    "type": "file",
+    "oid": "77604ce231ca94b1bb3c6d70362763c850d7dbd5",
+    "size": 6164,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/12.json"
+  },
+  {
+    "type": "file",
+    "oid": "f4395a1afc57c9760613f8a6d2887b17cf85a1e7",
+    "size": 5814,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/13.json"
+  },
+  {
+    "type": "file",
+    "oid": "0ae961120010c06e355a7769698276761da40ef9",
+    "size": 6171,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/14.json"
+  },
+  {
+    "type": "file",
+    "oid": "aec3e823d0eadf55d889fbc95330d15a3c1725cd",
+    "size": 6179,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/15.json"
+  },
+  {
+    "type": "file",
+    "oid": "64704245fe4c35fe81610eabcee170de5b10966b",
+    "size": 5811,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/16.json"
+  },
+  {
+    "type": "file",
+    "oid": "f36cc0c903a880a6db34c159e97aae7896cc918e",
+    "size": 6182,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/17.json"
+  },
+  {
+    "type": "file",
+    "oid": "4ce491327f3417d99c14b057adfed1359172dbea",
+    "size": 6226,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/18.json"
+  },
+  {
+    "type": "file",
+    "oid": "485ac8e055bd1d277b27e7778a167d9768ffda1d",
+    "size": 6169,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/19.json"
+  },
+  {
+    "type": "file",
+    "oid": "da202c97f12ada51783bc13cc73c3405b1aba630",
+    "size": 6574,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/2.json"
+  },
+  {
+    "type": "file",
+    "oid": "04b8276f3d9a4e1552f3fdc8e22d3cc5c726f811",
+    "size": 6204,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/20.json"
+  },
+  {
+    "type": "file",
+    "oid": "b422ac4ed946bdbb709b61ffba35d815e83e3e41",
+    "size": 6205,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/3.json"
+  },
+  {
+    "type": "file",
+    "oid": "f7614abef79d456720d31da88f5e68643af5661d",
+    "size": 5468,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/4.json"
+  },
+  {
+    "type": "file",
+    "oid": "8425470f2ca266336234cd794a45c7330090d0c5",
+    "size": 5124,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/5.json"
+  },
+  {
+    "type": "file",
+    "oid": "837b1306201cefedcbf4919d7c7230c6d09beb7a",
+    "size": 6167,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/6.json"
+  },
+  {
+    "type": "file",
+    "oid": "57224978ad19dbebaea34ee97b3fa00fff395dcc",
+    "size": 6526,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/7.json"
+  },
+  {
+    "type": "file",
+    "oid": "6fe25a58f78bd58c7cd53ecb173e8f0d1188143f",
+    "size": 6191,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/8.json"
+  },
+  {
+    "type": "file",
+    "oid": "4bbd49ce28006c587e8df65bc876ec96b1fd2d39",
+    "size": 7602,
+    "path": "data/rigid/nonsmooth contact/json/wood/task-3/9.json"
+  }
+]
