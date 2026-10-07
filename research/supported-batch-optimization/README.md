@@ -8,12 +8,15 @@ modified. Read [the integration contract](../../supported_backend/INTEGRATION.md
 The [three-page report](report/report.pdf) gives the benchmark and import boundary.
 The native fields and units also have a [machine-readable schema](../../supported_backend/schema.json).
 
-The integration snapshot `df23b35088268485dfc67229927160d0ccd59a8f` is pushed.
+The integration snapshot `7ff8f14a3d445fcc270d5bca6b126ab33bdc4ee1` is pushed.
 [downloads.json](downloads.json) records the local PDF and checksum-verified
 48-member ZIP in the project's `Physics Reports/2026-10-07/` folder. Extracting
 that bundle and running all 25 included-component tests passes from its own
 directory, including a fresh native build. The bundle contains a standalone
 supported core; whole-engine regression runs still require the full repository.
+The final v2 package clarifies that the outputs are signed fixed-axis integrals,
+not scalar coefficients on changing motion-defined t/s. Its fresh extracted
+25-test run passes; native math and archived performance/oracles are unchanged.
 
 ## Performance result and algorithmic changes
 

@@ -1,21 +1,22 @@
 {
-  "source_revision": "df23b35088268485dfc67229927160d0ccd59a8f",
+  "source_revision": "7ff8f14a3d445fcc270d5bca6b126ab33bdc4ee1",
   "zip_members_verified": 48,
   "every_member_hash_verified": true,
   "extracted_package_tests": 25,
   "extracted_package_exit_code": 0,
   "standalone_supported_core_verified": true,
   "whole_engine_bundle": false,
+  "metadata_correction": "v2 clarifies fixed-axis integrals versus changing t/s scalar components; native math and benchmark/test oracles unchanged. v1 downloads preserved locally.",
   "artifacts": [
     {
-      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/supported-contact-compiler-integration-report.pdf",
-      "bytes": 169284,
-      "sha256": "205a8952cef38e8e3218f255dfa31d902e939c2682fe4c1f7530b9ede2ac434b"
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/supported-contact-compiler-integration-report-v2.pdf",
+      "bytes": 169893,
+      "sha256": "bb2c427aac70a691bd128c818eebe54e40d91ccd7274cca46fd33aa598f42f36"
     },
     {
-      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-supported-contact-compiler-package-20261007.zip",
-      "bytes": 964337,
-      "sha256": "6dd49e90278f5e3c5f69a028552b1f9661b99690378788132c2c3070116ab5fc"
+      "path": "/home/viktor/Projects/Vektor Flow/Physics Reports/2026-10-07/physics-supported-contact-compiler-package-20261007-v2.zip",
+      "bytes": 965905,
+      "sha256": "a5dc3b5718f70ab50c091775f8509b29df2cec79cfd716796533641df8a94d39"
     }
   ]
 }

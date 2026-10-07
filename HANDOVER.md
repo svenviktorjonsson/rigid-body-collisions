@@ -3,7 +3,7 @@
 Latest user: improve algorithms/correctness before BKF library tuning; finish for
 main compiler integration. No compiler repo edits or import/acceptance claims.
 
-Finalreadycomponentpin df23b35088268485dfc67229927160d0ccd59a8f pushed; code
+Finalreadycomponentpin 7ff8f14a3d445fcc270d5bca6b126ab33bdc4ee1 pushed; code
 checkpoint513f05f precedesit. Machinefield/units schema and3pagePDF complete.
 Downloadsreceipt research/supported-batch-optimization/downloads.json records
 localPDF and48memberstandalonecoreZIP in Physics Reports/2026-10-07/. Allmember
@@ -11,6 +11,11 @@ hashes verified; fresh extractedbundle25/25componenttestsPASS includingnative
 build/C11probe. Fullrepository54/54 remainsseparate. Actualfailure/success logs
 nowtracked (initial broad*.logignorecorrected to report-only ignore). Final
 artifactreceipt/handovercommit follows; latestgit historyidentifiesit.
+FinalZIP/PDFv2 clarifies fixeddeclaredaxisintegrals versus changingt/s scalar
+coefficients. Do notlabel nativefield4directlydelta_p_t withoutbranch-direction
+mapping; vectorrecoveriescanusefixeddeclaredaxes, notfinalt/s relabeling. Native
+math/oracles unchanged. Freshv2extracted25/25testsPASS; v1downloadslocallypreserved,
+downloads.json pointsv2. Latestdocs/artifactcommit follows, no compiler edits.
 Read paired bootstrap/spec AGENTS and handovers read-only for import boundaries:
 Section0 authority, append-only/newfixture workflow, oldpendingerrorspreserved.
 No new agents or physicalGPU sessions. Targetphysicsbranch same, origin0/0 atstart.
