@@ -57,6 +57,10 @@ compiler/GPU support claims are made by this external research.
 
 `report.pdf` contains the six-page checkpoint with material/state policy,
 performance tables, error dot plots and unchanged experimental status.
+The downloadable source/evidence bundle is
+`downloads/physics-indexed-patch-20261007.zip`; its manifest pins source checkpoint
+8070f06342d28813ea329101a4a01e5dff794bd4. Shared-workspace copies are in
+`Physics Reports/2026-10-07/` as `indexed-pressure-patch-report.pdf` and the ZIP.
 No new material fit, experimental accuracy gain, full engine qualification or
 language compiler integration is claimed. The user's removed 2x gate stays removed.
 
