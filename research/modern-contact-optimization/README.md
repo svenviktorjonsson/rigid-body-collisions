@@ -29,7 +29,11 @@ is invented. `schedule-v1` includes sizes 100 through 1,000,000, but excludes
 discovery/physical solving and is not an irregular-shape scene benchmark.
 
 The [three-page report](report/report.pdf) includes all 10,000-response rows,
-preparation costs, failed candidates and current limits. [ROADMAP.md](ROADMAP.md)
+preparation costs, failed candidates and current limits. A separate 55-member
+standalone extension passes all 15 component tests after fresh extraction;
+[downloads.json](downloads.json) records local PDF/ZIP paths, hashes and its
+`b93b694` source snapshot. The earlier supported-contact compiler package is
+unchanged. [ROADMAP.md](ROADMAP.md)
 prioritizes full wrench matrix-free evaluation, current-geometry factor reuse,
 qualified parallel iteration and fair matched-law competitor benchmarks. Public
 material values and experimental errors remain unchanged.

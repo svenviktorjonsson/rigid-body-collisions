@@ -44,8 +44,10 @@ heterogeneousdegreegraphisnotanirregularshapeexperimental/worldbenchmark.
 
 63focusedfullrepositorytestsPASS. Three-page separatePDF built/visuallychecked;
 source/hash/timing/failure receipts inresearch/modern-contact-optimization.
-Standaloneextensionpackaging and15componenttests verificationfollow; downloads
-receipt identifies artifacts andsourcepin. Existing supportedbatchCABI1/v2bundle
+Standalone55-memberextensionpackaging COMPLETE: everypayloadSHAverified and
+fresh extracted15/15componenttestsPASS. Local3pagePDF/ZIP downloadsreceipt
+research/modern-contact-optimization/downloads.json pinsb93b694 source; final
+receiptcommitfollows. Earlier supportedCABI package remainsunchanged. Existing supportedbatchCABI1/v2bundle
 isimmutable/unchanged; newplanner isC++header, notCABI/compiler/GPUacceptance.
 Original13worldqualification/hosted393issues andempiricalmodelaccuracy remainopen.
 Article preserved; no new measured-error improvement. Next priorityROADMAP.md:
