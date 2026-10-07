@@ -1,0 +1,7 @@
+/home/viktor/.cache/vkf-physics-continuation/research/viscoelastic-relaxation/benchmark.cpp: In function ‘int main(int, char**)’:
+/home/viktor/.cache/vkf-physics-continuation/research/viscoelastic-relaxation/benchmark.cpp:73:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   73 |         if(!first) std::cout<<",";first=false;
+      |         ^~
+/home/viktor/.cache/vkf-physics-continuation/research/viscoelastic-relaxation/benchmark.cpp:73:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   73 |         if(!first) std::cout<<",";first=false;
+      |                                   ^~~~~

@@ -1,3 +1,46 @@
+# Efficient deformation reduction search — October 7, 2026
+
+Latest user asks to continue finding a more authentic model while retaining efficiency.
+New isolated research: research/viscoelastic-relaxation/; report.pdf + signed error-map.
+One effective viscoelastic relaxation time per tennis specimen improves existing
+8-point evaluation errors: RMSE reductions51.53/67.46/33.71%, all8absolute errors
+and all3maximum errors decrease. Same17points and9/8split were already inspected:
+EXPLORATORY reuse, not fresh confirmatory validation. Effective time estimates
+1.860/2.159/25.039ms are not identified bulk material properties (quasirolling,
+apparent belt speed, shell construction, matched material inputs absent).
+
+Related one-parameter normal viscoelastic sphere reduction WORSENS rocks: height
+RMSE1.00437to1.13969m/s; pooled angle-fold1.14028to1.19421m/s. Rejected, preserved.
+Actual facet attitude/I absent; fixed secondary tangent/sliding inputs historical
+estimates. Primary Wang2018section5.1/figure12 documents slab indentation and rim
+damage: further rock candidate should encapsulate local yield/indentation geometry,
+not just add damping or a raw-impulse polynomial. Photo crater dimensions unmatched
+to rows; illustrative conical angles and4passive local-normal controls are not fits.
+
+model.py adds exact supported rolling and repulsive force-zero normal reference.
+Remaining elastic energy at release is recorded, not erased; propagation into a
+later contact remains open. evidence-v1 sealed; audit-v2 passes200rolling controls
+at3ellscales+20ODE+25normal controls, analytic duration/weak damping and data audits.
+audit-v1 retains audit-script QR variable-shadowing failure. benchmark-v2 passes16
+native/Python controls and warning-free build, no fast-math. Local scalar response
+cost about13ns rolling,31nsnormal size/speed+513-node table; table error1.34e-7,
+arrays+coefficients24,592bytes. NOT full scenes, contact networks or interacting
+million-body benchmarks. benchmark-v1 warning+timings retained;2xgate remainsremoved.
+
+patch_spin.py derives independent axial moment3*pi/16*mu_d*N*a from Hertz pressure,
+zero net tangential force but nonzero torque at zero center slip.24rotated traction
+quadrature/energy controls plusarrest pass; no new fitted spinningfriction coefficient.
+Only pure axial fullsliding with prescribed circular pressure andconstant N/a, not
+transient rubber bounce or mixed friction closure. Pressure-field/Hydroelastic
+(Elandt/Drake) and reduced plastic contact(Zunker/Kamrin) literature searched as
+next comparators; neither implemented/adopted/experimentally validated here.
+
+Production unchanged; native rolling/twisting rejected; original13rapid/irregular
+set andhosted393failure remain open. Zero relative velocity leaves user's t
+undefined: rolling prototype uses constraint reaction, not redefined t. Need recover
+that directional branch before general integration. Updated report retains
+notation and explicitly separates mechanical controls from empirical validation.
+
 # Experimental report and local contact-memory core — October 7, 2026
 
 Latest user requests a complete real-data report and cheap rigid-body features encapsulating deformation, including possible pressure/impulse-dependent rock resistance. No fully validated authentic model exists yet. Report: research/full-experimental-report/report.pdf (19 pages), report.html, evidence-v3, per-row CSVs, source refresh receipt. Fresh HTTP200 downloads match glass, tennis and rock source fingerprints. 107 collision records (24 glass, 8 ball/surface summaries, 75 rocks) plus17 rolling points; not124 independent fully characterized events.

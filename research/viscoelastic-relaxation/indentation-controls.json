@@ -1,0 +1,127 @@
+{
+  "crater_source": "https://nhess.copernicus.org/articles/18/3045/2018/nhess-18-3045-2018-f12.pdf",
+  "crater_dimensions_read_from_figure_12": true,
+  "crater_records": [
+    {
+      "diameter_m": 0.035,
+      "depth_m": 0.015,
+      "conical_wall_angle_deg": 40.601294645004465
+    },
+    {
+      "diameter_m": 0.017,
+      "depth_m": 0.016,
+      "conical_wall_angle_deg": 62.02052561151985
+    },
+    {
+      "diameter_m": 0.023,
+      "depth_m": 0.006,
+      "conical_wall_angle_deg": 27.552811576717797
+    },
+    {
+      "diameter_m": 0.021,
+      "depth_m": 0.005,
+      "conical_wall_angle_deg": 25.463345061871614
+    }
+  ],
+  "dimensions_matched_to_individual_collision_rows": false,
+  "conical_geometry_is_simplification": true,
+  "synthetic_controls": [
+    {
+      "local_angle_deg": 0.0,
+      "initial_velocity": [
+        3.0,
+        -1.0,
+        0.0
+      ],
+      "outgoing_velocity": [
+        3.0,
+        0.5,
+        0.0
+      ],
+      "linear_impulse": [
+        -0.0,
+        1.5,
+        0.0
+      ],
+      "local_e_n": 0.5,
+      "mean_slab_apparent_normal_ratio": 0.5,
+      "initial_energy_J": 5.0,
+      "outgoing_energy_J": 4.625,
+      "dissipation_J": 0.375
+    },
+    {
+      "local_angle_deg": 15.0,
+      "initial_velocity": [
+        3.0,
+        -1.0,
+        0.0
+      ],
+      "outgoing_velocity": [
+        2.323557158514987,
+        1.5245190528383286,
+        0.0
+      ],
+      "linear_impulse": [
+        -0.6764428414850129,
+        2.5245190528383286,
+        0.0
+      ],
+      "local_e_n": 0.4999999999999999,
+      "mean_slab_apparent_normal_ratio": 1.5245190528383286,
+      "initial_energy_J": 5.0,
+      "outgoing_energy_J": 3.861538105676657,
+      "dissipation_J": 1.1384618943233418
+    },
+    {
+      "local_angle_deg": 30.0,
+      "initial_velocity": [
+        3.0,
+        -1.0,
+        0.0
+      ],
+      "outgoing_velocity": [
+        1.2254809471616714,
+        2.073557158514987,
+        0.0
+      ],
+      "linear_impulse": [
+        -1.7745190528383286,
+        3.073557158514987,
+        0.0
+      ],
+      "local_e_n": 0.5,
+      "mean_slab_apparent_normal_ratio": 2.073557158514987,
+      "initial_energy_J": 5.0,
+      "outgoing_energy_J": 2.900721420742507,
+      "dissipation_J": 2.0992785792574926
+    },
+    {
+      "local_angle_deg": 45.0,
+      "initial_velocity": [
+        3.0,
+        -1.0,
+        0.0
+      ],
+      "outgoing_velocity": [
+        4.440892098500626e-16,
+        2.0,
+        0.0
+      ],
+      "linear_impulse": [
+        -2.9999999999999996,
+        3.0,
+        0.0
+      ],
+      "local_e_n": 0.5,
+      "mean_slab_apparent_normal_ratio": 2.0,
+      "initial_energy_J": 5.0,
+      "outgoing_energy_J": 2.0,
+      "dissipation_J": 2.999999999999999
+    }
+  ],
+  "apparent_ratio_above_one_with_passivity": true,
+  "body_is_rigid": true,
+  "point_sphere_example_has_zero_normal_force_torque": true,
+  "independent_angular_closure_validated": false,
+  "experimental_prediction": false
+}

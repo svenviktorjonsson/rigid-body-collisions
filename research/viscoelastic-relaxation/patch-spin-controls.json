@@ -1,0 +1,37 @@
+{
+  "pass_": true,
+  "spatial_pressure_quadrature_controls": 24,
+  "maximum_scaled_net_force_moment_work_error": 6.9552847744269655e-15,
+  "maximum_relative_body_energy_error": 3.5323052923263637e-16,
+  "zero_spin_no_spurious_torque": true,
+  "spin_arrest_without_reversal": true,
+  "zero_friction_preserves_spin": true,
+  "synthetic_center_zero_slip_example": {
+    "contact_center_tangential_velocity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "angular_velocity_axis": [
+      0.9666247042990996,
+      -0.2044110491514116,
+      -0.15444353020925608
+    ],
+    "spin_before": 24.300170776784274,
+    "spin_after": 21.645533039162,
+    "net_friction_force_N": [
+      -9.51631734829463e-18,
+      -3.9823936232371134e-17,
+      -2.4848862943117574e-17
+    ],
+    "independent_torque_Nm": [
+      -3.729150481613337e-05,
+      7.885992971210076e-06,
+      5.958291387550741e-06
+    ]
+  },
+  "new_fitted_friction_coefficients": 0,
+  "full_mixed_contact_model": false,
+  "experimental_validation": false,
+  "physical_scope": "Circular Hertz pressure, pure axial spin/full local sliding; ideal zero-external-torque arrest; actual material patch radius must be characterized"
+}

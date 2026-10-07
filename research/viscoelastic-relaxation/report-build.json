@@ -1,0 +1,11 @@
+{
+  "page_count": 7,
+  "pdf_sha256": "950cd2c01710aafa55d39e236c804e06f6b377b2c9513079f27507011ac28799",
+  "all_reported_improvements_and_rejections_present": true,
+  "layout_pages_inspected": [
+    1,
+    2,
+    5
+  ],
+  "final_build_warnings": 0
+}

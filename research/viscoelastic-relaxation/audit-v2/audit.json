@@ -1,0 +1,287 @@
+{
+  "pass_": true,
+  "rolling_planar_controls": 100,
+  "rolling_spatial_controls": 100,
+  "coordinate_lengths_per_case": 3,
+  "rolling_maximum_relative_errors": {
+    "momentum": 2.0356121989056783e-15,
+    "energy": 1.1425118897630257e-15,
+    "semigroup": 4.653879579025648e-16,
+    "length_scale": 3.3306690738754696e-16,
+    "ode": 1.3226669058739936e-12
+  },
+  "independent_continuous_rolling_controls": 20,
+  "zero_relaxation_preserves_motion": true,
+  "insufficient_instantaneous_static_capacity_rejected": true,
+  "normal_controls": 25,
+  "normal_maximum_energy_balance_error": 4.53083126572551e-11,
+  "elastic_collision_time": {
+    "predicted": 3.218065459725242,
+    "analytic": 3.2180654597190426
+  },
+  "weak_damping_first_order_ratios": [
+    1.1518306448304316,
+    1.1526426959612701,
+    1.1530468772591451
+  ],
+  "table_extrapolation_rejected": true,
+  "original_rolling_records_checked": 17,
+  "leave_one_rolling_point_out_checked": 17,
+  "rock_records_and_splits_checked": 200,
+  "normal_reference_records": [
+    {
+      "beta": 0.0,
+      "restitution": 0.9999999999546917,
+      "duration": 3.218065459725242,
+      "release_compression": 0.0,
+      "stored_energy_at_release": 0.0,
+      "dissipated_energy": 0.0,
+      "energy_balance_residual": -4.53083126572551e-11,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.001,
+      "restitution": 0.9988473573040387,
+      "duration": 3.217436856831834,
+      "release_compression": 0.000998847357303991,
+      "stored_energy_at_release": 1.2612692382306233e-08,
+      "dissipated_energy": 0.001151965789336918,
+      "energy_balance_residual": -1.3397061238151764e-12,
+      "minimum_sampled_force": -1.5076915892964215e-18
+    },
+    {
+      "beta": 0.001478085527430565,
+      "restitution": 0.9982968685929666,
+      "duration": 3.217136479087973,
+      "release_compression": 0.0014755681535463434,
+      "stored_energy_at_release": 3.3454779751692675e-08,
+      "dissipated_energy": 0.0017016476226648764,
+      "energy_balance_residual": -1.29396493520062e-12,
+      "minimum_sampled_force": -6.64695589272023e-18
+    },
+    {
+      "beta": 0.0021847368263996914,
+      "restitution": 0.9974838818124935,
+      "duration": 3.2166926706643113,
+      "release_compression": 0.002179239770335924,
+      "stored_energy_at_release": 8.8679356168831e-08,
+      "dissipated_energy": 0.0025128640815579527,
+      "energy_balance_residual": -1.2256307080349416e-12,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.0032292278843459666,
+      "restitution": 0.996283714609779,
+      "duration": 3.21603706741474,
+      "release_compression": 0.0032172271519375507,
+      "stored_energy_at_release": 2.3483580004044714e-07,
+      "dissipated_energy": 0.003709145164726427,
+      "energy_balance_residual": -1.143696248817605e-12,
+      "minimum_sampled_force": -7.207402025850445e-18
+    },
+    {
+      "beta": 0.004773075000627001,
+      "restitution": 0.9945130479917073,
+      "duration": 3.215068867618789,
+      "release_compression": 0.004746885367166593,
+      "stored_energy_at_release": 6.209860603695212e-07,
+      "dissipated_energy": 0.005471277700017266,
+      "energy_balance_residual": -1.0444978215673473e-12,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.007055013079767405,
+      "restitution": 0.9919030540861856,
+      "duration": 3.2136396156347047,
+      "release_compression": 0.006997889020439323,
+      "stored_energy_at_release": 1.6386176110685676e-06,
+      "dissipated_energy": 0.008062527028496082,
+      "energy_balance_residual": -1.1416423362220485e-12,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.01042791272903754,
+      "restitution": 0.9880610600284979,
+      "duration": 3.2115310554904473,
+      "release_compression": 0.010303414504937292,
+      "stored_energy_at_release": 4.310353816400914e-06,
+      "dissipated_energy": 0.011863360472756485,
+      "energy_balance_residual": -1.1076140005172874e-12,
+      "minimum_sampled_force": -2.0954041664189548e-17
+    },
+    {
+      "beta": 0.015413346886099362,
+      "restitution": 0.982416901316715,
+      "duration": 3.2084231471090794,
+      "release_compression": 0.01514233248676155,
+      "stored_energy_at_release": 1.1286049122168193e-05,
+      "dissipated_energy": 0.017417229953577685,
+      "energy_balance_residual": -9.320877403240502e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.02278224496161043,
+      "restitution": 0.9741501661574513,
+      "duration": 3.2038484214467964,
+      "release_compression": 0.022193327714792526,
+      "stored_energy_at_release": 2.9350537349088896e-05,
+      "dissipated_energy": 0.02548637634926629,
+      "energy_balance_residual": -1.0895728763671286e-12,
+      "minimum_sampled_force": -4.651724376060024e-18
+    },
+    {
+      "beta": 0.03367410656013429,
+      "restitution": 0.9620966671742124,
+      "duration": 3.1971280362024,
+      "release_compression": 0.0323977456915746,
+      "stored_energy_at_release": 7.55695735593125e-05,
+      "dissipated_energy": 0.03710943193166119,
+      "energy_balance_residual": -9.159339953157541e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.04977320955568916,
+      "restitution": 0.9446396613405211,
+      "duration": 3.187284810846592,
+      "release_compression": 0.04701774781851686,
+      "stored_energy_at_release": 0.00019174080530319875,
+      "dissipated_energy": 0.053636214305238794,
+      "energy_balance_residual": -6.907807659217724e-13,
+      "minimum_sampled_force": -3.0092006985465304e-17
+    },
+    {
+      "beta": 0.07356906069803285,
+      "restitution": 0.919609123340127,
+      "duration": 3.172930634632501,
+      "release_compression": 0.06765477941347468,
+      "stored_energy_at_release": 0.0004762184282031599,
+      "dissipated_energy": 0.0766833117051819,
+      "energy_balance_residual": -1.416478045968006e-12,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.10874136388442314,
+      "restitution": 0.8842491351901797,
+      "duration": 3.1521329197873236,
+      "release_compression": 0.09615445697420195,
+      "stored_energy_at_release": 0.0011467890572767392,
+      "dissipated_energy": 0.10790494439953424,
+      "energy_balance_residual": -8.987255384340642e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.16072903619062656,
+      "restitution": 0.8353758599641719,
+      "duration": 3.122282211573598,
+      "release_compression": 0.13426915682895726,
+      "stored_energy_at_release": 0.002642412685003942,
+      "dissipated_energy": 0.14843117360976035,
+      "energy_balance_residual": 2.0405899192610377e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.23757126223122887,
+      "restitution": 0.7699225774865627,
+      "duration": 3.080016418004023,
+      "release_compression": 0.18291147855380377,
+      "stored_energy_at_release": 0.005723509291682499,
+      "dissipated_energy": 0.19788610304588083,
+      "energy_balance_residual": -6.605826996519681e-13,
+      "minimum_sampled_force": -2.374109327622178e-17
+    },
+    {
+      "beta": 0.351150644437391,
+      "restitution": 0.6860748576359026,
+      "duration": 3.021305474987448,
+      "release_compression": 0.24091562839113842,
+      "stored_energy_at_release": 0.011395212442202426,
+      "dissipated_energy": 0.2532554324172825,
+      "energy_balance_residual": -4.530820163495264e-13,
+      "minimum_sampled_force": -4.086993812133437e-17
+    },
+    {
+      "beta": 0.5190306854908239,
+      "restitution": 0.5849539630631748,
+      "duration": 2.9418375324823716,
+      "release_compression": 0.3036090564292538,
+      "stored_energy_at_release": 0.020316401950850757,
+      "dissipated_energy": 0.30859802859696706,
+      "energy_balance_residual": -5.25135490647699e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 0.7671717445163522,
+      "restitution": 0.4721446002070093,
+      "duration": 2.837803911580158,
+      "release_compression": 0.3622159966047868,
+      "stored_energy_at_release": 0.031584867320397135,
+      "dissipated_energy": 0.35695487092675865,
+      "energy_balance_residual": -5.259126467649367e-13,
+      "minimum_sampled_force": -1.0022713171811329e-16
+    },
+    {
+      "beta": 1.133945452623279,
+      "restitution": 0.35762756953937175,
+      "duration": 2.7069778493447125,
+      "release_compression": 0.4055301562118861,
+      "stored_energy_at_release": 0.04189072518898236,
+      "dissipated_energy": 0.39416053556308317,
+      "energy_balance_residual": -6.153966225497243e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 1.6760683624181718,
+      "restitution": 0.2530551110530578,
+      "duration": 2.5496826543628255,
+      "release_compression": 0.42413766558424715,
+      "stored_energy_at_release": 0.04686267720523227,
+      "dissipated_energy": 0.42111887817950233,
+      "energy_balance_residual": -2.277067423506196e-13,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 2.4773723894745467,
+      "restitution": 0.16745122687234767,
+      "duration": 2.369139356150842,
+      "release_compression": 0.4148390460371924,
+      "stored_energy_at_release": 0.04433626033505559,
+      "dissipated_energy": 0.4416437829743744,
+      "energy_balance_residual": -4.2799097599299785e-14,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 3.661768274938405,
+      "restitution": 0.1042828979456745,
+      "duration": 2.1709954838802954,
+      "release_compression": 0.38185980731611024,
+      "stored_energy_at_release": 0.03604291137987847,
+      "dissipated_energy": 0.4585196272181462,
+      "energy_balance_residual": -1.3322676295501878e-15,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 5.412406691990842,
+      "restitution": 0.06172673814888772,
+      "duration": 1.962310930129803,
+      "release_compression": 0.3340902106318063,
+      "stored_energy_at_release": 0.025805921218898256,
+      "dissipated_energy": 0.47228898367986316,
+      "energy_balance_residual": 1.2101430968414206e-14,
+      "minimum_sampled_force": 0.0
+    },
+    {
+      "beta": 8.0,
+      "restitution": 0.035113918687676104,
+      "duration": 1.7504591549446498,
+      "release_compression": 0.28091134950140884,
+      "stored_energy_at_release": 0.016729509450924034,
+      "dissipated_energy": 0.48265399690629224,
+      "energy_balance_residual": 1.865174681370263e-14,
+      "minimum_sampled_force": 0.0
+    }
+  ],
+  "source_sha256": "c45a41a80f846c94fe0b2dabce239cb7911d3961f11e7b294f575194bd81a0f7",
+  "full_empirical_collision_validation": false,
+  "production_adopted": false,
+  "source_direction_zero_slip_branch_resolved": false
+}
